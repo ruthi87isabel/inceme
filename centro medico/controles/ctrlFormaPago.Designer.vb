@@ -1,0 +1,103 @@
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class ctrlFormaPago
+    Inherits System.Windows.Forms.UserControl
+
+    'UserControl overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        If disposing AndAlso components IsNot Nothing Then
+            components.Dispose()
+        End If
+        MyBase.Dispose(disposing)
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ctrlFormaPago))
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.txt_Text = New ctrlTextboxAvanzado
+        Me.pb_Seleccionar = New System.Windows.Forms.PictureBox
+        Me.FormasPagoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CMDataSet = New centro_medico.CMDataSet
+        Me.FORMASPAGOTableAdapter = New centro_medico.CMDataSetTableAdapters.FORMASPAGOTableAdapter
+        CType(Me.pb_Seleccionar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FormasPagoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CMDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(7, 6)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(67, 13)
+        Me.Label1.TabIndex = 91
+        Me.Label1.Text = "Forma Pago:"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'txt_Text
+        '
+        Me.txt_Text.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txt_Text.Location = New System.Drawing.Point(77, 3)
+        Me.txt_Text.Name = "txt_Text"
+        Me.txt_Text.ReadOnly = True
+        Me.txt_Text.Size = New System.Drawing.Size(161, 20)
+        Me.txt_Text.TabIndex = 90
+        '
+        'pb_Seleccionar
+        '
+        Me.pb_Seleccionar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pb_Seleccionar.Image = CType(resources.GetObject("pb_Seleccionar.Image"), System.Drawing.Image)
+        Me.pb_Seleccionar.Location = New System.Drawing.Point(238, -1)
+        Me.pb_Seleccionar.Name = "pb_Seleccionar"
+        Me.pb_Seleccionar.Size = New System.Drawing.Size(24, 24)
+        Me.pb_Seleccionar.TabIndex = 92
+        Me.pb_Seleccionar.TabStop = False
+        '
+        'FormasPagoBindingSource
+        '
+        Me.FormasPagoBindingSource.DataMember = "FORMASPAGO"
+        Me.FormasPagoBindingSource.DataSource = Me.CMDataSet
+        '
+        'CMDataSet
+        '
+        Me.CMDataSet.DataSetName = "CMDataSet"
+        Me.CMDataSet.Locale = New System.Globalization.CultureInfo("es")
+        Me.CMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'FORMASPAGOTableAdapter
+        '
+        Me.FORMASPAGOTableAdapter.ClearBeforeFill = True
+        '
+        'ctrlFormaPago
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.pb_Seleccionar)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.txt_Text)
+        Me.Name = "ctrlFormaPago"
+        Me.Size = New System.Drawing.Size(265, 29)
+        CType(Me.pb_Seleccionar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FormasPagoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CMDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
+    End Sub
+    Friend WithEvents pb_Seleccionar As System.Windows.Forms.PictureBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents txt_Text As ctrlTextboxAvanzado
+    Friend WithEvents FormasPagoBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents CMDataSet As centro_medico.CMDataSet
+    Friend WithEvents FORMASPAGOTableAdapter As centro_medico.CMDataSetTableAdapters.FORMASPAGOTableAdapter
+
+End Class

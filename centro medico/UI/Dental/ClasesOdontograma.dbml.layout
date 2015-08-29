@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 17, 9.625" name="ClasesOdontograma">
+  <DataContextMoniker Name="/ClasesOdontogramaDataContext" />
+  <nestedChildShapes>
+    <classShape Id="418372db-6a45-4c63-9671-df4219199186" absoluteBounds="9, 2.625, 2, 1.9631982421874996">
+      <DataClassMoniker Name="/ClasesOdontogramaDataContext/md_ConceptoFra" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a3aa9ebc-7fb1-49bb-970f-734b781d04e1" absoluteBounds="9.015, 3.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1ac16536-17e5-4695-a88d-c167bb552ef7" absoluteBounds="4.125, 4.25, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/ClasesOdontogramaDataContext/md_d_Accion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0ac9d438-d5c6-423d-87d7-d0fede74635d" absoluteBounds="4.1400000000000006, 4.71, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eb137ada-5003-4efd-9568-8f50c2a1ec13" absoluteBounds="0.75, 3.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/ClasesOdontogramaDataContext/md_d_Odontograma" />
+      <nestedChildShapes>
+        <elementListCompartment Id="98f65034-0558-4b10-a963-4d2e587e1a82" absoluteBounds="0.765, 4.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d7e9f910-2d50-498f-a966-93820418f090" absoluteBounds="1.25, 6.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/ClasesOdontogramaDataContext/md_d_Color" />
+      <nestedChildShapes>
+        <elementListCompartment Id="25f9bc23-2e2e-49fd-9508-b61d8831fa2a" absoluteBounds="1.2650000000000001, 7.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c168383a-b0a4-4b84-b22e-7d26c904f621" absoluteBounds="8.625, 5.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/ClasesOdontogramaDataContext/md_d_ConceptoFra_Imagen" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0642dc04-03a6-4f17-b8b1-80560512efee" absoluteBounds="8.64, 5.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="aac7b513-d5ef-4508-9b30-859115cae989" absoluteBounds="8.75, 7.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/ClasesOdontogramaDataContext/md_d_Imagen" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f0ff3553-80a4-4a28-9c61-b202becdc4f9" absoluteBounds="8.765, 8.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b7b6fdaa-7d10-44fc-9c51-11de90d5ee6c" absoluteBounds="3.375, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/ClasesOdontogramaDataContext/md_d_Presupuesto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6df8c326-c7d0-47a6-8020-10d387ca3c9e" absoluteBounds="3.3899999999999997, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="da2c73e6-3b13-4c56-8469-ffa3ef6ac5ec" absoluteBounds="11.75, 2.625, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/ClasesOdontogramaDataContext/md_ConceptoFamilia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="35029a59-4e85-4fc8-81c1-a6edead99fbf" absoluteBounds="11.765, 3.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="35851526-7c96-430b-8a60-469dfb345508" absoluteBounds="0.5, 1.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/ClasesOdontogramaDataContext/md_MEDICO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e632aecf-14af-4684-b19e-9dbfa52a681d" absoluteBounds="0.515, 1.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.75 : 3.51044840494792); (11 : 3.51044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ClasesOdontogramaDataContext/md_ConceptoFamilia/md_ConceptoFamilia_md_ConceptoFra" />
+      <nodes>
+        <classShapeMoniker Id="da2c73e6-3b13-4c56-8469-ffa3ef6ac5ec" />
+        <classShapeMoniker Id="418372db-6a45-4c63-9671-df4219199186" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.84375 : 4.5881982421875); (10.84375 : 6.87424967447917); (9.77083333333333 : 6.87424967447917 : JumpStart); (9.60416666666667 : 6.87424967447917 : JumpEnd); (6.125 : 6.87424967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ClasesOdontogramaDataContext/md_ConceptoFra/md_ConceptoFra_md_d_Accion" />
+      <nodes>
+        <classShapeMoniker Id="418372db-6a45-4c63-9671-df4219199186" />
+        <classShapeMoniker Id="1ac16536-17e5-4695-a88d-c167bb552ef7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.85179768880208); (4.125 : 4.85179768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ClasesOdontogramaDataContext/md_d_Odontograma/md_d_Odontograma_md_d_Accion" />
+      <nodes>
+        <classShapeMoniker Id="eb137ada-5003-4efd-9568-8f50c2a1ec13" />
+        <classShapeMoniker Id="1ac16536-17e5-4695-a88d-c167bb552ef7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(0.59375 : 3.07859537760417); (0.59375 : 6.10179768880208); (4.125 : 6.10179768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ClasesOdontogramaDataContext/md_MEDICO/md_MEDICO_md_d_Accion" />
+      <nodes>
+        <classShapeMoniker Id="35851526-7c96-430b-8a60-469dfb345508" />
+        <classShapeMoniker Id="1ac16536-17e5-4695-a88d-c167bb552ef7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.8125 : 4.37854248046875); (9.8125 : 5.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClasesOdontogramaDataContext/md_ConceptoFra/md_ConceptoFra_md_d_ConceptoFra_Imagen" />
+      <nodes>
+        <classShapeMoniker Id="418372db-6a45-4c63-9671-df4219199186" />
+        <classShapeMoniker Id="c168383a-b0a4-4b84-b22e-7d26c904f621" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.6875 : 7.75); (9.6875 : 6.54984781901042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClasesOdontogramaDataContext/md_d_Imagen/md_d_Imagen_md_d_ConceptoFra_Imagen" />
+      <nodes>
+        <classShapeMoniker Id="aac7b513-d5ef-4508-9b30-859115cae989" />
+        <classShapeMoniker Id="c168383a-b0a4-4b84-b22e-7d26c904f621" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.65625 : 3.875); (2.65625 : 1.09375); (3.375 : 1.09375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ClasesOdontogramaDataContext/md_d_Odontograma/md_d_Odontograma_md_d_Presupuesto" />
+      <nodes>
+        <classShapeMoniker Id="eb137ada-5003-4efd-9568-8f50c2a1ec13" />
+        <classShapeMoniker Id="b7b6fdaa-7d10-44fc-9c51-11de90d5ee6c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="76f5f293-f5a4-4562-a1b8-42a1f5e653be" absoluteBounds="6.5, 2.625, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/ClasesOdontogramaDataContext/md_d_PresupuestoLinea" />
+      <nestedChildShapes>
+        <elementListCompartment Id="524850d2-d87d-4263-b41f-826b1614d0df" absoluteBounds="6.515, 3.085, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9 : 3.60659912109375); (8.5 : 3.60659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ClasesOdontogramaDataContext/md_ConceptoFra/md_ConceptoFra_md_d_PresupuestoLinea" />
+      <nodes>
+        <classShapeMoniker Id="418372db-6a45-4c63-9671-df4219199186" />
+        <classShapeMoniker Id="76f5f293-f5a4-4562-a1b8-42a1f5e653be" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.375 : 1.53929768880208); (7.5 : 1.53929768880208); (7.5 : 2.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ClasesOdontogramaDataContext/md_d_Presupuesto/md_d_Presupuesto_md_d_PresupuestoLinea" />
+      <nodes>
+        <classShapeMoniker Id="b7b6fdaa-7d10-44fc-9c51-11de90d5ee6c" />
+        <classShapeMoniker Id="76f5f293-f5a4-4562-a1b8-42a1f5e653be" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="47e06972-4445-4c41-947c-3b677e7a6a93" absoluteBounds="14.75, 0.5, 2, 4.6554182942708326">
+      <DataClassMoniker Name="/ClasesOdontogramaDataContext/md_MUTUA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cc2f78f7-5c25-4853-a848-02426fc986e7" absoluteBounds="14.765, 0.96, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.75 : 1.08214884440104); (5.375 : 1.08214884440104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ClasesOdontogramaDataContext/md_MUTUA/MUTUA_md_d_Presupuesto" />
+      <nodes>
+        <classShapeMoniker Id="47e06972-4445-4c41-947c-3b677e7a6a93" />
+        <classShapeMoniker Id="b7b6fdaa-7d10-44fc-9c51-11de90d5ee6c" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

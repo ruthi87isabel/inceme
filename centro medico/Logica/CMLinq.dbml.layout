@@ -1,0 +1,1867 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 88.125, 127.625" name="CMLinq">
+  <DataContextMoniker Name="/CMLinqDataContext" />
+  <nestedChildShapes>
+    <classShape Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" absoluteBounds="6.5, 59.5, 2, 8.49178304036458">
+      <DataClassMoniker Name="/CMLinqDataContext/PACIENTE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1a435670-975d-467f-a27d-48172c159200" absoluteBounds="6.5150000005960464, 59.96000000089407, 1.9700000000000002, 7.931783040364583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="520993d5-de59-4c20-a87f-48b8bdad7e1d" absoluteBounds="0.75, 70.75, 2, 1.0961531575520667">
+      <DataClassMoniker Name="/CMLinqDataContext/FORMASPAGO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f6a36885-44ef-4d59-9f7f-e1f3b120e4b8" absoluteBounds="0.76500000000000057, 71.210000000000008, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8f3c233a-8e40-4b1b-8a76-7c6b855a73e0" absoluteBounds="3.75, 58.625, 2, 4.8761417643229166">
+      <DataClassMoniker Name="/CMLinqDataContext/EMPRESA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b5415b1c-76d6-4954-9dbd-c79c32208c9c" absoluteBounds="3.7650000005960464, 59.08500000089407, 1.9700000000000002, 4.3161417643229161" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2706c208-1d6e-456d-baa4-04897a97080a" absoluteBounds="15.25, 68.375, 2, 7.5056990559895667">
+      <DataClassMoniker Name="/CMLinqDataContext/FACTURA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="56653966-14ad-45a6-91c5-df5a8510161c" absoluteBounds="15.265, 68.835000000000008, 1.9700000000000002, 6.945699055989583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 71.8461531575521); (1.75 : 74.0977197265625); (2.19791866666667 : 74.0977197265625 : JumpStart); (2.36458533333333 : 74.0977197265625 : JumpEnd); (4.41666666666667 : 74.0977197265625 : JumpStart); (4.58333333333333 : 74.0977197265625 : JumpEnd); (6 : 74.0977197265625); (6 : 73.375); (8.32291666666667 : 73.375 : JumpStart); (8.48958333333333 : 73.375 : JumpEnd); (8.72916666666667 : 73.375 : JumpStart); (8.89583333333333 : 73.375 : JumpEnd); (9.25 : 73.375); (9.25 : 76.0110498046875); (9.29166666666667 : 76.0110498046875 : JumpStart); (9.45833333333333 : 76.0110498046875 : JumpEnd); (11.7916666666667 : 76.0110498046875 : JumpStart); (11.9583333333333 : 76.0110498046875 : JumpEnd); (12 : 76.0110498046875); (12 : 72.7911185709635); (15.25 : 72.7911185709635)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/FORMASPAGO/FORMASPAGO_FACTURA" />
+      <nodes>
+        <classShapeMoniker Id="520993d5-de59-4c20-a87f-48b8bdad7e1d" />
+        <classShapeMoniker Id="2706c208-1d6e-456d-baa4-04897a97080a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.882813 : 58.625); (4.882813 : 58.125); (11.625 : 58.125); (11.625 : 66.4224471028646); (14.4791666666667 : 66.4224471028646 : JumpStart); (14.6458333333333 : 66.4224471028646 : JumpEnd); (15.74218475 : 66.4224471028646); (15.74218475 : 68.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/EMPRESA/EMPRESA_FACTURA" />
+      <nodes>
+        <classShapeMoniker Id="8f3c233a-8e40-4b1b-8a76-7c6b855a73e0" />
+        <classShapeMoniker Id="2706c208-1d6e-456d-baa4-04897a97080a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 64.0018765838624); (8.90625 : 64.0018765838624); (8.90625 : 66.2349471028646); (9.10416666666667 : 66.2349471028646 : JumpStart); (9.27083333333333 : 66.2349471028646 : JumpEnd); (11.5416666666667 : 66.2349471028646 : JumpStart); (11.7083333333333 : 66.2349471028646 : JumpEnd); (11.9479166666667 : 66.2349471028646 : JumpStart); (12.1145833333333 : 66.2349471028646 : JumpEnd); (14.4791666666667 : 66.2349471028646 : JumpStart); (14.6458333333333 : 66.2349471028646 : JumpEnd); (14.6666666666667 : 66.2349471028646 : JumpStart); (14.8333333333333 : 66.2349471028646 : JumpEnd); (16.2656245 : 66.2349471028646); (16.2656245 : 68.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_FACTURA" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="2706c208-1d6e-456d-baa4-04897a97080a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="54372704-eb37-447a-a19b-cc149efd90da" absoluteBounds="12.5, 44, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/CMLinqDataContext/USUARIO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4151617d-e2d3-433e-94ee-b4e8dcecd45c" absoluteBounds="12.515, 44.460000000000008, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9d1ee1a1-c2ea-45ed-8b9a-35cf2d568685" absoluteBounds="9.25, 114.875, 2, 3.0683211263020667">
+      <DataClassMoniker Name="/CMLinqDataContext/ContactosPaciente" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8ce64513-064e-43cf-ab74-55a5cfb0d973" absoluteBounds="9.2650000005960464, 115.33500000089407, 1.9700000000000002, 2.508321126302083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.5 : 67.9917830403646); (7.5 : 69.875); (7.68229266666667 : 69.875 : JumpStart); (7.84895933333333 : 69.875 : JumpEnd); (9.0625 : 69.875); (9.0625 : 116.409160563151); (9.25 : 116.409160563151)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_ContactosPaciente" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="9d1ee1a1-c2ea-45ed-8b9a-35cf2d568685" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="84167c3c-f15e-408f-bd92-acf529ac6379" absoluteBounds="12.5, 47.75, 2, 1.096153157552088">
+      <DataClassMoniker Name="/CMLinqDataContext/Parentesco" />
+      <nestedChildShapes>
+        <elementListCompartment Id="670ad29d-2834-4621-876c-cc616b4ff755" absoluteBounds="12.515, 48.210000000000008, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5ce81299-81d2-4f78-bbb3-2e4233a16d63" absoluteBounds="15.25, 55.625, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/CMLinqDataContext/Asociado" />
+      <nestedChildShapes>
+        <elementListCompartment Id="98233c0a-59ea-438f-b362-245759484b27" absoluteBounds="15.265, 56.085000000000008, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 62.0603885112477); (8.625 : 62.0603885112477); (8.625 : 61); (11.5416666666667 : 61 : JumpStart); (11.7083333333333 : 61 : JumpEnd); (11.75 : 61); (11.75 : 59.875); (14.4791666666667 : 59.875 : JumpStart); (14.6458333333333 : 59.875 : JumpEnd); (14.6666666666667 : 59.875 : JumpStart); (14.8333333333333 : 59.875 : JumpEnd); (14.96875 : 59.875); (14.96875 : 57.875); (16.515626 : 57.875); (16.515626 : 56.8855004882813)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_Asociado" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="5ce81299-81d2-4f78-bbb3-2e4233a16d63" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 67.2771410201823); (9.1875 : 67.2771410201823); (9.1875 : 60.75); (11.5416666666667 : 60.75 : JumpStart); (11.7083333333333 : 60.75 : JumpEnd); (11.8125 : 60.75); (11.8125 : 60); (12.0416666666667 : 60 : JumpStart); (12.2083333333333 : 60 : JumpEnd); (14.4791666666667 : 60 : JumpStart); (14.6458333333333 : 60 : JumpEnd); (14.6666666666667 : 60 : JumpStart); (14.8333333333333 : 60 : JumpEnd); (14.9166666666667 : 60 : JumpStart); (15.1145833333333 : 60 : JumpEnd); (15.15625 : 60); (15.15625 : 57.625); (15.906248 : 57.625); (15.906248 : 56.8855004882813)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_Asociado1" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="5ce81299-81d2-4f78-bbb3-2e4233a16d63" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.40625 : 48.9439925130208); (14.40625 : 56.7396468098958); (14.4791666666667 : 56.7396468098958 : JumpStart); (14.7395833333333 : 56.7396468098958 : JumpEnd); (14.7604166666667 : 56.7396468098958 : JumpStart); (15.0208333333333 : 56.7396468098958 : JumpEnd); (15.25 : 56.7396468098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/Parentesco/Parentesco_Asociado" />
+      <nodes>
+        <classShapeMoniker Id="84167c3c-f15e-408f-bd92-acf529ac6379" />
+        <classShapeMoniker Id="5ce81299-81d2-4f78-bbb3-2e4233a16d63" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="cf771136-5d2a-4446-ad6b-0eb0fd09415b" absoluteBounds="6.75, 80.5, 2, 3.2326684570312381">
+      <DataClassMoniker Name="/CMLinqDataContext/BANCO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5dc72cb1-c8da-4c77-9a2f-33e5aba01607" absoluteBounds="6.7650000000000006, 80.960000000000008, 1.9700000000000002, 2.67266845703125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f7962817-3883-4dbb-a1ab-50c03be62cdc" absoluteBounds="18.25, 70.75, 2, 7.8343937174479095">
+      <DataClassMoniker Name="/CMLinqDataContext/N_Articulo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="41b1cb06-b89a-4915-8c79-6e64a2e69f21" absoluteBounds="18.265, 71.210000000000008, 1.9700000000000002, 7.2743937174479161" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.75 : 60.96874975); (6.29166666666667 : 60.96874975 : JumpStart); (6.45833333333333 : 60.96874975 : JumpEnd); (6.5 : 60.96874975)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/EMPRESA/EMPRESA_PACIENTE" />
+      <nodes>
+        <classShapeMoniker Id="8f3c233a-8e40-4b1b-8a76-7c6b855a73e0" />
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="42fbe5c9-279a-4037-9833-cf6b08f341d5" absoluteBounds="12.25, 66.625, 2, 2.0822371419270667">
+      <DataClassMoniker Name="/CMLinqDataContext/PagosPaciente" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b96adefd-7505-464e-95ba-78beb32d9f8d" absoluteBounds="12.265, 67.085000000000008, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 59.5492297692308); (8.56607443490112 : 59.4831553343297 : JumpStart); (8.77767556509888 : 59.2715542041319 : JumpEnd); (8.81607443490112 : 59.2331553343297 : JumpStart); (8.93392556509888 : 59.1153042041319 : JumpEnd); (8.9375 : 59.1117297692308); (8.9375 : 66.125); (9.01041666666667 : 66.125 : JumpStart); (9.27083333333333 : 66.125 : JumpEnd); (11.5416666666667 : 66.125 : JumpStart); (11.7083333333333 : 66.125 : JumpEnd); (11.7515374615385 : 66.125); (11.8473244349011 : 66.2207869733626 : JumpStart); (11.9651755650989 : 66.3386381035604 : JumpEnd); (12.2515374615385 : 66.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_PagosPaciente" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="42fbe5c9-279a-4037-9833-cf6b08f341d5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.5138461538462 : 46.4109318033854); (14.5762803270555 : 46.7223040296559 : JumpStart); (14.7362196729445 : 46.7691781527344 : JumpEnd); (15.28125 : 46.9289125726162); (15.28125 : 66.6265374615385); (14.8333333333333 : 66.6265374615385 : JumpStart); (14.3229166666667 : 66.6265374615385 : JumpEnd); (14.25 : 66.6265374615385)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/USUARIO/USUARIO_PagosPaciente" />
+      <nodes>
+        <classShapeMoniker Id="54372704-eb37-447a-a19b-cc149efd90da" />
+        <classShapeMoniker Id="42fbe5c9-279a-4037-9833-cf6b08f341d5" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="672b0aa5-56db-4bb3-b3ec-68bb48450fec" absoluteBounds="66, 47.25, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/CMLinqDataContext/ROLE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="729cceab-ff73-4e82-8127-2bf86ad9f555" absoluteBounds="66.015000000596046, 47.71000000089407, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0b94e684-ae48-4fdb-b829-2c82be994476" absoluteBounds="66, 52.375, 2, 1.096153157552088">
+      <DataClassMoniker Name="/CMLinqDataContext/ROLESITEM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da076b1a-af53-4fb8-96b2-b5495cd8f43f" absoluteBounds="66.015000000596046, 52.83500000089407, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1d1fb370-0c2f-4be8-8055-7d883eb5e00c" absoluteBounds="58.75, 67.875, 2, 1.2605004882812381">
+      <DataClassMoniker Name="/CMLinqDataContext/ROLESUSUARIO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="845d9cda-bd1c-4e64-b6fd-07927826cfeb" absoluteBounds="58.765, 68.335000000000008, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="45f4455b-05fb-49b2-8e72-b1e8f55254c8" absoluteBounds="47, 47.875, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/CMLinqDataContext/ROLESPERMISO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d5086613-f36f-4cc3-b1f6-443e677d7989" absoluteBounds="47.015000000596046, 48.33500000089407, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(66 : 47.8802502441406); (59.75 : 47.8802502441406); (59.75 : 67.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/ROLE/ROLE_ROLESUSUARIO" />
+      <nodes>
+        <classShapeMoniker Id="672b0aa5-56db-4bb3-b3ec-68bb48450fec" />
+        <classShapeMoniker Id="1d1fb370-0c2f-4be8-8055-7d883eb5e00c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.5 : 45.2054659016927); (15.125 : 45.2054659016927); (15.125 : 46.6609318033854); (17.4375 : 46.6609318033854); (17.4375 : 55.6539737955729); (17.4479166666667 : 55.6539737955729 : JumpStart); (17.7708333333333 : 55.6539737955729 : JumpEnd); (26.0416666666667 : 55.6539737955729 : JumpStart); (26.2083333333333 : 55.6539737955729 : JumpEnd); (59.75 : 55.6539737955729); (59.75 : 67.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/USUARIO/USUARIO_ROLESUSUARIO" />
+      <nodes>
+        <classShapeMoniker Id="54372704-eb37-447a-a19b-cc149efd90da" />
+        <classShapeMoniker Id="1d1fb370-0c2f-4be8-8055-7d883eb5e00c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(67 : 48.5105004882813); (67 : 48.9722924804687); (52.5833333333333 : 48.9722924804687 : JumpStart); (52.4166666666667 : 48.9722924804687 : JumpEnd); (49 : 48.9722924804687)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/ROLE/ROLE_ROLESPERMISO" />
+      <nodes>
+        <classShapeMoniker Id="672b0aa5-56db-4bb3-b3ec-68bb48450fec" />
+        <classShapeMoniker Id="45f4455b-05fb-49b2-8e72-b1e8f55254c8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(67 : 52.375); (67 : 51.7211531575521); (52.5 : 51.7211531575521); (52.5 : 48.8322371419271); (49.375 : 48.8322371419271); (49.375 : 48.3923942402344); (49 : 48.3923942402344)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/ROLESITEM/ROLESITEM_ROLESPERMISO" />
+      <nodes>
+        <classShapeMoniker Id="0b94e684-ae48-4fdb-b829-2c82be994476" />
+        <classShapeMoniker Id="45f4455b-05fb-49b2-8e72-b1e8f55254c8" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="53b6412f-0282-4d76-8cf3-72ac394fde8c" absoluteBounds="66, 50.375, 2, 1.096153157552088">
+      <DataClassMoniker Name="/CMLinqDataContext/PERMISO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dcf027d5-2bd3-4d62-b6de-26595300f64f" absoluteBounds="66.015000000596046, 50.83500000089407, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(66.5000005 : 50.375); (66.5000005 : 48.7072371419271); (49.5 : 48.7072371419271); (49.5 : 48.1024451201172); (49 : 48.1024451201172)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PERMISO/PERMISO_ROLESPERMISO" />
+      <nodes>
+        <classShapeMoniker Id="53b6412f-0282-4d76-8cf3-72ac394fde8c" />
+        <classShapeMoniker Id="45f4455b-05fb-49b2-8e72-b1e8f55254c8" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c94172f2-187d-4a74-91b9-60d91eb77593" absoluteBounds="50.25, 46.5, 2, 2.082237141927088">
+      <DataClassMoniker Name="/CMLinqDataContext/ReportesPersonalizado" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9b9b43dd-4083-405b-8b4d-5ff0afa41d61" absoluteBounds="50.265, 46.96, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 71.0309475755615); (3.4375 : 71.0309475755615); (3.4375 : 68.8125); (9.4375 : 68.8125); (9.4375 : 66.8125); (12.1875 : 66.8125); (12.1875 : 68.7697371419271); (13.25 : 68.7697371419271); (13.25 : 68.7072371419271)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/FORMASPAGO/FORMASPAGO_PagosPaciente" />
+      <nodes>
+        <classShapeMoniker Id="520993d5-de59-4c20-a87f-48b8bdad7e1d" />
+        <classShapeMoniker Id="42fbe5c9-279a-4037-9833-cf6b08f341d5" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2427eef6-63d9-491b-b678-6b00ff10664d" absoluteBounds="12.5, 82.125, 2, 1.0961531575520667">
+      <DataClassMoniker Name="/CMLinqDataContext/SERIES" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f5701eb1-4d56-490a-802b-95b27121003a" absoluteBounds="12.515, 82.585000000000008, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.5 : 82.7219962565104); (16.25 : 82.7219962565104); (16.25 : 77.0687483723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/SERIES/SERIES_FACTURA" />
+      <nodes>
+        <classShapeMoniker Id="2427eef6-63d9-491b-b678-6b00ff10664d" />
+        <classShapeMoniker Id="2706c208-1d6e-456d-baa4-04897a97080a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="21f2a4fe-ff17-40c7-8e3f-ec555de49edb" absoluteBounds="12, 122, 2, 2.4109318033854095">
+      <DataClassMoniker Name="/CMLinqDataContext/d_Accione" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ed47aaa-623a-4781-b7b1-c362f87fb53e" absoluteBounds="12.015000000596046, 122.46000000089407, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cb6fe115-e736-40f9-a0cc-53f9efa8a6dc" absoluteBounds="47.25, 50.5, 2, 1.7535424804687523">
+      <DataClassMoniker Name="/CMLinqDataContext/d_Colore" />
+      <nestedChildShapes>
+        <elementListCompartment Id="057b66bb-c619-4128-94e5-efa4f6d7f402" absoluteBounds="47.265, 50.96, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3712f2b8-a9bf-43bd-ba61-0b07ce4a263e" absoluteBounds="38.5, 94.25, 2, 1.4248478190104095">
+      <DataClassMoniker Name="/CMLinqDataContext/d_ConceptosFra_Imagene" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b4e962e4-8fb0-4b28-b09c-ed9c6ebfd403" absoluteBounds="38.515, 94.710000000000008, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d862cead-bcdf-433a-8c90-2f9528d1dfaa" absoluteBounds="50.25, 50.5, 2, 1.589195149739588">
+      <DataClassMoniker Name="/CMLinqDataContext/d_Diente" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8c289fed-0d06-4548-9a43-938a59b6e7c1" absoluteBounds="50.265, 50.96, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1c2a34c3-b97a-45b7-806e-cce943595db9" absoluteBounds="35.75, 100.25, 2, 1.4248478190104095">
+      <DataClassMoniker Name="/CMLinqDataContext/d_Imagene" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c91f93de-7880-4716-8624-4e41cf26d151" absoluteBounds="35.765, 100.71000000000001, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8b80d9c9-b7e6-4645-92f6-756d9e48b0cb" absoluteBounds="9.25, 122.625, 2, 1.4248478190104095">
+      <DataClassMoniker Name="/CMLinqDataContext/d_Odontograma" />
+      <nestedChildShapes>
+        <elementListCompartment Id="63139845-fe6c-405a-9f79-1aa7566d37e3" absoluteBounds="9.2650000005960464, 123.08500000089407, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4aaeec59-718b-4e1e-a764-dde49cd45ede" absoluteBounds="12, 126.125, 2, 1.2605004882812381">
+      <DataClassMoniker Name="/CMLinqDataContext/d_Presupuesto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7e17c021-6646-4325-8e9e-97fa1b200d79" absoluteBounds="12.015000000596046, 126.58500000089407, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(37.75 : 101.039297688802); (39.5 : 101.039297688802); (39.5 : 95.8285953776042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/d_Imagene/d_Imagene_d_ConceptosFra_Imagene" />
+      <nodes>
+        <classShapeMoniker Id="1c2a34c3-b97a-45b7-806e-cce943595db9" />
+        <classShapeMoniker Id="3712f2b8-a9bf-43bd-ba61-0b07ce4a263e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 123.414297688802); (12 : 123.414297688802)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/d_Odontograma/d_Odontograma_d_Accione" />
+      <nodes>
+        <classShapeMoniker Id="8b80d9c9-b7e6-4645-92f6-756d9e48b0cb" />
+        <classShapeMoniker Id="21f2a4fe-ff17-40c7-8e3f-ec555de49edb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 62.9469240160612); (8.63541666666667 : 62.9469240160612 : JumpStart); (9.11458333333333 : 62.9469240160612 : JumpEnd); (9.125 : 62.9469240160612); (9.125 : 122.25); (10.25 : 122.25); (10.25 : 122.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_d_Odontograma" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="8b80d9c9-b7e6-4645-92f6-756d9e48b0cb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.25 : 124.203595377604); (10.25 : 126.818146972656); (12 : 126.818146972656)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/d_Odontograma/d_Odontograma_d_Presupuesto" />
+      <nodes>
+        <classShapeMoniker Id="8b80d9c9-b7e6-4645-92f6-756d9e48b0cb" />
+        <classShapeMoniker Id="4aaeec59-718b-4e1e-a764-dde49cd45ede" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="82029791-7ba5-4e03-842f-20412aff9e4c" absoluteBounds="53.25, 46.5, 2, 1.7535424804687523">
+      <DataClassMoniker Name="/CMLinqDataContext/FICHEROSGLOBAL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="74e1c2aa-9076-4cbd-b7ce-6f9933867428" absoluteBounds="53.265, 46.96, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ce8dc917-621c-4caf-90ca-d86e39698414" absoluteBounds="9.25, 119.125, 2, 2.5752791341145667">
+      <DataClassMoniker Name="/CMLinqDataContext/FICHERO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="421f607a-32d5-4ffb-b2b8-1b11444d8fad" absoluteBounds="9.2650000005960464, 119.58500000089407, 1.9700000000000002, 2.015279134114583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 61.5438839694504); (8.54166666666667 : 61.5438839694504 : JumpStart); (8.83333333333333 : 61.5438839694504 : JumpEnd); (8.96875 : 61.5438839694504); (8.96875 : 118.75); (10.25 : 118.75); (10.25 : 119.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_FICHERO" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="ce8dc917-621c-4caf-90ca-d86e39698414" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ac7f4cdc-332b-4bf2-8996-1c1dac839d55" absoluteBounds="30, 94.125, 2, 1.5891951497395667">
+      <DataClassMoniker Name="/CMLinqDataContext/CONCEPTOSFAMILIA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8b9403dd-9a47-486f-b9ea-b39680540b56" absoluteBounds="30.015, 94.585000000000008, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="775ebba5-a950-4acf-9f31-c8772aeac6a0" absoluteBounds="32.75, 94.125, 2, 1.7535424804687381">
+      <DataClassMoniker Name="/CMLinqDataContext/CONCEPTOSFRA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d5a6b3ce-aa38-4fec-b85a-97966fdb7c16" absoluteBounds="32.765, 94.585000000000008, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(33.75 : 96.0881982421875); (33.75 : 123.366201985677); (14 : 123.366201985677)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/CONCEPTOSFRA/CONCEPTOSFRA_d_Accione" />
+      <nodes>
+        <classShapeMoniker Id="775ebba5-a950-4acf-9f31-c8772aeac6a0" />
+        <classShapeMoniker Id="21f2a4fe-ff17-40c7-8e3f-ec555de49edb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(33.75 : 94.125); (33.75 : 93); (38.125 : 93); (38.125 : 95.0392976888021); (38.5 : 95.0392976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/CONCEPTOSFRA/CONCEPTOSFRA_d_ConceptosFra_Imagene" />
+      <nodes>
+        <classShapeMoniker Id="775ebba5-a950-4acf-9f31-c8772aeac6a0" />
+        <classShapeMoniker Id="3712f2b8-a9bf-43bd-ba61-0b07ce4a263e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(32 : 95.0104484049479); (32.75 : 95.0104484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/CONCEPTOSFAMILIA/CONCEPTOSFAMILIA_CONCEPTOSFRA" />
+      <nodes>
+        <classShapeMoniker Id="ac7f4cdc-332b-4bf2-8996-1c1dac839d55" />
+        <classShapeMoniker Id="775ebba5-a950-4acf-9f31-c8772aeac6a0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a6cda8f0-2568-49f6-a1da-ce13391460b2" absoluteBounds="40.5, 59.875, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/CMLinqDataContext/N_TipoIVA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8164ec73-ea1c-414e-bff2-26faae859fc1" absoluteBounds="40.515, 60.335000000000008, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(40.968748 : 61.1355004882813); (40.968748 : 62); (26.0625 : 62); (26.0625 : 74.8343937174479); (20.625 : 74.8343937174479); (20.625 : 72.5850236933594); (20.25 : 72.5850236933594)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/N_TipoIVA/N_TipoIVA_N_Articulo" />
+      <nodes>
+        <classShapeMoniker Id="a6cda8f0-2568-49f6-a1da-ce13391460b2" />
+        <classShapeMoniker Id="f7962817-3883-4dbb-a1ab-50c03be62cdc" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="714a765e-8e47-408b-b778-9b2e13dc7912" absoluteBounds="12.25, 57.25, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/CMLinqDataContext/LEMPRESA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dbeea51e-db4d-46a6-8ecc-cc3bdb40b406" absoluteBounds="12.265, 57.710000000000008, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.484374 : 58.625); (4.484374 : 58.0118614282853); (4.99869916666667 : 58.0118614282853 : JumpStart); (5.16536583333333 : 58.0118614282853 : JumpEnd); (5.99995872996954 : 58.0118614282853 : JumpStart); (6.27083333333333 : 58.0118614282853 : JumpEnd); (7.28794699839744 : 58.0118614282853 : JumpStart); (7.4546136650641 : 58.0118614282853 : JumpEnd); (8.72916666666667 : 58.0118614282853 : JumpStart); (8.89583333333333 : 58.0118614282853 : JumpEnd); (8.93229166666667 : 58.0118614282853 : JumpStart); (9.23958333333333 : 58.0118614282853 : JumpEnd); (11.3229166666667 : 58.0118614282853 : JumpStart); (11.4895833333333 : 58.0118614282853 : JumpEnd); (11.6666666666667 : 58.0118614282853 : JumpStart); (12.1458333333333 : 58.0118614282853 : JumpEnd); (12.25 : 58.0118614282853)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/EMPRESA/EMPRESA_LEMPRESA" />
+      <nodes>
+        <classShapeMoniker Id="8f3c233a-8e40-4b1b-8a76-7c6b855a73e0" />
+        <classShapeMoniker Id="714a765e-8e47-408b-b778-9b2e13dc7912" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.75952136538461 : 59.5); (6.75952136538461 : 58.34375); (6.9982142724359 : 58.34375 : JumpStart); (7.16488093910256 : 58.34375 : JumpEnd); (7.28794699839744 : 58.34375 : JumpStart); (7.4546136650641 : 58.34375 : JumpEnd); (7.60562024358975 : 58.34375 : JumpStart); (7.77228691025641 : 58.34375 : JumpEnd); (8.72916666666667 : 58.34375 : JumpStart); (8.89583333333333 : 58.34375 : JumpEnd); (8.93229166666667 : 58.34375 : JumpStart); (9.23958333333333 : 58.34375 : JumpEnd); (11.3229166666667 : 58.34375 : JumpStart); (11.4895833333333 : 58.34375 : JumpEnd); (11.5416666666667 : 58.34375 : JumpStart); (12.1458333333333 : 58.34375 : JumpEnd); (12.25 : 58.34375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_LEMPRESA" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="714a765e-8e47-408b-b778-9b2e13dc7912" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="27940582-f8ab-48f2-9276-6f5298dcad51" absoluteBounds="53.25, 49.5, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/CMLinqDataContext/DESGLOSEIVAS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="61cf87b7-1020-4ddd-8700-56301b74d8b0" absoluteBounds="53.265, 49.96, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0bbc4f81-0f74-4d8a-b6cf-df4d81c56cda" absoluteBounds="53.25, 52.5, 2.375, 2.9039737955729166">
+      <DataClassMoniker Name="/CMLinqDataContext/CLINICAINCEME" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1b205d0f-ee9e-402d-9742-8fb9c4772343" absoluteBounds="53.265, 52.96, 2.3449999999999998, 2.3439737955729165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ffbda443-c64b-4bf5-8656-8fce38dbeedb" absoluteBounds="3.5, 101.375, 2, 1.5891951497395667">
+      <DataClassMoniker Name="/CMLinqDataContext/GASTO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="29ba8233-759d-41c2-98d6-21f265264af5" absoluteBounds="3.5150000000000006, 101.83500000000001, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.281252 : 71.9439925130208); (2.281252 : 102.260448404948); (3.5 : 102.260448404948)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/FORMASPAGO/FORMASPAGO_GASTO" />
+      <nodes>
+        <classShapeMoniker Id="520993d5-de59-4c20-a87f-48b8bdad7e1d" />
+        <classShapeMoniker Id="ffbda443-c64b-4bf5-8656-8fce38dbeedb" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8b31e8ed-c425-44a3-b488-15f5f4d17603" absoluteBounds="29.75, 62.875, 2, 4.8761417643229095">
+      <DataClassMoniker Name="/CMLinqDataContext/N_Factura" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2c997038-516e-4a9f-84fc-d11901337b14" absoluteBounds="29.765, 63.335000000000008, 1.9700000000000002, 4.3161417643229161" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3e2a4c1f-d0a3-4c8c-9066-9ca96ec35ea0" absoluteBounds="43.25, 62.25, 2, 4.0544051106770809">
+      <DataClassMoniker Name="/CMLinqDataContext/N_Factura_Linea" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e551e277-35ed-4646-8baf-88019fbcf3d8" absoluteBounds="43.265, 62.710000000000008, 1.9700000000000002, 3.494405110677083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 71.6415281543376); (3.375 : 71.6415281543376); (3.375 : 68.8125); (9.375 : 68.8125); (9.375 : 66.8125); (12.125 : 66.8125); (12.125 : 68.7697371419271); (14.4791666666667 : 68.7697371419271 : JumpStart); (14.6458333333333 : 68.7697371419271 : JumpEnd); (15.125 : 68.7697371419271); (15.125 : 68.3125); (17.375 : 68.3125); (17.375 : 68.9386417643229); (20.5416666666667 : 68.9386417643229 : JumpStart); (20.7083333333333 : 68.9386417643229 : JumpEnd); (20.875 : 68.9386417643229); (20.875 : 66.4375); (25.9791666666667 : 66.4375 : JumpStart); (26.1458333333333 : 66.4375 : JumpEnd); (26.6875 : 66.4375); (26.6875 : 68.0566837565104); (30.75 : 68.0566837565104); (30.75 : 67.7511417643229)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/FORMASPAGO/FORMASPAGO_N_Factura" />
+      <nodes>
+        <classShapeMoniker Id="520993d5-de59-4c20-a87f-48b8bdad7e1d" />
+        <classShapeMoniker Id="8b31e8ed-c425-44a3-b488-15f5f4d17603" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.92053454807692 : 59.5); (6.92053454807692 : 59.375); (6.9982142724359 : 59.375 : JumpStart); (7.16488093910256 : 59.375 : JumpEnd); (7.60562024358975 : 59.375 : JumpStart); (7.93112353285256 : 59.375 : JumpEnd); (8.52320512820513 : 59.375 : JumpStart); (8.72371694871793 : 59.375 : JumpEnd); (8.75 : 59.375); (8.75 : 66.5161971028646); (9.10416666666667 : 66.5161971028646 : JumpStart); (9.27083333333333 : 66.5161971028646 : JumpEnd); (11.8229166666667 : 66.5161971028646 : JumpStart); (11.9895833333333 : 66.5161971028646 : JumpEnd); (14.4791666666667 : 66.5161971028646 : JumpStart); (14.6458333333333 : 66.5161971028646 : JumpEnd); (14.6666666666667 : 66.5161971028646 : JumpStart); (14.8333333333333 : 66.5161971028646 : JumpEnd); (15.6588514166667 : 66.5161971028646 : JumpStart); (15.8255180833333 : 66.5161971028646 : JumpEnd); (16.1822911666667 : 66.5161971028646 : JumpStart); (16.3489578333333 : 66.5161971028646 : JumpEnd); (17.4479166666667 : 66.5161971028646 : JumpStart); (17.6145833333333 : 66.5161971028646 : JumpEnd); (17.8125 : 66.5161971028646); (17.8125 : 63.625); (20.875 : 63.625); (20.875 : 65.5127791341146); (21.9166666666667 : 65.5127791341146 : JumpStart); (22.0833333333333 : 65.5127791341146 : JumpEnd); (23.6666666666667 : 65.5127791341146 : JumpStart); (23.8333333333333 : 65.5127791341146 : JumpEnd); (25.9791666666667 : 65.5127791341146 : JumpStart); (26.1458333333333 : 65.5127791341146 : JumpEnd); (26.5 : 65.5127791341146); (26.5 : 68.3691837565104); (26.5416666666667 : 68.3691837565104 : JumpStart); (26.7083333333333 : 68.3691837565104 : JumpEnd); (29.125 : 68.3691837565104); (29.125 : 65.3130708821615); (29.75 : 65.3130708821615)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_N_Factura" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="8b31e8ed-c425-44a3-b488-15f5f4d17603" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(30.75 : 62.875); (30.75 : 62.333944905599); (40.1666666666667 : 62.333944905599 : JumpStart); (40.4583333333333 : 62.333944905599 : JumpEnd); (41.9166661666667 : 62.333944905599 : JumpStart); (42.0833328333333 : 62.333944905599 : JumpEnd); (43.25 : 62.333944905599)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/N_Factura/N_Factura_N_Factura_Linea" />
+      <nodes>
+        <classShapeMoniker Id="8b31e8ed-c425-44a3-b488-15f5f4d17603" />
+        <classShapeMoniker Id="3e2a4c1f-d0a3-4c8c-9066-9ca96ec35ea0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(42.5 : 60.5052502441406); (44.25 : 60.5052502441406); (44.25 : 62.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/N_TipoIVA/N_TipoIVA_N_Factura_Linea" />
+      <nodes>
+        <classShapeMoniker Id="a6cda8f0-2568-49f6-a1da-ce13391460b2" />
+        <classShapeMoniker Id="3e2a4c1f-d0a3-4c8c-9066-9ca96ec35ea0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="94d1842a-7df6-4da0-a867-6bfe0382ecab" absoluteBounds="35.5, 93.25, 2, 3.2326684570312381">
+      <DataClassMoniker Name="/CMLinqDataContext/d_PresupuestoLinea" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3f9c61e7-c65f-4095-aef9-56c1e9893237" absoluteBounds="35.515, 93.710000000000008, 1.9700000000000002, 2.67266845703125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(34.75 : 95.1065991210938); (35.5 : 95.1065991210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/CONCEPTOSFRA/CONCEPTOSFRA_d_PresupuestoLinea" />
+      <nodes>
+        <classShapeMoniker Id="775ebba5-a950-4acf-9f31-c8772aeac6a0" />
+        <classShapeMoniker Id="94d1842a-7df6-4da0-a867-6bfe0382ecab" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13 : 122); (13 : 93.6562505); (33.4010404166667 : 93.6562505 : JumpStart); (33.5677070833333 : 93.6562505 : JumpEnd); (33.6666666666667 : 93.6562505 : JumpStart); (33.8333333333333 : 93.6562505 : JumpEnd); (34.4635454166667 : 93.6562505 : JumpStart); (34.6302120833333 : 93.6562505 : JumpEnd); (35.5 : 93.6562505)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/d_Accione/d_Accione_d_PresupuestoLinea" />
+      <nodes>
+        <classShapeMoniker Id="21f2a4fe-ff17-40c7-8e3f-ec555de49edb" />
+        <classShapeMoniker Id="94d1842a-7df6-4da0-a867-6bfe0382ecab" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14 : 126.125); (14.375 : 125.75); (14.375 : 97.3189111328125); (33.6666666666667 : 97.3189111328125 : JumpStart); (33.8333333333333 : 97.3189111328125 : JumpEnd); (35.1265374615385 : 97.3189111328125); (35.5015374615385 : 96.9439111328125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/d_Presupuesto/d_Presupuesto_d_PresupuestoLinea" />
+      <nodes>
+        <classShapeMoniker Id="4aaeec59-718b-4e1e-a764-dde49cd45ede" />
+        <classShapeMoniker Id="94d1842a-7df6-4da0-a867-6bfe0382ecab" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 70.75); (1.75 : 69.8855004882813); (3.125 : 69.8855004882813); (3.125 : 64.5630708821615); (6.5 : 64.5630708821615)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/FORMASPAGO/FORMASPAGO_PACIENTE" />
+      <nodes>
+        <classShapeMoniker Id="520993d5-de59-4c20-a87f-48b8bdad7e1d" />
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="247ef696-8283-47a2-b261-a903e764b493" absoluteBounds="56.25, 43.5, 2, 1.589195149739588">
+      <DataClassMoniker Name="/CMLinqDataContext/CONCEPTOSFACTURABLE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ab560a2c-7ff9-44c8-ae03-baa2bf2bf7d6" absoluteBounds="56.265, 43.96, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="859f85cc-af37-496a-b29f-7fb28d588c13" absoluteBounds="15.25, 58.125, 2, 2.082237141927088">
+      <DataClassMoniker Name="/CMLinqDataContext/Comunicacion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9563e727-834e-4f48-b006-ae0bffbf44b7" absoluteBounds="15.265, 58.585000000000008, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.08154760576923 : 59.5); (7.08154760576923 : 57.9375); (8.72916666666667 : 57.9375 : JumpStart); (8.89583333333333 : 57.9375 : JumpEnd); (8.93229166666667 : 57.9375 : JumpStart); (9.23958333333333 : 57.9375 : JumpEnd); (11.6666666666667 : 57.9375 : JumpStart); (11.8333333333333 : 57.9375 : JumpEnd); (11.8541666666667 : 57.9375 : JumpStart); (12.0208333333333 : 57.9375 : JumpEnd); (12.1875 : 57.9375); (12.1875 : 59.7303898111979); (14.5 : 59.7303898111979); (14.5 : 58.740195405599); (14.8854166666667 : 58.740195405599 : JumpStart); (15.0520833333333 : 58.740195405599 : JumpEnd); (15.0729166666667 : 58.740195405599 : JumpStart); (15.2395833333333 : 58.740195405599 : JumpEnd); (15.25 : 58.740195405599)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_Comunicacion" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="859f85cc-af37-496a-b29f-7fb28d588c13" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.5 : 45.1544443985377); (14.6198624955518 : 45.4013974650588 : JumpStart); (14.6926375044482 : 45.5513360386745 : JumpEnd); (14.9636124955518 : 46.1096266423825 : JumpStart); (15.0363875044482 : 46.2595652159982 : JumpEnd); (15.0886124955518 : 46.3671645250457 : JumpStart); (15.1613875044482 : 46.5171030986614 : JumpEnd); (15.359375 : 46.925017341847); (15.359375 : 58.8620648788061); (15.25 : 58.8620648788061)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/USUARIO/USUARIO_Comunicacion" />
+      <nodes>
+        <classShapeMoniker Id="54372704-eb37-447a-a19b-cc149efd90da" />
+        <classShapeMoniker Id="859f85cc-af37-496a-b29f-7fb28d588c13" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="75b921f7-6ef3-42df-9e38-7b6da1f3188e" absoluteBounds="35.5, 97.625, 2, 1.4248478190104095">
+      <DataClassMoniker Name="/CMLinqDataContext/Tarifa" />
+      <nestedChildShapes>
+        <elementListCompartment Id="43ba7763-0857-4263-9e3b-de984c23ca96" absoluteBounds="35.515, 98.085000000000008, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(34.2812525 : 96.0881982421875); (34.2812525 : 98.4142976888021); (35.5 : 98.4142976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/CONCEPTOSFRA/CONCEPTOSFRA_Tarifa" />
+      <nodes>
+        <classShapeMoniker Id="775ebba5-a950-4acf-9f31-c8772aeac6a0" />
+        <classShapeMoniker Id="75b921f7-6ef3-42df-9e38-7b6da1f3188e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4c791bb6-2989-46be-96ca-40a44228b0c5" absoluteBounds="56.25, 46.5, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/CMLinqDataContext/PLANTILLA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="93f6a205-2c71-4311-bbab-c8b57db16fcc" absoluteBounds="56.265, 46.96, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2f185b0c-a245-4b96-a032-50e7619723a1" absoluteBounds="56.25, 49.5, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/CMLinqDataContext/CONCEPTOSANALITICA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d573e9ba-314c-441c-94d8-8f2f30081f5f" absoluteBounds="56.265, 49.959999999999994, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="50caf41c-19cc-4adf-9cca-1ca2e93e4109" absoluteBounds="35.5, 90.25, 2, 1.2605004882812381">
+      <DataClassMoniker Name="/CMLinqDataContext/PLANTILLAANALITICA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fddb961d-3e0a-46b3-a36c-5138883ad9dc" absoluteBounds="35.515, 90.71, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(34.2812525 : 94.125); (34.2812525 : 90.9431469726563); (34.4635454166667 : 90.9431469726563 : JumpStart); (34.6302120833333 : 90.9431469726563 : JumpEnd); (35.5 : 90.9431469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/CONCEPTOSFRA/CONCEPTOSFRA_PLANTILLAANALITICA" />
+      <nodes>
+        <classShapeMoniker Id="775ebba5-a950-4acf-9f31-c8772aeac6a0" />
+        <classShapeMoniker Id="50caf41c-19cc-4adf-9cca-1ca2e93e4109" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a08dd7d4-e673-41c4-873b-e461c256352b" absoluteBounds="56.25, 52.5, 2, 2.575279134114588">
+      <DataClassMoniker Name="/CMLinqDataContext/PLANTILLA_HISTORIALE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2d5dc57e-824f-4c30-95da-da7e4e4189e9" absoluteBounds="56.265, 52.959999999999994, 1.9700000000000002, 2.015279134114583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="23ae9367-c985-49c3-b2ac-6ed54b7b1373" absoluteBounds="56.25, 56.5, 2, 3.068321126302088">
+      <DataClassMoniker Name="/CMLinqDataContext/DERIVACIONES_DESTINO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="96e0054d-5d53-4971-a6cd-4080e98f1b0a" absoluteBounds="56.265, 56.959999999999994, 1.9700000000000002, 2.508321126302083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="059cb6c7-f615-4530-bffc-d4ac8b61b959" absoluteBounds="66, 56.875, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/CMLinqDataContext/ARTICULO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cf8c29e1-df53-41f2-8be6-e517eb1538cc" absoluteBounds="66.015, 57.334999999999994, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ddcc29bc-2996-4919-8344-4541f8910e79" absoluteBounds="24, 66.75, 2, 7.8343937174479095">
+      <DataClassMoniker Name="/CMLinqDataContext/N_Parte" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5e11109a-2ad0-4372-baff-7ccd218ac0f5" absoluteBounds="24.015, 67.210000000000008, 1.9700000000000002, 7.2743937174479161" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.085935 : 58.625); (4.085935 : 58.1875); (4.40104066666667 : 58.1875 : JumpStart); (4.56770733333333 : 58.1875 : JumpEnd); (4.99869916666667 : 58.1875 : JumpStart); (5.16536583333333 : 58.1875 : JumpEnd); (6.01644082714533 : 58.1875 : JumpStart); (6.27083333333333 : 58.1875 : JumpEnd); (6.9982142724359 : 58.1875 : JumpStart); (7.16488093910256 : 58.1875 : JumpEnd); (7.28794699839744 : 58.1875 : JumpStart); (7.4546136650641 : 58.1875 : JumpEnd); (8.72916666666667 : 58.1875 : JumpStart); (8.89583333333333 : 58.1875 : JumpEnd); (8.93229166666667 : 58.1875 : JumpStart); (9.23958333333333 : 58.1875 : JumpEnd); (11.3229166666667 : 58.1875 : JumpStart); (11.4895833333333 : 58.1875 : JumpEnd); (11.5625 : 58.1875); (11.5625 : 66.3911971028646); (11.7916666666667 : 66.3911971028646 : JumpStart); (12.1145833333333 : 66.3911971028646 : JumpEnd); (14.3229166666667 : 66.3911971028646 : JumpStart); (14.8333333333333 : 66.3911971028646 : JumpEnd); (14.8541666666667 : 66.3911971028646 : JumpStart); (15.0208333333333 : 66.3911971028646 : JumpEnd); (15.1979166666667 : 66.3911971028646 : JumpStart); (15.3645833333333 : 66.3911971028646 : JumpEnd); (16.1822911666667 : 66.3911971028646 : JumpStart); (16.3489578333333 : 66.3911971028646 : JumpEnd); (17.4479166666667 : 66.3911971028646 : JumpStart); (17.6145833333333 : 66.3911971028646 : JumpEnd); (17.6875 : 66.3911971028646); (17.6875 : 63.8125); (17.7291666666667 : 63.8125 : JumpStart); (17.8958333333333 : 63.8125 : JumpEnd); (20.2291666666667 : 63.8125 : JumpStart); (20.3958333333333 : 63.8125 : JumpEnd); (20.5416666666667 : 63.8125 : JumpStart); (20.7083333333333 : 63.8125 : JumpEnd); (20.75 : 63.8125); (20.75 : 62.5); (23.2916666666667 : 62.5 : JumpStart); (23.5833333333333 : 62.5 : JumpEnd); (23.625 : 62.5); (23.625 : 66.25); (23.6666666666667 : 66.25 : JumpStart); (23.8333333333333 : 66.25 : JumpEnd); (25 : 66.25); (25 : 66.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/EMPRESA/EMPRESA_N_Parte" />
+      <nodes>
+        <classShapeMoniker Id="8f3c233a-8e40-4b1b-8a76-7c6b855a73e0" />
+        <classShapeMoniker Id="ddcc29bc-2996-4919-8344-4541f8910e79" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(24.5569230769231 : 75.8283512369792); (24.5569230769231 : 76.0783512369792); (25 : 76.0783512369792); (25 : 75.8283512369792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/N_Parte/N_Parte_N_Parte" />
+      <nodes>
+        <classShapeMoniker Id="ddcc29bc-2996-4919-8344-4541f8910e79" />
+        <classShapeMoniker Id="ddcc29bc-2996-4919-8344-4541f8910e79" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="dd1f778f-b4b8-4f85-84fb-886ee77db798" absoluteBounds="6.5, 55.125, 2, 2.082237141927088">
+      <DataClassMoniker Name="/CMLinqDataContext/DIAGNOSTICO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="35c67612-8cc9-469f-997f-f9ca619617e0" absoluteBounds="6.5150000000000006, 55.585000000000008, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 56.304071392334); (8.75 : 56.304071392334); (8.75 : 57.2535424804688); (9.07291666666667 : 57.2535424804688 : JumpStart); (9.23958333333333 : 57.2535424804688 : JumpEnd); (11.75 : 57.2535424804688); (11.75 : 59.4178898111979); (14.4791666666667 : 59.4178898111979 : JumpStart); (14.6458333333333 : 59.4178898111979 : JumpEnd); (15.1875 : 59.4178898111979); (15.1875 : 60.7072371419271); (17.375 : 60.7072371419271); (17.375 : 62.7002791341146); (17.6041666666667 : 62.7002791341146 : JumpStart); (17.7708333333333 : 62.7002791341146 : JumpEnd); (18.9166666666667 : 62.7002791341146 : JumpStart); (19.0833333333333 : 62.7002791341146 : JumpEnd); (23.4166666666667 : 62.7002791341146 : JumpStart); (23.5833333333333 : 62.7002791341146 : JumpEnd); (23.75 : 62.7002791341146); (23.75 : 66.625); (25 : 66.625); (25 : 66.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/DIAGNOSTICO/DIAGNOSTICO_N_Parte" />
+      <nodes>
+        <classShapeMoniker Id="dd1f778f-b4b8-4f85-84fb-886ee77db798" />
+        <classShapeMoniker Id="ddcc29bc-2996-4919-8344-4541f8910e79" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b16e9aef-3ea6-4bbe-9016-bd86f4db42b1" absoluteBounds="18, 56.25, 2, 1.7535424804687523">
+      <DataClassMoniker Name="/CMLinqDataContext/HistorialesDiagnostico" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7b7f4907-51c7-4d01-bff4-21a99b751dac" absoluteBounds="18.015, 56.710000000000008, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.5 : 57.4728011067708); (7.5 : 57.7228011067708); (12 : 57.7228011067708); (12 : 57); (14.5 : 57); (14.5 : 57.3493969726563); (18 : 57.3493969726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/DIAGNOSTICO/DIAGNOSTICO_HistorialesDiagnostico" />
+      <nodes>
+        <classShapeMoniker Id="dd1f778f-b4b8-4f85-84fb-886ee77db798" />
+        <classShapeMoniker Id="b16e9aef-3ea6-4bbe-9016-bd86f4db42b1" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3dff9a56-78b1-4293-be1f-ff0f164027f1" absoluteBounds="12, 49.875, 2, 2.575279134114588">
+      <DataClassMoniker Name="/CMLinqDataContext/LHISTORIALE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="53b1b7c4-ced5-4aac-97e6-cbe706632461" absoluteBounds="12.015, 50.335000000000008, 1.9700000000000002, 2.015279134114583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7db06edf-dc2e-436b-a248-37e9bc429852" absoluteBounds="47.25, 57.5, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/CMLinqDataContext/LINEASINDICACIONE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="54c26e8d-2bb8-4ce0-91ec-518c51643296" absoluteBounds="47.265, 57.96, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0d0722a0-d499-45b6-b86e-5469cee71f49" absoluteBounds="30, 70.125, 2, 1.4248478190104095">
+      <DataClassMoniker Name="/CMLinqDataContext/SALA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="081effc4-87ff-4370-8e5a-e514b398380e" absoluteBounds="30.015, 70.585000000000008, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0b006b24-3f40-452c-ae47-15ad8399e488" absoluteBounds="40.5, 62.5, 2, 6.0265730794270809">
+      <DataClassMoniker Name="/CMLinqDataContext/CITA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f47e20a0-f2a4-44bc-9560-4af31921592e" absoluteBounds="40.515, 62.96, 1.9700000000000002, 5.466573079427083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(40.703122 : 68.5265730794271); (40.703122 : 93.71875); (38.2083333333333 : 93.71875 : JumpStart); (38.0416666666667 : 93.71875 : JumpEnd); (37.5 : 93.71875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/CITA/CITA_d_PresupuestoLinea" />
+      <nodes>
+        <classShapeMoniker Id="0b006b24-3f40-452c-ae47-15ad8399e488" />
+        <classShapeMoniker Id="94d1842a-7df6-4da0-a867-6bfe0382ecab" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 70.8592217877808); (3.3125 : 70.8592217877808); (3.3125 : 68.8125); (7.41666666666667 : 68.8125 : JumpStart); (7.58333333333333 : 68.8125 : JumpEnd); (7.68229266666667 : 68.8125 : JumpStart); (7.84895933333333 : 68.8125 : JumpEnd); (9.3125 : 68.8125); (9.3125 : 66.8125); (11.8229166666667 : 66.8125 : JumpStart); (11.9895833333333 : 66.8125 : JumpEnd); (12.0625 : 66.8125); (12.0625 : 68.7697371419271); (14.4791666666667 : 68.7697371419271 : JumpStart); (14.6458333333333 : 68.7697371419271 : JumpEnd); (14.6666666666667 : 68.7697371419271 : JumpStart); (14.8333333333333 : 68.7697371419271 : JumpEnd); (14.875 : 68.7697371419271); (14.875 : 68.3125); (17.4479166666667 : 68.3125 : JumpStart); (17.7708333333333 : 68.3125 : JumpEnd); (17.8125 : 68.3125); (17.8125 : 68.9386417643229); (20.5416666666667 : 68.9386417643229 : JumpStart); (20.7083333333333 : 68.9386417643229 : JumpEnd); (20.75 : 68.9386417643229); (20.75 : 66.4375); (20.8541666666667 : 66.4375 : JumpStart); (21.0208333333333 : 66.4375 : JumpEnd); (23.6666666666667 : 66.4375 : JumpStart); (23.8333333333333 : 66.4375 : JumpEnd); (25.9791666666667 : 66.4375 : JumpStart); (26.1458333333333 : 66.4375 : JumpEnd); (26.4375 : 66.4375); (26.4375 : 68.5890730794271); (26.5416666666667 : 68.5890730794271 : JumpStart); (26.7083333333333 : 68.5890730794271 : JumpEnd); (31.8229166666667 : 68.5890730794271 : JumpStart); (31.9895833333333 : 68.5890730794271 : JumpEnd); (40.1666666666667 : 68.5890730794271 : JumpStart); (40.4583333333333 : 68.5890730794271 : JumpEnd); (41.5 : 68.5890730794271); (41.5 : 68.5265730794271)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/FORMASPAGO/FORMASPAGO_CITA" />
+      <nodes>
+        <classShapeMoniker Id="520993d5-de59-4c20-a87f-48b8bdad7e1d" />
+        <classShapeMoniker Id="0b006b24-3f40-452c-ae47-15ad8399e488" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(31.90625 : 70.125); (31.90625 : 65.5132865397135); (40.5 : 65.5132865397135)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/SALA/SALA_CITA" />
+      <nodes>
+        <classShapeMoniker Id="0d0722a0-d499-45b6-b86e-5469cee71f49" />
+        <classShapeMoniker Id="0b006b24-3f40-452c-ae47-15ad8399e488" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.031252 : 67.9917830403646); (8.031252 : 68.2417830403646); (8.625 : 68.2417830403646); (8.625 : 66.4224471028646); (8.66666666666667 : 66.4224471028646 : JumpStart); (8.83333333333333 : 66.4224471028646 : JumpEnd); (8.88541666666667 : 66.4224471028646 : JumpStart); (9.05208333333333 : 66.4224471028646 : JumpEnd); (9.10416666666667 : 66.4224471028646 : JumpStart); (9.27083333333333 : 66.4224471028646 : JumpEnd); (11.8229166666667 : 66.4224471028646 : JumpStart); (11.9895833333333 : 66.4224471028646 : JumpEnd); (14.3229166666667 : 66.4224471028646 : JumpStart); (14.6458333333333 : 66.4224471028646 : JumpEnd); (14.6666666666667 : 66.4224471028646 : JumpStart); (14.8333333333333 : 66.4224471028646 : JumpEnd); (16.1822911666667 : 66.4224471028646 : JumpStart); (16.3489578333333 : 66.4224471028646 : JumpEnd); (17.4479166666667 : 66.4224471028646 : JumpStart); (17.6145833333333 : 66.4224471028646 : JumpEnd); (17.75 : 66.4224471028646); (17.75 : 63.6875); (20.2291666666667 : 63.6875 : JumpStart); (20.3958333333333 : 63.6875 : JumpEnd); (20.625 : 63.6875); (20.625 : 65.5752791341146); (21.9166666666667 : 65.5752791341146 : JumpStart); (22.0833333333333 : 65.5752791341146 : JumpEnd); (23.6666666666667 : 65.5752791341146 : JumpStart); (23.8333333333333 : 65.5752791341146 : JumpEnd); (25.9791666666667 : 65.5752791341146 : JumpStart); (26.1458333333333 : 65.5752791341146 : JumpEnd); (26.1979166666667 : 65.5752791341146 : JumpStart); (26.3645833333333 : 65.5752791341146 : JumpEnd); (26.46875 : 65.5752791341146); (26.46875 : 68.2441837565104); (26.5104166666667 : 68.2441837565104 : JumpStart); (26.7083333333333 : 68.2441837565104 : JumpEnd); (29.0416666666667 : 68.2441837565104 : JumpStart); (29.2083333333333 : 68.2441837565104 : JumpEnd); (31.8229166666667 : 68.2441837565104 : JumpStart); (31.9895833333333 : 68.2441837565104 : JumpEnd); (39.875 : 68.2441837565104); (39.875 : 65.5132865397135); (40.1666666666667 : 65.5132865397135 : JumpStart); (40.4583333333333 : 65.5132865397135 : JumpEnd); (40.5 : 65.5132865397135)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_CITA" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="0b006b24-3f40-452c-ae47-15ad8399e488" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d7f1cb6a-4a8c-41d2-bec0-bd4aabb1008f" absoluteBounds="21, 76.25, 2, 2.5752791341145667">
+      <DataClassMoniker Name="/CMLinqDataContext/LINEASFACTURA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b88dc855-b30c-42d2-9516-57a40f9c0be6" absoluteBounds="21.015, 76.710000000000008, 1.9700000000000002, 2.015279134114583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(33.2187475 : 94.125); (33.2187475 : 76.65625); (23.9583333333333 : 76.65625 : JumpStart); (23.7916666666667 : 76.65625 : JumpEnd); (23 : 76.65625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/CONCEPTOSFRA/CONCEPTOSFRA_LINEASFACTURA" />
+      <nodes>
+        <classShapeMoniker Id="775ebba5-a950-4acf-9f31-c8772aeac6a0" />
+        <classShapeMoniker Id="d7f1cb6a-4a8c-41d2-bec0-bd4aabb1008f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(40.968748 : 68.5265730794271); (40.968748 : 76.4218725); (34.6302120833333 : 76.4218725 : JumpStart); (34.4635454166667 : 76.4218725 : JumpEnd); (33.5677070833333 : 76.4218725 : JumpStart); (33.4010404166667 : 76.4218725 : JumpEnd); (26.3645833333333 : 76.4218725 : JumpStart); (26.1979166666667 : 76.4218725 : JumpEnd); (23.9583333333333 : 76.4218725 : JumpStart); (23.7916666666667 : 76.4218725 : JumpEnd); (23 : 76.4218725)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/CITA/CITA_LINEASFACTURA" />
+      <nodes>
+        <classShapeMoniker Id="0b006b24-3f40-452c-ae47-15ad8399e488" />
+        <classShapeMoniker Id="d7f1cb6a-4a8c-41d2-bec0-bd4aabb1008f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.781252 : 77.0687483723958); (16.781252 : 80.0783512369792); (20.625 : 80.0783512369792); (20.625 : 77.7123527018229); (20.6666666666667 : 77.7123527018229 : JumpStart); (20.8333333333333 : 77.7123527018229 : JumpEnd); (21 : 77.7123527018229)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/FACTURA/FACTURA_LINEASFACTURA" />
+      <nodes>
+        <classShapeMoniker Id="2706c208-1d6e-456d-baa4-04897a97080a" />
+        <classShapeMoniker Id="d7f1cb6a-4a8c-41d2-bec0-bd4aabb1008f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="26912abf-0e2a-4dcf-8ffd-c1c37f6305c9" absoluteBounds="15.25, 50.25, 2, 4.054405110677088">
+      <DataClassMoniker Name="/CMLinqDataContext/MEDICO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c01bac46-a95d-4797-9862-d941ff47d3f7" absoluteBounds="15.265, 50.71, 1.9700000000000002, 3.494405110677083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(16.7484615384616 : 54.3044051106771); (16.457216127389 : 54.4513196182607 : JumpStart); (16.308409872611 : 54.5263827671205 : JumpEnd); (16.058777127389 : 54.6523063712246 : JumpStart); (15.909970872611 : 54.7273695200844 : JumpEnd); (15.433778127389 : 54.9675780178648 : JumpStart); (15.206846872611 : 55.0820501856091 : JumpEnd); (14.9375 : 55.2179182942708); (14.9375 : 122.651848992839); (14.4583333333333 : 122.651848992839 : JumpStart); (14.2916666666667 : 122.651848992839 : JumpEnd); (14 : 122.651848992839)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MEDICO/MEDICO_d_Accione" />
+      <nodes>
+        <classShapeMoniker Id="26912abf-0e2a-4dcf-8ffd-c1c37f6305c9" />
+        <classShapeMoniker Id="21f2a4fe-ff17-40c7-8e3f-ec555de49edb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.382813 : 54.3044051106771); (16.382813 : 55.125); (17.53125 : 55.125); (17.53125 : 70.625); (17.9166666666667 : 70.625 : JumpStart); (18.0833333333333 : 70.625 : JumpEnd); (20.875 : 70.625); (20.875 : 74.5450463867188); (23.375 : 74.5450463867188); (23.375 : 70.667196858724); (24 : 70.667196858724)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MEDICO/MEDICO_N_Parte" />
+      <nodes>
+        <classShapeMoniker Id="26912abf-0e2a-4dcf-8ffd-c1c37f6305c9" />
+        <classShapeMoniker Id="ddcc29bc-2996-4919-8344-4541f8910e79" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.25 : 53.4667044274089); (17.3541666666667 : 53.4667044274089 : JumpStart); (17.5208333333333 : 53.4667044274089 : JumpEnd); (17.5416666666667 : 53.4667044274089 : JumpStart); (17.7083333333333 : 53.4667044274089 : JumpEnd); (17.875 : 53.4667044274089); (17.875 : 54.9502791341146); (26.0416666666667 : 54.9502791341146 : JumpStart); (26.2083333333333 : 54.9502791341146 : JumpEnd); (40 : 54.9502791341146); (40 : 62.1875); (40.2916666666667 : 62.1875 : JumpStart); (40.4583333333333 : 62.1875 : JumpEnd); (41.5 : 62.1875); (41.5 : 62.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MEDICO/MEDICO_CITA" />
+      <nodes>
+        <classShapeMoniker Id="26912abf-0e2a-4dcf-8ffd-c1c37f6305c9" />
+        <classShapeMoniker Id="0b006b24-3f40-452c-ae47-15ad8399e488" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1c5a5ea7-07a6-49e6-a72c-0fe188f2795f" absoluteBounds="43.25, 72.25, 2, 1.4248478190104095">
+      <DataClassMoniker Name="/CMLinqDataContext/MEDICOS_CONCEPTOFRA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ab887b4-3941-4c38-af4c-0e097edce739" absoluteBounds="43.265, 72.710000000000008, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(34.54687875 : 94.125); (34.54687875 : 72.9624239095052); (40.2916666666667 : 72.9624239095052 : JumpStart); (40.4583333333333 : 72.9624239095052 : JumpEnd); (43.25 : 72.9624239095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/CONCEPTOSFRA/CONCEPTOSFRA_MEDICOS_CONCEPTOFRA" />
+      <nodes>
+        <classShapeMoniker Id="775ebba5-a950-4acf-9f31-c8772aeac6a0" />
+        <classShapeMoniker Id="1c5a5ea7-07a6-49e6-a72c-0fe188f2795f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.25 : 51.6662950608724); (17.3541666666667 : 51.6662950608724 : JumpStart); (17.5208333333333 : 51.6662950608724 : JumpEnd); (17.625 : 51.6662950608724); (17.625 : 54.8252791341146); (17.8541666666667 : 54.8252791341146 : JumpStart); (18.0208333333333 : 54.8252791341146 : JumpEnd); (26.0416666666667 : 54.8252791341146 : JumpStart); (26.2083333333333 : 54.8252791341146 : JumpEnd); (42.75 : 54.8252791341146); (42.75 : 71.875); (42.9166666666667 : 71.875 : JumpStart); (43.0833333333333 : 71.875 : JumpEnd); (44.25 : 71.875); (44.25 : 72.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MEDICO/MEDICO_MEDICOS_CONCEPTOFRA" />
+      <nodes>
+        <classShapeMoniker Id="26912abf-0e2a-4dcf-8ffd-c1c37f6305c9" />
+        <classShapeMoniker Id="1c5a5ea7-07a6-49e6-a72c-0fe188f2795f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="bd96f6f2-cca9-4685-8625-88c000c70dc4" absoluteBounds="6.5, 70.125, 2, 2.0822371419270667">
+      <DataClassMoniker Name="/CMLinqDataContext/Liquidacion_Medico" />
+      <nestedChildShapes>
+        <elementListCompartment Id="37c43ad6-522f-4c99-9d4d-129ccf0687b2" absoluteBounds="6.5150000000000006, 70.585000000000008, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(15.984374 : 54.3044051106771); (15.984374 : 55.375); (14.5625 : 55.375); (14.5625 : 70); (11.625 : 70); (11.625 : 74.7950463867188); (9.45833333333333 : 74.7950463867188 : JumpStart); (9.29166666666667 : 74.7950463867188 : JumpEnd); (8.8125 : 74.7950463867188); (8.8125 : 71.1661185709635); (8.5 : 71.1661185709635)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MEDICO/MEDICO_Liquidacion_Medico" />
+      <nodes>
+        <classShapeMoniker Id="26912abf-0e2a-4dcf-8ffd-c1c37f6305c9" />
+        <classShapeMoniker Id="bd96f6f2-cca9-4685-8625-88c000c70dc4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 71.374399151123); (2.91666666666667 : 71.374399151123 : JumpStart); (3.08333333333333 : 71.374399151123 : JumpEnd); (3.25 : 71.374399151123); (3.25 : 74.4727197265625); (4.41666666666667 : 74.4727197265625 : JumpStart); (4.58333333333333 : 74.4727197265625 : JumpEnd); (5.75 : 74.4727197265625); (5.75 : 73.5); (5.91666666666667 : 73.5 : JumpStart); (6.08333333333333 : 73.5 : JumpEnd); (6.79166716666667 : 73.5 : JumpStart); (6.95833383333333 : 73.5 : JumpEnd); (7.5 : 73.5); (7.5 : 72.2072371419271)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/FORMASPAGO/FORMASPAGO_Liquidacion_Medico" />
+      <nodes>
+        <classShapeMoniker Id="520993d5-de59-4c20-a87f-48b8bdad7e1d" />
+        <classShapeMoniker Id="bd96f6f2-cca9-4685-8625-88c000c70dc4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5027b9a7-f9f9-497d-b705-627d45906f34" absoluteBounds="3.5, 68.875, 2, 4.2187524414062381">
+      <DataClassMoniker Name="/CMLinqDataContext/N_PedidosProveedor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e60c37bb-f562-4538-b7d3-c03dc7efb1ec" absoluteBounds="3.5150000000000006, 69.335000000000008, 1.9700000000000002, 3.65875244140625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="148876ba-20ed-4af5-bca4-c5f5d6b84000" absoluteBounds="12.25, 73.375, 2, 3.3970157877604095">
+      <DataClassMoniker Name="/CMLinqDataContext/N_PedidosProveedor_Totale" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2d54959e-fc75-49b4-9ce4-c40b7c5fac70" absoluteBounds="12.265, 73.835000000000008, 1.9700000000000002, 2.8370157877604165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0c0ee163-5005-4644-a9a2-88b0233ad690" absoluteBounds="6.25, 74, 2, 3.8900577799479095">
+      <DataClassMoniker Name="/CMLinqDataContext/N_PedidosProveedor_Linea" />
+      <nestedChildShapes>
+        <elementListCompartment Id="58c6f93e-9c54-4d54-b63e-4cb7e63f10a3" absoluteBounds="6.2650000000000006, 74.460000000000008, 1.9700000000000002, 3.3300577799479165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="144e2a45-9493-4034-8f17-59851458d9f2" absoluteBounds="0.75, 68.375, 2, 1.2605004882812381">
+      <DataClassMoniker Name="/CMLinqDataContext/N_PedidosProveedor_Tipo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="16a0ae4c-4879-4150-9450-e2be9fcec41e" absoluteBounds="0.76500000000000057, 68.835000000000008, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="72c40b3b-f0ca-4021-9009-f14c4e0de2a4" absoluteBounds="53, 43.625, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/CMLinqDataContext/N_Poblacione" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f6018f4c-4934-4718-9971-de13bd3154b6" absoluteBounds="53.015000000596046, 44.08500000089407, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ac1f4e90-c9d7-4267-a926-540808a6719b" absoluteBounds="12.25, 70.125, 2, 2.0822371419270667">
+      <DataClassMoniker Name="/CMLinqDataContext/N_Proceso" />
+      <nestedChildShapes>
+        <elementListCompartment Id="02374bb3-2d6e-416d-92d9-6d3fe59ec890" absoluteBounds="12.265, 70.585000000000008, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5d8789e8-1c36-49c3-a47b-876d38c0ec25" absoluteBounds="9.5, 66.875, 2, 7.6700463867187381">
+      <DataClassMoniker Name="/CMLinqDataContext/N_Proveedor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1e66e7c0-23fd-4214-aa13-35bff17c0430" absoluteBounds="9.515, 67.335000000000008, 1.9700000000000002, 7.11004638671875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="53f027e2-1375-4881-b0de-40344ecc4492" absoluteBounds="50.25, 43.625, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/CMLinqDataContext/N_Provincia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e3ccb224-d5bb-4bbd-9096-5ab65adc24a2" absoluteBounds="50.265000000596046, 44.08500000089407, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 71.8728694488932); (3.5 : 71.8728694488932)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/FORMASPAGO/FORMASPAGO_N_PedidosProveedor" />
+      <nodes>
+        <classShapeMoniker Id="520993d5-de59-4c20-a87f-48b8bdad7e1d" />
+        <classShapeMoniker Id="5027b9a7-f9f9-497d-b705-627d45906f34" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 73.7227197265625); (4.5 : 75.3181062825521); (6.125 : 75.3181062825521); (6.125 : 73.625); (9.375 : 73.625); (9.375 : 76.2610498046875); (11.875 : 76.2610498046875); (11.875 : 74.6930254023438); (12.25 : 74.6930254023438)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/N_PedidosProveedor/N_PedidosProveedor_N_PedidosProveedor_Totale" />
+      <nodes>
+        <classShapeMoniker Id="5027b9a7-f9f9-497d-b705-627d45906f34" />
+        <classShapeMoniker Id="148876ba-20ed-4af5-bca4-c5f5d6b84000" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(41.5 : 61.1355004882813); (41.5 : 62.125); (40.4583333333333 : 62.125 : JumpStart); (40.2916666666667 : 62.125 : JumpEnd); (40.25 : 62.125); (40.25 : 75.0735078938802); (34.6302120833333 : 75.0735078938802 : JumpStart); (34.4635454166667 : 75.0735078938802 : JumpEnd); (33.5677070833333 : 75.0735078938802 : JumpStart); (33.4010404166667 : 75.0735078938802 : JumpEnd); (25.0833333333333 : 75.0735078938802 : JumpStart); (24.9166666666667 : 75.0735078938802 : JumpEnd); (20.5 : 75.0735078938802); (20.5 : 78.8343937174479); (20.4583333333333 : 78.8343937174479 : JumpStart); (20.2916666666667 : 78.8343937174479 : JumpEnd); (18.0833333333333 : 78.8343937174479 : JumpStart); (17.9166666666667 : 78.8343937174479 : JumpEnd); (17.8333333333333 : 78.8343937174479 : JumpStart); (17.6666666666667 : 78.8343937174479 : JumpEnd); (17.5 : 78.8343937174479); (17.5 : 76.1306990559896); (15.2083333333333 : 76.1306990559896 : JumpStart); (15.0416666666667 : 76.1306990559896 : JumpEnd); (14.625 : 76.1306990559896); (14.625 : 75.0735078938802); (14.25 : 75.0735078938802)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/N_TipoIVA/N_TipoIVA_N_PedidosProveedor_Totale" />
+      <nodes>
+        <classShapeMoniker Id="a6cda8f0-2568-49f6-a1da-ce13391460b2" />
+        <classShapeMoniker Id="148876ba-20ed-4af5-bca4-c5f5d6b84000" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 73.0176505533854); (6.8750005 : 73.0176505533854); (6.8750005 : 74)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/N_PedidosProveedor/N_PedidosProveedor_N_PedidosProveedor_Linea" />
+      <nodes>
+        <classShapeMoniker Id="5027b9a7-f9f9-497d-b705-627d45906f34" />
+        <classShapeMoniker Id="0c0ee163-5005-4644-a9a2-88b0233ad690" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(40.968748 : 61.1355004882813); (40.968748 : 61.75); (40.375 : 61.75); (40.375 : 75.445028889974); (20.375 : 75.445028889974); (20.375 : 78.9593937174479); (18.0833333333333 : 78.9593937174479 : JumpStart); (17.9166666666667 : 78.9593937174479 : JumpEnd); (17.75 : 78.9593937174479); (17.75 : 77); (8.625 : 77); (8.625 : 75.945028889974); (8.25 : 75.945028889974)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/N_TipoIVA/N_TipoIVA_N_PedidosProveedor_Linea" />
+      <nodes>
+        <classShapeMoniker Id="a6cda8f0-2568-49f6-a1da-ce13391460b2" />
+        <classShapeMoniker Id="0c0ee163-5005-4644-a9a2-88b0233ad690" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 69.3181469726563); (2.97916666666667 : 69.3181469726563 : JumpStart); (3.14583333333333 : 69.3181469726563 : JumpEnd); (3.5 : 69.3181469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/N_PedidosProveedor_Tipo/N_PedidosProveedor_Tipo_N_PedidosProveedor" />
+      <nodes>
+        <classShapeMoniker Id="144e2a45-9493-4034-8f17-59851458d9f2" />
+        <classShapeMoniker Id="5027b9a7-f9f9-497d-b705-627d45906f34" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.25 : 71.2989005533854); (14.3229166666667 : 71.2989005533854 : JumpStart); (14.4895833333333 : 71.2989005533854 : JumpEnd); (15.0416666666667 : 71.2989005533854 : JumpStart); (15.2083333333333 : 71.2989005533854 : JumpEnd); (15.25 : 71.2989005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/N_Proceso/N_Proceso_FACTURA" />
+      <nodes>
+        <classShapeMoniker Id="ac1f4e90-c9d7-4267-a926-540808a6719b" />
+        <classShapeMoniker Id="2706c208-1d6e-456d-baa4-04897a97080a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.25 : 71.1661185709635); (15.125 : 71.1661185709635); (15.125 : 80.2033512369792); (23.875 : 80.2033512369792); (23.875 : 76.2033512369792); (25 : 76.2033512369792); (25 : 74.5843937174479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/N_Proceso/N_Proceso_N_Parte" />
+      <nodes>
+        <classShapeMoniker Id="ac1f4e90-c9d7-4267-a926-540808a6719b" />
+        <classShapeMoniker Id="ddcc29bc-2996-4919-8344-4541f8910e79" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.25 : 70.6143072854818); (14.75 : 70.6143072854818); (14.75 : 68.125); (15.6588514166667 : 68.125 : JumpStart); (15.8255180833333 : 68.125 : JumpEnd); (16.7057309166667 : 68.125 : JumpStart); (16.8723975833333 : 68.125 : JumpEnd); (17.6875 : 68.125); (17.6875 : 69.2511417643229); (20.5416666666667 : 69.2511417643229 : JumpStart); (20.7083333333333 : 69.2511417643229 : JumpEnd); (20.9375 : 69.2511417643229); (20.9375 : 65.875); (21.9166666666667 : 65.875 : JumpStart); (22.0833333333333 : 65.875 : JumpEnd); (23.6666666666667 : 65.875 : JumpStart); (23.8333333333333 : 65.875 : JumpEnd); (25.9791666666667 : 65.875 : JumpStart); (26.1458333333333 : 65.875 : JumpEnd); (26.375 : 65.875); (26.375 : 69.0265730794271); (26.5416666666667 : 69.0265730794271 : JumpStart); (26.7083333333333 : 69.0265730794271 : JumpEnd); (31.8229166666667 : 69.0265730794271 : JumpStart); (31.9895833333333 : 69.0265730794271 : JumpEnd); (40.2916666666667 : 69.0265730794271 : JumpStart); (40.4583333333333 : 69.0265730794271 : JumpEnd); (41.4166666666667 : 69.0265730794271 : JumpStart); (41.5833333333333 : 69.0265730794271 : JumpEnd); (42.031252 : 69.0265730794271); (42.031252 : 68.5265730794271)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/N_Proceso/N_Proceso_CITA" />
+      <nodes>
+        <classShapeMoniker Id="ac1f4e90-c9d7-4267-a926-540808a6719b" />
+        <classShapeMoniker Id="0b006b24-3f40-452c-ae47-15ad8399e488" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.546878 : 58.625); (5.546878 : 58.4375); (6.07291666666667 : 58.4375 : JumpStart); (6.27083333333333 : 58.4375 : JumpEnd); (6.67618803205128 : 58.4375 : JumpStart); (6.84285469871794 : 58.4375 : JumpEnd); (6.9982142724359 : 58.4375 : JumpStart); (7.16488093910256 : 58.4375 : JumpEnd); (7.28794699839744 : 58.4375 : JumpStart); (7.4546136650641 : 58.4375 : JumpEnd); (7.60562024358975 : 58.4375 : JumpStart); (7.77228691025641 : 58.4375 : JumpEnd); (8.72916666666667 : 58.4375 : JumpStart); (8.89583333333333 : 58.4375 : JumpEnd); (8.93229166666667 : 58.4375 : JumpStart); (9.23958333333333 : 58.4375 : JumpEnd); (11.3229166666667 : 58.4375 : JumpStart); (11.4895833333333 : 58.4375 : JumpEnd); (11.5416666666667 : 58.4375 : JumpStart); (11.8333333333333 : 58.4375 : JumpEnd); (11.875 : 58.4375); (11.875 : 69.5); (11.9166666666667 : 69.5 : JumpStart); (12.0833333333333 : 69.5 : JumpEnd); (13.25 : 69.5); (13.25 : 70.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/EMPRESA/EMPRESA_N_Proceso" />
+      <nodes>
+        <classShapeMoniker Id="8f3c233a-8e40-4b1b-8a76-7c6b855a73e0" />
+        <classShapeMoniker Id="ac1f4e90-c9d7-4267-a926-540808a6719b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 65.698146625544); (8.63541666666667 : 65.698146625544 : JumpStart); (9.27083333333333 : 65.698146625544 : JumpEnd); (9.375 : 65.698146625544); (9.375 : 66); (11.5416666666667 : 66 : JumpStart); (11.7083333333333 : 66 : JumpEnd); (11.8229166666667 : 66 : JumpStart); (11.9895833333333 : 66 : JumpEnd); (12 : 66); (12 : 69.75); (12.718748 : 69.75); (12.718748 : 70.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_N_Proceso" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="ac1f4e90-c9d7-4267-a926-540808a6719b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(52.25 : 44.2552502441406); (53 : 44.2552502441406)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/N_Provincia/N_Provincia_N_Poblacione" />
+      <nodes>
+        <classShapeMoniker Id="53f027e2-1375-4881-b0de-40344ecc4492" />
+        <classShapeMoniker Id="72c40b3b-f0ca-4021-9009-f14c4e0de2a4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 71.1358508300781); (11.5416666666667 : 71.1358508300781 : JumpStart); (11.7083333333333 : 71.1358508300781 : JumpEnd); (11.75 : 71.1358508300781); (11.75 : 69.875); (12.2778088092544 : 69.875 : JumpStart); (12.4444754759211 : 69.875 : JumpEnd); (12.6354146666667 : 69.875 : JumpStart); (12.8020813333333 : 69.875 : JumpEnd); (13.1666666666667 : 69.875 : JumpStart); (13.3333333333333 : 69.875 : JumpEnd); (14.3229166666667 : 69.875 : JumpStart); (14.6458333333333 : 69.875 : JumpEnd); (14.6666666666667 : 69.875 : JumpStart); (14.8333333333333 : 69.875 : JumpEnd); (14.8541666666667 : 69.875 : JumpStart); (15.0208333333333 : 69.875 : JumpEnd); (15.0625 : 69.875); (15.0625 : 68.0625); (15.1041666666667 : 68.0625 : JumpStart); (15.2708333333333 : 68.0625 : JumpEnd); (15.6432269166667 : 68.0625 : JumpStart); (15.8255180833333 : 68.0625 : JumpEnd); (15.9127590416667 : 68.0625 : JumpStart); (16.0794257083333 : 68.0625 : JumpEnd); (16.1822911666667 : 68.0625 : JumpStart); (16.3489578333333 : 68.0625 : JumpEnd); (16.7057309166667 : 68.0625 : JumpStart); (16.8723975833333 : 68.0625 : JumpEnd); (17.2291666666667 : 68.0625 : JumpStart); (17.3958333333333 : 68.0625 : JumpEnd); (17.5 : 68.0625); (17.5 : 69.5544254557292); (17.5416666666667 : 69.5544254557292 : JumpStart); (17.8645833333333 : 69.5544254557292 : JumpEnd); (19.1250005 : 69.5544254557292); (19.1250005 : 70.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/N_Proveedor/N_Proveedor_N_Articulo" />
+      <nodes>
+        <classShapeMoniker Id="5d8789e8-1c36-49c3-a47b-876d38c0ec25" />
+        <classShapeMoniker Id="f7962817-3883-4dbb-a1ab-50c03be62cdc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.5 : 72.7139758300781); (9.27083333333333 : 72.7139758300781 : JumpStart); (9.10416666666667 : 72.7139758300781 : JumpEnd); (8.89583333333333 : 72.7139758300781 : JumpStart); (8.72916666666667 : 72.7139758300781 : JumpEnd); (8.48958333333333 : 72.7139758300781 : JumpStart); (8.32291666666667 : 72.7139758300781 : JumpEnd); (5.5 : 72.7139758300781)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/N_Proveedor/N_Proveedor_N_PedidosProveedor" />
+      <nodes>
+        <classShapeMoniker Id="5d8789e8-1c36-49c3-a47b-876d38c0ec25" />
+        <classShapeMoniker Id="5027b9a7-f9f9-497d-b705-627d45906f34" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 71.9439925130208); (1.75 : 73.8613598632813); (2.19791866666667 : 73.8613598632813 : JumpStart); (2.36458533333333 : 73.8613598632813 : JumpEnd); (4.41666666666667 : 73.8613598632813 : JumpStart); (4.58333333333333 : 73.8613598632813 : JumpEnd); (5.91666666666667 : 73.8613598632813 : JumpStart); (6.20833333333333 : 73.8613598632813 : JumpEnd); (8.32291666666667 : 73.8613598632813 : JumpStart); (8.48958333333333 : 73.8613598632813 : JumpEnd); (8.60416666666667 : 73.8613598632813 : JumpStart); (9.45833333333333 : 73.8613598632813 : JumpEnd); (9.5 : 73.8613598632813)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/FORMASPAGO/FORMASPAGO_N_Proveedor" />
+      <nodes>
+        <classShapeMoniker Id="520993d5-de59-4c20-a87f-48b8bdad7e1d" />
+        <classShapeMoniker Id="5d8789e8-1c36-49c3-a47b-876d38c0ec25" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.6875 : 80.5); (8.6875 : 73.1382404150391); (8.72916666666667 : 73.1382404150391 : JumpStart); (9.27083333333333 : 73.1382404150391 : JumpEnd); (9.5 : 73.1382404150391)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/BANCO/BANCO_N_Proveedor" />
+      <nodes>
+        <classShapeMoniker Id="cf771136-5d2a-4446-ad6b-0eb0fd09415b" />
+        <classShapeMoniker Id="5d8789e8-1c36-49c3-a47b-876d38c0ec25" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6b3de08d-c580-4540-8db5-bf354ffad9ae" absoluteBounds="50.25, 57.5, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/CMLinqDataContext/CALENDARIO_GLOBAL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="11c1a2b0-60b0-420f-bd9c-3321862e659e" absoluteBounds="50.265, 57.96, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="16288f1f-cc4f-461a-a2a1-965e66e7d9bd" absoluteBounds="15.25, 41.375, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/CMLinqDataContext/CALENDARIO_USUARIO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eab62133-09e7-4515-8d93-183e924f6114" absoluteBounds="15.265, 41.835000000000008, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f9441278-cc7e-4872-8f2d-2d7e6f1e7039" absoluteBounds="18, 49, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/CMLinqDataContext/CALENDARIO_MEDICO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="65de81e1-5825-49f9-b217-2eeac3ad352e" absoluteBounds="18.015, 49.46, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(13.5 : 44); (13.5 : 42.0874239095052); (15.25 : 42.0874239095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/USUARIO/USUARIO_CALENDARIO_USUARIO" />
+      <nodes>
+        <classShapeMoniker Id="54372704-eb37-447a-a19b-cc149efd90da" />
+        <classShapeMoniker Id="16288f1f-cc4f-461a-a2a1-965e66e7d9bd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.25 : 50.3115374615385); (17.3785744349011 : 50.1829630266374 : JumpStart); (17.4964255650989 : 50.0651118964396 : JumpEnd); (17.6875 : 49.8740374615385); (17.6875 : 50.7373478190104); (17.7535744349011 : 50.6712733841093 : JumpStart); (17.9339255650989 : 50.4909222539115 : JumpEnd); (18 : 50.4248478190104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MEDICO/MEDICO_CALENDARIO_MEDICO" />
+      <nodes>
+        <classShapeMoniker Id="26912abf-0e2a-4dcf-8ffd-c1c37f6305c9" />
+        <classShapeMoniker Id="f9441278-cc7e-4872-8f2d-2d7e6f1e7039" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3d8841eb-7c20-49f4-97f6-1fb263f47cd1" absoluteBounds="9.25, 55.25, 2, 1.7535424804687523">
+      <DataClassMoniker Name="/CMLinqDataContext/AntecedentesDiagnostico" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1531bfed-fae4-4f4c-a833-653fb280ca26" absoluteBounds="9.265, 55.709999999999994, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 55.7119502766927); (8.72916666666667 : 55.7119502766927 : JumpStart); (8.89583333333333 : 55.7119502766927 : JumpEnd); (8.93229166666667 : 55.7119502766927 : JumpStart); (9.23958333333333 : 55.7119502766927 : JumpEnd); (9.25 : 55.7119502766927)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/DIAGNOSTICO/DIAGNOSTICO_AntecedentesDiagnostico" />
+      <nodes>
+        <classShapeMoniker Id="dd1f778f-b4b8-4f85-84fb-886ee77db798" />
+        <classShapeMoniker Id="3d8841eb-7c20-49f4-97f6-1fb263f47cd1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 59.5153836153846); (8.56607443490112 : 59.4493091804835 : JumpStart); (8.68392556509888 : 59.3314580502857 : JumpEnd); (8.81607443490112 : 59.1993091804835 : JumpStart); (8.93392556509888 : 59.0814580502857 : JumpEnd); (9.109375 : 58.9060086153846); (9.109375 : 56.6538064364014); (9.25 : 56.6538064364014)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_AntecedentesDiagnostico" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="3d8841eb-7c20-49f4-97f6-1fb263f47cd1" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="65708b61-0e3c-4b2d-a86c-779fc9322a83" absoluteBounds="12.25, 60.125, 2, 2.082237141927088">
+      <DataClassMoniker Name="/CMLinqDataContext/COMPARATIVA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1de7734e-cbb5-4ec4-ad81-930d30fc840c" absoluteBounds="12.265, 60.584999999999994, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 60.4936739095052); (8.63541666666667 : 60.4936739095052 : JumpStart); (8.83333333333333 : 60.4936739095052 : JumpEnd); (8.94791666666667 : 60.4936739095052 : JumpStart); (9.14583333333333 : 60.4936739095052 : JumpEnd); (11.3229166666667 : 60.4936739095052 : JumpStart); (11.4895833333333 : 60.4936739095052 : JumpEnd); (11.5416666666667 : 60.4936739095052 : JumpStart); (12.1458333333333 : 60.4936739095052 : JumpEnd); (12.25 : 60.4936739095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_COMPARATIVA" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="65708b61-0e3c-4b2d-a86c-779fc9322a83" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="fd01118c-19ee-496f-a23c-68f4f2afab93" absoluteBounds="20.75, 60.25, 2, 2.082237141927088">
+      <DataClassMoniker Name="/CMLinqDataContext/DATOSCOMPARATIVA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ba898a3-04b1-4fe1-94fd-e46003b08f50" absoluteBounds="20.765, 60.709999999999994, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f8ff854e-90d4-47bf-b640-265a614c9a4e" absoluteBounds="66, 43, 2, 1.7535424804687523">
+      <DataClassMoniker Name="/CMLinqDataContext/RC_Categorias_GaleriaImagene" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c17c6feb-dcce-4d12-92db-3d5dcfda21ed" absoluteBounds="66.015000000596046, 43.46000000089407, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a07d94e8-8414-40cb-b74c-478a047cd657" absoluteBounds="47, 43.75, 2, 1.589195149739588">
+      <DataClassMoniker Name="/CMLinqDataContext/RC_Categorias_Imagene" />
+      <nestedChildShapes>
+        <elementListCompartment Id="891507bb-170c-4e74-b9f0-73ebbe3aff1c" absoluteBounds="47.015000000596046, 44.21000000089407, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(66.7052495323768 : 44.7535424804688); (66.7052495323768 : 45.0035424804688); (67.3087862041767 : 45.0035424804688); (67.3087862041767 : 44.7535424804688)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/RC_Categorias_GaleriaImagene/RC_Categorias_GaleriaImagene_RC_Categorias_GaleriaImagene" />
+      <nodes>
+        <classShapeMoniker Id="f8ff854e-90d4-47bf-b640-265a614c9a4e" />
+        <classShapeMoniker Id="f8ff854e-90d4-47bf-b640-265a614c9a4e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(66.3213722661884 : 44.7535424804688); (66.3213722661884 : 45.2454451497396); (49 : 45.2454451497396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/RC_Categorias_GaleriaImagene/RC_Categorias_GaleriaImagene_RC_Categorias_Imagene" />
+      <nodes>
+        <classShapeMoniker Id="f8ff854e-90d4-47bf-b640-265a614c9a4e" />
+        <classShapeMoniker Id="a07d94e8-8414-40cb-b74c-478a047cd657" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="024e0bc1-9b13-48c7-9779-08c54e086819" absoluteBounds="9.5, 47.625, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/CMLinqDataContext/MODELOSCOMPARATIVA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ba512d0-2aed-48a6-8d2e-89affed067ed" absoluteBounds="9.515, 48.084999999999994, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.40625 : 49.0112939453125); (11.40625 : 60.875); (11.5416666666667 : 60.875 : JumpStart); (11.8333333333333 : 60.875 : JumpEnd); (11.9166666666667 : 60.875 : JumpStart); (12.1145833333333 : 60.875 : JumpEnd); (12.25 : 60.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MODELOSCOMPARATIVA/MODELOSCOMPARATIVA_COMPARATIVA" />
+      <nodes>
+        <classShapeMoniker Id="024e0bc1-9b13-48c7-9779-08c54e086819" />
+        <classShapeMoniker Id="65708b61-0e3c-4b2d-a86c-779fc9322a83" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1363e39f-7ab7-485f-b802-0b03ccc7e27d" absoluteBounds="18, 59.875, 2, 2.575279134114588">
+      <DataClassMoniker Name="/CMLinqDataContext/LCOMPARATIVA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4ece81e9-2102-4c61-a034-502990780500" absoluteBounds="18.015, 60.334999999999994, 1.9700000000000002, 2.015279134114583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(20 : 61.2911185709635); (20.75 : 61.2911185709635)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/LCOMPARATIVA/LCOMPARATIVA_DATOSCOMPARATIVA" />
+      <nodes>
+        <classShapeMoniker Id="1363e39f-7ab7-485f-b802-0b03ccc7e27d" />
+        <classShapeMoniker Id="fd01118c-19ee-496f-a23c-68f4f2afab93" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.25 : 54.2428656491386); (17.6875 : 54.6803656491386); (17.6875 : 60.3536190709635); (18 : 60.3536190709635)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MEDICO/MEDICO_LCOMPARATIVA" />
+      <nodes>
+        <classShapeMoniker Id="26912abf-0e2a-4dcf-8ffd-c1c37f6305c9" />
+        <classShapeMoniker Id="1363e39f-7ab7-485f-b802-0b03ccc7e27d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 48.8748337149189); (11.9169167733624 : 49.2917504882813); (16.1666666666667 : 49.2917504882813 : JumpStart); (16.3333333333333 : 49.2917504882813 : JumpEnd); (17.3541666666667 : 49.2917504882813 : JumpStart); (17.5208333333333 : 49.2917504882813 : JumpEnd); (17.8125 : 49.2917504882813); (17.8125 : 59.6875); (17.8160744349011 : 59.6910744349011 : JumpStart); (17.9964255650989 : 59.8714255650989 : JumpEnd); (18 : 59.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MODELOSCOMPARATIVA/MODELOSCOMPARATIVA_LCOMPARATIVA" />
+      <nodes>
+        <classShapeMoniker Id="024e0bc1-9b13-48c7-9779-08c54e086819" />
+        <classShapeMoniker Id="1363e39f-7ab7-485f-b802-0b03ccc7e27d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.25 : 61.0801505533854); (14.4791666666667 : 61.0801505533854 : JumpStart); (14.6458333333333 : 61.0801505533854 : JumpEnd); (14.6666666666667 : 61.0801505533854 : JumpStart); (14.9583333333333 : 61.0801505533854 : JumpEnd); (16.1666666666667 : 61.0801505533854 : JumpStart); (16.3333333333333 : 61.0801505533854 : JumpEnd); (17.2916666666667 : 61.0801505533854 : JumpStart); (17.6145833333333 : 61.0801505533854 : JumpEnd); (17.6666666666667 : 61.0801505533854 : JumpStart); (17.9583333333333 : 61.0801505533854 : JumpEnd); (18 : 61.0801505533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/COMPARATIVA/COMPARATIVA_LCOMPARATIVA" />
+      <nodes>
+        <classShapeMoniker Id="65708b61-0e3c-4b2d-a86c-779fc9322a83" />
+        <classShapeMoniker Id="1363e39f-7ab7-485f-b802-0b03ccc7e27d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="551f3c0d-7c6c-4f32-8a09-9b4b693cc734" absoluteBounds="15.25, 47.25, 2, 1.7535424804687523">
+      <DataClassMoniker Name="/CMLinqDataContext/NOTA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e91e7d41-5186-4062-b20b-e769b6cdd0c3" absoluteBounds="15.265, 47.709999999999994, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.5 : 44.5421863606771); (14.6313212430703 : 44.9610725146468 : JumpStart); (14.6811787569297 : 45.1201071212252 : JumpEnd); (14.9750712430703 : 46.0575601206164 : JumpStart); (15.0249287569297 : 46.2165947271947 : JumpEnd); (15.1000712430703 : 46.4562828864235 : JumpStart); (15.1499287569297 : 46.6153174930018 : JumpEnd); (15.1875 : 46.7351615726162); (15.1875 : 48.1267712402344); (15.25 : 48.1267712402344)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/USUARIO/USUARIO_NOTA" />
+      <nodes>
+        <classShapeMoniker Id="54372704-eb37-447a-a19b-cc149efd90da" />
+        <classShapeMoniker Id="551f3c0d-7c6c-4f32-8a09-9b4b693cc734" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="bd630228-c82a-4286-ac78-c4d8360c4215" absoluteBounds="12.25, 54.25, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/CMLinqDataContext/LMUTUA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="832ecf68-9dfa-4a97-a01f-f8ea3294b5f2" absoluteBounds="12.265, 54.710000000000008, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.37128033173077 : 59.5); (7.37128033173077 : 57.3322371419271); (8.72916666666667 : 57.3322371419271 : JumpStart); (9.23958333333333 : 57.3322371419271 : JumpEnd); (11.3229166666667 : 57.3322371419271 : JumpStart); (11.4895833333333 : 57.3322371419271 : JumpEnd); (11.625 : 57.3322371419271); (11.625 : 55.208944905599); (12.25 : 55.208944905599)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_LMUTUA" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="bd630228-c82a-4286-ac78-c4d8360c4215" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1593d984-c9d7-41a2-8f0b-429f1ac41239" absoluteBounds="43.25, 67.75, 2, 2.9039737955729095">
+      <DataClassMoniker Name="/CMLinqDataContext/LCOMPARATIVAS_TRATAMIENTO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5c0adf70-2e70-480f-9199-93d07b9e5547" absoluteBounds="43.265, 68.21, 1.9700000000000002, 2.3439737955729165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(42.5 : 68.1382865397135); (43.25 : 68.1382865397135)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/CITA/CITA_LCOMPARATIVAS_TRATAMIENTO" />
+      <nodes>
+        <classShapeMoniker Id="0b006b24-3f40-452c-ae47-15ad8399e488" />
+        <classShapeMoniker Id="1593d984-c9d7-41a2-8f0b-429f1ac41239" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(19 : 62.4502791341146); (19 : 63.5625); (20.6875 : 63.5625); (20.6875 : 66.0625); (26.625 : 66.0625); (26.625 : 69.8156648763021); (43.25 : 69.8156648763021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/LCOMPARATIVA/LCOMPARATIVA_LCOMPARATIVAS_TRATAMIENTO" />
+      <nodes>
+        <classShapeMoniker Id="1363e39f-7ab7-485f-b802-0b03ccc7e27d" />
+        <classShapeMoniker Id="1593d984-c9d7-41a2-8f0b-429f1ac41239" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(23 : 76.2515374615385); (23.3765374615385 : 75.875); (33.4010404166667 : 75.875 : JumpStart); (33.5677070833333 : 75.875 : JumpEnd); (34.4635454166667 : 75.875 : JumpStart); (34.6302120833333 : 75.875 : JumpEnd); (43 : 75.875); (43 : 70.9055112571114); (43.2515374615385 : 70.6539737955729)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/LINEASFACTURA/LINEASFACTURA_LCOMPARATIVAS_TRATAMIENTO" />
+      <nodes>
+        <classShapeMoniker Id="d7f1cb6a-4a8c-41d2-bec0-bd4aabb1008f" />
+        <classShapeMoniker Id="1593d984-c9d7-41a2-8f0b-429f1ac41239" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1918d82d-d036-49bc-8c4f-d753ab0090cc" absoluteBounds="46, 78, 2, 2.9039737955729095">
+      <DataClassMoniker Name="/CMLinqDataContext/LineasCita" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1d9abbff-99f7-4764-9b94-7ac09c947faf" absoluteBounds="46.015, 78.46, 1.9700000000000002, 2.3439737955729165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(46 : 79.8104297460937); (34.6302120833333 : 79.8104297460937 : JumpStart); (34.4635454166667 : 79.8104297460937 : JumpEnd); (33.5677070833333 : 79.8104297460937 : JumpStart); (33.4010404166667 : 79.8104297460937 : JumpEnd); (33.3020808333333 : 79.8104297460937 : JumpStart); (33.1354141666667 : 79.8104297460937 : JumpEnd); (23.9583333333333 : 79.8104297460937 : JumpStart); (23.7916666666667 : 79.8104297460937 : JumpEnd); (22 : 79.8104297460937); (22 : 78.8252791341146)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/LineasCita/LineasCita_LINEASFACTURA" />
+      <nodes>
+        <classShapeMoniker Id="1918d82d-d036-49bc-8c4f-d753ab0090cc" />
+        <classShapeMoniker Id="d7f1cb6a-4a8c-41d2-bec0-bd4aabb1008f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(41.5 : 68.5265730794271); (41.5 : 78.8739623730469); (46 : 78.8739623730469)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/CITA/CITA_LineasCita" />
+      <nodes>
+        <classShapeMoniker Id="0b006b24-3f40-452c-ae47-15ad8399e488" />
+        <classShapeMoniker Id="1918d82d-d036-49bc-8c4f-d753ab0090cc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(37.5 : 96.1868844173177); (39.4166666666667 : 96.1868844173177 : JumpStart); (39.5833333333333 : 96.1868844173177 : JumpEnd); (47 : 96.1868844173177); (47 : 80.9039737955729)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/d_PresupuestoLinea/d_PresupuestoLinea_LineasCita" />
+      <nodes>
+        <classShapeMoniker Id="94d1842a-7df6-4da0-a867-6bfe0382ecab" />
+        <classShapeMoniker Id="1918d82d-d036-49bc-8c4f-d753ab0090cc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(45.25 : 69.2019868977865); (47 : 69.2019868977865); (47 : 78)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/LCOMPARATIVAS_TRATAMIENTO/LCOMPARATIVAS_TRATAMIENTO_LineasCita" />
+      <nodes>
+        <classShapeMoniker Id="1593d984-c9d7-41a2-8f0b-429f1ac41239" />
+        <classShapeMoniker Id="1918d82d-d036-49bc-8c4f-d753ab0090cc" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a3553553-f3de-4c8b-91b7-048e919f1b81" absoluteBounds="9.25, 58.5, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/CMLinqDataContext/LINEASALARMA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ab0e35b3-512a-4e46-af03-62cb722d89a6" absoluteBounds="9.265, 58.959999999999994, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 59.7605989864283); (8.54166666666667 : 59.7605989864283 : JumpStart); (8.70833333333333 : 59.7605989864283 : JumpEnd); (8.79166666666667 : 59.7605989864283 : JumpStart); (9.14583333333333 : 59.7605989864283 : JumpEnd); (9.25 : 59.7605989864283)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_LINEASALARMA" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="a3553553-f3de-4c8b-91b7-048e919f1b81" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="440e6821-ffa1-43c6-9457-d883a61501c1" absoluteBounds="6.5, 52.5, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/CMLinqDataContext/ALARMA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d2a7d751-f696-4c20-9d37-caea2babf06b" absoluteBounds="6.5150000000000006, 52.959999999999994, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 53.9084062672526); (8.75357443490112 : 54.1619807021537 : JumpStart); (8.87142556509888 : 54.2798318323515 : JumpEnd); (9.015625 : 54.4240312672526); (9.015625 : 58.7812505); (9.02604166666667 : 58.7812505 : JumpStart); (9.19270833333333 : 58.7812505 : JumpEnd); (9.25 : 58.7812505)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/ALARMA/ALARMA_LINEASALARMA" />
+      <nodes>
+        <classShapeMoniker Id="440e6821-ffa1-43c6-9457-d883a61501c1" />
+        <classShapeMoniker Id="a3553553-f3de-4c8b-91b7-048e919f1b81" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a28b1eb0-ae43-425c-8c94-191465ada1f2" absoluteBounds="12.25, 63.375, 2, 1.5891951497395809">
+      <DataClassMoniker Name="/CMLinqDataContext/INFORME_MEDICO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d06d179c-23b2-47fe-9da8-b87195511fb4" absoluteBounds="12.265, 63.835000000000008, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(16.0561538461539 : 54.3044051106771); (15.4251221202191 : 54.7958456489066 : JumpStart); (15.2155028797809 : 54.9590947980545 : JumpEnd); (15.1754071961545 : 54.9903208735943 : JumpStart); (15.0439129557163 : 55.0927271356555 : JumpEnd); (14.90625 : 55.1999375250401); (14.90625 : 64.1472411005859); (14.8333333333333 : 64.1472411005859 : JumpStart); (14.4791666666667 : 64.1472411005859 : JumpEnd); (14.25 : 64.1472411005859)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MEDICO/MEDICO_INFORME_MEDICO" />
+      <nodes>
+        <classShapeMoniker Id="26912abf-0e2a-4dcf-8ffd-c1c37f6305c9" />
+        <classShapeMoniker Id="a28b1eb0-ae43-425c-8c94-191465ada1f2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 64.9190291341146); (9.72358974358975 : 64.9190291341146 : JumpStart); (9.89025641025641 : 64.9190291341146 : JumpEnd); (10.1666666666667 : 64.9190291341146 : JumpStart); (10.3333333333333 : 64.9190291341146 : JumpEnd); (11.5416666666667 : 64.9190291341146 : JumpStart); (11.7083333333333 : 64.9190291341146 : JumpEnd); (12.25 : 64.9190291341146)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_INFORME_MEDICO" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="a28b1eb0-ae43-425c-8c94-191465ada1f2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="99f9323d-d658-40c0-9070-5d0fbca6e5a9" absoluteBounds="9.25, 112.375, 2, 1.5891951497395667">
+      <DataClassMoniker Name="/CMLinqDataContext/INFORMACIONPRIMARIA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3fd13ca7-6401-4de3-9dcc-d6164d574bbb" absoluteBounds="9.265, 112.83500000000001, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.968748 : 67.9917830403646); (6.968748 : 69.625); (7.41666666666667 : 69.625 : JumpStart); (7.58333333333333 : 69.625 : JumpEnd); (7.68229266666667 : 69.625 : JumpStart); (7.84895933333333 : 69.625 : JumpEnd); (8.875 : 69.625); (8.875 : 113.16959757487); (8.97916666666667 : 113.16959757487 : JumpStart); (9.14583333333333 : 113.16959757487 : JumpEnd); (9.25 : 113.16959757487)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_INFORMACIONPRIMARIA" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="99f9323d-d658-40c0-9070-5d0fbca6e5a9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="dff4ddef-467c-4cd2-8094-b2a6a07ad460" absoluteBounds="21, 63.625, 2, 1.2605004882812381">
+      <DataClassMoniker Name="/CMLinqDataContext/RecetasMedicamento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="12c48ed2-5406-4df3-8dac-efd27ca2dc6d" absoluteBounds="21.015, 64.085000000000008, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a07ce9ae-d58b-41c0-b641-5706e1f55ce7" absoluteBounds="12.5, 78.25, 2, 1.9178898111979095">
+      <DataClassMoniker Name="/CMLinqDataContext/MEDICAMENTO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ca793353-5bb9-49a4-af47-bd3ced768498" absoluteBounds="12.515, 78.710000000000008, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.5 : 79.1641761184896); (18 : 79.1641761184896); (18 : 70.5); (20.625 : 70.5); (20.625 : 66.125); (22 : 66.125); (22 : 65.0112939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MEDICAMENTO/MEDICAMENTO_RecetasMedicamento" />
+      <nodes>
+        <classShapeMoniker Id="a07ce9ae-d58b-41c0-b641-5706e1f55ce7" />
+        <classShapeMoniker Id="dff4ddef-467c-4cd2-8094-b2a6a07ad460" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8c4ef682-e10c-4f9d-b9f4-73655f74df31" absoluteBounds="59.25, 43.5, 2, 1.096153157552088">
+      <DataClassMoniker Name="/CMLinqDataContext/ComoConocio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="37cc10ac-6a95-4c3e-9413-de1f95e4ae5f" absoluteBounds="59.265, 43.96, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2e49dbf3-dd7b-42b7-b120-95b50e832c2c" absoluteBounds="15.25, 43.75, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/CMLinqDataContext/Auditoria" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b00eb309-99d7-4bdc-beb3-ed0ce744efa2" absoluteBounds="15.265, 44.209999999999994, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.5 : 45.7046120198568); (14.5729166666667 : 45.7046120198568 : JumpStart); (14.7395833333333 : 45.7046120198568 : JumpEnd); (15.0416666666667 : 45.7046120198568 : JumpStart); (15.2083333333333 : 45.7046120198568 : JumpEnd); (15.25 : 45.7046120198568)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/USUARIO/USUARIO_Auditoria" />
+      <nodes>
+        <classShapeMoniker Id="54372704-eb37-447a-a19b-cc149efd90da" />
+        <classShapeMoniker Id="2e49dbf3-dd7b-42b7-b120-95b50e832c2c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4279acf7-3764-416f-bbf1-2c9be7436088" absoluteBounds="26.75, 58.875, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/CMLinqDataContext/N_Almacen" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3df12114-fe46-4ccf-959f-c49af5779041" absoluteBounds="26.765, 59.335000000000008, 1.9700000000000002, 0.86484781901041663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(28.75 : 60.2987507822266); (29.125 : 60.6737507822266); (29.125 : 61.875); (29.5104166666667 : 61.875 : JumpStart); (29.6770833333333 : 61.875 : JumpEnd); (33.9322929166667 : 61.875 : JumpStart); (34.0989595833333 : 61.875 : JumpEnd); (35.1666666666667 : 61.875 : JumpStart); (35.3333333333333 : 61.875 : JumpEnd); (39.9166666666667 : 61.875 : JumpStart); (40.0833333333333 : 61.875 : JumpEnd); (40.2916666666667 : 61.875 : JumpStart); (40.4583333333333 : 61.875 : JumpEnd); (40.8854146666667 : 61.875 : JumpStart); (41.0520813333333 : 61.875 : JumpEnd); (41.4166666666667 : 61.875 : JumpStart); (41.5833333333333 : 61.875 : JumpEnd); (41.9166661666667 : 61.875 : JumpStart); (42.0833328333333 : 61.875 : JumpEnd); (42.6666666666667 : 61.875 : JumpStart); (42.8333333333333 : 61.875 : JumpEnd); (42.875 : 61.875); (43.25 : 62.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/N_Almacen/N_Almacen_N_Factura_Linea" />
+      <nodes>
+        <classShapeMoniker Id="4279acf7-3764-416f-bbf1-2c9be7436088" />
+        <classShapeMoniker Id="3e2a4c1f-d0a3-4c8c-9066-9ca96ec35ea0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(27.75 : 60.2998478190104); (27.75 : 62.125); (26.59375 : 62.125); (26.59375 : 75.695028889974); (26.3645833333333 : 75.695028889974 : JumpStart); (26.1979166666667 : 75.695028889974 : JumpEnd); (25.0833333333333 : 75.695028889974 : JumpStart); (24.9166666666667 : 75.695028889974 : JumpEnd); (20.75 : 75.695028889974); (20.75 : 78.7093937174479); (20.5833333333333 : 78.7093937174479 : JumpStart); (20.2916666666667 : 78.7093937174479 : JumpEnd); (18.0833333333333 : 78.7093937174479 : JumpStart); (17.9166666666667 : 78.7093937174479 : JumpEnd); (17.8333333333333 : 78.7093937174479 : JumpStart); (17.6666666666667 : 78.7093937174479 : JumpEnd); (17.5833333333333 : 78.7093937174479 : JumpStart); (17.4166666666667 : 78.7093937174479 : JumpEnd); (17.25 : 78.7093937174479); (17.25 : 77.125); (15.2083333333333 : 77.125 : JumpStart); (15.0416666666667 : 77.125 : JumpEnd); (14.4895833333333 : 77.125 : JumpStart); (14.3229166666667 : 77.125 : JumpEnd); (9.27083333333333 : 77.125 : JumpStart); (8.79166666666667 : 77.125 : JumpEnd); (8.5625 : 77.125); (8.5625 : 75.945028889974); (8.48958333333333 : 75.945028889974 : JumpStart); (8.32291666666667 : 75.945028889974 : JumpEnd); (8.25 : 75.945028889974)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/N_Almacen/N_Almacen_N_PedidosProveedor_Linea" />
+      <nodes>
+        <classShapeMoniker Id="4279acf7-3764-416f-bbf1-2c9be7436088" />
+        <classShapeMoniker Id="0c0ee163-5005-4644-a9a2-88b0233ad690" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7371b5e8-ebcc-4a85-94ed-f5da775c1c17" absoluteBounds="9.25, 77.25, 2, 1.9178898111979095">
+      <DataClassMoniker Name="/CMLinqDataContext/Liquidacion_Medico_Linea" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4e3abdeb-612b-4416-bdab-79aba69b4cc5" absoluteBounds="9.265, 77.710000000000008, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.40625 : 72.4728011067708); (8.40625 : 78.9655582682292); (9.25 : 78.9655582682292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/Liquidacion_Medico/Liquidacion_Medico_Liquidacion_Medico_Linea" />
+      <nodes>
+        <classShapeMoniker Id="bd96f6f2-cca9-4685-8625-88c000c70dc4" />
+        <classShapeMoniker Id="7371b5e8-ebcc-4a85-94ed-f5da775c1c17" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="81c1d63a-b234-4ce4-a562-5b10339beda2" absoluteBounds="29.5, 57.25, 2, 4.2187524414062523">
+      <DataClassMoniker Name="/CMLinqDataContext/N_Ticket_Linea" />
+      <nestedChildShapes>
+        <elementListCompartment Id="065cf794-37d5-44c3-b787-d0cde087c9ab" absoluteBounds="29.515, 57.710000000000008, 1.9700000000000002, 3.65875244140625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(28.75 : 59.207148844401); (29.5 : 59.207148844401)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/N_Almacen/N_Almacen_N_Ticket_Linea" />
+      <nodes>
+        <classShapeMoniker Id="4279acf7-3764-416f-bbf1-2c9be7436088" />
+        <classShapeMoniker Id="81c1d63a-b234-4ce4-a562-5b10339beda2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6949cd12-5fb8-4d9d-9706-35e015c7ab3d" absoluteBounds="26.75, 62.625, 2, 5.3691837565104095">
+      <DataClassMoniker Name="/CMLinqDataContext/N_Ticket" />
+      <nestedChildShapes>
+        <elementListCompartment Id="802a246c-53c2-4b70-bca5-278df355670f" absoluteBounds="26.765, 63.085000000000008, 1.9700000000000002, 4.8091837565104161" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(28.75 : 67.9941837565104); (29.0416666666667 : 67.9941837565104 : JumpStart); (29.2083333333333 : 67.9941837565104 : JumpEnd); (29.59375 : 67.9941837565104); (29.59375 : 61.4687524414063)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/N_Ticket/N_Ticket_N_Ticket_Linea" />
+      <nodes>
+        <classShapeMoniker Id="6949cd12-5fb8-4d9d-9706-35e015c7ab3d" />
+        <classShapeMoniker Id="81c1d63a-b234-4ce4-a562-5b10339beda2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 71.2026733633423); (2.91666666666667 : 71.2026733633423 : JumpStart); (3.08333333333333 : 71.2026733633423 : JumpEnd); (3.1875 : 71.2026733633423); (3.1875 : 68.8125); (6.88541466666667 : 68.8125 : JumpStart); (7.05208133333333 : 68.8125 : JumpEnd); (7.41666666666667 : 68.8125 : JumpStart); (7.58333333333333 : 68.8125 : JumpEnd); (7.68229266666667 : 68.8125 : JumpStart); (7.84895933333333 : 68.8125 : JumpEnd); (9.25 : 68.8125); (9.25 : 66.8125); (11.8125 : 66.8125); (11.8125 : 68.7697371419271); (11.8229166666667 : 68.7697371419271 : JumpStart); (11.9895833333333 : 68.7697371419271 : JumpEnd); (14.4791666666667 : 68.7697371419271 : JumpStart); (14.6458333333333 : 68.7697371419271 : JumpEnd); (14.8125 : 68.7697371419271); (14.8125 : 68.3125); (17.4479166666667 : 68.3125 : JumpStart); (17.7708333333333 : 68.3125 : JumpEnd); (17.84375 : 68.3125); (17.84375 : 68.9386417643229); (20.6875 : 68.9386417643229); (20.6875 : 66.4375); (20.8541666666667 : 66.4375 : JumpStart); (21.0208333333333 : 66.4375 : JumpEnd); (23.6666666666667 : 66.4375 : JumpStart); (23.8333333333333 : 66.4375 : JumpEnd); (25.9791666666667 : 66.4375 : JumpStart); (26.1458333333333 : 66.4375 : JumpEnd); (26.1979166666667 : 66.4375 : JumpStart); (26.7083333333333 : 66.4375 : JumpEnd); (26.71875 : 66.4375); (26.71875 : 68.1191837565104); (27.718748 : 68.1191837565104); (27.718748 : 67.9941837565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/FORMASPAGO/FORMASPAGO_N_Ticket" />
+      <nodes>
+        <classShapeMoniker Id="520993d5-de59-4c20-a87f-48b8bdad7e1d" />
+        <classShapeMoniker Id="6949cd12-5fb8-4d9d-9706-35e015c7ab3d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.296878 : 67.9917830403646); (8.296878 : 68.4917830403646); (8.5625 : 68.4917830403646); (8.5625 : 66.4224471028646); (8.66666666666667 : 66.4224471028646 : JumpStart); (8.83333333333333 : 66.4224471028646 : JumpEnd); (8.88541666666667 : 66.4224471028646 : JumpStart); (9.05208333333333 : 66.4224471028646 : JumpEnd); (9.10416666666667 : 66.4224471028646 : JumpStart); (9.27083333333333 : 66.4224471028646 : JumpEnd); (11.8229166666667 : 66.4224471028646 : JumpStart); (11.9895833333333 : 66.4224471028646 : JumpEnd); (14.3229166666667 : 66.4224471028646 : JumpStart); (14.8333333333333 : 66.4224471028646 : JumpEnd); (15.1979166666667 : 66.4224471028646 : JumpStart); (15.3645833333333 : 66.4224471028646 : JumpEnd); (16.1822911666667 : 66.4224471028646 : JumpStart); (16.3489578333333 : 66.4224471028646 : JumpEnd); (17.375 : 66.4224471028646); (17.375 : 63.75); (17.4479166666667 : 63.75 : JumpStart); (17.6145833333333 : 63.75 : JumpEnd); (17.7291666666667 : 63.75 : JumpStart); (17.8958333333333 : 63.75 : JumpEnd); (20.2291666666667 : 63.75 : JumpStart); (20.3958333333333 : 63.75 : JumpEnd); (20.6041666666667 : 63.75 : JumpStart); (20.7708333333333 : 63.75 : JumpEnd); (20.9375 : 63.75); (20.9375 : 65.7002791341146); (21.9166666666667 : 65.7002791341146 : JumpStart); (22.0833333333333 : 65.7002791341146 : JumpEnd); (23.6666666666667 : 65.7002791341146 : JumpStart); (23.8333333333333 : 65.7002791341146 : JumpEnd); (25.9791666666667 : 65.7002791341146 : JumpStart); (26.1458333333333 : 65.7002791341146 : JumpEnd); (26.1979166666667 : 65.7002791341146 : JumpStart); (26.3645833333333 : 65.7002791341146 : JumpEnd); (26.3854166666667 : 65.7002791341146 : JumpStart); (26.6770833333333 : 65.7002791341146 : JumpEnd); (26.6875 : 65.7002791341146); (26.6875 : 63.668856175293); (26.75 : 63.668856175293)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_N_Ticket" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="6949cd12-5fb8-4d9d-9706-35e015c7ab3d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="cf95cdbe-aef0-4784-8a1c-c4f43617f027" absoluteBounds="24, 77.125, 2.125, 2.0822371419270667">
+      <DataClassMoniker Name="/CMLinqDataContext/N_Articulos_ConsolidacionStock" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d26fef9-126c-45d6-81b4-802c08b8e5c4" absoluteBounds="24.015, 77.585, 2.0949999999999998, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(26.75 : 59.5874239095052); (26.28125 : 59.5874239095052); (26.28125 : 76.875); (25.0625 : 76.875); (25.0625 : 77.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/N_Almacen/N_Almacen_N_Articulos_ConsolidacionStock" />
+      <nodes>
+        <classShapeMoniker Id="4279acf7-3764-416f-bbf1-2c9be7436088" />
+        <classShapeMoniker Id="cf95cdbe-aef0-4784-8a1c-c4f43617f027" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(20.25 : 79.3550032552083); (20.5416666666667 : 79.3550032552083 : JumpStart); (20.7083333333333 : 79.3550032552083 : JumpEnd); (21.9166666666667 : 79.3550032552083 : JumpStart); (22.0833333333333 : 79.3550032552083 : JumpEnd); (23.7916666666667 : 79.3550032552083 : JumpStart); (23.9583333333333 : 79.3550032552083 : JumpEnd); (24 : 79.3550032552083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/N_Articulo/N_Articulo_N_Articulos_ConsolidacionStock" />
+      <nodes>
+        <classShapeMoniker Id="f7962817-3883-4dbb-a1ab-50c03be62cdc" />
+        <classShapeMoniker Id="cf95cdbe-aef0-4784-8a1c-c4f43617f027" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c5e78716-b413-43a1-8e1e-945361e1638c" absoluteBounds="18, 45.25, 2, 2.082237141927088">
+      <DataClassMoniker Name="/CMLinqDataContext/MEDICOS_FICHERO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7eee141d-9b45-46be-ab51-620ff3ac1a60" absoluteBounds="18.015, 45.71, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(15.9592307692308 : 50.25); (17.356551424235 : 49.9083323542717 : JumpStart); (17.518448575765 : 49.8687458653614 : JumpEnd); (17.625 : 49.8426923076923); (17.625 : 45.9912024856771); (18 : 45.9912024856771)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MEDICO/MEDICO_MEDICOS_FICHERO" />
+      <nodes>
+        <classShapeMoniker Id="26912abf-0e2a-4dcf-8ffd-c1c37f6305c9" />
+        <classShapeMoniker Id="c5e78716-b413-43a1-8e1e-945361e1638c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="48edc0a4-cfb4-48b6-99b8-868e95e13f85" absoluteBounds="18, 51.875, 2, 2.575279134114588">
+      <DataClassMoniker Name="/CMLinqDataContext/MODELOSDATO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="624310b8-bcea-43d3-89b5-20476e257efe" absoluteBounds="18.015, 52.335000000000008, 1.9700000000000002, 2.015279134114583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(20 : 53.1626395670573); (20.78125 : 53.1626395670573); (20.78125 : 60.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MODELOSDATO/MODELOSDATO_DATOSCOMPARATIVA" />
+      <nodes>
+        <classShapeMoniker Id="48edc0a4-cfb4-48b6-99b8-868e95e13f85" />
+        <classShapeMoniker Id="fd01118c-19ee-496f-a23c-68f4f2afab93" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 48.8641679415565); (11.8338325467248 : 49.1980004882813); (17.875 : 49.1980004882813); (17.875 : 51.75); (18 : 51.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MODELOSCOMPARATIVA/MODELOSCOMPARATIVA_MODELOSDATO" />
+      <nodes>
+        <classShapeMoniker Id="024e0bc1-9b13-48c7-9779-08c54e086819" />
+        <classShapeMoniker Id="48edc0a4-cfb4-48b6-99b8-868e95e13f85" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6020ecf3-27f2-4b87-b202-db417a4760af" absoluteBounds="9.25, 61.25, 2, 3.5613631184895809">
+      <DataClassMoniker Name="/CMLinqDataContext/HISTORIALE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a12add14-0883-4992-aaa4-14dc0e93764e" absoluteBounds="9.265, 61.710000000000008, 1.9700000000000002, 3.001363118489583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.25 : 62.6189568505859); (11.5416666666667 : 62.6189568505859 : JumpStart); (11.7083333333333 : 62.6189568505859 : JumpEnd); (11.9479166666667 : 62.6189568505859 : JumpStart); (12.2083333333333 : 62.6189568505859 : JumpEnd); (14.4791666666667 : 62.6189568505859 : JumpStart); (14.6458333333333 : 62.6189568505859 : JumpEnd); (14.6666666666667 : 62.6189568505859 : JumpStart); (14.8333333333333 : 62.6189568505859 : JumpEnd); (14.9479166666667 : 62.6189568505859 : JumpStart); (15.1145833333333 : 62.6189568505859 : JumpEnd); (15.125 : 62.6189568505859); (15.125 : 61.375); (17.2916666666667 : 61.375 : JumpStart); (17.8333333333333 : 61.375 : JumpEnd); (17.875 : 61.375); (17.875 : 59.625); (19 : 59.625); (19 : 58.0035424804688)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/HISTORIALE/HISTORIALE_HistorialesDiagnostico" />
+      <nodes>
+        <classShapeMoniker Id="6020ecf3-27f2-4b87-b202-db417a4760af" />
+        <classShapeMoniker Id="b16e9aef-3ea6-4bbe-9016-bd86f4db42b1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 62.1090887796224); (11.5416666666667 : 62.1090887796224 : JumpStart); (11.7083333333333 : 62.1090887796224 : JumpEnd); (11.8229166666667 : 62.1090887796224 : JumpStart); (11.9895833333333 : 62.1090887796224 : JumpEnd); (12.0625 : 62.1090887796224); (12.0625 : 52.4502791341146)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/HISTORIALE/HISTORIALE_LHISTORIALE" />
+      <nodes>
+        <classShapeMoniker Id="6020ecf3-27f2-4b87-b202-db417a4760af" />
+        <classShapeMoniker Id="3dff9a56-78b1-4293-be1f-ff0f164027f1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.80692307692308 : 64.8113631184896); (9.80692307692308 : 65.6410139973958); (10.25 : 65.6410139973958); (10.25 : 64.8113631184896)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/HISTORIALE/HISTORIALE_HISTORIALE" />
+      <nodes>
+        <classShapeMoniker Id="6020ecf3-27f2-4b87-b202-db417a4760af" />
+        <classShapeMoniker Id="6020ecf3-27f2-4b87-b202-db417a4760af" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.984374 : 54.3044051106771); (15.984374 : 55.5); (14.84375 : 55.5); (14.84375 : 63.0306815592448); (14.8333333333333 : 63.0306815592448 : JumpStart); (14.6666666666667 : 63.0306815592448 : JumpEnd); (14.6458333333333 : 63.0306815592448 : JumpStart); (14.4791666666667 : 63.0306815592448 : JumpEnd); (12.1145833333333 : 63.0306815592448 : JumpStart); (11.8229166666667 : 63.0306815592448 : JumpEnd); (11.7083333333333 : 63.0306815592448 : JumpStart); (11.5416666666667 : 63.0306815592448 : JumpEnd); (11.25 : 63.0306815592448)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MEDICO/MEDICO_HISTORIALE" />
+      <nodes>
+        <classShapeMoniker Id="26912abf-0e2a-4dcf-8ffd-c1c37f6305c9" />
+        <classShapeMoniker Id="6020ecf3-27f2-4b87-b202-db417a4760af" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 63.2742242382145); (8.94791666666667 : 63.2742242382145 : JumpStart); (9.11458333333333 : 63.2742242382145 : JumpEnd); (9.25 : 63.2742242382145)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_HISTORIALE" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="6020ecf3-27f2-4b87-b202-db417a4760af" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="67637a16-bda0-46e4-85df-ebc8bc8923b2" absoluteBounds="3.75, 53, 2, 4.2187524414062523">
+      <DataClassMoniker Name="/CMLinqDataContext/MUTUA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f4585f80-2c9d-4bac-9e51-071effb93281" absoluteBounds="3.7649999999999997, 53.460000000000008, 1.9700000000000002, 3.65875244140625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.75 : 55.1093762207031); (6.16666666666667 : 55.1093762207031 : JumpStart); (6.33333333333333 : 55.1093762207031 : JumpEnd); (6.375 : 55.1093762207031); (6.375 : 58.0353011067708); (9.07291666666667 : 58.0353011067708 : JumpStart); (9.23958333333333 : 58.0353011067708 : JumpEnd); (11.6875 : 58.0353011067708); (11.6875 : 59.2804996744792); (14.4791666666667 : 59.2804996744792 : JumpStart); (14.6458333333333 : 59.2804996744792 : JumpEnd); (14.75 : 59.2804996744792); (14.75 : 67.375); (15.6588514166667 : 67.375 : JumpStart); (15.8255180833333 : 67.375 : JumpEnd); (16.78906425 : 67.375); (16.78906425 : 68.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MUTUA/MUTUA_FACTURA" />
+      <nodes>
+        <classShapeMoniker Id="67637a16-bda0-46e4-85df-ebc8bc8923b2" />
+        <classShapeMoniker Id="2706c208-1d6e-456d-baa4-04897a97080a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 54.4601931340144); (5.99221412421066 : 57.041305377908 : JumpStart); (6.00778587578934 : 57.2072430117664 : JumpEnd); (6.12653946153846 : 58.4727197265625); (6.9982142724359 : 58.4727197265625 : JumpStart); (7.16488093910256 : 58.4727197265625 : JumpEnd); (7.60562024358975 : 58.4727197265625 : JumpStart); (7.77228691025641 : 58.4727197265625 : JumpEnd); (8.72916666666667 : 58.4727197265625 : JumpStart); (8.89583333333333 : 58.4727197265625 : JumpEnd); (8.93229166666667 : 58.4727197265625 : JumpStart); (9.23958333333333 : 58.4727197265625 : JumpEnd); (11.3229166666667 : 58.4727197265625 : JumpStart); (11.4895833333333 : 58.4727197265625 : JumpEnd); (11.5416666666667 : 58.4727197265625 : JumpStart); (11.8333333333333 : 58.4727197265625 : JumpEnd); (11.90625 : 58.4727197265625); (11.90625 : 69.7797125384615); (13.5546153846154 : 70.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MUTUA/MUTUA_N_Proceso" />
+      <nodes>
+        <classShapeMoniker Id="67637a16-bda0-46e4-85df-ebc8bc8923b2" />
+        <classShapeMoniker Id="ac1f4e90-c9d7-4267-a926-540808a6719b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 56.1953163310547); (6 : 56.1953163310547); (6 : 57.5822371419271); (7.41666666666667 : 57.5822371419271 : JumpStart); (7.58333333333333 : 57.5822371419271 : JumpEnd); (9.07291666666667 : 57.5822371419271 : JumpStart); (9.23958333333333 : 57.5822371419271 : JumpEnd); (11.6666666666667 : 57.5822371419271 : JumpStart); (11.8333333333333 : 57.5822371419271 : JumpEnd); (11.9375 : 57.5822371419271); (11.9375 : 59.3553898111979); (14.4791666666667 : 59.3553898111979 : JumpStart); (14.6458333333333 : 59.3553898111979 : JumpEnd); (15 : 59.3553898111979); (15 : 60.8322371419271); (17.2916666666667 : 60.8322371419271 : JumpStart); (17.4583333333333 : 60.8322371419271 : JumpEnd); (17.75 : 60.8322371419271); (17.75 : 62.8252791341146); (18.9166666666667 : 62.8252791341146 : JumpStart); (19.0833333333333 : 62.8252791341146 : JumpEnd); (23.375 : 62.8252791341146); (23.375 : 61.5937524414063); (40.8854146666667 : 61.5937524414063 : JumpStart); (41.0520813333333 : 61.5937524414063 : JumpEnd); (41.9999995 : 61.5937524414063); (41.9999995 : 62.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MUTUA/MUTUA_CITA" />
+      <nodes>
+        <classShapeMoniker Id="67637a16-bda0-46e4-85df-ebc8bc8923b2" />
+        <classShapeMoniker Id="0b006b24-3f40-452c-ae47-15ad8399e488" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 57.1556745183293); (5.94107443490112 : 57.3467489532304 : JumpStart); (6.05892556509888 : 57.4646000834282 : JumpEnd); (6.1875 : 57.5931745183293); (6.1875 : 62.7659103160807); (6.29166666666667 : 62.7659103160807 : JumpStart); (6.45833333333333 : 62.7659103160807 : JumpEnd); (6.5 : 62.7659103160807)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MUTUA/MUTUA_PACIENTE" />
+      <nodes>
+        <classShapeMoniker Id="67637a16-bda0-46e4-85df-ebc8bc8923b2" />
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 54.65625); (6.07291666666667 : 54.65625 : JumpStart); (6.33333333333333 : 54.65625 : JumpEnd); (8.72916666666667 : 54.65625 : JumpStart); (8.89583333333333 : 54.65625 : JumpEnd); (8.93229166666667 : 54.65625 : JumpStart); (9.23958333333333 : 54.65625 : JumpEnd); (11.3229166666667 : 54.65625 : JumpStart); (11.4895833333333 : 54.65625 : JumpEnd); (11.9791666666667 : 54.65625 : JumpStart); (12.1458333333333 : 54.65625 : JumpEnd); (12.25 : 54.65625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MUTUA/MUTUA_LMUTUA" />
+      <nodes>
+        <classShapeMoniker Id="67637a16-bda0-46e4-85df-ebc8bc8923b2" />
+        <classShapeMoniker Id="bd630228-c82a-4286-ac78-c4d8360c4215" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8f91b52d-1dac-4037-baa9-974127e46861" absoluteBounds="15.25, 61.625, 2, 4.5474471028645809">
+      <DataClassMoniker Name="/CMLinqDataContext/RECETA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6a623530-8873-46e4-ac8c-858f0c770cfb" absoluteBounds="15.265, 62.085000000000008, 1.9700000000000002, 3.987447102864583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(17.25 : 63.90625); (20.6041666666667 : 63.90625 : JumpStart); (20.7708333333333 : 63.90625 : JumpEnd); (21 : 63.90625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/RECETA/RECETA_RecetasMedicamento" />
+      <nodes>
+        <classShapeMoniker Id="8f91b52d-1dac-4037-baa9-974127e46861" />
+        <classShapeMoniker Id="dff4ddef-467c-4cd2-8094-b2a6a07ad460" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.40625 : 78.25); (14.40625 : 64.9194812011718); (14.4791666666667 : 64.9194812011718 : JumpStart); (14.6458333333333 : 64.9194812011718 : JumpEnd); (14.6666666666667 : 64.9194812011718 : JumpStart); (14.8333333333333 : 64.9194812011718 : JumpEnd); (15.25 : 64.9194812011718)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MEDICAMENTO/MEDICAMENTO_RECETA" />
+      <nodes>
+        <classShapeMoniker Id="a07ce9ae-d58b-41c0-b641-5706e1f55ce7" />
+        <classShapeMoniker Id="8f91b52d-1dac-4037-baa9-974127e46861" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 55.8902129282227); (8.72916666666667 : 55.8902129282227 : JumpStart); (8.89583333333333 : 55.8902129282227 : JumpEnd); (8.9375 : 55.8902129282227); (8.9375 : 57.4631982421875); (9.02604166666667 : 57.4631982421875 : JumpStart); (9.23958333333333 : 57.4631982421875 : JumpEnd); (11.3229166666667 : 57.4631982421875 : JumpStart); (11.4895833333333 : 57.4631982421875 : JumpEnd); (11.8125 : 57.4631982421875); (11.8125 : 59.6242496744792); (11.8229166666667 : 59.6242496744792 : JumpStart); (12.2708333333333 : 59.6242496744792 : JumpEnd); (14.375 : 59.6242496744792); (14.375 : 60.4728011067708); (14.4791666666667 : 60.4728011067708 : JumpStart); (14.6458333333333 : 60.4728011067708 : JumpEnd); (14.6666666666667 : 60.4728011067708 : JumpStart); (14.8333333333333 : 60.4728011067708 : JumpEnd); (14.9166666666667 : 60.4728011067708 : JumpStart); (15.2708333333333 : 60.4728011067708 : JumpEnd); (16.25 : 60.4728011067708); (16.25 : 61.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/DIAGNOSTICO/DIAGNOSTICO_RECETA" />
+      <nodes>
+        <classShapeMoniker Id="dd1f778f-b4b8-4f85-84fb-886ee77db798" />
+        <classShapeMoniker Id="8f91b52d-1dac-4037-baa9-974127e46861" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.71 : 54.3044051106771); (14.875 : 55.3296480635016); (14.875 : 61.25); (15.8069230769231 : 61.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MEDICO/MEDICO_RECETA" />
+      <nodes>
+        <classShapeMoniker Id="26912abf-0e2a-4dcf-8ffd-c1c37f6305c9" />
+        <classShapeMoniker Id="8f91b52d-1dac-4037-baa9-974127e46861" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 65.208788251088); (9.72358974358975 : 65.208788251088 : JumpStart); (9.89025641025641 : 65.208788251088 : JumpEnd); (10.1666666666667 : 65.208788251088 : JumpStart); (10.3333333333333 : 65.208788251088 : JumpEnd); (11.5416666666667 : 65.208788251088 : JumpStart); (11.7083333333333 : 65.208788251088 : JumpEnd); (14.4791666666667 : 65.208788251088 : JumpStart); (14.6458333333333 : 65.208788251088 : JumpEnd); (14.6666666666667 : 65.208788251088 : JumpStart); (14.8333333333333 : 65.208788251088 : JumpEnd); (15.25 : 65.208788251088)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_RECETA" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="8f91b52d-1dac-4037-baa9-974127e46861" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5c0a2614-4ff3-4710-91bd-ac8ca3b9f7c9" absoluteBounds="21, 66.5, 2, 7.6700463867187381">
+      <DataClassMoniker Name="/CMLinqDataContext/N_Partes_Asistencia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="42e30e10-8de0-41b7-848b-9bb126019316" absoluteBounds="21.015, 66.960000000000008, 1.9700000000000002, 7.11004638671875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 56.7179298564453); (8.625 : 56.7179298564453); (8.625 : 57.1285424804688); (8.66666666666667 : 57.1285424804688 : JumpStart); (9.23958333333333 : 57.1285424804688 : JumpEnd); (11.3229166666667 : 57.1285424804688 : JumpStart); (11.4895833333333 : 57.1285424804688 : JumpEnd); (11.5416666666667 : 57.1285424804688 : JumpStart); (11.7083333333333 : 57.1285424804688 : JumpEnd); (11.7916666666667 : 57.1285424804688 : JumpStart); (12.0833333333333 : 57.1285424804688 : JumpEnd); (12.125 : 57.1285424804688); (12.125 : 59.4803898111979); (14.4166666666667 : 59.4803898111979 : JumpStart); (15.0520833333333 : 59.4803898111979 : JumpEnd); (15.0625 : 59.4803898111979); (15.0625 : 60.9572371419271); (15.1979166666667 : 60.9572371419271 : JumpStart); (15.3645833333333 : 60.9572371419271 : JumpEnd); (16.1666666666667 : 60.9572371419271 : JumpStart); (16.3333333333333 : 60.9572371419271 : JumpEnd); (16.6979186666667 : 60.9572371419271 : JumpStart); (16.8645853333333 : 60.9572371419271 : JumpEnd); (17.2916666666667 : 60.9572371419271 : JumpStart); (17.4583333333333 : 60.9572371419271 : JumpEnd); (17.5 : 60.9572371419271); (17.5 : 63.375); (18.9166666666667 : 63.375 : JumpStart); (19.0833333333333 : 63.375 : JumpEnd); (20.2291666666667 : 63.375 : JumpStart); (20.3958333333333 : 63.375 : JumpEnd); (20.4375 : 63.375); (20.4375 : 66); (20.7291666666667 : 66 : JumpStart); (21.0208333333333 : 66 : JumpEnd); (21.468748 : 66); (21.468748 : 66.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/DIAGNOSTICO/DIAGNOSTICO_N_Partes_Asistencia" />
+      <nodes>
+        <classShapeMoniker Id="dd1f778f-b4b8-4f85-84fb-886ee77db798" />
+        <classShapeMoniker Id="5c0a2614-4ff3-4710-91bd-ac8ca3b9f7c9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.0820325 : 58.625); (5.0820325 : 57.875); (6.29166666666667 : 57.875 : JumpStart); (6.45833333333333 : 57.875 : JumpEnd); (9.07291666666667 : 57.875 : JumpStart); (9.23958333333333 : 57.875 : JumpEnd); (11.6666666666667 : 57.875 : JumpStart); (11.8333333333333 : 57.875 : JumpEnd); (11.8541666666667 : 57.875 : JumpStart); (12.0208333333333 : 57.875 : JumpEnd); (12.03125 : 57.875); (12.03125 : 66.4849471028646); (14.4791666666667 : 66.4849471028646 : JumpStart); (14.6458333333333 : 66.4849471028646 : JumpEnd); (14.6666666666667 : 66.4849471028646 : JumpStart); (14.8333333333333 : 66.4849471028646 : JumpEnd); (17.625 : 66.4849471028646); (17.625 : 69.7419254557292); (20.5416666666667 : 69.7419254557292 : JumpStart); (20.7083333333333 : 69.7419254557292 : JumpEnd); (21 : 69.7419254557292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/EMPRESA/EMPRESA_N_Partes_Asistencia" />
+      <nodes>
+        <classShapeMoniker Id="8f3c233a-8e40-4b1b-8a76-7c6b855a73e0" />
+        <classShapeMoniker Id="5c0a2614-4ff3-4710-91bd-ac8ca3b9f7c9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.25 : 50.9889162612054); (17.3541666666667 : 50.9889162612054 : JumpStart); (17.5208333333333 : 50.9889162612054 : JumpEnd); (17.9375 : 50.9889162612054); (17.9375 : 63.125); (18.9166666666667 : 63.125 : JumpStart); (19.0833333333333 : 63.125 : JumpEnd); (20.3125 : 63.125); (20.3125 : 66.15625); (20.8541666666667 : 66.15625 : JumpStart); (21.0208333333333 : 66.15625 : JumpEnd); (22 : 66.15625); (22 : 66.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MEDICO/MEDICO_N_Partes_Asistencia" />
+      <nodes>
+        <classShapeMoniker Id="26912abf-0e2a-4dcf-8ffd-c1c37f6305c9" />
+        <classShapeMoniker Id="5c0a2614-4ff3-4710-91bd-ac8ca3b9f7c9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.25 : 70.125); (13.25 : 69.75); (14.3229166666667 : 69.75 : JumpStart); (14.6458333333333 : 69.75 : JumpEnd); (14.6666666666667 : 69.75 : JumpStart); (14.8333333333333 : 69.75 : JumpEnd); (15.1875 : 69.75); (15.1875 : 67.9375); (15.6588514166667 : 67.9375 : JumpStart); (15.8255180833333 : 67.9375 : JumpEnd); (15.9127590416667 : 67.9375 : JumpStart); (16.0794257083333 : 67.9375 : JumpEnd); (16.1822911666667 : 67.9375 : JumpStart); (16.3489578333333 : 67.9375 : JumpEnd); (16.7057309166667 : 67.9375 : JumpStart); (16.8723975833333 : 67.9375 : JumpEnd); (17.3125 : 67.9375); (17.3125 : 70.2419254557292); (17.4479166666667 : 70.2419254557292 : JumpStart); (17.6145833333333 : 70.2419254557292 : JumpEnd); (20.5416666666667 : 70.2419254557292 : JumpStart); (20.7083333333333 : 70.2419254557292 : JumpEnd); (20.75 : 70.2419254557292); (20.75 : 72.3975226933594); (20.7916666666667 : 72.3975226933594 : JumpStart); (20.9583333333333 : 72.3975226933594 : JumpEnd); (21 : 72.3975226933594)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/N_Proceso/N_Proceso_N_Partes_Asistencia" />
+      <nodes>
+        <classShapeMoniker Id="ac1f4e90-c9d7-4267-a926-540808a6719b" />
+        <classShapeMoniker Id="5c0a2614-4ff3-4710-91bd-ac8ca3b9f7c9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.20863825961538 : 59.5); (8.20863825961538 : 59.25); (8.54166666666667 : 59.25 : JumpStart); (8.70833333333333 : 59.25 : JumpEnd); (8.78125 : 59.25); (8.78125 : 66.5625); (8.88541666666667 : 66.5625 : JumpStart); (9.05208333333333 : 66.5625 : JumpEnd); (9.10416666666667 : 66.5625 : JumpStart); (9.27083333333333 : 66.5625 : JumpEnd); (11.6875 : 66.5625); (11.6875 : 68.9572371419271); (11.8229166666667 : 68.9572371419271 : JumpStart); (11.9895833333333 : 68.9572371419271 : JumpEnd); (14.3229166666667 : 68.9572371419271 : JumpStart); (14.6458333333333 : 68.9572371419271 : JumpEnd); (14.6666666666667 : 68.9572371419271 : JumpStart); (14.8333333333333 : 68.9572371419271 : JumpEnd); (15.03125 : 68.9572371419271); (15.03125 : 67.8125); (15.6432269166667 : 67.8125 : JumpStart); (15.8255180833333 : 67.8125 : JumpEnd); (15.9127590416667 : 67.8125 : JumpStart); (16.0794257083333 : 67.8125 : JumpEnd); (16.1822911666667 : 67.8125 : JumpStart); (16.3489578333333 : 67.8125 : JumpEnd); (16.7057309166667 : 67.8125 : JumpStart); (16.8723975833333 : 67.8125 : JumpEnd); (17.3541666666667 : 67.8125 : JumpStart); (17.7083333333333 : 67.8125 : JumpEnd); (17.78125 : 67.8125); (17.78125 : 70.3709627278646); (20.5416666666667 : 70.3709627278646 : JumpStart); (20.8333333333333 : 70.3709627278646 : JumpEnd); (21 : 70.3709627278646)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_N_Partes_Asistencia" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="5c0a2614-4ff3-4710-91bd-ac8ca3b9f7c9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6096b6f9-5a70-4184-91e5-97f59c8850e0" absoluteBounds="24, 62.75, 2, 2.5752791341145809">
+      <DataClassMoniker Name="/CMLinqDataContext/EntregasCuenta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="86405e12-0774-4037-8f52-fad12ed26295" absoluteBounds="24.015, 63.209999999999994, 1.9700000000000002, 2.015279134114583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(26 : 64.4396098820613); (26.0497737816274 : 64.7617136297611 : JumpStart); (26.0752262183726 : 64.9264253513887 : JumpEnd); (26.15625 : 65.4507589033453); (26.15625 : 68.9015730794271); (26.1979166666667 : 68.9015730794271 : JumpStart); (26.4583333333333 : 68.9015730794271 : JumpEnd); (26.5104166666667 : 68.9015730794271 : JumpStart); (26.7083333333333 : 68.9015730794271 : JumpEnd); (31.8229166666667 : 68.9015730794271 : JumpStart); (31.9895833333333 : 68.9015730794271 : JumpEnd); (35.1666666666667 : 68.9015730794271 : JumpStart); (35.3333333333333 : 68.9015730794271 : JumpEnd); (40.1265374615385 : 68.9015730794271); (40.1702615490273 : 68.8882965453933 : JumpStart); (40.4547384509727 : 68.8019169892394 : JumpEnd); (40.8890095490273 : 68.6700534022703 : JumpStart); (41.0484864509727 : 68.6216292809704 : JumpEnd); (41.3615384615384 : 68.5265730794271)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/EntregasCuenta/EntregasCuenta_CITA" />
+      <nodes>
+        <classShapeMoniker Id="6096b6f9-5a70-4184-91e5-97f59c8850e0" />
+        <classShapeMoniker Id="0b006b24-3f40-452c-ae47-15ad8399e488" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.281252 : 70.75); (2.281252 : 70.1355004882813); (3.0625 : 70.1355004882813); (3.0625 : 63.7511417643229); (6.375 : 63.7511417643229); (6.375 : 59.3125); (9.0625 : 59.3125); (9.0625 : 60.625); (12 : 60.625); (12 : 62.3322371419271); (14.4791666666667 : 62.3322371419271 : JumpStart); (14.6458333333333 : 62.3322371419271 : JumpEnd); (15.0625 : 62.3322371419271); (15.0625 : 61.25); (17.6875 : 61.25); (17.6875 : 62.9502791341146); (18.9166666666667 : 62.9502791341146 : JumpStart); (19.0833333333333 : 62.9502791341146 : JumpEnd); (23.5 : 62.9502791341146); (23.5 : 62.125); (25 : 62.125); (25 : 62.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/FORMASPAGO/FORMASPAGO_EntregasCuenta" />
+      <nodes>
+        <classShapeMoniker Id="520993d5-de59-4c20-a87f-48b8bdad7e1d" />
+        <classShapeMoniker Id="6096b6f9-5a70-4184-91e5-97f59c8850e0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 63.6380504110384); (9 : 63.6380504110384); (9 : 61.125); (9.10416666666667 : 61.125 : JumpStart); (9.27083333333333 : 61.125 : JumpEnd); (11.5416666666667 : 61.125 : JumpStart); (11.7083333333333 : 61.125 : JumpEnd); (11.9166666666667 : 61.125 : JumpStart); (12.1145833333333 : 61.125 : JumpEnd); (12.125 : 61.125); (12.125 : 62.8322371419271); (14.4791666666667 : 62.8322371419271 : JumpStart); (14.6458333333333 : 62.8322371419271 : JumpEnd); (14.6666666666667 : 62.8322371419271 : JumpStart); (14.8333333333333 : 62.8322371419271 : JumpEnd); (14.9479166666667 : 62.8322371419271 : JumpStart); (15.1145833333333 : 62.8322371419271 : JumpEnd); (15.1875 : 62.8322371419271); (15.1875 : 61.4375); (17.2916666666667 : 61.4375 : JumpStart); (17.6145833333333 : 61.4375 : JumpEnd); (17.625 : 61.4375); (17.625 : 62.7627791341146); (18.9166666666667 : 62.7627791341146 : JumpStart); (19.0833333333333 : 62.7627791341146 : JumpEnd); (23.4166666666667 : 62.7627791341146 : JumpStart); (23.5833333333333 : 62.7627791341146 : JumpEnd); (23.875 : 62.7627791341146); (23.875 : 61.2326684570313); (24.468748 : 61.2326684570313); (24.468748 : 62.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_EntregasCuenta" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="6096b6f9-5a70-4184-91e5-97f59c8850e0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.5 : 45.8394508525391); (15 : 45.8394508525391); (15 : 46.4109318033854); (17.75 : 46.4109318033854); (17.75 : 47.8322371419271); (26.125 : 47.8322371419271); (26.125 : 62.375); (25.0833333333333 : 62.375 : JumpStart); (24.9166666666667 : 62.375 : JumpEnd); (24.468748 : 62.375); (24.468748 : 62.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/USUARIO/USUARIO_EntregasCuenta" />
+      <nodes>
+        <classShapeMoniker Id="54372704-eb37-447a-a19b-cc149efd90da" />
+        <classShapeMoniker Id="6096b6f9-5a70-4184-91e5-97f59c8850e0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(26 : 63.3313197835286); (26.1979166666667 : 63.3313197835286 : JumpStart); (26.4583333333333 : 63.3313197835286 : JumpEnd); (26.75 : 63.3313197835286)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/EntregasCuenta/EntregasCuenta_N_Ticket" />
+      <nodes>
+        <classShapeMoniker Id="6096b6f9-5a70-4184-91e5-97f59c8850e0" />
+        <classShapeMoniker Id="6949cd12-5fb8-4d9d-9706-35e015c7ab3d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(26 : 64.7127113505859); (26.375 : 64.7127113505859); (26.375 : 62.5); (30.75 : 62.5); (30.75 : 62.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/EntregasCuenta/EntregasCuenta_N_Factura" />
+      <nodes>
+        <classShapeMoniker Id="6096b6f9-5a70-4184-91e5-97f59c8850e0" />
+        <classShapeMoniker Id="8b31e8ed-c425-44a3-b488-15f5f4d17603" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(24 : 64.4664712955729); (23.8333333333333 : 64.4664712955729 : JumpStart); (23.6666666666667 : 64.4664712955729 : JumpEnd); (23.125 : 64.4664712955729); (23.125 : 65.2612939453125); (22.0833333333333 : 65.2612939453125 : JumpStart); (21.9166666666667 : 65.2612939453125 : JumpEnd); (20.9583333333333 : 65.2612939453125 : JumpStart); (20.7916666666667 : 65.2612939453125 : JumpEnd); (20.7708333333333 : 65.2612939453125 : JumpStart); (20.6041666666667 : 65.2612939453125 : JumpEnd); (20.3958333333333 : 65.2612939453125 : JumpStart); (20.2291666666667 : 65.2612939453125 : JumpEnd); (20 : 65.2612939453125); (20 : 69.9294254557292); (17.6145833333333 : 69.9294254557292 : JumpStart); (17.4479166666667 : 69.9294254557292 : JumpEnd); (17.4375 : 69.9294254557292); (17.4375 : 66.9198225911458); (16.3489578333333 : 66.9198225911458 : JumpStart); (16.1822911666667 : 66.9198225911458 : JumpEnd); (15.996092375 : 66.9198225911458); (15.996092375 : 68.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/EntregasCuenta/EntregasCuenta_FACTURA" />
+      <nodes>
+        <classShapeMoniker Id="6096b6f9-5a70-4184-91e5-97f59c8850e0" />
+        <classShapeMoniker Id="2706c208-1d6e-456d-baa4-04897a97080a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3a154776-8dbb-4b0d-8f24-de0721f14565" absoluteBounds="17.875, 64, 2, 4.8761417643229095">
+      <DataClassMoniker Name="/CMLinqDataContext/RECIBO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cd5d71df-ef12-4569-bfbd-8c60e9a8688a" absoluteBounds="17.89, 64.46, 1.9700000000000002, 4.3161417643229161" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(24 : 65.3252791341146); (23.8332303949779 : 65.3335759943471 : JumpStart); (23.6667696050221 : 65.341857490896 : JumpEnd); (22.0832303949779 : 65.4206392538957 : JumpStart); (21.9167696050221 : 65.4289207504446 : JumpEnd); (20.7707303949779 : 65.4859366985572 : JumpStart); (20.6042696050221 : 65.4942181951061 : JumpEnd); (19.875 : 65.5304996744792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/EntregasCuenta/EntregasCuenta_RECIBO" />
+      <nodes>
+        <classShapeMoniker Id="6096b6f9-5a70-4184-91e5-97f59c8850e0" />
+        <classShapeMoniker Id="3a154776-8dbb-4b0d-8f24-de0721f14565" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.00662682211539 : 59.5); (8.00662682211539 : 59.1875); (8.54166666666667 : 59.1875 : JumpStart); (8.70833333333333 : 59.1875 : JumpEnd); (8.71875 : 59.1875); (8.71875 : 66.3130721028646); (8.88541666666667 : 66.3130721028646 : JumpStart); (9.27083333333333 : 66.3130721028646 : JumpEnd); (11.5416666666667 : 66.3130721028646 : JumpStart); (11.7083333333333 : 66.3130721028646 : JumpEnd); (11.8229166666667 : 66.3130721028646 : JumpStart); (12.1145833333333 : 66.3130721028646 : JumpEnd); (14.3229166666667 : 66.3130721028646 : JumpStart); (14.6458333333333 : 66.3130721028646 : JumpEnd); (14.6666666666667 : 66.3130721028646 : JumpStart); (14.8333333333333 : 66.3130721028646 : JumpEnd); (17.4479166666667 : 66.3130721028646 : JumpStart); (17.6145833333333 : 66.3130721028646 : JumpEnd); (17.6666666666667 : 66.3130721028646 : JumpStart); (17.8333333333333 : 66.3130721028646 : JumpEnd); (17.875 : 66.3130721028646)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_RECIBO" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="3a154776-8dbb-4b0d-8f24-de0721f14565" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 71.5079636527303); (3 : 71.5079636527303); (3 : 68.8125); (3.04166666666667 : 68.8125 : JumpStart); (3.20833333333333 : 68.8125 : JumpEnd); (7.41666666666667 : 68.8125 : JumpStart); (7.58333333333333 : 68.8125 : JumpEnd); (7.68229266666667 : 68.8125 : JumpStart); (7.84895933333333 : 68.8125 : JumpEnd); (9.0625 : 68.8125); (9.0625 : 66.8125); (9.10416666666667 : 66.8125 : JumpStart); (9.27083333333333 : 66.8125 : JumpEnd); (11.75 : 66.8125); (11.75 : 68.7697371419271); (11.8229166666667 : 68.7697371419271 : JumpStart); (11.9895833333333 : 68.7697371419271 : JumpEnd); (14.4791666666667 : 68.7697371419271 : JumpStart); (14.6458333333333 : 68.7697371419271 : JumpEnd); (14.6666666666667 : 68.7697371419271 : JumpStart); (14.8333333333333 : 68.7697371419271 : JumpEnd); (15.21875 : 68.7697371419271); (15.21875 : 68.3125); (17.4479166666667 : 68.3125 : JumpStart); (17.7083333333333 : 68.3125 : JumpEnd); (17.75 : 68.3125); (17.75 : 69.0011417643229); (18.875 : 69.0011417643229); (18.875 : 68.8761417643229)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/FORMASPAGO/FORMASPAGO_RECIBO" />
+      <nodes>
+        <classShapeMoniker Id="520993d5-de59-4c20-a87f-48b8bdad7e1d" />
+        <classShapeMoniker Id="3a154776-8dbb-4b0d-8f24-de0721f14565" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 59.765622875); (6 : 59.765622875); (6 : 59.125); (7.7644568661859 : 59.125 : JumpStart); (7.93112353285256 : 59.125 : JumpEnd); (8.54166666666667 : 59.125 : JumpStart); (8.70833333333333 : 59.125 : JumpEnd); (8.77320512820515 : 59.125 : JumpStart); (8.95833333333333 : 59.125 : JumpEnd); (9.03125 : 59.125); (9.03125 : 65.0613631184896); (9.72358974358975 : 65.0613631184896 : JumpStart); (9.89025641025641 : 65.0613631184896 : JumpEnd); (10.1666666666667 : 65.0613631184896 : JumpStart); (10.3333333333333 : 65.0613631184896 : JumpEnd); (11.5416666666667 : 65.0613631184896 : JumpStart); (11.7083333333333 : 65.0613631184896 : JumpEnd); (12.125 : 65.0613631184896); (12.125 : 63.25); (14.4791666666667 : 63.25 : JumpStart); (14.6458333333333 : 63.25 : JumpEnd); (14.6666666666667 : 63.25 : JumpStart); (14.8333333333333 : 63.25 : JumpEnd); (15.03125 : 63.25); (15.03125 : 61.3125); (17.4375 : 61.3125); (17.4375 : 63.75); (18.875 : 63.75); (18.875 : 64)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/EMPRESA/EMPRESA_RECIBO" />
+      <nodes>
+        <classShapeMoniker Id="8f3c233a-8e40-4b1b-8a76-7c6b855a73e0" />
+        <classShapeMoniker Id="3a154776-8dbb-4b0d-8f24-de0721f14565" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="50a84c21-8cdf-4dbf-9170-3eb661297c25" absoluteBounds="46.25, 47, 2, 4.8761417643229166">
+      <DataClassMoniker Name="/CMLinqDataContext/RecetasXML" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9b3e3a99-c691-4c22-a0b6-7f6a0271f857" absoluteBounds="46.265, 47.46, 1.9700000000000002, 4.3161417643229161" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(17.25 : 51.3276056610389); (17.7916666666667 : 51.3276056610389 : JumpStart); (17.9583333333333 : 51.3276056610389 : JumpEnd); (46.25 : 51.3276056610389)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MEDICO/MEDICO_RecetasXML" />
+      <nodes>
+        <classShapeMoniker Id="26912abf-0e2a-4dcf-8ffd-c1c37f6305c9" />
+        <classShapeMoniker Id="50a84c21-8cdf-4dbf-9170-3eb661297c25" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.781252 : 61.625); (16.781252 : 60.5822371419271); (17.3541666666667 : 60.5822371419271 : JumpStart); (17.5208333333333 : 60.5822371419271 : JumpEnd); (17.5625 : 60.5822371419271); (17.5625 : 48.75); (17.8541666666667 : 48.75 : JumpStart); (18.0208333333333 : 48.75 : JumpEnd); (26.0416666666667 : 48.75 : JumpStart); (26.2083333333333 : 48.75 : JumpEnd); (45.875 : 48.75); (45.875 : 49.423668901483); (46.25 : 49.423668901483)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/RECETA/RECETA_RecetasXML" />
+      <nodes>
+        <classShapeMoniker Id="8f91b52d-1dac-4037-baa9-974127e46861" />
+        <classShapeMoniker Id="50a84c21-8cdf-4dbf-9170-3eb661297c25" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="405ed52a-b341-4466-acd6-926f57a71189" absoluteBounds="50.5, 45.375, 2, 1.589195149739588">
+      <DataClassMoniker Name="/CMLinqDataContext/HORARIOS_MEDICOS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0c9a0006-c3f2-4437-976e-3b6a604c5a77" absoluteBounds="50.515, 45.835, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(16.25 : 50.25); (16.25 : 49.0660424804688); (17.9375 : 49.0660424804688); (17.9375 : 45.1875); (46.9375 : 45.1875); (46.9375 : 45.4016951497396); (50.40625 : 45.4016951497396); (50.40625 : 46.1695975748698); (50.5 : 46.1695975748698)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MEDICO/MEDICO_HORARIOS_MEDICOS" />
+      <nodes>
+        <classShapeMoniker Id="26912abf-0e2a-4dcf-8ffd-c1c37f6305c9" />
+        <classShapeMoniker Id="405ed52a-b341-4466-acd6-926f57a71189" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="70b9ba1f-8017-4bb1-825c-bd5011832249" absoluteBounds="3.75, 44.25, 2, 1.7535424804687523">
+      <DataClassMoniker Name="/CMLinqDataContext/Bonos" />
+      <nestedChildShapes>
+        <elementListCompartment Id="47c23096-2bf5-4baf-967d-9ab40b60bd81" absoluteBounds="3.7649999999999997, 44.71, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(15.72656025 : 68.375); (15.72656025 : 67.0474471028646); (14.8333333333333 : 67.0474471028646 : JumpStart); (14.6666666666667 : 67.0474471028646 : JumpEnd); (14.65625 : 67.0474471028646); (14.65625 : 43.75); (13.5833333333333 : 43.75 : JumpStart); (13.4166666666667 : 43.75 : JumpEnd); (9.23958333333333 : 43.75 : JumpStart); (9.07291666666667 : 43.75 : JumpEnd); (6 : 43.75); (6 : 45.1267712402344); (5.75 : 45.1267712402344)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/FACTURA/FACTURA_Bonos" />
+      <nodes>
+        <classShapeMoniker Id="2706c208-1d6e-456d-baa4-04897a97080a" />
+        <classShapeMoniker Id="70b9ba1f-8017-4bb1-825c-bd5011832249" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.53076823076923 : 59.5); (6.15625 : 59.1254817692308); (6.15625 : 45.1267712402344); (5.75 : 45.1267712402344)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_Bonos" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="70b9ba1f-8017-4bb1-825c-bd5011832249" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ac328707-cb86-41f9-9be6-d967606fbe6b" absoluteBounds="48, 45.5, 2, 1.589195149739588">
+      <DataClassMoniker Name="/CMLinqDataContext/Sesiones" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3cb6c6c3-4533-4cb4-817d-f46ffc392d16" absoluteBounds="48.015, 45.96, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.75 : 46.0035424804688); (4.75 : 46.9109318033854); (9.07291666666667 : 46.9109318033854 : JumpStart); (9.23958333333333 : 46.9109318033854 : JumpEnd); (17.375 : 46.9109318033854); (17.375 : 47.5822371419271); (17.6666666666667 : 47.5822371419271 : JumpStart); (17.8333333333333 : 47.5822371419271 : JumpEnd); (17.8541666666667 : 47.5822371419271 : JumpStart); (18.0208333333333 : 47.5822371419271 : JumpEnd); (46 : 47.5822371419271); (46 : 46.2187505); (48 : 46.2187505)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/Bonos/Bonos_Sesiones" />
+      <nodes>
+        <classShapeMoniker Id="70b9ba1f-8017-4bb1-825c-bd5011832249" />
+        <classShapeMoniker Id="ac328707-cb86-41f9-9be6-d967606fbe6b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(42.5 : 67.0272025553385); (42.6666666666667 : 67.0272025553385 : JumpStart); (42.8333333333333 : 67.0272025553385 : JumpEnd); (42.9166666666667 : 67.0272025553385 : JumpStart); (43.0833333333333 : 67.0272025553385 : JumpEnd); (49.75 : 67.0272025553385); (49.75 : 47.0891951497396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/CITA/CITA_Sesiones" />
+      <nodes>
+        <classShapeMoniker Id="0b006b24-3f40-452c-ae47-15ad8399e488" />
+        <classShapeMoniker Id="ac328707-cb86-41f9-9be6-d967606fbe6b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="afde49a5-1886-4ba3-bf92-e03554b55378" absoluteBounds="85.875, 38.875, 2, 2.575279134114588">
+      <DataClassMoniker Name="/CMLinqDataContext/ANALITICAS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e25ca7f9-474e-44d4-bef6-e83b3d223d4b" absoluteBounds="85.89, 39.335, 1.9700000000000002, 2.015279134114583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.48153846153846 : 59.5); (8.56607443490112 : 59.4154640266373 : JumpStart); (8.68392556509888 : 59.2976128964396 : JumpEnd); (8.81607443490112 : 59.1654640266374 : JumpStart); (8.93392556509888 : 59.0476128964396 : JumpEnd); (9.15625 : 58.8252884615385); (9.15625 : 40.0937505); (85.875 : 40.0937505)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_ANALITICAS" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="afde49a5-1886-4ba3-bf92-e03554b55378" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(34.01562625 : 94.125); (34.01562625 : 40.1626395670573); (85.875 : 40.1626395670573)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/CONCEPTOSFRA/CONCEPTOSFRA_ANALITICAS" />
+      <nodes>
+        <classShapeMoniker Id="775ebba5-a950-4acf-9f31-c8772aeac6a0" />
+        <classShapeMoniker Id="afde49a5-1886-4ba3-bf92-e03554b55378" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c7291611-6e40-4494-befc-46086c1fe83c" absoluteBounds="85.125, 69.25, 2, 4.0544051106770667">
+      <DataClassMoniker Name="/CMLinqDataContext/AUDIOMETRIAS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="24068c4c-da49-4cb9-84a7-c0f351587dbf" absoluteBounds="85.14, 69.71, 1.9700000000000002, 3.494405110677083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 62.5036562636544); (8.66666666666667 : 62.5036562636544 : JumpStart); (8.83333333333333 : 62.5036562636544 : JumpEnd); (8.88541666666667 : 62.5036562636544 : JumpStart); (9.08333333333333 : 62.5036562636544 : JumpEnd); (9.09375 : 62.5036562636544); (9.09375 : 66.4536971028646); (9.10416666666667 : 66.4536971028646 : JumpStart); (9.27083333333333 : 66.4536971028646 : JumpEnd); (11.8229166666667 : 66.4536971028646 : JumpStart); (11.9895833333333 : 66.4536971028646 : JumpEnd); (14.3229166666667 : 66.4536971028646 : JumpStart); (14.6458333333333 : 66.4536971028646 : JumpEnd); (14.6666666666667 : 66.4536971028646 : JumpStart); (14.8333333333333 : 66.4536971028646 : JumpEnd); (16.1822911666667 : 66.4536971028646 : JumpStart); (16.3489578333333 : 66.4536971028646 : JumpEnd); (17.59375 : 66.4536971028646); (17.59375 : 69.0636417643229); (17.6041666666667 : 69.0636417643229 : JumpStart); (17.7708333333333 : 69.0636417643229 : JumpEnd); (19.9166666666667 : 69.0636417643229 : JumpStart); (20.0833333333333 : 69.0636417643229 : JumpEnd); (20.5416666666667 : 69.0636417643229 : JumpStart); (20.7083333333333 : 69.0636417643229 : JumpEnd); (20.8125 : 69.0636417643229); (20.8125 : 65.6377791341146); (21.9166666666667 : 65.6377791341146 : JumpStart); (22.0833333333333 : 65.6377791341146 : JumpEnd); (23.6666666666667 : 65.6377791341146 : JumpStart); (23.8333333333333 : 65.6377791341146 : JumpEnd); (25.9791666666667 : 65.6377791341146 : JumpStart); (26.1458333333333 : 65.6377791341146 : JumpEnd); (26.1979166666667 : 65.6377791341146 : JumpStart); (26.3645833333333 : 65.6377791341146 : JumpEnd); (26.53125 : 65.6377791341146); (26.53125 : 68.7765730794271); (26.5416666666667 : 68.7765730794271 : JumpStart); (26.7083333333333 : 68.7765730794271 : JumpEnd); (31.8229166666667 : 68.7765730794271 : JumpStart); (31.9895833333333 : 68.7765730794271 : JumpEnd); (40.1666666666667 : 68.7765730794271 : JumpStart); (40.4583333333333 : 68.7765730794271 : JumpEnd); (40.8854146666667 : 68.7765730794271 : JumpStart); (41.0520813333333 : 68.7765730794271 : JumpEnd); (41.4166666666667 : 68.7765730794271 : JumpStart); (41.5833333333333 : 68.7765730794271 : JumpEnd); (41.9479186666667 : 68.7765730794271 : JumpStart); (42.1145853333333 : 68.7765730794271 : JumpEnd); (43 : 68.7765730794271); (43 : 66.5544051106771); (57.1666666666667 : 66.5544051106771 : JumpStart); (57.3333333333333 : 66.5544051106771 : JumpEnd); (59.6666666666667 : 66.5544051106771 : JumpStart); (59.8333333333333 : 66.5544051106771 : JumpEnd); (78.4791661666667 : 66.5544051106771 : JumpStart); (78.6458328333333 : 66.5544051106771 : JumpEnd); (86.125 : 66.5544051106771); (86.125 : 69.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_AUDIOMETRIAS" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="c7291611-6e40-4494-befc-46086c1fe83c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7a8964a5-8d9c-4c02-8f5d-afdeb0269dc6" absoluteBounds="76.625, 90.25, 2, 2.0822371419270667">
+      <DataClassMoniker Name="/CMLinqDataContext/DERIVACIONES" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3bc38897-f9e4-46ce-95ec-5d6b32816916" absoluteBounds="76.64, 90.71, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(57.25 : 59.5683211263021); (57.25 : 90.7393072854818); (76.625 : 90.7393072854818)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/DERIVACIONES_DESTINO/DERIVACIONES_DESTINO_DERIVACIONES" />
+      <nodes>
+        <classShapeMoniker Id="23ae9367-c985-49c3-b2ac-6ed54b7b1373" />
+        <classShapeMoniker Id="7a8964a5-8d9c-4c02-8f5d-afdeb0269dc6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.781252 : 54.3044051106771); (16.781252 : 55.375); (17.3541666666667 : 55.375 : JumpStart); (18.0208333333333 : 55.375 : JumpEnd); (26.0416666666667 : 55.375 : JumpStart); (26.2083333333333 : 55.375 : JumpEnd); (35.25 : 55.375); (35.25 : 91.7605004882813); (46.9166666666667 : 91.7605004882813 : JumpStart); (47.0833333333333 : 91.7605004882813 : JumpEnd); (75.9166666666667 : 91.7605004882813 : JumpStart); (76.0833333333333 : 91.7605004882813 : JumpEnd); (76.25 : 91.7605004882813); (76.25 : 91.2911185709635); (76.625 : 91.2911185709635)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MEDICO/MEDICO_DERIVACIONES" />
+      <nodes>
+        <classShapeMoniker Id="26912abf-0e2a-4dcf-8ffd-c1c37f6305c9" />
+        <classShapeMoniker Id="7a8964a5-8d9c-4c02-8f5d-afdeb0269dc6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.765626 : 67.9917830403646); (7.765626 : 70); (9.1875 : 70); (9.1875 : 92.0105004882813); (33.1354141666667 : 92.0105004882813 : JumpStart); (33.3020808333333 : 92.0105004882813 : JumpEnd); (33.4010404166667 : 92.0105004882813 : JumpStart); (33.5677070833333 : 92.0105004882813 : JumpEnd); (34.4635454166667 : 92.0105004882813 : JumpStart); (34.6302120833333 : 92.0105004882813 : JumpEnd); (76 : 92.0105004882813); (76 : 91.2911185709635); (76.625 : 91.2911185709635)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_DERIVACIONES" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="7a8964a5-8d9c-4c02-8f5d-afdeb0269dc6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="abcb9f08-ba16-4657-9f63-b78a1e739802" absoluteBounds="4.5, 65.5, 2, 3.2326684570312381">
+      <DataClassMoniker Name="/CMLinqDataContext/HISTORIALES_REVISIONES" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5d40b880-a2ca-4bb2-9f46-81d1863b150b" absoluteBounds="4.515, 65.96, 1.9700000000000002, 2.67266845703125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.25 : 62.2308601191073); (9.11458333333333 : 62.2308601191073 : JumpStart); (8.88541666666667 : 62.2308601191073 : JumpEnd); (8.8625 : 62.2308601191073); (8.8625 : 68.7764184570313); (7.84895933333333 : 68.7764184570313 : JumpStart); (7.68229266666667 : 68.7764184570313 : JumpEnd); (7.58333333333333 : 68.7764184570313 : JumpStart); (7.41666666666667 : 68.7764184570313 : JumpEnd); (7.05208133333333 : 68.7764184570313 : JumpStart); (6.88541466666667 : 68.7764184570313 : JumpEnd); (5.5 : 68.7764184570313); (5.5 : 68.7326684570312)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/HISTORIALE/HISTORIALE_HISTORIALES_REVISIONES" />
+      <nodes>
+        <classShapeMoniker Id="6020ecf3-27f2-4b87-b202-db417a4760af" />
+        <classShapeMoniker Id="abcb9f08-ba16-4657-9f63-b78a1e739802" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.25 : 52.2499995); (14.25 : 52.2499995); (14.25 : 52.7002791341146); (9.23958333333333 : 52.7002791341146 : JumpStart); (9.07291666666667 : 52.7002791341146 : JumpEnd); (8.8125 : 52.7002791341146); (8.8125 : 58.625); (7.77228691025641 : 58.625 : JumpStart); (7.60562024358975 : 58.625 : JumpEnd); (5.875 : 58.625); (5.875 : 65.125); (5.4999995 : 65.125); (5.4999995 : 65.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MEDICO/MEDICO_HISTORIALES_REVISIONES" />
+      <nodes>
+        <classShapeMoniker Id="26912abf-0e2a-4dcf-8ffd-c1c37f6305c9" />
+        <classShapeMoniker Id="abcb9f08-ba16-4657-9f63-b78a1e739802" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.234374 : 67.9917830403646); (7.234374 : 68.3667830403646); (6.5 : 68.3667830403646)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_HISTORIALES_REVISIONES" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="abcb9f08-ba16-4657-9f63-b78a1e739802" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="cbe056c6-6ab9-46fe-b1dd-c8dbe6f3cff4" absoluteBounds="20.875, 58.375, 2, 1.589195149739588">
+      <DataClassMoniker Name="/CMLinqDataContext/IMAGENES" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c73947d0-4c9b-4c23-ac37-41b4cfb31db9" absoluteBounds="20.89, 58.835, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.68895357692308 : 59.5); (7.68895357692308 : 58.25); (9.07291666666667 : 58.25 : JumpStart); (9.23958333333333 : 58.25 : JumpEnd); (11.5416666666667 : 58.25 : JumpStart); (11.8333333333333 : 58.25 : JumpEnd); (12 : 58.25); (12 : 59.5428898111979); (14.4791666666667 : 59.5428898111979 : JumpStart); (14.6458333333333 : 59.5428898111979 : JumpEnd); (14.6666666666667 : 59.5428898111979 : JumpStart); (14.8333333333333 : 59.5428898111979 : JumpEnd); (15.03125 : 59.5428898111979); (15.03125 : 60.6447371419271); (17.3541666666667 : 60.6447371419271 : JumpStart); (17.5208333333333 : 60.6447371419271 : JumpEnd); (17.625 : 60.6447371419271); (17.625 : 59.0000005); (20.875 : 59.0000005)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_IMAGENES" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="cbe056c6-6ab9-46fe-b1dd-c8dbe6f3cff4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="131b1a93-2c26-40a8-b603-fe4a184470a8" absoluteBounds="23.875, 57.875, 2, 3.2326684570312523">
+      <DataClassMoniker Name="/CMLinqDataContext/PRESUPUESTOS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="211e820c-f45d-4eef-9229-8a23ad505149" absoluteBounds="23.89, 58.335, 1.9700000000000002, 2.67266845703125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.281252 : 58.625); (5.281252 : 58.5625); (8.875 : 58.5625); (8.875 : 60.1748478190104); (8.97916666666667 : 60.1748478190104 : JumpStart); (9.14583333333333 : 60.1748478190104 : JumpEnd); (12 : 60.1748478190104); (12 : 59.9375); (14.4791666666667 : 59.9375 : JumpStart); (14.6458333333333 : 59.9375 : JumpEnd); (15.125 : 59.9375); (15.125 : 60.2697371419271); (17.75 : 60.2697371419271); (17.75 : 59.375); (20.375 : 59.375); (20.375 : 60); (23.5 : 60); (23.5 : 59.9110437856445); (23.875 : 59.9110437856445)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/EMPRESA/EMPRESA_PRESUPUESTOS" />
+      <nodes>
+        <classShapeMoniker Id="8f3c233a-8e40-4b1b-8a76-7c6b855a73e0" />
+        <classShapeMoniker Id="131b1a93-2c26-40a8-b603-fe4a184470a8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 54.0234361103516); (6.25 : 54.0234361103516); (6.25 : 57.3947371419271); (11.875 : 57.3947371419271); (11.875 : 56.875); (14.4791666666667 : 56.875 : JumpStart); (14.6458333333333 : 56.875 : JumpEnd); (15.125 : 56.875); (15.125 : 57.1355004882813); (17.375 : 57.1355004882813); (17.375 : 58.2535424804688); (20.375 : 58.2535424804688); (20.375 : 57.625); (24.875 : 57.625); (24.875 : 57.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/MUTUA/MUTUA_PRESUPUESTOS" />
+      <nodes>
+        <classShapeMoniker Id="67637a16-bda0-46e4-85df-ebc8bc8923b2" />
+        <classShapeMoniker Id="131b1a93-2c26-40a8-b603-fe4a184470a8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.84779019951923 : 59.5); (7.84779019951923 : 59); (8.625 : 59); (8.625 : 60.1748478190104); (8.97916666666667 : 60.1748478190104 : JumpStart); (9.14583333333333 : 60.1748478190104 : JumpEnd); (12.125 : 60.1748478190104); (12.125 : 59.8125); (14.4791666666667 : 59.8125 : JumpStart); (14.6458333333333 : 59.8125 : JumpEnd); (15.09375 : 59.8125); (15.09375 : 60.7697371419271); (17.4375 : 60.7697371419271); (17.4375 : 59.625); (17.6666666666667 : 59.625 : JumpStart); (17.8333333333333 : 59.625 : JumpEnd); (20.2916666666667 : 59.625 : JumpStart); (20.4583333333333 : 59.625 : JumpEnd); (20.625 : 59.625); (20.625 : 60.03125); (23.25 : 60.03125); (23.25 : 58.8617698928223); (23.875 : 58.8617698928223)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PACIENTE/PACIENTE_PRESUPUESTOS" />
+      <nodes>
+        <classShapeMoniker Id="e1ebd0c1-c0d4-4681-aba0-e55551c4cf26" />
+        <classShapeMoniker Id="131b1a93-2c26-40a8-b603-fe4a184470a8" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="20a87d76-7a80-4d22-baef-473a989ba4de" absoluteBounds="1.5, 53, 2.125, 1.096153157552088">
+      <DataClassMoniker Name="/CMLinqDataContext/VariablesGlobale" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6c349efb-f1b1-48c4-b83d-5a8cf0e78508" absoluteBounds="1.515, 53.46, 2.0949999999999998, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2f680ad0-2909-4cb5-af40-e11b6f76ac53" absoluteBounds="77.5, 62.5, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/CMLinqDataContext/LPLANTILLAANALITICAS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ccf5e374-e380-4b15-b5ca-b86b4c2ae079" absoluteBounds="77.515, 62.96, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(37.5 : 90.25); (37.875 : 89.875); (78.5624995 : 89.875); (78.5624995 : 63.9248478190104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PLANTILLAANALITICA/PLANTILLAANALITICA_LPLANTILLAANALITICAS" />
+      <nodes>
+        <classShapeMoniker Id="50caf41c-19cc-4adf-9cca-1ca2e93e4109" />
+        <classShapeMoniker Id="2f680ad0-2909-4cb5-af40-e11b6f76ac53" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="57a93ca7-cb97-497e-95aa-0db227c211bc" absoluteBounds="69.625, 73.75, 2, 1.26050048828125">
+      <DataClassMoniker Name="/CMLinqDataContext/PLANTILLAANALITICAS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="533de3cc-6a75-49ae-8728-2d43da45581c" absoluteBounds="69.64, 74.21, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(33.48437375 : 94.125); (33.48437375 : 74.3802502441406); (40.2916666666667 : 74.3802502441406 : JumpStart); (40.4583333333333 : 74.3802502441406 : JumpEnd); (69.625 : 74.3802502441406)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/CONCEPTOSFRA/CONCEPTOSFRA_PLANTILLAANALITICAS" />
+      <nodes>
+        <classShapeMoniker Id="775ebba5-a950-4acf-9f31-c8772aeac6a0" />
+        <classShapeMoniker Id="57a93ca7-cb97-497e-95aa-0db227c211bc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(70.625 : 73.75); (70.625 : 63.2124239095052); (77.5 : 63.2124239095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CMLinqDataContext/PLANTILLAANALITICAS/PLANTILLAANALITICAS_LPLANTILLAANALITICAS" />
+      <nodes>
+        <classShapeMoniker Id="57a93ca7-cb97-497e-95aa-0db227c211bc" />
+        <classShapeMoniker Id="2f680ad0-2909-4cb5-af40-e11b6f76ac53" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,391 @@
+<?xml version="1.0" standalone="yes"?>
+<ROWDATA>
+  <TABLA Name="Derivaciones_Destinos">
+    <ROW Campo="Código" Posicion="0" Visible="TRUE" Ancho="60" Tipo="1" FieldName="CODIGO" PosicionOrden="0" />
+    <ROW Campo="Nombre" Posicion="1" Visible="TRUE" Ancho="228" Tipo="0" FieldName="NOMBRE" PosicionOrden="1" />
+  </TABLA>
+  <TABLA Name="Proveedores">
+    <ROW Campo="Código" Posicion="0" Visible="TRUE" Ancho="60" Tipo="1" FieldName="CPROVEEDOR" PosicionOrden="0" />
+    <ROW Campo="Persona de contacto" Posicion="-1" Visible="FALSE" Ancho="167" Tipo="0" FieldName="PERSONACON" PosicionOrden="-1" />
+    <ROW Campo="Nombre" Posicion="1" Visible="TRUE" Ancho="228" Tipo="0" FieldName="NOMBRE" PosicionOrden="1" />
+    <ROW Campo="Tlfno 1." Posicion="2" Visible="TRUE" Ancho="80" Tipo="0" FieldName="TLFNO1" PosicionOrden="-1" />
+    <ROW Campo="CIF" Posicion="-1" Visible="FALSE" Ancho="80" Tipo="0" FieldName="CIF" PosicionOrden="-1" />
+    <ROW Campo="CP" Posicion="-1" Visible="FALSE" Ancho="80" Tipo="0" FieldName="CP" PosicionOrden="-1" />
+    <ROW Campo="Dirección" Posicion="-1" Visible="FALSE" Ancho="160" Tipo="0" FieldName="DIRECCION" PosicionOrden="-1" />
+    <ROW Campo="Fax" Posicion="-1" Visible="FALSE" Ancho="80" Tipo="0" FieldName="FAX" PosicionOrden="-1" />
+    <ROW Campo="Mail" Posicion="-1" Visible="FALSE" Ancho="120" Tipo="0" FieldName="MAIL" PosicionOrden="-1" />
+    <ROW Campo="Notas" Posicion="-1" Visible="FALSE" Ancho="120" Tipo="0" FieldName="NOTAS" PosicionOrden="-1" />
+    <ROW Campo="Población" Posicion="-1" Visible="FALSE" Ancho="120" Tipo="0" FieldName="POBLACION" PosicionOrden="-1" />
+    <ROW Campo="Provincia" Posicion="-1" Visible="FALSE" Ancho="80" Tipo="0" FieldName="PROVINCIA" PosicionOrden="-1" />
+    <ROW Campo="Tlfno 2." Posicion="-1" Visible="FALSE" Ancho="80" Tipo="0" FieldName="TLFNO2" PosicionOrden="-1" />
+    <ROW Campo="Web" Posicion="-1" Visible="FALSE" Ancho="120" Tipo="0" FieldName="WEB" PosicionOrden="-1" />
+  </TABLA>
+  <TABLA Name="Mutuas">
+    <ROW Campo="Cód. Mutua" Posicion="0" Visible="TRUE" Ancho="80" Tipo="1" FieldName="CMUTUA" PosicionOrden="0" />
+    <ROW Campo="Especialidad" Posicion="2" Visible="TRUE" Ancho="145" Tipo="0" FieldName="ESPECIALIDAD" PosicionOrden="2" />
+    <ROW Campo="Tlfno. 1" Posicion="3" Visible="TRUE" Ancho="83" Tipo="0" FieldName="TLFNO1" PosicionOrden="-1" />
+    <ROW Campo="Nombre" Posicion="1" Visible="TRUE" Ancho="221" Tipo="0" FieldName="NOMBRE" PosicionOrden="1" />
+    <ROW Campo="C.P." Posicion="-1" Visible="FALSE" Ancho="80" Tipo="0" FieldName="CP" PosicionOrden="-1" />
+    <ROW Campo="CIF" Posicion="-1" Visible="FALSE" Ancho="80" Tipo="0" FieldName="CIF" PosicionOrden="-1" />
+    <ROW Campo="Dirección" Posicion="-1" Visible="FALSE" Ancho="120" Tipo="0" FieldName="DIRECCION" PosicionOrden="-1" />
+    <ROW Campo="Fax" Posicion="-1" Visible="FALSE" Ancho="80" Tipo="0" FieldName="FAX" PosicionOrden="-1" />
+    <ROW Campo="Mail" Posicion="-1" Visible="FALSE" Ancho="120" Tipo="0" FieldName="MAIL" PosicionOrden="-1" />
+    <ROW Campo="Notas" Posicion="-1" Visible="FALSE" Ancho="120" Tipo="0" FieldName="NOTAS" PosicionOrden="-1" />
+    <ROW Campo="Página web" Posicion="-1" Visible="FALSE" Ancho="120" Tipo="0" FieldName="WEB" PosicionOrden="-1" />
+    <ROW Campo="Parte Láser" Posicion="-1" Visible="FALSE" Ancho="80" Tipo="0" FieldName="PARTELSR" PosicionOrden="-1" />
+    <ROW Campo="Parte Matricial" Posicion="-1" Visible="FALSE" Ancho="80" Tipo="0" FieldName="PARTEMTR" PosicionOrden="-1" />
+    <ROW Campo="Persona contacto" Posicion="-1" Visible="FALSE" Ancho="120" Tipo="0" FieldName="PERSONACON" PosicionOrden="-1" />
+    <ROW Campo="Población" Posicion="-1" Visible="FALSE" Ancho="80" Tipo="0" FieldName="POBLACION" PosicionOrden="-1" />
+    <ROW Campo="Provincia" Posicion="-1" Visible="FALSE" Ancho="80" Tipo="0" FieldName="PROVINCIA" PosicionOrden="-1" />
+    <ROW Campo="Tlfno. 2" Posicion="-1" Visible="FALSE" Ancho="63" Tipo="0" FieldName="TLFNO2" PosicionOrden="-1" />
+  </TABLA>
+  <TABLA Name="Medicamentos">
+    <ROW Campo="Código" Posicion="0" Visible="TRUE" Ancho="60" Tipo="0" FieldName="CMEDICAMENTO" PosicionOrden="0" />
+    <ROW Campo="Descripción" Posicion="1" Visible="TRUE" Ancho="266" Tipo="0" FieldName="DESCRIPCION" PosicionOrden="1" />
+    <ROW Campo="Indicación principal" Posicion="2" Visible="TRUE" Ancho="202" Tipo="0" FieldName="INDICACION" PosicionOrden="2" />
+    <ROW Campo="Cantidades" Posicion="-1" Visible="FALSE" Ancho="60" Tipo="0" FieldName="CANTIDADES" PosicionOrden="-1" />
+    <ROW Campo="Posología habitual" Posicion="-1" Visible="FALSE" Ancho="120" Tipo="0" FieldName="POSOLOGIA" PosicionOrden="-1" />
+  </TABLA>
+  <TABLA Name="Articulos">
+    <ROW Campo="Código" Posicion="0" Visible="TRUE" Ancho="60" Tipo="1" FieldName="CARTICULO" PosicionOrden="0" />
+    <ROW Campo="Descripción" Posicion="1" Visible="TRUE" Ancho="259" Tipo="0" FieldName="DESCRIPCION" PosicionOrden="1" />
+    <ROW Campo="Stock" Posicion="2" Visible="TRUE" Ancho="61" Tipo="1" FieldName="STOCK" PosicionOrden="-1" />
+    <ROW Campo="Cód. Proveedor" Posicion="-1" Visible="FALSE" Ancho="60" Tipo="1" FieldName="REFPROVEEDOR" PosicionOrden="-1" />
+    <ROW Campo="Fecha" Posicion="-1" Visible="FALSE" Ancho="80" Tipo="2" FieldName="FECHA" PosicionOrden="-1" />
+    <ROW Campo="Observaciones" Posicion="-1" Visible="FALSE" Ancho="120" Tipo="0" FieldName="NOTAS" PosicionOrden="-1" />
+    <ROW Campo="Stock mínimo" Posicion="-1" Visible="FALSE" Ancho="60" Tipo="1" FieldName="STOCKMIN" PosicionOrden="-1" />
+  </TABLA>
+  <TABLA Name="Facturas">
+    <ROW Campo="Número" Posicion="0" Visible="TRUE" Ancho="100" Tipo="0" FieldName="NUMERO" PosicionOrden="0" />
+    <ROW Campo="Fecha alta" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="2" FieldName="FALTA" PosicionOrden="-1" />
+    <ROW Campo="Fecha baja" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="2" FieldName="FBAJA" PosicionOrden="-1" />
+    <ROW Campo="Fecha accidente" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="2" FieldName="FACCIDENTE" PosicionOrden="-1" />
+    <ROW Campo="Fecha emisión" Posicion="1" Visible="TRUE" Ancho="100" Tipo="2" FieldName="FEMISION" PosicionOrden="1" />
+    <ROW Campo="Paciente" Posicion="2" Visible="TRUE" Ancho="100" Tipo="0" FieldName="PACIENTE" PosicionOrden="2" />
+    <ROW Campo="N Fra." Posicion="-1" Visible="FALSE" Ancho="100" Tipo="1" FieldName="NUMEROFACTURA" PosicionOrden="-1" />
+    <ROW Campo="Cobrada" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="PAGADA" PosicionOrden="-1" />
+    <ROW Campo="Cód. Empresa" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="1" FieldName="REFEMPRESA" PosicionOrden="-1" />
+    <ROW Campo="Cód. Mutua" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="1" FieldName="REFMUTUA" PosicionOrden="-1" />
+    <ROW Campo="Cód. Paciente" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="1" FieldName="REFPACIENTE" PosicionOrden="-1" />
+    <ROW Campo="Diagnóstico" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="DIAGNOSTICO" PosicionOrden="-1" />
+    <ROW Campo="Fecha" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="2" FieldName="FECHA" PosicionOrden="-1" />
+    <ROW Campo="Fecha cobro" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="2" FieldName="FECHACOBRO" PosicionOrden="-1" />
+    <ROW Campo="Fra. Mutua" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="MUTUA" PosicionOrden="-1" />
+    <ROW Campo="Hora" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="2" FieldName="HORA" PosicionOrden="-1" />
+    <ROW Campo="I.R.P.F." Posicion="-1" Visible="FALSE" Ancho="100" Tipo="3" FieldName="IRPF" PosicionOrden="-1" />
+    <ROW Campo="Provincia" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="PROVINCIA" PosicionOrden="-1" />
+    <ROW Campo="Total" Posicion="3" Visible="TRUE" Ancho="100" Tipo="3" FieldName="TOTAL" PosicionOrden="3" />
+    <ROW Campo="Factura para" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="FACTURAR" PosicionOrden="-1" />
+  </TABLA>
+  <TABLA Name="Gastos">
+    <ROW Campo="Cód. Gasto" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="1" FieldName="IDGASTO" PosicionOrden="-1" />
+    <ROW Campo="Fecha" Posicion="0" Visible="TRUE" Ancho="100" Tipo="2" FieldName="FECHA" PosicionOrden="0" />
+    <ROW Campo="Concepto" Posicion="1" Visible="TRUE" Ancho="196" Tipo="0" FieldName="CONCEPTO" PosicionOrden="2" />
+    <ROW Campo="Importe" Posicion="2" Visible="TRUE" Ancho="100" Tipo="3" FieldName="IMPORTE" PosicionOrden="1" />
+  </TABLA>
+  <TABLA Name="Medicos">
+    <ROW Campo="Tlfno." Posicion="3" Visible="TRUE" Ancho="80" Tipo="0" FieldName="TLFNO" PosicionOrden="-1" />
+    <ROW Campo="Código" Posicion="0" Visible="TRUE" Ancho="80" Tipo="1" FieldName="CMEDICO" PosicionOrden="0" />
+    <ROW Campo="Apellido 1" Posicion="2" Visible="TRUE" Ancho="120" Tipo="0" FieldName="APELLIDO1" PosicionOrden="2" />
+    <ROW Campo="Apellido 2" Posicion="4" Visible="TRUE" Ancho="120" Tipo="0" FieldName="APELLIDO2" PosicionOrden="3" />
+    <ROW Campo="C.P." Posicion="-1" Visible="FALSE" Ancho="80" Tipo="0" FieldName="CP" PosicionOrden="-1" />
+    <ROW Campo="DNI" Posicion="-1" Visible="FALSE" Ancho="80" Tipo="0" FieldName="DNI" PosicionOrden="-1" />
+    <ROW Campo="Domicilio" Posicion="-1" Visible="FALSE" Ancho="120" Tipo="0" FieldName="DOMICILIO" PosicionOrden="-1" />
+    <ROW Campo="Localidad" Posicion="-1" Visible="FALSE" Ancho="120" Tipo="0" FieldName="LOCALIDAD" PosicionOrden="-1" />
+    <ROW Campo="Móvil" Posicion="-1" Visible="FALSE" Ancho="138" Tipo="0" FieldName="MOVIL" PosicionOrden="-1" />
+    <ROW Campo="Nombre" Posicion="1" Visible="TRUE" Ancho="161" Tipo="0" FieldName="NOMBRE" PosicionOrden="1" />
+    <ROW Campo="Notas" Posicion="-1" Visible="FALSE" Ancho="120" Tipo="0" FieldName="OBSERVACIONES" PosicionOrden="-1" />
+    <ROW Campo="Provincia" Posicion="-1" Visible="FALSE" Ancho="80" Tipo="0" FieldName="PROVINCIA" PosicionOrden="-1" />
+    <ROW Campo="Especialidad" Posicion="5" Visible="TRUE" Ancho="129" Tipo="0" FieldName="ESPECIALIDAD" PosicionOrden="4" />
+    <ROW Campo="N. Colegiado" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="COLEGIADO" PosicionOrden="-1" />
+  </TABLA>
+  <TABLA Name="Usuarios">
+    <ROW Campo="Usuario" Posicion="0" Visible="TRUE" Ancho="100" Tipo="0" FieldName="USUARIO" PosicionOrden="1" />
+    <ROW Campo="Contraseña" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="CONTRASENA" PosicionOrden="-1" />
+    <ROW Campo="Nivel" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="NIVEL" PosicionOrden="-1" />
+    <ROW Campo="Código" Posicion="-1" Visible="FALSE" Ancho="64" Tipo="1" FieldName="CODIGO" PosicionOrden="0" />
+    <ROW Campo="Nombre completo" Posicion="1" Visible="TRUE" Ancho="279" Tipo="0" FieldName="NOMBRECOMPLETO" PosicionOrden="-1" />
+    <ROW Campo="Administrador" Posicion="2" Visible="TRUE" Ancho="71" Tipo="0" FieldName="ADMINISTRADOR" PosicionOrden="-1" />
+  </TABLA>
+  <TABLA Name="Alarmas">
+    <ROW Campo="Alarma" Posicion="1" Visible="TRUE" Ancho="258" Tipo="0" FieldName="ALARMA" PosicionOrden="1" />
+    <ROW Campo="Descripción" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="DESCRIPCION" PosicionOrden="-1" />
+    <ROW Campo="Código" Posicion="0" Visible="TRUE" Ancho="44" Tipo="1" FieldName="CALARMA" PosicionOrden="2" />
+    <ROW Campo="Nivel de atención" Posicion="2" Visible="TRUE" Ancho="100" Tipo="0" FieldName="NIVEL" PosicionOrden="0" />
+  </TABLA>
+  <TABLA Name="Plantillas">
+    <ROW Campo="Código" Posicion="0" Visible="TRUE" Ancho="100" Tipo="1" FieldName="CODIGO" PosicionOrden="0" />
+    <ROW Campo="Texto" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="TEXTO" PosicionOrden="-1" />
+    <ROW Campo="Descripción" Posicion="1" Visible="TRUE" Ancho="297" Tipo="0" FieldName="DESCRIPCION" PosicionOrden="1" />
+    <ROW Campo="Sección" Posicion="2" Visible="TRUE" Ancho="114" Tipo="0" FieldName="SECCION" PosicionOrden="2" />
+  </TABLA>
+  <TABLA Name="Partes">
+    <ROW Campo="Fecha del parte" Posicion="0" Visible="TRUE" Ancho="115" Tipo="2" FieldName="FECHA" PosicionOrden="1" />
+    <ROW Campo="Paciente" Posicion="1" Visible="TRUE" Ancho="100" Tipo="0" FieldName="PACIENTE" PosicionOrden="4" />
+    <ROW Campo="Mutua" Posicion="3" Visible="TRUE" Ancho="153" Tipo="0" FieldName="MUTUA" PosicionOrden="2" />
+    <ROW Campo="N Fra." Posicion="4" Visible="TRUE" Ancho="55" Tipo="1" FieldName="REFFRA" PosicionOrden="-1" />
+    <ROW Campo="Tipo" Posicion="2" Visible="TRUE" Ancho="72" Tipo="0" FieldName="TIPO" PosicionOrden="0" />
+    <ROW Campo="Actividad empresarial" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="ACTIVIDAD" PosicionOrden="-1" />
+    <ROW Campo="CIF" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="ECIF" PosicionOrden="-1" />
+    <ROW Campo="CNAE" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="CNAE" PosicionOrden="-1" />
+    <ROW Campo="Cód .Empresa" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="1" FieldName="REFEMPRESA" PosicionOrden="-1" />
+    <ROW Campo="Cód. Mutua" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="1" FieldName="REFMUTUA" PosicionOrden="-1" />
+    <ROW Campo="Cód. Paciente" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="1" FieldName="REFPACIENTE" PosicionOrden="-1" />
+    <ROW Campo="Código" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="1" FieldName="IDPARTE" PosicionOrden="-1" />
+    <ROW Campo="CP (empresa)" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="ECP" PosicionOrden="-1" />
+    <ROW Campo="CP (paciente)" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="PCP" PosicionOrden="-1" />
+    <ROW Campo="DNI" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="DNI" PosicionOrden="-1" />
+    <ROW Campo="Domicilio (empresa)" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="EDOMICILIO" PosicionOrden="-1" />
+    <ROW Campo="Domicilio (paciente)" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="PDOMICILIO" PosicionOrden="-1" />
+    <ROW Campo="Empresa" Posicion="5" Visible="TRUE" Ancho="121" Tipo="0" FieldName="EMPRESA" PosicionOrden="3" />
+    <ROW Campo="Localidad (empresa)" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="ELOCALIDAD" PosicionOrden="-1" />
+    <ROW Campo="Localidad (paciente)" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="PLOCALIDAD" PosicionOrden="-1" />
+    <ROW Campo="N Colegiado" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="COLEGIADO" PosicionOrden="-1" />
+    <ROW Campo="N SS" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="NSS" PosicionOrden="-1" />
+    <ROW Campo="NSS Empresa" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="ENSS" PosicionOrden="-1" />
+    <ROW Campo="Provincia (empresa)" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="EPROVINCIA" PosicionOrden="-1" />
+    <ROW Campo="Provincia (paciente)" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="PPROVINCIA" PosicionOrden="-1" />
+    <ROW Campo="Puesto de trabajo" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="PUESTO" PosicionOrden="-1" />
+    <ROW Campo="Regimen SS" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="REGIMEN" PosicionOrden="-1" />
+    <ROW Campo="Situación laboral" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="SITUACION" PosicionOrden="-1" />
+    <ROW Campo="Tarjeta" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="TARJETA" PosicionOrden="-1" />
+    <ROW Campo="Tlfno (empresa)" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="ETLFNO" PosicionOrden="-1" />
+    <ROW Campo="Tlfno. (paciente)" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="PTLFNO" PosicionOrden="-1" />
+  </TABLA>
+  <TABLA Name="Pacientes">
+    <ROW Campo="Foto" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="-1" FieldName="FOTO" PosicionOrden="-1" />
+    <ROW Campo="Observaciones" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="OBSERVACIONES" PosicionOrden="-1" />
+    <ROW Campo="Código" Posicion="0" Visible="TRUE" Ancho="52" Tipo="1" FieldName="CPACIENTE" PosicionOrden="0" />
+    <ROW Campo="Apellido 1" Posicion="1" Visible="TRUE" Ancho="100" Tipo="0" FieldName="APELLIDO1" PosicionOrden="1" />
+    <ROW Campo="Apellido 2" Posicion="2" Visible="TRUE" Ancho="100" Tipo="0" FieldName="APELLIDO2" PosicionOrden="2" />
+    <ROW Campo="Nombre" Posicion="3" Visible="TRUE" Ancho="100" Tipo="0" FieldName="NOMBRE" PosicionOrden="3" />
+    <ROW Campo="DNI" Posicion="4" Visible="TRUE" Ancho="100" Tipo="0" FieldName="DNI" PosicionOrden="4" />
+    <ROW Campo="Domicilio" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="DOMICILIO" PosicionOrden="-1" />
+    <ROW Campo="C.P." Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="CP" PosicionOrden="-1" />
+    <ROW Campo="Localidad" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="LOCALIDAD" PosicionOrden="-1" />
+    <ROW Campo="Provincia" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="PROVINCIA" PosicionOrden="6" />
+    <ROW Campo="Profesión" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="PROFESION" PosicionOrden="-1" />
+    <ROW Campo="Régimen" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="REGIMEN" PosicionOrden="7" />
+    <ROW Campo="N. S.S." Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="NSS" PosicionOrden="-1" />
+    <ROW Campo="Tlfno." Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="TLFNO" PosicionOrden="-1" />
+    <ROW Campo="Móvil" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="MOVIL" PosicionOrden="-1" />
+    <ROW Campo="Fecha nacimiento" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="2" FieldName="FECHAN" PosicionOrden="-1" />
+    <ROW Campo="Cód. Empresa" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="1" FieldName="REFEMPRESA" PosicionOrden="-1" />
+    <ROW Campo="Cód. Mutua" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="1" FieldName="REFMUTUA" PosicionOrden="-1" />
+    <ROW Campo="Tarjeta sanitaria" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="TARJETASANITARIA" PosicionOrden="-1" />
+    <ROW Campo="Puesto" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="PUESTO" PosicionOrden="-1" />
+    <ROW Campo="Sexo" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="SEXO" PosicionOrden="-1" />
+    <ROW Campo="Fecha de alta" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="2" FieldName="FECHAALTA" PosicionOrden="5" />
+    <ROW Campo="Pago banco" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="PAGOBANCO" PosicionOrden="-1" />
+    <ROW Campo="Entidad" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="ENTIDAD" PosicionOrden="-1" />
+    <ROW Campo="Oficina" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="OFICINA" PosicionOrden="-1" />
+    <ROW Campo="DC" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="DC" PosicionOrden="-1" />
+    <ROW Campo="Titular" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="TITULAR" PosicionOrden="-1" />
+    <ROW Campo="Cuenta" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="CUENTA" PosicionOrden="-1" />
+    <ROW Campo="Tutor" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="TUTOR" PosicionOrden="-1" />
+    <ROW Campo="Fallecido" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="DEFUNCION" PosicionOrden="-1" />
+    <ROW Campo="N.I.E." Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="NIE" PosicionOrden="-1" />
+    <ROW Campo="Pasaporte" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="PASAPORTE" PosicionOrden="-1" />
+    <ROW Campo="REFPAIS" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="1" FieldName="REFPAIS" PosicionOrden="-1" />
+    <ROW Campo="Fotografía" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="FOTOGRAFIA" PosicionOrden="-1" />
+    <ROW Campo="SOCIO" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="SOCIO" PosicionOrden="-1" />
+    <ROW Campo="Activo" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="ACTIVO" PosicionOrden="-1" />
+    <ROW Campo="Cód. Forma pago" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="REFFORMAPAGO" PosicionOrden="-1" />
+    <ROW Campo="Fecha de baja" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="2" FieldName="FECHABAJA" PosicionOrden="-1" />
+    <ROW Campo="Como nos conoció" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="CONOCIO" PosicionOrden="-1" />
+    <ROW Campo="Código Propio" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="CODIGOPROPIO" PosicionOrden="-1" />
+    <ROW Campo="Web" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="WEB" PosicionOrden="-1" />
+    <ROW Campo="Email" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="EMAIL" PosicionOrden="-1" />
+  </TABLA>
+  <TABLA Name="Indicaciones">
+    <ROW Campo="Observaciones" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="TEXTO" PosicionOrden="-1" />
+    <ROW Campo="Código" Posicion="0" Visible="TRUE" Ancho="100" Tipo="1" FieldName="CINDICACIONES" PosicionOrden="1" />
+    <ROW Campo="Descripción" Posicion="1" Visible="TRUE" Ancho="219" Tipo="0" FieldName="NOMBRE" PosicionOrden="0" />
+  </TABLA>
+  <TABLA Name="Bancos">
+    <ROW Campo="Notas" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="NOTAS" PosicionOrden="-1" />
+    <ROW Campo="ID" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="ID" PosicionOrden="-1" />
+    <ROW Campo="Oficina" Posicion="3" Visible="TRUE" Ancho="100" Tipo="0" FieldName="OFICINA" PosicionOrden="1" />
+    <ROW Campo="CP" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="CP" PosicionOrden="-1" />
+    <ROW Campo="Dirección" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="DIRECCION" PosicionOrden="-1" />
+    <ROW Campo="e-mail" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="EMAIL" PosicionOrden="-1" />
+    <ROW Campo="Fax" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="FAX" PosicionOrden="-1" />
+    <ROW Campo="Localidad" Posicion="1" Visible="TRUE" Ancho="100" Tipo="0" FieldName="LOCALIDAD" PosicionOrden="2" />
+    <ROW Campo="Página web" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="WEB" PosicionOrden="-1" />
+    <ROW Campo="Provincia" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="PROVINCIA" PosicionOrden="-1" />
+    <ROW Campo="Tlfno 1." Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="TLFNO1" PosicionOrden="-1" />
+    <ROW Campo="Tlfno 2." Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="TLFNO2" PosicionOrden="-1" />
+    <ROW Campo="Nombre" Posicion="0" Visible="TRUE" Ancho="100" Tipo="0" FieldName="NOMBRE" PosicionOrden="3" />
+    <ROW Campo="Entidad" Posicion="2" Visible="TRUE" Ancho="100" Tipo="0" FieldName="ENTIDAD" PosicionOrden="0" />
+  </TABLA>
+  <TABLA Name="Recibos">
+    <ROW Campo="Cód. Cita" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="1" FieldName="REFCITA" PosicionOrden="5" />
+    <ROW Campo="Cobrado" Posicion="4" Visible="TRUE" Ancho="100" Tipo="0" FieldName="COBRADO" PosicionOrden="4" />
+    <ROW Campo="Cód. Paciente" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="1" FieldName="REFPACIENTE" PosicionOrden="-1" />
+    <ROW Campo="Cuenta bancaria" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="CUENTABANCO" PosicionOrden="-1" />
+    <ROW Campo="Dirección" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="DIRECCION" PosicionOrden="-1" />
+    <ROW Campo="Emitido" Posicion="3" Visible="TRUE" Ancho="100" Tipo="0" FieldName="EMITIDO" PosicionOrden="3" />
+    <ROW Campo="Factura" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="1" FieldName="REFFACTURA" PosicionOrden="-1" />
+    <ROW Campo="Fecha" Posicion="2" Visible="TRUE" Ancho="100" Tipo="2" FieldName="FECHAEMISION" PosicionOrden="2" />
+    <ROW Campo="Importe" Posicion="5" Visible="TRUE" Ancho="100" Tipo="3" FieldName="IMPORTE" PosicionOrden="-1" />
+    <ROW Campo="Notas" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="NOTAS" PosicionOrden="-1" />
+    <ROW Campo="Vencimiento" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="FECHAVENCIMIENTO" PosicionOrden="-1" />
+    <ROW Campo="Número" Posicion="0" Visible="TRUE" Ancho="47" Tipo="1" FieldName="NUMERO" PosicionOrden="0" />
+    <ROW Campo="Nombre" Posicion="1" Visible="TRUE" Ancho="164" Tipo="0" FieldName="NOMBRE" PosicionOrden="1" />
+    <ROW Campo="N19" Posicion="1" Visible="TRUE" Ancho="47" Tipo="0" FieldName="N19" PosicionOrden="1" />
+  </TABLA>
+  <TABLA Name="FormasPago">
+    <ROW Campo="Código" Posicion="0" Visible="TRUE" Ancho="100" Tipo="0" FieldName="CODIGO" PosicionOrden="0" />
+    <ROW Campo="Descripción" Posicion="1" Visible="TRUE" Ancho="100" Tipo="0" FieldName="DESCRIPCION" PosicionOrden="1" />
+  </TABLA>
+  <TABLA Name="Paises">
+    <ROW Campo="Código" Posicion="0" Visible="TRUE" Ancho="100" Tipo="1" FieldName="CODIGO" PosicionOrden="0" />
+    <ROW Campo="Nombre" Posicion="1" Visible="TRUE" Ancho="100" Tipo="0" FieldName="NOMBRE" PosicionOrden="1" />
+    <ROW Campo="Notas" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="NOTAS" PosicionOrden="-1" />
+  </TABLA>
+  <TABLA Name="ModelosComparativa">
+    <ROW Campo="Código" Posicion="0" Visible="TRUE" Ancho="100" Tipo="0" FieldName="CODIGO" PosicionOrden="0" />
+    <ROW Campo="Modelo" Posicion="1" Visible="TRUE" Ancho="364" Tipo="0" FieldName="MODELO" PosicionOrden="1" />
+  </TABLA>
+  <TABLA Name="ConceptosFra">
+    <ROW Campo="Código" Posicion="0" Visible="TRUE" Ancho="100" Tipo="0" FieldName="CODIGO" PosicionOrden="0" />
+    <ROW Campo="Descripción" Posicion="1" Visible="TRUE" Ancho="100" Tipo="0" FieldName="DESCRIPCION" PosicionOrden="1" />
+    <ROW Campo="Importe" Posicion="2" Visible="TRUE" Ancho="100" Tipo="3" FieldName="IMPORTE" PosicionOrden="2" />
+  </TABLA>
+  <TABLA Name="ConceptosAnalitica">
+    <ROW Campo="Código" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="1" FieldName="CODIGO" PosicionOrden="0" />
+    <ROW Campo="Concepto" Posicion="0" Visible="TRUE" Ancho="200" Tipo="0" FieldName="CONCEPTO" PosicionOrden="1" />
+    <ROW Campo="Importe" Posicion="1" Visible="TRUE" Ancho="100" Tipo="3" FieldName="IMPORTE" PosicionOrden="2" />
+    <ROW Campo="Notas" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="NOTAS" PosicionOrden="3" />
+  </TABLA>
+  <TABLA Name="PlantillaAnaliticas">
+    <ROW Campo="Código" Posicion="0" Visible="TRUE" Ancho="100" Tipo="0" FieldName="CODIGO" PosicionOrden="0" />
+    <ROW Campo="Descripción" Posicion="1" Visible="TRUE" Ancho="245" Tipo="0" FieldName="DESCRIPCION" PosicionOrden="1" />
+  </TABLA>
+  <TABLA Name="PlantillaHistoriales">
+    <ROW Campo="Código" Posicion="0" Visible="TRUE" Ancho="100" Tipo="0" FieldName="CODIGO" PosicionOrden="0" />
+    <ROW Campo="Descripción" Posicion="1" Visible="TRUE" Ancho="240" Tipo="0" FieldName="DESCRIPCION" PosicionOrden="1" />
+    <ROW Campo="Motivo" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="MOTIVO" PosicionOrden="-1" />
+    <ROW Campo="Antecedentes" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="ANTECEDENTES" PosicionOrden="-1" />
+    <ROW Campo="Exploración" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="EXPLORACION" PosicionOrden="-1" />
+    <ROW Campo="Complementarias" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="COMPLEMENTARIAS" PosicionOrden="-1" />
+    <ROW Campo="Juicio" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="JUICIO" PosicionOrden="-1" />
+    <ROW Campo="Tratamiento" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="TRATAMIENTO" PosicionOrden="-1" />
+    <ROW Campo="Historial" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="HISTORIAL" PosicionOrden="-1" />
+    <ROW Campo="Comentarios" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="COMENTARIOS" PosicionOrden="-1" />
+    <ROW Campo="Otros" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="OTROS" PosicionOrden="-1" />
+  </TABLA>
+  <TABLA Name="Diagnosticos">
+    <ROW Campo="Código" Posicion="0" Visible="TRUE" Ancho="100" Tipo="1" FieldName="IDDIAGNOSTICO" PosicionOrden="0" />
+    <ROW Campo="Diagnóstico" Posicion="2" Visible="TRUE" Ancho="296" Tipo="0" FieldName="DIAGNOSTICO" PosicionOrden="1" />
+    <ROW Campo="Observaciones" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="OBSERVACIONES" PosicionOrden="-1" />
+    <ROW Campo="CIE Principal" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="NIVEL" PosicionOrden="-1" />
+    <ROW Campo="CIE Secundario" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="SUBNIVEL" PosicionOrden="-1" />
+    <ROW Campo="CIE" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="CIE" PosicionOrden="-1" />
+    <ROW Campo="Favorito" Posicion="3" Visible="TRUE" Ancho="100" Tipo="0" FieldName="FAVORITO" PosicionOrden="-1" />
+    <ROW Campo="CIE-10" Posicion="1" Visible="TRUE" Ancho="100" Tipo="0" FieldName="CIE10" PosicionOrden="-1" />
+  </TABLA>
+  <TABLA Name="Empresas">
+    <ROW Campo="Notas" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="NOTAS" PosicionOrden="-1" />
+    <ROW Campo="Código" Posicion="0" Visible="TRUE" Ancho="60" Tipo="1" FieldName="CEMPRESA" PosicionOrden="0" />
+    <ROW Campo="Nombre" Posicion="1" Visible="TRUE" Ancho="251" Tipo="0" FieldName="NOMBRE" PosicionOrden="1" />
+    <ROW Campo="Actividad" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="ACTIVIDAD" PosicionOrden="2" />
+    <ROW Campo="CIF" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="CIF" PosicionOrden="-1" />
+    <ROW Campo="Inscripción SS" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="NSS" PosicionOrden="-1" />
+    <ROW Campo="Dirección" Posicion="2" Visible="TRUE" Ancho="100" Tipo="0" FieldName="DIRECCION" PosicionOrden="-1" />
+    <ROW Campo="C.P." Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="CP" PosicionOrden="-1" />
+    <ROW Campo="Población" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="POBLACION" PosicionOrden="-1" />
+    <ROW Campo="Provincia" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="PROVINCIA" PosicionOrden="-1" />
+    <ROW Campo="Cód. Mutua" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="1" FieldName="REFMUTUA" PosicionOrden="-1" />
+    <ROW Campo="CNAE" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="CNAE" PosicionOrden="-1" />
+    <ROW Campo="Tflno. 1" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="TLFNO1" PosicionOrden="-1" />
+    <ROW Campo="Tlfno. 2" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="TLFNO2" PosicionOrden="-1" />
+    <ROW Campo="Fax" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="FAX" PosicionOrden="-1" />
+    <ROW Campo="Mail" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="MAIL" PosicionOrden="-1" />
+    <ROW Campo="Página web" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="WEB" PosicionOrden="-1" />
+    <ROW Campo="Persona contacto" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="PERSONACON" PosicionOrden="-1" />
+    <ROW Campo="Notas" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="NOTAS" PosicionOrden="-1" />
+    <ROW Campo="Fecha" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="2" FieldName="FECHA" PosicionOrden="-1" />
+    <ROW Campo="Entidad" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="ENTIDAD" PosicionOrden="-1" />
+    <ROW Campo="Oficina" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="OFICINA" PosicionOrden="-1" />
+    <ROW Campo="DC" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="DC" PosicionOrden="-1" />
+    <ROW Campo="Cuenta" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="CUENTA" PosicionOrden="-1" />
+    <ROW Campo="Titular" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="TITULAR" PosicionOrden="-1" />
+  </TABLA>
+  <TABLA Name="Clinicas">
+    <ROW Campo="Descripcion" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="DESCRIPCION" PosicionOrden="-1" />
+    <ROW Campo="Código" Posicion="0" Visible="TRUE" Ancho="100" Tipo="0" FieldName="CODIGO" PosicionOrden="0" />
+    <ROW Campo="Dirección" Posicion="1" Visible="TRUE" Ancho="100" Tipo="0" FieldName="DIRECCION" PosicionOrden="1" />
+    <ROW Campo="Población" Posicion="2" Visible="TRUE" Ancho="100" Tipo="0" FieldName="POBLACION" PosicionOrden="2" />
+    <ROW Campo="Provincia" Posicion="3" Visible="TRUE" Ancho="100" Tipo="0" FieldName="PROVINCIA" PosicionOrden="-1" />
+    <ROW Campo="CP" Posicion="4" Visible="TRUE" Ancho="100" Tipo="0" FieldName="CP" PosicionOrden="-1" />
+    <ROW Campo="Tlfno. 1" Posicion="5" Visible="TRUE" Ancho="100" Tipo="0" FieldName="TLFNO1" PosicionOrden="-1" />
+    <ROW Campo="Tlfno. 2" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="TLFNO2" PosicionOrden="-1" />
+    <ROW Campo="Fax" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="FAX" PosicionOrden="-1" />
+    <ROW Campo="Email" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="MAIL" PosicionOrden="-1" />
+    <ROW Campo="Web" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="WEB" PosicionOrden="-1" />
+    <ROW Campo="Persona de contacto" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="PERSONACON" PosicionOrden="-1" />
+  </TABLA>
+  <TABLA Name="qPacientesAlarma">
+    <ROW Campo="Código" Posicion="99" Visible="TRUE" Ancho="100" Tipo="1" FieldName="CPACIENTE" PosicionOrden="0" />
+    <ROW Campo="Nombre" Posicion="99" Visible="TRUE" Ancho="100" Tipo="1" FieldName="NOMBRE" PosicionOrden="1" />
+    <ROW Campo="Apellido 1" Posicion="99" Visible="TRUE" Ancho="100" Tipo="1" FieldName="APELLIDO1" PosicionOrden="2" />
+    <ROW Campo="Apellido 2" Posicion="99" Visible="TRUE" Ancho="100" Tipo="1" FieldName="APELLIDO2" PosicionOrden="3" />
+    <ROW Campo="Domicilio" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="DOMICILIO" PosicionOrden="4" />
+    <ROW Campo="Tlfno." Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="TLFNO" PosicionOrden="5" />
+    <ROW Campo="Móvil" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="MOVIL" PosicionOrden="6" />
+    <ROW Campo="Profesión" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="PROFESION" PosicionOrden="7" />
+    <ROW Campo="Localidad" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="LOCALIDAD" PosicionOrden="8" />
+    <ROW Campo="CP" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="CP" PosicionOrden="9" />
+    <ROW Campo="Cód. Empresa" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="REFEMPRESA" PosicionOrden="10" />
+    <ROW Campo="DNI" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="DNI" PosicionOrden="11" />
+    <ROW Campo="F. Nacimiento" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="FECHAN" PosicionOrden="12" />
+    <ROW Campo="Provincia" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="PROVINCIA" PosicionOrden="13" />
+    <ROW Campo="N SS" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="NSS" PosicionOrden="14" />
+    <ROW Campo="Puesto" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="PUESTO" PosicionOrden="15" />
+    <ROW Campo="Regimen" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="REGIMEN" PosicionOrden="16" />
+    <ROW Campo="T. Sanitaria" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="TARJETASANITARIA" PosicionOrden="17" />
+    <ROW Campo="Cód. Mutua" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="REFMUTUA" PosicionOrden="18" />
+    <ROW Campo="Sexo" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="SEXO" PosicionOrden="19" />
+    <ROW Campo="F. Alta" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="FECHAALTA" PosicionOrden="20" />
+    <ROW Campo="Tutor" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="TUTOR" PosicionOrden="21" />
+    <ROW Campo="Pago banco" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="PAGOBANCO" PosicionOrden="22" />
+    <ROW Campo="Entidad" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="ENTIDAD" PosicionOrden="23" />
+    <ROW Campo="Oficina" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="OFICINA" PosicionOrden="24" />
+    <ROW Campo="DC" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="DC" PosicionOrden="25" />
+    <ROW Campo="Titular" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="TITULAR" PosicionOrden="26" />
+    <ROW Campo="Cuenta" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="CUENTA" PosicionOrden="27" />
+    <ROW Campo="Defunción" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="DEFUNCION" PosicionOrden="28" />
+    <ROW Campo="NIE" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="NIE" PosicionOrden="29" />
+    <ROW Campo="Pasaporte" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="PASAPORTE" PosicionOrden="30" />
+    <ROW Campo="Cód. País" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="REFPAIS" PosicionOrden="31" />
+    <ROW Campo="FOTO" Posicion="99" Visible="FALSE" Ancho="100" Tipo="-1" FieldName="FOTO" PosicionOrden="32" />
+    <ROW Campo="FOTOGRAFIA" Posicion="99" Visible="FALSE" Ancho="100" Tipo="-1" FieldName="FOTOGRAFIA" PosicionOrden="33" />
+    <ROW Campo="Socio" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="SOCIO" PosicionOrden="34" />
+    <ROW Campo="Activo" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="ACTIVO" PosicionOrden="35" />
+    <ROW Campo="Cód. Forma pago" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="REFFORMAPAGO" PosicionOrden="36" />
+    <ROW Campo="F. Baja" Posicion="99" Visible="FALSE" Ancho="100" Tipo="0" FieldName="FECHABAJA" PosicionOrden="37" />
+    <ROW Campo="Observaciones" Posicion="99" Visible="FALSE" Ancho="100" Tipo="-1" FieldName="OBSERVACIONES" PosicionOrden="38" />
+  </TABLA>
+  <TABLA Name="Recetas">
+    <ROW Campo="Fecha" Posicion="99" Visible="TRUE" Ancho="100" Tipo="2" FieldName="FECHA" PosicionOrden="0" />
+    <ROW Campo="Cód. Paciente" Posicion="99" Visible="TRUE" Ancho="100" Tipo="1" FieldName="REFPACIENTE" PosicionOrden="1" />
+    <ROW Campo="Tratamiento" Posicion="99" Visible="TRUE" Ancho="100" Tipo="0" FieldName="TRATAMIENTO" PosicionOrden="3" />
+    <ROW Campo="Cód. Médico" Posicion="99" Visible="TRUE" Ancho="100" Tipo="1" FieldName="REFMEDICO" PosicionOrden="4" />
+    <ROW Campo="Cód. Diagnóstico" Posicion="99" Visible="TRUE" Ancho="100" Tipo="1" FieldName="REFDIAGNOSTICO" PosicionOrden="5" />
+    <ROW Campo="Cód. Medicamento" Posicion="99" Visible="TRUE" Ancho="100" Tipo="0" FieldName="REFMEDICAMENTO" PosicionOrden="6" />
+    <ROW Campo="Hora" Posicion="99" Visible="FALSE" Ancho="100" Tipo="2" FieldName="HORA" PosicionOrden="7" />
+    <ROW Campo="Id Receta" Posicion="99" Visible="FALSE" Ancho="100" Tipo="1" FieldName="IDRECETA" PosicionOrden="8" />
+  </TABLA>
+  <TABLA Name="Analiticas">
+    <ROW Campo="Número" Posicion="0" Visible="TRUE" Ancho="100" Tipo="1" FieldName="NUMERO" PosicionOrden="0" />
+    <ROW Campo="Fecha" Posicion="1" Visible="TRUE" Ancho="100" Tipo="2" FieldName="FECHA" PosicionOrden="1" />
+    <ROW Campo="Descripción" Posicion="2" Visible="TRUE" Ancho="100" Tipo="0" FieldName="DESCRIPCION" PosicionOrden="2" />
+    <ROW Campo="Cód. Paciente" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="1" FieldName="REFPACIENTE" PosicionOrden="3" />
+    <ROW Campo="Paciente" Posicion="3" Visible="TRUE" Ancho="100" Tipo="0" FieldName="PACIENTE" PosicionOrden="4" />
+    <ROW Campo="Importe" Posicion="4" Visible="TRUE" Ancho="100" Tipo="3" FieldName="IMPORTE" PosicionOrden="5" />
+    <ROW Campo="Estado" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="ESTADO" PosicionOrden="-1" />
+    <ROW Campo="Notas" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="0" FieldName="NOTAS" PosicionOrden="-1" />
+    <ROW Campo="Factura" Posicion="-1" Visible="FALSE" Ancho="100" Tipo="1" FieldName="REFFRA" PosicionOrden="-1" />
+  </TABLA>
+</ROWDATA>

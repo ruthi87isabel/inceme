@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CMTORREVIEJA" Class="ClasesOdontogramaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=CMTORREVIEJA;Integrated Security=True" SettingsObjectName="centro_medico.My.MySettings" SettingsPropertyName="CMConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CONCEPTOSFRA" Member="md_ConceptoFras">
+    <Type Name="md_ConceptoFra">
+      <Column Name="CODIGO" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="IMPORTE" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Duracion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IDFAMILIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="XMLCont" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" IsDelayLoaded="true" />
+      <Association Name="md_ConceptoFra_md_d_Accion" Member="md_d_Accions" Storage="_d_Accions" ThisKey="CODIGO" OtherKey="IDTratamiento" Type="md_d_Accion" />
+      <Association Name="md_ConceptoFra_md_d_ConceptoFra_Imagen" Member="md_d_ConceptoFra_Imagens" Storage="_d_ConceptoFra_Imagens" ThisKey="CODIGO" OtherKey="CodigoCfra" Type="md_d_ConceptoFra_Imagen" />
+      <Association Name="md_ConceptoFra_md_d_PresupuestoLinea" Member="md_d_PresupuestoLineas" ThisKey="CODIGO" OtherKey="IDTratamiento" Type="md_d_PresupuestoLinea" />
+      <Association Name="md_ConceptoFamilia_md_ConceptoFra" Member="md_ConceptoFamilia" Storage="_ConceptoFamilia" ThisKey="IDFAMILIA" OtherKey="IDFamilia" Type="md_ConceptoFamilia" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.d_Acciones" Member="md_d_Accions">
+    <Type Name="md_d_Accion">
+      <Column Name="IDAccion" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDOdontograma" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FechaEjecucion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IDMedico" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DescripcionGenerada" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="IDGabinete" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDTratamiento" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Cuadrantes" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PiezasInvolucradas" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Urgente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="md_ConceptoFra_md_d_Accion" Member="md_ConceptoFra" Storage="_ConceptoFra" ThisKey="IDTratamiento" OtherKey="CODIGO" Type="md_ConceptoFra" IsForeignKey="true" />
+      <Association Name="md_d_Odontograma_md_d_Accion" Member="md_d_Odontograma" Storage="_d_Odontograma" ThisKey="IDOdontograma" OtherKey="IDOdontograma" Type="md_d_Odontograma" IsForeignKey="true" />
+      <Association Name="md_MEDICO_md_d_Accion" Member="md_MEDICO" Storage="_MEDICO" ThisKey="IDMedico" OtherKey="CMEDICO" Type="md_MEDICO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.d_Odontogramas" Member="md_d_Odontogramas">
+    <Type Name="md_d_Odontograma">
+      <Column Name="IDOdontograma" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDPaciente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TipoDenticion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="md_d_Odontograma_md_d_Accion" Member="md_d_Accions" Storage="_d_Accions" ThisKey="IDOdontograma" OtherKey="IDOdontograma" Type="md_d_Accion" />
+      <Association Name="md_d_Odontograma_md_d_Presupuesto" Member="md_d_Presupuestos" Storage="_d_Presupuestos" ThisKey="IDOdontograma" OtherKey="IDOdontograma" Type="md_d_Presupuesto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.d_Colores" Member="md_d_Colors">
+    <Type Name="md_d_Color">
+      <Column Name="IDColor" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="clPendiente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="clPrimeravista" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="clPresupuesto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="clRealizado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="clUrgente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.d_ConceptosFra_Imagenes" Member="md_d_ConceptoFra_Imagens">
+    <Type Name="md_d_ConceptoFra_Imagen">
+      <Column Name="CodigoCfra" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Cuadrante" Type="System.Char" DbType="Char(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDImagen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Pintar" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="md_ConceptoFra_md_d_ConceptoFra_Imagen" Member="md_ConceptoFra" Storage="_ConceptoFra" ThisKey="CodigoCfra" OtherKey="CODIGO" Type="md_ConceptoFra" IsForeignKey="true" />
+      <Association Name="md_d_Imagen_md_d_ConceptoFra_Imagen" Member="md_d_Imagen" Storage="_d_Imagen" ThisKey="IDImagen" OtherKey="IDImagen" Type="md_d_Imagen" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.d_Imagenes" Member="md_d_Imagens">
+    <Type Name="md_d_Imagen">
+      <Column Name="IDImagen" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Crdt" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="md_d_Imagen_md_d_ConceptoFra_Imagen" Member="md_d_ConceptoFra_Imagens" Storage="_d_ConceptoFra_Imagens" ThisKey="IDImagen" OtherKey="IDImagen" Type="md_d_ConceptoFra_Imagen" />
+    </Type>
+  </Table>
+  <Table Name="dbo.d_Presupuesto" Member="md_d_Presupuestos">
+    <Type Name="md_d_Presupuesto">
+      <Column Name="IDPresupuesto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDOdontograma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaConcepcion" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IDMutua" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="md_d_Presupuesto_md_d_PresupuestoLinea" Member="md_d_PresupuestoLineas" ThisKey="IDPresupuesto" OtherKey="IDPresupuesto" Type="md_d_PresupuestoLinea" />
+      <Association Name="md_d_Odontograma_md_d_Presupuesto" Member="md_d_Odontograma" Storage="_d_Odontograma" ThisKey="IDOdontograma" OtherKey="IDOdontograma" Type="md_d_Odontograma" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="MUTUA_md_d_Presupuesto" Member="md_MUTUA" ThisKey="IDMutua" OtherKey="CMUTUA" Type="md_MUTUA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CONCEPTOSFAMILIAS" Member="md_ConceptoFamilias">
+    <Type Name="md_ConceptoFamilia">
+      <Column Name="IDFamilia" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Categoria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IconoName" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="[Natural]" Member="Natural" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="md_ConceptoFamilia_md_ConceptoFra" Member="md_ConceptoFras" Storage="_ConceptoFras" ThisKey="IDFamilia" OtherKey="IDFAMILIA" Type="md_ConceptoFra" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MEDICOS" Member="md_MEDICOs">
+    <Type Name="md_MEDICO">
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="APELLIDO1" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="APELLIDO2" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="CMEDICO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="md_MEDICO_md_d_Accion" Member="md_d_Accions" Storage="_d_Accions" ThisKey="CMEDICO" OtherKey="IDMedico" Type="md_d_Accion" />
+    </Type>
+  </Table>
+  <Table Name="dbo.d_PresupuestoLineas" Member="md_d_PresupuestoLineas">
+    <Type Name="md_d_PresupuestoLinea">
+      <Column Name="IDPresupuestoLinea" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDPresupuesto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DescripcionGenerada" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="IDTratamiento" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Cuadrantes" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PiezasInvolucradas" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Confirmado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Realizado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Urgencia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaConfirmado" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaRealizado" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Importe" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="IDCITA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DescuentoPercent" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="IDAccionOrigen" Type="System.Int32" DbType="BigInt" CanBeNull="true" />
+      <Association Name="md_ConceptoFra_md_d_PresupuestoLinea" Member="md_ConceptoFra" ThisKey="IDTratamiento" OtherKey="CODIGO" Type="md_ConceptoFra" IsForeignKey="true" />
+      <Association Name="md_d_Presupuesto_md_d_PresupuestoLinea" Member="md_d_Presupuesto" ThisKey="IDPresupuesto" OtherKey="IDPresupuesto" Type="md_d_Presupuesto" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MUTUAS" Member="md_MUTUAs">
+    <Type Name="md_MUTUA">
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(90)" CanBeNull="true" />
+      <Column Name="DIRECCION" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="POBLACION" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="PROVINCIA" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CP" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="TLFNO1" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TLFNO2" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="FAX" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MAIL" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="WEB" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="PERSONACON" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="NOTAS" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CMUTUA" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CIF" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ESPECIALIDAD" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PARTELSR" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="PARTEMTR" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="IdTarifa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NoContrato" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Logo" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="MUTUA_md_d_Presupuesto" Member="md_d_Presupuestos" ThisKey="CMUTUA" OtherKey="IDMutua" Type="md_d_Presupuesto" />
+    </Type>
+  </Table>
+</Database>

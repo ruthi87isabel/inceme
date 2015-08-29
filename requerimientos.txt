@@ -1,0 +1,7 @@
+instalar Janus Windows
+compilar los proyectos de abajo hacia arriba
+
+Repo en Github:
+
+Url (HTTPS: https://github.com/ruthi87isabel/inceme.git)
+Url (SSH): git@github.com:ruthi87isabel/inceme.git

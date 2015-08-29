@@ -1,0 +1,267 @@
+Public Class frmProcesos_ADD
+
+    Public ID_Proceso As Integer = -1
+    Public Proceso As CM3DataSet.N_ProcesosRow
+
+    Private Sub frmProcesos_ADD_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+     
+        If ID_Proceso <> -1 Then
+            N_ProcesosTableAdapter.FillBy(Me.CM3DataSet.N_Procesos, ID_Proceso)
+            Proceso = Me.CM3DataSet.N_Procesos(0)
+
+            CargaPartes()
+            Me.CITASTableAdapter.FillByProceso(Me.CMDataSet.CITAS, ID_Proceso)
+            Me.FACTURASTableAdapter.FillByProceso(Me.CMDataSet.FACTURAS, ID_Proceso)
+        Else
+            'Nuevo
+            Proceso = N_ProcesosBindingSource.AddNew().Row()
+            Proceso.FechaInicio = Date.Now
+            Proceso.Finalizado = False
+
+        End If
+    End Sub
+
+#Region "Private Sub CargaPartes()"
+    Private Sub CargaPartes()
+        N_PartesPorProcesoTableAdapter.Fill(Me.CM3DataSet.N_PartesPorProceso, ID_Proceso)
+
+        Dim partesAdapter As New CM3DataSetTableAdapters.N_PartesTableAdapter()
+
+        For Each row As DataGridViewRow In N_PartesPorProcesoDataGridView.Rows
+            Dim parte As CM3DataSet.N_PartesPorProcesoRow = row.DataBoundItem.Row
+            If parte.Tipo = Globals.Partes_Tipos.Alta Then
+                row.Cells(columnTipoLabel.Index).Value = "ALTA"
+            End If
+
+            If parte.Tipo = Globals.Partes_Tipos.Baja Then
+                row.Cells(columnTipoLabel.Index).Value = "BAJA"
+
+                'Averiguar si es por recaida
+                Dim table As New CM3DataSet.N_PartesDataTable()
+                partesAdapter.FillBy(table, parte.ID)
+                If table.Count > 0 Then
+                    If Not table(0).IsRecaidaNull() Then
+                        If table(0).Recaida = True Then
+                            'Es de baja y con ID_ParteOrigen, entonces es una recaida
+                            row.Cells(columnRecaida.Index).Value = My.Resources.Recaida
+                        End If
+                    End If
+                End If
+            End If
+
+            If parte.Tipo = Globals.Partes_Tipos.Asistencia Then
+                row.Cells(columnTipoLabel.Index).Value = "ASISTENCIA"
+            End If
+
+
+        Next
+    End Sub
+#End Region
+
+
+    Private Sub ts_Guardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ts_Guardar.Click
+        If Guardar() Then
+            Me.DialogResult = Windows.Forms.DialogResult.OK
+            Me.Close()
+        End If
+
+    End Sub
+
+#Region "Private Function Guardar() As Boolean"
+    Private Function Guardar() As Boolean
+        Try
+            If Not CtrlPaciente1.ID_PACIENTE.HasValue Then
+                MessageBox.Show("Debe seleccionar un paciente!")
+                CtrlPaciente1.Focus()
+                Return False
+            End If
+
+            Me.Validate()
+            Me.N_ProcesosBindingSource.EndEdit()
+            Me.N_ProcesosTableAdapter.Update(Me.CM3DataSet.N_Procesos)
+            ID_Proceso = Proceso.ID_Proceso
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            Return False
+        End Try
+        Return True
+    End Function
+#End Region
+
+#Region "Private Sub btn_Cita_ADD_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Cita_ADD.Click"
+    Private Sub btn_Cita_ADD_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Cita_ADD.Click
+
+        If Guardar() Then
+            'Dim frm As New frmListadoCitas()
+            'frm.Modo = Globals.ModoParaFormas.Seleccion
+            'frm.CtrlPaciente1.ID_PACIENTE = CtrlPaciente1.ID_PACIENTE
+            'frm.CtrlPaciente1.Enabled = False
+
+            Dim frm As New form_citas_sub("Nueva Cita", Enums.Accion.Insertar, Date.Now)
+            frm.CtrlPaciente1.ID_PACIENTE = CtrlPaciente1.ID_PACIENTE
+            frm.ShowDialog()
+            Dim citaTable As CMDataSet.CITASDataTable = CITASTableAdapter.GetCitaById(frm.fId)
+            If citaTable.Count > 0 Then
+                Dim cita As CMDataSet.CITASRow = citaTable(0)
+                cita.ID_Proceso = ID_Proceso
+                Dim n As Integer = CITASTableAdapter.Update(cita)
+            End If
+
+
+            Me.CITASTableAdapter.FillByProceso(Me.CMDataSet.CITAS, ID_Proceso)
+        End If
+    End Sub
+#End Region
+
+#Region "Private Sub bt_Partes_Add_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bt_Partes_Add.Click"
+    Private Sub bt_Partes_Add_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bt_Partes_Add.Click
+
+        If Not CtrlPaciente1.ID_PACIENTE.HasValue Then
+            MessageBox.Show("Debe seleccionar un paciente")
+            Return
+        End If
+
+        If Not CtrlEmpresa1.ID_EMPRESAS.HasValue Then
+            MessageBox.Show("Debe seleccionar una empresa")
+            Return
+        End If
+
+        If Guardar() Then
+            Dim frm As New frmPartes_ADD()
+            frm.ID_Paciente = CtrlPaciente1.ID_PACIENTE
+            frm.ID_Empresa = CtrlEmpresa1.ID_EMPRESAS
+            frm.ID_Proceso = ID_Proceso
+            If frm.ShowDialog() = Windows.Forms.DialogResult.OK Then
+                CargaPartes()
+            End If
+
+        End If
+    End Sub
+#End Region
+
+    Private Sub N_PartesPorProcesoDataGridView_SelectionChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles N_PartesPorProcesoDataGridView.SelectionChanged
+        bt_Partes_Edit.Enabled = N_PartesPorProcesoDataGridView.SelectedRows.Count > 0
+        bt_Partes_Delete.Enabled = N_PartesPorProcesoDataGridView.SelectedRows.Count > 0
+    End Sub
+
+    Private Sub bt_Partes_Edit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bt_Partes_Edit.Click
+        Dim parte As CM3DataSet.N_PartesPorProcesoRow = N_PartesPorProcesoDataGridView.SelectedRows(0).DataBoundItem.Row
+        If parte.Tipo = Globals.Partes_Tipos.Alta Or parte.Tipo = Globals.Partes_Tipos.Baja Then
+            Dim frm As New frmPartes_ADD()
+            frm.ID_Proceso = ID_Proceso
+
+            frm.ID_Parte = parte.ID
+            If frm.ShowDialog() = Windows.Forms.DialogResult.OK Then
+                CargaPartes()
+            End If
+        End If
+    End Sub
+
+    Private Sub bt_Partes_Delete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bt_Partes_Delete.Click
+        'Borrar el parte seleccionado
+        If MessageBox.Show("¿Esta seguro que desea eliminar este parte?", "Confirmación", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+            Dim parte As CM3DataSet.N_PartesPorProcesoRow = N_PartesPorProcesoDataGridView.SelectedRows(0).DataBoundItem.Row
+            Dim adapter As New CM3DataSetTableAdapters.N_PartesTableAdapter()
+            adapter.DeleteQuery(parte.ID)
+            CargaPartes()
+        End If
+
+    End Sub
+
+    Private Sub N_PartesPorProcesoDataGridView_CellDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles N_PartesPorProcesoDataGridView.CellDoubleClick
+        If N_PartesPorProcesoDataGridView.SelectedRows.Count > 0 Then
+            bt_Partes_Edit_Click(Nothing, Nothing)
+        End If
+    End Sub
+
+    Private Sub btn_Asistente_Facturacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Asistente_Facturacion.Click
+        If Guardar() Then
+            Dim frm As New frmPartes_AsistenteFacturacion()
+            frm.ID_Proceso = ID_Proceso
+            If CtrlEmpresa1.ID_EMPRESAS.HasValue Then
+                frm.Empresa = CtrlEmpresa1.EMPRESA
+            End If
+            frm.ShowDialog()
+            Me.FACTURASTableAdapter.FillByProceso(Me.CMDataSet.FACTURAS, ID_Proceso)
+        End If
+    End Sub
+
+   
+    
+    Private Sub btn_Cita_Edit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Cita_Edit.Click
+
+        If Guardar() Then
+            Dim cita As CMDataSet.CITASRow = CITASDataGridView.SelectedRows(0).DataBoundItem.Row
+            Dim frm As New form_citas_sub("Editar Cita", Enums.Accion.Modificar, cita.IDCITA)
+            frm.ShowDialog()
+            Me.CITASTableAdapter.FillByProceso(Me.CMDataSet.CITAS, ID_Proceso)
+        End If
+    End Sub
+
+    Private Sub btn_Cita_Eliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Cita_Eliminar.Click
+        Dim cita As CMDataSet.CITASRow = CITASDataGridView.SelectedRows(0).DataBoundItem.Row
+        CITASTableAdapter.DeleteCitaById(cita.IDCITA)
+        cita.Delete()
+        Me.CITASTableAdapter.FillByProceso(Me.CMDataSet.CITAS, ID_Proceso)
+    End Sub
+
+    Private Sub btn_Facturas_Add_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Facturas_Add.Click
+        btn_Asistente_Facturacion_Click(Nothing, Nothing)
+
+        'If Guardar() Then
+        '    Dim frm As New form_factura("Editar Factura", Enums.Accion.Insertar)
+        '    frm.CtrlPaciente1.ID_PACIENTE = CtrlPaciente1.ID_PACIENTE
+
+        '    If CtrlMutua1.ID_Mutuas.HasValue Then
+        '        frm.CtrlMutua1.ID_Mutuas = CtrlMutua1.ID_Mutuas
+        '    End If
+        '    frm.ShowDialog()
+        '    Me.FACTURASTableAdapter.FillByProceso(Me.CMDataSet.FACTURAS, ID_Proceso)
+        'End If
+        
+    End Sub
+
+
+    Private Sub btn_Factura_Edit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Factura_Edit.Click
+        Dim factura As CMDataSet.FACTURASRow = FACTURASDataGridView.SelectedRows(0).DataBoundItem.Row
+        Dim frm As New form_factura("Editar Factura", Enums.Accion.Modificar, factura.IDFACTURA)
+        frm.ShowDialog()
+        Me.FACTURASTableAdapter.FillByProceso(Me.CMDataSet.FACTURAS, ID_Proceso)
+
+    End Sub
+
+    Private Sub btn_Factura_Del_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Factura_Del.Click
+        Dim factura As CMDataSet.FACTURASRow = FACTURASDataGridView.SelectedRows(0).DataBoundItem.Row
+        FACTURASTableAdapter.DeleteById(factura.IDFACTURA)
+        factura.Delete()
+        Me.FACTURASTableAdapter.FillByProceso(Me.CMDataSet.FACTURAS, ID_Proceso)
+    End Sub
+
+    Private Sub CITASDataGridView_SelectionChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CITASDataGridView.SelectionChanged
+        btn_Cita_Edit.Enabled = CITASDataGridView.SelectedRows.Count > 0
+        btn_Cita_Eliminar.Enabled = CITASDataGridView.SelectedRows.Count > 0
+
+    End Sub
+
+    Private Sub FACTURASDataGridView_SelectionChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FACTURASDataGridView.SelectionChanged
+        btn_Factura_Edit.Enabled = FACTURASDataGridView.SelectedRows.Count > 0
+        btn_Factura_Del.Enabled = FACTURASDataGridView.SelectedRows.Count > 0
+
+    End Sub
+
+    Private Sub CITASDataGridView_CellDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles CITASDataGridView.CellDoubleClick
+        If CITASDataGridView.SelectedRows.Count > 0 Then
+            btn_Cita_Edit_Click(Nothing, Nothing)
+        End If
+    End Sub
+
+    Private Sub FACTURASDataGridView_CellDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles FACTURASDataGridView.CellDoubleClick
+        If FACTURASDataGridView.SelectedRows.Count > 0 Then
+            btn_Factura_Edit_Click(Nothing, Nothing)
+        End If
+    End Sub
+
+    Private Sub CtrlPaciente1_PacienteSeleccionado(ByVal IdPaciente As System.Int32, ByVal IsReturnPressed As System.Boolean) Handles CtrlPaciente1.PacienteSeleccionado
+        CtrlFicherosAdjuntos1.IDPACIENTE = CtrlPaciente1.ID_PACIENTE
+    End Sub
+End Class

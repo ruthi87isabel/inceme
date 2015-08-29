@@ -1,0 +1,1 @@
+UPDATE VariablesGlobales SET valor = '1.0.0.1' where Clave='DB_Version'

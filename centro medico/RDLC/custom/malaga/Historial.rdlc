@@ -1,0 +1,1940 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <DataSources>
+    <DataSource Name="CMConnectionString">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=PC2\SQLEXPRESS;Initial Catalog=CM;Integrated Security=True;Current Language=Español</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>a01e4ced-98f0-4980-b783-ea6e3820876a</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="CMDataSet_PACIENTES">
+      <Fields>
+        <Field Name="NOMBRE">
+          <DataField>NOMBRE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="APELLIDO1">
+          <DataField>APELLIDO1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="APELLIDO2">
+          <DataField>APELLIDO2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DOMICILIO">
+          <DataField>DOMICILIO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TLFNO">
+          <DataField>TLFNO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MOVIL">
+          <DataField>MOVIL</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PROFESION">
+          <DataField>PROFESION</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LOCALIDAD">
+          <DataField>LOCALIDAD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CP">
+          <DataField>CP</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="REFEMPRESA">
+          <DataField>REFEMPRESA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DNI">
+          <DataField>DNI</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FECHAN">
+          <DataField>FECHAN</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="OBSERVACIONES">
+          <DataField>OBSERVACIONES</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PROVINCIA">
+          <DataField>PROVINCIA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NSS">
+          <DataField>NSS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PUESTO">
+          <DataField>PUESTO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="REGIMEN">
+          <DataField>REGIMEN</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TARJETASANITARIA">
+          <DataField>TARJETASANITARIA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="REFMUTUA">
+          <DataField>REFMUTUA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CPACIENTE">
+          <DataField>CPACIENTE</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SEXO">
+          <DataField>SEXO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FECHAALTA">
+          <DataField>FECHAALTA</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="TUTOR">
+          <DataField>TUTOR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PAGOBANCO">
+          <DataField>PAGOBANCO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ENTIDAD">
+          <DataField>ENTIDAD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OFICINA">
+          <DataField>OFICINA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DC">
+          <DataField>DC</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TITULAR">
+          <DataField>TITULAR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CUENTA">
+          <DataField>CUENTA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DEFUNCION">
+          <DataField>DEFUNCION</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NIE">
+          <DataField>NIE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PASAPORTE">
+          <DataField>PASAPORTE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="REFPAIS">
+          <DataField>REFPAIS</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FOTO">
+          <DataField>FOTO</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="FOTOGRAFIA">
+          <DataField>FOTOGRAFIA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SOCIO">
+          <DataField>SOCIO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ACTIVO">
+          <DataField>ACTIVO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="REFFORMAPAGO">
+          <DataField>REFFORMAPAGO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FECHABAJA">
+          <DataField>FECHABAJA</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="CONOCIO">
+          <DataField>CONOCIO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>CMConnectionString</DataSourceName>
+        <CommandText>SELECT     PACIENTES.*
+FROM         PACIENTES
+</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>CMDataSet</rd:DataSetName>
+        <rd:TableName>PACIENTES</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>PACIENTESTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="CMDataSet_HISTORIALES">
+      <Fields>
+        <Field Name="REFPACIENTE">
+          <DataField>REFPACIENTE</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="REFMEDICO">
+          <DataField>REFMEDICO</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FECHA">
+          <DataField>FECHA</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="MOTIVO">
+          <DataField>MOTIVO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ANTECEDENTES">
+          <DataField>ANTECEDENTES</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EXPLORACION">
+          <DataField>EXPLORACION</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="COMPLEMENTARIAS">
+          <DataField>COMPLEMENTARIAS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="JUICIO">
+          <DataField>JUICIO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TRATAMIENTO">
+          <DataField>TRATAMIENTO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="HISTORIAL">
+          <DataField>HISTORIAL</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="COMENTARIOS">
+          <DataField>COMENTARIOS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CHISTORIAL">
+          <DataField>CHISTORIAL</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="OTROS">
+          <DataField>OTROS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="HORA">
+          <DataField>HORA</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="REFDIAGNOSTICO">
+          <DataField>REFDIAGNOSTICO</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>CMConnectionString</DataSourceName>
+        <CommandText>SELECT     HISTORIALES.*
+FROM         HISTORIALES</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>CMDataSet</rd:DataSetName>
+        <rd:TableName>HISTORIALES</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>HISTORIALESTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsLineasDiagnostico">
+      <Fields>
+        <Field Name="IdLineaDiagnostico">
+          <DataField>IdLineaDiagnostico</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CHistorial">
+          <DataField>CHistorial</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="IdDiagnostico">
+          <DataField>IdDiagnostico</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CIE10">
+          <DataField>CIE10</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OBSERVACIONES">
+          <DataField>OBSERVACIONES</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DIAGNOSTICO">
+          <DataField>DIAGNOSTICO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DIAGNOSTICO1">
+          <DataField>DIAGNOSTICO1</DataField>
+          <rd:TypeName>centro_medico.DIAGNOSTICO</rd:TypeName>
+        </Field>
+        <Field Name="HISTORIALE">
+          <DataField>HISTORIALE</DataField>
+          <rd:TypeName>centro_medico.HISTORIALE</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>CMConnectionString</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>centro_medico</rd:DataSetName>
+        <rd:TableName>HISTORIALE</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>HistorialesDiagnosticos</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>centro_medico.HISTORIALE, INCEME, Version=1.0.0.9, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Body>
+    <ReportItems>
+      <Textbox Name="FECHAN">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!FECHAN.Value,"CMDataSet_PACIENTES")</Value>
+                <Style>
+                  <Format>d</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>FECHAN</rd:DefaultName>
+        <Top>0.7176cm</Top>
+        <Left>15.16196cm</Left>
+        <Height>0.5cm</Height>
+        <Width>2.74693cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Fecha de nacimiento:</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>textbox2</rd:DefaultName>
+        <Top>0.7176cm</Top>
+        <Left>10.79766cm</Left>
+        <Height>0.5cm</Height>
+        <Width>4.29375cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="NOMBRE">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!NOMBRE.Value,"CMDataSet_PACIENTES") + " " + First(Fields!APELLIDO1.Value,"CMDataSet_PACIENTES") + " " + First(Fields!APELLIDO2.Value,"CMDataSet_PACIENTES")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>NOMBRE</rd:DefaultName>
+        <Top>0.56028cm</Top>
+        <Left>3.50898cm</Left>
+        <Height>0.53563cm</Height>
+        <Width>6.87419cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="FECHA">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=FormatDateTime(First(Fields!FECHA.Value, "CMDataSet_HISTORIALES"),DateFormat.ShortDate)</Value>
+                <Style>
+                  <Format>d</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>FECHA</rd:DefaultName>
+        <Top>0.18986cm</Top>
+        <Left>15.16196cm</Left>
+        <Height>0.5cm</Height>
+        <Width>2.78661cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="textbox14">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Fecha del informe:</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <Top>0.18986cm</Top>
+        <Left>10.79766cm</Left>
+        <Height>0.5cm</Height>
+        <Width>4.29375cm</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="NOMBRE2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Paciente Dº/Dª</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>NOMBRE</rd:DefaultName>
+        <Top>0.56028cm</Top>
+        <Left>0.60033cm</Left>
+        <Height>0.53563cm</Height>
+        <Width>2.90865cm</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="table1">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>2.26378in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.26378in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.26378in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.24997in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox17">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>MOTIVOS DE CONSULTA</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                                <TextDecoration>Underline</TextDecoration>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox17</rd:DefaultName>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>3</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.24997in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox26">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=iif(Fields!MOTIVO.Value is nothing,"",Replace(Trim(Fields!MOTIVO.Value.ToString),vbLF,""))</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>textbox26</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>3</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="table1_Details_Group">
+                <DataElementName>Detail</DataElementName>
+              </Group>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+              <DataElementName>Detail_Collection</DataElementName>
+              <DataElementOutput>Output</DataElementOutput>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>CMDataSet_HISTORIALES</DataSetName>
+        <Top>2.2225cm</Top>
+        <Left>0.24606in</Left>
+        <Height>1.26985cm</Height>
+        <Width>17.25cm</Width>
+        <ZIndex>6</ZIndex>
+        <Visibility>
+          <Hidden>=Fields!MOTIVO.Value is nothing or Trim(Fields!MOTIVO.Value) = ""</Hidden>
+        </Visibility>
+        <Style />
+      </Tablix>
+      <Tablix Name="table2">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>2.26378in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.26378in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.26378in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.24997in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox18">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>ANTECEDENTES PERSONALES</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                                <TextDecoration>Underline</TextDecoration>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>3</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.24997in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox4">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=iif(Fields!ANTECEDENTES.Value is nothing,"",Trim(Fields!ANTECEDENTES.Value.ToString))</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>3</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="table2_Details_Group">
+                <DataElementName>Detail</DataElementName>
+              </Group>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+              <DataElementName>Detail_Collection</DataElementName>
+              <DataElementOutput>Output</DataElementOutput>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>CMDataSet_HISTORIALES</DataSetName>
+        <Top>3.7225cm</Top>
+        <Left>0.24606in</Left>
+        <Height>1.26985cm</Height>
+        <Width>17.25cm</Width>
+        <ZIndex>7</ZIndex>
+        <Visibility>
+          <Hidden>=Fields!ANTECEDENTES.Value is nothing or Trim(Fields!ANTECEDENTES.Value) = ""</Hidden>
+        </Visibility>
+        <Style />
+      </Tablix>
+      <Tablix Name="table3">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>2.26378in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.26378in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.26378in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.24997in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox25">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>EXPLORACION FISICA</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                                <TextDecoration>Underline</TextDecoration>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>3</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.24997in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox5">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=iif(Fields!HISTORIAL.Value is nothing,"",Replace(Trim(Fields!HISTORIAL.Value.ToString),vbLF,""))</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>3</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="table3_Details_Group">
+                <DataElementName>Detail</DataElementName>
+              </Group>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+              <DataElementName>Detail_Collection</DataElementName>
+              <DataElementOutput>Output</DataElementOutput>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>CMDataSet_HISTORIALES</DataSetName>
+        <Top>5.43925cm</Top>
+        <Left>0.24606in</Left>
+        <Height>1.26985cm</Height>
+        <Width>17.25cm</Width>
+        <ZIndex>8</ZIndex>
+        <Visibility>
+          <Hidden>=Fields!HISTORIAL.Value is nothing or Trim(Fields!HISTORIAL.Value) = ""</Hidden>
+        </Visibility>
+        <Style />
+      </Tablix>
+      <Tablix Name="table4">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>2.26378in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.26378in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.26378in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.24997in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox7">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>PRUEBAS COMPLEMENTARIAS</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                                <TextDecoration>Underline</TextDecoration>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>3</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.24997in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox6">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=iif(Fields!EXPLORACION.Value is nothing,"",Replace(Trim(Fields!EXPLORACION.Value.ToString),vbLF,""))</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>3</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="table4_Details_Group">
+                <DataElementName>Detail</DataElementName>
+              </Group>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+              <DataElementName>Detail_Collection</DataElementName>
+              <DataElementOutput>Output</DataElementOutput>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>CMDataSet_HISTORIALES</DataSetName>
+        <Top>6.93925cm</Top>
+        <Left>0.24606in</Left>
+        <Height>1.26985cm</Height>
+        <Width>17.25cm</Width>
+        <ZIndex>9</ZIndex>
+        <Visibility>
+          <Hidden>=Fields!EXPLORACION.Value is nothing or Trim(Fields!EXPLORACION.Value) = ""</Hidden>
+        </Visibility>
+        <Style />
+      </Tablix>
+      <Tablix Name="table5">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>2.26378in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.26378in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.26378in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.24997in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox9">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>PRUEBAS COMPLEMENTARIAS</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                                <TextDecoration>Underline</TextDecoration>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>3</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.24997in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox8">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=iif(Fields!COMPLEMENTARIAS.Value is nothing,"",Replace(Trim(Fields!COMPLEMENTARIAS.Value.ToString),vbLF,""))</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>3</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="table5_Details_Group">
+                <DataElementName>Detail</DataElementName>
+              </Group>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+              <DataElementName>Detail_Collection</DataElementName>
+              <DataElementOutput>Output</DataElementOutput>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>CMDataSet_HISTORIALES</DataSetName>
+        <Top>8.43925cm</Top>
+        <Left>0.24606in</Left>
+        <Height>1.26985cm</Height>
+        <Width>17.25cm</Width>
+        <ZIndex>10</ZIndex>
+        <Visibility>
+          <Hidden>=Fields!COMPLEMENTARIAS.Value is nothing or Trim(Fields!COMPLEMENTARIAS.Value) = ""</Hidden>
+        </Visibility>
+        <Style />
+      </Tablix>
+      <Tablix Name="table6">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>2.26378in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.26378in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.26378in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.24997in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox28">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>DIAGNOSTICO</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                                <TextDecoration>Underline</TextDecoration>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>3</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.24997in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox27">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=iif(Fields!JUICIO.Value is nothing,"",Replace(Trim(Fields!JUICIO.Value.ToString),vbLF,""))</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>3</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="table6_Details_Group">
+                <DataElementName>Detail</DataElementName>
+              </Group>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+              <DataElementName>Detail_Collection</DataElementName>
+              <DataElementOutput>Output</DataElementOutput>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>CMDataSet_HISTORIALES</DataSetName>
+        <Top>9.93924cm</Top>
+        <Left>0.24606in</Left>
+        <Height>1.26985cm</Height>
+        <Width>17.25cm</Width>
+        <ZIndex>11</ZIndex>
+        <Visibility>
+          <Hidden>=Fields!JUICIO.Value is nothing or Trim(Fields!JUICIO.Value) = ""</Hidden>
+        </Visibility>
+        <Style />
+      </Tablix>
+      <Tablix Name="table7">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>2.26378in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.26378in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.26378in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.24997in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox11">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>TRATAMIENTO</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                                <TextDecoration>Underline</TextDecoration>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>3</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.24997in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox10">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=iif(Fields!TRATAMIENTO.Value is nothing,"",Replace(Trim(Fields!TRATAMIENTO.Value.ToString),vbLF,""))</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>3</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="table7_Details_Group">
+                <DataElementName>Detail</DataElementName>
+              </Group>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+              <Visibility>
+                <Hidden>=Fields!TRATAMIENTO.Value is nothing or Trim(Fields!TRATAMIENTO.Value) = ""</Hidden>
+              </Visibility>
+              <DataElementName>Detail_Collection</DataElementName>
+              <DataElementOutput>Output</DataElementOutput>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>CMDataSet_HISTORIALES</DataSetName>
+        <Top>11.43925cm</Top>
+        <Left>0.24606in</Left>
+        <Height>1.26985cm</Height>
+        <Width>17.25cm</Width>
+        <ZIndex>12</ZIndex>
+        <Visibility>
+          <Hidden>=Fields!TRATAMIENTO.Value is nothing or Trim(Fields!TRATAMIENTO.Value) = ""</Hidden>
+        </Visibility>
+        <Style />
+      </Tablix>
+      <Tablix Name="table8">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>0.80164in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>5.80709in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.24997in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox20">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>DIAGNOSTICOS:</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                                <TextDecoration>Underline</TextDecoration>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox20</rd:DefaultName>
+                      <Visibility>
+                        <Hidden>true</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border />
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>2</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.24997in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="CIE10">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!CIE10.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>CIE10</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox12">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!DIAGNOSTICO.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="table2_Details_Group2">
+                <DataElementName>Detail</DataElementName>
+              </Group>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+              <DataElementName>Detail_Collection</DataElementName>
+              <DataElementOutput>Output</DataElementOutput>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>dsLineasDiagnostico</DataSetName>
+        <Top>5.25925cm</Top>
+        <Left>0.24606in</Left>
+        <Height>1.26985cm</Height>
+        <Width>16.78617cm</Width>
+        <ZIndex>13</ZIndex>
+        <Visibility>
+          <Hidden>=Fields!DIAGNOSTICO.Value is nothing or Trim(Fields!DIAGNOSTICO.Value) = ""</Hidden>
+        </Visibility>
+        <Style />
+      </Tablix>
+      <Tablix Name="table9">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>2.26378in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.26378in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.26378in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.24997in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox13">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>OBSERVACIONES</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                                <TextDecoration>Underline</TextDecoration>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>3</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.24997in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="textbox15">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=iif(Fields!OTROS.Value is nothing,"",Replace(Trim(Fields!OTROS.Value.ToString),vbLF,""))</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>3</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Visibility>
+                <Hidden>=Fields!OTROS.Value is nothing or Trim(Fields!OTROS.Value) = ""</Hidden>
+              </Visibility>
+              <KeepWithGroup>After</KeepWithGroup>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="table7_Details_Group2">
+                <DataElementName>Detail</DataElementName>
+              </Group>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+              <Visibility>
+                <Hidden>=Fields!OTROS.Value is nothing or Trim(Fields!OTROS.Value) = ""</Hidden>
+              </Visibility>
+              <DataElementName>Detail_Collection</DataElementName>
+              <DataElementOutput>Output</DataElementOutput>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>CMDataSet_HISTORIALES</DataSetName>
+        <Top>13.038cm</Top>
+        <Left>0.24606in</Left>
+        <Height>1.26985cm</Height>
+        <Width>17.25cm</Width>
+        <ZIndex>14</ZIndex>
+        <Style />
+      </Tablix>
+      <Textbox Name="NIE3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=iif(not First(Fields!DNI.Value, "CMDataSet_PACIENTES") is nothing and First(Fields!DNI.Value, "CMDataSet_PACIENTES")&lt;&gt;"",First(Fields!DNI.Value, "CMDataSet_PACIENTES"),  
+iif(not First(Fields!PASAPORTE.Value, "CMDataSet_PACIENTES") is nothing and First(Fields!PASAPORTE.Value, "CMDataSet_PACIENTES")&lt;&gt;"",First(Fields!PASAPORTE.Value, "CMDataSet_PACIENTES"),
+iif(not First(Fields!NIE.Value, "CMDataSet_PACIENTES") is nothing and First(Fields!NIE.Value, "CMDataSet_PACIENTES")&lt;&gt;"",First(Fields!NIE.Value, "CMDataSet_PACIENTES"),"")))</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>NIE</rd:DefaultName>
+        <Top>1.39399cm</Top>
+        <Left>15.16258cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.8175cm</Width>
+        <ZIndex>15</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="NIE4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Microsoft.VisualBasic.Interaction.iif(Not First(Fields!DNI.Value, "CMDataSet_PACIENTES") Is Nothing and First(Fields!DNI.Value, "CMDataSet_PACIENTES")&lt;&gt; "" , "DNI :" , Microsoft.VisualBasic.Interaction.iif(Not First(Fields!PASAPORTE.Value, "CMDataSet_PACIENTES") Is Nothing and First(Fields!PASAPORTE.Value, "CMDataSet_PACIENTES") &lt;&gt;"", "PASAPORTE :" , Microsoft.VisualBasic.Interaction.iif(Not First(Fields!NIE.Value, "CMDataSet_PACIENTES") Is Nothing and First(Fields!NIE.Value, "CMDataSet_PACIENTES")&lt;&gt;"", "NIE : " , "")))</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>NIE</rd:DefaultName>
+        <Top>1.39399cm</Top>
+        <Left>12.24216cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.8175cm</Width>
+        <ZIndex>16</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Height>15.89535cm</Height>
+    <Style />
+  </Body>
+  <ReportParameters>
+    <ReportParameter Name="param_DNI">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_0</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="param_PASAPORTE">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FirmaMedicoPath">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Width>18.5cm</Width>
+  <Page>
+    <PageHeader>
+      <Height>5.34781cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="textbox1">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>INFORME MÉDICO</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>textbox1</rd:DefaultName>
+          <Top>4.28031cm</Top>
+          <Left>0.49398cm</Left>
+          <Height>0.75cm</Height>
+          <Width>9.42125cm</Width>
+          <Style>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Line Name="line1">
+          <Top>5.03031cm</Top>
+          <Left>0.48034cm</Left>
+          <Height>0cm</Height>
+          <Width>17.39717cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
+        <Textbox Name="Textbox29">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Jorge Martínez-Denegri y Mayo</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>
+Doctor en Medicina y Cirugía por la universidad de Navarra
+Especialista en Cir. Ortopédica y Traumatología por la Clínica Universitaria de Navarra
+Col. Oficial de Médicos Nº 29/31/3727</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>33446224S</Value>
+                  <Style>
+                    <FontStyle>Normal</FontStyle>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Normal</FontWeight>
+                    <TextDecoration>None</TextDecoration>
+                    <Color>#000000</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox16</rd:DefaultName>
+          <Top>0.81266in</Top>
+          <Left>2.66735in</Left>
+          <Height>0.80306in</Height>
+          <Width>4.427in</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Image Name="Image1">
+          <Source>Embedded</Source>
+          <Value>malagaSoloLogo</Value>
+          <Sizing>FitProportional</Sizing>
+          <Top>0.3175cm</Top>
+          <Left>0.57499cm</Left>
+          <Height>2.77812cm</Height>
+          <Width>3.75708cm</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+        <Textbox Name="Textbox3">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Cirujanos Ortopedas - Traumatólogos y asoc.</Value>
+                  <Style>
+                    <FontSize>11pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox3</rd:DefaultName>
+          <Top>1.40656cm</Top>
+          <Left>4.47319cm</Left>
+          <Height>0.6cm</Height>
+          <Width>9.7117cm</Width>
+          <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style />
+    </PageHeader>
+    <PageFooter>
+      <Height>1.82562cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Image Name="Image2">
+          <Source>External</Source>
+          <Value>=Parameters!FirmaMedicoPath.Value</Value>
+          <Sizing>FitProportional</Sizing>
+          <Top>0.289cm</Top>
+          <Left>14.60848cm</Left>
+          <Height>1.04174cm</Height>
+          <Width>3.41117cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageFooter>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>0.5cm</LeftMargin>
+    <RightMargin>0.5cm</RightMargin>
+    <TopMargin>0.5cm</TopMargin>
+    <BottomMargin>0.5cm</BottomMargin>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <EmbeddedImages>
+    <EmbeddedImage Name="malagaSoloLogo">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <Language>es</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportID>9a766373-d122-4f47-8b46-b49e02fd6c58</rd:ReportID>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+</Report>

@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<lista>
+
+  
+
+
+  <reporte id="PartesAsistenciasListado.rdlc"    fichero="PartesAsistenciasListado.rdlc"                info="Listado de Partes de Asistencias" />
+
+  <reporte id="PlantillasAnaliticasListado.rdlc"    fichero="PlantillasAnaliticasListado.rdlc"          info="Listado de Plantillas de Analíticas" />
+
+  <reporte id="PlantillaTextosListado.rdlc"         fichero="PlantillaTextosListado.rdlc"               info="Listado de Plantillas de Texto" />
+
+  <reporte id="UsuariosListado.rdlc"                fichero="UsuariosListado.rdlc"                      info="Listado de Usuarios" />
+
+  <reporte id="TPVProveedoresListado.rdlc"          fichero="TPVProveedoresListado.rdlc"                info="TPV, Listado de Proveedores" />
+
+  <reporte id="Proceso.rdlc"    fichero="Proceso.rdlc"           info="Ficha de Proceso" />
+
+  <reporte id="PlantillaAnalíticasListado.rdlc"    fichero="PlantillaAnalíticasListado.rdlc"           info="Listado de Plantillas Analíticas" />
+
+  
+  <reporte id="PaisesListado.rdlc"                 fichero="PaisesListado.rdlc"                       info="Listado de Paises" />
+
+  <reporte id="MutuasListado.rdlc"                 fichero="MutuasListado.rdlc"                       info="Listado de Mutuas" />
+
+  <reporte id="RecibosListado.rdlc"                 fichero="RecibosListado.rdlc"                       info="Listado de Recibos" />
+
+  
+  <reporte id="ProcesosListado.rdlc"                 fichero="ProcesosListado.rdlc"                       info="Listado de Procesos" />
+
+
+  <reporte id="PartesBajaAltaListado.rdlc"           fichero="PartesBajaAltaListado.rdlc"                 info="Listado de Partes Baja y Alta" />
+
+  <reporte id="FaltasListado.rdlc"                   fichero="FaltasListado.rdlc"                         info="Listado de Faltas" />
+
+  <reporte id="ComoConocioListado.rdlc"              fichero="ComoConocioListado.rdlc"                    info="Listado de Como Nos Conoció" />
+
+  <reporte id="IndicacionesListado.rdlc"             fichero="IndicacionesListado.rdlc"                   info="Listado de Gastos" />
+
+  <reporte id="GastosListado.rdlc"                   fichero="GastosListado.rdlc"                         info="Listado de Gastos" />
+
+  <reporte id="FormasPagoListado.rdlc"               fichero="FormasPagoListado.rdlc"                     info="Listado de Formas de Pago" />
+
+  <reporte id="EstadisticasDiagnosticos.rdlc"        fichero="EstadisticasDiagnosticos.rdlc"              info="Estadísticas de Diagnósticos" />
+
+  
+  <reporte id="DiagnosticosListado.rdlc"             fichero="DiagnosticosListado.rdlc"                   info="Listado de Diagnósticos" />
+
+  <reporte id="EmpresasListado.rdlc"                 fichero="EmpresasListado.rdlc"                       info="Listado de Empresas" />
+  <reporte id="Recibo.rdlc"                          fichero="Recibo.rdlc"                                info="Recibo" />
+
+
+  <reporte id="Derivacion.rdlc"                      fichero="Derivacion.rdlc"                            info="Derivacion" />
+  <reporte id="DerivacionesDestinosListado.rdlc"     fichero="DerivacionesDestinosListado.rdlc"           info="Listado de Derivaciones Destinos" />
+
+  
+
+  <reporte id="ConceptosFacturablesListado.rdlc"     fichero="ConceptosFacturablesListado.rdlc"           info="Listado de Conceptos Facturables" />
+  <reporte id="ConceptosAnaliticasListado.rdlc"      fichero="ConceptosAnaliticasListado.rdlc"            info="Listado de Conceptos de Analiticas" />
+  <reporte id="BancosListado.rdlc"                   fichero="BancosListado.rdlc"                         info="Listado de Bancos" />
+
+
+  <reporte id="ParteAsistencia.rdlc"            fichero="ParteAsistencia.rdlc"                        info="Parte Médico de Asistencia Sanitaria" />
+  
+  <reporte id="AnaliticaPeticion.rdlc"            fichero="AnaliticaPeticion.rdlc"                        info="Petición de Analítica" />
+  <reporte id="AuditoriasListado.rdlc"                   fichero="AuditoriasListado.rdlc"                 info="Listado de Auditorias" />
+  
+  
+  <reporte id="ParteBajaAlta.rdlc"                fichero="ParteBajaAlta.rdlc"                            info="Reporte de Bajas y Altas" />
+  <reporte id="TPVArticulosListado.rdlc"          fichero="TPVArticulosListado.rdlc"                      info="Listado de Artículos" />
+
+  <reporte id="AlarmasListado.rdlc"               fichero="AlarmasListado.rdlc"                           info="Listado de Alarmas" />  
+  <reporte id="AlarmasListadoPorPacientes.rdlc"   fichero="AlarmasListadoPorPacientes.rdlc"               info="Listado de pacientes por Alarma" />
+  
+  <reporte id="CitaJustificantePago.rdlc"         fichero="CitaJustificantePago.rdlc"                     info="Justificante de Pago de Cita" />
+  <reporte id="CitaJustificante.rdlc"             fichero="CitaJustificante.rdlc"                         info="Justificante Recordatorio de Cita" />
+  <reporte id="CitaJustificanteAsistencia.rdlc"   fichero="CitaJustificanteAsistencia.rdlc"               info="Justificante de Asistencia a Cita" />
+  <reporte id="CitasListado.rdlc"                 fichero="CitasListado.rdlc"                             info="Listado de Citas" />
+  <reporte id="CitasListadoConImportes.rdlc"      fichero="CitasListadoConImportes.rdlc"                  info="Listado de Citas con importes incluidos" />
+  <reporte id="CitasIngresosPorMedico.rdlc"       fichero="CitasIngresosPorMedico.rdlc"                   info="Listado de Citas/Ingresos por Médico" />
+
+  <reporte id="Factura.rdlc"                      fichero="Factura.rdlc"                                  info="Factura Paciente" />
+  <reporte id="FacturaMutua.rdlc"                 fichero="FacturaMutua.rdlc"                             info="Factura Mutua" />
+  <reporte id="FacturasListado.rdlc"              fichero="FacturasListado.rdlc"                          info="Listado de Facturas" />
+
+  <reporte id="Receta.rdlc"                       fichero="Receta.rdlc"                                   info="Receta, formato normal" />
+  <reporte id="RecetaOficial.rdlc"                fichero="RecetaOficial.rdlc"                            info="Receta, formato oficial" />
+  <reporte id="RecetaOficialImpresa.rdlc"        fichero="RecetaOficialImpresa.rdlc"                    info="Receta, formato oficial Impresa" />
+  <reporte id="RecetasListado.rdlc"               fichero="RecetasListado.rdlc"                           info="Listado de Recetas" />
+
+  <reporte id="RevisionComparativaClinica.rdlc"   fichero="RevisionComparativaClinica.rdlc"               info="Revision Comparativa para la Clinica" />
+  <reporte id="RevisionComparativaPaciente.rdlc"  fichero="RevisionComparativaPaciente.rdlc"              info="Revision Comparativa para el Paciente" />
+  <reporte id="RevisionComparativaParcial.rdlc"   fichero="RevisionComparativaParcial.rdlc"               info="Revision Comparativa Parcial" />
+
+  <reporte id="MedicoJustificantePago.rdlc"       fichero="MedicoJustificantePago.rdlc"                   info="Justificante de Pago al Médico" />
+  <reporte id="MedicoReporteDebito.rdlc"          fichero="MedicoReporteDebito.rdlc"                      info="Débito a Médico por Citas" />
+  <reporte id="MedicoHorarioDiasLaborables.rdlc"  fichero="MedicoHorarioDiasLaborables.rdlc"              info="Dias no laborables de un Médico" />
+  <reporte id="MedicosHorariosListado.rdlc"       fichero="MedicosHorariosListado.rdlc"                   info="Lista de Disponibilidad de Horario" />
+  <reporte id="MedicosListado.rdlc"               fichero="MedicosListado.rdlc"                           info="Listado de Médicos" />
+
+  
+
+  <reporte id="DentalOdontograma.rdlc"            fichero="DentalOdontograma.rdlc"                        info="Dental, Odontograma de Paciente" />
+  <reporte id="DentalPresupuesto.rdlc"            fichero="DentalPresupuesto.rdlc"                        info="Dental, Presupuesto" />
+
+  <reporte id="TPVFacturaVentas.rdlc"             fichero="TPVFacturaVentas.rdlc"                         info="TPV, Factura de Ventas" />
+  <reporte id="TPVFacturasVentasListado.rdlc"     fichero="TPVFacturasVentasListado.rdlc"                 info="TPV, Listado de Facturas de Ventas " />
+  <reporte id="TPVTicket.rdlc"                    fichero="TPVTicket.rdlc"                                info="TPV, Ticket " />
+  <reporte id="TPVTicketsListado.rdlc"            fichero="TPVTicketsListado.rdlc"                        info="TPV, Listado de Tickets" />
+
+  <reporte id="Paciente.rdlc"                     fichero="Paciente.rdlc"                                 info="Ficha de Paciente" />
+  <reporte id="PacientesListado.rdlc"             fichero="PacientesListado.rdlc"                         info="Listado de Pacientes" />
+  <reporte id="PacientesPorDerivaciones.rdlc"     fichero="PacientesPorDerivaciones.rdlc"                 info="Informe de Pacientes por Derivaciones" />
+  <reporte id="PacientesPorDiagnostico.rdlc"      fichero="PacientesPorDiagnostico.rdlc"                  info="Informe de Pacientes por Diagnosticos" />
+  <reporte id="PacienteDebitoResumen.rdlc"        fichero="PacienteDebitoResumen.rdlc"                    info="Resumen de Pagos y Entregas" />
+  
+  <reporte id="InformeMedico.rdlc"                fichero="InformeMedico.rdlc"                            info="Informe Médico" />
+  <reporte id="LibroDiario.rdlc"                  fichero="LibroDiario.rdlc"                              info="Libro de Ingresos y Gastos" />
+
+  <reporte id="MedicamentosListado.rdlc"          fichero="MedicamentosListado.rdlc"                      info="Listado de Medicamentos" />
+  <reporte id="HistorialesResumen.rdlc"          fichero="HistorialesResumen.rdlc"                        info="Resumen de Historiales" />
+
+  <reporte id="EntregaJustificante.rdlc"          fichero="EntregaJustificante.rdlc"                      info="Justificante de Entrega de crédito" />
+  <reporte id="Consentimiento.rdlc"               fichero="Consentimiento.rdlc"                           info="Consentimiento genérico para firmar el paciente" />
+  <reporte id="AnaliticasListado.rdlc"               fichero="AnaliticasListado.rdlc"                        info="Listado de las Analíticas solicitadas" />
+</lista>
+

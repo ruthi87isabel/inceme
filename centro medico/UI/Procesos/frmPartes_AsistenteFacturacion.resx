@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="CITABindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>239, 17</value>
+  </metadata>
+  <data name="GridEX1_DesignTimeLayout.LayoutString" xml:space="preserve">
+    <value>&lt;GridEXLayoutData&gt;&lt;RootTable&gt;&lt;Key&gt;CITA&lt;/Key&gt;&lt;Caption&gt;CITA&lt;/Caption&gt;&lt;Columns Collection="true" ElementName="Column"&gt;&lt;Column0 ID="IDCITA"&gt;&lt;Caption&gt;IDCITA&lt;/Caption&gt;&lt;DataTypeCode&gt;Int32&lt;/DataTypeCode&gt;&lt;BoundMode&gt;UnboundFetch&lt;/BoundMode&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;IDCITA&lt;/DataMember&gt;&lt;Key&gt;IDCITA&lt;/Key&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;Width&gt;33&lt;/Width&gt;&lt;ActAsSelector&gt;True&lt;/ActAsSelector&gt;&lt;DataTypeCode&gt;Int32&lt;/DataTypeCode&gt;&lt;/Column0&gt;&lt;Column1 ID="REFPACIENTE"&gt;&lt;Caption&gt;REFPACIENTE&lt;/Caption&gt;&lt;DataTypeCode&gt;Int32&lt;/DataTypeCode&gt;&lt;DataMember&gt;REFPACIENTE&lt;/DataMember&gt;&lt;Key&gt;REFPACIENTE&lt;/Key&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column1&gt;&lt;Column2 ID="FECHA"&gt;&lt;Caption&gt;FECHA&lt;/Caption&gt;&lt;DataTypeCode&gt;DateTime&lt;/DataTypeCode&gt;&lt;DataMember&gt;FECHA&lt;/DataMember&gt;&lt;DefaultGroupInterval&gt;Date&lt;/DefaultGroupInterval&gt;&lt;EditType&gt;CalendarCombo&lt;/EditType&gt;&lt;FormatString&gt;d&lt;/FormatString&gt;&lt;Key&gt;FECHA&lt;/Key&gt;&lt;Position&gt;2&lt;/Position&gt;&lt;Width&gt;68&lt;/Width&gt;&lt;/Column2&gt;&lt;Column3 ID="HORA"&gt;&lt;Caption&gt;HORA&lt;/Caption&gt;&lt;DataTypeCode&gt;DateTime&lt;/DataTypeCode&gt;&lt;DataMember&gt;HORA&lt;/DataMember&gt;&lt;DefaultGroupInterval&gt;Date&lt;/DefaultGroupInterval&gt;&lt;EditType&gt;CalendarCombo&lt;/EditType&gt;&lt;FormatString&gt;t&lt;/FormatString&gt;&lt;Key&gt;HORA&lt;/Key&gt;&lt;Position&gt;3&lt;/Position&gt;&lt;Width&gt;54&lt;/Width&gt;&lt;/Column3&gt;&lt;Column4 ID="CONFIRMADA"&gt;&lt;Caption&gt;CONFIRMADA&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;CONFIRMADA&lt;/DataMember&gt;&lt;Key&gt;CONFIRMADA&lt;/Key&gt;&lt;Position&gt;4&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column4&gt;&lt;Column5 ID="NOTAS"&gt;&lt;Caption&gt;NOTAS&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;NOTAS&lt;/DataMember&gt;&lt;Key&gt;NOTAS&lt;/Key&gt;&lt;Position&gt;5&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column5&gt;&lt;Column6 ID="REFMEDICO"&gt;&lt;Caption&gt;REFMEDICO&lt;/Caption&gt;&lt;DataTypeCode&gt;Int32&lt;/DataTypeCode&gt;&lt;DataMember&gt;REFMEDICO&lt;/DataMember&gt;&lt;Key&gt;REFMEDICO&lt;/Key&gt;&lt;Position&gt;6&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column6&gt;&lt;Column7 ID="PACIENTE"&gt;&lt;Caption&gt;PACIENTE&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;PACIENTE&lt;/DataMember&gt;&lt;Key&gt;PACIENTE&lt;/Key&gt;&lt;Position&gt;7&lt;/Position&gt;&lt;Width&gt;126&lt;/Width&gt;&lt;/Column7&gt;&lt;Column8 ID="IMPORTEDR"&gt;&lt;Caption&gt;Importe Dr&lt;/Caption&gt;&lt;DataTypeCode&gt;Decimal&lt;/DataTypeCode&gt;&lt;DataMember&gt;IMPORTEDR&lt;/DataMember&gt;&lt;FormatString&gt;c&lt;/FormatString&gt;&lt;Key&gt;IMPORTEDR&lt;/Key&gt;&lt;Position&gt;8&lt;/Position&gt;&lt;Width&gt;66&lt;/Width&gt;&lt;/Column8&gt;&lt;Column9 ID="IMPORTECL"&gt;&lt;Caption&gt;Importe Clinica&lt;/Caption&gt;&lt;DataTypeCode&gt;Decimal&lt;/DataTypeCode&gt;&lt;DataMember&gt;IMPORTECL&lt;/DataMember&gt;&lt;FormatString&gt;c&lt;/FormatString&gt;&lt;Key&gt;IMPORTECL&lt;/Key&gt;&lt;Position&gt;9&lt;/Position&gt;&lt;Width&gt;86&lt;/Width&gt;&lt;/Column9&gt;&lt;Column10 ID="CONTINUA"&gt;&lt;Caption&gt;CONTINUA&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;CONTINUA&lt;/DataMember&gt;&lt;Key&gt;CONTINUA&lt;/Key&gt;&lt;Position&gt;10&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column10&gt;&lt;Column11 ID="FALTA"&gt;&lt;Caption&gt;FALTA&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;FALTA&lt;/DataMember&gt;&lt;Key&gt;FALTA&lt;/Key&gt;&lt;Position&gt;11&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column11&gt;&lt;Column12 ID="BANCO"&gt;&lt;Caption&gt;BANCO&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;BANCO&lt;/DataMember&gt;&lt;Key&gt;BANCO&lt;/Key&gt;&lt;Position&gt;12&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column12&gt;&lt;Column13 ID="PAGADA"&gt;&lt;Caption&gt;PAGADA&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;PAGADA&lt;/DataMember&gt;&lt;Key&gt;PAGADA&lt;/Key&gt;&lt;Position&gt;13&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column13&gt;&lt;Column14 ID="REFRECIBO"&gt;&lt;Caption&gt;REFRECIBO&lt;/Caption&gt;&lt;DataTypeCode&gt;Int32&lt;/DataTypeCode&gt;&lt;DataMember&gt;REFRECIBO&lt;/DataMember&gt;&lt;Key&gt;REFRECIBO&lt;/Key&gt;&lt;Position&gt;14&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column14&gt;&lt;Column15 ID="ATENDIDO"&gt;&lt;Caption&gt;ATENDIDO&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;ATENDIDO&lt;/DataMember&gt;&lt;Key&gt;ATENDIDO&lt;/Key&gt;&lt;Position&gt;15&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column15&gt;&lt;Column16 ID="REFFRA"&gt;&lt;Caption&gt;REFFRA&lt;/Caption&gt;&lt;DataTypeCode&gt;Int32&lt;/DataTypeCode&gt;&lt;DataMember&gt;REFFRA&lt;/DataMember&gt;&lt;Key&gt;REFFRA&lt;/Key&gt;&lt;Position&gt;16&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column16&gt;&lt;Column17 ID="REFFORMAPAGO"&gt;&lt;Caption&gt;REFFORMAPAGO&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;REFFORMAPAGO&lt;/DataMember&gt;&lt;Key&gt;REFFORMAPAGO&lt;/Key&gt;&lt;Position&gt;17&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column17&gt;&lt;Column18 ID="HORAFIN"&gt;&lt;Caption&gt;HORAFIN&lt;/Caption&gt;&lt;DataTypeCode&gt;DateTime&lt;/DataTypeCode&gt;&lt;DataMember&gt;HORAFIN&lt;/DataMember&gt;&lt;DefaultGroupInterval&gt;Date&lt;/DefaultGroupInterval&gt;&lt;EditType&gt;CalendarCombo&lt;/EditType&gt;&lt;FormatString&gt;t&lt;/FormatString&gt;&lt;Key&gt;HORAFIN&lt;/Key&gt;&lt;Position&gt;18&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;64&lt;/Width&gt;&lt;/Column18&gt;&lt;Column19 ID="FECHACOBRO"&gt;&lt;Caption&gt;FECHACOBRO&lt;/Caption&gt;&lt;DataTypeCode&gt;DateTime&lt;/DataTypeCode&gt;&lt;DataMember&gt;FECHACOBRO&lt;/DataMember&gt;&lt;DefaultGroupInterval&gt;Date&lt;/DefaultGroupInterval&gt;&lt;EditType&gt;CalendarCombo&lt;/EditType&gt;&lt;FormatString&gt;d&lt;/FormatString&gt;&lt;Key&gt;FECHACOBRO&lt;/Key&gt;&lt;Position&gt;19&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column19&gt;&lt;Column20 ID="REFPROCEDENCIA"&gt;&lt;Caption&gt;REFPROCEDENCIA&lt;/Caption&gt;&lt;DataTypeCode&gt;Int32&lt;/DataTypeCode&gt;&lt;DataMember&gt;REFPROCEDENCIA&lt;/DataMember&gt;&lt;Key&gt;REFPROCEDENCIA&lt;/Key&gt;&lt;Position&gt;20&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column20&gt;&lt;Column21 ID="ID_Proceso"&gt;&lt;Caption&gt;ID Proceso&lt;/Caption&gt;&lt;DataTypeCode&gt;Int64&lt;/DataTypeCode&gt;&lt;DataMember&gt;ID_Proceso&lt;/DataMember&gt;&lt;Key&gt;ID_Proceso&lt;/Key&gt;&lt;Position&gt;21&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column21&gt;&lt;Column22 ID="EstadoRecurrencia"&gt;&lt;Caption&gt;Estado Recurrencia&lt;/Caption&gt;&lt;DataTypeCode&gt;Int32&lt;/DataTypeCode&gt;&lt;DataMember&gt;EstadoRecurrencia&lt;/DataMember&gt;&lt;Key&gt;EstadoRecurrencia&lt;/Key&gt;&lt;Position&gt;22&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column22&gt;&lt;Column23 ID="FechaUltimoEstadoRecurrencia"&gt;&lt;Caption&gt;Fecha Ultimo Estado Recurrencia&lt;/Caption&gt;&lt;DataTypeCode&gt;DateTime&lt;/DataTypeCode&gt;&lt;DataMember&gt;FechaUltimoEstadoRecurrencia&lt;/DataMember&gt;&lt;DefaultGroupInterval&gt;Date&lt;/DefaultGroupInterval&gt;&lt;EditType&gt;CalendarCombo&lt;/EditType&gt;&lt;FormatString&gt;d&lt;/FormatString&gt;&lt;Key&gt;FechaUltimoEstadoRecurrencia&lt;/Key&gt;&lt;Position&gt;23&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column23&gt;&lt;Column24 ID="Descuento"&gt;&lt;Caption&gt;Descuento&lt;/Caption&gt;&lt;DataTypeCode&gt;Double&lt;/DataTypeCode&gt;&lt;DataMember&gt;Descuento&lt;/DataMember&gt;&lt;Key&gt;Descuento&lt;/Key&gt;&lt;Position&gt;24&lt;/Position&gt;&lt;Width&gt;67&lt;/Width&gt;&lt;/Column24&gt;&lt;Column25 ID="ID_SALA"&gt;&lt;Caption&gt;ID SALA&lt;/Caption&gt;&lt;DataTypeCode&gt;Int32&lt;/DataTypeCode&gt;&lt;DataMember&gt;ID_SALA&lt;/DataMember&gt;&lt;Key&gt;ID_SALA&lt;/Key&gt;&lt;Position&gt;25&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column25&gt;&lt;Column26 ID="TOTAL"&gt;&lt;Caption&gt;TOTAL&lt;/Caption&gt;&lt;DataTypeCode&gt;Decimal&lt;/DataTypeCode&gt;&lt;DataMember&gt;TOTAL&lt;/DataMember&gt;&lt;FormatString&gt;c2&lt;/FormatString&gt;&lt;Key&gt;TOTAL&lt;/Key&gt;&lt;Position&gt;26&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;59&lt;/Width&gt;&lt;/Column26&gt;&lt;Column27 ID="FORMASPAGO"&gt;&lt;Caption&gt;FORMASPAGO&lt;/Caption&gt;&lt;DataMember&gt;FORMASPAGO&lt;/DataMember&gt;&lt;Key&gt;FORMASPAGO&lt;/Key&gt;&lt;Position&gt;27&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column27&gt;&lt;Column28 ID="SALA"&gt;&lt;Caption&gt;SALA&lt;/Caption&gt;&lt;DataMember&gt;SALA&lt;/DataMember&gt;&lt;Key&gt;SALA&lt;/Key&gt;&lt;Position&gt;28&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column28&gt;&lt;Column29 ID="MEDICO"&gt;&lt;Caption&gt;MEDICO&lt;/Caption&gt;&lt;DataMember&gt;MEDICO&lt;/DataMember&gt;&lt;Key&gt;MEDICO&lt;/Key&gt;&lt;Position&gt;29&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column29&gt;&lt;Column30 ID="PACIENTE1"&gt;&lt;Caption&gt;PACIENTE1&lt;/Caption&gt;&lt;DataMember&gt;PACIENTE1&lt;/DataMember&gt;&lt;Key&gt;PACIENTE1&lt;/Key&gt;&lt;Position&gt;30&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column30&gt;&lt;Column31 ID="MUTUA"&gt;&lt;Caption&gt;MUTUA&lt;/Caption&gt;&lt;DataMember&gt;MUTUA&lt;/DataMember&gt;&lt;Key&gt;MUTUA&lt;/Key&gt;&lt;Position&gt;31&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column31&gt;&lt;/Columns&gt;&lt;SortKeys Collection="true" ElementName="SortKey"&gt;&lt;SortKey0 ID="SortKey0"&gt;&lt;ColIndex&gt;2&lt;/ColIndex&gt;&lt;SortOrder&gt;Descending&lt;/SortOrder&gt;&lt;/SortKey0&gt;&lt;/SortKeys&gt;&lt;ChildTables Collection="true" ElementName="Table"&gt;&lt;Table0 ID="LineasCitas"&gt;&lt;DataMember&gt;LineasCitas&lt;/DataMember&gt;&lt;FilterParentRows&gt;False&lt;/FilterParentRows&gt;&lt;Key&gt;LineasCitas&lt;/Key&gt;&lt;Caption&gt;LineasCita&lt;/Caption&gt;&lt;Columns Collection="true" ElementName="Column"&gt;&lt;Column0 ID="IdLinea"&gt;&lt;Caption&gt;Id Linea&lt;/Caption&gt;&lt;DataTypeCode&gt;Int64&lt;/DataTypeCode&gt;&lt;BoundMode&gt;UnboundFetch&lt;/BoundMode&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;IdLinea&lt;/DataMember&gt;&lt;Key&gt;IdLinea&lt;/Key&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;42&lt;/Width&gt;&lt;ActAsSelector&gt;True&lt;/ActAsSelector&gt;&lt;DataTypeCode&gt;Int64&lt;/DataTypeCode&gt;&lt;/Column0&gt;&lt;Column1 ID="IdCita"&gt;&lt;Caption&gt;Id Cita&lt;/Caption&gt;&lt;DataTypeCode&gt;Int32&lt;/DataTypeCode&gt;&lt;DataMember&gt;IdCita&lt;/DataMember&gt;&lt;Key&gt;IdCita&lt;/Key&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column1&gt;&lt;Column2 ID="RefConcepto"&gt;&lt;Caption&gt;Cod&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;RefConcepto&lt;/DataMember&gt;&lt;Key&gt;RefConcepto&lt;/Key&gt;&lt;Position&gt;2&lt;/Position&gt;&lt;Width&gt;54&lt;/Width&gt;&lt;/Column2&gt;&lt;Column3 ID="DESCRIPCION"&gt;&lt;Caption&gt;Descripcion&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;DESCRIPCION&lt;/DataMember&gt;&lt;Key&gt;DESCRIPCION&lt;/Key&gt;&lt;Position&gt;3&lt;/Position&gt;&lt;Width&gt;210&lt;/Width&gt;&lt;/Column3&gt;&lt;Column4 ID="Cantidad"&gt;&lt;Caption&gt;Cantidad&lt;/Caption&gt;&lt;DataTypeCode&gt;Double&lt;/DataTypeCode&gt;&lt;DataMember&gt;Cantidad&lt;/DataMember&gt;&lt;Key&gt;Cantidad&lt;/Key&gt;&lt;Position&gt;4&lt;/Position&gt;&lt;Width&gt;57&lt;/Width&gt;&lt;/Column4&gt;&lt;Column5 ID="ImporteClinica"&gt;&lt;Caption&gt;Importe Clinica&lt;/Caption&gt;&lt;DataTypeCode&gt;Double&lt;/DataTypeCode&gt;&lt;DataMember&gt;ImporteClinica&lt;/DataMember&gt;&lt;Key&gt;ImporteClinica&lt;/Key&gt;&lt;Position&gt;5&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column5&gt;&lt;Column6 ID="ImporteDr"&gt;&lt;Caption&gt;Importe Dr&lt;/Caption&gt;&lt;DataTypeCode&gt;Double&lt;/DataTypeCode&gt;&lt;DataMember&gt;ImporteDr&lt;/DataMember&gt;&lt;Key&gt;ImporteDr&lt;/Key&gt;&lt;Position&gt;6&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column6&gt;&lt;Column7 ID="Duracion"&gt;&lt;Caption&gt;Duracion&lt;/Caption&gt;&lt;DataTypeCode&gt;DateTime&lt;/DataTypeCode&gt;&lt;DataMember&gt;Duracion&lt;/DataMember&gt;&lt;DefaultGroupInterval&gt;Date&lt;/DefaultGroupInterval&gt;&lt;EditType&gt;CalendarCombo&lt;/EditType&gt;&lt;FormatString&gt;d&lt;/FormatString&gt;&lt;Key&gt;Duracion&lt;/Key&gt;&lt;Position&gt;7&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column7&gt;&lt;Column8 ID="RefLineaPresupuestoDental"&gt;&lt;Caption&gt;Ref Linea Presupuesto Dental&lt;/Caption&gt;&lt;DataTypeCode&gt;Int64&lt;/DataTypeCode&gt;&lt;DataMember&gt;RefLineaPresupuestoDental&lt;/DataMember&gt;&lt;Key&gt;RefLineaPresupuestoDental&lt;/Key&gt;&lt;Position&gt;8&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column8&gt;&lt;Column9 ID="DescuentoPercent"&gt;&lt;Caption&gt;Dto %&lt;/Caption&gt;&lt;DataTypeCode&gt;Double&lt;/DataTypeCode&gt;&lt;DataMember&gt;DescuentoPercent&lt;/DataMember&gt;&lt;Key&gt;DescuentoPercent&lt;/Key&gt;&lt;Position&gt;9&lt;/Position&gt;&lt;Width&gt;43&lt;/Width&gt;&lt;/Column9&gt;&lt;Column10 ID="Total"&gt;&lt;Caption&gt;Total&lt;/Caption&gt;&lt;DataTypeCode&gt;Double&lt;/DataTypeCode&gt;&lt;DataMember&gt;Total&lt;/DataMember&gt;&lt;FormatString&gt;C2&lt;/FormatString&gt;&lt;Key&gt;Total&lt;/Key&gt;&lt;Position&gt;10&lt;/Position&gt;&lt;Width&gt;59&lt;/Width&gt;&lt;/Column10&gt;&lt;Column11 ID="RefLineaFactura"&gt;&lt;Caption&gt;Ref Linea Factura&lt;/Caption&gt;&lt;DataTypeCode&gt;Int32&lt;/DataTypeCode&gt;&lt;DataMember&gt;RefLineaFactura&lt;/DataMember&gt;&lt;Key&gt;RefLineaFactura&lt;/Key&gt;&lt;Position&gt;11&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column11&gt;&lt;Column12 ID="CITA"&gt;&lt;Caption&gt;CITA&lt;/Caption&gt;&lt;DataMember&gt;CITA&lt;/DataMember&gt;&lt;Key&gt;CITA&lt;/Key&gt;&lt;Position&gt;12&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column12&gt;&lt;Column13 ID="d_PresupuestoLinea"&gt;&lt;Caption&gt;d Presupuesto Linea&lt;/Caption&gt;&lt;DataMember&gt;d_PresupuestoLinea&lt;/DataMember&gt;&lt;Key&gt;d_PresupuestoLinea&lt;/Key&gt;&lt;Position&gt;13&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column13&gt;&lt;Column14 ID="FACTURADA"&gt;&lt;Caption&gt;FACTURADA&lt;/Caption&gt;&lt;BoundMode&gt;UnboundFetch&lt;/BoundMode&gt;&lt;DataMember&gt;FACTURADA&lt;/DataMember&gt;&lt;Key&gt;FACTURADA&lt;/Key&gt;&lt;Position&gt;14&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column14&gt;&lt;/Columns&gt;&lt;SortKeys Collection="true" ElementName="SortKey"&gt;&lt;SortKey0 ID="SortKey0"&gt;&lt;ColIndex&gt;2&lt;/ColIndex&gt;&lt;SortOrder&gt;Descending&lt;/SortOrder&gt;&lt;/SortKey0&gt;&lt;/SortKeys&gt;&lt;GroupCondition /&gt;&lt;/Table0&gt;&lt;/ChildTables&gt;&lt;GroupCondition /&gt;&lt;StoredFilters Collection="true" ElementName="StoredFilter"&gt;&lt;StoredFilter0 ID="StoredFilterIncluirCero"&gt;&lt;FilterCondition&gt;&lt;ColumnIndex&gt;26&lt;/ColumnIndex&gt;&lt;ConditionOperator&gt;GreaterThanOrEqualTo&lt;/ConditionOperator&gt;&lt;TypeNameValue1&gt;System.Decimal&lt;/TypeNameValue1&gt;&lt;Value1&gt;0&lt;/Value1&gt;&lt;Conditions Collection="true" ElementName="FilterCondition"&gt;&lt;FilterCondition0&gt;&lt;ColumnIndex&gt;26&lt;/ColumnIndex&gt;&lt;ConditionOperator&gt;IsNull&lt;/ConditionOperator&gt;&lt;LogicalOperator&gt;Or&lt;/LogicalOperator&gt;&lt;/FilterCondition0&gt;&lt;/Conditions&gt;&lt;/FilterCondition&gt;&lt;Key&gt;StoredFilterIncluirCero&lt;/Key&gt;&lt;/StoredFilter0&gt;&lt;StoredFilter1 ID="StoredFilterSinIncluirCero"&gt;&lt;FilterCondition&gt;&lt;ColumnIndex&gt;26&lt;/ColumnIndex&gt;&lt;ConditionOperator&gt;GreaterThan&lt;/ConditionOperator&gt;&lt;TypeNameValue1&gt;System.Decimal&lt;/TypeNameValue1&gt;&lt;Value1&gt;0&lt;/Value1&gt;&lt;Conditions Collection="true" ElementName="FilterCondition"&gt;&lt;FilterCondition0&gt;&lt;ColumnIndex&gt;26&lt;/ColumnIndex&gt;&lt;ConditionOperator&gt;IsNull&lt;/ConditionOperator&gt;&lt;LogicalOperator&gt;Or&lt;/LogicalOperator&gt;&lt;/FilterCondition0&gt;&lt;/Conditions&gt;&lt;/FilterCondition&gt;&lt;Key&gt;StoredFilterSinIncluirCero&lt;/Key&gt;&lt;/StoredFilter1&gt;&lt;/StoredFilters&gt;&lt;/RootTable&gt;&lt;/GridEXLayoutData&gt;</value>
+  </data>
+  <metadata name="ColumnIDLINEACITA.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="LINEASFACTURABindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>104</value>
+  </metadata>
+</root>

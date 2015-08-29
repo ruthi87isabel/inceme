@@ -1,0 +1,1995 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CMCONSTITUCION" Class="CMLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=JUAN-PC;Initial Catalog=CMCONSTITUCION;Integrated Security=True" SettingsObjectName="centro_medico.My.MySettings" SettingsPropertyName="CMConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.PACIENTES" Member="PACIENTEs">
+    <Type Name="PACIENTE">
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(25)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="APELLIDO1" Type="System.String" DbType="VarChar(15)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="APELLIDO2" Type="System.String" DbType="VarChar(15)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DOMICILIO" Type="System.String" DbType="VarChar(150)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TLFNO" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MOVIL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PROFESION" Type="System.String" DbType="VarChar(30)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="LOCALIDAD" Type="System.String" DbType="VarChar(200)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CP" Type="System.String" DbType="VarChar(5)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REFEMPRESA" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DNI" Type="System.String" DbType="VarChar(8)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FECHAN" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="OBSERVACIONES" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PROVINCIA" Type="System.String" DbType="VarChar(300)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NSS" Type="System.String" DbType="VarChar(12)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PUESTO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REGIMEN" Type="System.Char" DbType="VarChar(1)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TARJETASANITARIA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REFMUTUA" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CPACIENTE" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SEXO" Type="System.Char" DbType="VarChar(1)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FECHAALTA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TUTOR" Type="System.String" DbType="VarChar(90)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PAGOBANCO" Type="System.Char" DbType="VarChar(1)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ENTIDAD" Type="System.String" DbType="VarChar(4)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="OFICINA" Type="System.String" DbType="VarChar(4)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DC" Type="System.String" DbType="VarChar(2)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TITULAR" Type="System.String" DbType="VarChar(90)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CUENTA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DEFUNCION" Type="System.Char" DbType="VarChar(1)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NIE" Type="System.String" DbType="VarChar(15)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PASAPORTE" Type="System.String" DbType="VarChar(25)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REFPAIS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FOTO" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FOTOGRAFIA" Type="System.String" DbType="VarChar(150)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SOCIO" Type="System.Char" DbType="VarChar(1)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ACTIVO" Type="System.Char" DbType="VarChar(1)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REFFORMAPAGO" Type="System.String" DbType="VarChar(10)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FECHABAJA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CONOCIO" Type="System.String" DbType="VarChar(250)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="WEB" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CODIGOPROPIO" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="BENEFICIARIOCODIGOSOCIO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="BENEFICIARIOPARENTESCO" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Eliminado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SOCIOVALIDOHASTA" Type="System.DateTime" DbType="DATE" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="PACIENTE_FACTURA" Member="FACTURAs" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="FACTURA" />
+      <Association Name="PACIENTE_ContactosPaciente" Member="ContactosPacientes" ThisKey="CPACIENTE" OtherKey="CPaciente" Type="ContactosPaciente" />
+      <Association Name="PACIENTE_Asociado" Member="Asociados" ThisKey="CPACIENTE" OtherKey="IDPacienteBeneficiario" Type="Asociado" />
+      <Association Name="PACIENTE_Asociado1" Member="Asociados1" ThisKey="CPACIENTE" OtherKey="IDPacienteOrigen" Type="Asociado" />
+      <Association Name="PACIENTE_PagosPaciente" Member="PagosPacientes" ThisKey="CPACIENTE" OtherKey="IDPaciente" Type="PagosPaciente" />
+      <Association Name="PACIENTE_d_Odontograma" Member="d_Odontogramas" ThisKey="CPACIENTE" OtherKey="IDPaciente" Type="d_Odontograma" />
+      <Association Name="PACIENTE_FICHERO" Member="FICHEROs" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="FICHERO" />
+      <Association Name="PACIENTE_LEMPRESA" Member="LEMPRESAs" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="LEMPRESA" />
+      <Association Name="PACIENTE_N_Factura" Member="N_Facturas" ThisKey="CPACIENTE" OtherKey="ID_Cliente" Type="N_Factura" />
+      <Association Name="PACIENTE_Comunicacion" Member="Comunicacions" ThisKey="CPACIENTE" OtherKey="ID_PacienteDestino" Type="Comunicacion" />
+      <Association Name="PACIENTE_CITA" Member="CITAs" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="CITA" />
+      <Association Name="PACIENTE_N_Proceso" Member="N_Procesos" ThisKey="CPACIENTE" OtherKey="ID_Paciente" Type="N_Proceso" />
+      <Association Name="PACIENTE_AntecedentesDiagnostico" Member="AntecedentesDiagnosticos" ThisKey="CPACIENTE" OtherKey="CPACIENTE" Type="AntecedentesDiagnostico" />
+      <Association Name="PACIENTE_COMPARATIVA" Member="COMPARATIVAs" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="COMPARATIVA" />
+      <Association Name="PACIENTE_LMUTUA" Member="LMUTUAs" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="LMUTUA" />
+      <Association Name="PACIENTE_LINEASALARMA" Member="LINEASALARMAs" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="LINEASALARMA" />
+      <Association Name="PACIENTE_INFORME_MEDICO" Member="INFORME_MEDICOs" ThisKey="CPACIENTE" OtherKey="RefPaciente" Type="INFORME_MEDICO" />
+      <Association Name="PACIENTE_INFORMACIONPRIMARIA" Member="INFORMACIONPRIMARIAs" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="INFORMACIONPRIMARIA" />
+      <Association Name="PACIENTE_N_Ticket" Member="N_Tickets" ThisKey="CPACIENTE" OtherKey="ID_Cliente" Type="N_Ticket" />
+      <Association Name="PACIENTE_HISTORIALE" Member="HISTORIALEs" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="HISTORIALE" />
+      <Association Name="PACIENTE_RECETA" Member="RECETAs" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="RECETA" />
+      <Association Name="PACIENTE_N_Partes_Asistencia" Member="N_Partes_Asistencias" ThisKey="CPACIENTE" OtherKey="ID_Paciente" Type="N_Partes_Asistencia" />
+      <Association Name="PACIENTE_EntregasCuenta" Member="EntregasCuentas" ThisKey="CPACIENTE" OtherKey="IDPaciente" Type="EntregasCuenta" />
+      <Association Name="PACIENTE_RECIBO" Member="RECIBOs" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="RECIBO" />
+      <Association Name="PACIENTE_Bonos" Member="Bonos" ThisKey="CPACIENTE" OtherKey="cpaciente" Type="Bonos" />
+      <Association Name="PACIENTE_ANALITICAS" Member="ANALITICAS" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="ANALITICAS" />
+      <Association Name="PACIENTE_AUDIOMETRIAS" Member="AUDIOMETRIAS" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="AUDIOMETRIAS" />
+      <Association Name="PACIENTE_DERIVACIONES" Member="DERIVACIONES" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="DERIVACIONES" />
+      <Association Name="PACIENTE_HISTORIALES_REVISIONES" Member="HISTORIALES_REVISIONES" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="HISTORIALES_REVISIONES" />
+      <Association Name="PACIENTE_IMAGENES" Member="IMAGENES" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="IMAGENES" />
+      <Association Name="PACIENTE_PRESUPUESTOS" Member="PRESUPUESTOS" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="PRESUPUESTOS" />
+      <Association Name="EMPRESA_PACIENTE" Member="EMPRESA" ThisKey="REFEMPRESA" OtherKey="CEMPRESA" Type="EMPRESA" IsForeignKey="true" />
+      <Association Name="FORMASPAGO_PACIENTE" Member="FORMASPAGO" ThisKey="REFFORMAPAGO" OtherKey="CODIGO" Type="FORMASPAGO" IsForeignKey="true" />
+      <Association Name="MUTUA_PACIENTE" Member="MUTUA" ThisKey="REFMUTUA" OtherKey="CMUTUA" Type="MUTUA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FORMASPAGO" Member="FORMASPAGOs">
+    <Type Name="FORMASPAGO">
+      <Column Name="CODIGO" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(90) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="FORMASPAGO_PACIENTE" Member="PACIENTEs" ThisKey="CODIGO" OtherKey="REFFORMAPAGO" Type="PACIENTE" />
+      <Association Name="FORMASPAGO_FACTURA" Member="FACTURAs" ThisKey="CODIGO" OtherKey="REFFORMAPAGO" Type="FACTURA" />
+      <Association Name="FORMASPAGO_PagosPaciente" Member="PagosPacientes" ThisKey="CODIGO" OtherKey="IDFormaPago" Type="PagosPaciente" />
+      <Association Name="FORMASPAGO_GASTO" Member="GASTOs" ThisKey="CODIGO" OtherKey="REFFORMAPAGO" Type="GASTO" />
+      <Association Name="FORMASPAGO_N_Factura" Member="N_Facturas" ThisKey="CODIGO" OtherKey="ID_FormaPago" Type="N_Factura" />
+      <Association Name="FORMASPAGO_CITA" Member="CITAs" ThisKey="CODIGO" OtherKey="REFFORMAPAGO" Type="CITA" />
+      <Association Name="FORMASPAGO_Liquidacion_Medico" Member="Liquidacion_Medicos" ThisKey="CODIGO" OtherKey="ID_FormaPago" Type="Liquidacion_Medico" />
+      <Association Name="FORMASPAGO_N_PedidosProveedor" Member="N_PedidosProveedors" ThisKey="CODIGO" OtherKey="ID_FormaPago" Type="N_PedidosProveedor" />
+      <Association Name="FORMASPAGO_N_Proveedor" Member="N_Proveedors" ThisKey="CODIGO" OtherKey="ID_FormaPago" Type="N_Proveedor" />
+      <Association Name="FORMASPAGO_N_Ticket" Member="N_Tickets" ThisKey="CODIGO" OtherKey="ID_FormaPago" Type="N_Ticket" />
+      <Association Name="FORMASPAGO_EntregasCuenta" Member="EntregasCuentas" ThisKey="CODIGO" OtherKey="IDFormaPago" Type="EntregasCuenta" />
+      <Association Name="FORMASPAGO_RECIBO" Member="RECIBOs" ThisKey="CODIGO" OtherKey="REFFORMAPAGO" Type="RECIBO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EMPRESAS" Member="EMPRESAs">
+    <Type Name="EMPRESA">
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(40)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DIRECCION" Type="System.String" DbType="VarChar(150)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="POBLACION" Type="System.String" DbType="VarChar(20)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PROVINCIA" Type="System.String" DbType="VarChar(20)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CP" Type="System.String" DbType="VarChar(5)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TLFNO1" Type="System.String" DbType="VarChar(10)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TLFNO2" Type="System.String" DbType="VarChar(10)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FAX" Type="System.String" DbType="VarChar(10)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MAIL" Type="System.String" DbType="VarChar(40)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="WEB" Type="System.String" DbType="VarChar(40)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PERSONACON" Type="System.String" DbType="VarChar(40)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NOTAS" Type="System.String" DbType="VarChar(150)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CNAE" Type="System.String" DbType="VarChar(5)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ACTIVIDAD" Type="System.String" DbType="VarChar(30)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CEMPRESA" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="REFMUTUA" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CIF" Type="System.String" DbType="VarChar(10)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NSS" Type="System.String" DbType="VarChar(15)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ENTIDAD" Type="System.String" DbType="VarChar(4)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="OFICINA" Type="System.String" DbType="VarChar(4)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DC" Type="System.String" DbType="VarChar(2)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CUENTA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TITULAR" Type="System.String" DbType="VarChar(40)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Eliminado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="EMPRESA_PACIENTE" Member="PACIENTEs" ThisKey="CEMPRESA" OtherKey="REFEMPRESA" Type="PACIENTE" />
+      <Association Name="EMPRESA_FACTURA" Member="FACTURAs" ThisKey="CEMPRESA" OtherKey="REFEMPRESA" Type="FACTURA" />
+      <Association Name="EMPRESA_LEMPRESA" Member="LEMPRESAs" ThisKey="CEMPRESA" OtherKey="REFEMPRESA" Type="LEMPRESA" />
+      <Association Name="EMPRESA_N_Parte" Member="N_Partes" ThisKey="CEMPRESA" OtherKey="ID_Empresa" Type="N_Parte" />
+      <Association Name="EMPRESA_N_Proceso" Member="N_Procesos" ThisKey="CEMPRESA" OtherKey="ID_Empresa" Type="N_Proceso" />
+      <Association Name="EMPRESA_N_Partes_Asistencia" Member="N_Partes_Asistencias" ThisKey="CEMPRESA" OtherKey="ID_Empresa" Type="N_Partes_Asistencia" />
+      <Association Name="EMPRESA_RECIBO" Member="RECIBOs" ThisKey="CEMPRESA" OtherKey="REFEMPRESA" Type="RECIBO" />
+      <Association Name="EMPRESA_PRESUPUESTOS" Member="PRESUPUESTOS" ThisKey="CEMPRESA" OtherKey="REFEMPRESA" Type="PRESUPUESTOS" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FACTURAS" Member="FACTURAs">
+    <Type Name="FACTURA">
+      <Column Name="IDFACTURA" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NUMEROFACTURA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="REFPACIENTE" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="HORA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="HISTORIAL" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REFEMPRESA" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REFMUTUA" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FACCIDENTE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FBAJA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FALTA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FEMISION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TOTAL" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IRPF" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DIAGNOSTICO" Type="System.String" DbType="VarChar(60)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PAGADA" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="MUTUA" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="RECIBO" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="DIRECCION" Type="System.String" DbType="VarChar(150)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="LOCALIDAD" Type="System.String" DbType="VarChar(35)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PROVINCIA" Type="System.String" DbType="VarChar(35)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CP" Type="System.String" DbType="VarChar(6)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REFRECIBO" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PACIENTE" Type="System.String" DbType="VarChar(90)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REFCITA" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FECHACOBRO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PORCENTAJEIRPF" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="REFFORMAPAGO" Type="System.String" DbType="VarChar(10)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DNI" Type="System.String" DbType="VarChar(30)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="EMPRESA" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FACTURAR" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="NUMERO" Type="System.String" DbType="VarChar(12)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REFSERIE" Type="System.String" DbType="VarChar(6)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TIPOIVA" Type="System.Single" DbType="Real" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ID_Proceso" Type="System.Int64" DbType="BigInt" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="N19" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Descuento" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FECHAENVIO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Eliminado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PagadoConCredito" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IDEntregaCuenta" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="FACTURA_LINEASFACTURA" Member="LINEASFACTURAs" ThisKey="IDFACTURA" OtherKey="REFFACTURA" Type="LINEASFACTURA" />
+      <Association Name="FACTURA_Bonos" Member="Bonos" ThisKey="IDFACTURA" OtherKey="idfactura" Type="Bonos" />
+      <Association Name="FORMASPAGO_FACTURA" Member="FORMASPAGO" ThisKey="REFFORMAPAGO" OtherKey="CODIGO" Type="FORMASPAGO" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="EMPRESA_FACTURA" Member="EMPRESA1" ThisKey="REFEMPRESA" OtherKey="CEMPRESA" Type="EMPRESA" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="PACIENTE_FACTURA" Member="PACIENTE1" ThisKey="REFPACIENTE" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="SERIES_FACTURA" Member="SERIES" ThisKey="REFSERIE" OtherKey="CODIGO" Type="SERIES" IsForeignKey="true" />
+      <Association Name="N_Proceso_FACTURA" Member="N_Proceso" ThisKey="ID_Proceso" OtherKey="ID_Proceso" Type="N_Proceso" IsForeignKey="true" />
+      <Association Name="MUTUA_FACTURA" Member="MUTUA1" ThisKey="REFMUTUA" OtherKey="CMUTUA" Type="MUTUA" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="EntregasCuenta_FACTURA" Member="EntregasCuenta" ThisKey="IDEntregaCuenta" OtherKey="IDEntregaCuenta" Type="EntregasCuenta" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.USUARIOS" Member="USUARIOs">
+    <Type Name="USUARIO">
+      <Column Name="CODIGO" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="USUARIO" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CONTRASENA" Type="System.String" DbType="VarChar(15)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NIVEL" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ADMINISTRADOR" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="NOMBRECOMPLETO" Type="System.String" DbType="VarChar(90)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REFMEDICO" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FECHACLAVE" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CONFIGURACIONXML" Type="System.Xml.Linq.XElement" DbType="Xml" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CERTIFICADOPATH" Type="System.String" DbType="NTEXT" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="USUARIO_PagosPaciente" Member="PagosPacientes" ThisKey="CODIGO" OtherKey="IDUsuario" Type="PagosPaciente" />
+      <Association Name="USUARIO_ROLESUSUARIO" Member="ROLESUSUARIOs" ThisKey="CODIGO" OtherKey="ID_USUARIO" Type="ROLESUSUARIO" />
+      <Association Name="USUARIO_Comunicacion" Member="Comunicacions" ThisKey="CODIGO" OtherKey="ID_UsuarioEmisor" Type="Comunicacion" />
+      <Association Name="USUARIO_CALENDARIO_USUARIO" Member="CALENDARIO_USUARIOs" ThisKey="CODIGO" OtherKey="ID_Usuario" Type="CALENDARIO_USUARIO" />
+      <Association Name="USUARIO_NOTA" Member="NOTAs" ThisKey="CODIGO" OtherKey="ID_Usuario" Type="NOTA" />
+      <Association Name="USUARIO_Auditoria" Member="Auditorias" ThisKey="CODIGO" OtherKey="idUsuario" Type="Auditoria" />
+      <Association Name="USUARIO_EntregasCuenta" Member="EntregasCuentas" ThisKey="CODIGO" OtherKey="IDUsuarioEfectua" Type="EntregasCuenta" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ContactosPacientes" Member="ContactosPacientes">
+    <Type Name="ContactosPaciente">
+      <Column Name="IdContacto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CPaciente" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Apellidos" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Localidad" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CP" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Pais" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Telefono" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Movil" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Fax" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Parentesco" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Notas" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="PACIENTE_ContactosPaciente" Member="PACIENTE" ThisKey="CPaciente" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Parentescos" Member="Parentescos">
+    <Type Name="Parentesco">
+      <Column Name="IdParentesco" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="Parentesco_Asociado" Member="Asociados" ThisKey="IdParentesco" OtherKey="IDParentesco" Type="Asociado" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Asociados" Member="Asociados">
+    <Type Name="Asociado">
+      <Column Name="IDPacienteBeneficiario" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDPacienteOrigen" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDParentesco" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="PACIENTE_Asociado" Member="PACIENTE" ThisKey="IDPacienteBeneficiario" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="PACIENTE_Asociado1" Member="PACIENTE1" ThisKey="IDPacienteOrigen" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
+      <Association Name="Parentesco_Asociado" Member="Parentesco" ThisKey="IDParentesco" OtherKey="IdParentesco" Type="Parentesco" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BANCOS" Member="BANCOs">
+    <Type Name="BANCO">
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(60)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DIRECCION" Type="System.String" DbType="VarChar(150)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="LOCALIDAD" Type="System.String" DbType="VarChar(60)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PROVINCIA" Type="System.String" DbType="VarChar(60)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CP" Type="System.String" DbType="VarChar(6)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TLFNO1" Type="System.String" DbType="VarChar(12)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TLFNO2" Type="System.String" DbType="VarChar(12)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FAX" Type="System.String" DbType="VarChar(12)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ENTIDAD" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="OFICINA" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="NOTAS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="WEB" Type="System.String" DbType="VarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ID" Type="System.String" DbType="VarChar(8)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IdBanco" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="BANCO_N_Proveedor" Member="N_Proveedors" ThisKey="IdBanco" OtherKey="ID_Banco" Type="N_Proveedor" />
+    </Type>
+  </Table>
+  <Table Name="dbo.N_Articulos" Member="N_Articulos">
+    <Type Name="N_Articulo">
+      <Column Name="ID_Articulo" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Codigo" Type="System.String" DbType="NVarChar(13) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CodigoEAN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ID_TipoArticulo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Equivalente" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CodigoCorto" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ID_Familia" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DescripcionGeneral" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DescripcionEtiquetas" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DescripcionTickets" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DescripcionLarga" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ID_TipoIVA" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ID_ProveedorHabitual" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Referencia" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ID_Fabricante" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PrecioCompra" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Descuento1" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Descuento2" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Descuento3" Type="System.String" DbType="NChar(10)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FechaAltaArticulo" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaximoDescuentoAplicable" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ID_Tallaje" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="UbicacionEnAlmacen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="UnidadesLinea" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="UnidadesPorPalets" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Dimensiones" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NoPermitirUtilzarArticulo" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NoImprimirArticuloListado" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DesactivarMensajesParaEsteArticulo" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ID_ArticuloConcatenado" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ReferenciaDelProveedor" Type="System.String" DbType="NChar(10)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ImportePortesPorUnid" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NumeroCuentaVentas" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NumeroCuentaCompras" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FechaUltimaModif" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PesoArticulo" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="GarantiaArticulo" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MensajeEmergente" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="EsArticuloCompuesto" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="EsEstocable" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PrecioVentaRecomendado" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Favorito" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="N_Articulo_N_Articulos_ConsolidacionStock" Member="N_Articulos_ConsolidacionStocks" ThisKey="ID_Articulo" OtherKey="ID_Articulo" Type="N_Articulos_ConsolidacionStock" />
+      <Association Name="N_TipoIVA_N_Articulo" Member="N_TipoIVA" ThisKey="ID_TipoIVA" OtherKey="ID_TipoIVA" Type="N_TipoIVA" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="N_Proveedor_N_Articulo" Member="N_Proveedor" ThisKey="ID_ProveedorHabitual" OtherKey="ID_Proveedor" Type="N_Proveedor" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PagosPaciente" Member="PagosPacientes">
+    <Type Name="PagosPaciente">
+      <Column Name="IDEntrega" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDPaciente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Importe" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="IDFormaPago" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Notas" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IDUsuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Automatico" Type="System.Boolean" CanBeNull="false" />
+      <Association Name="PACIENTE_PagosPaciente" Member="PACIENTE" ThisKey="IDPaciente" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
+      <Association Name="USUARIO_PagosPaciente" Member="USUARIO" ThisKey="IDUsuario" OtherKey="CODIGO" Type="USUARIO" IsForeignKey="true" />
+      <Association Name="FORMASPAGO_PagosPaciente" Member="FORMASPAGO" ThisKey="IDFormaPago" OtherKey="CODIGO" Type="FORMASPAGO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ROLES" Member="ROLEs">
+    <Type Name="ROLE">
+      <Column Name="ID_ROLE" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Fixed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="ROLE_ROLESUSUARIO" Member="ROLESUSUARIOs" ThisKey="ID_ROLE" OtherKey="ID_ROLES" Type="ROLESUSUARIO" />
+      <Association Name="ROLE_ROLESPERMISO" Member="ROLESPERMISOs" ThisKey="ID_ROLE" OtherKey="ID_ROLES" Type="ROLESPERMISO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ROLESITEMS" Member="ROLESITEMs">
+    <Type Name="ROLESITEM">
+      <Column Name="ID_ROLESITEM" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="ROLESITEM_ROLESPERMISO" Member="ROLESPERMISOs" ThisKey="ID_ROLESITEM" OtherKey="ID_ROLESITEM" Type="ROLESPERMISO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ROLESUSUARIOS" Member="ROLESUSUARIOs">
+    <Type Name="ROLESUSUARIO">
+      <Column Name="ID_ROLES" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_USUARIO" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nota" Type="System.String" DbType="NChar(10)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="ROLE_ROLESUSUARIO" Member="ROLE" ThisKey="ID_ROLES" OtherKey="ID_ROLE" Type="ROLE" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="USUARIO_ROLESUSUARIO" Member="USUARIO" ThisKey="ID_USUARIO" OtherKey="CODIGO" Type="USUARIO" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ROLESPERMISOS" Member="ROLESPERMISOs">
+    <Type Name="ROLESPERMISO">
+      <Column Name="ID_ROLES" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_PERMISO" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_ROLESITEM" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Notas" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="ROLE_ROLESPERMISO" Member="ROLE" ThisKey="ID_ROLES" OtherKey="ID_ROLE" Type="ROLE" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="ROLESITEM_ROLESPERMISO" Member="ROLESITEM" ThisKey="ID_ROLESITEM" OtherKey="ID_ROLESITEM" Type="ROLESITEM" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="PERMISO_ROLESPERMISO" Member="PERMISO" ThisKey="ID_PERMISO" OtherKey="CODIGO" Type="PERMISO" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PERMISOS" Member="PERMISOs">
+    <Type Name="PERMISO">
+      <Column Name="CODIGO" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PERMISO" Type="System.String" DbType="Char(12)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="PERMISO_ROLESPERMISO" Member="ROLESPERMISOs" ThisKey="CODIGO" OtherKey="ID_PERMISO" Type="ROLESPERMISO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportesPersonalizados" Member="ReportesPersonalizados">
+    <Type Name="ReportesPersonalizado">
+      <Column Name="IDReporte" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ID_Gabinete" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Seccion" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FileName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FechaAnnadido" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DataSourceName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PorDefecto" AutoSync="Never" Type="System.Boolean" DbType="Bit" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SERIES" Member="SERIES">
+    <Type Name="SERIES">
+      <Column Name="CODIGO" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CONTADOR" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="SERIES_FACTURA" Member="FACTURAs" ThisKey="CODIGO" OtherKey="REFSERIE" Type="FACTURA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.d_Acciones" Member="d_Acciones">
+    <Type Name="d_Accione">
+      <Column Name="IDOdontograma" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FechaEjecucion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IDMedico" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DescripcionGenerada" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IDGabinete" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IDTratamiento" Type="System.String" DbType="VarChar(10)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Cuadrantes" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PiezasInvolucradas" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Urgente" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IDAccion" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="d_Accione_d_PresupuestoLinea" Member="d_PresupuestoLineas" ThisKey="IDAccion" OtherKey="IDAccionOrigen" Type="d_PresupuestoLinea" />
+      <Association Name="d_Odontograma_d_Accione" Member="d_Odontograma" ThisKey="IDOdontograma" OtherKey="IDOdontograma" Type="d_Odontograma" IsForeignKey="true" />
+      <Association Name="CONCEPTOSFRA_d_Accione" Member="CONCEPTOSFRA" ThisKey="IDTratamiento" OtherKey="CODIGO" Type="CONCEPTOSFRA" IsForeignKey="true" />
+      <Association Name="MEDICO_d_Accione" Member="MEDICO" ThisKey="IDMedico" OtherKey="CMEDICO" Type="MEDICO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.d_Colores" Member="d_Colores">
+    <Type Name="d_Colore">
+      <Column Name="IDColor" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="clPendiente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="clPrimeravista" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="clPresupuesto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="clRealizado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="clUrgente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.d_ConceptosFra_Imagenes" Member="d_ConceptosFra_Imagenes">
+    <Type Name="d_ConceptosFra_Imagene">
+      <Column Name="CodigoCfra" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Cuadrante" Type="System.Char" DbType="Char(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDImagen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Pintar" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="d_Imagene_d_ConceptosFra_Imagene" Member="d_Imagene" ThisKey="IDImagen" OtherKey="IDImagen" Type="d_Imagene" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="CONCEPTOSFRA_d_ConceptosFra_Imagene" Member="CONCEPTOSFRA" ThisKey="CodigoCfra" OtherKey="CODIGO" Type="CONCEPTOSFRA" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.d_Dientes" Member="d_Dientes">
+    <Type Name="d_Diente">
+      <Column Name="IDDiente" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PosicionOriginal" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Planos" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TipoDenticion" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.d_Imagenes" Member="d_Imagenes">
+    <Type Name="d_Imagene">
+      <Column Name="IDImagen" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Crdt" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="d_Imagene_d_ConceptosFra_Imagene" Member="d_ConceptosFra_Imagenes" ThisKey="IDImagen" OtherKey="IDImagen" Type="d_ConceptosFra_Imagene" />
+    </Type>
+  </Table>
+  <Table Name="dbo.d_Odontogramas" Member="d_Odontogramas">
+    <Type Name="d_Odontograma">
+      <Column Name="IDOdontograma" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDPaciente" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TipoDenticion" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="d_Odontograma_d_Accione" Member="d_Acciones" ThisKey="IDOdontograma" OtherKey="IDOdontograma" Type="d_Accione" />
+      <Association Name="d_Odontograma_d_Presupuesto" Member="d_Presupuestos" ThisKey="IDOdontograma" OtherKey="IDOdontograma" Type="d_Presupuesto" />
+      <Association Name="PACIENTE_d_Odontograma" Member="PACIENTE" ThisKey="IDPaciente" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.d_Presupuesto" Member="d_Presupuestos">
+    <Type Name="d_Presupuesto">
+      <Column Name="IDPresupuesto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDOdontograma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FechaConcepcion" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="d_Presupuesto_d_PresupuestoLinea" Member="d_PresupuestoLineas" ThisKey="IDPresupuesto" OtherKey="IDPresupuesto" Type="d_PresupuestoLinea" />
+      <Association Name="d_Odontograma_d_Presupuesto" Member="d_Odontograma" ThisKey="IDOdontograma" OtherKey="IDOdontograma" Type="d_Odontograma" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FICHEROSGLOBAL" Member="FICHEROSGLOBALs">
+    <Type Name="FICHEROSGLOBAL">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="REFREGISTRO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FICHERO" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="SECCION" Type="System.Char" DbType="VarChar(1)" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FICHEROS" Member="FICHEROs">
+    <Type Name="FICHERO">
+      <Column Name="CODIGO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REFPACIENTE" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FECHAMODIFICACION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FICHERO" Type="System.String" DbType="VarChar(255)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NOTAS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(90)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IDSECCION" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TAG1" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TAG2" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ESCONSENTIMIENTO" Type="System.Boolean" CanBeNull="true" />
+      <Association Name="PACIENTE_FICHERO" Member="PACIENTE" ThisKey="REFPACIENTE" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CONCEPTOSFAMILIAS" Member="CONCEPTOSFAMILIAs">
+    <Type Name="CONCEPTOSFAMILIA">
+      <Column Name="IDFamilia" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Categoria" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IconoName" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="[Natural]" Member="Natural" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="CONCEPTOSFAMILIA_CONCEPTOSFRA" Member="CONCEPTOSFRAs" ThisKey="IDFamilia" OtherKey="IDFAMILIA" Type="CONCEPTOSFRA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CONCEPTOSFRA" Member="CONCEPTOSFRAs">
+    <Type Name="CONCEPTOSFRA">
+      <Column Name="CODIGO" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="IMPORTE" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Duracion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IDFAMILIA" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="XMLCont" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="CONCEPTOSFRA_d_Accione" Member="d_Acciones" ThisKey="CODIGO" OtherKey="IDTratamiento" Type="d_Accione" />
+      <Association Name="CONCEPTOSFRA_d_ConceptosFra_Imagene" Member="d_ConceptosFra_Imagenes" ThisKey="CODIGO" OtherKey="CodigoCfra" Type="d_ConceptosFra_Imagene" />
+      <Association Name="CONCEPTOSFRA_d_PresupuestoLinea" Member="d_PresupuestoLineas" ThisKey="CODIGO" OtherKey="IDTratamiento" Type="d_PresupuestoLinea" />
+      <Association Name="CONCEPTOSFRA_Tarifa" Member="Tarifas" ThisKey="CODIGO" OtherKey="IdConceptoFra" Type="Tarifa" />
+      <Association Name="CONCEPTOSFRA_PLANTILLAANALITICA" Member="PLANTILLAANALITICAs" ThisKey="CODIGO" OtherKey="REFCONCEPTO" Type="PLANTILLAANALITICA" />
+      <Association Name="CONCEPTOSFRA_LINEASFACTURA" Member="LINEASFACTURAs" ThisKey="CODIGO" OtherKey="REFCONCEPTO" Type="LINEASFACTURA" />
+      <Association Name="CONCEPTOSFRA_MEDICOS_CONCEPTOFRA" Member="MEDICOS_CONCEPTOFRAs" ThisKey="CODIGO" OtherKey="CODIGO" Type="MEDICOS_CONCEPTOFRA" />
+      <Association Name="CONCEPTOSFRA_ANALITICAS" Member="ANALITICAS" ThisKey="CODIGO" OtherKey="REFCONCEPTO" Type="ANALITICAS" />
+      <Association Name="CONCEPTOSFRA_PLANTILLAANALITICAS" Member="PLANTILLAANALITICAS1" ThisKey="CODIGO" OtherKey="REFCONCEPTO" Type="PLANTILLAANALITICAS" />
+      <Association Name="CONCEPTOSFAMILIA_CONCEPTOSFRA" Member="CONCEPTOSFAMILIA" ThisKey="IDFAMILIA" OtherKey="IDFamilia" Type="CONCEPTOSFAMILIA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.N_TipoIVA" Member="N_TipoIVAs">
+    <Type Name="N_TipoIVA">
+      <Column Name="ID_TipoIVA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Valor" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="N_TipoIVA_N_Articulo" Member="N_Articulos" ThisKey="ID_TipoIVA" OtherKey="ID_TipoIVA" Type="N_Articulo" />
+      <Association Name="N_TipoIVA_N_Factura_Linea" Member="N_Factura_Lineas" ThisKey="ID_TipoIVA" OtherKey="ID_TipoIVA" Type="N_Factura_Linea" />
+      <Association Name="N_TipoIVA_N_PedidosProveedor_Totale" Member="N_PedidosProveedor_Totales" ThisKey="ID_TipoIVA" OtherKey="ID_TipoIVA" Type="N_PedidosProveedor_Totale" />
+      <Association Name="N_TipoIVA_N_PedidosProveedor_Linea" Member="N_PedidosProveedor_Lineas" ThisKey="ID_TipoIVA" OtherKey="ID_TipoIVA" Type="N_PedidosProveedor_Linea" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LEMPRESAS" Member="LEMPRESAs">
+    <Type Name="LEMPRESA">
+      <Column Name="CODIGO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REFEMPRESA" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REFPACIENTE" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FECHAALTA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FECHABAJA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NOTAS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PUESTOTRABAJO" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="EMPRESA_LEMPRESA" Member="EMPRESA" ThisKey="REFEMPRESA" OtherKey="CEMPRESA" Type="EMPRESA" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="PACIENTE_LEMPRESA" Member="PACIENTE" ThisKey="REFPACIENTE" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="" Member="DESGLOSEIVAS">
+    <Type Name="DESGLOSEIVAS">
+      <Column Name="TIPOIVA" Type="System.Double" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="BASE" Type="System.Double" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="IMPORTE" Type="System.Double" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="" Member="CLINICAINCEMEs">
+    <Type Name="CLINICAINCEME">
+      <Column Name="NOMBRE" Type="System.String" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="DIRECCION" Type="System.String" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CIUDAD" Type="System.String" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PROVINCIA" Type="System.String" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CIF" Type="System.String" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LOGOTIPO" Type="System.Data.Linq.Binary" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CPClinica" Type="System.String" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Telefono1" Type="System.String" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Telefono2" Type="System.String" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Fax" Type="System.String" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Email" Type="System.String" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Web" Type="System.String" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LOGOTIPOURLPARAREPORTE" Type="System.String" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GASTOS" Member="GASTOs">
+    <Type Name="GASTO">
+      <Column Name="IDGASTO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CONCEPTO" Type="System.String" DbType="VarChar(250)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IMPORTE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REFFORMAPAGO" Type="System.String" DbType="VarChar(10)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="FORMASPAGO_GASTO" Member="FORMASPAGO" ThisKey="REFFORMAPAGO" OtherKey="CODIGO" Type="FORMASPAGO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.N_Factura" Member="N_Facturas">
+    <Type Name="N_Factura">
+      <Column Name="ID_Factura" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Codigo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ID_TipoFactura" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Referencia" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ID_Estado" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ID_Cliente" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ID_FormaPago" Type="System.String" DbType="VarChar(10)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IRPFPorciento" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IRPFCantidad" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Total" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Observaciones" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PlazoEntrega" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Validez" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PortePagado" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PorteDebido" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PorteTexto" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Privado" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DocumentacionAsociada" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Comentarios" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Pagado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FechaPagado" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PagadoConCredito" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IDEntregaCuenta" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="N_Factura_N_Factura_Linea" Member="N_Factura_Lineas" ThisKey="ID_Factura" OtherKey="ID_Factura" Type="N_Factura_Linea" />
+      <Association Name="FORMASPAGO_N_Factura" Member="FORMASPAGO" ThisKey="ID_FormaPago" OtherKey="CODIGO" Type="FORMASPAGO" IsForeignKey="true" />
+      <Association Name="PACIENTE_N_Factura" Member="PACIENTE" ThisKey="ID_Cliente" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="EntregasCuenta_N_Factura" Member="EntregasCuenta" ThisKey="IDEntregaCuenta" OtherKey="IDEntregaCuenta" Type="EntregasCuenta" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.N_Factura_Lineas" Member="N_Factura_Lineas">
+    <Type Name="N_Factura_Linea">
+      <Column Name="ID_FacturaLineas" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_Factura" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Codigo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ID_Articulo" Type="System.Int64" DbType="BigInt" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Cantidad" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Precio" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Descuento1" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Descuento2" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Descuento3" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Total" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ID_TipoIVA" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IVAIncluido" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Costo" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Observaciones" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ID_Almacen" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Validado" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ID_DocOrigen" Type="System.Int64" DbType="BigInt" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ID_TipoDocOrigen" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="N_Factura_N_Factura_Linea" Member="N_Factura" ThisKey="ID_Factura" OtherKey="ID_Factura" Type="N_Factura" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="N_TipoIVA_N_Factura_Linea" Member="N_TipoIVA" ThisKey="ID_TipoIVA" OtherKey="ID_TipoIVA" Type="N_TipoIVA" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="N_Almacen_N_Factura_Linea" Member="N_Almacen" ThisKey="ID_Almacen" OtherKey="ID_Almacen" Type="N_Almacen" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.d_PresupuestoLineas" Member="d_PresupuestoLineas">
+    <Type Name="d_PresupuestoLinea">
+      <Column Name="IDPresupuestoLinea" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDPresupuesto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="DescripcionGenerada" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IDTratamiento" Type="System.String" DbType="VarChar(10)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Cuadrantes" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PiezasInvolucradas" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Confirmado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Realizado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Urgencia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FechaConfirmado" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FechaRealizado" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Importe" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="IDCITA" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DescuentoPercent" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IDAccionOrigen" Type="System.Int64" DbType="BigInt" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="d_PresupuestoLinea_LineasCita" Member="LineasCitas" ThisKey="IDPresupuestoLinea" OtherKey="RefLineaPresupuestoDental" Type="LineasCita" />
+      <Association Name="CONCEPTOSFRA_d_PresupuestoLinea" Member="CONCEPTOSFRA" ThisKey="IDTratamiento" OtherKey="CODIGO" Type="CONCEPTOSFRA" IsForeignKey="true" />
+      <Association Name="d_Accione_d_PresupuestoLinea" Member="d_Accione" ThisKey="IDAccionOrigen" OtherKey="IDAccion" Type="d_Accione" IsForeignKey="true" />
+      <Association Name="d_Presupuesto_d_PresupuestoLinea" Member="d_Presupuesto" ThisKey="IDPresupuesto" OtherKey="IDPresupuesto" Type="d_Presupuesto" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="CITA_d_PresupuestoLinea" Member="CITA" ThisKey="IDCITA" OtherKey="IDCITA" Type="CITA" IsForeignKey="true" DeleteRule="SET NULL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CONCEPTOSFACTURABLES" Member="CONCEPTOSFACTURABLEs">
+    <Type Name="CONCEPTOSFACTURABLE">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REFPACIENTE" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REFCONCEPTO" Type="System.String" DbType="VarChar(10)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(150)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IMPORTE" Type="System.Single" DbType="Real" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Comunicaciones" Member="Comunicacions">
+    <Type Name="Comunicacion">
+      <Column Name="ID_Comunicacion" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="eTipo" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FechaEnvio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ID_UsuarioEmisor" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ID_PacienteDestino" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NombreUsuarioEmisor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NombrePacienteDestino" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Contenido" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="PACIENTE_Comunicacion" Member="PACIENTE" ThisKey="ID_PacienteDestino" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
+      <Association Name="USUARIO_Comunicacion" Member="USUARIO" ThisKey="ID_UsuarioEmisor" OtherKey="CODIGO" Type="USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tarifas" Member="Tarifas">
+    <Type Name="Tarifa">
+      <Column Name="IdTarifa" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DescripcionTarifa" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="IdConceptoFra" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Importe" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="CONCEPTOSFRA_Tarifa" Member="CONCEPTOSFRA" ThisKey="IdConceptoFra" OtherKey="CODIGO" Type="CONCEPTOSFRA" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PLANTILLAS" Member="PLANTILLAs">
+    <Type Name="PLANTILLA">
+      <Column Name="CODIGO" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(90)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SECCION" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="TEXTO" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CONCEPTOSANALITICA" Member="CONCEPTOSANALITICAs">
+    <Type Name="CONCEPTOSANALITICA">
+      <Column Name="CODIGO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CONCEPTO" Type="System.String" DbType="VarChar(90)" CanBeNull="true" />
+      <Column Name="IMPORTE" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="NOTAS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PLANTILLAANALITICAS" Member="PLANTILLAANALITICAs">
+    <Type Name="PLANTILLAANALITICA">
+      <Column Name="CODIGO" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(90) NOT NULL" CanBeNull="false" />
+      <Column Name="REFCONCEPTO" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="PLANTILLAANALITICA_LPLANTILLAANALITICAS" Member="LPLANTILLAANALITICAS" ThisKey="CODIGO" OtherKey="REFPLANTILLA" Type="LPLANTILLAANALITICAS" />
+      <Association Name="CONCEPTOSFRA_PLANTILLAANALITICA" Member="CONCEPTOSFRA" ThisKey="REFCONCEPTO" OtherKey="CODIGO" Type="CONCEPTOSFRA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PLANTILLA_HISTORIALES" Member="PLANTILLA_HISTORIALEs">
+    <Type Name="PLANTILLA_HISTORIALE">
+      <Column Name="CODIGO" Type="System.String" DbType="VarChar(12) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MOTIVO" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ANTECEDENTES" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="EXPLORACION" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="COMPLEMENTARIAS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="JUICIO" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TRATAMIENTO" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="HISTORIAL" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="COMENTARIOS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="OTROS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DERIVACIONES_DESTINOS" Member="DERIVACIONES_DESTINOs">
+    <Type Name="DERIVACIONES_DESTINO">
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="DIRECCION" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="POBLACION" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="PROVINCIA" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CP" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="TLFNO1" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TLFNO2" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="FAX" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MAIL" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="WEB" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="PERSONACION" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="NOTAS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CIF" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CODIGO" Type="System.String" DbType="VarChar(12) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="DERIVACIONES_DESTINO_DERIVACIONES" Member="DERIVACIONES" ThisKey="CODIGO" OtherKey="REFDESTINO" Type="DERIVACIONES" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ARTICULOS" Member="ARTICULOs">
+    <Type Name="ARTICULO">
+      <Column Name="CARTICULO" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="REFPROVEEDOR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="STOCK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="STOCKMIN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NOTAS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.N_Partes" Member="N_Partes">
+    <Type Name="N_Parte">
+      <Column Name="ID_Parte" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_Proceso" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ID_Paciente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="E_Tipo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FechaBaja" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaAlta" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ID_ParteOrigen" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Alta_Descripcion_Resultado_Reconocimiento" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Alta_E_Causa_de_Alta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FechaAT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="E_Regimen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="E_Situacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Num_Tarjeta_sanitaria" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Num_Afiliacion_Seg_Social" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NombreCompletoPaciente" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DomicilioPaciente" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LocalidadPaciente" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ProvinciaPaciente" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Codigo_PostalPaciente" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TelefonoPaciente" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Puesto_de_trabajoPaciente" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ID_Empresa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NombreEmpresa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DomicilioEmpresa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LocalidadEmpresa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ProvinciaEmpresa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Codigo_Postal_Empresa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Actividad_empresa" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Código_Nacional_Actividad_Económica_CNAE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Entidad_Pago_IT_CP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DescripcionLimitacion" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ID_Diagnostico" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Descripcion_Diagnostico" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Duracion_probable_baja_dias" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Duracion_probable_baja_meses" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Duracion_estandar_fecha_inicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Duracion_estandar_fecha_final" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="E_Caracter" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Recaida" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="E_Causa_de_baja" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_Medico" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NombreMedico" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="No_de_ColegiadoMedico" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="N_Parte_N_Parte" Member="N_Partes" ThisKey="ID_Parte" OtherKey="ID_ParteOrigen" Type="N_Parte" />
+      <Association Name="EMPRESA_N_Parte" Member="EMPRESA" ThisKey="ID_Empresa" OtherKey="CEMPRESA" Type="EMPRESA" IsForeignKey="true" />
+      <Association Name="N_Parte_N_Parte" Member="N_Parte" ThisKey="ID_ParteOrigen" OtherKey="ID_Parte" Type="N_Parte" IsForeignKey="true" />
+      <Association Name="DIAGNOSTICO_N_Parte" Member="DIAGNOSTICO" ThisKey="ID_Diagnostico" OtherKey="IDDIAGNOSTICO" Type="DIAGNOSTICO" IsForeignKey="true" />
+      <Association Name="MEDICO_N_Parte" Member="MEDICO" ThisKey="ID_Medico" OtherKey="CMEDICO" Type="MEDICO" IsForeignKey="true" />
+      <Association Name="N_Proceso_N_Parte" Member="N_Proceso" ThisKey="ID_Proceso" OtherKey="ID_Proceso" Type="N_Proceso" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DIAGNOSTICOS" Member="DIAGNOSTICOs">
+    <Type Name="DIAGNOSTICO">
+      <Column Name="IDDIAGNOSTICO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DIAGNOSTICO" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="OBSERVACIONES" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NIVEL" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="SUBNIVEL" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="CIE" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="FAVORITO" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CIE10" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Association Name="DIAGNOSTICO_N_Parte" Member="N_Partes" ThisKey="IDDIAGNOSTICO" OtherKey="ID_Diagnostico" Type="N_Parte" />
+      <Association Name="DIAGNOSTICO_HistorialesDiagnostico" Member="HistorialesDiagnosticos" ThisKey="IDDIAGNOSTICO" OtherKey="IdDiagnostico" Type="HistorialesDiagnostico" />
+      <Association Name="DIAGNOSTICO_AntecedentesDiagnostico" Member="AntecedentesDiagnosticos" ThisKey="IDDIAGNOSTICO" OtherKey="IDDIAGNOSTICO" Type="AntecedentesDiagnostico" />
+      <Association Name="DIAGNOSTICO_RECETA" Member="RECETAs" ThisKey="IDDIAGNOSTICO" OtherKey="REFDIAGNOSTICO" Type="RECETA" />
+      <Association Name="DIAGNOSTICO_N_Partes_Asistencia" Member="N_Partes_Asistencias" ThisKey="IDDIAGNOSTICO" OtherKey="ID_Diagnostico" Type="N_Partes_Asistencia" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HistorialesDiagnosticos" Member="HistorialesDiagnosticos">
+    <Type Name="HistorialesDiagnostico">
+      <Column Name="IdLineaDiagnostico" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CHistorial" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdDiagnostico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CIE10" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="OBSERVACIONES" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="DIAGNOSTICO" Type="System.String" DbType="VarChar(70) NOT NULL" CanBeNull="false" />
+      <Association Name="DIAGNOSTICO_HistorialesDiagnostico" Member="DIAGNOSTICO1" ThisKey="IdDiagnostico" OtherKey="IDDIAGNOSTICO" Type="DIAGNOSTICO" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="HISTORIALE_HistorialesDiagnostico" Member="HISTORIALE" ThisKey="CHistorial" OtherKey="CHISTORIAL" Type="HISTORIALE" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LHISTORIALES" Member="LHISTORIALEs">
+    <Type Name="LHISTORIALE">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="REFHISTORIAL" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HORA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EXPLORACION" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="COMPLEMENTARIAS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="JUICIO" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TRATAMIENTO" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NOTAS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="OTROS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="EVOLUCION" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="HISTORIALE_LHISTORIALE" Member="HISTORIALE" ThisKey="REFHISTORIAL" OtherKey="CHISTORIAL" Type="HISTORIALE" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LINEASINDICACIONES" Member="LINEASINDICACIONEs">
+    <Type Name="LINEASINDICACIONE">
+      <Column Name="IDLINEASINDICACIONES" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REFMEDICAMENTO" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="REFINDICACION" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TEXTO" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SALAS" Member="SALAs">
+    <Type Name="SALA">
+      <Column Name="ID_SALA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ID_MEDICOJEFE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="SALA_CITA" Member="CITAs" ThisKey="ID_SALA" OtherKey="ID_SALA" Type="CITA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CITAS" Member="CITAs">
+    <Type Name="CITA">
+      <Column Name="IDCITA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REFPACIENTE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HORA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CONFIRMADA" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="NOTAS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REFMEDICO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PACIENTE" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="IMPORTEDR" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="IMPORTECL" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="CONTINUA" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="FALTA" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="BANCO" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="PAGADA" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="REFRECIBO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ATENDIDO" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="REFFRA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="REFFORMAPAGO" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="HORAFIN" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FECHACOBRO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="REFPROCEDENCIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_Proceso" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EstadoRecurrencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FechaUltimoEstadoRecurrencia" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Descuento" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ID_SALA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TOTAL" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="TipoCita" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Eliminado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IDEntregaCuenta" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="PagadoConCredito" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PagadoDesdeFactura" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="CITA_d_PresupuestoLinea" Member="d_PresupuestoLineas" ThisKey="IDCITA" OtherKey="IDCITA" Type="d_PresupuestoLinea" />
+      <Association Name="CITA_LINEASFACTURA" Member="LINEASFACTURAs" ThisKey="IDCITA" OtherKey="ID_Cita" Type="LINEASFACTURA" />
+      <Association Name="CITA_LCOMPARATIVAS_TRATAMIENTO" Member="LCOMPARATIVAS_TRATAMIENTOs" ThisKey="IDCITA" OtherKey="ID_Cita" Type="LCOMPARATIVAS_TRATAMIENTO" />
+      <Association Name="CITA_LineasCita" Member="LineasCitas" ThisKey="IDCITA" OtherKey="IdCita" Type="LineasCita" />
+      <Association Name="CITA_Sesiones" Member="Sesiones" ThisKey="IDCITA" OtherKey="refcita" Type="Sesiones" Cardinality="One" />
+      <Association Name="FORMASPAGO_CITA" Member="FORMASPAGO" ThisKey="REFFORMAPAGO" OtherKey="CODIGO" Type="FORMASPAGO" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="SALA_CITA" Member="SALA" ThisKey="ID_SALA" OtherKey="ID_SALA" Type="SALA" IsForeignKey="true" DeleteRule="SET NULL" />
+      <Association Name="PACIENTE_CITA" Member="PACIENTE1" ThisKey="REFPACIENTE" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
+      <Association Name="MEDICO_CITA" Member="MEDICO" ThisKey="REFMEDICO" OtherKey="CMEDICO" Type="MEDICO" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="N_Proceso_CITA" Member="N_Proceso" ThisKey="ID_Proceso" OtherKey="ID_Proceso" Type="N_Proceso" IsForeignKey="true" DeleteRule="SET NULL" />
+      <Association Name="MUTUA_CITA" Member="MUTUA" ThisKey="REFPROCEDENCIA" OtherKey="CMUTUA" Type="MUTUA" IsForeignKey="true" />
+      <Association Name="EntregasCuenta_CITA" Member="EntregasCuenta" ThisKey="IDEntregaCuenta" OtherKey="IDEntregaCuenta" Type="EntregasCuenta" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LINEASFACTURAS" Member="LINEASFACTURAs">
+    <Type Name="LINEASFACTURA">
+      <Column Name="IDLINEAFACTURA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CONCEPTO" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IMPORTE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="REFFACTURA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="REFCONCEPTO" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CANTIDAD" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="TIPOIVA" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Cita" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Descuento" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ImporteOriginal" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="RefLineaCita" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="LINEASFACTURA_LCOMPARATIVAS_TRATAMIENTO" Member="LCOMPARATIVAS_TRATAMIENTOs" ThisKey="IDLINEAFACTURA" OtherKey="ID_LineaFactura" Type="LCOMPARATIVAS_TRATAMIENTO" />
+      <Association Name="CONCEPTOSFRA_LINEASFACTURA" Member="CONCEPTOSFRA" ThisKey="REFCONCEPTO" OtherKey="CODIGO" Type="CONCEPTOSFRA" IsForeignKey="true" />
+      <Association Name="CITA_LINEASFACTURA" Member="CITA" ThisKey="ID_Cita" OtherKey="IDCITA" Type="CITA" IsForeignKey="true" />
+      <Association Name="FACTURA_LINEASFACTURA" Member="FACTURA" ThisKey="REFFACTURA" OtherKey="IDFACTURA" Type="FACTURA" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="LineasCita_LINEASFACTURA" Member="LineasCita" ThisKey="RefLineaCita,ID_Cita" OtherKey="IdLinea,IdCita" Type="LineasCita" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MEDICOS" Member="MEDICOs">
+    <Type Name="MEDICO">
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="APELLIDO1" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="APELLIDO2" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="DOMICILIO" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="TLFNO" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MOVIL" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LOCALIDAD" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CP" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="DNI" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="PROVINCIA" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="COLEGIADO" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="CMEDICO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ESPECIALIDAD" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OBSERVACIONES" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FIRMA" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PorcientoCita" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Eliminado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FondoReceta" Type="System.String" CanBeNull="true" />
+      <Column Name="LogoColegioReceta" Type="System.String" CanBeNull="true" />
+      <Column Name="Logo2Receta" Type="System.String" CanBeNull="true" />
+      <Association Name="MEDICO_d_Accione" Member="d_Acciones" ThisKey="CMEDICO" OtherKey="IDMedico" Type="d_Accione" />
+      <Association Name="MEDICO_N_Parte" Member="N_Partes" ThisKey="CMEDICO" OtherKey="ID_Medico" Type="N_Parte" />
+      <Association Name="MEDICO_CITA" Member="CITAs" ThisKey="CMEDICO" OtherKey="REFMEDICO" Type="CITA" />
+      <Association Name="MEDICO_MEDICOS_CONCEPTOFRA" Member="MEDICOS_CONCEPTOFRAs" ThisKey="CMEDICO" OtherKey="CMEDICO" Type="MEDICOS_CONCEPTOFRA" />
+      <Association Name="MEDICO_Liquidacion_Medico" Member="Liquidacion_Medicos" ThisKey="CMEDICO" OtherKey="ID_Medico" Type="Liquidacion_Medico" />
+      <Association Name="MEDICO_CALENDARIO_MEDICO" Member="CALENDARIO_MEDICOs" ThisKey="CMEDICO" OtherKey="ID_MEDICO" Type="CALENDARIO_MEDICO" />
+      <Association Name="MEDICO_LCOMPARATIVA" Member="LCOMPARATIVAs" ThisKey="CMEDICO" OtherKey="REFMEDICO" Type="LCOMPARATIVA" />
+      <Association Name="MEDICO_INFORME_MEDICO" Member="INFORME_MEDICOs" ThisKey="CMEDICO" OtherKey="RefMedico" Type="INFORME_MEDICO" />
+      <Association Name="MEDICO_MEDICOS_FICHERO" Member="MEDICOS_FICHEROs" ThisKey="CMEDICO" OtherKey="ID_Medico" Type="MEDICOS_FICHERO" />
+      <Association Name="MEDICO_HISTORIALE" Member="HISTORIALEs" ThisKey="CMEDICO" OtherKey="REFMEDICO" Type="HISTORIALE" />
+      <Association Name="MEDICO_RECETA" Member="RECETAs" ThisKey="CMEDICO" OtherKey="REFMEDICO" Type="RECETA" />
+      <Association Name="MEDICO_N_Partes_Asistencia" Member="N_Partes_Asistencias" ThisKey="CMEDICO" OtherKey="ID_Medico" Type="N_Partes_Asistencia" />
+      <Association Name="MEDICO_RecetasXML" Member="RecetasXML" ThisKey="CMEDICO" OtherKey="idmedico" Type="RecetasXML" />
+      <Association Name="MEDICO_HORARIOS_MEDICOS" Member="HORARIOS_MEDICOS" ThisKey="CMEDICO" OtherKey="id" Type="HORARIOS_MEDICOS" Cardinality="One" />
+      <Association Name="MEDICO_DERIVACIONES" Member="DERIVACIONES" ThisKey="CMEDICO" OtherKey="REFMEDICO" Type="DERIVACIONES" />
+      <Association Name="MEDICO_HISTORIALES_REVISIONES" Member="HISTORIALES_REVISIONES" ThisKey="CMEDICO" OtherKey="REFMEDICO" Type="HISTORIALES_REVISIONES" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MEDICOS_CONCEPTOFRA" Member="MEDICOS_CONCEPTOFRAs">
+    <Type Name="MEDICOS_CONCEPTOFRA">
+      <Column Name="CMEDICO" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CODIGO" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ImporteDto" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ImportePorciento" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="CONCEPTOSFRA_MEDICOS_CONCEPTOFRA" Member="CONCEPTOSFRA" ThisKey="CODIGO" OtherKey="CODIGO" Type="CONCEPTOSFRA" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="MEDICO_MEDICOS_CONCEPTOFRA" Member="MEDICO" ThisKey="CMEDICO" OtherKey="CMEDICO" Type="MEDICO" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Liquidacion_Medico" Member="Liquidacion_Medicos">
+    <Type Name="Liquidacion_Medico">
+      <Column Name="ID_Liquidacion" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ID_Medico" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_FormaPago" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Importe" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Notas" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ID_Usuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Liquidacion_Medico_Liquidacion_Medico_Linea" Member="Liquidacion_Medico_Lineas" ThisKey="ID_Liquidacion" OtherKey="ID_Liquidacion" Type="Liquidacion_Medico_Linea" />
+      <Association Name="MEDICO_Liquidacion_Medico" Member="MEDICO" ThisKey="ID_Medico" OtherKey="CMEDICO" Type="MEDICO" IsForeignKey="true" />
+      <Association Name="FORMASPAGO_Liquidacion_Medico" Member="FORMASPAGO" ThisKey="ID_FormaPago" OtherKey="CODIGO" Type="FORMASPAGO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.N_PedidosProveedor" Member="N_PedidosProveedors">
+    <Type Name="N_PedidosProveedor">
+      <Column Name="ID_PedidoProveedor" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Codigo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ID_TipoPedidoProveedor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Referencia" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ID_Estado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_Proveedor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_FormaPago" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="IRPFPorciento" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="IRPFCantidad" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Total" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Observaciones" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PlazoEntrega" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Validez" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PortePagado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PorteDebido" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PorteTexto" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Privado" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DocumentacionAsociada" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Comentarios" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="N_PedidosProveedor_N_PedidosProveedor_Totale" Member="N_PedidosProveedor_Totales" ThisKey="ID_PedidoProveedor" OtherKey="ID_PedidoProveedor" Type="N_PedidosProveedor_Totale" />
+      <Association Name="N_PedidosProveedor_N_PedidosProveedor_Linea" Member="N_PedidosProveedor_Lineas" ThisKey="ID_PedidoProveedor" OtherKey="ID_PedidoProveedor" Type="N_PedidosProveedor_Linea" />
+      <Association Name="FORMASPAGO_N_PedidosProveedor" Member="FORMASPAGO" ThisKey="ID_FormaPago" OtherKey="CODIGO" Type="FORMASPAGO" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="N_PedidosProveedor_Tipo_N_PedidosProveedor" Member="N_PedidosProveedor_Tipo" ThisKey="ID_TipoPedidoProveedor" OtherKey="ID_TipoPedidoProveedor" Type="N_PedidosProveedor_Tipo" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="N_Proveedor_N_PedidosProveedor" Member="N_Proveedor" ThisKey="ID_Proveedor" OtherKey="ID_Proveedor" Type="N_Proveedor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.N_PedidosProveedor_Totales" Member="N_PedidosProveedor_Totales">
+    <Type Name="N_PedidosProveedor_Totale">
+      <Column Name="ID_PedidoProveedor" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_TipoIVA" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DescuentoPorciento" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DescuentoCantidad" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ProntoPagoPorciento" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ProntoPagoCantidad" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PortesPorciento" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PortesCantidad" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FinanciacionPorciento" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FinanciacionCantidad" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ImporteNeto" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SubTotal" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="IVAPorciento" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="IVACantidad" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="REPorciento" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="RECantidad" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="N_PedidosProveedor_N_PedidosProveedor_Totale" Member="N_PedidosProveedor" ThisKey="ID_PedidoProveedor" OtherKey="ID_PedidoProveedor" Type="N_PedidosProveedor" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="N_TipoIVA_N_PedidosProveedor_Totale" Member="N_TipoIVA" ThisKey="ID_TipoIVA" OtherKey="ID_TipoIVA" Type="N_TipoIVA" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.N_PedidosProveedor_Lineas" Member="N_PedidosProveedor_Lineas">
+    <Type Name="N_PedidosProveedor_Linea">
+      <Column Name="ID_PedidoProveedorLineas" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_PedidoProveedor" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Codigo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ID_Articulo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Cantidad" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Precio" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Descuento1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Descuento2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Descuento3" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Total" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ID_TipoIVA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IVAIncluido" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Costo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Observaciones" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ID_Almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Validado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Pendiente" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="N_PedidosProveedor_N_PedidosProveedor_Linea" Member="N_PedidosProveedor" ThisKey="ID_PedidoProveedor" OtherKey="ID_PedidoProveedor" Type="N_PedidosProveedor" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="N_TipoIVA_N_PedidosProveedor_Linea" Member="N_TipoIVA" ThisKey="ID_TipoIVA" OtherKey="ID_TipoIVA" Type="N_TipoIVA" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="N_Almacen_N_PedidosProveedor_Linea" Member="N_Almacen" ThisKey="ID_Almacen" OtherKey="ID_Almacen" Type="N_Almacen" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.N_PedidosProveedor_Tipos" Member="N_PedidosProveedor_Tipos">
+    <Type Name="N_PedidosProveedor_Tipo">
+      <Column Name="ID_TipoPedidoProveedor" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Codigo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="N_PedidosProveedor_Tipo_N_PedidosProveedor" Member="N_PedidosProveedors" ThisKey="ID_TipoPedidoProveedor" OtherKey="ID_TipoPedidoProveedor" Type="N_PedidosProveedor" />
+    </Type>
+  </Table>
+  <Table Name="dbo.N_Poblaciones" Member="N_Poblaciones">
+    <Type Name="N_Poblacione">
+      <Column Name="ID_Poblacion" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ID_Provincia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="N_Provincia_N_Poblacione" Member="N_Provincia" ThisKey="ID_Provincia" OtherKey="ID_Provincias" Type="N_Provincia" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.N_Procesos" Member="N_Procesos">
+    <Type Name="N_Proceso">
+      <Column Name="ID_Proceso" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_Paciente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaInicio" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FechaFinal" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Finalizado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Empresa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_Mutua" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_UsuarioCreador" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="N_Proceso_FACTURA" Member="FACTURAs" ThisKey="ID_Proceso" OtherKey="ID_Proceso" Type="FACTURA" />
+      <Association Name="N_Proceso_N_Parte" Member="N_Partes" ThisKey="ID_Proceso" OtherKey="ID_Proceso" Type="N_Parte" />
+      <Association Name="N_Proceso_CITA" Member="CITAs" ThisKey="ID_Proceso" OtherKey="ID_Proceso" Type="CITA" />
+      <Association Name="N_Proceso_N_Partes_Asistencia" Member="N_Partes_Asistencias" ThisKey="ID_Proceso" OtherKey="ID_Proceso" Type="N_Partes_Asistencia" />
+      <Association Name="EMPRESA_N_Proceso" Member="EMPRESA" ThisKey="ID_Empresa" OtherKey="CEMPRESA" Type="EMPRESA" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="PACIENTE_N_Proceso" Member="PACIENTE" ThisKey="ID_Paciente" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="MUTUA_N_Proceso" Member="MUTUA" ThisKey="ID_Mutua" OtherKey="CMUTUA" Type="MUTUA" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.N_Proveedores" Member="N_Proveedors">
+    <Type Name="N_Proveedor">
+      <Column Name="ID_Proveedor" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Codigo" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CodigoContabilidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoProveedor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NIF" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="NombreFiscal" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NombreComercial" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Domicilio" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ID_Poblacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CodigoPostal" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Telefono" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Movil" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ID_Banco" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CCC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ID_FormaPago" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DiasPago1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DiasPago2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DiasPago3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AprovisionamientoMeses" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AprovisionamientoDias" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TarifaEnActivo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DescuentoFijo1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DescuentoFijo2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DescuentoFijo3" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PorcentajeRetension" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TipoPorte" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Porte" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RappelFijo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PagoRapels" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FechaAlta" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Web" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Observaciones" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Horario" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VacacionesDesde" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VacacionesHasta" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NoVenderArticulos" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NoRealizarPagos" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NoImprimir" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TipoIVA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="N_Proveedor_N_Articulo" Member="N_Articulos" ThisKey="ID_Proveedor" OtherKey="ID_ProveedorHabitual" Type="N_Articulo" />
+      <Association Name="N_Proveedor_N_PedidosProveedor" Member="N_PedidosProveedors" ThisKey="ID_Proveedor" OtherKey="ID_Proveedor" Type="N_PedidosProveedor" />
+      <Association Name="FORMASPAGO_N_Proveedor" Member="FORMASPAGO" ThisKey="ID_FormaPago" OtherKey="CODIGO" Type="FORMASPAGO" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="BANCO_N_Proveedor" Member="BANCO" ThisKey="ID_Banco" OtherKey="IdBanco" Type="BANCO" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.N_Provincias" Member="N_Provincias">
+    <Type Name="N_Provincia">
+      <Column Name="ID_Provincias" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Pais" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="N_Provincia_N_Poblacione" Member="N_Poblaciones" ThisKey="ID_Provincias" OtherKey="ID_Provincia" Type="N_Poblacione" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CALENDARIO_GLOBAL" Member="CALENDARIO_GLOBALs">
+    <Type Name="CALENDARIO_GLOBAL">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Anno" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Calendario" Type="System.Xml.Linq.XElement" DbType="Xml" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CALENDARIO_USUARIOS" Member="CALENDARIO_USUARIOs">
+    <Type Name="CALENDARIO_USUARIO">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_Usuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Anno" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Calendario" Type="System.Xml.Linq.XElement" DbType="Xml" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="USUARIO_CALENDARIO_USUARIO" Member="USUARIO" ThisKey="ID_Usuario" OtherKey="CODIGO" Type="USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CALENDARIO_MEDICOS" Member="CALENDARIO_MEDICOs">
+    <Type Name="CALENDARIO_MEDICO">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_MEDICO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Anno" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Calendario" Type="System.Xml.Linq.XElement" DbType="Xml" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="MEDICO_CALENDARIO_MEDICO" Member="MEDICO" ThisKey="ID_MEDICO" OtherKey="CMEDICO" Type="MEDICO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AntecedentesDiagnosticos" Member="AntecedentesDiagnosticos">
+    <Type Name="AntecedentesDiagnostico">
+      <Column Name="IDANTECEDENTEDX" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDDIAGNOSTICO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DIAGNOSTICO" Type="System.String" DbType="VarChar(70) NOT NULL" CanBeNull="false" />
+      <Column Name="OBSERVACIONES" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CIE10" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="CPACIENTE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DIAGNOSTICO_AntecedentesDiagnostico" Member="DIAGNOSTICO1" ThisKey="IDDIAGNOSTICO" OtherKey="IDDIAGNOSTICO" Type="DIAGNOSTICO" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="PACIENTE_AntecedentesDiagnostico" Member="PACIENTE" ThisKey="CPACIENTE" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.COMPARATIVAS" Member="COMPARATIVAs">
+    <Type Name="COMPARATIVA">
+      <Column Name="CODIGO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REFPACIENTE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NOTAS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REFMODELOCOMPARATIVA" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="FECHATERMINADA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IMAGEN" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="COMPARATIVA_LCOMPARATIVA" Member="LCOMPARATIVAs" ThisKey="CODIGO" OtherKey="REFCOMPARATIVA" Type="LCOMPARATIVA" />
+      <Association Name="PACIENTE_COMPARATIVA" Member="PACIENTE" ThisKey="REFPACIENTE" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="MODELOSCOMPARATIVA_COMPARATIVA" Member="MODELOSCOMPARATIVA" ThisKey="REFMODELOCOMPARATIVA" OtherKey="CODIGO" Type="MODELOSCOMPARATIVA" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DATOSCOMPARATIVA" Member="DATOSCOMPARATIVAs">
+    <Type Name="DATOSCOMPARATIVA">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REFLCOMPARATIVA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DFLOAT" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="DBOOLEAN" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DVARCHAR" Type="System.String" DbType="VarChar(90)" CanBeNull="true" />
+      <Column Name="REFMODELODATO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DXML" Type="System.Xml.Linq.XElement" DbType="Xml" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="OcultarImpresionCliente" Type="System.Boolean" DbType="bit" CanBeNull="true" />
+      <Association Name="LCOMPARATIVA_DATOSCOMPARATIVA" Member="LCOMPARATIVA" ThisKey="REFLCOMPARATIVA" OtherKey="ID" Type="LCOMPARATIVA" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="MODELOSDATO_DATOSCOMPARATIVA" Member="MODELOSDATO" ThisKey="REFMODELODATO" OtherKey="CODIGO" Type="MODELOSDATO" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RC_Categorias_GaleriaImagenes" Member="RC_Categorias_GaleriaImagenes">
+    <Type Name="RC_Categorias_GaleriaImagene">
+      <Column Name="ID_Categoria" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Titulo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ID_Grupo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DisplayOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_Parent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="RC_Categorias_GaleriaImagene_RC_Categorias_GaleriaImagene" Member="RC_Categorias_GaleriaImagenes" ThisKey="ID_Categoria" OtherKey="ID_Parent" Type="RC_Categorias_GaleriaImagene" />
+      <Association Name="RC_Categorias_GaleriaImagene_RC_Categorias_Imagene" Member="RC_Categorias_Imagenes" ThisKey="ID_Categoria" OtherKey="ID_Categoria" Type="RC_Categorias_Imagene" />
+      <Association Name="RC_Categorias_GaleriaImagene_RC_Categorias_GaleriaImagene" Member="RC_Categorias_GaleriaImagene" ThisKey="ID_Parent" OtherKey="ID_Categoria" Type="RC_Categorias_GaleriaImagene" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RC_Categorias_Imagenes" Member="RC_Categorias_Imagenes">
+    <Type Name="RC_Categorias_Imagene">
+      <Column Name="ID_IMAGEN" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_Categoria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Titulo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Image" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="RC_Categorias_GaleriaImagene_RC_Categorias_Imagene" Member="RC_Categorias_GaleriaImagene" ThisKey="ID_Categoria" OtherKey="ID_Categoria" Type="RC_Categorias_GaleriaImagene" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MODELOSCOMPARATIVA" Member="MODELOSCOMPARATIVAs">
+    <Type Name="MODELOSCOMPARATIVA">
+      <Column Name="CODIGO" Type="System.String" DbType="VarChar(12) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MODELO" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="IMAGEN" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="MODELOSCOMPARATIVA_COMPARATIVA" Member="COMPARATIVAs" ThisKey="CODIGO" OtherKey="REFMODELOCOMPARATIVA" Type="COMPARATIVA" />
+      <Association Name="MODELOSCOMPARATIVA_LCOMPARATIVA" Member="LCOMPARATIVAs" ThisKey="CODIGO" OtherKey="REFMODELOCOMPARATIVA" Type="LCOMPARATIVA" />
+      <Association Name="MODELOSCOMPARATIVA_MODELOSDATO" Member="MODELOSDATOs" ThisKey="CODIGO" OtherKey="REFMODELOCOMPARATIVA" Type="MODELOSDATO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LCOMPARATIVAS" Member="LCOMPARATIVAs">
+    <Type Name="LCOMPARATIVA">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REFCOMPARATIVA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HORA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="REFMODELOCOMPARATIVA" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(90)" CanBeNull="true" />
+      <Column Name="NOTAS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REFMEDICO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NOMBREMEDICO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ESPECIALIDAD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IMAGEN" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="LCOMPARATIVA_DATOSCOMPARATIVA" Member="DATOSCOMPARATIVAs" ThisKey="ID" OtherKey="REFLCOMPARATIVA" Type="DATOSCOMPARATIVA" />
+      <Association Name="LCOMPARATIVA_LCOMPARATIVAS_TRATAMIENTO" Member="LCOMPARATIVAS_TRATAMIENTOs" ThisKey="ID" OtherKey="ID_LCOMPARATIVA" Type="LCOMPARATIVAS_TRATAMIENTO" />
+      <Association Name="MEDICO_LCOMPARATIVA" Member="MEDICO" ThisKey="REFMEDICO" OtherKey="CMEDICO" Type="MEDICO" IsForeignKey="true" />
+      <Association Name="MODELOSCOMPARATIVA_LCOMPARATIVA" Member="MODELOSCOMPARATIVA" ThisKey="REFMODELOCOMPARATIVA" OtherKey="CODIGO" Type="MODELOSCOMPARATIVA" IsForeignKey="true" />
+      <Association Name="COMPARATIVA_LCOMPARATIVA" Member="COMPARATIVA" ThisKey="REFCOMPARATIVA" OtherKey="CODIGO" Type="COMPARATIVA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NOTAS" Member="NOTAs">
+    <Type Name="NOTA">
+      <Column Name="ID_NOTA" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_Usuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NOTA" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ID_ParentNota" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Categoria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="USUARIO_NOTA" Member="USUARIO" ThisKey="ID_Usuario" OtherKey="CODIGO" Type="USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LMUTUAS" Member="LMUTUAs">
+    <Type Name="LMUTUA">
+      <Column Name="CODIGO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REFPACIENTE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="REFMUTUA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FECHAALTA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FECHABAJA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TIPO" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="NOTAS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="PACIENTE_LMUTUA" Member="PACIENTE" ThisKey="REFPACIENTE" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="MUTUA_LMUTUA" Member="MUTUA" ThisKey="REFMUTUA" OtherKey="CMUTUA" Type="MUTUA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LCOMPARATIVAS_TRATAMIENTOS" Member="LCOMPARATIVAS_TRATAMIENTOs">
+    <Type Name="LCOMPARATIVAS_TRATAMIENTO">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_LCOMPARATIVA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="REFCONCEPTOFRA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Tratamiento" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Valor_Unidad" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Unidad" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Comentarios" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Layout" Type="System.Xml.Linq.XElement" DbType="Xml" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Facturada" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ID_Cita" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_LineaFactura" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_LineaCita" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="LCOMPARATIVAS_TRATAMIENTO_LineasCita" Member="LineasCitas" ThisKey="ID" OtherKey="RefLineaTratamiento" Type="LineasCita" />
+      <Association Name="CITA_LCOMPARATIVAS_TRATAMIENTO" Member="CITA" ThisKey="ID_Cita" OtherKey="IDCITA" Type="CITA" IsForeignKey="true" />
+      <Association Name="LCOMPARATIVA_LCOMPARATIVAS_TRATAMIENTO" Member="LCOMPARATIVA" ThisKey="ID_LCOMPARATIVA" OtherKey="ID" Type="LCOMPARATIVA" IsForeignKey="true" />
+      <Association Name="LINEASFACTURA_LCOMPARATIVAS_TRATAMIENTO" Member="LINEASFACTURA" ThisKey="ID_LineaFactura" OtherKey="IDLINEAFACTURA" Type="LINEASFACTURA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LineasCitas" Member="LineasCitas">
+    <Type Name="LineasCita">
+      <Column Name="IdLinea" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdCita" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RefConcepto" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Cantidad" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="ImporteClinica" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="ImporteDr" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Duracion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RefLineaPresupuestoDental" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="DescuentoPercent" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Total" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Liquidada_al_Medico" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RefLineaTratamiento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="LineasCita_LINEASFACTURA" Member="LINEASFACTURAs" ThisKey="IdLinea,IdCita" OtherKey="RefLineaCita,ID_Cita" Type="LINEASFACTURA" />
+      <Association Name="CITA_LineasCita" Member="CITA" ThisKey="IdCita" OtherKey="IDCITA" Type="CITA" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="d_PresupuestoLinea_LineasCita" Member="d_PresupuestoLinea" ThisKey="RefLineaPresupuestoDental" OtherKey="IDPresupuestoLinea" Type="d_PresupuestoLinea" IsForeignKey="true" DeleteRule="SET NULL" />
+      <Association Name="LCOMPARATIVAS_TRATAMIENTO_LineasCita" Member="LCOMPARATIVAS_TRATAMIENTO" ThisKey="RefLineaTratamiento" OtherKey="ID" Type="LCOMPARATIVAS_TRATAMIENTO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LINEASALARMA" Member="LINEASALARMAs">
+    <Type Name="LINEASALARMA">
+      <Column Name="IDLINEAALARMA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REFPACIENTE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="REFALARMA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="PACIENTE_LINEASALARMA" Member="PACIENTE" ThisKey="REFPACIENTE" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="ALARMA_LINEASALARMA" Member="ALARMA" ThisKey="REFALARMA" OtherKey="CALARMA" Type="ALARMA" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ALARMAS" Member="ALARMAs">
+    <Type Name="ALARMA">
+      <Column Name="CALARMA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ALARMA" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="NIVEL" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="ALARMA_LINEASALARMA" Member="LINEASALARMAs" ThisKey="CALARMA" OtherKey="REFALARMA" Type="LINEASALARMA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.INFORME_MEDICO" Member="INFORME_MEDICOs">
+    <Type Name="INFORME_MEDICO">
+      <Column Name="IdInforme" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RefMedico" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RefPaciente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="MEDICO_INFORME_MEDICO" Member="MEDICO" ThisKey="RefMedico" OtherKey="CMEDICO" Type="MEDICO" IsForeignKey="true" />
+      <Association Name="PACIENTE_INFORME_MEDICO" Member="PACIENTE" ThisKey="RefPaciente" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.INFORMACIONPRIMARIA" Member="INFORMACIONPRIMARIAs">
+    <Type Name="INFORMACIONPRIMARIA">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="TEXTO" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="REFPACIENTE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PACIENTE_INFORMACIONPRIMARIA" Member="PACIENTE" ThisKey="REFPACIENTE" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RecetasMedicamentos" Member="RecetasMedicamentos">
+    <Type Name="RecetasMedicamento">
+      <Column Name="IdLineaReceta" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdReceta" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="REFMEDICAMENTO" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Association Name="MEDICAMENTO_RecetasMedicamento" Member="MEDICAMENTO" ThisKey="REFMEDICAMENTO" OtherKey="CMEDICAMENTO" Type="MEDICAMENTO" IsForeignKey="true" />
+      <Association Name="RECETA_RecetasMedicamento" Member="RECETA" ThisKey="IdReceta" OtherKey="IDRECETA" Type="RECETA" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MEDICAMENTOS" Member="MEDICAMENTOs">
+    <Type Name="MEDICAMENTO">
+      <Column Name="CMEDICAMENTO" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(90)" CanBeNull="true" />
+      <Column Name="POSOLOGIA" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CANTIDADES" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="INDICACION" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="FAVORITOS" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CODIGONACIONAL" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="MEDICAMENTO_RecetasMedicamento" Member="RecetasMedicamentos" ThisKey="CMEDICAMENTO" OtherKey="REFMEDICAMENTO" Type="RecetasMedicamento" />
+      <Association Name="MEDICAMENTO_RECETA" Member="RECETAs" ThisKey="CMEDICAMENTO" OtherKey="REFMEDICAMENTO" Type="RECETA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ComoConocio" Member="ComoConocios">
+    <Type Name="ComoConocio">
+      <Column Name="IDConocio" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Auditoria" Member="Auditorias">
+    <Type Name="Auditoria">
+      <Column Name="idLog" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FechaHora" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="idUsuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NombreUsuario" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoDocumento" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CodigoDocumento" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DetallesDocumento" Type="System.String" DbType="VarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="eAccion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="eLocacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="loginUsuario" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="USUARIO_Auditoria" Member="USUARIO" ThisKey="idUsuario" OtherKey="CODIGO" Type="USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.N_Almacen" Member="N_Almacens">
+    <Type Name="N_Almacen">
+      <Column Name="ID_Almacen" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Codigo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Observaciones" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="N_Almacen_N_Factura_Linea" Member="N_Factura_Lineas" ThisKey="ID_Almacen" OtherKey="ID_Almacen" Type="N_Factura_Linea" />
+      <Association Name="N_Almacen_N_PedidosProveedor_Linea" Member="N_PedidosProveedor_Lineas" ThisKey="ID_Almacen" OtherKey="ID_Almacen" Type="N_PedidosProveedor_Linea" />
+      <Association Name="N_Almacen_N_Ticket_Linea" Member="N_Ticket_Lineas" ThisKey="ID_Almacen" OtherKey="ID_Almacen" Type="N_Ticket_Linea" />
+      <Association Name="N_Almacen_N_Articulos_ConsolidacionStock" Member="N_Articulos_ConsolidacionStocks" ThisKey="ID_Almacen" OtherKey="ID_Almacen" Type="N_Articulos_ConsolidacionStock" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Liquidacion_Medico_Linea" Member="Liquidacion_Medico_Lineas">
+    <Type Name="Liquidacion_Medico_Linea">
+      <Column Name="Id_Linea_Liquidacion" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_Liquidacion" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ID_LineaCita" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Importe" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ID_Usuario" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="Liquidacion_Medico_Liquidacion_Medico_Linea" Member="Liquidacion_Medico" ThisKey="ID_Liquidacion" OtherKey="ID_Liquidacion" Type="Liquidacion_Medico" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.N_Ticket_Lineas" Member="N_Ticket_Lineas">
+    <Type Name="N_Ticket_Linea">
+      <Column Name="ID_TicketLineas" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_Ticket" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Codigo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ID_Articulo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Cantidad" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Precio" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Descuento1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Descuento2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Descuento3" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Total" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="IVAIncluido" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Costo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Observaciones" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ID_Almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Validado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ID_DocOrigen" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ID_TipoDocOrigen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IVAPorciento" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="IVAImporte" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="N_Almacen_N_Ticket_Linea" Member="N_Almacen" ThisKey="ID_Almacen" OtherKey="ID_Almacen" Type="N_Almacen" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="N_Ticket_N_Ticket_Linea" Member="N_Ticket" ThisKey="ID_Ticket" OtherKey="ID_Ticket" Type="N_Ticket" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.N_Ticket" Member="N_Tickets">
+    <Type Name="N_Ticket">
+      <Column Name="ID_Ticket" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Codigo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ID_TipoTicket" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Referencia" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Estado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_Cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_FormaPago" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="IRPFPorciento" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="IRPFCantidad" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Total" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Observaciones" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PlazoEntrega" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Validez" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PortePagado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PorteDebido" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PorteTexto" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Privado" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DocumentacionAsociada" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Comentarios" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Pagado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FechaPagado" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NombrePaciente" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FormaPago" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Eliminado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PagadoConCredito" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IDEntregaCuenta" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="N_Ticket_N_Ticket_Linea" Member="N_Ticket_Lineas" ThisKey="ID_Ticket" OtherKey="ID_Ticket" Type="N_Ticket_Linea" />
+      <Association Name="FORMASPAGO_N_Ticket" Member="FORMASPAGO" ThisKey="ID_FormaPago" OtherKey="CODIGO" Type="FORMASPAGO" IsForeignKey="true" />
+      <Association Name="PACIENTE_N_Ticket" Member="PACIENTE" ThisKey="ID_Cliente" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="EntregasCuenta_N_Ticket" Member="EntregasCuenta" ThisKey="IDEntregaCuenta" OtherKey="IDEntregaCuenta" Type="EntregasCuenta" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.N_Articulos_ConsolidacionStock" Member="N_Articulos_ConsolidacionStocks">
+    <Type Name="N_Articulos_ConsolidacionStock">
+      <Column Name="ID_Consolidacion" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_Articulo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ID_Almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="StockActual" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UnidadesContadas" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="RestarAUnidadesContadas" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Disponibles" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="N_Almacen_N_Articulos_ConsolidacionStock" Member="N_Almacen" ThisKey="ID_Almacen" OtherKey="ID_Almacen" Type="N_Almacen" IsForeignKey="true" />
+      <Association Name="N_Articulo_N_Articulos_ConsolidacionStock" Member="N_Articulo" ThisKey="ID_Articulo" OtherKey="ID_Articulo" Type="N_Articulo" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MEDICOS_FICHEROS" Member="MEDICOS_FICHEROs">
+    <Type Name="MEDICOS_FICHERO">
+      <Column Name="ID_Fichero" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_Medico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NombreFichero" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FechaSubido" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaModificado" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Fichero" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ID_Usuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="MEDICO_MEDICOS_FICHERO" Member="MEDICO" ThisKey="ID_Medico" OtherKey="CMEDICO" Type="MEDICO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MODELOSDATOS" Member="MODELOSDATOs">
+    <Type Name="MODELOSDATO">
+      <Column Name="CODIGO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBREDATO" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="TIPODATO" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="REFMODELOCOMPARATIVA" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="ORDEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="XMLDEF" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DXML" Type="System.Xml.Linq.XElement" DbType="Xml" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Repetir" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CalcDiferencia" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OcultarEnReporte" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OcultarImpresionCliente" Type="System.Boolean" DbType="bit" CanBeNull="true" />
+      <Association Name="MODELOSDATO_DATOSCOMPARATIVA" Member="DATOSCOMPARATIVAs" ThisKey="CODIGO" OtherKey="REFMODELODATO" Type="DATOSCOMPARATIVA" />
+      <Association Name="MODELOSCOMPARATIVA_MODELOSDATO" Member="MODELOSCOMPARATIVA" ThisKey="REFMODELOCOMPARATIVA" OtherKey="CODIGO" Type="MODELOSCOMPARATIVA" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HISTORIALES" Member="HISTORIALEs">
+    <Type Name="HISTORIALE">
+      <Column Name="REFPACIENTE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="REFMEDICO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MOTIVO" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ANTECEDENTES" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="EXPLORACION" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="COMPLEMENTARIAS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="JUICIO" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TRATAMIENTO" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="HISTORIAL" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="COMENTARIOS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CHISTORIAL" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OTROS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="HORA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="REFDIAGNOSTICO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParentHistorial" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Eliminado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="HISTORIALE_HistorialesDiagnostico" Member="HistorialesDiagnosticos" ThisKey="CHISTORIAL" OtherKey="CHistorial" Type="HistorialesDiagnostico" />
+      <Association Name="HISTORIALE_LHISTORIALE" Member="LHISTORIALEs" ThisKey="CHISTORIAL" OtherKey="REFHISTORIAL" Type="LHISTORIALE" />
+      <Association Name="HISTORIALE_HISTORIALE" Member="HISTORIALEs" ThisKey="CHISTORIAL" OtherKey="ParentHistorial" Type="HISTORIALE" />
+      <Association Name="HISTORIALE_HISTORIALES_REVISIONES" Member="HISTORIALES_REVISIONES" ThisKey="CHISTORIAL" OtherKey="ID_Historial" Type="HISTORIALES_REVISIONES" />
+      <Association Name="HISTORIALE_HISTORIALE" Member="HISTORIALE" ThisKey="ParentHistorial" OtherKey="CHISTORIAL" Type="HISTORIALE" IsForeignKey="true" />
+      <Association Name="MEDICO_HISTORIALE" Member="MEDICO" ThisKey="REFMEDICO" OtherKey="CMEDICO" Type="MEDICO" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="PACIENTE_HISTORIALE" Member="PACIENTE" ThisKey="REFPACIENTE" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MUTUAS" Member="MUTUAs">
+    <Type Name="MUTUA">
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(90)" CanBeNull="true" />
+      <Column Name="DIRECCION" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="POBLACION" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="PROVINCIA" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CP" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="TLFNO1" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TLFNO2" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="FAX" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MAIL" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="WEB" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="PERSONACON" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="NOTAS" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CMUTUA" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CIF" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ESPECIALIDAD" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PARTELSR" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="PARTEMTR" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="IdTarifa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NoContrato" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Logo" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Eliminado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="MUTUA_PACIENTE" Member="PACIENTEs" ThisKey="CMUTUA" OtherKey="REFMUTUA" Type="PACIENTE" />
+      <Association Name="MUTUA_FACTURA" Member="FACTURAs" ThisKey="CMUTUA" OtherKey="REFMUTUA" Type="FACTURA" />
+      <Association Name="MUTUA_CITA" Member="CITAs" ThisKey="CMUTUA" OtherKey="REFPROCEDENCIA" Type="CITA" />
+      <Association Name="MUTUA_N_Proceso" Member="N_Procesos" ThisKey="CMUTUA" OtherKey="ID_Mutua" Type="N_Proceso" />
+      <Association Name="MUTUA_LMUTUA" Member="LMUTUAs" ThisKey="CMUTUA" OtherKey="REFMUTUA" Type="LMUTUA" />
+      <Association Name="MUTUA_PRESUPUESTOS" Member="PRESUPUESTOS" ThisKey="CMUTUA" OtherKey="REFMUTUA" Type="PRESUPUESTOS" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RECETAS" Member="RECETAs">
+    <Type Name="RECETA">
+      <Column Name="IDRECETA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="REFPACIENTE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TRATAMIENTO" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REFMEDICO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="REFDIAGNOSTICO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="REFMEDICAMENTO" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="HORA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Eliminado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Prescripcion" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="DuracionTratamiento" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PacienteInfo" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Posologia" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Unidades" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Pauta" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NoOrdenDispensacion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FechaPrevistaDispensacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InfoAlFarmaceutico" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DiagnosticoAlPaciente" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NoEnvases_o_Unidades" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Prescriptor" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="InstruccionesAlPaciente" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="EsRecetaOficial" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="RECETA_RecetasMedicamento" Member="RecetasMedicamentos" ThisKey="IDRECETA" OtherKey="IdReceta" Type="RecetasMedicamento" />
+      <Association Name="RECETA_RecetasXML" Member="RecetasXML" ThisKey="IDRECETA" OtherKey="idReceta" Type="RecetasXML" />
+      <Association Name="MEDICAMENTO_RECETA" Member="MEDICAMENTO" ThisKey="REFMEDICAMENTO" OtherKey="CMEDICAMENTO" Type="MEDICAMENTO" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="DIAGNOSTICO_RECETA" Member="DIAGNOSTICO" ThisKey="REFDIAGNOSTICO" OtherKey="IDDIAGNOSTICO" Type="DIAGNOSTICO" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="MEDICO_RECETA" Member="MEDICO" ThisKey="REFMEDICO" OtherKey="CMEDICO" Type="MEDICO" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="PACIENTE_RECETA" Member="PACIENTE" ThisKey="REFPACIENTE" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.N_Partes_Asistencia" Member="N_Partes_Asistencias">
+    <Type Name="N_Partes_Asistencia">
+      <Column Name="ID_ParteAsistencia" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_Proceso" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="FechaAsistencia" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="E_Pronostico" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CausaBaja" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="E_Regimen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="E_Situacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_Paciente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Num_Tarjeta_sanitaria" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Num_Afiliacion_Seg_Social" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DNI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NombreCompletoPaciente" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DomicilioPaciente" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LocalidadPaciente" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ProvinciaPaciente" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Codigo_PostalPaciente" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TelefonoPaciente" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Puesto_de_trabajoPaciente" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ID_Empresa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NombreEmpresa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DomicilioEmpresa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LocalidadEmpresa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ProvinciaEmpresa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Codigo_Postal_Empresa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Actividad_empresa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Código_Nacional_Actividad_Económica_CNAE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Entidad_Pago_IT_CP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fecha_accidente" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Asistido_Previamente" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Fecha_Asistencia_previa" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Era_el_lugar_de_trabajo_habitual" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Lugar_de_accidente" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Descripcion_del_accidente" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Descripcion_Diagnostico" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ID_Diagnostico" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Duracion_estandar_fecha_ini" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Duracion_estandar_fecha_fin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Observaciones" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ID_Medico" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NombreCompletoMedico" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="No_de_Colegiado" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="E_Tratamiento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DIAGNOSTICO_N_Partes_Asistencia" Member="DIAGNOSTICO" ThisKey="ID_Diagnostico" OtherKey="IDDIAGNOSTICO" Type="DIAGNOSTICO" IsForeignKey="true" />
+      <Association Name="EMPRESA_N_Partes_Asistencia" Member="EMPRESA" ThisKey="ID_Empresa" OtherKey="CEMPRESA" Type="EMPRESA" IsForeignKey="true" />
+      <Association Name="MEDICO_N_Partes_Asistencia" Member="MEDICO" ThisKey="ID_Medico" OtherKey="CMEDICO" Type="MEDICO" IsForeignKey="true" />
+      <Association Name="N_Proceso_N_Partes_Asistencia" Member="N_Proceso" ThisKey="ID_Proceso" OtherKey="ID_Proceso" Type="N_Proceso" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="PACIENTE_N_Partes_Asistencia" Member="PACIENTE" ThisKey="ID_Paciente" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EntregasCuenta" Member="EntregasCuentas">
+    <Type Name="EntregasCuenta">
+      <Column Name="IDEntregaCuenta" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDPaciente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TipoDocumento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CodDocumento" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Importe" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="IDUsuarioEfectua" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Eliminado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PagadoConCredito" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IDFormaPago" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="EntregasCuenta_FACTURA" Member="FACTURAs" ThisKey="IDEntregaCuenta" OtherKey="IDEntregaCuenta" Type="FACTURA" />
+      <Association Name="EntregasCuenta_N_Factura" Member="N_Facturas" ThisKey="IDEntregaCuenta" OtherKey="IDEntregaCuenta" Type="N_Factura" />
+      <Association Name="EntregasCuenta_CITA" Member="CITAs" ThisKey="IDEntregaCuenta" OtherKey="IDEntregaCuenta" Type="CITA" />
+      <Association Name="EntregasCuenta_N_Ticket" Member="N_Tickets" ThisKey="IDEntregaCuenta" OtherKey="IDEntregaCuenta" Type="N_Ticket" />
+      <Association Name="EntregasCuenta_RECIBO" Member="RECIBOs" ThisKey="IDEntregaCuenta" OtherKey="IDEntregaCuenta" Type="RECIBO" />
+      <Association Name="FORMASPAGO_EntregasCuenta" Member="FORMASPAGO" ThisKey="IDFormaPago" OtherKey="CODIGO" Type="FORMASPAGO" IsForeignKey="true" />
+      <Association Name="PACIENTE_EntregasCuenta" Member="PACIENTE" ThisKey="IDPaciente" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
+      <Association Name="USUARIO_EntregasCuenta" Member="USUARIO" ThisKey="IDUsuarioEfectua" OtherKey="CODIGO" Type="USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RECIBOS" Member="RECIBOs">
+    <Type Name="RECIBO">
+      <Column Name="FECHAEMISION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="COBRADO" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="EMITIDO" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="REFCITA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="REFFACTURA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IMPORTE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="REFPACIENTE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FECHAVENCIMIENTO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(90)" CanBeNull="true" />
+      <Column Name="DIRECCION" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NOTAS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NUMERO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CUENTABANCO" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ENTIDAD" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="OFICINA" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="DC" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="CUENTA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CONCEPTO" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="FECHACOBRO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="N19" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="REFFORMAPAGO" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TIPO" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="REFEMPRESA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDEntregaCuenta" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="PagadoConCredito" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="EntregasCuenta_RECIBO" Member="EntregasCuenta" ThisKey="IDEntregaCuenta" OtherKey="IDEntregaCuenta" Type="EntregasCuenta" IsForeignKey="true" />
+      <Association Name="PACIENTE_RECIBO" Member="PACIENTE" ThisKey="REFPACIENTE" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
+      <Association Name="FORMASPAGO_RECIBO" Member="FORMASPAGO" ThisKey="REFFORMAPAGO" OtherKey="CODIGO" Type="FORMASPAGO" IsForeignKey="true" />
+      <Association Name="EMPRESA_RECIBO" Member="EMPRESA" ThisKey="REFEMPRESA" OtherKey="CEMPRESA" Type="EMPRESA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RecetasXML" Member="RecetasXML">
+    <Type Name="RecetasXML">
+      <Column Name="idmedico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="apellido1" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="apellido2" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="numeroLote" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="idioma" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="documentoIdentificacionTipo" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="documentoIdentificacion" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="numeroColegiado" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="idColegio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="centroTrabajo" Type="System.String" DbType="NChar(200)" CanBeNull="true" />
+      <Column Name="cif" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="empleoPrincipal" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="sexo" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="nombreEspecialidad" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="idEspecialidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="codigoPostal" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="direccionPostal" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="municipio" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="pais" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="provincia" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="tipoVia" Type="System.String" DbType="NChar(25)" CanBeNull="true" />
+      <Column Name="numero" Type="System.String" DbType="NChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="CVE" Type="System.String" DbType="NChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idReceta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="MEDICO_RecetasXML" Member="MEDICO" ThisKey="idmedico" OtherKey="CMEDICO" Type="MEDICO" IsForeignKey="true" />
+      <Association Name="RECETA_RecetasXML" Member="RECETA" ThisKey="idReceta" OtherKey="IDRECETA" Type="RECETA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HORARIOS_MEDICOS" Member="HORARIOS_MEDICOS">
+    <Type Name="HORARIOS_MEDICOS">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fecha" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="hora_ini" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="hora_fin" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="medico_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="MEDICO_HORARIOS_MEDICOS" Member="MEDICO" ThisKey="id" OtherKey="CMEDICO" Type="MEDICO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Bonos" Member="Bonos">
+    <Type Name="Bonos">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cpaciente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="numsesiones" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idfactura" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Notas" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="fecha" Type="System.DateTime" DbType="date NOT NULL" CanBeNull="false" />
+      <Association Name="Bonos_Sesiones" Member="Sesiones" ThisKey="id" OtherKey="refbono" Type="Sesiones" />
+      <Association Name="FACTURA_Bonos" Member="FACTURA" ThisKey="idfactura" OtherKey="IDFACTURA" Type="FACTURA" IsForeignKey="true" />
+      <Association Name="PACIENTE_Bonos" Member="PACIENTE" ThisKey="cpaciente" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sesiones" Member="Sesiones">
+    <Type Name="Sesiones">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="refbono" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="refcita" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Bonos_Sesiones" Member="Bonos" ThisKey="refbono" OtherKey="id" Type="Bonos" IsForeignKey="true" />
+      <Association Name="CITA_Sesiones" Member="CITA" ThisKey="refcita" OtherKey="IDCITA" Type="CITA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ANALITICAS" Member="ANALITICAS">
+    <Type Name="ANALITICAS">
+      <Column Name="NUMERO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="IMPORTE" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="REFPACIENTE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PACIENTE" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="ESTADO" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NOTAS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REFFRA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="REFCONCEPTO" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="RECIBIDA" Type="System.Boolean" DbType="bit" CanBeNull="false" />
+      <Association Name="PACIENTE_ANALITICAS" Member="PACIENTE1" ThisKey="REFPACIENTE" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
+      <Association Name="CONCEPTOSFRA_ANALITICAS" Member="CONCEPTOSFRA" ThisKey="REFCONCEPTO" OtherKey="CODIGO" Type="CONCEPTOSFRA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AUDIOMETRIAS" Member="AUDIOMETRIAS">
+    <Type Name="AUDIOMETRIAS">
+      <Column Name="CODIGO" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="REFPACIENTE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OD250" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="OD500" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="OD1000" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="OD2000" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="OD3000" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="OD4000" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="OD6000" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="OD8000" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="OI8000" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="OI250" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="OI500" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="OI1000" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="OI2000" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="OI3000" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="OI4000" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="OI6000" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NOTAS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="PACIENTE_AUDIOMETRIAS" Member="PACIENTE" ThisKey="REFPACIENTE" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DERIVACIONES" Member="DERIVACIONES">
+    <Type Name="DERIVACIONES">
+      <Column Name="CODIGO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="REFDESTINO" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="DESTINO" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="MOTIVO" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="NOTAS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REFPACIENTE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="REFMEDICO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DERIVACIONES_DESTINO_DERIVACIONES" Member="DERIVACIONES_DESTINO" ThisKey="REFDESTINO" OtherKey="CODIGO" Type="DERIVACIONES_DESTINO" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="MEDICO_DERIVACIONES" Member="MEDICO" ThisKey="REFMEDICO" OtherKey="CMEDICO" Type="MEDICO" IsForeignKey="true" />
+      <Association Name="PACIENTE_DERIVACIONES" Member="PACIENTE" ThisKey="REFPACIENTE" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HISTORIALES_REVISIONES" Member="HISTORIALES_REVISIONES">
+    <Type Name="HISTORIALES_REVISIONES">
+      <Column Name="ID_Revision" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_Historial" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="REFPACIENTE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="REFMEDICO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MEDICO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MOTIVO" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ANTECEDENTES" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EXPLORACION" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="COMPLEMENTARIAS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="JUICIO" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TRATAMIENTO" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="COMENTARIOS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="OTROS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="REFDIAGNOSTICO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="HISTORIALE_HISTORIALES_REVISIONES" Member="HISTORIALE" ThisKey="ID_Historial" OtherKey="CHISTORIAL" Type="HISTORIALE" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="MEDICO_HISTORIALES_REVISIONES" Member="MEDICO1" ThisKey="REFMEDICO" OtherKey="CMEDICO" Type="MEDICO" IsForeignKey="true" />
+      <Association Name="PACIENTE_HISTORIALES_REVISIONES" Member="PACIENTE" ThisKey="REFPACIENTE" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IMAGENES" Member="IMAGENES">
+    <Type Name="IMAGENES">
+      <Column Name="IDIMAGEN" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="REFPACIENTE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TEXTO" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IMAGEN" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="PACIENTE_IMAGENES" Member="PACIENTE" ThisKey="REFPACIENTE" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PRESUPUESTOS" Member="PRESUPUESTOS">
+    <Type Name="PRESUPUESTOS">
+      <Column Name="NUMERO" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="REFPACIENTE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="REFEMPRESA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="REFMUTUA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FEMISION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TOTAL" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="MUTUA" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="DIRECCION" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="LOCALIDAD" Type="System.String" DbType="VarChar(35)" CanBeNull="true" />
+      <Column Name="PROVINCIA" Type="System.String" DbType="VarChar(35)" CanBeNull="true" />
+      <Column Name="CP" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="PACIENTE" Type="System.String" DbType="VarChar(90)" CanBeNull="true" />
+      <Column Name="DNI" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EMPRESA" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Association Name="EMPRESA_PRESUPUESTOS" Member="EMPRESA1" ThisKey="REFEMPRESA" OtherKey="CEMPRESA" Type="EMPRESA" IsForeignKey="true" />
+      <Association Name="MUTUA_PRESUPUESTOS" Member="MUTUA1" ThisKey="REFMUTUA" OtherKey="CMUTUA" Type="MUTUA" IsForeignKey="true" />
+      <Association Name="PACIENTE_PRESUPUESTOS" Member="PACIENTE1" ThisKey="REFPACIENTE" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VariablesGlobales" Member="VariablesGlobales">
+    <Type Name="VariablesGlobale">
+      <Column Name="Clave" Type="System.String" DbType="VarChar(500) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Valor" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LPLANTILLAANALITICAS" Member="LPLANTILLAANALITICAS">
+    <Type Name="LPLANTILLAANALITICAS">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REFPLANTILLA" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="REFCONCEPTO" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PRECIO" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Association Name="PLANTILLAANALITICA_LPLANTILLAANALITICAS" Member="PLANTILLAANALITICA" ThisKey="REFPLANTILLA" OtherKey="CODIGO" Type="PLANTILLAANALITICA" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="PLANTILLAANALITICAS_LPLANTILLAANALITICAS" Member="PLANTILLAANALITICAS" ThisKey="REFPLANTILLA" OtherKey="CODIGO" Type="PLANTILLAANALITICAS" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PLANTILLAANALITICAS" Member="PLANTILLAANALITICAS1">
+    <Type Name="PLANTILLAANALITICAS">
+      <Column Name="CODIGO" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(90) NOT NULL" CanBeNull="false" />
+      <Column Name="REFCONCEPTO" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="PLANTILLAANALITICAS_LPLANTILLAANALITICAS" Member="LPLANTILLAANALITICAS" ThisKey="CODIGO" OtherKey="REFPLANTILLA" Type="LPLANTILLAANALITICAS" />
+      <Association Name="CONCEPTOSFRA_PLANTILLAANALITICAS" Member="CONCEPTOSFRA" ThisKey="REFCONCEPTO" OtherKey="CODIGO" Type="CONCEPTOSFRA" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

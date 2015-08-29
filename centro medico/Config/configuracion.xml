@@ -1,0 +1,205 @@
+<?xml version="1.0" standalone="yes"?>
+<USUARIOS>
+  <USER>
+    <ROW Seccion="BDs" Clave="Servidor" Valor="Remoto" />
+    <ROW Seccion="BDs" Clave="IP" Valor="" xmlns="" />
+    <ROW Seccion="BDs" Clave="Localización" Valor="." />
+    <ROW Seccion="BDs" Clave="Carpeta Imágenes" Valor="" />
+    <ROW Seccion="BDs" Clave="Puesto" Valor="37" />
+    <ROW Seccion="BDs" Clave="Copia Defecto" Valor="D:\" />
+    <ROW Seccion="BDs" Clave="Ultima Copia" Valor="" />
+    <ROW Seccion="Centro" Clave="Nombre comercial" Valor="CENTRO MEDICO" />
+    <ROW Seccion="Centro" Clave="Denominación" Valor="CENTRO MEDICO DE PRUEBA" />
+    <ROW Seccion="Centro" Clave="Domicilio" Valor="DIRECCION CENTRO MEDICO" />
+    <ROW Seccion="Centro" Clave="CP" Valor="15702" />
+    <ROW Seccion="Centro" Clave="Provincia" Valor="Catral" />
+    <ROW Seccion="Centro" Clave="Localidad" Valor="Alicante" />
+    <ROW Seccion="Centro" Clave="Tlfno" Valor="000000000" />
+    <ROW Seccion="Centro" Clave="Fax" Valor="000000000" />
+    <ROW Seccion="Centro" Clave="CIF" Valor="A00000000" />
+    <ROW Seccion="Centro" Clave="Tlfno2" Valor="" />
+    <ROW Seccion="Centro" Clave="email" Valor="" />
+    <ROW Seccion="Centro" Clave="Web" Valor="http://www.goltratec.com" />
+    <ROW Seccion="Centro" Clave="Denominación social" Valor="" />
+    <ROW Seccion="Centro" Clave="Módico Código" Valor="" />
+    <ROW Seccion="Centro" Clave="Módico Nombre" Valor="" />
+    <ROW Seccion="CITAS" Clave="OCULTAREXCESOHORAS" Valor="N" />
+    <ROW Seccion="CITAS" Clave="AJUSTARPANTALLA" Valor="N" />
+    <ROW Seccion="CITAS" Clave="VISTA" Valor="Grafica" />
+    <ROW Seccion="CITAS" Clave="INTERVALOCITA" Valor="15" />
+    <ROW Seccion="CITAS" Clave="INICIOJORNADA" Valor="8" />
+    <ROW Seccion="CITAS" Clave="FINJORNADA" Valor="20" />
+    <ROW Seccion="CITAS" Clave="MOSTRARPACIENTE" Valor="S" />
+    <ROW Seccion="CITAS" Clave="MOSTRARMEDICO" Valor="S" />
+    <ROW Seccion="CITAS" Clave="MOSTRARNOTAS" Valor="N" />
+    <ROW Seccion="CITAS" Clave="MOSTRARESPECIALIDAD" Valor="N" />
+    <ROW Seccion="CITAS" Clave="DURACION" Valor="10" />
+    <ROW Seccion="Componente" Clave="Gastos" Valor="S" />
+    <ROW Seccion="Componente" Clave="Medicos" Valor="S" />
+    <ROW Seccion="Componente" Clave="Mutuas" Valor="S" />
+    <ROW Seccion="Componente" Clave="Empresas" Valor="S" />
+    <ROW Seccion="Componente" Clave="Pacientes" Valor="S" />
+    <ROW Seccion="Componente" Clave="Proveedores" Valor="S" />
+    <ROW Seccion="Componente" Clave="Articulos" Valor="S" />
+    <ROW Seccion="Componente" Clave="Indicaciones" Valor="S" />
+    <ROW Seccion="Componente" Clave="Medicamentos" Valor="S" />
+    <ROW Seccion="Componente" Clave="Partes" Valor="S" />
+    <ROW Seccion="Componente" Clave="Diagnosticos" Valor="S" />
+    <ROW Seccion="Componente" Clave="Alarmas" Valor="S" />
+    <ROW Seccion="Componente" Clave="Plantillas" Valor="S" />
+    <ROW Seccion="Componente" Clave="Facturas" Valor="S" />
+    <ROW Seccion="Componente" Clave="Usuarios" Valor="S" />
+    <ROW Seccion="Componente" Clave="Bancos" Valor="S" />
+    <ROW Seccion="Componente" Clave="Recibos" Valor="S" />
+    <ROW Seccion="Componente" Clave="Pacientes bósqueda dfto." Valor="S" />
+    <ROW Seccion="Componente" Clave="FacturasNormal bósqueda dfto." Valor="N" />
+    <ROW Seccion="Componente" Clave="Medicos bósqueda dfto." Valor="N" />
+    <ROW Seccion="Componente" Clave="PlantillaHistoriales" Valor="S" />
+    <ROW Seccion="Componente" Clave="PlantillaHistoriales bósqueda" Valor="N" />
+    <ROW Seccion="Componente" Clave="Empresas bósqueda dfto." Valor="N" />
+    <ROW Seccion="Componente" Clave="Diagnosticos bósqueda dfto." Valor="N" />
+    <ROW Seccion="Componente" Clave="Medicamentos bósqueda dfto." Valor="N" />
+    <ROW Seccion="Componente" Clave="FormasPago" Valor="S" />
+    <ROW Seccion="Componente" Clave="FormasPago bósqueda dfto." Valor="N" />
+    <ROW Seccion="Componente" Clave="ModelosComparativa" Valor="S" />
+    <ROW Seccion="Componente" Clave="ModelosComparativa bósqueda d" Valor="N" />
+    <ROW Seccion="Componente" Clave="Derivaciones_Destinos" Valor="S" />
+    <ROW Seccion="Componente" Clave="Derivaciones_Destinos bósqued" Valor="N" />
+    <ROW Seccion="Componente" Clave="Gastos bósqueda dfto." Valor="N" />
+    <ROW Seccion="Componente" Clave="Usuarios bósqueda dfto." Valor="N" />
+    <ROW Seccion="Componente" Clave="Mutuas bósqueda dfto." Valor="N" />
+    <ROW Seccion="Componente" Clave="Partes bósqueda dfto." Valor="N" />
+    <ROW Seccion="Componente" Clave="Proveedores bósqueda dfto." Valor="N" />
+    <ROW Seccion="Componente" Clave="Articulos bósqueda dfto." Valor="N" />
+    <ROW Seccion="Componente" Clave="Bancos bósqueda dfto." Valor="S" />
+    <ROW Seccion="Componente" Clave="Recibos bósqueda dfto." Valor="N" />
+    <ROW Seccion="Componente" Clave="Indicaciones bósqueda dfto." Valor="N" />
+    <ROW Seccion="Componente" Clave="Plantillas bósqueda dfto." Valor="N" />
+    <ROW Seccion="Componente" Clave="Paises" Valor="S" />
+    <ROW Seccion="Componente" Clave="Paises bósqueda dfto." Valor="N" />
+    <ROW Seccion="Componente" Clave="ConceptosFra" Valor="S" />
+    <ROW Seccion="Componente" Clave="ConceptosFra bósqueda dfto." Valor="N" />
+    <ROW Seccion="Componente" Clave="Medicos aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="Empresas aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="Bancos aproximada" Valor="S" />
+    <ROW Seccion="Componente" Clave="Mutuas aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="Gastos aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="Diagnosticos aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="FormasPago aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="Facturas aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="Pacientes aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="Analiticas aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="Proveedor aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="ConceptosFra aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="Paises aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="ConceptosAnaliticas aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="Derivaciones aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="Alarmas aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="Articulos aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="Medicamentos aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="PlantillaTexto aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="Indicaciones aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="Historial aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="Asistencia aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="Baja aproximada" Valor="S" />
+    <ROW Seccion="Componente" Clave="PlantillaAnaliticas aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="Usuarios aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="Revisiones aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="Recibos aproximada" Valor="N" />
+    <ROW Seccion="Componente" Clave="Analiticas" Valor="S" />
+    <ROW Seccion="Componente" Clave="Analiticas bósqueda dfto." Valor="N" />
+    <ROW Seccion="Componente" Clave="PlantillaAnaliticas" Valor="S" />
+    <ROW Seccion="Componente" Clave="PlantillaAnaliticas bósqueda" Valor="N" />
+    <ROW Seccion="Configuración" Clave="Fichero de configuración" Valor="" />
+    <ROW Seccion="Configuración" Clave="Carpeta Aplicación" Valor="" />
+    <ROW Seccion="Etiquetas" Clave="Altura" Valor="35" />
+    <ROW Seccion="Etiquetas" Clave="Espacio" Valor="0" />
+    <ROW Seccion="Etiquetas" Clave="M. Izdo" Valor="0" />
+    <ROW Seccion="Etiquetas" Clave="M. Dcho" Valor="0" />
+    <ROW Seccion="Etiquetas" Clave="M. Superior" Valor="0" />
+    <ROW Seccion="Etiquetas" Clave="M. Inferior" Valor="0" />
+    <ROW Seccion="Etiquetas" Clave="Columnas" Valor="3" />
+    <ROW Seccion="FRAS" Clave="SERIEDEFECTO" Valor="" />
+    <ROW Seccion="FRF" Clave="Receta" Valor="RecetaNueva.rdlc" />
+    <ROW Seccion="FRF" Clave="Receta Blanco" Valor="RecetaNueva.rdlc" />
+    <ROW Seccion="FRF" Clave="Fra Mutua" Valor="factura.rdlc" />
+    <ROW Seccion="FRF" Clave="Fra Paciente" Valor="factura.rdlc" />
+    <ROW Seccion="FRF" Clave="Fra Mutua Blanco" Valor="Factura.rdlc" />
+    <ROW Seccion="FRF" Clave="Fra Paciente Blanco" Valor="Factura.rdlc" />
+    <ROW Seccion="FRF" Clave="Historial" Valor="Historial.rdlc" />
+    <ROW Seccion="FRF" Clave="Fra Empresa" Valor="factura.rdlc" />
+    <ROW Seccion="HISTORIAL" Clave="CAMPO1" Valor="Motivo de consulta" />
+    <ROW Seccion="HISTORIAL" Clave="CAMPO2" Valor="Antecedentes" />
+    <ROW Seccion="HISTORIAL" Clave="CAMPO3" Valor="Historial" />
+    <ROW Seccion="HISTORIAL" Clave="CAMPO4" Valor="Exploración" />
+    <ROW Seccion="HISTORIAL" Clave="CAMPO5" Valor="Pruebas complementarias" />
+    <ROW Seccion="HISTORIAL" Clave="CAMPO6" Valor="Hipótesis diagnóstica" />
+    <ROW Seccion="HISTORIAL" Clave="CAMPO7" Valor="Tratamiento" />
+    <ROW Seccion="HISTORIAL" Clave="CAMPO8" Valor="Otras observaciones" />
+    <ROW Seccion="HISTORIAL" Clave="CAMPO9" Valor="Notas finales" />
+    <ROW Seccion="HISTORIAL" Clave="DIAGNOSTICO" Valor="8" />
+    <ROW Seccion="Imágenes" Clave="Logotipo" Valor="" />
+    <ROW Seccion="Impresión" Clave="Matricial" Valor="0" />
+    <ROW Seccion="Impresión" Clave="Font2 size" Valor="8" />
+    <ROW Seccion="Impresión" Clave="Font2 name" Valor="MS Sans Serif" />
+    <ROW Seccion="Impresión" Clave="Font2 fsBold" Valor="N" />
+    <ROW Seccion="Impresión" Clave="Font2 fsItalic" Valor="N" />
+    <ROW Seccion="Impresión" Clave="FRF" Valor="" />
+    <ROW Seccion="Impresión" Clave="Impresora Defecto" Valor="" />
+    <ROW Seccion="Impresión" Clave="Receta Defecto" Valor="0" />
+    <ROW Seccion="Impresión" Clave="Factura Defecto" Valor="0" />
+    <ROW Seccion="Impresión" Clave="Vista Previa Historial" Valor="S" />
+    <ROW Seccion="Impresión" Clave="Vista Previa Receta" Valor="S" />
+    <ROW Seccion="Impresión" Clave="Vista Previa Factura" Valor="S" />
+    <ROW Seccion="Impresión" Clave="Carpeta" Valor="" />
+    <ROW Seccion="Impresión" Clave="Lóser" Valor="-1" />
+    <ROW Seccion="Impresión" Clave="Columnas" Valor="2" />
+    <ROW Seccion="Impresión" Clave="Altura" Valor="65" />
+    <ROW Seccion="Impresión" Clave="Espacio" Valor="0" />
+    <ROW Seccion="Impresión" Clave="M. Izdo" Valor="0" />
+    <ROW Seccion="Impresión" Clave="M. Dcho" Valor="0" />
+    <ROW Seccion="Impresión" Clave="M. Superior" Valor="0" />
+    <ROW Seccion="Impresión" Clave="M. Inferior" Valor="0" />
+    <ROW Seccion="Impresión" Clave="Font1 size" Valor="" />
+    <ROW Seccion="Impresión" Clave="Font1 name" Valor="" />
+    <ROW Seccion="Impresión" Clave="Font1 fsBold" Valor="" />
+    <ROW Seccion="Impresión" Clave="Font1 fsItalic" Valor="" />
+    <ROW Seccion="Impresión" Clave="FraMargen" Valor="0" />
+    <ROW Seccion="Otros" Clave="Directorio de la aplicación" Valor="" />
+    <ROW Seccion="Otros" Clave="Calendario" Valor="S" />
+    <ROW Seccion="Otros" Clave="Margen Factura" Valor="0" />
+    <ROW Seccion="Otros" Clave="Imágen fondo" Valor="" />
+    <ROW Seccion="Otros" Clave="Confirmar citas continuas" Valor="N" />
+    <ROW Seccion="Otros" Clave="Ruta Ficheros" Valor="" />
+    <ROW Seccion="Otros" Clave="PrinterIndex" Valor="-1" />
+    <ROW Seccion="Otros" Clave="Puerto Impresora" Valor="COM1" />
+    <ROW Seccion="Otros" Clave="Historial Solapas" Valor="S" />
+    <ROW Seccion="Otros" Clave="IRPF" Valor="N" />
+    <ROW Seccion="RECIBOS" Clave="PORCENTAJEIRPF" Valor="0" />
+    <ROW Seccion="OTROS" Clave="FILTRARPACIENTEDESDE" Valor="Todos" />
+    <ROW Seccion="OTROS" Clave="FILTRARPACIENTE" Valor="S" />
+    <ROW Seccion="OTROS" Clave="SOLAPAPACIENTES" Valor="Datos Personales" />
+    <ROW Seccion="OTROS" Clave="SOLAPASVISIBLES" Valor="Todas" />
+    <ROW Seccion="RECIBOS" Clave="NOMBREORDENANTE" Valor="CENTRO MEDICO DE PRUEBA" />
+    <ROW Seccion="RECIBOS" Clave="NIFORDENANTE" Valor="A00000000" />
+    <ROW Seccion="RECIBOS" Clave="ENTIDADORDENANTE" Valor="" />
+    <ROW Seccion="RECIBOS" Clave="OFICINAORDENANTE" Valor="" />
+    <ROW Seccion="RECIBOS" Clave="DC" Valor="" />
+    <ROW Seccion="RECIBOS" Clave="SERIE" Valor="08A" />
+    <ROW Seccion="RECIBOS" Clave="CUENTAORDENANTE" Valor="" />
+    <ROW Seccion="RECIBOS" Clave="SUFIJOORDENANTE" Valor="" />
+    <ROW Seccion="RECIBOS" Clave="NOMBREPRESENTADOR" Valor="CENTRO MEDICO DE PRUEBA" />
+    <ROW Seccion="RECIBOS" Clave="NIFPRESENTADOR" Valor="" />
+    <ROW Seccion="RECIBOS" Clave="OFICINAPRESENTADOR" Valor="" />
+    <ROW Seccion="RECIBOS" Clave="ENTIDADPRESENTADOR" Valor="" />
+    <ROW Seccion="RECIBOS" Clave="SUFIJOPRESENTADOR" Valor="" />
+    <ROW Seccion="VERSION" Clave="02.01.01" Valor="OK" />
+    <ROW Seccion="VERSION" Clave="02.01.02" Valor="OK" />
+    <ROW Seccion="VERSION" Clave="PRINCIPAL" Valor="3" />
+    <ROW Seccion="VERSION" Clave="SECUNDARIA" Valor="6" />
+    <ROW Seccion="VERSION" Clave="ANTERIOR" Valor="3.5" />
+    <ROW Seccion="VERSION" Clave="DNIFRAS" Valor="S" />
+    <ROW Seccion="ACTUALIZACIONES" Clave="AMPLIAR LHISTORIAL" Valor="S" />
+    <ROW Seccion="BDs" Clave="Localizacion alternativa" Valor="." />
+  </USER>
+</USUARIOS>
