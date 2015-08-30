@@ -5,3 +5,6 @@ Repo en Github:
 
 Url (HTTPS: https://github.com/ruthi87isabel/inceme.git)
 Url (SSH): git@github.com:ruthi87isabel/inceme.git
+Credenciales:
+user: ruthi87isabel
+pass: Inceme87
