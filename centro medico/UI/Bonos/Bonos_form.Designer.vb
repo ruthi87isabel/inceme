@@ -69,7 +69,7 @@ Partial Class Bonos_form
         Me.tstNuevo.Image = Global.centro_medico.My.Resources.Resources._24_em_plus
         Me.tstNuevo.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tstNuevo.Name = "tstNuevo"
-        Me.tstNuevo.Size = New System.Drawing.Size(58, 22)
+        Me.tstNuevo.Size = New System.Drawing.Size(62, 22)
         Me.tstNuevo.Text = "&Añadir"
         Me.tstNuevo.ToolTipText = "Nuevo"
         '
@@ -79,7 +79,7 @@ Partial Class Bonos_form
         Me.tst_Editar.Image = Global.centro_medico.My.Resources.Resources._24_tag_pencil
         Me.tst_Editar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tst_Editar.Name = "tst_Editar"
-        Me.tst_Editar.Size = New System.Drawing.Size(66, 22)
+        Me.tst_Editar.Size = New System.Drawing.Size(69, 22)
         Me.tst_Editar.Text = "&Guardar"
         Me.tst_Editar.ToolTipText = "Editar"
         '
@@ -89,7 +89,7 @@ Partial Class Bonos_form
         Me.tst_Eliminar.Image = Global.centro_medico.My.Resources.Resources._16_em_cross
         Me.tst_Eliminar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tst_Eliminar.Name = "tst_Eliminar"
-        Me.tst_Eliminar.Size = New System.Drawing.Size(63, 22)
+        Me.tst_Eliminar.Size = New System.Drawing.Size(70, 22)
         Me.tst_Eliminar.Text = "&Eliminar"
         Me.tst_Eliminar.ToolTipText = "Borrar"
         '

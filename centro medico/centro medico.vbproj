@@ -236,6 +236,12 @@
     <Compile Include="controles\ctrlVisorDefaultApp.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="formularios\form_bonos_no_agotados.designer.vb">
+      <DependentUpon>form_bonos_no_agotados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\form_bonos_no_agotados.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmConnectionDB.Designer.vb">
       <DependentUpon>frmConnectionDB.vb</DependentUpon>
     </Compile>
@@ -2414,6 +2420,10 @@
     <EmbeddedResource Include="controles\ctrlVisorDefaultApp.resx">
       <DependentUpon>ctrlVisorDefaultApp.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formularios\form_bonos_no_agotados.resx">
+      <DependentUpon>form_bonos_no_agotados.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\formas reportes\form_mostrar_reporte_alarmas.resx">
       <DependentUpon>form_mostrar_reporte_alarmas.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -3043,6 +3053,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Bonos\Bonos_form.resx">
       <DependentUpon>Bonos_form.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Bonos\contadorBono.resx">
       <DependentUpon>contadorBono.vb</DependentUpon>

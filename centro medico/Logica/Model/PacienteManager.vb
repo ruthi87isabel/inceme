@@ -396,7 +396,33 @@ Partial Class PACIENTE
         End Get
     End Property
 
+    Public ReadOnly Property TieneBonosNoAgotados As Boolean
+        Get
+            Dim bonos As IEnumerable(Of Bonos)
+            bonos = Me.Bonos.Where(Function(b) b.sesionesLibres > 0)
+            Return bonos.Count > 0
+        End Get
+    End Property
 
+    Public ReadOnly Property TotalBonos As Integer
+        Get
+            Dim f As Integer = 0
+            f = Me.Bonos.Where(Function(b) b.numsesiones > 0).Count()
+            Return f
+        End Get
+    End Property
+
+    Public ReadOnly Property SesionesLibres As Integer
+        Get
+            Dim f As Integer = 0
+            Dim bonosList As IEnumerable(Of Bonos)
+            bonosList = Me.Bonos.Where(Function(b) b.numsesiones > 0)
+            If bonosList.Any() Then
+                f = bonosList.Sum(Function(b) b.sesionesLibres)
+            End If
+            Return f
+        End Get
+    End Property
 
     
 End Class

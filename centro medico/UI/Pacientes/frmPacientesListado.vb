@@ -8,6 +8,7 @@ Public Class frmPacientesListado
 
     Dim lista As New List(Of WRAPPER_PACIENTE)
 
+    Public seleccion As Integer = 0
     Public Modo As Globales.ModoParaFormas = Globales.ModoParaFormas.Edicion
     Public Paciente As PACIENTE = Nothing
     Public Context As New CMLinqDataContext()
@@ -560,12 +561,23 @@ Public Class frmPacientesListado
             For Each row As DataRow In dt.AsEnumerable
                 listapacientes.Add((From o In contextemp.PACIENTEs Where o.CPACIENTE = row.Field(Of Integer)("CPACIENTE") Select o).SingleOrDefault)
             Next
-            
+
             'GridEX1.DataSource = dt
             If Not ListadoPacientesBindingSource.DataSource Is Nothing Then ListadoPacientesBindingSource.DataSource = Nothing
             ListadoPacientesBindingSource.DataSource = listapacientes 'dt
 
             Dim a As Integer = GridEX1.RowCount
+            Dim i As Integer
+
+            For i = 0 To GridEX1.RowCount - 1
+
+                If GridEX1.GetRow(i).DataRow.cpaciente = seleccion Then
+                    GridEX1.MoveTo(i)
+
+                End If
+
+            Next
+
 
             tsTotalPacientes.Text = GridEX1.RowCount
             Dim total As Object = dt.Compute("SUM(IMPORTE)", Nothing)
@@ -702,6 +714,7 @@ Public Class frmPacientesListado
             If tst_Editar.Visible Then
                 Dim Id As Integer = GridEX1.SelectedItems(0).GetRow().DataRow.cpaciente
                 Dim frm As formPaciente = New formPaciente("Ficha de pacientes -Modificar", Enums.Accion.Modificar, Id)
+                seleccion = Id
 
                 Dim paciente As PACIENTE = (From p In Globales.Context.PACIENTEs Where p.CPACIENTE = Id _
                                             Select p).SingleOrDefault()
@@ -743,6 +756,7 @@ Public Class frmPacientesListado
             If GridEX1.SelectedItems.Count > 0 Then
                 Dim Id As Integer = GridEX1.SelectedItems(0).GetRow().DataRow.cpaciente
                 Paciente = (From p In Globales.Context.PACIENTEs Where p.CPACIENTE = Id Select p).SingleOrDefault()
+                seleccion = Id
                 Me.DialogResult = DialogResult.OK
                 Me.Close()
             End If
@@ -752,6 +766,9 @@ Public Class frmPacientesListado
     Private Sub GridEX1_SelectionChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GridEX1.SelectionChanged
         tst_Editar.Enabled = GridEX1.SelectedItems.Count > 0
         tst_Eliminar.Enabled = GridEX1.SelectedItems.Count > 0
+        If GridEX1.SelectedItems.Count > 0 And seleccion = 0 Then
+            seleccion = GridEX1.SelectedItems(0).GetRow().DataRow.cpaciente
+        End If
     End Sub
 
     Private Sub lnkCancelar_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles lnkCancelar.LinkClicked

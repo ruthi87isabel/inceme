@@ -693,6 +693,13 @@ Public Class form_centro_medico
         FreeMemory.FlushMemory()
     End Sub
 
+
+    Private Sub BonosNoAgotadosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BonosNoAgotadosToolStripMenuItem.Click
+        Dim _remesas As form_bonos_no_agotados = New form_bonos_no_agotados()
+        _remesas.ShowDialog()
+        GC.Collect()
+    End Sub
+
     Private Sub menu_citas_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles menu_citas.Click
         bt_citas_Click(sender, e)
     End Sub

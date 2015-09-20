@@ -19,54 +19,54 @@ Partial Class form_remesa_de_recibos
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(form_remesa_de_recibos))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Me.gb_generarRecibos = New System.Windows.Forms.GroupBox
-        Me.chb_listaremitidos = New System.Windows.Forms.CheckBox
-        Me.dtg_recibos = New System.Windows.Forms.DataGridView
+        Me.gb_generarRecibos = New System.Windows.Forms.GroupBox()
+        Me.chb_listaremitidos = New System.Windows.Forms.CheckBox()
+        Me.dtg_recibos = New System.Windows.Forms.DataGridView()
+        Me.NUMERO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EMITIDO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FECHAEMISION = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.REFPACIENTE = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NOMBRE = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.COBRADO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.REFCITA = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.REFFACTURA = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IMPORTE = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FECHAVENCIMIENTO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DIRECCION = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NOTAS = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CUENTABANCO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ENTIDAD = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.OFICINA = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DC = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CUENTA = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CONCEPTO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FECHACOBRO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.N19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.REFFORMAPAGO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TIPO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.REFEMPRESA = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RECIBOSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CMDataSet = New centro_medico.CMDataSet
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.lb_fechafinal = New System.Windows.Forms.Label
-        Me.lb_fechainicial = New System.Windows.Forms.Label
-        Me.dtp_fechafinal = New System.Windows.Forms.DateTimePicker
-        Me.dtp_fechainicial = New System.Windows.Forms.DateTimePicker
-        Me.bt_mostrar = New System.Windows.Forms.Button
-        Me.bt_filtrar = New System.Windows.Forms.Button
+        Me.CMDataSet = New centro_medico.CMDataSet()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lb_fechafinal = New System.Windows.Forms.Label()
+        Me.lb_fechainicial = New System.Windows.Forms.Label()
+        Me.dtp_fechafinal = New System.Windows.Forms.DateTimePicker()
+        Me.dtp_fechainicial = New System.Windows.Forms.DateTimePicker()
+        Me.bt_mostrar = New System.Windows.Forms.Button()
+        Me.bt_filtrar = New System.Windows.Forms.Button()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.bt_generar = New System.Windows.Forms.Button
-        Me.bt_cancelar = New System.Windows.Forms.Button
-        Me.RECIBOSTableAdapter = New centro_medico.CMDataSetTableAdapters.RECIBOSTableAdapter
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip
-        Me.tsl_FilasFiltradas = New System.Windows.Forms.ToolStripStatusLabel
-        Me.tsl_FilasSeleccionadas = New System.Windows.Forms.ToolStripStatusLabel
-        Me.NUMERO = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.EMITIDO = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.FECHAEMISION = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.REFPACIENTE = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.NOMBRE = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.COBRADO = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.REFCITA = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.REFFACTURA = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.IMPORTE = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.FECHAVENCIMIENTO = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DIRECCION = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.NOTAS = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.CUENTABANCO = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ENTIDAD = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.OFICINA = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DC = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.CUENTA = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.CONCEPTO = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.FECHACOBRO = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.N19 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.REFFORMAPAGO = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.TIPO = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.REFEMPRESA = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.bt_generar = New System.Windows.Forms.Button()
+        Me.bt_cancelar = New System.Windows.Forms.Button()
+        Me.RECIBOSTableAdapter = New centro_medico.CMDataSetTableAdapters.RECIBOSTableAdapter()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.tsl_FilasFiltradas = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.tsl_FilasSeleccionadas = New System.Windows.Forms.ToolStripStatusLabel()
         Me.gb_generarRecibos.SuspendLayout()
         CType(Me.dtg_recibos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RECIBOSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -77,8 +77,8 @@ Partial Class form_remesa_de_recibos
         'gb_generarRecibos
         '
         Me.gb_generarRecibos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.gb_generarRecibos.Controls.Add(Me.chb_listaremitidos)
         Me.gb_generarRecibos.Controls.Add(Me.dtg_recibos)
         Me.gb_generarRecibos.Controls.Add(Me.Label5)
@@ -110,8 +110,8 @@ Partial Class form_remesa_de_recibos
         Me.dtg_recibos.AllowUserToAddRows = False
         Me.dtg_recibos.AllowUserToDeleteRows = False
         Me.dtg_recibos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dtg_recibos.AutoGenerateColumns = False
         Me.dtg_recibos.BackgroundColor = System.Drawing.Color.White
         Me.dtg_recibos.ColumnHeadersHeight = 28
@@ -125,142 +125,6 @@ Partial Class form_remesa_de_recibos
         Me.dtg_recibos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dtg_recibos.Size = New System.Drawing.Size(689, 324)
         Me.dtg_recibos.TabIndex = 4
-        '
-        'RECIBOSBindingSource
-        '
-        Me.RECIBOSBindingSource.DataMember = "RECIBOS"
-        Me.RECIBOSBindingSource.DataSource = Me.CMDataSet
-        '
-        'CMDataSet
-        '
-        Me.CMDataSet.DataSetName = "CMDataSet"
-        Me.CMDataSet.Locale = New System.Globalization.CultureInfo("en-US")
-        Me.CMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(9, 67)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(95, 13)
-        Me.Label5.TabIndex = 10
-        Me.Label5.Text = "Remesa resultante"
-        '
-        'lb_fechafinal
-        '
-        Me.lb_fechafinal.AutoSize = True
-        Me.lb_fechafinal.Location = New System.Drawing.Point(140, 23)
-        Me.lb_fechafinal.Name = "lb_fechafinal"
-        Me.lb_fechafinal.Size = New System.Drawing.Size(62, 13)
-        Me.lb_fechafinal.TabIndex = 7
-        Me.lb_fechafinal.Text = "Fecha Final"
-        '
-        'lb_fechainicial
-        '
-        Me.lb_fechainicial.AutoSize = True
-        Me.lb_fechainicial.Location = New System.Drawing.Point(9, 23)
-        Me.lb_fechainicial.Name = "lb_fechainicial"
-        Me.lb_fechainicial.Size = New System.Drawing.Size(67, 13)
-        Me.lb_fechainicial.TabIndex = 6
-        Me.lb_fechainicial.Text = "Fecha Inicial"
-        '
-        'dtp_fechafinal
-        '
-        Me.dtp_fechafinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtp_fechafinal.Location = New System.Drawing.Point(143, 39)
-        Me.dtp_fechafinal.Name = "dtp_fechafinal"
-        Me.dtp_fechafinal.Size = New System.Drawing.Size(109, 20)
-        Me.dtp_fechafinal.TabIndex = 1
-        '
-        'dtp_fechainicial
-        '
-        Me.dtp_fechainicial.CalendarMonthBackground = System.Drawing.Color.White
-        Me.dtp_fechainicial.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtp_fechainicial.Location = New System.Drawing.Point(12, 39)
-        Me.dtp_fechainicial.Name = "dtp_fechainicial"
-        Me.dtp_fechainicial.Size = New System.Drawing.Size(109, 20)
-        Me.dtp_fechainicial.TabIndex = 0
-        '
-        'bt_mostrar
-        '
-        Me.bt_mostrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.bt_mostrar.BackgroundImage = Global.centro_medico.My.Resources.Resources.search4doc
-        Me.bt_mostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.bt_mostrar.Location = New System.Drawing.Point(663, 416)
-        Me.bt_mostrar.Name = "bt_mostrar"
-        Me.bt_mostrar.Size = New System.Drawing.Size(38, 27)
-        Me.bt_mostrar.TabIndex = 5
-        Me.bt_mostrar.UseVisualStyleBackColor = True
-        '
-        'bt_filtrar
-        '
-        Me.bt_filtrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.bt_filtrar.ImageIndex = 0
-        Me.bt_filtrar.ImageList = Me.ImageList1
-        Me.bt_filtrar.Location = New System.Drawing.Point(534, 35)
-        Me.bt_filtrar.Name = "bt_filtrar"
-        Me.bt_filtrar.Size = New System.Drawing.Size(75, 28)
-        Me.bt_filtrar.TabIndex = 3
-        Me.bt_filtrar.Text = "Filtrar   "
-        Me.bt_filtrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.bt_filtrar.UseVisualStyleBackColor = True
-        '
-        'ImageList1
-        '
-        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
-        Me.ImageList1.Images.SetKeyName(0, "search4doc.ico")
-        '
-        'bt_generar
-        '
-        Me.bt_generar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.bt_generar.Image = Global.centro_medico.My.Resources.Resources.Print1
-        Me.bt_generar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.bt_generar.Location = New System.Drawing.Point(476, 457)
-        Me.bt_generar.Name = "bt_generar"
-        Me.bt_generar.Size = New System.Drawing.Size(149, 30)
-        Me.bt_generar.TabIndex = 1
-        Me.bt_generar.Text = "Emitir e Imprimir remesa"
-        Me.bt_generar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.bt_generar.UseVisualStyleBackColor = True
-        '
-        'bt_cancelar
-        '
-        Me.bt_cancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.bt_cancelar.Image = Global.centro_medico.My.Resources.Resources.MISC20
-        Me.bt_cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.bt_cancelar.Location = New System.Drawing.Point(631, 457)
-        Me.bt_cancelar.Name = "bt_cancelar"
-        Me.bt_cancelar.Size = New System.Drawing.Size(75, 30)
-        Me.bt_cancelar.TabIndex = 2
-        Me.bt_cancelar.Text = "Cancelar"
-        Me.bt_cancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.bt_cancelar.UseVisualStyleBackColor = True
-        '
-        'RECIBOSTableAdapter
-        '
-        Me.RECIBOSTableAdapter.ClearBeforeFill = True
-        '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsl_FilasFiltradas, Me.tsl_FilasSeleccionadas})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 496)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(724, 22)
-        Me.StatusStrip1.TabIndex = 11
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'tsl_FilasFiltradas
-        '
-        Me.tsl_FilasFiltradas.Name = "tsl_FilasFiltradas"
-        Me.tsl_FilasFiltradas.Size = New System.Drawing.Size(107, 17)
-        Me.tsl_FilasFiltradas.Text = "Mostrando registros."
-        '
-        'tsl_FilasSeleccionadas
-        '
-        Me.tsl_FilasSeleccionadas.Name = "tsl_FilasSeleccionadas"
-        Me.tsl_FilasSeleccionadas.Size = New System.Drawing.Size(99, 17)
-        Me.tsl_FilasSeleccionadas.Text = "filas seleccionadas."
         '
         'NUMERO
         '
@@ -453,6 +317,143 @@ Partial Class form_remesa_de_recibos
         Me.REFEMPRESA.Name = "REFEMPRESA"
         Me.REFEMPRESA.ReadOnly = True
         Me.REFEMPRESA.Visible = False
+        '
+        'RECIBOSBindingSource
+        '
+        Me.RECIBOSBindingSource.DataMember = "RECIBOS"
+        Me.RECIBOSBindingSource.DataSource = Me.CMDataSet
+        '
+        'CMDataSet
+        '
+        Me.CMDataSet.DataSetName = "CMDataSet"
+        Me.CMDataSet.EnforceConstraints = False
+        Me.CMDataSet.Locale = New System.Globalization.CultureInfo("en-US")
+        Me.CMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(9, 67)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(95, 13)
+        Me.Label5.TabIndex = 10
+        Me.Label5.Text = "Remesa resultante"
+        '
+        'lb_fechafinal
+        '
+        Me.lb_fechafinal.AutoSize = True
+        Me.lb_fechafinal.Location = New System.Drawing.Point(140, 23)
+        Me.lb_fechafinal.Name = "lb_fechafinal"
+        Me.lb_fechafinal.Size = New System.Drawing.Size(62, 13)
+        Me.lb_fechafinal.TabIndex = 7
+        Me.lb_fechafinal.Text = "Fecha Final"
+        '
+        'lb_fechainicial
+        '
+        Me.lb_fechainicial.AutoSize = True
+        Me.lb_fechainicial.Location = New System.Drawing.Point(9, 23)
+        Me.lb_fechainicial.Name = "lb_fechainicial"
+        Me.lb_fechainicial.Size = New System.Drawing.Size(67, 13)
+        Me.lb_fechainicial.TabIndex = 6
+        Me.lb_fechainicial.Text = "Fecha Inicial"
+        '
+        'dtp_fechafinal
+        '
+        Me.dtp_fechafinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtp_fechafinal.Location = New System.Drawing.Point(143, 39)
+        Me.dtp_fechafinal.Name = "dtp_fechafinal"
+        Me.dtp_fechafinal.Size = New System.Drawing.Size(109, 20)
+        Me.dtp_fechafinal.TabIndex = 1
+        '
+        'dtp_fechainicial
+        '
+        Me.dtp_fechainicial.CalendarMonthBackground = System.Drawing.Color.White
+        Me.dtp_fechainicial.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtp_fechainicial.Location = New System.Drawing.Point(12, 39)
+        Me.dtp_fechainicial.Name = "dtp_fechainicial"
+        Me.dtp_fechainicial.Size = New System.Drawing.Size(109, 20)
+        Me.dtp_fechainicial.TabIndex = 0
+        '
+        'bt_mostrar
+        '
+        Me.bt_mostrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.bt_mostrar.BackgroundImage = Global.centro_medico.My.Resources.Resources.search4doc
+        Me.bt_mostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.bt_mostrar.Location = New System.Drawing.Point(663, 416)
+        Me.bt_mostrar.Name = "bt_mostrar"
+        Me.bt_mostrar.Size = New System.Drawing.Size(38, 27)
+        Me.bt_mostrar.TabIndex = 5
+        Me.bt_mostrar.UseVisualStyleBackColor = True
+        '
+        'bt_filtrar
+        '
+        Me.bt_filtrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.bt_filtrar.ImageIndex = 0
+        Me.bt_filtrar.ImageList = Me.ImageList1
+        Me.bt_filtrar.Location = New System.Drawing.Point(534, 35)
+        Me.bt_filtrar.Name = "bt_filtrar"
+        Me.bt_filtrar.Size = New System.Drawing.Size(75, 28)
+        Me.bt_filtrar.TabIndex = 3
+        Me.bt_filtrar.Text = "Filtrar   "
+        Me.bt_filtrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.bt_filtrar.UseVisualStyleBackColor = True
+        '
+        'ImageList1
+        '
+        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList1.Images.SetKeyName(0, "search4doc.ico")
+        '
+        'bt_generar
+        '
+        Me.bt_generar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.bt_generar.Image = Global.centro_medico.My.Resources.Resources.Print1
+        Me.bt_generar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.bt_generar.Location = New System.Drawing.Point(476, 457)
+        Me.bt_generar.Name = "bt_generar"
+        Me.bt_generar.Size = New System.Drawing.Size(149, 30)
+        Me.bt_generar.TabIndex = 1
+        Me.bt_generar.Text = "Emitir e Imprimir remesa"
+        Me.bt_generar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.bt_generar.UseVisualStyleBackColor = True
+        '
+        'bt_cancelar
+        '
+        Me.bt_cancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.bt_cancelar.Image = Global.centro_medico.My.Resources.Resources.MISC20
+        Me.bt_cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.bt_cancelar.Location = New System.Drawing.Point(631, 457)
+        Me.bt_cancelar.Name = "bt_cancelar"
+        Me.bt_cancelar.Size = New System.Drawing.Size(75, 30)
+        Me.bt_cancelar.TabIndex = 2
+        Me.bt_cancelar.Text = "Cancelar"
+        Me.bt_cancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.bt_cancelar.UseVisualStyleBackColor = True
+        '
+        'RECIBOSTableAdapter
+        '
+        Me.RECIBOSTableAdapter.ClearBeforeFill = True
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsl_FilasFiltradas, Me.tsl_FilasSeleccionadas})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 496)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(724, 22)
+        Me.StatusStrip1.TabIndex = 11
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'tsl_FilasFiltradas
+        '
+        Me.tsl_FilasFiltradas.Name = "tsl_FilasFiltradas"
+        Me.tsl_FilasFiltradas.Size = New System.Drawing.Size(116, 17)
+        Me.tsl_FilasFiltradas.Text = "Mostrando registros."
+        '
+        'tsl_FilasSeleccionadas
+        '
+        Me.tsl_FilasSeleccionadas.Name = "tsl_FilasSeleccionadas"
+        Me.tsl_FilasSeleccionadas.Size = New System.Drawing.Size(107, 17)
+        Me.tsl_FilasSeleccionadas.Text = "filas seleccionadas."
         '
         'form_remesa_de_recibos
         '

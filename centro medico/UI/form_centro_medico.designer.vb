@@ -215,6 +215,7 @@ Partial Class form_centro_medico
         Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lbl_DbVersionValue = New System.Windows.Forms.ToolStripStatusLabel()
         Me.btn_VerificarDBVersion = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.BonosNoAgotadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.panel_top.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.mn_menu.SuspendLayout()
@@ -408,7 +409,7 @@ Partial Class form_centro_medico
         '
         'PacientesToolStripMenuItem
         '
-        Me.PacientesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menu_pacientes, Me.menu_empresas, Me.ToolStripSeparator9, Me.menu_facturas, Me.PresupuestosDentalesToolStripMenuItem, Me.menu_analíticas, Me.ToolStripSeparator10, Me.menu_generar_recibos, Me.menu_recibos, Me.menu_imprimir_remesas, Me.menu_generar_norma19, Me.ToolStripSeparator11, Me.menu_citas, Me.menu_partes_altas_bajas, Me.menu_partes_asistencia, Me.ToolStripSeparator12, Me.menu_generar_facturas_recibos, Me.ToolStripSeparator18, Me.frmProcesosMenuItem, Me.tstComunicacionesToolStripMenuItem1})
+        Me.PacientesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menu_pacientes, Me.menu_empresas, Me.ToolStripSeparator9, Me.menu_facturas, Me.PresupuestosDentalesToolStripMenuItem, Me.menu_analíticas, Me.ToolStripSeparator10, Me.menu_generar_recibos, Me.menu_recibos, Me.menu_imprimir_remesas, Me.menu_generar_norma19, Me.ToolStripSeparator11, Me.BonosNoAgotadosToolStripMenuItem, Me.menu_citas, Me.menu_partes_altas_bajas, Me.menu_partes_asistencia, Me.ToolStripSeparator12, Me.menu_generar_facturas_recibos, Me.ToolStripSeparator18, Me.frmProcesosMenuItem, Me.tstComunicacionesToolStripMenuItem1})
         Me.PacientesToolStripMenuItem.Name = "PacientesToolStripMenuItem"
         Me.PacientesToolStripMenuItem.Size = New System.Drawing.Size(69, 20)
         Me.PacientesToolStripMenuItem.Text = "Pacientes"
@@ -1528,6 +1529,12 @@ Partial Class form_centro_medico
         Me.btn_VerificarDBVersion.Size = New System.Drawing.Size(14, 17)
         Me.btn_VerificarDBVersion.Text = "V"
         '
+        'BonosNoAgotadosToolStripMenuItem
+        '
+        Me.BonosNoAgotadosToolStripMenuItem.Name = "BonosNoAgotadosToolStripMenuItem"
+        Me.BonosNoAgotadosToolStripMenuItem.Size = New System.Drawing.Size(315, 22)
+        Me.BonosNoAgotadosToolStripMenuItem.Text = "Bonos no Agotados"
+        '
         'form_centro_medico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1767,5 +1774,6 @@ Partial Class form_centro_medico
     Friend WithEvents tst_PefilUsuario As System.Windows.Forms.ToolStripButton
     Friend WithEvents tsmMigrarPaciente As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PacientepordiaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BonosNoAgotadosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

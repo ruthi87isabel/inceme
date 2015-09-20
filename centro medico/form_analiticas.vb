@@ -150,7 +150,7 @@ Public Class form_analiticas_ex
     Private Sub FillConceptosAnalitica(ByVal aId As Integer)
 
         Dim _data As CMDataSet.LINEASANALITICASDataTable = New CMDataSet.LINEASANALITICASDataTable()
-        '  LINEASANALITICASTableAdapter.GetLineasByAnaliticas(aId)
+        ' LINEASANALITICASTableAdapter.GetLineasByAnaliticas(aId)
 
         Dim k As Integer
         Dim _expression As String = "REFANALITICA = " + aId.ToString()
@@ -162,16 +162,25 @@ Public Class form_analiticas_ex
         _resf.Columns.Add("Concepto")
         _resf.Columns.Add("Precio")
         _resf.Columns.Add("Resultado")
+        _resf.Columns.Add("Color")
         Dim i As Integer
         For i = 0 To _data.Rows.Count - 1
             Dim _concepto As String = _data.Rows(i).Item("CONCEPTO").ToString()
             Dim _importe As Single = _data.Rows(i).Item("PRECIO")
             Dim _resultado As String = _data.Rows(i).Item("RESULTADO").ToString()
-            _resf.Rows.Add(_concepto, _importe, _resultado)
+            Dim Col As String = (From con In Globales.Context.CONCEPTOSANALITICAs Where con.CONCEPTO = _concepto Select con.COLOR).FirstOrDefault()
+            _resf.Rows.Add(_concepto, _importe, _resultado, Col)
 
         Next
         dtg_anConceptosanaliticas.DataSource = _resf
         dtg_anConceptosanaliticas.Columns("PRECIO").Visible = False
+        dtg_anConceptosanaliticas.Columns("Color").Visible = False
+
+        For i = 0 To dtg_anConceptosanaliticas.Rows.Count - 1
+            Dim color1 As String
+            color1 = dtg_anConceptosanaliticas.Rows(i).Cells("Color").Value
+            dtg_anConceptosanaliticas.Rows(i).DefaultCellStyle.BackColor = Color.FromName(color1)
+        Next
     End Sub
 
     Private Sub BindingNavigatorAddNewItem5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BindingNavigatorAddNewItem5.Click

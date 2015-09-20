@@ -301,7 +301,11 @@ Public Class form_analiticas
 
             Next
             If cojido = False Then
-                dgv_disponibles.Rows.Add(conceptoc, precioc, idc, -1)
+                Dim newrow As New DataGridViewRow
+                newrow.CreateCells(dgv_disponibles)
+                newrow.SetValues(conceptoc, precioc, idc, -1)
+                newrow.DefaultCellStyle.BackColor = Color.Red
+                dgv_disponibles.Rows.Add(newrow)
             End If
 
         Next
@@ -311,6 +315,12 @@ Public Class form_analiticas
         dgv_disponibles.Columns("Codigo").Visible = False
         dgv_disponibles.Columns("Id").Visible = False
 
+        Dim p As Integer
+
+        For p = 0 To _datac.Rows.Count - 1
+            Dim col As String = _datac.Rows(p).Item("COLOR")
+            dgv_disponibles.Rows(p).DefaultCellStyle.BackColor = Color.FromName(col)
+        Next
 
     End Sub
     Private Sub filtra(Optional ByVal filtro As String = "")
@@ -487,9 +497,11 @@ Public Class form_analiticas
             Dim concepto As String
             Dim importe As Single
             Dim id As Integer
+            Dim color As Color
             concepto = dgv_disponibles.SelectedRows(i).Cells("Concepto").Value
             importe = dgv_disponibles.SelectedRows(i).Cells("Precio").Value
             id = dgv_disponibles.SelectedRows(i).Cells("Codigo").Value
+            color = dgv_disponibles.SelectedRows(i).DefaultCellStyle.BackColor
             dgv_realizar.Rows.Add(concepto, importe, "", id, -1)
             dgv_disponibles.Rows.RemoveAt(dgv_disponibles.SelectedRows(i).Index())
             fimporte = fimporte + importe

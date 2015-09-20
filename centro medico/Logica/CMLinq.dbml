@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CMCONSTITUCION" Class="CMLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=JUAN-PC;Initial Catalog=CMCONSTITUCION;Integrated Security=True" SettingsObjectName="centro_medico.My.MySettings" SettingsPropertyName="CMConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="siesta" Class="CMLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=siesta;User ID=sa" SettingsObjectName="centro_medico.My.MySettings" SettingsPropertyName="CMConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.PACIENTES" Member="PACIENTEs">
     <Type Name="PACIENTE">
       <Column Name="NOMBRE" Type="System.String" DbType="VarChar(25)" CanBeNull="true" UpdateCheck="Never" />
@@ -710,14 +710,6 @@
       <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(90)" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="SECCION" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="TEXTO" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
-    </Type>
-  </Table>
-  <Table Name="dbo.CONCEPTOSANALITICA" Member="CONCEPTOSANALITICAs">
-    <Type Name="CONCEPTOSANALITICA">
-      <Column Name="CODIGO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="CONCEPTO" Type="System.String" DbType="VarChar(90)" CanBeNull="true" />
-      <Column Name="IMPORTE" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
-      <Column Name="NOTAS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
     </Type>
   </Table>
   <Table Name="dbo.PLANTILLAANALITICAS" Member="PLANTILLAANALITICAs">
@@ -1990,6 +1982,15 @@
       <Column Name="REFCONCEPTO" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Association Name="PLANTILLAANALITICAS_LPLANTILLAANALITICAS" Member="LPLANTILLAANALITICAS" ThisKey="CODIGO" OtherKey="REFPLANTILLA" Type="LPLANTILLAANALITICAS" />
       <Association Name="CONCEPTOSFRA_PLANTILLAANALITICAS" Member="CONCEPTOSFRA" ThisKey="REFCONCEPTO" OtherKey="CODIGO" Type="CONCEPTOSFRA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CONCEPTOSANALITICA" Member="CONCEPTOSANALITICAs">
+    <Type Name="CONCEPTOSANALITICA">
+      <Column Name="CODIGO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CONCEPTO" Type="System.String" DbType="VarChar(90)" CanBeNull="true" />
+      <Column Name="IMPORTE" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="NOTAS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="COLOR" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>
