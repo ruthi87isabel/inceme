@@ -22,6 +22,10 @@ Partial Class form_bonos_no_agotados
         Me.components = New System.ComponentModel.Container()
         Me.gb_generarRecibos = New System.Windows.Forms.GroupBox()
         Me.dtg_recibos = New System.Windows.Forms.DataGridView()
+        Me.PACIENTEBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CMDataSet = New centro_medico.CMDataSet()
+        Me.bt_generar = New System.Windows.Forms.Button()
+        Me.bt_cancelar = New System.Windows.Forms.Button()
         Me.NOMBREDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.APELLIDO1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.APELLIDO2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -29,10 +33,8 @@ Partial Class form_bonos_no_agotados
         Me.FECHANDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TotalBonosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SesionesLibresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PACIENTEBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CMDataSet = New centro_medico.CMDataSet()
-        Me.bt_generar = New System.Windows.Forms.Button()
-        Me.bt_cancelar = New System.Windows.Forms.Button()
+        Me.ListadoPacientesTableAdapter1 = New centro_medico.CM2DataSetTableAdapters.ListadoPacientesTableAdapter()
+        Me.PACIENTESBONOSTableAdapter = New centro_medico.CM2DataSetTableAdapters.PacientesBonosTableAdapter()
         Me.gb_generarRecibos.SuspendLayout()
         CType(Me.dtg_recibos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PACIENTEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,55 +75,6 @@ Partial Class form_bonos_no_agotados
         Me.dtg_recibos.Size = New System.Drawing.Size(689, 377)
         Me.dtg_recibos.TabIndex = 4
         '
-        'NOMBREDataGridViewTextBoxColumn
-        '
-        Me.NOMBREDataGridViewTextBoxColumn.DataPropertyName = "NOMBRE"
-        Me.NOMBREDataGridViewTextBoxColumn.HeaderText = "NOMBRE"
-        Me.NOMBREDataGridViewTextBoxColumn.Name = "NOMBREDataGridViewTextBoxColumn"
-        Me.NOMBREDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'APELLIDO1DataGridViewTextBoxColumn
-        '
-        Me.APELLIDO1DataGridViewTextBoxColumn.DataPropertyName = "APELLIDO1"
-        Me.APELLIDO1DataGridViewTextBoxColumn.HeaderText = "APELLIDO1"
-        Me.APELLIDO1DataGridViewTextBoxColumn.Name = "APELLIDO1DataGridViewTextBoxColumn"
-        Me.APELLIDO1DataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'APELLIDO2DataGridViewTextBoxColumn
-        '
-        Me.APELLIDO2DataGridViewTextBoxColumn.DataPropertyName = "APELLIDO2"
-        Me.APELLIDO2DataGridViewTextBoxColumn.HeaderText = "APELLIDO2"
-        Me.APELLIDO2DataGridViewTextBoxColumn.Name = "APELLIDO2DataGridViewTextBoxColumn"
-        Me.APELLIDO2DataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'DNIDataGridViewTextBoxColumn
-        '
-        Me.DNIDataGridViewTextBoxColumn.DataPropertyName = "DNI"
-        Me.DNIDataGridViewTextBoxColumn.HeaderText = "DNI"
-        Me.DNIDataGridViewTextBoxColumn.Name = "DNIDataGridViewTextBoxColumn"
-        Me.DNIDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'FECHANDataGridViewTextBoxColumn
-        '
-        Me.FECHANDataGridViewTextBoxColumn.DataPropertyName = "FECHAN"
-        Me.FECHANDataGridViewTextBoxColumn.HeaderText = "FECHAN"
-        Me.FECHANDataGridViewTextBoxColumn.Name = "FECHANDataGridViewTextBoxColumn"
-        Me.FECHANDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TotalBonosDataGridViewTextBoxColumn
-        '
-        Me.TotalBonosDataGridViewTextBoxColumn.DataPropertyName = "TotalBonos"
-        Me.TotalBonosDataGridViewTextBoxColumn.HeaderText = "BONOS"
-        Me.TotalBonosDataGridViewTextBoxColumn.Name = "TotalBonosDataGridViewTextBoxColumn"
-        Me.TotalBonosDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SesionesLibresDataGridViewTextBoxColumn
-        '
-        Me.SesionesLibresDataGridViewTextBoxColumn.DataPropertyName = "SesionesLibres"
-        Me.SesionesLibresDataGridViewTextBoxColumn.HeaderText = "SESIONES"
-        Me.SesionesLibresDataGridViewTextBoxColumn.Name = "SesionesLibresDataGridViewTextBoxColumn"
-        Me.SesionesLibresDataGridViewTextBoxColumn.ReadOnly = True
-        '
         'PACIENTEBindingSource
         '
         Me.PACIENTEBindingSource.DataSource = GetType(centro_medico.PACIENTE)
@@ -159,6 +112,59 @@ Partial Class form_bonos_no_agotados
         Me.bt_cancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.bt_cancelar.UseVisualStyleBackColor = True
         '
+        'NOMBREDataGridViewTextBoxColumn
+        '
+        Me.NOMBREDataGridViewTextBoxColumn.DataPropertyName = "NOMBRE"
+        Me.NOMBREDataGridViewTextBoxColumn.HeaderText = "NOMBRE"
+        Me.NOMBREDataGridViewTextBoxColumn.Name = "NOMBREDataGridViewTextBoxColumn"
+        Me.NOMBREDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'APELLIDO1DataGridViewTextBoxColumn
+        '
+        Me.APELLIDO1DataGridViewTextBoxColumn.DataPropertyName = "APELLIDO1"
+        Me.APELLIDO1DataGridViewTextBoxColumn.HeaderText = "APELLIDO1"
+        Me.APELLIDO1DataGridViewTextBoxColumn.Name = "APELLIDO1DataGridViewTextBoxColumn"
+        Me.APELLIDO1DataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'APELLIDO2DataGridViewTextBoxColumn
+        '
+        Me.APELLIDO2DataGridViewTextBoxColumn.DataPropertyName = "APELLIDO2"
+        Me.APELLIDO2DataGridViewTextBoxColumn.HeaderText = "APELLIDO2"
+        Me.APELLIDO2DataGridViewTextBoxColumn.Name = "APELLIDO2DataGridViewTextBoxColumn"
+        Me.APELLIDO2DataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DNIDataGridViewTextBoxColumn
+        '
+        Me.DNIDataGridViewTextBoxColumn.DataPropertyName = "DNI"
+        Me.DNIDataGridViewTextBoxColumn.HeaderText = "DNI"
+        Me.DNIDataGridViewTextBoxColumn.Name = "DNIDataGridViewTextBoxColumn"
+        Me.DNIDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'FECHANDataGridViewTextBoxColumn
+        '
+        Me.FECHANDataGridViewTextBoxColumn.DataPropertyName = "FECHAN"
+        Me.FECHANDataGridViewTextBoxColumn.HeaderText = "FECHA NAC"
+        Me.FECHANDataGridViewTextBoxColumn.Name = "FECHANDataGridViewTextBoxColumn"
+        Me.FECHANDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TotalBonosDataGridViewTextBoxColumn
+        '
+        Me.TotalBonosDataGridViewTextBoxColumn.DataPropertyName = "TotalBonos"
+        Me.TotalBonosDataGridViewTextBoxColumn.HeaderText = "BONOS"
+        Me.TotalBonosDataGridViewTextBoxColumn.Name = "TotalBonosDataGridViewTextBoxColumn"
+        Me.TotalBonosDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SesionesLibresDataGridViewTextBoxColumn
+        '
+        Me.SesionesLibresDataGridViewTextBoxColumn.DataPropertyName = "SesionesLibres"
+        Me.SesionesLibresDataGridViewTextBoxColumn.HeaderText = "SESIONES"
+        Me.SesionesLibresDataGridViewTextBoxColumn.Name = "SesionesLibresDataGridViewTextBoxColumn"
+        Me.SesionesLibresDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ListadoPacientesTableAdapter1
+        '
+        Me.ListadoPacientesTableAdapter1.ClearBeforeFill = True
+        '
         'form_bonos_no_agotados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -184,6 +190,8 @@ Partial Class form_bonos_no_agotados
     Friend WithEvents dtg_recibos As System.Windows.Forms.DataGridView
     Friend WithEvents CMDataSet As centro_medico.CMDataSet
     Friend WithEvents PACIENTEBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents ListadoPacientesTableAdapter1 As centro_medico.CM2DataSetTableAdapters.ListadoPacientesTableAdapter
+    Friend WithEvents PACIENTESBONOSTableAdapter As centro_medico.CM2DataSetTableAdapters.PacientesBonosTableAdapter
     Friend WithEvents NOMBREDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents APELLIDO1DataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents APELLIDO2DataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn

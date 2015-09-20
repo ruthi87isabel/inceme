@@ -110,6 +110,7 @@
 
   <reporte id="Paciente.rdlc"                     fichero="Paciente.rdlc"                                 info="Ficha de Paciente" />
   <reporte id="PacientesListado.rdlc"             fichero="PacientesListado.rdlc"                         info="Listado de Pacientes" />
+  <reporte id="PacientesBonosNoAgotados.rdlc"     fichero="PacientesBonosNoAgotados.rdlc"                 info="Listado de Pacientes con Bonos no agotados" />
   <reporte id="PacientesPorDerivaciones.rdlc"     fichero="PacientesPorDerivaciones.rdlc"                 info="Informe de Pacientes por Derivaciones" />
   <reporte id="PacientesPorDiagnostico.rdlc"      fichero="PacientesPorDiagnostico.rdlc"                  info="Informe de Pacientes por Diagnosticos" />
   <reporte id="PacienteDebitoResumen.rdlc"        fichero="PacienteDebitoResumen.rdlc"                    info="Resumen de Pagos y Entregas" />

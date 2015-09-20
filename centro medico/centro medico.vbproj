@@ -2785,6 +2785,9 @@
     <Content Include="RDLC\custom\vistalegre\Factura.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="RDLC\default\PacientesBonosNoAgotados.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="RDLC\default\RecetaOficialImpresa.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
