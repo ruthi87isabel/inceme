@@ -43,10 +43,16 @@ Partial Class frmConceptoAnaliticaListado
         Me.GridEx1 = New Janus.Windows.GridEX.GridEX()
         Me.CONCEPTOSANALITICABindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.btnConfigGrid = New System.Windows.Forms.Button()
+        Me.pnl_Loading = New System.Windows.Forms.Panel()
+        Me.lnkCancelar = New System.Windows.Forms.LinkLabel()
+        Me.lbl_Loading = New System.Windows.Forms.Label()
+        Me.pb_Loading = New System.Windows.Forms.PictureBox()
         Me.ToolStrip1.SuspendLayout()
         Me.grpFiltrarPorCodigo.SuspendLayout()
         CType(Me.GridEx1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CONCEPTOSANALITICABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnl_Loading.SuspendLayout()
+        CType(Me.pb_Loading, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ToolStrip1
@@ -216,11 +222,52 @@ Partial Class frmConceptoAnaliticaListado
         Me.btnConfigGrid.TabIndex = 239
         Me.btnConfigGrid.UseVisualStyleBackColor = True
         '
+        'pnl_Loading
+        '
+        Me.pnl_Loading.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnl_Loading.Controls.Add(Me.lnkCancelar)
+        Me.pnl_Loading.Controls.Add(Me.lbl_Loading)
+        Me.pnl_Loading.Controls.Add(Me.pb_Loading)
+        Me.pnl_Loading.Location = New System.Drawing.Point(142, 215)
+        Me.pnl_Loading.Name = "pnl_Loading"
+        Me.pnl_Loading.Size = New System.Drawing.Size(195, 56)
+        Me.pnl_Loading.TabIndex = 240
+        Me.pnl_Loading.Visible = False
+        '
+        'lnkCancelar
+        '
+        Me.lnkCancelar.AutoSize = True
+        Me.lnkCancelar.Location = New System.Drawing.Point(49, 30)
+        Me.lnkCancelar.Name = "lnkCancelar"
+        Me.lnkCancelar.Size = New System.Drawing.Size(49, 13)
+        Me.lnkCancelar.TabIndex = 120
+        Me.lnkCancelar.TabStop = True
+        Me.lnkCancelar.Text = "Cancelar"
+        '
+        'lbl_Loading
+        '
+        Me.lbl_Loading.AutoSize = True
+        Me.lbl_Loading.Location = New System.Drawing.Point(49, 12)
+        Me.lbl_Loading.Name = "lbl_Loading"
+        Me.lbl_Loading.Size = New System.Drawing.Size(71, 13)
+        Me.lbl_Loading.TabIndex = 119
+        Me.lbl_Loading.Text = "Preparando..."
+        '
+        'pb_Loading
+        '
+        Me.pb_Loading.Image = Global.centro_medico.My.Resources.Resources.ajax_loader
+        Me.pb_Loading.Location = New System.Drawing.Point(6, 11)
+        Me.pb_Loading.Name = "pb_Loading"
+        Me.pb_Loading.Size = New System.Drawing.Size(40, 35)
+        Me.pb_Loading.TabIndex = 118
+        Me.pb_Loading.TabStop = False
+        '
         'frmConceptoAnaliticaListado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(524, 448)
+        Me.Controls.Add(Me.pnl_Loading)
         Me.Controls.Add(Me.btnConfigGrid)
         Me.Controls.Add(Me.GridEx1)
         Me.Controls.Add(Me.grpFiltrarPorCodigo)
@@ -235,6 +282,9 @@ Partial Class frmConceptoAnaliticaListado
         Me.grpFiltrarPorCodigo.PerformLayout()
         CType(Me.GridEx1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CONCEPTOSANALITICABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnl_Loading.ResumeLayout(False)
+        Me.pnl_Loading.PerformLayout()
+        CType(Me.pb_Loading, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -256,4 +306,8 @@ Partial Class frmConceptoAnaliticaListado
     Friend WithEvents txtConcepto As ctrlTextboxAvanzado
     Friend WithEvents CONCEPTOSANALITICABindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents btnConfigGrid As System.Windows.Forms.Button
+    Friend WithEvents pnl_Loading As System.Windows.Forms.Panel
+    Friend WithEvents lnkCancelar As System.Windows.Forms.LinkLabel
+    Friend WithEvents lbl_Loading As System.Windows.Forms.Label
+    Friend WithEvents pb_Loading As System.Windows.Forms.PictureBox
 End Class

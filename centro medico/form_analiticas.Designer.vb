@@ -141,7 +141,7 @@ Partial Class form_analiticas_ex
         Me.tsbGuardar.Image = Global.centro_medico.My.Resources.Resources._24_em_check
         Me.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbGuardar.Name = "tsbGuardar"
-        Me.tsbGuardar.Size = New System.Drawing.Size(66, 22)
+        Me.tsbGuardar.Size = New System.Drawing.Size(69, 22)
         Me.tsbGuardar.Text = "&Guardar"
         '
         'tsbCancelar
@@ -149,7 +149,7 @@ Partial Class form_analiticas_ex
         Me.tsbCancelar.Image = Global.centro_medico.My.Resources.Resources._24_em_cross
         Me.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbCancelar.Name = "tsbCancelar"
-        Me.tsbCancelar.Size = New System.Drawing.Size(69, 22)
+        Me.tsbCancelar.Size = New System.Drawing.Size(73, 22)
         Me.tsbCancelar.Text = "Can&celar"
         '
         'lb_teclas
@@ -191,14 +191,14 @@ Partial Class form_analiticas_ex
         Me.BindingNavigatorAddNewItem5.Image = CType(resources.GetObject("BindingNavigatorAddNewItem5.Image"), System.Drawing.Image)
         Me.BindingNavigatorAddNewItem5.Name = "BindingNavigatorAddNewItem5"
         Me.BindingNavigatorAddNewItem5.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem5.Size = New System.Drawing.Size(58, 30)
+        Me.BindingNavigatorAddNewItem5.Size = New System.Drawing.Size(62, 30)
         Me.BindingNavigatorAddNewItem5.Text = "Añadir"
         '
         'BindingNavigatorCountItem5
         '
         Me.BindingNavigatorCountItem5.Name = "BindingNavigatorCountItem5"
-        Me.BindingNavigatorCountItem5.Size = New System.Drawing.Size(38, 30)
-        Me.BindingNavigatorCountItem5.Text = "de {0}"
+        Me.BindingNavigatorCountItem5.Size = New System.Drawing.Size(35, 30)
+        Me.BindingNavigatorCountItem5.Text = "of {0}"
         Me.BindingNavigatorCountItem5.ToolTipText = "Total number of items"
         '
         'BindingNavigatorDeleteItem5
@@ -207,7 +207,7 @@ Partial Class form_analiticas_ex
         Me.BindingNavigatorDeleteItem5.Image = CType(resources.GetObject("BindingNavigatorDeleteItem5.Image"), System.Drawing.Image)
         Me.BindingNavigatorDeleteItem5.Name = "BindingNavigatorDeleteItem5"
         Me.BindingNavigatorDeleteItem5.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem5.Size = New System.Drawing.Size(57, 30)
+        Me.BindingNavigatorDeleteItem5.Size = New System.Drawing.Size(59, 30)
         Me.BindingNavigatorDeleteItem5.Text = "Borrar"
         '
         'BindingNavigatorMoveFirstItem5
@@ -276,7 +276,7 @@ Partial Class form_analiticas_ex
         Me.BindingNavigatorEditAnaliticas.Image = Global.centro_medico.My.Resources.Resources.folderopen
         Me.BindingNavigatorEditAnaliticas.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BindingNavigatorEditAnaliticas.Name = "BindingNavigatorEditAnaliticas"
-        Me.BindingNavigatorEditAnaliticas.Size = New System.Drawing.Size(55, 30)
+        Me.BindingNavigatorEditAnaliticas.Size = New System.Drawing.Size(57, 30)
         Me.BindingNavigatorEditAnaliticas.Text = "Editar"
         '
         'tlbImprimirAnalitica
@@ -285,7 +285,7 @@ Partial Class form_analiticas_ex
         Me.tlbImprimirAnalitica.Image = Global.centro_medico.My.Resources.Resources.Print1
         Me.tlbImprimirAnalitica.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tlbImprimirAnalitica.Name = "tlbImprimirAnalitica"
-        Me.tlbImprimirAnalitica.Size = New System.Drawing.Size(65, 30)
+        Me.tlbImprimirAnalitica.Size = New System.Drawing.Size(73, 30)
         Me.tlbImprimirAnalitica.Text = "Imprimir"
         '
         'dtg_anAnaliticas

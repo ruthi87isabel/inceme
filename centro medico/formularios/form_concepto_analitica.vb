@@ -5,6 +5,7 @@ Public Class form_concepto_analitica
     Dim fconceptoo As String
     Dim fimporteo As Single
     Dim fnotaso As String
+    Dim fcolor As String
     Sub New(ByVal aName As String, ByVal aCurrentAccion As Enums.Accion)
 
         ' This call is required by the Windows Form Designer.
@@ -53,16 +54,19 @@ Public Class form_concepto_analitica
         Me.CONCEPTOSANALITICATableAdapter.Update(Me.CMDataSet.CONCEPTOSANALITICA)
 
     End Sub
-    Private Sub Inicializa()
+    Public Sub Inicializa()
         Dim _data As CMDataSet.CONCEPTOSANALITICADataTable = Me.CONCEPTOSANALITICATableAdapter.GetConceptosAnaliticaById(fId)
         fconceptoo = _data.Rows(0).Item("CONCEPTO").ToString()
         fnotaso = _data.Rows(0).Item("NOTAS").ToString()
         If _data.Rows(0).Item("IMPORTE").GetType.ToString() <> DBNull.Value.GetType.ToString Then
             fimporteo = _data.Rows(0).Item("IMPORTE")
+            fcolor = _data.Rows(0).Item("COLOR")
         End If
         tb_concepto.Text = fconceptoo
         tb_importe.Text = String.Format("{0:N}", (fimporteo))
         tb_notas.Text = fnotaso
+        Dim readcolor As Color = ColorTranslator.FromHtml(fcolor)
+        UiColorButton1.ColorPicker.SelectedColor = readcolor
         aplicaPermisos()
     End Sub
     Private Sub form_concepto_analitica_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -93,13 +97,16 @@ Public Class form_concepto_analitica
                 _importe = Single.Parse(tb_importe.Text.Trim())
             End If
             Dim _notas As String = tb_notas.Text.Trim()
+            'Dim _color As String = UiColorButton1.SelectedColor.ToArgb.ToString()
+            Dim _color As String = System.Drawing.ColorTranslator.ToHtml(UiColorButton1.SelectedColor)
+
             If Me.CurrentAccion = Enums.Accion.Modificar Then
                 If MessageBox.Show("Esta seguro que desea modificar los datos ", "Modificar", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = Windows.Forms.DialogResult.OK Then
-                    Me.CONCEPTOSANALITICATableAdapter.UpdateValores(_concepto, _importe, _notas, fId)
+                    Me.CONCEPTOSANALITICATableAdapter.UpdateValores(_concepto, _importe, _notas, _color, fId)
                 End If
             Else
                 If MessageBox.Show("Esta seguro que desea insertar los datos ", "Insertar", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = Windows.Forms.DialogResult.OK Then
-                    Me.CONCEPTOSANALITICATableAdapter.Insert(_concepto, _importe, _notas)
+                    Me.CONCEPTOSANALITICATableAdapter.Insert(_concepto, _importe, _notas, _color)
 
                 End If
             End If
@@ -133,10 +140,12 @@ Public Class form_concepto_analitica
                 _importe = Single.Parse(tb_importe.Text.Trim())
             End If
             Dim _notas As String = tb_notas.Text.Trim()
+            'Dim _color As String = UiColorButton1.SelectedColor.ToArgb.ToString()
+            Dim _color As String = System.Drawing.ColorTranslator.ToHtml(UiColorButton1.SelectedColor)
             If Me.CurrentAccion = Enums.Accion.Modificar Then
-                Me.CONCEPTOSANALITICATableAdapter.UpdateValores(_concepto, _importe, _notas, fId)
+                Me.CONCEPTOSANALITICATableAdapter.UpdateValores(_concepto, _importe, _notas, _color, fId)
                 Me.ActualizaPrecioLineasPlantillas(fId, _importe)
-            Else : Me.CONCEPTOSANALITICATableAdapter.Insert(_concepto, _importe, _notas)
+            Else : Me.CONCEPTOSANALITICATableAdapter.Insert(_concepto, _importe, _notas, _color)
             End If
             Me.CONCEPTOSANALITICATableAdapter.Fill(CMDataSet.CONCEPTOSANALITICA)
             clickaccept = True

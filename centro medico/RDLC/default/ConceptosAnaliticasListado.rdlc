@@ -184,6 +184,7 @@
                       <rd:DefaultName>CONCEPTO</rd:DefaultName>
                       <ZIndex>1</ZIndex>
                       <Style>
+                        <BackgroundColor>=Fields!COLOR.Value</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -212,6 +213,7 @@
                       </Paragraphs>
                       <rd:DefaultName>IMPORTE</rd:DefaultName>
                       <Style>
+                        <BackgroundColor>=Fields!COLOR.Value</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -322,7 +324,7 @@
         </TablixRowHierarchy>
         <DataSetName>CMDataSet_CONCEPTOSANALITICA</DataSetName>
         <Left>0.5cm</Left>
-        <Height>3.03969cm</Height>
+        <Height>3.03968cm</Height>
         <Width>11.10978cm</Width>
         <Style />
       </Tablix>
@@ -330,7 +332,7 @@
     <Height>3.03969cm</Height>
     <Style />
   </Body>
-  <Width>12cm</Width>
+  <Width>12.00001cm</Width>
   <Page>
     <PageHeader>
       <Height>3.42229cm</Height>
@@ -453,9 +455,14 @@ FROM         CONCEPTOSANALITICA</CommandText>
           <DataField>NOTAS</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="COLOR">
+          <DataField>COLOR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>CMDataSet</rd:DataSetName>
+        <rd:SchemaPath>H:\jose\Trabajo1\project\inceme-master\centro medico\Logica\CMDataSet.xsd</rd:SchemaPath>
         <rd:TableName>CONCEPTOSANALITICA</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

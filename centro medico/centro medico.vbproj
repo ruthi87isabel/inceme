@@ -195,7 +195,9 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -591,6 +593,7 @@
     <Compile Include="Logica\Model\RecetasXML.vb" />
     <Compile Include="Logica\PacienteDebitoManager.vb" />
     <Compile Include="Logica\RecibosManager.vb" />
+    <Compile Include="Logica\ReportWrappers\WRAPPER_ANALITICA.vb" />
     <Compile Include="UI\Bonos\Bonos_form.Designer.vb">
       <DependentUpon>Bonos_form.vb</DependentUpon>
     </Compile>
@@ -2420,10 +2423,6 @@
     <EmbeddedResource Include="controles\ctrlVisorDefaultApp.resx">
       <DependentUpon>ctrlVisorDefaultApp.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formularios\form_bonos_no_agotados.resx">
-      <DependentUpon>form_bonos_no_agotados.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="formularios\formas reportes\form_mostrar_reporte_alarmas.resx">
       <DependentUpon>form_mostrar_reporte_alarmas.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -2439,6 +2438,9 @@
     <EmbeddedResource Include="formularios\formas reportes\form_mostrar_reporte_forma_pagos.resx">
       <DependentUpon>form_mostrar_reporte_forma_pagos.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\form_bonos_no_agotados.resx">
+      <DependentUpon>form_bonos_no_agotados.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\form_conceptos_facturables.resx">
       <DependentUpon>form_conceptos_facturables.vb</DependentUpon>
@@ -2785,9 +2787,7 @@
     <Content Include="RDLC\custom\vistalegre\Factura.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="RDLC\default\PacientesBonosNoAgotados.rdlc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <EmbeddedResource Include="RDLC\default\PacientesBonosNoAgotados.rdlc" />
     <EmbeddedResource Include="RDLC\default\RecetaOficialImpresa.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -3056,7 +3056,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Bonos\Bonos_form.resx">
       <DependentUpon>Bonos_form.vb</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Bonos\contadorBono.resx">
       <DependentUpon>contadorBono.vb</DependentUpon>

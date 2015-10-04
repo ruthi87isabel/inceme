@@ -40,9 +40,9 @@ Public Class form_bonos_no_agotados
     End Sub
 
     Private Sub bt_generar_Click(sender As Object, e As EventArgs) Handles bt_generar.Click
-        Dim rpt As New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim rpt As New Microsoft.Reporting.WinForms.ReportDataSource
         rpt.Name = "CM2DataSet_PacientesBonos"
         rpt.Value = dView
-        ReportesManager.Imprime("PacientesBonosNoAgotados.rdlc", {rpt})
+        UI.Reportes.ReportesManager.Imprime("PacientesBonosNoAgotados.rdlc", {rpt})
     End Sub
 End Class

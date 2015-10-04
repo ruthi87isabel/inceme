@@ -259,6 +259,7 @@ Public Class form_analiticas
         dgv_disponibles.Columns.Add("Precio", "Precio")
         dgv_disponibles.Columns("Precio").Visible = False
         dgv_disponibles.Columns.Add("Codigo", "Codigo")
+        dgv_disponibles.Columns.Add("color", "Codigo")
         dgv_disponibles.Columns.Add("Id", "Id")
         dgv_realizar.Columns.Add("Concepto", "Concepto")
         dgv_realizar.Columns.Add("Precio", "Precio")
@@ -277,6 +278,9 @@ Public Class form_analiticas
         Dim precio As Single
         Dim precioc As Single
         Dim resultado As String
+        Dim col As String
+        'Dim a As Integer = 0
+        'Dim b As Integer = 0
         Dim i As Integer
         Dim j As Integer
 
@@ -284,6 +288,8 @@ Public Class form_analiticas
             idc = _datac.Rows(j).Item("CODIGO")
             conceptoc = _datac.Rows(j).Item("CONCEPTO")
             precioc = _datac.Rows(j).Item("IMPORTE")
+            col = _datac.Rows(j).Item("COLOR")
+            Dim readcolor As Color = ColorTranslator.FromHtml(col)
             Dim cojido As Boolean = False
             For i = 0 To _dataf.Rows.Count - 1
 
@@ -296,16 +302,29 @@ Public Class form_analiticas
                     If _dataf.Rows(i).Item("RESULTADO").GetType().ToString() <> DBNull.Value.GetType().ToString() Then
                         resultado = _dataf.Rows(i).Item("RESULTADO")
                     End If
-                    dgv_realizar.Rows.Add(concepto, precio, resultado, idconcepto, id)
+
+                    Dim newrow As New DataGridViewRow
+                    newrow.CreateCells(dgv_realizar)
+                    newrow.SetValues(conceptoc, precioc, idc, -1)
+                    newrow.DefaultCellStyle.BackColor = readcolor
+                    dgv_realizar.Rows.Add(newrow)
+
+                    'dgv_realizar.Rows.Add(concepto, precio, resultado, idconcepto, id)
+                    'dgv_realizar.Rows(a).DefaultCellStyle.BackColor = Color.FromArgb(col)
+                    'a = a + 1
                 End If
 
             Next
             If cojido = False Then
+
                 Dim newrow As New DataGridViewRow
                 newrow.CreateCells(dgv_disponibles)
                 newrow.SetValues(conceptoc, precioc, idc, -1)
-                newrow.DefaultCellStyle.BackColor = Color.Red
+                newrow.DefaultCellStyle.BackColor = readcolor
                 dgv_disponibles.Rows.Add(newrow)
+                'dgv_disponibles.Rows.Add(conceptoc, precioc, idc, -1)
+                'dgv_disponibles.Rows(b).DefaultCellStyle.BackColor = Color.FromArgb(col)
+                'b = b + 1
             End If
 
         Next
@@ -315,12 +334,8 @@ Public Class form_analiticas
         dgv_disponibles.Columns("Codigo").Visible = False
         dgv_disponibles.Columns("Id").Visible = False
 
-        Dim p As Integer
-
-        For p = 0 To _datac.Rows.Count - 1
-            Dim col As String = _datac.Rows(p).Item("COLOR")
-            dgv_disponibles.Rows(p).DefaultCellStyle.BackColor = Color.FromName(col)
-        Next
+       
+       
 
     End Sub
     Private Sub filtra(Optional ByVal filtro As String = "")
@@ -371,6 +386,7 @@ Public Class form_analiticas
 
         dgv_disponibles.Columns("Codigo").Visible = False
         dgv_disponibles.Columns("Id").Visible = False
+
     End Sub
     Private Sub GetConceptos()
 
@@ -409,6 +425,14 @@ Public Class form_analiticas
             dgv_realizar.Columns.Add("Id", "Id")
             dgv_realizar.Columns("RefConcepto").Visible = False
             dgv_realizar.Columns("Id").Visible = False
+
+            Dim p As Integer
+
+            For p = 0 To _datac.Rows.Count - 1
+                Dim col As String = _datac.Rows(p).Item("COLOR")
+                Dim readcolor As Color = ColorTranslator.FromHtml(col)
+                dgv_disponibles.Rows(p).DefaultCellStyle.BackColor = readcolor
+            Next
 
         End If
     End Sub
@@ -495,14 +519,21 @@ Public Class form_analiticas
         Dim i As Integer
         For i = 0 To dgv_disponibles.SelectedRows.Count - 1
             Dim concepto As String
+            Dim Col As System.Drawing.Color
             Dim importe As Single
             Dim id As Integer
-            Dim color As Color
+            Col = dgv_disponibles.SelectedRows(i).DefaultCellStyle.BackColor
             concepto = dgv_disponibles.SelectedRows(i).Cells("Concepto").Value
             importe = dgv_disponibles.SelectedRows(i).Cells("Precio").Value
             id = dgv_disponibles.SelectedRows(i).Cells("Codigo").Value
-            color = dgv_disponibles.SelectedRows(i).DefaultCellStyle.BackColor
-            dgv_realizar.Rows.Add(concepto, importe, "", id, -1)
+
+            Dim newrow As New DataGridViewRow
+            newrow.CreateCells(dgv_realizar)
+            newrow.SetValues(concepto, importe, "", id, -1)
+            newrow.DefaultCellStyle.BackColor = Col
+            dgv_realizar.Rows.Add(newrow)
+
+            'dgv_realizar.Rows.Add(concepto, importe, "", id, -1)
             dgv_disponibles.Rows.RemoveAt(dgv_disponibles.SelectedRows(i).Index())
             fimporte = fimporte + importe
             tb_total.Text = fimporte.ToString()
@@ -515,14 +546,23 @@ Public Class form_analiticas
         Dim i As Integer
         For i = 0 To dgv_realizar.SelectedRows.Count - 1
             Dim concepto As String
+            Dim Col As System.Drawing.Color
             Dim importe As Single
             Dim id As Integer
             Dim ida As Integer
+            Col = dgv_realizar.SelectedRows(i).DefaultCellStyle.BackColor
             concepto = dgv_realizar.SelectedRows(i).Cells("Concepto").Value
             importe = dgv_realizar.SelectedRows(i).Cells("Precio").Value
             id = dgv_realizar.SelectedRows(i).Cells("RefConcepto").Value
             ida = dgv_realizar.SelectedRows(i).Cells("Id").Value
-            dgv_disponibles.Rows.Add(concepto, importe, id, ida)
+
+            Dim newrow As New DataGridViewRow
+            newrow.CreateCells(dgv_disponibles)
+            newrow.SetValues(concepto, importe, id, ida)
+            newrow.DefaultCellStyle.BackColor = Col
+            dgv_disponibles.Rows.Add(newrow)
+
+            'dgv_disponibles.Rows.Add(concepto, importe, id, ida)
             dgv_realizar.Rows.RemoveAt(dgv_realizar.SelectedRows(i).Index())
             fimporte = fimporte - importe
             tb_total.Text = fimporte.ToString()

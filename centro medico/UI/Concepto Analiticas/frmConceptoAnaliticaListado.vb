@@ -3,6 +3,9 @@
 Public Class frmConceptoAnaliticaListado
 
     Public Shadows WithEvents GridEx1 As GridEX
+    Dim ts As New Threading.ThreadStart(AddressOf PreparaImpresion)
+    Dim threadPrint As New System.Threading.Thread(ts)
+    Dim lista As New List(Of WRAPPER_ANALITICA)
 
     Private Sub tstNuevo_Click(sender As System.Object, e As System.EventArgs) Handles tstNuevo.Click
         Dim frm As New form_concepto_analitica("Ficha de Conceptos Analíticos-Añadir", Enums.Accion.Insertar)
@@ -84,6 +87,16 @@ Public Class frmConceptoAnaliticaListado
 
         CONCEPTOSANALITICABindingSource.DataSource = query
 
+        
+        'Dim stilo As New GridEXFormatStyle
+
+        'For Each row As GridEXRow In GridEx1.GetDataRows
+        '    Dim col As String = row.DataRow.COLOR
+        '    Dim readcolor As Color = ColorTranslator.FromHtml(col)
+        '    stilo.BackColor = readcolor
+        '    row.RowStyle = stilo
+        'Next
+
         '_GridEx = GridEX1
         'aplicamos permiso para no visualizar importes
         Me.txtImporte.Visible = (RoleManager.PermisoPorItem(Globales.Usuario.CODIGO, RoleManager.Items.ImporteCitas) <> RoleManager.TipoPermisos.Ninguno)
@@ -121,4 +134,88 @@ Public Class frmConceptoAnaliticaListado
             OriginalColumns.Add(cExt)
         Next
     End Sub
+
+    Private Sub PreparaImpresion()
+
+        lista.Clear()
+        Dim contex As New CMLinqDataContext()
+        Dim count As Integer = 1
+        Try
+
+            For Each row As GridEXRow In GridEX1.GetDataRows
+                If row.IsVisible Then
+                    Dim cod As Integer = row.DataRow.CODIGO
+                    Dim analitica As CONCEPTOSANALITICA = (From p In contex.CONCEPTOSANALITICAs Where p.CODIGO = cod Select p).SingleOrDefault
+                    analitica.IMPORTE = row.DataRow.IMPORTE
+
+                    lista.Add(New WRAPPER_ANALITICA(analitica))
+                    GridEX1.BeginInvoke(New BeginInvokeDelegate2(AddressOf Progreso), New Object() {"Procesando... " & count & "/" & GridEX1.RowCount})
+                    count = count + 1
+                End If
+            Next
+        Catch ex As Exception
+
+        End Try
+        GridEX1.BeginInvoke(New BeginInvokeDelegate(AddressOf Imprimir))
+    End Sub
+
+    Public Sub SetEnabled(ByVal enabled As Boolean)
+        For Each control As Control In Me.Controls
+            control.Enabled = enabled
+        Next
+        pnl_Loading.Enabled = Not enabled
+        lnkCancelar.Enabled = Not enabled
+    End Sub
+
+    Delegate Sub BeginInvokeDelegate()
+    Delegate Sub BeginInvokeDelegate2(ByVal msg As String)
+    Delegate Sub BeginInvokeDelegate3(ByVal enabled As Boolean)
+
+    Private Sub lnkCancelar_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles lnkCancelar.LinkClicked
+        Try
+            threadPrint.Abort()
+        Catch ex As Exception
+
+        Finally
+            GridEX1.BeginInvoke(New BeginInvokeDelegate3(AddressOf SetEnabled), New Object() {True})
+            GridEX1.BeginInvoke(New BeginInvokeDelegate(AddressOf GridEX1.Update))
+            'SetEnabled(True)
+            pnl_Loading.Visible = False
+        End Try
+    End Sub
+
+    Private Sub tlbImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tlbImprimir.Click
+        pnl_Loading.Visible = True
+        lbl_Loading.Text = "Procesando..."
+        SetEnabled(False)
+        threadPrint = New Threading.Thread(ts)
+        threadPrint.Start()
+    End Sub
+
+    Private Sub Progreso(ByVal msg As String)
+        lbl_Loading.Text = msg
+    End Sub
+
+    Private Sub Imprimir()
+
+        Dim ds As New Microsoft.Reporting.WinForms.ReportDataSource
+        ds.Name = "CMDataSet_CONCEPTOSANALITICA"
+        ds.Value = lista
+
+        SetEnabled(True)
+        pnl_Loading.Visible = False
+        lbl_Loading.Text = "Preparando..."
+
+        UI.Reportes.ReportesManager.Imprime("ConceptosAnaliticasListado.rdlc", {ds})
+
+    End Sub
+
+    Private Sub bt_imprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        pnl_Loading.Visible = True
+        lbl_Loading.Text = "Procesando..."
+        SetEnabled(False)
+        threadPrint = New Threading.Thread(ts)
+        threadPrint.Start()
+    End Sub
+
 End Class

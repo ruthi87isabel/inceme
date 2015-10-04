@@ -21,7 +21,6 @@ Partial Class form_concepto_analitica
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Dim CONCEPTOLabel As System.Windows.Forms.Label
-        'Dim IMPORTELabel As System.Windows.Forms.Label
         Dim NOTASLabel As System.Windows.Forms.Label
         Me.tb_concepto = New ctrlTextboxAvanzado
         Me.CONCEPTOSANALITICABindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -31,6 +30,8 @@ Partial Class form_concepto_analitica
         Me.bt_cancel = New System.Windows.Forms.Button
         Me.bt_aceptar = New System.Windows.Forms.Button
         Me.CONCEPTOSANALITICATableAdapter = New centro_medico.CMDataSetTableAdapters.CONCEPTOSANALITICATableAdapter
+        Me.UiColorButton1 = New Janus.Windows.EditControls.UIColorButton
+        Me.Label1 = New System.Windows.Forms.Label
         CONCEPTOLabel = New System.Windows.Forms.Label
         IMPORTELabel = New System.Windows.Forms.Label
         NOTASLabel = New System.Windows.Forms.Label
@@ -67,6 +68,7 @@ Partial Class form_concepto_analitica
         '
         'tb_concepto
         '
+        Me.tb_concepto.AcceptsReturn = True
         Me.tb_concepto.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CONCEPTOSANALITICABindingSource, "CONCEPTO", True))
         Me.tb_concepto.Location = New System.Drawing.Point(15, 25)
         Me.tb_concepto.MaxLength = 90
@@ -82,11 +84,13 @@ Partial Class form_concepto_analitica
         'CMDataSet
         '
         Me.CMDataSet.DataSetName = "CMDataSet"
+        Me.CMDataSet.EnforceConstraints = False
         Me.CMDataSet.Locale = New System.Globalization.CultureInfo("en-US")
         Me.CMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'tb_importe
         '
+        Me.tb_importe.AcceptsReturn = True
         Me.tb_importe.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CONCEPTOSANALITICABindingSource, "IMPORTE", True))
         Me.tb_importe.Location = New System.Drawing.Point(250, 25)
         Me.tb_importe.Name = "tb_importe"
@@ -95,19 +99,20 @@ Partial Class form_concepto_analitica
         '
         'tb_notas
         '
+        Me.tb_notas.AcceptsReturn = True
         Me.tb_notas.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CONCEPTOSANALITICABindingSource, "NOTAS", True))
         Me.tb_notas.Location = New System.Drawing.Point(15, 74)
         Me.tb_notas.MaxLength = 120
         Me.tb_notas.Multiline = True
         Me.tb_notas.Name = "tb_notas"
-        Me.tb_notas.Size = New System.Drawing.Size(336, 80)
+        Me.tb_notas.Size = New System.Drawing.Size(442, 80)
         Me.tb_notas.TabIndex = 2
         '
         'bt_cancel
         '
         Me.bt_cancel.Image = Global.centro_medico.My.Resources.Resources.MISC20
         Me.bt_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.bt_cancel.Location = New System.Drawing.Point(275, 160)
+        Me.bt_cancel.Location = New System.Drawing.Point(382, 160)
         Me.bt_cancel.Name = "bt_cancel"
         Me.bt_cancel.Size = New System.Drawing.Size(75, 28)
         Me.bt_cancel.TabIndex = 4
@@ -119,7 +124,7 @@ Partial Class form_concepto_analitica
         '
         Me.bt_aceptar.Image = Global.centro_medico.My.Resources.Resources.CHECKMRK
         Me.bt_aceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.bt_aceptar.Location = New System.Drawing.Point(190, 160)
+        Me.bt_aceptar.Location = New System.Drawing.Point(297, 160)
         Me.bt_aceptar.Name = "bt_aceptar"
         Me.bt_aceptar.Size = New System.Drawing.Size(75, 28)
         Me.bt_aceptar.TabIndex = 3
@@ -131,11 +136,38 @@ Partial Class form_concepto_analitica
         '
         Me.CONCEPTOSANALITICATableAdapter.ClearBeforeFill = True
         '
+        'UiColorButton1
+        '
+        '
+        '
+        '
+        Me.UiColorButton1.ColorPicker.BorderStyle = Janus.Windows.UI.BorderStyle.None
+        Me.UiColorButton1.ColorPicker.Location = New System.Drawing.Point(0, 0)
+        Me.UiColorButton1.ColorPicker.Name = ""
+        Me.UiColorButton1.ColorPicker.Size = New System.Drawing.Size(100, 100)
+        Me.UiColorButton1.ColorPicker.TabIndex = 0
+        Me.UiColorButton1.Location = New System.Drawing.Point(364, 23)
+        Me.UiColorButton1.Name = "UiColorButton1"
+        Me.UiColorButton1.Size = New System.Drawing.Size(93, 23)
+        Me.UiColorButton1.TabIndex = 6
+        Me.UiColorButton1.Text = "UiColorButton1"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(364, 7)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(34, 13)
+        Me.Label1.TabIndex = 7
+        Me.Label1.Text = "Color:"
+        '
         'form_concepto_analitica
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(359, 195)
+        Me.ClientSize = New System.Drawing.Size(470, 195)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.UiColorButton1)
         Me.Controls.Add(Me.bt_cancel)
         Me.Controls.Add(Me.bt_aceptar)
         Me.Controls.Add(NOTASLabel)
@@ -164,4 +196,6 @@ Partial Class form_concepto_analitica
     Friend WithEvents bt_cancel As System.Windows.Forms.Button
     Friend WithEvents bt_aceptar As System.Windows.Forms.Button
     Friend WithEvents IMPORTELabel As System.Windows.Forms.Label
+    Friend WithEvents UiColorButton1 As Janus.Windows.EditControls.UIColorButton
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

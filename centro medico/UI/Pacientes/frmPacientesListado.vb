@@ -766,9 +766,7 @@ Public Class frmPacientesListado
     Private Sub GridEX1_SelectionChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GridEX1.SelectionChanged
         tst_Editar.Enabled = GridEX1.SelectedItems.Count > 0
         tst_Eliminar.Enabled = GridEX1.SelectedItems.Count > 0
-        If GridEX1.SelectedItems.Count > 0 And seleccion = 0 Then
-            seleccion = GridEX1.SelectedItems(0).GetRow().DataRow.cpaciente
-        End If
+
     End Sub
 
     Private Sub lnkCancelar_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles lnkCancelar.LinkClicked
