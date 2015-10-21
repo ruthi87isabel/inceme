@@ -2,6 +2,7 @@
 
 Public Class frmConceptoAnaliticaListado
 
+    Public Id As Integer = 0
     Public Shadows WithEvents GridEx1 As GridEX
     Dim ts As New Threading.ThreadStart(AddressOf PreparaImpresion)
     Dim threadPrint As New System.Threading.Thread(ts)
@@ -36,6 +37,10 @@ Public Class frmConceptoAnaliticaListado
     Private Sub GridEX1_SelectionChanged(sender As System.Object, e As System.EventArgs) Handles GridEX1.SelectionChanged
         tst_Editar.Enabled = True
         tst_Eliminar.Enabled = True
+        If GridEx1.SelectedItems.Count > 0 And Id = 0 Then
+            Id = GridEx1.SelectedItems(0).GetRow().DataRow.CODIGO
+        End If
+
     End Sub
 
     Private Sub GridEX1_RowDoubleClick(sender As System.Object, e As Janus.Windows.GridEX.RowActionEventArgs) Handles GridEX1.RowDoubleClick
@@ -45,10 +50,11 @@ Public Class frmConceptoAnaliticaListado
     Private Sub Editar()
 
         Dim frm As New form_concepto_analitica("Ficha de Conceptos Analíticos-Modificar", Enums.Accion.Modificar, CType(CONCEPTOSANALITICABindingSource.Current, CONCEPTOSANALITICA).CODIGO)
+        Id = GridEx1.SelectedItems(0).GetRow().DataRow.CODIGO
 
-        frm.ShowDialog()
+            frm.ShowDialog()
 
-        PopulateGrid()
+            PopulateGrid()
 
 
     End Sub
@@ -85,17 +91,22 @@ Public Class frmConceptoAnaliticaListado
 
         If (stockInt > 0) Then query = query.Where(Function(m) m.IMPORTE <= stockInt)
 
+
         CONCEPTOSANALITICABindingSource.DataSource = query
 
-        
-        'Dim stilo As New GridEXFormatStyle
+        Dim i As Integer
 
-        'For Each row As GridEXRow In GridEx1.GetDataRows
-        '    Dim col As String = row.DataRow.COLOR
-        '    Dim readcolor As Color = ColorTranslator.FromHtml(col)
-        '    stilo.BackColor = readcolor
-        '    row.RowStyle = stilo
-        'Next
+        For i = 0 To GridEx1.RowCount - 1
+            Dim stilo As New GridEXFormatStyle
+            Dim col As String = GridEx1.GetRow(i).DataRow.COLOR
+            Dim readcolor As Color = ColorTranslator.FromHtml(col)
+            stilo.BackColor = readcolor
+            GridEx1.GetRow(i).RowStyle() = stilo
+
+            If GridEx1.GetRow(i).DataRow.CODIGO = Id Then
+                GridEx1.MoveTo(i)
+            End If
+        Next
 
         '_GridEx = GridEX1
         'aplicamos permiso para no visualizar importes
@@ -218,4 +229,21 @@ Public Class frmConceptoAnaliticaListado
         threadPrint.Start()
     End Sub
 
+    Private Sub Ordenar(sender As Object, e As EventArgs) Handles GridEx1.SortKeysChanged
+
+        Dim i As Integer
+        For i = 0 To GridEx1.RowCount - 1
+            Dim stilo As New GridEXFormatStyle
+            Dim col As String = GridEx1.GetRow(i).DataRow.COLOR
+            Dim readcolor As Color = ColorTranslator.FromHtml(col)
+            stilo.BackColor = readcolor
+            GridEx1.GetRow(i).RowStyle() = stilo
+
+            If GridEx1.GetRow(i).DataRow.CODIGO = Id Then
+                GridEx1.MoveTo(i)
+            End If
+
+        Next
+
+    End Sub
 End Class

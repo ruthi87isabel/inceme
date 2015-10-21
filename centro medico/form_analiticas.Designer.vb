@@ -75,6 +75,7 @@ Partial Class form_analiticas_ex
         Me.lb_SegundoAp = New System.Windows.Forms.Label()
         Me.lb_PrimerAp = New System.Windows.Forms.Label()
         Me.PACIENTESTableAdapter = New centro_medico.CMDataSetTableAdapters.PACIENTESTableAdapter()
+        Me.PacienteAnaliticaTableAdapter = New centro_medico.CM2DataSetTableAdapters.PacienteAnaliticaTableAdapter()
         lb_anHasta = New System.Windows.Forms.Label()
         lb_anDesde = New System.Windows.Forms.Label()
         lb_dpEdadhlaboral = New System.Windows.Forms.Label()
@@ -614,6 +615,10 @@ Partial Class form_analiticas_ex
         '
         Me.PACIENTESTableAdapter.ClearBeforeFill = True
         '
+        'PacienteAnaliticaTableAdapter
+        '
+        Me.PacienteAnaliticaTableAdapter.ClearBeforeFill = True
+        '
         'form_analiticas_ex
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -708,4 +713,5 @@ Partial Class form_analiticas_ex
     Friend WithEvents lb_PrimerAp As System.Windows.Forms.Label
     Friend WithEvents PACIENTESBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents PACIENTESTableAdapter As centro_medico.CMDataSetTableAdapters.PACIENTESTableAdapter
+    Friend WithEvents PacienteAnaliticaTableAdapter As centro_medico.CM2DataSetTableAdapters.PacienteAnaliticaTableAdapter
 End Class

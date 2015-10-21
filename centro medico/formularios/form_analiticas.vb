@@ -183,11 +183,8 @@ Public Class form_analiticas
         For i = 0 To dgv_disponibles.Rows.Count - 1
             If dgv_disponibles.Rows(i).Cells("Id").Value <> -1 Then
 
-                If fDesdePaciente Then
-                    fCMDataSet.LINEASANALITICAS.RemoveLINEASANALITICASRow(fCMDataSet.LINEASANALITICAS.FindByID(dgv_disponibles.Rows(i).Cells("Id").Value))
-                Else
-                    LINEASANALITICASTableAdapter.DeleteById(dgv_disponibles.Rows(i).Cells("Id").Value)
-                End If
+                Dim _row As CMDataSet.LINEASANALITICASRow = fCMDataSet.LINEASANALITICAS.FindByID(dgv_disponibles.Rows(i).Cells("Id").Value)
+                _row.Delete()
 
             End If
         Next
@@ -259,7 +256,6 @@ Public Class form_analiticas
         dgv_disponibles.Columns.Add("Precio", "Precio")
         dgv_disponibles.Columns("Precio").Visible = False
         dgv_disponibles.Columns.Add("Codigo", "Codigo")
-        dgv_disponibles.Columns.Add("color", "Codigo")
         dgv_disponibles.Columns.Add("Id", "Id")
         dgv_realizar.Columns.Add("Concepto", "Concepto")
         dgv_realizar.Columns.Add("Precio", "Precio")
@@ -279,8 +275,6 @@ Public Class form_analiticas
         Dim precioc As Single
         Dim resultado As String
         Dim col As String
-        'Dim a As Integer = 0
-        'Dim b As Integer = 0
         Dim i As Integer
         Dim j As Integer
 
@@ -305,13 +299,9 @@ Public Class form_analiticas
 
                     Dim newrow As New DataGridViewRow
                     newrow.CreateCells(dgv_realizar)
-                    newrow.SetValues(conceptoc, precioc, idc, -1)
+                    newrow.SetValues(concepto, precio, resultado, idconcepto, id)
                     newrow.DefaultCellStyle.BackColor = readcolor
                     dgv_realizar.Rows.Add(newrow)
-
-                    'dgv_realizar.Rows.Add(concepto, precio, resultado, idconcepto, id)
-                    'dgv_realizar.Rows(a).DefaultCellStyle.BackColor = Color.FromArgb(col)
-                    'a = a + 1
                 End If
 
             Next
@@ -322,9 +312,6 @@ Public Class form_analiticas
                 newrow.SetValues(conceptoc, precioc, idc, -1)
                 newrow.DefaultCellStyle.BackColor = readcolor
                 dgv_disponibles.Rows.Add(newrow)
-                'dgv_disponibles.Rows.Add(conceptoc, precioc, idc, -1)
-                'dgv_disponibles.Rows(b).DefaultCellStyle.BackColor = Color.FromArgb(col)
-                'b = b + 1
             End If
 
         Next
@@ -334,8 +321,6 @@ Public Class form_analiticas
         dgv_disponibles.Columns("Codigo").Visible = False
         dgv_disponibles.Columns("Id").Visible = False
 
-       
-       
 
     End Sub
     Private Sub filtra(Optional ByVal filtro As String = "")
@@ -386,7 +371,6 @@ Public Class form_analiticas
 
         dgv_disponibles.Columns("Codigo").Visible = False
         dgv_disponibles.Columns("Id").Visible = False
-
     End Sub
     Private Sub GetConceptos()
 
@@ -533,7 +517,6 @@ Public Class form_analiticas
             newrow.DefaultCellStyle.BackColor = Col
             dgv_realizar.Rows.Add(newrow)
 
-            'dgv_realizar.Rows.Add(concepto, importe, "", id, -1)
             dgv_disponibles.Rows.RemoveAt(dgv_disponibles.SelectedRows(i).Index())
             fimporte = fimporte + importe
             tb_total.Text = fimporte.ToString()
@@ -562,7 +545,6 @@ Public Class form_analiticas
             newrow.DefaultCellStyle.BackColor = Col
             dgv_disponibles.Rows.Add(newrow)
 
-            'dgv_disponibles.Rows.Add(concepto, importe, id, ida)
             dgv_realizar.Rows.RemoveAt(dgv_realizar.SelectedRows(i).Index())
             fimporte = fimporte - importe
             tb_total.Text = fimporte.ToString()

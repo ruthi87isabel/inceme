@@ -2,9 +2,12 @@
 <xs:schema id="CM2DataSet" targetNamespace="http://tempuri.org/CM2DataSet.xsd" xmlns:mstns="http://tempuri.org/CM2DataSet.xsd" xmlns="http://tempuri.org/CM2DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="3" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="CMConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CMConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.centro_medico.My.MySettings.GlobalReference.Default.CMConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="CMSIESTAConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CMSIESTAConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.centro_medico.My.MySettings.GlobalReference.Default.CMConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="constitucionConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="constitucionConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.centro_medico.My.MySettings.GlobalReference.Default.constitucionConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="SiestaConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="SiestaConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.centro_medico.My.MySettings.GlobalReference.Default.SiestaConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ListadoPacientesTableAdapter" GeneratorDataComponentClassName="ListadoPacientesTableAdapter" Name="ListadoPacientes" UserDataComponentName="ListadoPacientesTableAdapter">
@@ -274,7 +277,7 @@ GROUP BY N_Ticket.ID_Ticket, N_Ticket.Codigo, N_Ticket.ID_TipoTicket, N_Ticket.R
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PacientesBonosTableAdapter" GeneratorDataComponentClassName="PacientesBonosTableAdapter" Name="PacientesBonos" UserDataComponentName="PacientesBonosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="CMConnectionString (MySettings)" DbObjectName="Siesta.dbo.PACIENTES" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="CMConnectionString (MySettings)" DbObjectName="SIESTA.dbo.PACIENTES" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        PACIENTES.NOMBRE, PACIENTES.APELLIDO1, PACIENTES.APELLIDO2, PACIENTES.DNI, PACIENTES.FECHAN, COUNT(Bonos.id) AS BONOS, 
@@ -298,14 +301,37 @@ GROUP BY PACIENTES.NOMBRE, PACIENTES.APELLIDO1, PACIENTES.APELLIDO2, PACIENTES.D
               <Mapping SourceColumn="BONOS" DataSetColumn="BONOS" />
               <Mapping SourceColumn="SESIONES" DataSetColumn="SESIONES" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="CMConnectionString (MySettings)" DbObjectName="SIESTA.dbo.PACIENTES" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT PACIENTES.NOMBRE, PACIENTES.APELLIDO1, PACIENTES.APELLIDO2, PACIENTES.DNI, PACIENTES.FECHAN,
+ COUNT(Bonos.id) AS BONOS, SUM(Bonos.numsesiones) - COUNT(Sesiones.id) AS SESIONES
+FROM PACIENTES INNER JOIN
+Bonos ON PACIENTES.CPACIENTE = Bonos.cpaciente LEFT OUTER JOIN
+Sesiones ON Bonos.id = Sesiones.refbono
+WHERE (Bonos.numsesiones &gt; 0) 
+AND ((PACIENTES.NOMBRE LIKE '%'+@nombre+'%') And
+((PACIENTES.APELLIDO1 Is NULL) OR (PACIENTES.APELLIDO1 IS NOT NULL AND PACIENTES.APELLIDO1 LIKE '%'+@pApellido+'%')) And
+((PACIENTES.APELLIDO2 Is NULL) Or (PACIENTES.APELLIDO2 IS NOT NULL AND PACIENTES.APELLIDO2 LIKE '%'+@sApellido+'%')))
+GROUP BY PACIENTES.NOMBRE, PACIENTES.APELLIDO1, PACIENTES.APELLIDO2, PACIENTES.DNI, PACIENTES.FECHAN
+</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="nombre" ColumnName="NOMBRE" DataSourceName="SIESTA.dbo.PACIENTES" DataTypeServer="varchar(255)" DbType="AnsiString" Direction="Input" ParameterName="@nombre" Precision="0" ProviderType="VarChar" Scale="0" Size="255" SourceColumn="NOMBRE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="pApellido" ColumnName="APELLIDO1" DataSourceName="SIESTA.dbo.PACIENTES" DataTypeServer="varchar(255)" DbType="AnsiString" Direction="Input" ParameterName="@pApellido" Precision="0" ProviderType="VarChar" Scale="0" Size="255" SourceColumn="APELLIDO1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="sApellido" ColumnName="APELLIDO2" DataSourceName="SIESTA.dbo.PACIENTES" DataTypeServer="varchar(255)" DbType="AnsiString" Direction="Input" ParameterName="@sApellido" Precision="0" ProviderType="VarChar" Scale="0" Size="255" SourceColumn="APELLIDO2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PacienteAnaliticaTableAdapter" GeneratorDataComponentClassName="PacienteAnaliticaTableAdapter" Name="PacienteAnalitica" UserDataComponentName="PacienteAnaliticaTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="CMConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        c.CONCEPTO, l.PRECIO, c.COLOR, l.RESULTADO
+                    <CommandText>SELECT      l.*, c.COLOR
 FROM            LINEASANALITICAS AS l INNER JOIN
                          CONCEPTOSANALITICA AS c ON l.CONCEPTO = c.CONCEPTO</CommandText>
                     <Parameters />
@@ -318,8 +344,27 @@ FROM            LINEASANALITICAS AS l INNER JOIN
               <Mapping SourceColumn="PRECIO" DataSetColumn="PRECIO" />
               <Mapping SourceColumn="RESULTADO" DataSetColumn="RESULTADO" />
               <Mapping SourceColumn="COLOR" DataSetColumn="COLOR" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="REFANALITICA" DataSetColumn="REFANALITICA" />
+              <Mapping SourceColumn="REFCONCEPTO" DataSetColumn="REFCONCEPTO" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="CMConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillLineasByAnaliticas" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetLineasByAnaliticas" GeneratorSourceName="FillLineasByAnaliticas" GetMethodModifier="Public" GetMethodName="GetLineasByAnaliticas" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetLineasByAnaliticas" UserSourceName="FillLineasByAnaliticas">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT l.CONCEPTO, l.ID, l.PRECIO, l.REFANALITICA, l.REFCONCEPTO, l.RESULTADO, c.COLOR
+FROM LINEASANALITICAS  AS l
+ INNER JOIN  CONCEPTOSANALITICA AS c ON l.CONCEPTO = c.CONCEPTO
+WHERE (REFANALITICA = @analitica)
+
+</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="analitica" ColumnName="REFANALITICA" DataSourceName="Siesta.dbo.LINEASANALITICAS" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@analitica" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="REFANALITICA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -926,7 +971,7 @@ FROM            LINEASANALITICAS AS l INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PacientesBonos" msprop:Generator_TableClassName="PacientesBonosDataTable" msprop:Generator_TableVarName="tablePacientesBonos" msprop:Generator_RowChangedName="PacientesBonosRowChanged" msprop:Generator_TablePropName="PacientesBonos" msprop:Generator_RowDeletingName="PacientesBonosRowDeleting" msprop:Generator_RowChangingName="PacientesBonosRowChanging" msprop:Generator_RowEvHandlerName="PacientesBonosRowChangeEventHandler" msprop:Generator_RowDeletedName="PacientesBonosRowDeleted" msprop:Generator_RowClassName="PacientesBonosRow" msprop:Generator_UserTableName="PacientesBonos" msprop:Generator_RowEvArgName="PacientesBonosRowChangeEvent">
+        <xs:element name="PacientesBonos" msprop:Generator_TableClassName="PacientesBonosDataTable" msprop:Generator_TableVarName="tablePacientesBonos" msprop:Generator_TablePropName="PacientesBonos" msprop:Generator_RowDeletingName="PacientesBonosRowDeleting" msprop:Generator_RowChangingName="PacientesBonosRowChanging" msprop:Generator_RowEvHandlerName="PacientesBonosRowChangeEventHandler" msprop:Generator_RowDeletedName="PacientesBonosRowDeleted" msprop:Generator_UserTableName="PacientesBonos" msprop:Generator_RowChangedName="PacientesBonosRowChanged" msprop:Generator_RowEvArgName="PacientesBonosRowChangeEvent" msprop:Generator_RowClassName="PacientesBonosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_UserColumnName="NOMBRE" minOccurs="0">
@@ -963,7 +1008,7 @@ FROM            LINEASANALITICAS AS l INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PacienteAnalitica" msprop:Generator_TableClassName="PacienteAnaliticaDataTable" msprop:Generator_TableVarName="tablePacienteAnalitica" msprop:Generator_RowChangedName="PacienteAnaliticaRowChanged" msprop:Generator_TablePropName="PacienteAnalitica" msprop:Generator_RowDeletingName="PacienteAnaliticaRowDeleting" msprop:Generator_RowChangingName="PacienteAnaliticaRowChanging" msprop:Generator_RowEvHandlerName="PacienteAnaliticaRowChangeEventHandler" msprop:Generator_RowDeletedName="PacienteAnaliticaRowDeleted" msprop:Generator_RowClassName="PacienteAnaliticaRow" msprop:Generator_UserTableName="PacienteAnalitica" msprop:Generator_RowEvArgName="PacienteAnaliticaRowChangeEvent">
+        <xs:element name="PacienteAnalitica" msprop:Generator_TableClassName="PacienteAnaliticaDataTable" msprop:Generator_TableVarName="tablePacienteAnalitica" msprop:Generator_TablePropName="PacienteAnalitica" msprop:Generator_RowDeletingName="PacienteAnaliticaRowDeleting" msprop:Generator_RowChangingName="PacienteAnaliticaRowChanging" msprop:Generator_RowEvHandlerName="PacienteAnaliticaRowChangeEventHandler" msprop:Generator_RowDeletedName="PacienteAnaliticaRowDeleted" msprop:Generator_UserTableName="PacienteAnalitica" msprop:Generator_RowChangedName="PacienteAnaliticaRowChanged" msprop:Generator_RowEvArgName="PacienteAnaliticaRowChangeEvent" msprop:Generator_RowClassName="PacienteAnaliticaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CONCEPTO" msprop:Generator_ColumnVarNameInTable="columnCONCEPTO" msprop:Generator_ColumnPropNameInRow="CONCEPTO" msprop:Generator_ColumnPropNameInTable="CONCEPTOColumn" msprop:Generator_UserColumnName="CONCEPTO" minOccurs="0">
@@ -988,6 +1033,15 @@ FROM            LINEASANALITICAS AS l INNER JOIN
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="REFANALITICA" msprop:Generator_ColumnVarNameInTable="columnREFANALITICA" msprop:Generator_ColumnPropNameInRow="REFANALITICA" msprop:Generator_ColumnPropNameInTable="REFANALITICAColumn" msprop:Generator_UserColumnName="REFANALITICA" type="xs:int" minOccurs="0" />
+              <xs:element name="REFCONCEPTO" msprop:Generator_ColumnVarNameInTable="columnREFCONCEPTO" msprop:Generator_ColumnPropNameInRow="REFCONCEPTO" msprop:Generator_ColumnPropNameInTable="REFCONCEPTOColumn" msprop:Generator_UserColumnName="REFCONCEPTO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1004,6 +1058,10 @@ FROM            LINEASANALITICAS AS l INNER JOIN
     <xs:unique name="N_TicketAux_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:N_TicketAux" />
       <xs:field xpath="mstns:ID_Ticket" />
+    </xs:unique>
+    <xs:unique name="PacienteAnalitica_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PacienteAnalitica" />
+      <xs:field xpath="mstns:ID" />
     </xs:unique>
   </xs:element>
 </xs:schema>

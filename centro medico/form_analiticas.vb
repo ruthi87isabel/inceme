@@ -145,6 +145,11 @@ Public Class form_analiticas_ex
             dtg_anAnaliticas.AllowUserToDeleteRows = False
         End If
 
+        If dtg_anAnaliticas.RowCount > 0 Then
+            tlbImprimirAnalitica.Enabled = True
+        Else
+            tlbImprimirAnalitica.Enabled = False
+        End If
       
 
     End Sub
@@ -227,6 +232,7 @@ Public Class form_analiticas_ex
                 fAnaliticaRowSelected = _index
             End If
             Guardar()
+          
         End If
     End Sub
 
@@ -282,6 +288,13 @@ Public Class form_analiticas_ex
             End If
             fAnaliticaRowSelected = dtg_anAnaliticas.SelectedRows(0).Index
         End If
+
+        If dtg_anAnaliticas.RowCount > 0 Then
+            tlbImprimirAnalitica.Enabled = True
+        Else
+            tlbImprimirAnalitica.Enabled = False
+        End If
+
     End Sub
 
     Private Sub BorrarFilasAnaliticas()
@@ -318,10 +331,10 @@ Public Class form_analiticas_ex
     End Sub
 
     Private Sub tlbImprimirAnalitica_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tlbImprimirAnalitica.Click
-        Dim rpt As New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim rpt As New Microsoft.Reporting.WinForms.ReportDataSource
         Dim rpt2 As New Microsoft.Reporting.WinForms.ReportDataSource
         Dim _data As New CMDataSet.ANALITICASDataTable 'analiticas
-        Dim _data2 As New CMDataSet.LINEASANALITICASDataTable 'lineasanaliticas
+        Dim _data2 As New CM2DataSet.PacienteAnaliticaDataTable 'lineasanaliticas
         Dim codigoAnalitica As Integer
         Dim i As Integer = 0
         'bt_aceptar_Click(Nothing, Nothing)
@@ -331,7 +344,7 @@ Public Class form_analiticas_ex
         Me.Guardar()
         codigoAnalitica = Me.dtg_anAnaliticas.SelectedRows(0).Cells("Número").Value
         _data = Me.ANALITICASTableAdapter.GetAnaliticaById(codigoAnalitica)
-        _data2 = Me.LINEASANALITICASTableAdapter.GetLineasByAnaliticas(codigoAnalitica)
+        _data2 = Me.PacienteAnaliticaTableAdapter.GetLineasByAnaliticas(codigoAnalitica)
 
         rpt.Name = "CMDataSet_ANALITICAS"
         rpt.Value = _data
