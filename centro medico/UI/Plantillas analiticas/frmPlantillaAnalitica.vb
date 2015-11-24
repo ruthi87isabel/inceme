@@ -5,8 +5,10 @@ Public Class frmPlantillaAnalitica
     Private Shadows WithEvents GridEX1 As GridEX
 
     Private Sub tstNuevo_Click(sender As System.Object, e As System.EventArgs) Handles tstNuevo.Click
-        Dim frm As New form_formas_pago("Ficha de Forma de Pago-Añadir", Enums.Accion.Insertar)
+        Dim frm As New form_plantilla__analiticas("Ficha de Forma de Pago-Añadir", Enums.Accion.Insertar)
         frm.ShowDialog()
+        'frm.DialogResult.ToString()
+        PopulateGrid()
     End Sub
 
     Private Sub tst_Editar_Click(sender As System.Object, e As System.EventArgs) Handles tst_Editar.Click

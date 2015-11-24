@@ -421,6 +421,17 @@ Public Class form_analiticas
         End If
     End Sub
 
+    Private Sub form_analiticas_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Dim res As DialogResult = DialogResult
+        If res = Windows.Forms.DialogResult.Cancel Then
+            Dim res2 As MsgBoxResult = MsgBox("Si continua y no ha guardado los cambios, los perderá.  ¿Seguro que desea continuar?", MsgBoxStyle.YesNo)
+            If res2 = MsgBoxResult.No Then e.Cancel = True
+        End If
+
+    End Sub
+
+    
+
     Private Sub form_analiticas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         '/////////////////////////////////////
         If fDesdePaciente = True Then
@@ -705,6 +716,7 @@ Public Class form_analiticas
             Agregar(_anal)
         End If
         Globales.CobroEnCascada(, , fId)
+        DialogResult = Windows.Forms.DialogResult.OK
         Me.Close()
     End Sub
 

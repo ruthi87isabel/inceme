@@ -143,26 +143,32 @@
     <Reference Include="Janus.Data.v4, Version=4.0.36.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLLS\Janus.Data.v4.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Janus.Windows.CalendarCombo.v4, Version=4.0.36.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLLS\Janus.Windows.CalendarCombo.v4.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Janus.Windows.Common.v4, Version=4.0.36.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLLS\Janus.Windows.Common.v4.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Janus.Windows.GridEX.v4, Version=4.0.36.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLLS\Janus.Windows.GridEX.v4.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Janus.Windows.Schedule.v4, Version=4.0.36.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLLS\Janus.Windows.Schedule.v4.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Janus.Windows.UI.v4, Version=4.0.36.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLLS\Janus.Windows.UI.v4.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="LinqKit">
       <HintPath>..\DLLS\LinqKit.dll</HintPath>
@@ -179,7 +185,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="MonthCalendar">
-      <HintPath>..\DLLS\MonthCalendar.dll</HintPath>
+      <HintPath>..\Tests\MonthCalendar_src_vs2005\bin\Debug\MonthCalendar.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -1445,12 +1451,6 @@
     <Compile Include="UI\Templates\frmTemplates_ADD.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\test.Designer.vb">
-      <DependentUpon>test.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UI\test.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="UI\Test\frmControlsTest.Designer.vb">
       <DependentUpon>frmControlsTest.vb</DependentUpon>
     </Compile>
@@ -2212,6 +2212,7 @@
     <Content Include="RDLC\custom\mercedes\Consentimiento.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="RDLC\default\AnaliticaPeticion.rdlc" />
     <Content Include="RDLC\img\colegio-dentista-murcia.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -2236,56 +2237,6 @@
     <Content Include="RDLC\img\recetaimpresavalenciano.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\24-control-stop21.png" />
-    <Content Include="Resources\adn.jpg" />
-    <Content Include="Resources\asistente.jpg" />
-    <Content Include="Resources\Bar Chart - Copy.png" />
-    <Content Include="Resources\cash_register16x16.png" />
-    <Content Include="Resources\cash_register24x24.png" />
-    <Content Include="Resources\cash_register32x32.png" />
-    <Content Include="Resources\ClinicaPilar1_Header.jpg" />
-    <Content Include="Resources\communication.ico" />
-    <Content Include="Resources\confirmado.ico" />
-    <Content Include="Resources\confirmado.png" />
-    <Content Include="Resources\confirmado_urgente.ico" />
-    <Content Include="Resources\confirmado_urgente.png" />
-    <Content Include="Resources\del.ico" />
-    <Content Include="Resources\del.png" />
-    <Content Include="Resources\diente.ico" />
-    <Content Include="Resources\diente.png" />
-    <Content Include="Resources\dollar.ico" />
-    <Content Include="Resources\email ico.png" />
-    <Content Include="Resources\Empresa.bmp" />
-    <Content Include="Resources\empresa.gif" />
-    <Content Include="Resources\euro16x16.ico" />
-    <Content Include="Resources\Exit copy.gif" />
-    <Content Include="Resources\factura16x16.png" />
-    <Content Include="Resources\factura24x24.png" />
-    <Content Include="Resources\female14.png" />
-    <Content Include="Resources\historial.png" />
-    <Content Include="Resources\Mimetype-vcalendar-icon.png" />
-    <Content Include="Resources\movie_folder.ico" />
-    <Content Include="Resources\nuevo.ico" />
-    <Content Include="Resources\nuevo.png" />
-    <Content Include="Resources\Package_Closed_ 16x16.png" />
-    <Content Include="Resources\patient16x16.png" />
-    <Content Include="Resources\presupuesto.ico" />
-    <Content Include="Resources\presupuesto.png" />
-    <Content Include="Resources\Print16x16.png" />
-    <Content Include="Resources\Profile copy.gif" />
-    <Content Include="Resources\realizado.ico" />
-    <Content Include="Resources\realizado.png" />
-    <Content Include="Resources\receipt16x16.png" />
-    <Content Include="Resources\Recibos.ico" />
-    <Content Include="Resources\report.ico" />
-    <Content Include="Resources\report.png" />
-    <Content Include="Resources\sms_protocol.png" />
-    <Content Include="Resources\ticket16x16.ico" />
-    <Content Include="Resources\ticket16x16.png" />
-    <Content Include="Resources\ticket32x32.png" />
-    <Content Include="Resources\urgente.ico" />
-    <Content Include="Resources\urgente.png" />
-    <Content Include="Resources\warning-icon.png" />
     <Content Include="Scripts\db_1.0.3.7.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -2306,11 +2257,12 @@
     </Content>
     <Content Include="Scripts\db_1.0.3.7.sql" />
     <Content Include="Scripts\db_1.0.3.8.sql" />
-    <Content Include="Scripts\db_1.0.3.9.sql" />
-    <Content Include="Scripts\db_1.0.4.0.sql" />
-    <Content Include="Scripts\db_1.0.4.1.sql" />
-    <Content Include="Scripts\log.txt" />
+    <Content Include="Scripts\db_1.0.3.9.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Scripts\Query Dashboard.sql" />
+    <Content Include="Scripts\Script permisos.sql" />
+    <Content Include="Scripts\Top10Tratamiento.sql" />
     <Content Include="UI\Dental\Icons\confirmado.ico" />
     <Content Include="UI\Dental\Icons\confirmado.png" />
     <Content Include="UI\Dental\Icons\confirmado_urgente.ico" />
@@ -2345,7 +2297,6 @@
     <None Include="My Project\DataSources\PLANTILLAANALITICA1.datasource" />
     <None Include="My Project\DataSources\RecetaItem.datasource" />
     <None Include="My Project\DataSources\USUARIO.datasource" />
-    <None Include="Resources\Folder_by_Delacro.zip" />
     <None Include="Resources\FormatoOficialReceta.png" />
     <None Include="Resources\FormatoOficialReceta1.png" />
     <Content Include="RDLC\custom\dental ramirez\logo.jpg">
@@ -2388,10 +2339,6 @@
     <None Include="My Project\DataSources\RC_ParcialHeader.datasource" />
     <None Include="My Project\DataSources\RC_ParcialHeader1.datasource" />
     <None Include="My Project\DataSources\RC_Seguimiento.datasource" />
-    <None Include="Resources\free_financial_icon_set_finance.zip" />
-    <None Include="Resources\free_windows7_icons_vacation.zip" />
-    <None Include="Resources\office_space_icon_set.zip" />
-    <None Include="Resources\pc.de-hamburg-icon-pack.zip" />
     <None Include="Resources\private.ico" />
     <None Include="Resources\male14.png" />
     <Content Include="Scripts\db_1.0.2.5.sql">
@@ -2443,7 +2390,6 @@
     <None Include="Resources\edit.ico" />
     <None Include="Resources\lock.ico" />
     <Content Include="Resources\textAreaResizeCorner.png" />
-    <None Include="Resources\Thumbs.db" />
     <None Include="Resources\yellow_plus.jpg" />
     <None Include="Resources\yellow_cross.jpg" />
     <Content Include="Scripts\db_0.0.0.1_dbcreator.sql">
@@ -2872,7 +2818,9 @@
     <Content Include="RDLC\custom\vistalegre\Factura.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="RDLC\default\PacientesBonosNoAgotados.rdlc" />
+    <EmbeddedResource Include="RDLC\default\PacientesBonosNoAgotados.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="RDLC\default\R1_CitasXEstado.rdlc" />
     <EmbeddedResource Include="RDLC\default\R2_PacientesAltaXMes.rdlc" />
     <EmbeddedResource Include="RDLC\default\R3_CitasAtendidasMedicosXDias.rdlc" />
@@ -3332,9 +3280,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="RDLC\default\AnaliticasListado.rdlc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="RDLC\default\AnaliticaPeticion.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="RDLC\default\BancosListado.rdlc">
@@ -4453,9 +4398,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Templates\frmTemplates_ADD.resx">
       <DependentUpon>frmTemplates_ADD.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\test.resx">
-      <DependentUpon>test.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Test\frmControlsTest.resx">
       <DependentUpon>frmControlsTest.vb</DependentUpon>
