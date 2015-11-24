@@ -1427,7 +1427,7 @@ Namespace My.Resources
         '''COMMIT
         '''BEGIN TRANSACTION
         '''ALTER TABLE dbo.Tarifas
-        '''	DROP CONSTRAINT DF_Tarifas [rest of string was truncated]&quot;;.
+        '''	DROP CONSTRAINT DF_Tarifas_DescripcionTari [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property EliminaIdentidadTarifas() As String
             Get
@@ -1798,6 +1798,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property Mimetype_vcalendar_icon() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Mimetype-vcalendar-icon", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property MISC18() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("MISC18", resourceCulture)
@@ -2059,7 +2069,7 @@ Namespace My.Resources
         '''  Looks up a localized string similar to SELECT        PACIENTES.CPACIENTE, PACIENTES.NOMBRE, PACIENTES.APELLIDO1, PACIENTES.APELLIDO2, PACIENTES.REFEMPRESA, PACIENTES.FECHAN, 
         '''                         PACIENTES.REFMUTUA, PACIENTES.FECHAALTA, PACIENTES.PAGOBANCO, PACIENTES.DEFUNCION, PACIENTES.REFPAIS, PACIENTES.SOCIO, PACIENTES.ACTIVO, 
         '''                         PACIENTES.REFFORMAPAGO, PACIENTES.FECHABAJA, EMPRESAS.NOMBRE AS EMPRESA, FORMASPAGO.DESCRIPCION AS [Forma Pago], 
-        '''                         MUTUAS.NOMBRE AS MUTUA, PAISES.NOMBRE AS PAIS, [rest of string was truncated]&quot;;.
+        '''                         MUTUAS.NOMBRE AS MUTUA, PAISES.NOMBRE AS PAIS, IS [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property queryListadoPacientes() As String
             Get
@@ -2071,7 +2081,7 @@ Namespace My.Resources
         '''  Looks up a localized string similar to SELECT  TOP(100)  PACIENTES.CPACIENTE, PACIENTES.NOMBRE, PACIENTES.APELLIDO1, PACIENTES.APELLIDO2, PACIENTES.REFEMPRESA, PACIENTES.FECHAN, 
         '''                         PACIENTES.REFMUTUA, PACIENTES.FECHAALTA, PACIENTES.PAGOBANCO, PACIENTES.DEFUNCION, PACIENTES.REFPAIS, PACIENTES.SOCIO, PACIENTES.ACTIVO, 
         '''                         PACIENTES.REFFORMAPAGO, PACIENTES.FECHABAJA, EMPRESAS.NOMBRE AS EMPRESA, FORMASPAGO.DESCRIPCION AS [Forma Pago], 
-        '''                         MUTUAS.NOMBRE AS MUTUA, PAISES.NOMBRE AS P [rest of string was truncated]&quot;;.
+        '''                         MUTUAS.NOMBRE AS MUTUA, PAISES.NOMBRE AS PAIS [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property queryListadoPacientesTop100() As String
             Get
@@ -2187,7 +2197,7 @@ Namespace My.Resources
         '''WHERE     (PACIENTES.FECHAALTA IS NULL OR
         '''                      PACIENTES.FECHAALTA BETWEEN @FECHAINI AND @FECHAFIN) AND (AntecedentesDiagnosticos.IDDIAGNOSTICO = @IdDiagnostico)
         '''UNION
-        '''SELECT   [rest of string was truncated]&quot;;.
+        '''SELECT     PACI [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property strSqlPacientesPorDiagnostico() As String
             Get

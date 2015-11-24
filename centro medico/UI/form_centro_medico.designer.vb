@@ -63,6 +63,7 @@ Partial Class form_centro_medico
         Me.menu_citas = New System.Windows.Forms.ToolStripMenuItem()
         Me.menu_partes_altas_bajas = New System.Windows.Forms.ToolStripMenuItem()
         Me.menu_partes_asistencia = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menu_DashBoard = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator12 = New System.Windows.Forms.ToolStripSeparator()
         Me.menu_generar_facturas_recibos = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator18 = New System.Windows.Forms.ToolStripSeparator()
@@ -409,7 +410,7 @@ Partial Class form_centro_medico
         '
         'PacientesToolStripMenuItem
         '
-        Me.PacientesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menu_pacientes, Me.menu_empresas, Me.ToolStripSeparator9, Me.menu_facturas, Me.PresupuestosDentalesToolStripMenuItem, Me.menu_analíticas, Me.ToolStripSeparator10, Me.menu_generar_recibos, Me.menu_recibos, Me.menu_imprimir_remesas, Me.menu_generar_norma19, Me.ToolStripSeparator11, Me.BonosNoAgotadosToolStripMenuItem, Me.menu_citas, Me.menu_partes_altas_bajas, Me.menu_partes_asistencia, Me.ToolStripSeparator12, Me.menu_generar_facturas_recibos, Me.ToolStripSeparator18, Me.frmProcesosMenuItem, Me.tstComunicacionesToolStripMenuItem1})
+        Me.PacientesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menu_pacientes, Me.menu_empresas, Me.ToolStripSeparator9, Me.menu_facturas, Me.PresupuestosDentalesToolStripMenuItem, Me.menu_analíticas, Me.ToolStripSeparator10, Me.menu_generar_recibos, Me.menu_recibos, Me.menu_imprimir_remesas, Me.menu_generar_norma19, Me.ToolStripSeparator11, Me.BonosNoAgotadosToolStripMenuItem, Me.menu_citas, Me.menu_partes_altas_bajas, Me.menu_partes_asistencia, Me.menu_DashBoard, Me.ToolStripSeparator12, Me.menu_generar_facturas_recibos, Me.ToolStripSeparator18, Me.frmProcesosMenuItem, Me.tstComunicacionesToolStripMenuItem1})
         Me.PacientesToolStripMenuItem.Name = "PacientesToolStripMenuItem"
         Me.PacientesToolStripMenuItem.Size = New System.Drawing.Size(69, 20)
         Me.PacientesToolStripMenuItem.Text = "Pacientes"
@@ -530,6 +531,13 @@ Partial Class form_centro_medico
         Me.menu_partes_asistencia.Name = "menu_partes_asistencia"
         Me.menu_partes_asistencia.Size = New System.Drawing.Size(315, 22)
         Me.menu_partes_asistencia.Text = "Partes Asistencia"
+        '
+        'menu_DashBoard
+        '
+        Me.menu_DashBoard.Image = Global.centro_medico.My.Resources.Resources.Bar_Chart
+        Me.menu_DashBoard.Name = "menu_DashBoard"
+        Me.menu_DashBoard.Size = New System.Drawing.Size(315, 22)
+        Me.menu_DashBoard.Text = "DashBoard"
         '
         'ToolStripSeparator12
         '
@@ -1775,5 +1783,6 @@ Partial Class form_centro_medico
     Friend WithEvents tsmMigrarPaciente As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PacientepordiaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BonosNoAgotadosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents menu_DashBoard As System.Windows.Forms.ToolStripMenuItem
 
 End Class

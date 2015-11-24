@@ -36,7 +36,7 @@ Public Class form_centro_medico
     End Sub
 
     Private Sub bt_medicos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bt_medicos.Click
-        
+
         Dim medListado As New frmMedicosListado()
         medListado.ShowDialog()
         FreeMemory.FlushMemory()
@@ -317,6 +317,14 @@ Public Class form_centro_medico
 
         frmProcesosMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Procesos) = RoleManager.TipoPermisos.Ninguno)
 
+        'Dashboard
+        menu_DashBoard.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Cistas_por_estado) = RoleManager.TipoPermisos.Ninguno) Or
+                                 Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Relacion_de_Altas) = RoleManager.TipoPermisos.Ninguno) Or
+                                 Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Citas_atendidas_por_medicos) = RoleManager.TipoPermisos.Ninguno) Or
+                                 Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Citas_por_Especialidad) = RoleManager.TipoPermisos.Ninguno) Or
+                                 Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Top_10_Tratamientos) = RoleManager.TipoPermisos.Ninguno) Or
+                                 Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Resumen_Dental) = RoleManager.TipoPermisos.Ninguno)
+
         'Dental
         PresupuestosDentalesToolStripMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Dental_Presupuestos) = RoleManager.TipoPermisos.Ninguno)
         PresupuestosDentalesToolStripMenuItem.Visible = Globales.Configuracion.Dental_ModuloActivo
@@ -463,10 +471,10 @@ Public Class form_centro_medico
     End Sub
 #End Region
 
-   
+
 
     Private Sub bt_citas_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bt_citas.Click
-        
+
         Dim frm As New frmCalendarioCitas()
         frm.ShowDialog()
         frm.Dispose()
@@ -693,6 +701,11 @@ Public Class form_centro_medico
         FreeMemory.FlushMemory()
     End Sub
 
+    Private Sub DashBoardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles menu_DashBoard.Click
+        Dim _dash As Form_DashBoard = New Form_DashBoard()
+        _dash.ShowDialog()
+        GC.Collect()
+    End Sub
 
     Private Sub BonosNoAgotadosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BonosNoAgotadosToolStripMenuItem.Click
         Dim _remesas As form_bonos_no_agotados = New form_bonos_no_agotados()
@@ -1454,7 +1467,7 @@ Public Class form_centro_medico
     End Sub
 
 
-   
+
     Private Sub FrmCitaADDToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         'Dim frm As New frmCita_Add()
         ''frm.IDCITA = 2898
@@ -1503,7 +1516,7 @@ Public Class form_centro_medico
             lbl_DbVersionValue.Text = versionActual.ToString()
 
 
-            Dim dbrequiredVersion As New Version("1.0.3.9")
+            Dim dbrequiredVersion As New Version("1.0.3.7")
 
             If versionActual < dbrequiredVersion Then
                 MessageBox.Show("La version actual de la Base de Datos: " & versionActual.ToString() & " difiere de la mínima requerida " & dbrequiredVersion.ToString() & ". Esto podria ocasionar inestabilidad en el sistema. ", "INFORMACIÓN SOBRE BASE DE DATOS", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -1646,7 +1659,7 @@ Public Class form_centro_medico
 
     End Sub
 
-    
+
     Private Sub tstLiquidacionMedicos_Click(sender As System.Object, e As System.EventArgs)
         Dim frm As New frmLiquidacion_Medicos()
         frm.ShowDialog()
@@ -1668,7 +1681,7 @@ Public Class form_centro_medico
         frm.ShowDialog()
     End Sub
 
-    
+
 
     Private Sub HorariosToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles HorariosToolStripMenuItem.Click
         Dim frm As New frmHorarios()
@@ -1720,7 +1733,7 @@ Public Class form_centro_medico
 
     End Sub
 
-   
+
 
     Private Sub FrmPacienteEditarToolStripMenuItem_Click(sender As Object, e As EventArgs)
 
@@ -1824,9 +1837,9 @@ Public Class form_centro_medico
         frm.ShowDialog()
     End Sub
 
-  
 
-    
+
+
     Private Sub tst_PefilUsuario_Click(sender As Object, e As EventArgs) Handles tst_PefilUsuario.Click
         Dim frm As New frmUsuarios_ADD(True)
         frm.CODIGO = Globales.Usuario.CODIGO
@@ -1846,5 +1859,5 @@ Public Class form_centro_medico
         'a.ShowDialog()
     End Sub
 
-    
+   
 End Class

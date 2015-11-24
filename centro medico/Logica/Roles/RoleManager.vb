@@ -111,6 +111,12 @@ Public Class RoleManager
         RecetasXml = 102
         Bonos = 103
         MigrarPacientes = 104
+        DashB_Cistas_por_estado = 105
+        DashB_Relacion_de_Altas = 106
+        DashB_Citas_atendidas_por_medicos = 107
+        DashB_Citas_por_Especialidad = 108
+        DashB_Top_10_Tratamientos = 109
+        DashB_Resumen_Dental = 110
     End Enum
 
 #Region "Public Shared Function PermisoPorItem(ByVal ID_Usuario As Integer, ByVal Item As String) As Permisos"
