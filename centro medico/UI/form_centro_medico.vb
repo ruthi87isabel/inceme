@@ -703,7 +703,7 @@ Public Class form_centro_medico
 
     Private Sub DashBoardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles menu_DashBoard.Click
         Dim _dash As Form_DashBoard = New Form_DashBoard()
-        _dash.ShowDialog()
+        _dash.Show()
         GC.Collect()
     End Sub
 

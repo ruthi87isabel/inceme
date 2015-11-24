@@ -35,11 +35,16 @@
                     <Y>=Sum(Fields!CONFIRMADA.Value)</Y>
                   </ChartDataPointValues>
                   <ChartDataLabel>
-                    <Style />
+                    <Style>
+                      <FontSize>11pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
                     <UseValueAsLabel>true</UseValueAsLabel>
                     <Visible>true</Visible>
                   </ChartDataLabel>
-                  <Style />
+                  <Style>
+                    <Color>=IIf(((Fields!CONFIRMADA.Value+Fields!ATENDIDA.Value+Fields!ANULADA.Value+Fields!PAGADA.Value)/4 = Fields!TOTAL.Value), "#bfbfbf", "#00000000")</Color>
+                  </Style>
                   <ChartMarker>
                     <Style />
                   </ChartMarker>
@@ -61,7 +66,14 @@
                   <Name>PointWidth</Name>
                   <Value>1</Value>
                 </CustomProperty>
+                <CustomProperty>
+                  <Name>DrawingStyle</Name>
+                  <Value>Cylinder</Value>
+                </CustomProperty>
               </CustomProperties>
+              <ChartItemInLegend>
+                <LegendText>=IIf(((Fields!CONFIRMADA.Value+Fields!ATENDIDA.Value+Fields!ANULADA.Value+Fields!PAGADA.Value)/4 = Fields!TOTAL.Value),"Pte CONFIRMAR","CONFIRMADA")</LegendText>
+              </ChartItemInLegend>
               <ValueAxisName>Primary</ValueAxisName>
               <CategoryAxisName>Primary</CategoryAxisName>
               <ChartSmartLabel>
@@ -76,11 +88,16 @@
                     <Y>=Sum(Fields!ATENDIDA.Value)</Y>
                   </ChartDataPointValues>
                   <ChartDataLabel>
-                    <Style />
+                    <Style>
+                      <FontSize>11pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
                     <UseValueAsLabel>true</UseValueAsLabel>
                     <Visible>true</Visible>
                   </ChartDataLabel>
-                  <Style />
+                  <Style>
+                    <Color>=IIf(((Fields!CONFIRMADA.Value+Fields!ATENDIDA.Value+Fields!ANULADA.Value+Fields!PAGADA.Value)/4 = Fields!TOTAL.Value), "#129cdd", "#00000000")</Color>
+                  </Style>
                   <ChartMarker>
                     <Style />
                   </ChartMarker>
@@ -102,7 +119,14 @@
                   <Name>PointWidth</Name>
                   <Value>1</Value>
                 </CustomProperty>
+                <CustomProperty>
+                  <Name>DrawingStyle</Name>
+                  <Value>Cylinder</Value>
+                </CustomProperty>
               </CustomProperties>
+              <ChartItemInLegend>
+                <LegendText>=IIf(((Fields!CONFIRMADA.Value+Fields!ATENDIDA.Value+Fields!ANULADA.Value+Fields!PAGADA.Value)/4 = Fields!TOTAL.Value),"Pte ATENDER","ATENDIDA")</LegendText>
+              </ChartItemInLegend>
               <ValueAxisName>Primary</ValueAxisName>
               <CategoryAxisName>Primary</CategoryAxisName>
               <ChartSmartLabel>
@@ -117,11 +141,16 @@
                     <Y>=Sum(Fields!ANULADA.Value)</Y>
                   </ChartDataPointValues>
                   <ChartDataLabel>
-                    <Style />
+                    <Style>
+                      <FontSize>11pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
                     <UseValueAsLabel>true</UseValueAsLabel>
                     <Visible>true</Visible>
                   </ChartDataLabel>
-                  <Style />
+                  <Style>
+                    <Color>=IIf(((Fields!CONFIRMADA.Value+Fields!ATENDIDA.Value+Fields!ANULADA.Value+Fields!PAGADA.Value)/4 = Fields!TOTAL.Value), "#ffe382", "#00000000")</Color>
+                  </Style>
                   <ChartMarker>
                     <Style />
                   </ChartMarker>
@@ -143,7 +172,14 @@
                   <Name>PointWidth</Name>
                   <Value>1</Value>
                 </CustomProperty>
+                <CustomProperty>
+                  <Name>DrawingStyle</Name>
+                  <Value>Cylinder</Value>
+                </CustomProperty>
               </CustomProperties>
+              <ChartItemInLegend>
+                <LegendText>=IIf(((Fields!CONFIRMADA.Value+Fields!ATENDIDA.Value+Fields!ANULADA.Value+Fields!PAGADA.Value)/4 = Fields!TOTAL.Value),"Pte ANULAR","ANULADA")</LegendText>
+              </ChartItemInLegend>
               <ValueAxisName>Primary</ValueAxisName>
               <CategoryAxisName>Primary</CategoryAxisName>
               <ChartSmartLabel>
@@ -158,11 +194,16 @@
                     <Y>=Sum(Fields!PAGADA.Value)</Y>
                   </ChartDataPointValues>
                   <ChartDataLabel>
-                    <Style />
+                    <Style>
+                      <FontSize>11pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
                     <UseValueAsLabel>true</UseValueAsLabel>
                     <Visible>true</Visible>
                   </ChartDataLabel>
-                  <Style />
+                  <Style>
+                    <Color>=IIf(((Fields!CONFIRMADA.Value+Fields!ATENDIDA.Value+Fields!ANULADA.Value+Fields!PAGADA.Value)/4 = Fields!TOTAL.Value), "#ca6b4b", "#00000000")</Color>
+                  </Style>
                   <ChartMarker>
                     <Style />
                   </ChartMarker>
@@ -184,7 +225,14 @@
                   <Name>PointWidth</Name>
                   <Value>1</Value>
                 </CustomProperty>
+                <CustomProperty>
+                  <Name>DrawingStyle</Name>
+                  <Value>Cylinder</Value>
+                </CustomProperty>
               </CustomProperties>
+              <ChartItemInLegend>
+                <LegendText>=IIf(((Fields!CONFIRMADA.Value+Fields!ATENDIDA.Value+Fields!ANULADA.Value+Fields!PAGADA.Value)/4 = Fields!TOTAL.Value),"Pte PAGAR","PAGADA")</LegendText>
+              </ChartItemInLegend>
               <ValueAxisName>Primary</ValueAxisName>
               <CategoryAxisName>Primary</CategoryAxisName>
               <ChartSmartLabel>
@@ -352,7 +400,7 @@
           <ChartLegend Name="Default">
             <Style>
               <BackgroundGradientType>None</BackgroundGradientType>
-              <FontSize>8pt</FontSize>
+              <FontSize>9pt</FontSize>
             </Style>
             <DockOutsideChartArea>true</DockOutsideChartArea>
             <ChartLegendTitle>
@@ -363,6 +411,7 @@
                 <TextAlign>Center</TextAlign>
               </Style>
             </ChartLegendTitle>
+            <AutoFitTextDisabled>true</AutoFitTextDisabled>
             <HeaderSeparatorColor>Black</HeaderSeparatorColor>
             <ColumnSeparatorColor>Black</ColumnSeparatorColor>
           </ChartLegend>
@@ -993,7 +1042,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>15.39557cm</Height>
+    <Height>13.19919cm</Height>
     <Style />
   </Body>
   <Width>28.62474cm</Width>

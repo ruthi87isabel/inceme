@@ -23,87 +23,82 @@ Partial Class Form_DashBoard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Title1 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series7 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series8 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series9 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series10 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series11 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series12 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series13 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series14 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea12 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend12 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series15 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Title10 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
+        Dim ChartArea13 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend13 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series16 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim Series17 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Title2 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim ChartArea14 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend14 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series18 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend5 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Title11 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
+        Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim ChartArea15 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend15 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series19 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim ChartArea6 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend6 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Title12 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
+        Dim Title13 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
+        Dim ChartArea16 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend16 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series20 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea7 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend7 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Title14 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
+        Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim ChartArea17 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend17 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series21 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim ChartArea8 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend8 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Title15 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
+        Dim Title16 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
+        Dim ChartArea18 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend18 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series22 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea9 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend9 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Title17 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
+        Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle42 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle43 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle41 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim ChartArea19 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend19 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series23 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim ChartArea10 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend10 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim ChartArea20 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend20 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series24 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Title18 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
+        Dim DataGridViewCellStyle44 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle46 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle47 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle45 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim ChartArea21 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend21 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series25 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea11 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend11 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series26 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea22 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend22 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series27 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim Series28 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim DataGridViewCellStyle48 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle51 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle52 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle49 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle50 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_DashBoard))
         Me.bImprimir = New System.Windows.Forms.Button()
         Me.bt_cancelar = New System.Windows.Forms.Button()
         Me.UiTab1 = New Janus.Windows.UI.Tab.UITab()
+        Me.UiTabPage1 = New Janus.Windows.UI.Tab.UITabPage()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.UiGroupBox8 = New Janus.Windows.EditControls.UIGroupBox()
         Me.Chart7 = New System.Windows.Forms.DataVisualization.Charting.Chart()
@@ -121,6 +116,17 @@ Partial Class Form_DashBoard
         Me.bt_filtrar = New System.Windows.Forms.Button()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.HORARIODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PACIENTEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MEDICODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ESPECIALIDADDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CONFIRMADADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ATENDIDADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ANULADADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PAGADADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CitasDiariasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CM2DataSet = New centro_medico.CM2DataSet()
+        Me.UiTabPage2 = New Janus.Windows.UI.Tab.UITabPage()
         Me.UiGroupBox5 = New Janus.Windows.EditControls.UIGroupBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
@@ -132,10 +138,21 @@ Partial Class Form_DashBoard
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.Grafic2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.Label24 = New System.Windows.Forms.Label()
+        Me.FECHADataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CPACIENTEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NOMBREDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.APELLIDO1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.APELLIDO2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DNIDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TLFNODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EMAILDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PacientesAltaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.UiTabPage3 = New Janus.Windows.UI.Tab.UITabPage()
         Me.UiGroupBox10 = New Janus.Windows.EditControls.UIGroupBox()
         Me.Chart8 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.MedicoCitasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UiGroupBox9 = New Janus.Windows.EditControls.UIGroupBox()
         Me.Chart4 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.UiGroupBox6 = New Janus.Windows.EditControls.UIGroupBox()
@@ -148,13 +165,21 @@ Partial Class Form_DashBoard
         Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
-        Me.Label25 = New System.Windows.Forms.Label()
+        Me.FECHADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MEDICODataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ESPECIALIDADDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CantCitasDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UiTabPage4 = New Janus.Windows.UI.Tab.UITabPage()
         Me.UiGroupBox12 = New Janus.Windows.EditControls.UIGroupBox()
         Me.Chart9 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.EspecialidadCitasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UiGroupBox11 = New Janus.Windows.EditControls.UIGroupBox()
         Me.Chart5 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.DataGridView4 = New System.Windows.Forms.DataGridView()
+        Me.FECHADataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ESPECIALIDADDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CantCitasDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UiGroupBox1 = New Janus.Windows.EditControls.UIGroupBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -163,13 +188,19 @@ Partial Class Form_DashBoard
         Me.DateTimePicker5 = New System.Windows.Forms.DateTimePicker()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label26 = New System.Windows.Forms.Label()
+        Me.UiTabPage5 = New Janus.Windows.UI.Tab.UITabPage()
         Me.UiGroupBox14 = New Janus.Windows.EditControls.UIGroupBox()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
         Me.Chart10 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.Top10_TratamientoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UiGroupBox13 = New Janus.Windows.EditControls.UIGroupBox()
         Me.Chart6 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.DataGridView5 = New System.Windows.Forms.DataGridView()
+        Me.FECHADataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TratamientoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CantTratamientosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UiGroupBox2 = New Janus.Windows.EditControls.UIGroupBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -178,13 +209,18 @@ Partial Class Form_DashBoard
         Me.DateTimePicker7 = New System.Windows.Forms.DateTimePicker()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.UiTabPage6 = New Janus.Windows.UI.Tab.UITabPage()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.UiGroupBox16 = New Janus.Windows.EditControls.UIGroupBox()
         Me.Chart11 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.EstadistDentalBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UiGroupBox15 = New Janus.Windows.EditControls.UIGroupBox()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.DataGridView6 = New System.Windows.Forms.DataGridView()
+        Me.FECHADataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PresupuestadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AceptadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UiGroupBox3 = New Janus.Windows.EditControls.UIGroupBox()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
@@ -194,46 +230,11 @@ Partial Class Form_DashBoard
         Me.DateTimePicker9 = New System.Windows.Forms.DateTimePicker()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
+        Me.Grafic1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CLINICAINCEMEBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BVerGrafica = New System.Windows.Forms.Button()
         Me.BVerTabla = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.UiTabPage1 = New Janus.Windows.UI.Tab.UITabPage()
-        Me.UiTabPage2 = New Janus.Windows.UI.Tab.UITabPage()
-        Me.UiTabPage3 = New Janus.Windows.UI.Tab.UITabPage()
-        Me.UiTabPage4 = New Janus.Windows.UI.Tab.UITabPage()
-        Me.UiTabPage5 = New Janus.Windows.UI.Tab.UITabPage()
-        Me.UiTabPage6 = New Janus.Windows.UI.Tab.UITabPage()
-        Me.Grafic1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CM2DataSet = New centro_medico.CM2DataSet()
-        Me.CitasDiariasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Grafic2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.FECHADataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CPACIENTEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NOMBREDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.APELLIDO1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.APELLIDO2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DNIDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TLFNODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EMAILDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PacientesAltaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MedicoCitasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.FECHADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MEDICODataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ESPECIALIDADDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CantCitasDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EspecialidadCitasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.FECHADataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ESPECIALIDADDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CantCitasDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Top10_TratamientoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.FECHADataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TratamientoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CantTratamientosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EstadistDentalBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.FECHADataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PresupuestadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AceptadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CitasDiariasTableAdapter1 = New centro_medico.CM2DataSetTableAdapters.CitasDiariasTableAdapter()
         Me.PacientesAltaTableAdapter1 = New centro_medico.CM2DataSetTableAdapters.PacientesAltaTableAdapter()
         Me.MedicoCitasTableAdapter1 = New centro_medico.CM2DataSetTableAdapters.MedicoCitasTableAdapter()
@@ -242,16 +243,10 @@ Partial Class Form_DashBoard
         Me.Grafic1TableAdapter = New centro_medico.CM2DataSetTableAdapters.Grafic1TableAdapter()
         Me.Grafic2TableAdapter = New centro_medico.CM2DataSetTableAdapters.Grafic2TableAdapter()
         Me.EstadistDentalTableAdapter1 = New centro_medico.CM2DataSetTableAdapters.EstadistDentalTableAdapter()
-        Me.HORARIODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PACIENTEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MEDICODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ESPECIALIDADDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CONFIRMADADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ATENDIDADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ANULADADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PAGADADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.UiTab1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UiTab1.SuspendLayout()
+        Me.UiTabPage1.SuspendLayout()
         CType(Me.UiGroupBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UiGroupBox8.SuspendLayout()
         CType(Me.Chart7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -261,62 +256,61 @@ Partial Class Form_DashBoard
         CType(Me.UiGroupBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UiGroupBox4.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CitasDiariasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CM2DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.UiTabPage2.SuspendLayout()
         CType(Me.UiGroupBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UiGroupBox5.SuspendLayout()
         CType(Me.Chart2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Grafic2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PacientesAltaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.UiTabPage3.SuspendLayout()
         CType(Me.UiGroupBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UiGroupBox10.SuspendLayout()
         CType(Me.Chart8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MedicoCitasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UiGroupBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UiGroupBox9.SuspendLayout()
         CType(Me.Chart4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UiGroupBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UiGroupBox6.SuspendLayout()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.UiTabPage4.SuspendLayout()
         CType(Me.UiGroupBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UiGroupBox12.SuspendLayout()
         CType(Me.Chart9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EspecialidadCitasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UiGroupBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UiGroupBox11.SuspendLayout()
         CType(Me.Chart5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UiGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UiGroupBox1.SuspendLayout()
+        Me.UiTabPage5.SuspendLayout()
         CType(Me.UiGroupBox14, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UiGroupBox14.SuspendLayout()
         CType(Me.Chart10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Top10_TratamientoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UiGroupBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UiGroupBox13.SuspendLayout()
         CType(Me.Chart6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UiGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UiGroupBox2.SuspendLayout()
+        Me.UiTabPage6.SuspendLayout()
         CType(Me.UiGroupBox16, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UiGroupBox16.SuspendLayout()
         CType(Me.Chart11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EstadistDentalBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UiGroupBox15, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UiGroupBox15.SuspendLayout()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UiGroupBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UiGroupBox3.SuspendLayout()
-        CType(Me.CLINICAINCEMEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.UiTabPage1.SuspendLayout()
-        Me.UiTabPage2.SuspendLayout()
-        Me.UiTabPage3.SuspendLayout()
-        Me.UiTabPage4.SuspendLayout()
-        Me.UiTabPage5.SuspendLayout()
-        Me.UiTabPage6.SuspendLayout()
         CType(Me.Grafic1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CM2DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CitasDiariasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Grafic2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PacientesAltaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MedicoCitasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EspecialidadCitasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Top10_TratamientoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EstadistDentalBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CLINICAINCEMEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'bImprimir
@@ -354,6 +348,20 @@ Partial Class Form_DashBoard
         Me.UiTab1.TabIndex = 5
         Me.UiTab1.TabPages.AddRange(New Janus.Windows.UI.Tab.UITabPage() {Me.UiTabPage1, Me.UiTabPage2, Me.UiTabPage3, Me.UiTabPage4, Me.UiTabPage5, Me.UiTabPage6})
         '
+        'UiTabPage1
+        '
+        Me.UiTabPage1.Controls.Add(Me.Label17)
+        Me.UiTabPage1.Controls.Add(Me.UiGroupBox8)
+        Me.UiTabPage1.Controls.Add(Me.UiGroupBox7)
+        Me.UiTabPage1.Controls.Add(Me.UiGroupBox4)
+        Me.UiTabPage1.Controls.Add(Me.Label18)
+        Me.UiTabPage1.Controls.Add(Me.DataGridView1)
+        Me.UiTabPage1.Location = New System.Drawing.Point(1, 21)
+        Me.UiTabPage1.Name = "UiTabPage1"
+        Me.UiTabPage1.Size = New System.Drawing.Size(836, 466)
+        Me.UiTabPage1.TabStop = True
+        Me.UiTabPage1.Text = "Citas del día por estado"
+        '
         'Label17
         '
         Me.Label17.AutoSize = True
@@ -378,41 +386,45 @@ Partial Class Form_DashBoard
         '
         'Chart7
         '
-        ChartArea1.Area3DStyle.Enable3D = True
-        ChartArea1.Area3DStyle.Inclination = 40
-        ChartArea1.Name = "ChartArea1"
-        ChartArea1.Position.Auto = False
-        ChartArea1.Position.Height = 75.0!
-        ChartArea1.Position.Width = 75.0!
-        ChartArea1.Position.X = 12.0!
-        ChartArea1.Position.Y = 8.0!
-        Me.Chart7.ChartAreas.Add(ChartArea1)
-        Legend1.BackColor = System.Drawing.Color.Transparent
-        Legend1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.VerticalCenter
-        Legend1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!)
-        Legend1.IsTextAutoFit = False
-        Legend1.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row
-        Legend1.Name = "Legend1"
-        Legend1.Position.Auto = False
-        Legend1.Position.Height = 6.0!
-        Legend1.Position.Width = 99.0!
-        Legend1.Position.Y = 94.0!
-        Me.Chart7.Legends.Add(Legend1)
+        ChartArea12.Area3DStyle.Enable3D = True
+        ChartArea12.Area3DStyle.Inclination = 40
+        ChartArea12.Name = "ChartArea1"
+        ChartArea12.Position.Auto = False
+        ChartArea12.Position.Height = 95.0!
+        ChartArea12.Position.Width = 95.0!
+        ChartArea12.Position.X = 5.0!
+        ChartArea12.Position.Y = 2.0!
+        Me.Chart7.ChartAreas.Add(ChartArea12)
+        Legend12.BackColor = System.Drawing.Color.Transparent
+        Legend12.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.VerticalCenter
+        Legend12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!)
+        Legend12.IsTextAutoFit = False
+        Legend12.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row
+        Legend12.Name = "Legend1"
+        Legend12.Position.Auto = False
+        Legend12.Position.Height = 6.0!
+        Legend12.Position.Width = 99.0!
+        Legend12.Position.Y = 94.0!
+        Me.Chart7.Legends.Add(Legend12)
         Me.Chart7.Location = New System.Drawing.Point(6, 21)
         Me.Chart7.Name = "Chart7"
-        Series1.ChartArea = "ChartArea1"
-        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
-        Series1.CustomProperties = "PieDrawingStyle=SoftEdge, PieLabelStyle=Outside"
-        Series1.IsValueShownAsLabel = True
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Me.Chart7.Series.Add(Series1)
+        Series15.ChartArea = "ChartArea1"
+        Series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
+        Series15.CustomProperties = "PieDrawingStyle=SoftEdge, PieLabelStyle=Outside"
+        Series15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
+        Series15.IsValueShownAsLabel = True
+        Series15.Legend = "Legend1"
+        Series15.Name = "Series1"
+        Series15.XValueMember = "Estado"
+        Series15.YValueMembers = "Si"
+        Me.Chart7.Series.Add(Series15)
         Me.Chart7.Size = New System.Drawing.Size(381, 377)
         Me.Chart7.TabIndex = 3
         Me.Chart7.Text = "Chart7"
-        Title1.Name = "Title1"
-        Title1.Text = "123"
-        Me.Chart7.Titles.Add(Title1)
+        Title10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
+        Title10.Name = "Title1"
+        Title10.Text = "Analisis Porcentual del Total de Citas"
+        Me.Chart7.Titles.Add(Title10)
         '
         'UiGroupBox7
         '
@@ -427,66 +439,54 @@ Partial Class Form_DashBoard
         '
         'Chart3
         '
-        ChartArea2.AxisX.LabelStyle.Enabled = False
-        ChartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
-        ChartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
-        ChartArea2.Name = "ChartArea1"
-        ChartArea2.Position.Auto = False
-        ChartArea2.Position.Height = 88.0!
-        ChartArea2.Position.Width = 94.0!
-        ChartArea2.Position.X = 3.0!
-        ChartArea2.Position.Y = 1.0!
-        Me.Chart3.ChartAreas.Add(ChartArea2)
-        Me.Chart3.DataSource = Me.Grafic1BindingSource
-        Legend2.BackColor = System.Drawing.Color.Transparent
-        Legend2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.VerticalCenter
-        Legend2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!)
-        Legend2.IsTextAutoFit = False
-        Legend2.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row
-        Legend2.Name = "Legend1"
-        Legend2.Position.Auto = False
-        Legend2.Position.Height = 6.0!
-        Legend2.Position.Width = 99.0!
-        Legend2.Position.Y = 94.0!
-        Me.Chart3.Legends.Add(Legend2)
+        ChartArea13.AxisX.IsLabelAutoFit = False
+        ChartArea13.AxisX.LabelStyle.Angle = -45
+        ChartArea13.AxisX.LabelStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        ChartArea13.AxisX.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
+        ChartArea13.AxisY.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
+        ChartArea13.Name = "ChartArea1"
+        ChartArea13.Position.Auto = False
+        ChartArea13.Position.Height = 88.0!
+        ChartArea13.Position.Width = 94.0!
+        ChartArea13.Position.X = 3.0!
+        ChartArea13.Position.Y = 5.0!
+        Me.Chart3.ChartAreas.Add(ChartArea13)
+        Legend13.BackColor = System.Drawing.Color.Transparent
+        Legend13.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.VerticalCenter
+        Legend13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!)
+        Legend13.IsTextAutoFit = False
+        Legend13.LegendItemOrder = System.Windows.Forms.DataVisualization.Charting.LegendItemOrder.ReversedSeriesOrder
+        Legend13.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row
+        Legend13.Name = "Legend1"
+        Legend13.Position.Auto = False
+        Legend13.Position.Height = 6.0!
+        Legend13.Position.Width = 99.0!
+        Legend13.Position.Y = 94.0!
+        Me.Chart3.Legends.Add(Legend13)
         Me.Chart3.Location = New System.Drawing.Point(6, 17)
         Me.Chart3.Name = "Chart3"
-        Series2.ChartArea = "ChartArea1"
-        Series2.CustomProperties = "DrawingStyle=Cylinder, PointWidth=1.3"
-        Series2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-        Series2.IsValueShownAsLabel = True
-        Series2.Legend = "Legend1"
-        Series2.LegendText = "Confirmada"
-        Series2.Name = "Series1"
-        Series2.YValueMembers = "CONFIRMADA"
-        Series3.ChartArea = "ChartArea1"
-        Series3.CustomProperties = "DrawingStyle=Cylinder, PointWidth=1.3"
-        Series3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-        Series3.IsValueShownAsLabel = True
-        Series3.Legend = "Legend1"
-        Series3.LegendText = "Atendida"
-        Series3.Name = "Series2"
-        Series3.YValueMembers = "ATENDIDA"
-        Series4.ChartArea = "ChartArea1"
-        Series4.CustomProperties = "DrawingStyle=Cylinder, PointWidth=1.3"
-        Series4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-        Series4.IsValueShownAsLabel = True
-        Series4.Legend = "Legend1"
-        Series4.LegendText = "Anulada"
-        Series4.Name = "Series3"
-        Series4.YValueMembers = "ANULADA"
-        Series5.ChartArea = "ChartArea1"
-        Series5.CustomProperties = "DrawingStyle=Cylinder, PointWidth=1.3"
-        Series5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-        Series5.IsValueShownAsLabel = True
-        Series5.Legend = "Legend1"
-        Series5.LegendText = "Pagada"
-        Series5.Name = "Series4"
-        Series5.YValueMembers = "PAGADA"
-        Me.Chart3.Series.Add(Series2)
-        Me.Chart3.Series.Add(Series3)
-        Me.Chart3.Series.Add(Series4)
-        Me.Chart3.Series.Add(Series5)
+        Series16.ChartArea = "ChartArea1"
+        Series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn
+        Series16.CustomProperties = "DrawingStyle=Cylinder"
+        Series16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
+        Series16.IsValueShownAsLabel = True
+        Series16.Legend = "Legend1"
+        Series16.LegendText = "Si"
+        Series16.Name = "Series1"
+        Series16.XValueMember = "Estado"
+        Series16.YValueMembers = "Si"
+        Series17.ChartArea = "ChartArea1"
+        Series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn
+        Series17.CustomProperties = "DrawingStyle=Cylinder"
+        Series17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
+        Series17.IsValueShownAsLabel = True
+        Series17.Legend = "Legend1"
+        Series17.LegendText = "No"
+        Series17.Name = "Series2"
+        Series17.XValueMember = "Estado"
+        Series17.YValueMembers = "No"
+        Me.Chart3.Series.Add(Series16)
+        Me.Chart3.Series.Add(Series17)
         Me.Chart3.Size = New System.Drawing.Size(382, 381)
         Me.Chart3.TabIndex = 2
         Me.Chart3.Text = "Chart3"
@@ -610,39 +610,133 @@ Partial Class Form_DashBoard
         'DataGridView1
         '
         Me.DataGridView1.AutoGenerateColumns = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle27.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle27
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.HORARIODataGridViewTextBoxColumn, Me.PACIENTEDataGridViewTextBoxColumn, Me.MEDICODataGridViewTextBoxColumn, Me.ESPECIALIDADDataGridViewTextBoxColumn, Me.CONFIRMADADataGridViewTextBoxColumn, Me.ATENDIDADataGridViewTextBoxColumn, Me.ANULADADataGridViewTextBoxColumn, Me.PAGADADataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.CitasDiariasBindingSource
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle32.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle32
         Me.DataGridView1.Location = New System.Drawing.Point(0, 93)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle33.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle33
         Me.DataGridView1.Size = New System.Drawing.Size(836, 372)
         Me.DataGridView1.TabIndex = 1
         Me.DataGridView1.Visible = False
+        '
+        'HORARIODataGridViewTextBoxColumn
+        '
+        Me.HORARIODataGridViewTextBoxColumn.DataPropertyName = "HORARIO"
+        Me.HORARIODataGridViewTextBoxColumn.HeaderText = "HORARIO"
+        Me.HORARIODataGridViewTextBoxColumn.Name = "HORARIODataGridViewTextBoxColumn"
+        Me.HORARIODataGridViewTextBoxColumn.ReadOnly = True
+        Me.HORARIODataGridViewTextBoxColumn.Width = 65
+        '
+        'PACIENTEDataGridViewTextBoxColumn
+        '
+        Me.PACIENTEDataGridViewTextBoxColumn.DataPropertyName = "PACIENTE"
+        Me.PACIENTEDataGridViewTextBoxColumn.HeaderText = "PACIENTE"
+        Me.PACIENTEDataGridViewTextBoxColumn.Name = "PACIENTEDataGridViewTextBoxColumn"
+        Me.PACIENTEDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PACIENTEDataGridViewTextBoxColumn.Width = 160
+        '
+        'MEDICODataGridViewTextBoxColumn
+        '
+        Me.MEDICODataGridViewTextBoxColumn.DataPropertyName = "MEDICO"
+        Me.MEDICODataGridViewTextBoxColumn.HeaderText = "MEDICO"
+        Me.MEDICODataGridViewTextBoxColumn.Name = "MEDICODataGridViewTextBoxColumn"
+        Me.MEDICODataGridViewTextBoxColumn.ReadOnly = True
+        Me.MEDICODataGridViewTextBoxColumn.Width = 160
+        '
+        'ESPECIALIDADDataGridViewTextBoxColumn
+        '
+        Me.ESPECIALIDADDataGridViewTextBoxColumn.DataPropertyName = "ESPECIALIDAD"
+        Me.ESPECIALIDADDataGridViewTextBoxColumn.HeaderText = "ESPECIALIDAD"
+        Me.ESPECIALIDADDataGridViewTextBoxColumn.Name = "ESPECIALIDADDataGridViewTextBoxColumn"
+        Me.ESPECIALIDADDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ESPECIALIDADDataGridViewTextBoxColumn.Width = 110
+        '
+        'CONFIRMADADataGridViewTextBoxColumn
+        '
+        Me.CONFIRMADADataGridViewTextBoxColumn.DataPropertyName = "CONFIRMADA"
+        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.CONFIRMADADataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle28
+        Me.CONFIRMADADataGridViewTextBoxColumn.HeaderText = "CONFIRMADA"
+        Me.CONFIRMADADataGridViewTextBoxColumn.Name = "CONFIRMADADataGridViewTextBoxColumn"
+        Me.CONFIRMADADataGridViewTextBoxColumn.ReadOnly = True
+        Me.CONFIRMADADataGridViewTextBoxColumn.Width = 85
+        '
+        'ATENDIDADataGridViewTextBoxColumn
+        '
+        Me.ATENDIDADataGridViewTextBoxColumn.DataPropertyName = "ATENDIDA"
+        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.ATENDIDADataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle29
+        Me.ATENDIDADataGridViewTextBoxColumn.HeaderText = "ATENDIDA"
+        Me.ATENDIDADataGridViewTextBoxColumn.Name = "ATENDIDADataGridViewTextBoxColumn"
+        Me.ATENDIDADataGridViewTextBoxColumn.ReadOnly = True
+        Me.ATENDIDADataGridViewTextBoxColumn.Width = 70
+        '
+        'ANULADADataGridViewTextBoxColumn
+        '
+        Me.ANULADADataGridViewTextBoxColumn.DataPropertyName = "ANULADA"
+        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.ANULADADataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle30
+        Me.ANULADADataGridViewTextBoxColumn.HeaderText = "ANULADA"
+        Me.ANULADADataGridViewTextBoxColumn.Name = "ANULADADataGridViewTextBoxColumn"
+        Me.ANULADADataGridViewTextBoxColumn.ReadOnly = True
+        Me.ANULADADataGridViewTextBoxColumn.Width = 65
+        '
+        'PAGADADataGridViewTextBoxColumn
+        '
+        Me.PAGADADataGridViewTextBoxColumn.DataPropertyName = "PAGADA"
+        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.PAGADADataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle31
+        Me.PAGADADataGridViewTextBoxColumn.HeaderText = "PAGADA"
+        Me.PAGADADataGridViewTextBoxColumn.Name = "PAGADADataGridViewTextBoxColumn"
+        Me.PAGADADataGridViewTextBoxColumn.ReadOnly = True
+        Me.PAGADADataGridViewTextBoxColumn.Width = 60
+        '
+        'CitasDiariasBindingSource
+        '
+        Me.CitasDiariasBindingSource.DataMember = "CitasDiarias"
+        Me.CitasDiariasBindingSource.DataSource = Me.CM2DataSet
+        '
+        'CM2DataSet
+        '
+        Me.CM2DataSet.DataSetName = "CM2DataSet"
+        Me.CM2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'UiTabPage2
+        '
+        Me.UiTabPage2.Controls.Add(Me.UiGroupBox5)
+        Me.UiTabPage2.Controls.Add(Me.Label19)
+        Me.UiTabPage2.Controls.Add(Me.Chart2)
+        Me.UiTabPage2.Controls.Add(Me.DataGridView2)
+        Me.UiTabPage2.Location = New System.Drawing.Point(1, 21)
+        Me.UiTabPage2.Name = "UiTabPage2"
+        Me.UiTabPage2.Size = New System.Drawing.Size(836, 466)
+        Me.UiTabPage2.TabStop = True
+        Me.UiTabPage2.Text = "Nuevos Pacientes/Mes"
         '
         'UiGroupBox5
         '
@@ -743,282 +837,280 @@ Partial Class Form_DashBoard
         Me.Label19.ForeColor = System.Drawing.SystemColors.AppWorkspace
         Me.Label19.Location = New System.Drawing.Point(80, 230)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(686, 31)
+        Me.Label19.Size = New System.Drawing.Size(712, 31)
         Me.Label19.TabIndex = 217
-        Me.Label19.Text = "El año seleccionado no tiene información disponible"
+        Me.Label19.Text = "El rango seleccionado no tiene información disponible"
         Me.Label19.Visible = False
         '
         'Chart2
         '
-        ChartArea3.AxisX.LabelStyle.Enabled = False
-        ChartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
-        ChartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
-        ChartArea3.CursorX.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Months
-        ChartArea3.Name = "ChartArea1"
-        ChartArea3.Position.Auto = False
-        ChartArea3.Position.Height = 75.33208!
-        ChartArea3.Position.Width = 74.61409!
-        ChartArea3.Position.X = 3.0!
-        ChartArea3.Position.Y = 18.66791!
-        Me.Chart2.ChartAreas.Add(ChartArea3)
+        ChartArea14.AxisX.Interval = 1.0R
+        ChartArea14.AxisX.IsLabelAutoFit = False
+        ChartArea14.AxisX.LabelStyle.Angle = -45
+        ChartArea14.AxisX.LabelStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        ChartArea14.AxisX.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
+        ChartArea14.AxisY.IsLabelAutoFit = False
+        ChartArea14.AxisY.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
+        ChartArea14.CursorX.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Months
+        ChartArea14.Name = "ChartArea1"
+        ChartArea14.Position.Auto = False
+        ChartArea14.Position.Height = 85.0!
+        ChartArea14.Position.Width = 90.0!
+        ChartArea14.Position.X = 3.0!
+        ChartArea14.Position.Y = 15.0!
+        Me.Chart2.ChartAreas.Add(ChartArea14)
         Me.Chart2.DataSource = Me.Grafic2BindingSource
-        Legend3.BackColor = System.Drawing.Color.Transparent
-        Legend3.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.VerticalCenter
-        Legend3.Name = "Legend1"
-        Me.Chart2.Legends.Add(Legend3)
+        Legend14.BackColor = System.Drawing.Color.Transparent
+        Legend14.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.VerticalCenter
+        Legend14.Enabled = False
+        Legend14.Name = "Legend1"
+        Me.Chart2.Legends.Add(Legend14)
         Me.Chart2.Location = New System.Drawing.Point(97, 103)
         Me.Chart2.Name = "Chart2"
-        Series6.ChartArea = "ChartArea1"
-        Series6.CustomProperties = "DrawingStyle=Cylinder, PointWidth=1.8"
-        Series6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-        Series6.IsValueShownAsLabel = True
-        Series6.Legend = "Legend1"
-        Series6.LegendText = "Enero"
-        Series6.Name = "Series1"
-        Series6.YValueMembers = "Enero"
-        Series7.ChartArea = "ChartArea1"
-        Series7.CustomProperties = "DrawingStyle=Cylinder, PointWidth=1.8"
-        Series7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-        Series7.IsValueShownAsLabel = True
-        Series7.Legend = "Legend1"
-        Series7.LegendText = "Febrero"
-        Series7.Name = "Series2"
-        Series7.YValueMembers = "Febrero"
-        Series8.ChartArea = "ChartArea1"
-        Series8.CustomProperties = "DrawingStyle=Cylinder, PointWidth=1.8"
-        Series8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-        Series8.IsValueShownAsLabel = True
-        Series8.Legend = "Legend1"
-        Series8.LegendText = "Marzo"
-        Series8.Name = "Series3"
-        Series8.YValueMembers = "Marzo"
-        Series9.ChartArea = "ChartArea1"
-        Series9.CustomProperties = "DrawingStyle=Cylinder, PointWidth=1.8"
-        Series9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-        Series9.IsValueShownAsLabel = True
-        Series9.Legend = "Legend1"
-        Series9.LegendText = "Abril"
-        Series9.Name = "Series4"
-        Series9.YValueMembers = "Abril"
-        Series10.ChartArea = "ChartArea1"
-        Series10.CustomProperties = "DrawingStyle=Cylinder, PointWidth=1.8"
-        Series10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-        Series10.IsValueShownAsLabel = True
-        Series10.Legend = "Legend1"
-        Series10.LegendText = "Mayo"
-        Series10.Name = "Series5"
-        Series10.YValueMembers = "Mayo"
-        Series11.ChartArea = "ChartArea1"
-        Series11.CustomProperties = "DrawingStyle=Cylinder, PointWidth=1.8"
-        Series11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-        Series11.IsValueShownAsLabel = True
-        Series11.Legend = "Legend1"
-        Series11.LegendText = "Junio"
-        Series11.Name = "Series6"
-        Series11.YValueMembers = "Junio"
-        Series12.ChartArea = "ChartArea1"
-        Series12.CustomProperties = "DrawingStyle=Cylinder, PointWidth=1.8"
-        Series12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-        Series12.IsValueShownAsLabel = True
-        Series12.Legend = "Legend1"
-        Series12.LegendText = "Julio"
-        Series12.Name = "Series7"
-        Series12.YValueMembers = "Julio"
-        Series13.ChartArea = "ChartArea1"
-        Series13.CustomProperties = "DrawingStyle=Cylinder, PointWidth=1.8"
-        Series13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-        Series13.IsValueShownAsLabel = True
-        Series13.Legend = "Legend1"
-        Series13.LegendText = "Agosto"
-        Series13.Name = "Series8"
-        Series13.YValueMembers = "Agosto"
-        Series14.ChartArea = "ChartArea1"
-        Series14.CustomProperties = "DrawingStyle=Cylinder, PointWidth=1.8"
-        Series14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-        Series14.IsValueShownAsLabel = True
-        Series14.Legend = "Legend1"
-        Series14.LegendText = "Septiembre"
-        Series14.Name = "Series9"
-        Series14.YValueMembers = "Septiembre"
-        Series15.ChartArea = "ChartArea1"
-        Series15.CustomProperties = "DrawingStyle=Cylinder, PointWidth=1.8"
-        Series15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-        Series15.IsValueShownAsLabel = True
-        Series15.Legend = "Legend1"
-        Series15.LegendText = "Octubre"
-        Series15.Name = "Series10"
-        Series15.YValueMembers = "Octubre"
-        Series16.ChartArea = "ChartArea1"
-        Series16.CustomProperties = "DrawingStyle=Cylinder, PointWidth=1.8"
-        Series16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-        Series16.IsValueShownAsLabel = True
-        Series16.Legend = "Legend1"
-        Series16.LegendText = "Noviembre"
-        Series16.Name = "Series11"
-        Series16.YValueMembers = "Noviembre"
-        Series17.ChartArea = "ChartArea1"
-        Series17.CustomProperties = "DrawingStyle=Cylinder, PointWidth=1.8"
-        Series17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-        Series17.IsValueShownAsLabel = True
-        Series17.Legend = "Legend1"
-        Series17.LegendText = "Diciembre"
-        Series17.Name = "Series12"
-        Series17.YValueMembers = "Diciembre"
-        Me.Chart2.Series.Add(Series6)
-        Me.Chart2.Series.Add(Series7)
-        Me.Chart2.Series.Add(Series8)
-        Me.Chart2.Series.Add(Series9)
-        Me.Chart2.Series.Add(Series10)
-        Me.Chart2.Series.Add(Series11)
-        Me.Chart2.Series.Add(Series12)
-        Me.Chart2.Series.Add(Series13)
-        Me.Chart2.Series.Add(Series14)
-        Me.Chart2.Series.Add(Series15)
-        Me.Chart2.Series.Add(Series16)
-        Me.Chart2.Series.Add(Series17)
+        Series18.ChartArea = "ChartArea1"
+        Series18.CustomProperties = "DrawingStyle=Cylinder"
+        Series18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
+        Series18.IsValueShownAsLabel = True
+        Series18.Legend = "Legend1"
+        Series18.LegendText = "Enero"
+        Series18.Name = "Series1"
+        Series18.XValueMember = "Meses"
+        Series18.YValueMembers = "Valor"
+        Me.Chart2.Series.Add(Series18)
         Me.Chart2.Size = New System.Drawing.Size(654, 360)
         Me.Chart2.TabIndex = 2
         Me.Chart2.Tag = "5"
         Me.Chart2.Text = "Chart2"
-        Title2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Title2.Name = "Title1"
-        Title2.Text = "Comportamiento Actual de Nuevas Altas por Meses"
-        Me.Chart2.Titles.Add(Title2)
+        Title11.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Title11.Name = "Title1"
+        Title11.Text = "Comportamiento Actual de Nuevas Altas por Meses"
+        Me.Chart2.Titles.Add(Title11)
+        '
+        'Grafic2BindingSource
+        '
+        Me.Grafic2BindingSource.DataMember = "Grafic2"
+        Me.Grafic2BindingSource.DataSource = Me.CM2DataSet
         '
         'DataGridView2
         '
         Me.DataGridView2.AutoGenerateColumns = False
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle34.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle34
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FECHADataGridViewTextBoxColumn4, Me.CPACIENTEDataGridViewTextBoxColumn, Me.NOMBREDataGridViewTextBoxColumn, Me.APELLIDO1DataGridViewTextBoxColumn, Me.APELLIDO2DataGridViewTextBoxColumn, Me.DNIDataGridViewTextBoxColumn, Me.TLFNODataGridViewTextBoxColumn, Me.EMAILDataGridViewTextBoxColumn})
         Me.DataGridView2.DataSource = Me.PacientesAltaBindingSource
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle35.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle35
         Me.DataGridView2.Location = New System.Drawing.Point(0, 93)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle36.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle36
         Me.DataGridView2.Size = New System.Drawing.Size(836, 372)
         Me.DataGridView2.TabIndex = 1
         Me.DataGridView2.Visible = False
         '
-        'Label24
+        'FECHADataGridViewTextBoxColumn4
         '
-        Me.Label24.AutoSize = True
-        Me.Label24.BackColor = System.Drawing.Color.Transparent
-        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(269, 111)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(270, 17)
-        Me.Label24.TabIndex = 222
-        Me.Label24.Text = "Citas Diarias Atendidas por Médicos"
+        Me.FECHADataGridViewTextBoxColumn4.DataPropertyName = "FECHA"
+        Me.FECHADataGridViewTextBoxColumn4.HeaderText = "FECHA  ALTA"
+        Me.FECHADataGridViewTextBoxColumn4.Name = "FECHADataGridViewTextBoxColumn4"
+        Me.FECHADataGridViewTextBoxColumn4.ReadOnly = True
+        '
+        'CPACIENTEDataGridViewTextBoxColumn
+        '
+        Me.CPACIENTEDataGridViewTextBoxColumn.DataPropertyName = "CPACIENTE"
+        Me.CPACIENTEDataGridViewTextBoxColumn.HeaderText = "CPACIENTE"
+        Me.CPACIENTEDataGridViewTextBoxColumn.Name = "CPACIENTEDataGridViewTextBoxColumn"
+        Me.CPACIENTEDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CPACIENTEDataGridViewTextBoxColumn.Visible = False
+        '
+        'NOMBREDataGridViewTextBoxColumn
+        '
+        Me.NOMBREDataGridViewTextBoxColumn.DataPropertyName = "NOMBRE"
+        Me.NOMBREDataGridViewTextBoxColumn.HeaderText = "NOMBRE"
+        Me.NOMBREDataGridViewTextBoxColumn.Name = "NOMBREDataGridViewTextBoxColumn"
+        Me.NOMBREDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NOMBREDataGridViewTextBoxColumn.Width = 120
+        '
+        'APELLIDO1DataGridViewTextBoxColumn
+        '
+        Me.APELLIDO1DataGridViewTextBoxColumn.DataPropertyName = "APELLIDO1"
+        Me.APELLIDO1DataGridViewTextBoxColumn.HeaderText = "APELLIDO1"
+        Me.APELLIDO1DataGridViewTextBoxColumn.Name = "APELLIDO1DataGridViewTextBoxColumn"
+        Me.APELLIDO1DataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'APELLIDO2DataGridViewTextBoxColumn
+        '
+        Me.APELLIDO2DataGridViewTextBoxColumn.DataPropertyName = "APELLIDO2"
+        Me.APELLIDO2DataGridViewTextBoxColumn.HeaderText = "APELLIDO2"
+        Me.APELLIDO2DataGridViewTextBoxColumn.Name = "APELLIDO2DataGridViewTextBoxColumn"
+        Me.APELLIDO2DataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DNIDataGridViewTextBoxColumn
+        '
+        Me.DNIDataGridViewTextBoxColumn.DataPropertyName = "DNI"
+        Me.DNIDataGridViewTextBoxColumn.HeaderText = "DNI"
+        Me.DNIDataGridViewTextBoxColumn.Name = "DNIDataGridViewTextBoxColumn"
+        Me.DNIDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DNIDataGridViewTextBoxColumn.Width = 70
+        '
+        'TLFNODataGridViewTextBoxColumn
+        '
+        Me.TLFNODataGridViewTextBoxColumn.DataPropertyName = "TLFNO"
+        Me.TLFNODataGridViewTextBoxColumn.HeaderText = "TELÉFONO"
+        Me.TLFNODataGridViewTextBoxColumn.Name = "TLFNODataGridViewTextBoxColumn"
+        Me.TLFNODataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'EMAILDataGridViewTextBoxColumn
+        '
+        Me.EMAILDataGridViewTextBoxColumn.DataPropertyName = "EMAIL"
+        Me.EMAILDataGridViewTextBoxColumn.HeaderText = "EMAIL"
+        Me.EMAILDataGridViewTextBoxColumn.Name = "EMAILDataGridViewTextBoxColumn"
+        Me.EMAILDataGridViewTextBoxColumn.ReadOnly = True
+        Me.EMAILDataGridViewTextBoxColumn.Width = 185
+        '
+        'PacientesAltaBindingSource
+        '
+        Me.PacientesAltaBindingSource.DataMember = "PacientesAlta"
+        Me.PacientesAltaBindingSource.DataSource = Me.CM2DataSet
+        '
+        'UiTabPage3
+        '
+        Me.UiTabPage3.Controls.Add(Me.UiGroupBox10)
+        Me.UiTabPage3.Controls.Add(Me.UiGroupBox9)
+        Me.UiTabPage3.Controls.Add(Me.UiGroupBox6)
+        Me.UiTabPage3.Controls.Add(Me.Label20)
+        Me.UiTabPage3.Controls.Add(Me.DataGridView3)
+        Me.UiTabPage3.Location = New System.Drawing.Point(1, 21)
+        Me.UiTabPage3.Name = "UiTabPage3"
+        Me.UiTabPage3.Size = New System.Drawing.Size(836, 466)
+        Me.UiTabPage3.TabStop = True
+        Me.UiTabPage3.Text = "Citas atendidas por Médico/Día"
         '
         'UiGroupBox10
         '
         Me.UiGroupBox10.BackColor = System.Drawing.Color.Transparent
         Me.UiGroupBox10.Controls.Add(Me.Chart8)
         Me.UiGroupBox10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UiGroupBox10.Location = New System.Drawing.Point(425, 139)
+        Me.UiGroupBox10.Location = New System.Drawing.Point(425, 100)
         Me.UiGroupBox10.Name = "UiGroupBox10"
-        Me.UiGroupBox10.Size = New System.Drawing.Size(394, 320)
+        Me.UiGroupBox10.Size = New System.Drawing.Size(394, 360)
         Me.UiGroupBox10.TabIndex = 221
         Me.UiGroupBox10.Text = "Repesentación en Pastel"
         '
         'Chart8
         '
-        ChartArea4.Area3DStyle.Enable3D = True
-        ChartArea4.Area3DStyle.Inclination = 40
-        ChartArea4.Name = "ChartArea1"
-        Me.Chart8.ChartAreas.Add(ChartArea4)
+        ChartArea15.Area3DStyle.Enable3D = True
+        ChartArea15.Area3DStyle.Inclination = 40
+        ChartArea15.Name = "ChartArea1"
+        Me.Chart8.ChartAreas.Add(ChartArea15)
         Me.Chart8.DataSource = Me.MedicoCitasBindingSource
-        Legend4.Alignment = System.Drawing.StringAlignment.Center
-        Legend4.BackColor = System.Drawing.Color.Transparent
-        Legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom
-        Legend4.Name = "Legend1"
-        Me.Chart8.Legends.Add(Legend4)
+        Legend15.Alignment = System.Drawing.StringAlignment.Center
+        Legend15.BackColor = System.Drawing.Color.Transparent
+        Legend15.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom
+        Legend15.Name = "Legend1"
+        Me.Chart8.Legends.Add(Legend15)
         Me.Chart8.Location = New System.Drawing.Point(6, 20)
         Me.Chart8.Name = "Chart8"
-        Series18.ChartArea = "ChartArea1"
-        Series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
-        Series18.CustomProperties = "PieDrawingStyle=SoftEdge"
-        Series18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-        Series18.IsValueShownAsLabel = True
-        Series18.Legend = "Legend1"
-        Series18.Name = "Series1"
-        Series18.XValueMember = "MEDICO"
-        Series18.YValueMembers = "CantCitas"
-        Me.Chart8.Series.Add(Series18)
-        Me.Chart8.Size = New System.Drawing.Size(382, 295)
+        Series19.ChartArea = "ChartArea1"
+        Series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
+        Series19.CustomProperties = "PieDrawingStyle=SoftEdge, PieLabelStyle=Outside"
+        Series19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
+        Series19.IsValueShownAsLabel = True
+        Series19.Legend = "Legend1"
+        Series19.Name = "Series1"
+        Series19.XValueMember = "MEDICO"
+        Series19.YValueMembers = "CantCitas"
+        Series19.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.[Double]
+        Me.Chart8.Series.Add(Series19)
+        Me.Chart8.Size = New System.Drawing.Size(382, 335)
         Me.Chart8.TabIndex = 0
         Me.Chart8.Text = "Chart8"
+        Title12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
+        Title12.Name = "Title1"
+        Title12.Text = "Media de Desempeño por Días Trabajados"
+        Title13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
+        Title13.Name = "Title2"
+        Title13.Text = "(MD - DT)"
+        Title13.ToolTip = "Media de Desempeño - Días Trabajados"
+        Me.Chart8.Titles.Add(Title12)
+        Me.Chart8.Titles.Add(Title13)
+        '
+        'MedicoCitasBindingSource
+        '
+        Me.MedicoCitasBindingSource.DataMember = "MedicoCitas"
+        Me.MedicoCitasBindingSource.DataSource = Me.CM2DataSet
         '
         'UiGroupBox9
         '
         Me.UiGroupBox9.BackColor = System.Drawing.Color.Transparent
         Me.UiGroupBox9.Controls.Add(Me.Chart4)
         Me.UiGroupBox9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UiGroupBox9.Location = New System.Drawing.Point(20, 139)
+        Me.UiGroupBox9.Location = New System.Drawing.Point(20, 100)
         Me.UiGroupBox9.Name = "UiGroupBox9"
-        Me.UiGroupBox9.Size = New System.Drawing.Size(394, 320)
+        Me.UiGroupBox9.Size = New System.Drawing.Size(394, 360)
         Me.UiGroupBox9.TabIndex = 220
         Me.UiGroupBox9.Text = "Representación en Columna"
         '
         'Chart4
         '
-        ChartArea5.AxisX.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
-        ChartArea5.AxisY.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
-        ChartArea5.Name = "ChartArea1"
-        ChartArea5.Position.Auto = False
-        ChartArea5.Position.Height = 86.5163!
-        ChartArea5.Position.Width = 94.0!
-        ChartArea5.Position.X = 3.0!
-        ChartArea5.Position.Y = 3.0!
-        Me.Chart4.ChartAreas.Add(ChartArea5)
+        ChartArea16.AxisX.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
+        ChartArea16.AxisY.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
+        ChartArea16.Name = "ChartArea1"
+        ChartArea16.Position.Auto = False
+        ChartArea16.Position.Height = 85.0!
+        ChartArea16.Position.Width = 94.0!
+        ChartArea16.Position.X = 3.0!
+        ChartArea16.Position.Y = 7.0!
+        Me.Chart4.ChartAreas.Add(ChartArea16)
         Me.Chart4.DataSource = Me.MedicoCitasBindingSource
-        Legend5.IsTextAutoFit = False
-        Legend5.Name = "Legend1"
-        Legend5.Position.Auto = False
-        Legend5.Position.Height = 8.026756!
-        Legend5.Position.Width = 24.57627!
-        Legend5.Position.X = 10.42373!
-        Legend5.Position.Y = 90.4837!
-        Me.Chart4.Legends.Add(Legend5)
-        Me.Chart4.Location = New System.Drawing.Point(6, 19)
+        Legend16.IsTextAutoFit = False
+        Legend16.Name = "Legend1"
+        Legend16.Position.Auto = False
+        Legend16.Position.Height = 8.026756!
+        Legend16.Position.Width = 24.57627!
+        Legend16.Position.X = 10.42373!
+        Legend16.Position.Y = 90.4837!
+        Me.Chart4.Legends.Add(Legend16)
+        Me.Chart4.Location = New System.Drawing.Point(6, 20)
         Me.Chart4.Name = "Chart4"
-        Series19.ChartArea = "ChartArea1"
-        Series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar
-        Series19.CustomProperties = "DrawingStyle=Cylinder"
-        Series19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-        Series19.IsValueShownAsLabel = True
-        Series19.Legend = "Legend1"
-        Series19.LegendText = "Medico"
-        Series19.Name = "Series1"
-        Series19.XValueMember = "MEDICO"
-        Series19.YValueMembers = "CantCitas"
-        Me.Chart4.Series.Add(Series19)
-        Me.Chart4.Size = New System.Drawing.Size(382, 295)
+        Series20.ChartArea = "ChartArea1"
+        Series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar
+        Series20.CustomProperties = "DrawingStyle=Cylinder"
+        Series20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
+        Series20.IsValueShownAsLabel = True
+        Series20.Legend = "Legend1"
+        Series20.LegendText = "Medico"
+        Series20.Name = "Series1"
+        Series20.XValueMember = "MEDICO"
+        Series20.YValueMembers = "CantCitas"
+        Me.Chart4.Series.Add(Series20)
+        Me.Chart4.Size = New System.Drawing.Size(382, 335)
         Me.Chart4.TabIndex = 2
         Me.Chart4.Text = "Chart4"
+        Title14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
+        Title14.Name = "Title1"
+        Title14.Text = "Citas Diarias Atendidas por Médicos"
+        Me.Chart4.Titles.Add(Title14)
         '
         'UiGroupBox6
         '
@@ -1116,25 +1208,25 @@ Partial Class Form_DashBoard
         'DataGridView3
         '
         Me.DataGridView3.AutoGenerateColumns = False
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle37.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle37
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FECHADataGridViewTextBoxColumn, Me.MEDICODataGridViewTextBoxColumn1, Me.ESPECIALIDADDataGridViewTextBoxColumn1, Me.CantCitasDataGridViewTextBoxColumn})
         Me.DataGridView3.DataSource = Me.MedicoCitasBindingSource
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView3.DefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle39.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView3.DefaultCellStyle = DataGridViewCellStyle39
         Me.DataGridView3.Location = New System.Drawing.Point(0, 93)
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.ReadOnly = True
@@ -1142,103 +1234,166 @@ Partial Class Form_DashBoard
         Me.DataGridView3.TabIndex = 3
         Me.DataGridView3.Visible = False
         '
-        'Label25
+        'FECHADataGridViewTextBoxColumn
         '
-        Me.Label25.AutoSize = True
-        Me.Label25.BackColor = System.Drawing.Color.Transparent
-        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(277, 111)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(252, 17)
-        Me.Label25.TabIndex = 223
-        Me.Label25.Text = "Citas Mensuales por Especialidad"
+        Me.FECHADataGridViewTextBoxColumn.DataPropertyName = "FECHA"
+        Me.FECHADataGridViewTextBoxColumn.HeaderText = "FECHA"
+        Me.FECHADataGridViewTextBoxColumn.Name = "FECHADataGridViewTextBoxColumn"
+        Me.FECHADataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'MEDICODataGridViewTextBoxColumn1
+        '
+        Me.MEDICODataGridViewTextBoxColumn1.DataPropertyName = "MEDICO"
+        Me.MEDICODataGridViewTextBoxColumn1.HeaderText = "MÉDICO"
+        Me.MEDICODataGridViewTextBoxColumn1.Name = "MEDICODataGridViewTextBoxColumn1"
+        Me.MEDICODataGridViewTextBoxColumn1.ReadOnly = True
+        Me.MEDICODataGridViewTextBoxColumn1.Width = 270
+        '
+        'ESPECIALIDADDataGridViewTextBoxColumn1
+        '
+        Me.ESPECIALIDADDataGridViewTextBoxColumn1.DataPropertyName = "ESPECIALIDAD"
+        Me.ESPECIALIDADDataGridViewTextBoxColumn1.HeaderText = "ESPECIALIDAD"
+        Me.ESPECIALIDADDataGridViewTextBoxColumn1.Name = "ESPECIALIDADDataGridViewTextBoxColumn1"
+        Me.ESPECIALIDADDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.ESPECIALIDADDataGridViewTextBoxColumn1.Width = 265
+        '
+        'CantCitasDataGridViewTextBoxColumn
+        '
+        Me.CantCitasDataGridViewTextBoxColumn.DataPropertyName = "CantCitas"
+        DataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.CantCitasDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle38
+        Me.CantCitasDataGridViewTextBoxColumn.HeaderText = "CANTIDAD DE CITAS"
+        Me.CantCitasDataGridViewTextBoxColumn.Name = "CantCitasDataGridViewTextBoxColumn"
+        Me.CantCitasDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CantCitasDataGridViewTextBoxColumn.Width = 140
+        '
+        'UiTabPage4
+        '
+        Me.UiTabPage4.Controls.Add(Me.UiGroupBox12)
+        Me.UiTabPage4.Controls.Add(Me.UiGroupBox11)
+        Me.UiTabPage4.Controls.Add(Me.Label21)
+        Me.UiTabPage4.Controls.Add(Me.DataGridView4)
+        Me.UiTabPage4.Controls.Add(Me.UiGroupBox1)
+        Me.UiTabPage4.Location = New System.Drawing.Point(1, 21)
+        Me.UiTabPage4.Name = "UiTabPage4"
+        Me.UiTabPage4.Size = New System.Drawing.Size(836, 466)
+        Me.UiTabPage4.TabStop = True
+        Me.UiTabPage4.Text = "Citas por Especialidad/Mes"
         '
         'UiGroupBox12
         '
         Me.UiGroupBox12.BackColor = System.Drawing.Color.Transparent
         Me.UiGroupBox12.Controls.Add(Me.Chart9)
         Me.UiGroupBox12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UiGroupBox12.Location = New System.Drawing.Point(425, 139)
+        Me.UiGroupBox12.Location = New System.Drawing.Point(425, 100)
         Me.UiGroupBox12.Name = "UiGroupBox12"
-        Me.UiGroupBox12.Size = New System.Drawing.Size(394, 320)
+        Me.UiGroupBox12.Size = New System.Drawing.Size(394, 360)
         Me.UiGroupBox12.TabIndex = 221
         Me.UiGroupBox12.Text = "Repesentación en Pastel"
         '
         'Chart9
         '
-        ChartArea6.Area3DStyle.Enable3D = True
-        ChartArea6.Area3DStyle.Inclination = 40
-        ChartArea6.Name = "ChartArea1"
-        Me.Chart9.ChartAreas.Add(ChartArea6)
+        ChartArea17.Area3DStyle.Enable3D = True
+        ChartArea17.Area3DStyle.Inclination = 40
+        ChartArea17.Name = "ChartArea1"
+        Me.Chart9.ChartAreas.Add(ChartArea17)
         Me.Chart9.DataSource = Me.EspecialidadCitasBindingSource
-        Legend6.Alignment = System.Drawing.StringAlignment.Center
-        Legend6.BackColor = System.Drawing.Color.Transparent
-        Legend6.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom
-        Legend6.Name = "Legend1"
-        Me.Chart9.Legends.Add(Legend6)
+        Legend17.Alignment = System.Drawing.StringAlignment.Center
+        Legend17.BackColor = System.Drawing.Color.Transparent
+        Legend17.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom
+        Legend17.Name = "Legend1"
+        Me.Chart9.Legends.Add(Legend17)
         Me.Chart9.Location = New System.Drawing.Point(6, 20)
         Me.Chart9.Name = "Chart9"
-        Series20.ChartArea = "ChartArea1"
-        Series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
-        Series20.CustomProperties = "PieDrawingStyle=SoftEdge"
-        Series20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-        Series20.IsValueShownAsLabel = True
-        Series20.Legend = "Legend1"
-        Series20.Name = "Series1"
-        Series20.XValueMember = "ESPECIALIDAD"
-        Series20.YValueMembers = "CantCitas"
-        Me.Chart9.Series.Add(Series20)
-        Me.Chart9.Size = New System.Drawing.Size(382, 295)
+        Series21.ChartArea = "ChartArea1"
+        Series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
+        Series21.CustomProperties = "PieDrawingStyle=SoftEdge, PieLabelStyle=Outside"
+        Series21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
+        Series21.IsValueShownAsLabel = True
+        Series21.Legend = "Legend1"
+        Series21.Name = "Series1"
+        Series21.XValueMember = "ESPECIALIDAD"
+        Series21.YValueMembers = "CantCitas"
+        Me.Chart9.Series.Add(Series21)
+        Me.Chart9.Size = New System.Drawing.Size(382, 335)
         Me.Chart9.TabIndex = 0
         Me.Chart9.Text = "Chart9"
+        Title15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
+        Title15.Name = "Title1"
+        Title15.Position.Auto = False
+        Title15.Position.Height = 4.013847!
+        Title15.Position.Width = 94.0!
+        Title15.Position.X = 3.0!
+        Title15.Position.Y = 1.0!
+        Title15.Text = "Media Mensual de Citas por Especialidad"
+        Title16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
+        Title16.Name = "Title2"
+        Title16.Position.Auto = False
+        Title16.Position.Height = 4.013847!
+        Title16.Position.Width = 94.0!
+        Title16.Position.X = 3.0!
+        Title16.Position.Y = 6.0!
+        Title16.Text = "(ME - CM)"
+        Title16.ToolTip = "Media de Especialidad - Cantidad de Meses"
+        Me.Chart9.Titles.Add(Title15)
+        Me.Chart9.Titles.Add(Title16)
+        '
+        'EspecialidadCitasBindingSource
+        '
+        Me.EspecialidadCitasBindingSource.DataMember = "EspecialidadCitas"
+        Me.EspecialidadCitasBindingSource.DataSource = Me.CM2DataSet
         '
         'UiGroupBox11
         '
         Me.UiGroupBox11.BackColor = System.Drawing.Color.Transparent
         Me.UiGroupBox11.Controls.Add(Me.Chart5)
         Me.UiGroupBox11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UiGroupBox11.Location = New System.Drawing.Point(20, 139)
+        Me.UiGroupBox11.Location = New System.Drawing.Point(20, 100)
         Me.UiGroupBox11.Name = "UiGroupBox11"
-        Me.UiGroupBox11.Size = New System.Drawing.Size(394, 320)
+        Me.UiGroupBox11.Size = New System.Drawing.Size(394, 360)
         Me.UiGroupBox11.TabIndex = 220
         Me.UiGroupBox11.Text = "Representación en Columna"
         '
         'Chart5
         '
-        ChartArea7.AxisX.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
-        ChartArea7.AxisY.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
-        ChartArea7.Name = "ChartArea1"
-        ChartArea7.Position.Auto = False
-        ChartArea7.Position.Height = 87.13653!
-        ChartArea7.Position.Width = 94.0!
-        ChartArea7.Position.X = 3.0!
-        ChartArea7.Position.Y = 3.0!
-        Me.Chart5.ChartAreas.Add(ChartArea7)
+        ChartArea18.AxisX.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
+        ChartArea18.AxisY.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
+        ChartArea18.Name = "ChartArea1"
+        ChartArea18.Position.Auto = False
+        ChartArea18.Position.Height = 85.0!
+        ChartArea18.Position.Width = 94.0!
+        ChartArea18.Position.X = 3.0!
+        ChartArea18.Position.Y = 7.0!
+        Me.Chart5.ChartAreas.Add(ChartArea18)
         Me.Chart5.DataSource = Me.EspecialidadCitasBindingSource
-        Legend7.IsTextAutoFit = False
-        Legend7.Name = "Legend1"
-        Legend7.Position.Auto = False
-        Legend7.Position.Height = 6.916427!
-        Legend7.Position.Width = 30.0!
-        Legend7.Position.X = 10.1634!
-        Legend7.Position.Y = 90.0!
-        Me.Chart5.Legends.Add(Legend7)
-        Me.Chart5.Location = New System.Drawing.Point(6, 19)
+        Legend18.IsTextAutoFit = False
+        Legend18.Name = "Legend1"
+        Legend18.Position.Auto = False
+        Legend18.Position.Height = 6.0!
+        Legend18.Position.Width = 30.0!
+        Legend18.Position.X = 10.1634!
+        Legend18.Position.Y = 92.0!
+        Me.Chart5.Legends.Add(Legend18)
+        Me.Chart5.Location = New System.Drawing.Point(6, 20)
         Me.Chart5.Name = "Chart5"
-        Series21.ChartArea = "ChartArea1"
-        Series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar
-        Series21.CustomProperties = "DrawingStyle=Cylinder"
-        Series21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-        Series21.IsValueShownAsLabel = True
-        Series21.Legend = "Legend1"
-        Series21.LegendText = "Especialidad"
-        Series21.Name = "Series1"
-        Series21.XValueMember = "ESPECIALIDAD"
-        Series21.YValueMembers = "CantCitas"
-        Me.Chart5.Series.Add(Series21)
-        Me.Chart5.Size = New System.Drawing.Size(382, 295)
+        Series22.ChartArea = "ChartArea1"
+        Series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar
+        Series22.CustomProperties = "DrawingStyle=Cylinder"
+        Series22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
+        Series22.IsValueShownAsLabel = True
+        Series22.Legend = "Legend1"
+        Series22.LegendText = "Especialidad"
+        Series22.Name = "Series1"
+        Series22.XValueMember = "ESPECIALIDAD"
+        Series22.YValueMembers = "CantCitas"
+        Me.Chart5.Series.Add(Series22)
+        Me.Chart5.Size = New System.Drawing.Size(382, 335)
         Me.Chart5.TabIndex = 2
         Me.Chart5.Text = "Chart5"
+        Title17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
+        Title17.Name = "Title1"
+        Title17.Text = "Total de Citas por Especialidad"
+        Me.Chart5.Titles.Add(Title17)
         '
         'Label21
         '
@@ -1256,39 +1411,65 @@ Partial Class Form_DashBoard
         'DataGridView4
         '
         Me.DataGridView4.AutoGenerateColumns = False
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView4.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle40.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle40.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle40.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle40.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView4.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle40
         Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FECHADataGridViewTextBoxColumn1, Me.ESPECIALIDADDataGridViewTextBoxColumn2, Me.CantCitasDataGridViewTextBoxColumn1})
         Me.DataGridView4.DataSource = Me.EspecialidadCitasBindingSource
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView4.DefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle42.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle42.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle42.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView4.DefaultCellStyle = DataGridViewCellStyle42
         Me.DataGridView4.Location = New System.Drawing.Point(0, 93)
         Me.DataGridView4.Name = "DataGridView4"
         Me.DataGridView4.ReadOnly = True
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView4.RowHeadersDefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle43.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle43.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle43.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView4.RowHeadersDefaultCellStyle = DataGridViewCellStyle43
         Me.DataGridView4.Size = New System.Drawing.Size(836, 372)
         Me.DataGridView4.TabIndex = 1
         Me.DataGridView4.Visible = False
+        '
+        'FECHADataGridViewTextBoxColumn1
+        '
+        Me.FECHADataGridViewTextBoxColumn1.DataPropertyName = "FECHA"
+        Me.FECHADataGridViewTextBoxColumn1.HeaderText = "FECHA"
+        Me.FECHADataGridViewTextBoxColumn1.Name = "FECHADataGridViewTextBoxColumn1"
+        Me.FECHADataGridViewTextBoxColumn1.ReadOnly = True
+        Me.FECHADataGridViewTextBoxColumn1.Width = 150
+        '
+        'ESPECIALIDADDataGridViewTextBoxColumn2
+        '
+        Me.ESPECIALIDADDataGridViewTextBoxColumn2.DataPropertyName = "ESPECIALIDAD"
+        Me.ESPECIALIDADDataGridViewTextBoxColumn2.HeaderText = "ESPECIALIDAD"
+        Me.ESPECIALIDADDataGridViewTextBoxColumn2.Name = "ESPECIALIDADDataGridViewTextBoxColumn2"
+        Me.ESPECIALIDADDataGridViewTextBoxColumn2.ReadOnly = True
+        Me.ESPECIALIDADDataGridViewTextBoxColumn2.Width = 450
+        '
+        'CantCitasDataGridViewTextBoxColumn1
+        '
+        Me.CantCitasDataGridViewTextBoxColumn1.DataPropertyName = "CantCitas"
+        DataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.CantCitasDataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle41
+        Me.CantCitasDataGridViewTextBoxColumn1.HeaderText = "CANTIDAD DE CITAS"
+        Me.CantCitasDataGridViewTextBoxColumn1.Name = "CantCitasDataGridViewTextBoxColumn1"
+        Me.CantCitasDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.CantCitasDataGridViewTextBoxColumn1.Width = 175
         '
         'UiGroupBox1
         '
@@ -1349,7 +1530,6 @@ Partial Class Form_DashBoard
         Me.DateTimePicker5.Name = "DateTimePicker5"
         Me.DateTimePicker5.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker5.TabIndex = 221
-        Me.ToolTip1.SetToolTip(Me.DateTimePicker5, "Seleccione el mes utilizando la fecha fin")
         Me.DateTimePicker5.Value = New Date(2015, 10, 14, 0, 0, 0, 0)
         '
         'Label9
@@ -1370,119 +1550,152 @@ Partial Class Form_DashBoard
         Me.Label10.TabIndex = 219
         Me.Label10.Text = "De"
         '
-        'Label26
+        'UiTabPage5
         '
-        Me.Label26.AutoSize = True
-        Me.Label26.BackColor = System.Drawing.Color.Transparent
-        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(291, 111)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(241, 17)
-        Me.Label26.TabIndex = 224
-        Me.Label26.Text = "Top 10 Tratamientos Mensuales"
+        Me.UiTabPage5.Controls.Add(Me.UiGroupBox14)
+        Me.UiTabPage5.Controls.Add(Me.UiGroupBox13)
+        Me.UiTabPage5.Controls.Add(Me.Label22)
+        Me.UiTabPage5.Controls.Add(Me.DataGridView5)
+        Me.UiTabPage5.Controls.Add(Me.UiGroupBox2)
+        Me.UiTabPage5.Location = New System.Drawing.Point(1, 21)
+        Me.UiTabPage5.Name = "UiTabPage5"
+        Me.UiTabPage5.Size = New System.Drawing.Size(836, 466)
+        Me.UiTabPage5.TabStop = True
+        Me.UiTabPage5.Text = "Top 10 Tratamientos/Mes"
         '
         'UiGroupBox14
         '
         Me.UiGroupBox14.BackColor = System.Drawing.Color.Transparent
+        Me.UiGroupBox14.Controls.Add(Me.Label25)
+        Me.UiGroupBox14.Controls.Add(Me.Label24)
         Me.UiGroupBox14.Controls.Add(Me.Chart10)
         Me.UiGroupBox14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UiGroupBox14.Location = New System.Drawing.Point(425, 139)
+        Me.UiGroupBox14.Location = New System.Drawing.Point(425, 100)
         Me.UiGroupBox14.Name = "UiGroupBox14"
-        Me.UiGroupBox14.Size = New System.Drawing.Size(394, 320)
+        Me.UiGroupBox14.Size = New System.Drawing.Size(394, 360)
         Me.UiGroupBox14.TabIndex = 221
         Me.UiGroupBox14.Text = "Repesentación en Pastel"
         '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(162, 42)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(63, 13)
+        Me.Label25.TabIndex = 2
+        Me.Label25.Text = "(MT - CM)"
+        Me.ToolTip1.SetToolTip(Me.Label25, "Media de Tratamiento - Cantidad de Meses")
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(77, 27)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(239, 13)
+        Me.Label24.TabIndex = 1
+        Me.Label24.Text = " Media Mensual de Citas por Tratamiento"
+        '
         'Chart10
         '
-        ChartArea8.Area3DStyle.Enable3D = True
-        ChartArea8.Area3DStyle.Inclination = 40
-        ChartArea8.BackColor = System.Drawing.Color.Transparent
-        ChartArea8.InnerPlotPosition.Auto = False
-        ChartArea8.InnerPlotPosition.Height = 64.125!
-        ChartArea8.InnerPlotPosition.Width = 52.66535!
-        ChartArea8.InnerPlotPosition.X = 25.66733!
-        ChartArea8.InnerPlotPosition.Y = 35.875!
-        ChartArea8.Name = "ChartArea1"
-        ChartArea8.Position.Auto = False
-        ChartArea8.Position.Height = 80.0!
-        ChartArea8.Position.Width = 80.0!
-        ChartArea8.Position.X = 20.0!
-        ChartArea8.Position.Y = 20.0!
-        Me.Chart10.ChartAreas.Add(ChartArea8)
+        Me.Chart10.BackColor = System.Drawing.Color.Transparent
+        ChartArea19.Area3DStyle.Enable3D = True
+        ChartArea19.Area3DStyle.Inclination = 40
+        ChartArea19.BackColor = System.Drawing.Color.Transparent
+        ChartArea19.InnerPlotPosition.Auto = False
+        ChartArea19.InnerPlotPosition.Height = 57.0!
+        ChartArea19.InnerPlotPosition.Width = 50.0!
+        ChartArea19.InnerPlotPosition.X = 25.0!
+        ChartArea19.InnerPlotPosition.Y = 43.0!
+        ChartArea19.Name = "ChartArea1"
+        ChartArea19.Position.Auto = False
+        ChartArea19.Position.Height = 75.0!
+        ChartArea19.Position.Width = 95.0!
+        ChartArea19.Position.X = 5.0!
+        ChartArea19.Position.Y = 25.0!
+        Me.Chart10.ChartAreas.Add(ChartArea19)
         Me.Chart10.DataSource = Me.Top10_TratamientoBindingSource
-        Legend8.BackColor = System.Drawing.Color.Transparent
-        Legend8.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Left
-        Legend8.Name = "Legend1"
-        Legend8.Position.Auto = False
-        Legend8.Position.Height = 50.0!
-        Legend8.Position.Width = 70.0!
-        Legend8.Position.Y = 2.0!
-        Me.Chart10.Legends.Add(Legend8)
-        Me.Chart10.Location = New System.Drawing.Point(6, 19)
+        Legend19.BackColor = System.Drawing.Color.Transparent
+        Legend19.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
+        Legend19.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.5!)
+        Legend19.IsTextAutoFit = False
+        Legend19.Name = "Legend1"
+        Me.Chart10.Legends.Add(Legend19)
+        Me.Chart10.Location = New System.Drawing.Point(6, 47)
         Me.Chart10.Name = "Chart10"
-        Series22.ChartArea = "ChartArea1"
-        Series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
-        Series22.CustomProperties = "PieDrawingStyle=SoftEdge, PieLabelStyle=Outside"
-        Series22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-        Series22.IsValueShownAsLabel = True
-        Series22.Legend = "Legend1"
-        Series22.Name = "Series1"
-        Series22.XValueMember = "Tratamiento"
-        Series22.YValueMembers = "CantTratamientos"
-        Me.Chart10.Series.Add(Series22)
-        Me.Chart10.Size = New System.Drawing.Size(382, 295)
+        Series23.ChartArea = "ChartArea1"
+        Series23.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
+        Series23.CustomProperties = "PieDrawingStyle=SoftEdge, PieLabelStyle=Outside"
+        Series23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
+        Series23.IsValueShownAsLabel = True
+        Series23.Legend = "Legend1"
+        Series23.Name = "Series1"
+        Series23.XValueMember = "Tratamiento"
+        Series23.YValueMembers = "CantTratamientos"
+        Me.Chart10.Series.Add(Series23)
+        Me.Chart10.Size = New System.Drawing.Size(382, 322)
         Me.Chart10.TabIndex = 0
         Me.Chart10.Text = "Chart10"
+        '
+        'Top10_TratamientoBindingSource
+        '
+        Me.Top10_TratamientoBindingSource.DataMember = "Top10_Tratamiento"
+        Me.Top10_TratamientoBindingSource.DataSource = Me.CM2DataSet
         '
         'UiGroupBox13
         '
         Me.UiGroupBox13.BackColor = System.Drawing.Color.Transparent
         Me.UiGroupBox13.Controls.Add(Me.Chart6)
         Me.UiGroupBox13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UiGroupBox13.Location = New System.Drawing.Point(20, 139)
+        Me.UiGroupBox13.Location = New System.Drawing.Point(20, 100)
         Me.UiGroupBox13.Name = "UiGroupBox13"
-        Me.UiGroupBox13.Size = New System.Drawing.Size(394, 320)
+        Me.UiGroupBox13.Size = New System.Drawing.Size(394, 360)
         Me.UiGroupBox13.TabIndex = 220
         Me.UiGroupBox13.Text = "Representación en Columna"
         '
         'Chart6
         '
-        ChartArea9.AxisX.Interval = 1.0R
-        ChartArea9.AxisX.LabelAutoFitMinFontSize = 7
-        ChartArea9.AxisX.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
-        ChartArea9.AxisY.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
-        ChartArea9.Name = "ChartArea1"
-        ChartArea9.Position.Auto = False
-        ChartArea9.Position.Height = 84.5163!
-        ChartArea9.Position.Width = 97.0!
-        ChartArea9.Position.X = 1.0!
-        ChartArea9.Position.Y = 3.0!
-        Me.Chart6.ChartAreas.Add(ChartArea9)
+        ChartArea20.AxisX.Interval = 1.0R
+        ChartArea20.AxisX.LabelAutoFitMinFontSize = 7
+        ChartArea20.AxisX.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
+        ChartArea20.AxisY.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
+        ChartArea20.Name = "ChartArea1"
+        ChartArea20.Position.Auto = False
+        ChartArea20.Position.Height = 84.5163!
+        ChartArea20.Position.Width = 97.0!
+        ChartArea20.Position.X = 1.0!
+        ChartArea20.Position.Y = 8.0!
+        Me.Chart6.ChartAreas.Add(ChartArea20)
         Me.Chart6.DataSource = Me.Top10_TratamientoBindingSource
-        Legend9.IsTextAutoFit = False
-        Legend9.Name = "Legend1"
-        Legend9.Position.Auto = False
-        Legend9.Position.Height = 8.026756!
-        Legend9.Position.Width = 30.0!
-        Legend9.Position.X = 10.53061!
-        Legend9.Position.Y = 90.4837!
-        Me.Chart6.Legends.Add(Legend9)
-        Me.Chart6.Location = New System.Drawing.Point(6, 19)
+        Legend20.IsTextAutoFit = False
+        Legend20.Name = "Legend1"
+        Legend20.Position.Auto = False
+        Legend20.Position.Height = 8.026756!
+        Legend20.Position.Width = 30.0!
+        Legend20.Position.X = 10.53061!
+        Legend20.Position.Y = 90.4837!
+        Me.Chart6.Legends.Add(Legend20)
+        Me.Chart6.Location = New System.Drawing.Point(6, 20)
         Me.Chart6.Name = "Chart6"
-        Series23.ChartArea = "ChartArea1"
-        Series23.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar
-        Series23.CustomProperties = "DrawingStyle=Cylinder"
-        Series23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-        Series23.IsValueShownAsLabel = True
-        Series23.Legend = "Legend1"
-        Series23.LegendText = "Tratamientos"
-        Series23.Name = "Series1"
-        Series23.XValueMember = "Tratamiento"
-        Series23.YValueMembers = "CantTratamientos"
-        Me.Chart6.Series.Add(Series23)
-        Me.Chart6.Size = New System.Drawing.Size(382, 295)
+        Series24.ChartArea = "ChartArea1"
+        Series24.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar
+        Series24.CustomProperties = "DrawingStyle=Cylinder"
+        Series24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
+        Series24.IsValueShownAsLabel = True
+        Series24.Legend = "Legend1"
+        Series24.LegendText = "Tratamientos"
+        Series24.Name = "Series1"
+        Series24.XValueMember = "Tratamiento"
+        Series24.YValueMembers = "CantTratamientos"
+        Me.Chart6.Series.Add(Series24)
+        Me.Chart6.Size = New System.Drawing.Size(382, 335)
         Me.Chart6.TabIndex = 3
         Me.Chart6.Text = "Chart6"
+        Title18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
+        Title18.Name = "Title1"
+        Title18.Text = "Top 10 Tratamientos Mensuales"
+        Me.Chart6.Titles.Add(Title18)
         '
         'Label22
         '
@@ -1500,39 +1713,64 @@ Partial Class Form_DashBoard
         'DataGridView5
         '
         Me.DataGridView5.AutoGenerateColumns = False
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView5.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle44.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle44.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle44.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle44.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView5.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle44
         Me.DataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView5.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FECHADataGridViewTextBoxColumn2, Me.TratamientoDataGridViewTextBoxColumn, Me.CantTratamientosDataGridViewTextBoxColumn})
         Me.DataGridView5.DataSource = Me.Top10_TratamientoBindingSource
-        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView5.DefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle46.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle46.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle46.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle46.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle46.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView5.DefaultCellStyle = DataGridViewCellStyle46
         Me.DataGridView5.Location = New System.Drawing.Point(0, 93)
         Me.DataGridView5.Name = "DataGridView5"
         Me.DataGridView5.ReadOnly = True
-        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView5.RowHeadersDefaultCellStyle = DataGridViewCellStyle21
+        DataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle47.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle47.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle47.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView5.RowHeadersDefaultCellStyle = DataGridViewCellStyle47
         Me.DataGridView5.Size = New System.Drawing.Size(836, 372)
         Me.DataGridView5.TabIndex = 2
         Me.DataGridView5.Visible = False
+        '
+        'FECHADataGridViewTextBoxColumn2
+        '
+        Me.FECHADataGridViewTextBoxColumn2.DataPropertyName = "FECHA"
+        Me.FECHADataGridViewTextBoxColumn2.HeaderText = "FECHA"
+        Me.FECHADataGridViewTextBoxColumn2.Name = "FECHADataGridViewTextBoxColumn2"
+        Me.FECHADataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'TratamientoDataGridViewTextBoxColumn
+        '
+        Me.TratamientoDataGridViewTextBoxColumn.DataPropertyName = "Tratamiento"
+        Me.TratamientoDataGridViewTextBoxColumn.HeaderText = "TRATAMIENTO"
+        Me.TratamientoDataGridViewTextBoxColumn.Name = "TratamientoDataGridViewTextBoxColumn"
+        Me.TratamientoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.TratamientoDataGridViewTextBoxColumn.Width = 480
+        '
+        'CantTratamientosDataGridViewTextBoxColumn
+        '
+        Me.CantTratamientosDataGridViewTextBoxColumn.DataPropertyName = "CantTratamientos"
+        DataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.CantTratamientosDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle45
+        Me.CantTratamientosDataGridViewTextBoxColumn.HeaderText = "CANTIDAD DE TRATAMIENTOS"
+        Me.CantTratamientosDataGridViewTextBoxColumn.Name = "CantTratamientosDataGridViewTextBoxColumn"
+        Me.CantTratamientosDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CantTratamientosDataGridViewTextBoxColumn.Width = 195
         '
         'UiGroupBox2
         '
@@ -1614,6 +1852,20 @@ Partial Class Form_DashBoard
         Me.Label13.TabIndex = 219
         Me.Label13.Text = "De"
         '
+        'UiTabPage6
+        '
+        Me.UiTabPage6.Controls.Add(Me.Label27)
+        Me.UiTabPage6.Controls.Add(Me.UiGroupBox16)
+        Me.UiTabPage6.Controls.Add(Me.UiGroupBox15)
+        Me.UiTabPage6.Controls.Add(Me.Label23)
+        Me.UiTabPage6.Controls.Add(Me.DataGridView6)
+        Me.UiTabPage6.Controls.Add(Me.UiGroupBox3)
+        Me.UiTabPage6.Location = New System.Drawing.Point(1, 21)
+        Me.UiTabPage6.Name = "UiTabPage6"
+        Me.UiTabPage6.Size = New System.Drawing.Size(836, 466)
+        Me.UiTabPage6.TabStop = True
+        Me.UiTabPage6.Text = "Estadistica Dental"
+        '
         'Label27
         '
         Me.Label27.AutoSize = True
@@ -1638,57 +1890,64 @@ Partial Class Form_DashBoard
         '
         'Chart11
         '
-        ChartArea10.AxisX.Interval = 1.0R
-        ChartArea10.AxisX.IsLabelAutoFit = False
-        ChartArea10.AxisX.LabelStyle.Angle = -45
-        ChartArea10.AxisX.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
-        ChartArea10.AxisY.IsLabelAutoFit = False
-        ChartArea10.AxisY.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
-        ChartArea10.Name = "ChartArea1"
-        ChartArea10.Position.Auto = False
-        ChartArea10.Position.Height = 88.0!
-        ChartArea10.Position.Width = 94.0!
-        ChartArea10.Position.X = 3.0!
-        ChartArea10.Position.Y = 1.0!
-        Me.Chart11.ChartAreas.Add(ChartArea10)
+        ChartArea21.AxisX.Interval = 1.0R
+        ChartArea21.AxisX.IsLabelAutoFit = False
+        ChartArea21.AxisX.LabelStyle.Angle = -45
+        ChartArea21.AxisX.LabelStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        ChartArea21.AxisX.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
+        ChartArea21.AxisY.IsLabelAutoFit = False
+        ChartArea21.AxisY.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
+        ChartArea21.Name = "ChartArea1"
+        ChartArea21.Position.Auto = False
+        ChartArea21.Position.Height = 88.0!
+        ChartArea21.Position.Width = 94.0!
+        ChartArea21.Position.X = 3.0!
+        ChartArea21.Position.Y = 1.0!
+        Me.Chart11.ChartAreas.Add(ChartArea21)
         Me.Chart11.DataSource = Me.EstadistDentalBindingSource
-        Legend10.BackColor = System.Drawing.Color.Transparent
-        Legend10.IsTextAutoFit = False
-        Legend10.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row
-        Legend10.Name = "Legend1"
-        Legend10.Position.Auto = False
-        Legend10.Position.Height = 13.0!
-        Legend10.Position.Width = 60.0!
-        Legend10.Position.X = 10.0!
-        Legend10.Position.Y = 87.0!
-        Me.Chart11.Legends.Add(Legend10)
+        Legend21.BackColor = System.Drawing.Color.Transparent
+        Legend21.IsTextAutoFit = False
+        Legend21.LegendItemOrder = System.Windows.Forms.DataVisualization.Charting.LegendItemOrder.ReversedSeriesOrder
+        Legend21.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row
+        Legend21.Name = "Legend1"
+        Legend21.Position.Auto = False
+        Legend21.Position.Height = 13.0!
+        Legend21.Position.Width = 60.0!
+        Legend21.Position.X = 10.0!
+        Legend21.Position.Y = 87.0!
+        Me.Chart11.Legends.Add(Legend21)
         Me.Chart11.Location = New System.Drawing.Point(6, 19)
         Me.Chart11.Name = "Chart11"
-        Series24.ChartArea = "ChartArea1"
-        Series24.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn
-        Series24.CustomProperties = "DrawingStyle=Cylinder"
-        Series24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-        Series24.IsValueShownAsLabel = True
-        Series24.Legend = "Legend1"
-        Series24.LegendText = "Presupuestado"
-        Series24.Name = "Series1"
-        Series24.XValueMember = "FECHA"
-        Series24.YValueMembers = "Presupuestado"
         Series25.ChartArea = "ChartArea1"
         Series25.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn
-        Series25.CustomProperties = "DrawingStyle=Cylinder, LabelStyle=Top"
+        Series25.CustomProperties = "DrawingStyle=Cylinder"
         Series25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
         Series25.IsValueShownAsLabel = True
         Series25.Legend = "Legend1"
-        Series25.LegendText = "Aceptado"
-        Series25.Name = "Series2"
+        Series25.LegendText = "Presupuestado"
+        Series25.Name = "Series1"
         Series25.XValueMember = "FECHA"
-        Series25.YValueMembers = "Aceptado"
-        Me.Chart11.Series.Add(Series24)
+        Series25.YValueMembers = "Presupuestado"
+        Series26.ChartArea = "ChartArea1"
+        Series26.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn
+        Series26.CustomProperties = "DrawingStyle=Cylinder, LabelStyle=Top"
+        Series26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
+        Series26.IsValueShownAsLabel = True
+        Series26.Legend = "Legend1"
+        Series26.LegendText = "Aceptado"
+        Series26.Name = "Series2"
+        Series26.XValueMember = "FECHA"
+        Series26.YValueMembers = "Aceptado"
         Me.Chart11.Series.Add(Series25)
+        Me.Chart11.Series.Add(Series26)
         Me.Chart11.Size = New System.Drawing.Size(382, 295)
         Me.Chart11.TabIndex = 0
         Me.Chart11.Text = "Chart11"
+        '
+        'EstadistDentalBindingSource
+        '
+        Me.EstadistDentalBindingSource.DataMember = "EstadistDental"
+        Me.EstadistDentalBindingSource.DataSource = Me.CM2DataSet
         '
         'UiGroupBox15
         '
@@ -1703,53 +1962,53 @@ Partial Class Form_DashBoard
         '
         'Chart1
         '
-        ChartArea11.AxisX.Interval = 1.0R
-        ChartArea11.AxisX.IsLabelAutoFit = False
-        ChartArea11.AxisX.LabelStyle.Angle = -45
-        ChartArea11.AxisX.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
-        ChartArea11.AxisY.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
-        ChartArea11.BorderColor = System.Drawing.Color.Gray
-        ChartArea11.Name = "ChartArea1"
-        ChartArea11.Position.Auto = False
-        ChartArea11.Position.Height = 88.0!
-        ChartArea11.Position.Width = 94.0!
-        ChartArea11.Position.X = 3.0!
-        ChartArea11.Position.Y = 1.0!
-        Me.Chart1.ChartAreas.Add(ChartArea11)
+        ChartArea22.AxisX.Interval = 1.0R
+        ChartArea22.AxisX.IsLabelAutoFit = False
+        ChartArea22.AxisX.LabelStyle.Angle = -45
+        ChartArea22.AxisX.LabelStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        ChartArea22.AxisX.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
+        ChartArea22.AxisY.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke
+        ChartArea22.BorderColor = System.Drawing.Color.Gray
+        ChartArea22.Name = "ChartArea1"
+        ChartArea22.Position.Auto = False
+        ChartArea22.Position.Height = 88.0!
+        ChartArea22.Position.Width = 98.0!
+        ChartArea22.Position.Y = 1.0!
+        Me.Chart1.ChartAreas.Add(ChartArea22)
         Me.Chart1.DataSource = Me.Grafic2BindingSource
-        Legend11.BackColor = System.Drawing.Color.Transparent
-        Legend11.IsTextAutoFit = False
-        Legend11.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row
-        Legend11.Name = "Legend1"
-        Legend11.Position.Auto = False
-        Legend11.Position.Height = 13.0!
-        Legend11.Position.Width = 60.0!
-        Legend11.Position.X = 10.17596!
-        Legend11.Position.Y = 86.4837!
-        Me.Chart1.Legends.Add(Legend11)
+        Legend22.BackColor = System.Drawing.Color.Transparent
+        Legend22.IsTextAutoFit = False
+        Legend22.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row
+        Legend22.Name = "Legend1"
+        Legend22.Position.Auto = False
+        Legend22.Position.Height = 13.0!
+        Legend22.Position.Width = 60.0!
+        Legend22.Position.X = 10.17596!
+        Legend22.Position.Y = 86.4837!
+        Me.Chart1.Legends.Add(Legend22)
         Me.Chart1.Location = New System.Drawing.Point(6, 19)
         Me.Chart1.Name = "Chart1"
-        Series26.ChartArea = "ChartArea1"
-        Series26.CustomProperties = "DrawingStyle=Cylinder"
-        Series26.EmptyPointStyle.CustomProperties = "DrawingStyle=Cylinder"
-        Series26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-        Series26.IsValueShownAsLabel = True
-        Series26.Legend = "Legend1"
-        Series26.LegendText = "Presupuestado"
-        Series26.Name = "Series1"
-        Series26.XValueMember = "FECHA"
-        Series26.YValueMembers = "Presupuestado"
         Series27.ChartArea = "ChartArea1"
         Series27.CustomProperties = "DrawingStyle=Cylinder"
+        Series27.EmptyPointStyle.CustomProperties = "DrawingStyle=Cylinder"
         Series27.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
         Series27.IsValueShownAsLabel = True
         Series27.Legend = "Legend1"
-        Series27.LegendText = "Aceptado"
-        Series27.Name = "Series2"
+        Series27.LegendText = "Presupuestado"
+        Series27.Name = "Series1"
         Series27.XValueMember = "FECHA"
-        Series27.YValueMembers = "Aceptado"
-        Me.Chart1.Series.Add(Series26)
+        Series27.YValueMembers = "Presupuestado"
+        Series28.ChartArea = "ChartArea1"
+        Series28.CustomProperties = "DrawingStyle=Cylinder"
+        Series28.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
+        Series28.IsValueShownAsLabel = True
+        Series28.Legend = "Legend1"
+        Series28.LegendText = "Aceptado"
+        Series28.Name = "Series2"
+        Series28.XValueMember = "FECHA"
+        Series28.YValueMembers = "Aceptado"
         Me.Chart1.Series.Add(Series27)
+        Me.Chart1.Series.Add(Series28)
         Me.Chart1.Size = New System.Drawing.Size(382, 295)
         Me.Chart1.TabIndex = 8
         Me.Chart1.Text = "Chart1"
@@ -1770,39 +2029,67 @@ Partial Class Form_DashBoard
         'DataGridView6
         '
         Me.DataGridView6.AutoGenerateColumns = False
-        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView6.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle22
+        DataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle48.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle48.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle48.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle48.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle48.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView6.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle48
         Me.DataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView6.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FECHADataGridViewTextBoxColumn3, Me.PresupuestadoDataGridViewTextBoxColumn, Me.AceptadoDataGridViewTextBoxColumn})
         Me.DataGridView6.DataSource = Me.EstadistDentalBindingSource
-        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView6.DefaultCellStyle = DataGridViewCellStyle25
+        DataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle51.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle51.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle51.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle51.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle51.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView6.DefaultCellStyle = DataGridViewCellStyle51
         Me.DataGridView6.Location = New System.Drawing.Point(0, 93)
         Me.DataGridView6.Name = "DataGridView6"
         Me.DataGridView6.ReadOnly = True
-        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView6.RowHeadersDefaultCellStyle = DataGridViewCellStyle26
+        DataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle52.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle52.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle52.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle52.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle52.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView6.RowHeadersDefaultCellStyle = DataGridViewCellStyle52
         Me.DataGridView6.Size = New System.Drawing.Size(836, 372)
         Me.DataGridView6.TabIndex = 7
         Me.DataGridView6.Visible = False
+        '
+        'FECHADataGridViewTextBoxColumn3
+        '
+        Me.FECHADataGridViewTextBoxColumn3.DataPropertyName = "FECHA"
+        Me.FECHADataGridViewTextBoxColumn3.HeaderText = "FECHA"
+        Me.FECHADataGridViewTextBoxColumn3.Name = "FECHADataGridViewTextBoxColumn3"
+        Me.FECHADataGridViewTextBoxColumn3.ReadOnly = True
+        Me.FECHADataGridViewTextBoxColumn3.Width = 155
+        '
+        'PresupuestadoDataGridViewTextBoxColumn
+        '
+        Me.PresupuestadoDataGridViewTextBoxColumn.DataPropertyName = "Presupuestado"
+        DataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.PresupuestadoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle49
+        Me.PresupuestadoDataGridViewTextBoxColumn.HeaderText = "TRATAMIENTOS PRESUPUESTADOS"
+        Me.PresupuestadoDataGridViewTextBoxColumn.Name = "PresupuestadoDataGridViewTextBoxColumn"
+        Me.PresupuestadoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PresupuestadoDataGridViewTextBoxColumn.Width = 310
+        '
+        'AceptadoDataGridViewTextBoxColumn
+        '
+        Me.AceptadoDataGridViewTextBoxColumn.DataPropertyName = "Aceptado"
+        DataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.AceptadoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle50
+        Me.AceptadoDataGridViewTextBoxColumn.HeaderText = "TRATAMIENTOS ACEPTADOS"
+        Me.AceptadoDataGridViewTextBoxColumn.Name = "AceptadoDataGridViewTextBoxColumn"
+        Me.AceptadoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.AceptadoDataGridViewTextBoxColumn.Width = 310
         '
         'UiGroupBox3
         '
@@ -1896,6 +2183,11 @@ Partial Class Form_DashBoard
         Me.Label16.TabIndex = 219
         Me.Label16.Text = "De"
         '
+        'Grafic1BindingSource
+        '
+        Me.Grafic1BindingSource.DataMember = "Grafic1"
+        Me.Grafic1BindingSource.DataSource = Me.CM2DataSet
+        '
         'CLINICAINCEMEBindingSource
         '
         Me.CLINICAINCEMEBindingSource.DataMember = "CLINICAINCEME"
@@ -1926,305 +2218,6 @@ Partial Class Form_DashBoard
         Me.BVerTabla.Text = "Tabla"
         Me.BVerTabla.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BVerTabla.UseVisualStyleBackColor = True
-        '
-        'UiTabPage1
-        '
-        Me.UiTabPage1.Controls.Add(Me.Label17)
-        Me.UiTabPage1.Controls.Add(Me.UiGroupBox8)
-        Me.UiTabPage1.Controls.Add(Me.UiGroupBox7)
-        Me.UiTabPage1.Controls.Add(Me.UiGroupBox4)
-        Me.UiTabPage1.Controls.Add(Me.Label18)
-        Me.UiTabPage1.Controls.Add(Me.DataGridView1)
-        Me.UiTabPage1.Location = New System.Drawing.Point(1, 21)
-        Me.UiTabPage1.Name = "UiTabPage1"
-        Me.UiTabPage1.Size = New System.Drawing.Size(836, 466)
-        Me.UiTabPage1.TabStop = True
-        Me.UiTabPage1.Text = "Citas del día por estado"
-        '
-        'UiTabPage2
-        '
-        Me.UiTabPage2.Controls.Add(Me.UiGroupBox5)
-        Me.UiTabPage2.Controls.Add(Me.Label19)
-        Me.UiTabPage2.Controls.Add(Me.Chart2)
-        Me.UiTabPage2.Controls.Add(Me.DataGridView2)
-        Me.UiTabPage2.Location = New System.Drawing.Point(1, 21)
-        Me.UiTabPage2.Name = "UiTabPage2"
-        Me.UiTabPage2.Size = New System.Drawing.Size(836, 466)
-        Me.UiTabPage2.TabStop = True
-        Me.UiTabPage2.Text = "Nuevos Pacientes/Mes"
-        '
-        'UiTabPage3
-        '
-        Me.UiTabPage3.Controls.Add(Me.Label24)
-        Me.UiTabPage3.Controls.Add(Me.UiGroupBox10)
-        Me.UiTabPage3.Controls.Add(Me.UiGroupBox9)
-        Me.UiTabPage3.Controls.Add(Me.UiGroupBox6)
-        Me.UiTabPage3.Controls.Add(Me.Label20)
-        Me.UiTabPage3.Controls.Add(Me.DataGridView3)
-        Me.UiTabPage3.Location = New System.Drawing.Point(1, 21)
-        Me.UiTabPage3.Name = "UiTabPage3"
-        Me.UiTabPage3.Size = New System.Drawing.Size(836, 466)
-        Me.UiTabPage3.TabStop = True
-        Me.UiTabPage3.Text = "Citas atendidas por Médico/Día"
-        '
-        'UiTabPage4
-        '
-        Me.UiTabPage4.Controls.Add(Me.Label25)
-        Me.UiTabPage4.Controls.Add(Me.UiGroupBox12)
-        Me.UiTabPage4.Controls.Add(Me.UiGroupBox11)
-        Me.UiTabPage4.Controls.Add(Me.Label21)
-        Me.UiTabPage4.Controls.Add(Me.DataGridView4)
-        Me.UiTabPage4.Controls.Add(Me.UiGroupBox1)
-        Me.UiTabPage4.Location = New System.Drawing.Point(1, 21)
-        Me.UiTabPage4.Name = "UiTabPage4"
-        Me.UiTabPage4.Size = New System.Drawing.Size(836, 466)
-        Me.UiTabPage4.TabStop = True
-        Me.UiTabPage4.Text = "Citas por Especialidad/Mes"
-        '
-        'UiTabPage5
-        '
-        Me.UiTabPage5.Controls.Add(Me.Label26)
-        Me.UiTabPage5.Controls.Add(Me.UiGroupBox14)
-        Me.UiTabPage5.Controls.Add(Me.UiGroupBox13)
-        Me.UiTabPage5.Controls.Add(Me.Label22)
-        Me.UiTabPage5.Controls.Add(Me.DataGridView5)
-        Me.UiTabPage5.Controls.Add(Me.UiGroupBox2)
-        Me.UiTabPage5.Location = New System.Drawing.Point(1, 21)
-        Me.UiTabPage5.Name = "UiTabPage5"
-        Me.UiTabPage5.Size = New System.Drawing.Size(836, 466)
-        Me.UiTabPage5.TabStop = True
-        Me.UiTabPage5.Text = "Top 10 Tratamientos/Mes"
-        '
-        'UiTabPage6
-        '
-        Me.UiTabPage6.Controls.Add(Me.Label27)
-        Me.UiTabPage6.Controls.Add(Me.UiGroupBox16)
-        Me.UiTabPage6.Controls.Add(Me.UiGroupBox15)
-        Me.UiTabPage6.Controls.Add(Me.Label23)
-        Me.UiTabPage6.Controls.Add(Me.DataGridView6)
-        Me.UiTabPage6.Controls.Add(Me.UiGroupBox3)
-        Me.UiTabPage6.Location = New System.Drawing.Point(1, 21)
-        Me.UiTabPage6.Name = "UiTabPage6"
-        Me.UiTabPage6.Size = New System.Drawing.Size(836, 466)
-        Me.UiTabPage6.TabStop = True
-        Me.UiTabPage6.Text = "Estadistica Dental"
-        '
-        'Grafic1BindingSource
-        '
-        Me.Grafic1BindingSource.DataMember = "Grafic1"
-        Me.Grafic1BindingSource.DataSource = Me.CM2DataSet
-        '
-        'CM2DataSet
-        '
-        Me.CM2DataSet.DataSetName = "CM2DataSet"
-        Me.CM2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'CitasDiariasBindingSource
-        '
-        Me.CitasDiariasBindingSource.DataMember = "CitasDiarias"
-        Me.CitasDiariasBindingSource.DataSource = Me.CM2DataSet
-        '
-        'Grafic2BindingSource
-        '
-        Me.Grafic2BindingSource.DataMember = "Grafic2"
-        Me.Grafic2BindingSource.DataSource = Me.CM2DataSet
-        '
-        'FECHADataGridViewTextBoxColumn4
-        '
-        Me.FECHADataGridViewTextBoxColumn4.DataPropertyName = "FECHA"
-        Me.FECHADataGridViewTextBoxColumn4.HeaderText = "FECHA  ALTA"
-        Me.FECHADataGridViewTextBoxColumn4.Name = "FECHADataGridViewTextBoxColumn4"
-        Me.FECHADataGridViewTextBoxColumn4.ReadOnly = True
-        '
-        'CPACIENTEDataGridViewTextBoxColumn
-        '
-        Me.CPACIENTEDataGridViewTextBoxColumn.DataPropertyName = "CPACIENTE"
-        Me.CPACIENTEDataGridViewTextBoxColumn.HeaderText = "CPACIENTE"
-        Me.CPACIENTEDataGridViewTextBoxColumn.Name = "CPACIENTEDataGridViewTextBoxColumn"
-        Me.CPACIENTEDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CPACIENTEDataGridViewTextBoxColumn.Visible = False
-        '
-        'NOMBREDataGridViewTextBoxColumn
-        '
-        Me.NOMBREDataGridViewTextBoxColumn.DataPropertyName = "NOMBRE"
-        Me.NOMBREDataGridViewTextBoxColumn.HeaderText = "NOMBRE"
-        Me.NOMBREDataGridViewTextBoxColumn.Name = "NOMBREDataGridViewTextBoxColumn"
-        Me.NOMBREDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NOMBREDataGridViewTextBoxColumn.Width = 120
-        '
-        'APELLIDO1DataGridViewTextBoxColumn
-        '
-        Me.APELLIDO1DataGridViewTextBoxColumn.DataPropertyName = "APELLIDO1"
-        Me.APELLIDO1DataGridViewTextBoxColumn.HeaderText = "APELLIDO1"
-        Me.APELLIDO1DataGridViewTextBoxColumn.Name = "APELLIDO1DataGridViewTextBoxColumn"
-        Me.APELLIDO1DataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'APELLIDO2DataGridViewTextBoxColumn
-        '
-        Me.APELLIDO2DataGridViewTextBoxColumn.DataPropertyName = "APELLIDO2"
-        Me.APELLIDO2DataGridViewTextBoxColumn.HeaderText = "APELLIDO2"
-        Me.APELLIDO2DataGridViewTextBoxColumn.Name = "APELLIDO2DataGridViewTextBoxColumn"
-        Me.APELLIDO2DataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'DNIDataGridViewTextBoxColumn
-        '
-        Me.DNIDataGridViewTextBoxColumn.DataPropertyName = "DNI"
-        Me.DNIDataGridViewTextBoxColumn.HeaderText = "DNI"
-        Me.DNIDataGridViewTextBoxColumn.Name = "DNIDataGridViewTextBoxColumn"
-        Me.DNIDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DNIDataGridViewTextBoxColumn.Width = 70
-        '
-        'TLFNODataGridViewTextBoxColumn
-        '
-        Me.TLFNODataGridViewTextBoxColumn.DataPropertyName = "TLFNO"
-        Me.TLFNODataGridViewTextBoxColumn.HeaderText = "TELÉFONO"
-        Me.TLFNODataGridViewTextBoxColumn.Name = "TLFNODataGridViewTextBoxColumn"
-        Me.TLFNODataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'EMAILDataGridViewTextBoxColumn
-        '
-        Me.EMAILDataGridViewTextBoxColumn.DataPropertyName = "EMAIL"
-        Me.EMAILDataGridViewTextBoxColumn.HeaderText = "EMAIL"
-        Me.EMAILDataGridViewTextBoxColumn.Name = "EMAILDataGridViewTextBoxColumn"
-        Me.EMAILDataGridViewTextBoxColumn.ReadOnly = True
-        Me.EMAILDataGridViewTextBoxColumn.Width = 185
-        '
-        'PacientesAltaBindingSource
-        '
-        Me.PacientesAltaBindingSource.DataMember = "PacientesAlta"
-        Me.PacientesAltaBindingSource.DataSource = Me.CM2DataSet
-        '
-        'MedicoCitasBindingSource
-        '
-        Me.MedicoCitasBindingSource.DataMember = "MedicoCitas"
-        Me.MedicoCitasBindingSource.DataSource = Me.CM2DataSet
-        '
-        'FECHADataGridViewTextBoxColumn
-        '
-        Me.FECHADataGridViewTextBoxColumn.DataPropertyName = "FECHA"
-        Me.FECHADataGridViewTextBoxColumn.HeaderText = "FECHA"
-        Me.FECHADataGridViewTextBoxColumn.Name = "FECHADataGridViewTextBoxColumn"
-        Me.FECHADataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'MEDICODataGridViewTextBoxColumn1
-        '
-        Me.MEDICODataGridViewTextBoxColumn1.DataPropertyName = "MEDICO"
-        Me.MEDICODataGridViewTextBoxColumn1.HeaderText = "MEDICO"
-        Me.MEDICODataGridViewTextBoxColumn1.Name = "MEDICODataGridViewTextBoxColumn1"
-        Me.MEDICODataGridViewTextBoxColumn1.ReadOnly = True
-        Me.MEDICODataGridViewTextBoxColumn1.Width = 270
-        '
-        'ESPECIALIDADDataGridViewTextBoxColumn1
-        '
-        Me.ESPECIALIDADDataGridViewTextBoxColumn1.DataPropertyName = "ESPECIALIDAD"
-        Me.ESPECIALIDADDataGridViewTextBoxColumn1.HeaderText = "ESPECIALIDAD"
-        Me.ESPECIALIDADDataGridViewTextBoxColumn1.Name = "ESPECIALIDADDataGridViewTextBoxColumn1"
-        Me.ESPECIALIDADDataGridViewTextBoxColumn1.ReadOnly = True
-        Me.ESPECIALIDADDataGridViewTextBoxColumn1.Width = 270
-        '
-        'CantCitasDataGridViewTextBoxColumn
-        '
-        Me.CantCitasDataGridViewTextBoxColumn.DataPropertyName = "CantCitas"
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.CantCitasDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle12
-        Me.CantCitasDataGridViewTextBoxColumn.HeaderText = "CANTIDAD DE CITAS"
-        Me.CantCitasDataGridViewTextBoxColumn.Name = "CantCitasDataGridViewTextBoxColumn"
-        Me.CantCitasDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CantCitasDataGridViewTextBoxColumn.Width = 135
-        '
-        'EspecialidadCitasBindingSource
-        '
-        Me.EspecialidadCitasBindingSource.DataMember = "EspecialidadCitas"
-        Me.EspecialidadCitasBindingSource.DataSource = Me.CM2DataSet
-        '
-        'FECHADataGridViewTextBoxColumn1
-        '
-        Me.FECHADataGridViewTextBoxColumn1.DataPropertyName = "FECHA"
-        Me.FECHADataGridViewTextBoxColumn1.HeaderText = "FECHA"
-        Me.FECHADataGridViewTextBoxColumn1.Name = "FECHADataGridViewTextBoxColumn1"
-        Me.FECHADataGridViewTextBoxColumn1.ReadOnly = True
-        Me.FECHADataGridViewTextBoxColumn1.Width = 150
-        '
-        'ESPECIALIDADDataGridViewTextBoxColumn2
-        '
-        Me.ESPECIALIDADDataGridViewTextBoxColumn2.DataPropertyName = "ESPECIALIDAD"
-        Me.ESPECIALIDADDataGridViewTextBoxColumn2.HeaderText = "ESPECIALIDAD"
-        Me.ESPECIALIDADDataGridViewTextBoxColumn2.Name = "ESPECIALIDADDataGridViewTextBoxColumn2"
-        Me.ESPECIALIDADDataGridViewTextBoxColumn2.ReadOnly = True
-        Me.ESPECIALIDADDataGridViewTextBoxColumn2.Width = 450
-        '
-        'CantCitasDataGridViewTextBoxColumn1
-        '
-        Me.CantCitasDataGridViewTextBoxColumn1.DataPropertyName = "CantCitas"
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.CantCitasDataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle15
-        Me.CantCitasDataGridViewTextBoxColumn1.HeaderText = "CANTIDAD DE CITAS"
-        Me.CantCitasDataGridViewTextBoxColumn1.Name = "CantCitasDataGridViewTextBoxColumn1"
-        Me.CantCitasDataGridViewTextBoxColumn1.ReadOnly = True
-        Me.CantCitasDataGridViewTextBoxColumn1.Width = 175
-        '
-        'Top10_TratamientoBindingSource
-        '
-        Me.Top10_TratamientoBindingSource.DataMember = "Top10_Tratamiento"
-        Me.Top10_TratamientoBindingSource.DataSource = Me.CM2DataSet
-        '
-        'FECHADataGridViewTextBoxColumn2
-        '
-        Me.FECHADataGridViewTextBoxColumn2.DataPropertyName = "FECHA"
-        Me.FECHADataGridViewTextBoxColumn2.HeaderText = "FECHA"
-        Me.FECHADataGridViewTextBoxColumn2.Name = "FECHADataGridViewTextBoxColumn2"
-        Me.FECHADataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'TratamientoDataGridViewTextBoxColumn
-        '
-        Me.TratamientoDataGridViewTextBoxColumn.DataPropertyName = "Tratamiento"
-        Me.TratamientoDataGridViewTextBoxColumn.HeaderText = "TRATAMIENTO"
-        Me.TratamientoDataGridViewTextBoxColumn.Name = "TratamientoDataGridViewTextBoxColumn"
-        Me.TratamientoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.TratamientoDataGridViewTextBoxColumn.Width = 480
-        '
-        'CantTratamientosDataGridViewTextBoxColumn
-        '
-        Me.CantTratamientosDataGridViewTextBoxColumn.DataPropertyName = "CantTratamientos"
-        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.CantTratamientosDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle19
-        Me.CantTratamientosDataGridViewTextBoxColumn.HeaderText = "CANTIDAD DE TRATAMIENTOS"
-        Me.CantTratamientosDataGridViewTextBoxColumn.Name = "CantTratamientosDataGridViewTextBoxColumn"
-        Me.CantTratamientosDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CantTratamientosDataGridViewTextBoxColumn.Width = 195
-        '
-        'EstadistDentalBindingSource
-        '
-        Me.EstadistDentalBindingSource.DataMember = "EstadistDental"
-        Me.EstadistDentalBindingSource.DataSource = Me.CM2DataSet
-        '
-        'FECHADataGridViewTextBoxColumn3
-        '
-        Me.FECHADataGridViewTextBoxColumn3.DataPropertyName = "FECHA"
-        Me.FECHADataGridViewTextBoxColumn3.HeaderText = "FECHA"
-        Me.FECHADataGridViewTextBoxColumn3.Name = "FECHADataGridViewTextBoxColumn3"
-        Me.FECHADataGridViewTextBoxColumn3.ReadOnly = True
-        Me.FECHADataGridViewTextBoxColumn3.Width = 155
-        '
-        'PresupuestadoDataGridViewTextBoxColumn
-        '
-        Me.PresupuestadoDataGridViewTextBoxColumn.DataPropertyName = "Presupuestado"
-        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.PresupuestadoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle23
-        Me.PresupuestadoDataGridViewTextBoxColumn.HeaderText = "TRATAMIENTOS PRESUPUESTADOS"
-        Me.PresupuestadoDataGridViewTextBoxColumn.Name = "PresupuestadoDataGridViewTextBoxColumn"
-        Me.PresupuestadoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.PresupuestadoDataGridViewTextBoxColumn.Width = 310
-        '
-        'AceptadoDataGridViewTextBoxColumn
-        '
-        Me.AceptadoDataGridViewTextBoxColumn.DataPropertyName = "Aceptado"
-        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.AceptadoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle24
-        Me.AceptadoDataGridViewTextBoxColumn.HeaderText = "TRATAMIENTOS ACEPTADOS"
-        Me.AceptadoDataGridViewTextBoxColumn.Name = "AceptadoDataGridViewTextBoxColumn"
-        Me.AceptadoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.AceptadoDataGridViewTextBoxColumn.Width = 310
         '
         'CitasDiariasTableAdapter1
         '
@@ -2258,77 +2251,10 @@ Partial Class Form_DashBoard
         '
         Me.EstadistDentalTableAdapter1.ClearBeforeFill = True
         '
-        'HORARIODataGridViewTextBoxColumn
+        'Timer1
         '
-        Me.HORARIODataGridViewTextBoxColumn.DataPropertyName = "HORARIO"
-        Me.HORARIODataGridViewTextBoxColumn.HeaderText = "HORARIO"
-        Me.HORARIODataGridViewTextBoxColumn.Name = "HORARIODataGridViewTextBoxColumn"
-        Me.HORARIODataGridViewTextBoxColumn.ReadOnly = True
-        Me.HORARIODataGridViewTextBoxColumn.Width = 65
-        '
-        'PACIENTEDataGridViewTextBoxColumn
-        '
-        Me.PACIENTEDataGridViewTextBoxColumn.DataPropertyName = "PACIENTE"
-        Me.PACIENTEDataGridViewTextBoxColumn.HeaderText = "PACIENTE"
-        Me.PACIENTEDataGridViewTextBoxColumn.Name = "PACIENTEDataGridViewTextBoxColumn"
-        Me.PACIENTEDataGridViewTextBoxColumn.ReadOnly = True
-        Me.PACIENTEDataGridViewTextBoxColumn.Width = 160
-        '
-        'MEDICODataGridViewTextBoxColumn
-        '
-        Me.MEDICODataGridViewTextBoxColumn.DataPropertyName = "MEDICO"
-        Me.MEDICODataGridViewTextBoxColumn.HeaderText = "MEDICO"
-        Me.MEDICODataGridViewTextBoxColumn.Name = "MEDICODataGridViewTextBoxColumn"
-        Me.MEDICODataGridViewTextBoxColumn.ReadOnly = True
-        Me.MEDICODataGridViewTextBoxColumn.Width = 160
-        '
-        'ESPECIALIDADDataGridViewTextBoxColumn
-        '
-        Me.ESPECIALIDADDataGridViewTextBoxColumn.DataPropertyName = "ESPECIALIDAD"
-        Me.ESPECIALIDADDataGridViewTextBoxColumn.HeaderText = "ESPECIALIDAD"
-        Me.ESPECIALIDADDataGridViewTextBoxColumn.Name = "ESPECIALIDADDataGridViewTextBoxColumn"
-        Me.ESPECIALIDADDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ESPECIALIDADDataGridViewTextBoxColumn.Width = 110
-        '
-        'CONFIRMADADataGridViewTextBoxColumn
-        '
-        Me.CONFIRMADADataGridViewTextBoxColumn.DataPropertyName = "CONFIRMADA"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.CONFIRMADADataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
-        Me.CONFIRMADADataGridViewTextBoxColumn.HeaderText = "CONFIRMADA"
-        Me.CONFIRMADADataGridViewTextBoxColumn.Name = "CONFIRMADADataGridViewTextBoxColumn"
-        Me.CONFIRMADADataGridViewTextBoxColumn.ReadOnly = True
-        Me.CONFIRMADADataGridViewTextBoxColumn.Width = 85
-        '
-        'ATENDIDADataGridViewTextBoxColumn
-        '
-        Me.ATENDIDADataGridViewTextBoxColumn.DataPropertyName = "ATENDIDA"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.ATENDIDADataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle3
-        Me.ATENDIDADataGridViewTextBoxColumn.HeaderText = "ATENDIDA"
-        Me.ATENDIDADataGridViewTextBoxColumn.Name = "ATENDIDADataGridViewTextBoxColumn"
-        Me.ATENDIDADataGridViewTextBoxColumn.ReadOnly = True
-        Me.ATENDIDADataGridViewTextBoxColumn.Width = 70
-        '
-        'ANULADADataGridViewTextBoxColumn
-        '
-        Me.ANULADADataGridViewTextBoxColumn.DataPropertyName = "ANULADA"
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.ANULADADataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle4
-        Me.ANULADADataGridViewTextBoxColumn.HeaderText = "ANULADA"
-        Me.ANULADADataGridViewTextBoxColumn.Name = "ANULADADataGridViewTextBoxColumn"
-        Me.ANULADADataGridViewTextBoxColumn.ReadOnly = True
-        Me.ANULADADataGridViewTextBoxColumn.Width = 65
-        '
-        'PAGADADataGridViewTextBoxColumn
-        '
-        Me.PAGADADataGridViewTextBoxColumn.DataPropertyName = "PAGADA"
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.PAGADADataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle5
-        Me.PAGADADataGridViewTextBoxColumn.HeaderText = "PAGADA"
-        Me.PAGADADataGridViewTextBoxColumn.Name = "PAGADADataGridViewTextBoxColumn"
-        Me.PAGADADataGridViewTextBoxColumn.ReadOnly = True
-        Me.PAGADADataGridViewTextBoxColumn.Width = 60
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 10000
         '
         'Form_DashBoard
         '
@@ -2342,12 +2268,16 @@ Partial Class Form_DashBoard
         Me.Controls.Add(Me.bImprimir)
         Me.Controls.Add(Me.bt_cancelar)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximumSize = New System.Drawing.Size(874, 600)
+        Me.MinimumSize = New System.Drawing.Size(874, 600)
         Me.Name = "Form_DashBoard"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "DashBoard"
         CType(Me.UiTab1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UiTab1.ResumeLayout(False)
+        Me.UiTabPage1.ResumeLayout(False)
+        Me.UiTabPage1.PerformLayout()
         CType(Me.UiGroupBox8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UiGroupBox8.ResumeLayout(False)
         CType(Me.Chart7, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2358,14 +2288,23 @@ Partial Class Form_DashBoard
         Me.UiGroupBox4.ResumeLayout(False)
         Me.UiGroupBox4.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CitasDiariasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CM2DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.UiTabPage2.ResumeLayout(False)
+        Me.UiTabPage2.PerformLayout()
         CType(Me.UiGroupBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UiGroupBox5.ResumeLayout(False)
         Me.UiGroupBox5.PerformLayout()
         CType(Me.Chart2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Grafic2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PacientesAltaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.UiTabPage3.ResumeLayout(False)
+        Me.UiTabPage3.PerformLayout()
         CType(Me.UiGroupBox10, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UiGroupBox10.ResumeLayout(False)
         CType(Me.Chart8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MedicoCitasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UiGroupBox9, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UiGroupBox9.ResumeLayout(False)
         CType(Me.Chart4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2373,9 +2312,12 @@ Partial Class Form_DashBoard
         Me.UiGroupBox6.ResumeLayout(False)
         Me.UiGroupBox6.PerformLayout()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.UiTabPage4.ResumeLayout(False)
+        Me.UiTabPage4.PerformLayout()
         CType(Me.UiGroupBox12, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UiGroupBox12.ResumeLayout(False)
         CType(Me.Chart9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EspecialidadCitasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UiGroupBox11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UiGroupBox11.ResumeLayout(False)
         CType(Me.Chart5, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2383,9 +2325,13 @@ Partial Class Form_DashBoard
         CType(Me.UiGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UiGroupBox1.ResumeLayout(False)
         Me.UiGroupBox1.PerformLayout()
+        Me.UiTabPage5.ResumeLayout(False)
+        Me.UiTabPage5.PerformLayout()
         CType(Me.UiGroupBox14, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UiGroupBox14.ResumeLayout(False)
+        Me.UiGroupBox14.PerformLayout()
         CType(Me.Chart10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Top10_TratamientoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UiGroupBox13, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UiGroupBox13.ResumeLayout(False)
         CType(Me.Chart6, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2393,9 +2339,12 @@ Partial Class Form_DashBoard
         CType(Me.UiGroupBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UiGroupBox2.ResumeLayout(False)
         Me.UiGroupBox2.PerformLayout()
+        Me.UiTabPage6.ResumeLayout(False)
+        Me.UiTabPage6.PerformLayout()
         CType(Me.UiGroupBox16, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UiGroupBox16.ResumeLayout(False)
         CType(Me.Chart11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EstadistDentalBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UiGroupBox15, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UiGroupBox15.ResumeLayout(False)
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2403,28 +2352,8 @@ Partial Class Form_DashBoard
         CType(Me.UiGroupBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UiGroupBox3.ResumeLayout(False)
         Me.UiGroupBox3.PerformLayout()
-        CType(Me.CLINICAINCEMEBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.UiTabPage1.ResumeLayout(False)
-        Me.UiTabPage1.PerformLayout()
-        Me.UiTabPage2.ResumeLayout(False)
-        Me.UiTabPage2.PerformLayout()
-        Me.UiTabPage3.ResumeLayout(False)
-        Me.UiTabPage3.PerformLayout()
-        Me.UiTabPage4.ResumeLayout(False)
-        Me.UiTabPage4.PerformLayout()
-        Me.UiTabPage5.ResumeLayout(False)
-        Me.UiTabPage5.PerformLayout()
-        Me.UiTabPage6.ResumeLayout(False)
-        Me.UiTabPage6.PerformLayout()
         CType(Me.Grafic1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CM2DataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CitasDiariasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Grafic2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PacientesAltaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MedicoCitasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EspecialidadCitasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Top10_TratamientoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EstadistDentalBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CLINICAINCEMEBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2534,15 +2463,12 @@ Partial Class Form_DashBoard
     Friend WithEvents UiGroupBox10 As Janus.Windows.EditControls.UIGroupBox
     Friend WithEvents Chart8 As System.Windows.Forms.DataVisualization.Charting.Chart
     Friend WithEvents UiGroupBox9 As Janus.Windows.EditControls.UIGroupBox
-    Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents UiGroupBox12 As Janus.Windows.EditControls.UIGroupBox
     Friend WithEvents Chart9 As System.Windows.Forms.DataVisualization.Charting.Chart
     Friend WithEvents UiGroupBox11 As Janus.Windows.EditControls.UIGroupBox
-    Friend WithEvents Label25 As System.Windows.Forms.Label
     Friend WithEvents UiGroupBox14 As Janus.Windows.EditControls.UIGroupBox
     Friend WithEvents Chart10 As System.Windows.Forms.DataVisualization.Charting.Chart
     Friend WithEvents UiGroupBox13 As Janus.Windows.EditControls.UIGroupBox
-    Friend WithEvents Label26 As System.Windows.Forms.Label
     Friend WithEvents UiGroupBox15 As Janus.Windows.EditControls.UIGroupBox
     Friend WithEvents Chart11 As System.Windows.Forms.DataVisualization.Charting.Chart
     Friend WithEvents UiGroupBox16 As Janus.Windows.EditControls.UIGroupBox
@@ -2558,10 +2484,6 @@ Partial Class Form_DashBoard
     Friend WithEvents DNIDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents TLFNODataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents EMAILDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents FECHADataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents MEDICODataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ESPECIALIDADDataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents CantCitasDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents FECHADataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ESPECIALIDADDataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents CantCitasDataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -2579,4 +2501,11 @@ Partial Class Form_DashBoard
     Friend WithEvents ATENDIDADataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ANULADADataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents PAGADADataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Label25 As System.Windows.Forms.Label
+    Friend WithEvents Label24 As System.Windows.Forms.Label
+    Friend WithEvents FECHADataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents MEDICODataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ESPECIALIDADDataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CantCitasDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
 End Class

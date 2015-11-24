@@ -94,7 +94,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value> TRATAMIENTOS APECTADOS</Value>
+                              <Value> TRATAMIENTOS ACEPTADOS</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -692,8 +692,8 @@
         </TablixRowHierarchy>
         <RepeatColumnHeaders>true</RepeatColumnHeaders>
         <DataSetName>DataSet3</DataSetName>
-        <Top>2.85278in</Top>
-        <Left>1.86945in</Left>
+        <Top>4.84236in</Top>
+        <Left>1.86946in</Left>
         <Height>0.5in</Height>
         <Width>7.59858in</Width>
         <Style>
@@ -734,7 +734,10 @@
                     <Y>=Sum(Fields!Presupuestado.Value)</Y>
                   </ChartDataPointValues>
                   <ChartDataLabel>
-                    <Style />
+                    <Style>
+                      <FontSize>11pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
                     <UseValueAsLabel>true</UseValueAsLabel>
                     <Visible>true</Visible>
                   </ChartDataLabel>
@@ -769,7 +772,10 @@
                     <Y>=Sum(Fields!Aceptado.Value)</Y>
                   </ChartDataPointValues>
                   <ChartDataLabel>
-                    <Style />
+                    <Style>
+                      <FontSize>11pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
                     <UseValueAsLabel>true</UseValueAsLabel>
                     <Visible>true</Visible>
                   </ChartDataLabel>
@@ -806,7 +812,6 @@
             <ChartCategoryAxes>
               <ChartAxis Name="Primary">
                 <Style>
-                  <FontSize>9pt</FontSize>
                   <Format>MMMM</Format>
                 </Style>
                 <ChartAxisTitle>
@@ -965,8 +970,9 @@
           <ChartLegend Name="Default">
             <Style>
               <BackgroundGradientType>None</BackgroundGradientType>
-              <FontSize>8pt</FontSize>
+              <FontSize>9pt</FontSize>
             </Style>
+            <Position>BottomCenter</Position>
             <ChartLegendTitle>
               <Caption>Tratamientos</Caption>
               <Style>
@@ -975,6 +981,7 @@
                 <TextAlign>Center</TextAlign>
               </Style>
             </ChartLegendTitle>
+            <AutoFitTextDisabled>true</AutoFitTextDisabled>
             <HeaderSeparatorColor>Black</HeaderSeparatorColor>
             <ColumnSeparatorColor>Black</ColumnSeparatorColor>
           </ChartLegend>
@@ -984,7 +991,7 @@
             <Caption>="Tratamientos Presupuestados Frente a los Aceptados (" &amp; Year(First(Fields!FECHA.Value, "DataSet3")) &amp; ")"</Caption>
             <Style>
               <BackgroundGradientType>None</BackgroundGradientType>
-              <FontSize>11pt</FontSize>
+              <FontSize>12pt</FontSize>
               <FontWeight>Bold</FontWeight>
               <TextAlign>General</TextAlign>
               <VerticalAlign>Top</VerticalAlign>
@@ -1008,10 +1015,9 @@
           </Style>
         </ChartNoDataMessage>
         <DataSetName>DataSet1</DataSetName>
-        <Top>0.03528cm</Top>
-        <Left>4.05441cm</Left>
-        <Height>6.62807cm</Height>
-        <Width>20.99199cm</Width>
+        <Left>2.85073cm</Left>
+        <Height>11.86682cm</Height>
+        <Width>21.71942cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -1023,10 +1029,10 @@
         </Style>
       </Chart>
     </ReportItems>
-    <Height>15.39557cm</Height>
+    <Height>13.5696cm</Height>
     <Style />
   </Body>
-  <Width>28.62474cm</Width>
+  <Width>27.85745cm</Width>
   <Page>
     <PageHeader>
       <Height>2.91959cm</Height>
