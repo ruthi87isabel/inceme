@@ -1503,7 +1503,7 @@ Public Class form_centro_medico
             lbl_DbVersionValue.Text = versionActual.ToString()
 
 
-            Dim dbrequiredVersion As New Version("1.0.3.7")
+            Dim dbrequiredVersion As New Version("1.0.3.9")
 
             If versionActual < dbrequiredVersion Then
                 MessageBox.Show("La version actual de la Base de Datos: " & versionActual.ToString() & " difiere de la mínima requerida " & dbrequiredVersion.ToString() & ". Esto podria ocasionar inestabilidad en el sistema. ", "INFORMACIÓN SOBRE BASE DE DATOS", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -1846,4 +1846,5 @@ Public Class form_centro_medico
         'a.ShowDialog()
     End Sub
 
+    
 End Class

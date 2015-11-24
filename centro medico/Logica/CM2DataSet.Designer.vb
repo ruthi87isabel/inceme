@@ -8640,30 +8640,22 @@ Namespace CM2DataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        PACIENTES.NOMBRE, PACIENTES.APELLIDO1, PACIENTES.APELLIDO2, PACIENT"& _ 
-                "ES.DNI, PACIENTES.FECHAN, COUNT(Bonos.id) AS BONOS, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         S"& _ 
-                "UM(Bonos.numsesiones) - COUNT(Sesiones.id) AS SESIONES"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            PACIENTE"& _ 
-                "S INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Bonos ON PACIENTES.CPACIENTE = Bonos.cpac"& _ 
-                "iente LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Sesiones ON Bonos.id = Sesiones."& _ 
-                "refbono"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Bonos.numsesiones > 0)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY PACIENTES.NOMBRE, PACIEN"& _ 
+            Me._commandCollection(0).CommandText = "SELECT       PACIENTES.NOMBRE, PACIENTES.APELLIDO1, PACIENTES.APELLIDO2, PACIENTE"& _ 
+                "S.DNI, PACIENTES.FECHAN, COUNT(Bonos.id) AS BONOS, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         SU"& _ 
+                "M(Bonos.numsesiones) - COUNT(Sesiones.id) AS SESIONES"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            PACIENTES"& _ 
+                " INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Bonos ON PACIENTES.CPACIENTE = Bonos.cpaci"& _ 
+                "ente LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Sesiones ON Bonos.id = Sesiones.r"& _ 
+                "efbono"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Bonos.numsesiones > 0)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY  PACIENTES.NOMBRE, PACIEN"& _ 
                 "TES.APELLIDO1, PACIENTES.APELLIDO2, PACIENTES.DNI, PACIENTES.FECHAN"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT PACIENTES.NOMBRE, PACIENTES.APELLIDO1, PACIENTES.APELLIDO2, PACIENTES.DNI,"& _ 
-                " PACIENTES.FECHAN,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&" COUNT(Bonos.id) AS BONOS, SUM(Bonos.numsesiones) - COUNT(Se"& _ 
-                "siones.id) AS SESIONES"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM PACIENTES INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Bonos ON PACIENTES.CPACIENTE "& _ 
-                "= Bonos.cpaciente LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Sesiones ON Bonos.id = Sesiones.refbono"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHER"& _ 
-                "E (Bonos.numsesiones > 0) "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"AND ((PACIENTES.NOMBRE LIKE '%'+@nombre+'%') And"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"(("& _ 
-                "PACIENTES.APELLIDO1 Is NULL) OR (PACIENTES.APELLIDO1 IS NOT NULL AND PACIENTES.A"& _ 
-                "PELLIDO1 LIKE '%'+@pApellido+'%')) And"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"((PACIENTES.APELLIDO2 Is NULL) Or (PACIE"& _ 
-                "NTES.APELLIDO2 IS NOT NULL AND PACIENTES.APELLIDO2 LIKE '%'+@sApellido+'%')))"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"G"& _ 
-                "ROUP BY PACIENTES.NOMBRE, PACIENTES.APELLIDO1, PACIENTES.APELLIDO2, PACIENTES.DN"& _ 
-                "I, PACIENTES.FECHAN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)
-            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre", Global.System.Data.SqlDbType.VarChar, 255, Global.System.Data.ParameterDirection.Input, 0, 0, "NOMBRE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@pApellido", Global.System.Data.SqlDbType.VarChar, 255, Global.System.Data.ParameterDirection.Input, 0, 0, "APELLIDO1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@sApellido", Global.System.Data.SqlDbType.VarChar, 255, Global.System.Data.ParameterDirection.Input, 0, 0, "APELLIDO2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).CommandText = "dbo.DamePacienteBonos"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@pApellido", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@sApellido", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8697,19 +8689,19 @@ Namespace CM2DataSetTableAdapters
         Public Overloads Overridable Function FillBy(ByVal dataTable As CM2DataSet.PacientesBonosDataTable, ByVal nombre As String, ByVal pApellido As String, ByVal sApellido As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
             If (nombre Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(nombre,String)
-            End If
-            If (pApellido Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(pApellido,String)
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(nombre,String)
             End If
-            If (sApellido Is Nothing) Then
+            If (pApellido Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(2).Value = CType(sApellido,String)
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(pApellido,String)
+            End If
+            If (sApellido Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(sApellido,String)
             End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -8725,19 +8717,19 @@ Namespace CM2DataSetTableAdapters
         Public Overloads Overridable Function GetDataBy(ByVal nombre As String, ByVal pApellido As String, ByVal sApellido As String) As CM2DataSet.PacientesBonosDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
             If (nombre Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(nombre,String)
-            End If
-            If (pApellido Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(pApellido,String)
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(nombre,String)
             End If
-            If (sApellido Is Nothing) Then
+            If (pApellido Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(2).Value = CType(sApellido,String)
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(pApellido,String)
+            End If
+            If (sApellido Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(sApellido,String)
             End If
             Dim dataTable As CM2DataSet.PacientesBonosDataTable = New CM2DataSet.PacientesBonosDataTable()
             Me.Adapter.Fill(dataTable)

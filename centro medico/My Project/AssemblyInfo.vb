@@ -10,7 +10,7 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("INCEME - PROGRAMA PARA CLÍNICAS MÉDICAS")> 
 <Assembly: AssemblyDescription("Gestión de Centros Médicos")> 
-<Assembly: AssemblyCompany("GOLTRATEC S.C.")> 
+<Assembly: AssemblyCompany("GOLTRATEC S.L.")> 
 <Assembly: AssemblyProduct("INCEME")> 
 <Assembly: AssemblyCopyright("Copyright © GOLTRATEC 2015")> 
 <Assembly: AssemblyTrademark("")> 
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.3.1.1")> 
-<Assembly: AssemblyFileVersion("1.3.1.1")> 
+<Assembly: AssemblyVersion("1.3.1.3")> 
+<Assembly: AssemblyFileVersion("1.3.1.3")> 

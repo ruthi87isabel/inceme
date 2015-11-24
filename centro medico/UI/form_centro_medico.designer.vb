@@ -59,6 +59,7 @@ Partial Class form_centro_medico
         Me.menu_imprimir_remesas = New System.Windows.Forms.ToolStripMenuItem()
         Me.menu_generar_norma19 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator11 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BonosNoAgotadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menu_citas = New System.Windows.Forms.ToolStripMenuItem()
         Me.menu_partes_altas_bajas = New System.Windows.Forms.ToolStripMenuItem()
         Me.menu_partes_asistencia = New System.Windows.Forms.ToolStripMenuItem()
@@ -215,7 +216,6 @@ Partial Class form_centro_medico
         Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lbl_DbVersionValue = New System.Windows.Forms.ToolStripStatusLabel()
         Me.btn_VerificarDBVersion = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.BonosNoAgotadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.panel_top.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.mn_menu.SuspendLayout()
@@ -503,6 +503,12 @@ Partial Class form_centro_medico
         '
         Me.ToolStripSeparator11.Name = "ToolStripSeparator11"
         Me.ToolStripSeparator11.Size = New System.Drawing.Size(312, 6)
+        '
+        'BonosNoAgotadosToolStripMenuItem
+        '
+        Me.BonosNoAgotadosToolStripMenuItem.Name = "BonosNoAgotadosToolStripMenuItem"
+        Me.BonosNoAgotadosToolStripMenuItem.Size = New System.Drawing.Size(315, 22)
+        Me.BonosNoAgotadosToolStripMenuItem.Text = "Bonos no Agotados"
         '
         'menu_citas
         '
@@ -1528,12 +1534,6 @@ Partial Class form_centro_medico
         Me.btn_VerificarDBVersion.Name = "btn_VerificarDBVersion"
         Me.btn_VerificarDBVersion.Size = New System.Drawing.Size(14, 17)
         Me.btn_VerificarDBVersion.Text = "V"
-        '
-        'BonosNoAgotadosToolStripMenuItem
-        '
-        Me.BonosNoAgotadosToolStripMenuItem.Name = "BonosNoAgotadosToolStripMenuItem"
-        Me.BonosNoAgotadosToolStripMenuItem.Size = New System.Drawing.Size(315, 22)
-        Me.BonosNoAgotadosToolStripMenuItem.Text = "Bonos no Agotados"
         '
         'form_centro_medico
         '
