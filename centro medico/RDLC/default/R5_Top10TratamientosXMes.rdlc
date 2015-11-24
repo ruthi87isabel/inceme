@@ -6,13 +6,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.18843in</Width>
+              <Width>0.93843in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.45683in</Width>
+              <Width>3.55077in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.06342in</Width>
+              <Width>3.29259in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -233,6 +233,24 @@
                                 <Style />
                               </ChartDataLabel>
                             </ChartEmptyPoints>
+                            <CustomProperties>
+                              <CustomProperty>
+                                <Name>MaxPixelPointWidth</Name>
+                                <Value>20</Value>
+                              </CustomProperty>
+                              <CustomProperty>
+                                <Name>MinPixelPointWidth</Name>
+                                <Value>20</Value>
+                              </CustomProperty>
+                              <CustomProperty>
+                                <Name>PixelPointWidth</Name>
+                                <Value>20</Value>
+                              </CustomProperty>
+                              <CustomProperty>
+                                <Name>PointWidth</Name>
+                                <Value>0</Value>
+                              </CustomProperty>
+                            </CustomProperties>
                             <ValueAxisName>Primary</ValueAxisName>
                             <CategoryAxisName>Primary</CategoryAxisName>
                             <ChartSmartLabel>
@@ -465,9 +483,9 @@
         <RepeatColumnHeaders>true</RepeatColumnHeaders>
         <DataSetName>DataSet3</DataSetName>
         <Top>0.43611in</Top>
-        <Left>2.37375in</Left>
+        <Left>1.68625in</Left>
         <Height>0.5in</Height>
-        <Width>6.70868in</Width>
+        <Width>7.78179in</Width>
         <Style>
           <Border>
             <Style>None</Style>

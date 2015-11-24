@@ -2237,6 +2237,8 @@
     <Content Include="RDLC\img\recetaimpresavalenciano.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\1449807294_Chart_bar.png" />
+    <Content Include="Resources\1449807300_Chart_bar.ico" />
     <Content Include="Scripts\db_1.0.3.7.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

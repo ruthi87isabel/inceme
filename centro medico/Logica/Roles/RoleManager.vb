@@ -111,7 +111,7 @@ Public Class RoleManager
         RecetasXml = 102
         Bonos = 103
         MigrarPacientes = 104
-        DashB_Cistas_por_estado = 105
+        DashB_Citas_por_estado = 105
         DashB_Relacion_de_Altas = 106
         DashB_Citas_atendidas_por_medicos = 107
         DashB_Citas_por_Especialidad = 108

@@ -711,11 +711,6 @@
                   <GroupExpression>=Fields!FECHA.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
-              <SortExpressions>
-                <SortExpression>
-                  <Value>=Fields!FECHA.Value</Value>
-                </SortExpression>
-              </SortExpressions>
               <Label>=Fields!FECHA.Value</Label>
             </ChartMember>
           </ChartMembers>
@@ -811,7 +806,8 @@
             <ChartCategoryAxes>
               <ChartAxis Name="Primary">
                 <Style>
-                  <FontSize>8pt</FontSize>
+                  <FontSize>9pt</FontSize>
+                  <Format>MMMM</Format>
                 </Style>
                 <ChartAxisTitle>
                   <Caption />
@@ -819,6 +815,7 @@
                     <FontSize>8pt</FontSize>
                   </Style>
                 </ChartAxisTitle>
+                <Interval>1</Interval>
                 <ChartMajorGridLines>
                   <Enabled>False</Enabled>
                   <Style>
@@ -841,6 +838,9 @@
                 <CrossAt>NaN</CrossAt>
                 <Minimum>NaN</Minimum>
                 <Maximum>NaN</Maximum>
+                <Angle>-45</Angle>
+                <LabelsAutoFitDisabled>true</LabelsAutoFitDisabled>
+                <MinFontSize>8pt</MinFontSize>
                 <ChartAxisScaleBreak>
                   <Style />
                 </ChartAxisScaleBreak>
@@ -1009,9 +1009,9 @@
         </ChartNoDataMessage>
         <DataSetName>DataSet1</DataSetName>
         <Top>0.03528cm</Top>
-        <Left>4.7484cm</Left>
+        <Left>4.05441cm</Left>
         <Height>6.62807cm</Height>
-        <Width>19.30039cm</Width>
+        <Width>20.99199cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>

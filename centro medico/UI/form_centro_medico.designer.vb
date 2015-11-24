@@ -43,6 +43,7 @@ Partial Class form_centro_medico
         Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
         Me.menu_gastos = New System.Windows.Forms.ToolStripMenuItem()
         Me.LiquidacionDeMédicosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menu_DashBoard = New System.Windows.Forms.ToolStripMenuItem()
         Me.HorariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PacientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menu_pacientes = New System.Windows.Forms.ToolStripMenuItem()
@@ -63,7 +64,6 @@ Partial Class form_centro_medico
         Me.menu_citas = New System.Windows.Forms.ToolStripMenuItem()
         Me.menu_partes_altas_bajas = New System.Windows.Forms.ToolStripMenuItem()
         Me.menu_partes_asistencia = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menu_DashBoard = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator12 = New System.Windows.Forms.ToolStripSeparator()
         Me.menu_generar_facturas_recibos = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator18 = New System.Windows.Forms.ToolStripSeparator()
@@ -336,7 +336,7 @@ Partial Class form_centro_medico
         '
         'menu_clinica
         '
-        Me.menu_clinica.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menu_médicos, Me.menu_mutuas, Me.ToolStripSeparator7, Me.menu_proveedores, Me.menu_artículos, Me.menu_bancos, Me.ToolStripSeparator8, Me.menu_gastos, Me.LiquidacionDeMédicosToolStripMenuItem, Me.HorariosToolStripMenuItem})
+        Me.menu_clinica.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menu_médicos, Me.menu_mutuas, Me.ToolStripSeparator7, Me.menu_proveedores, Me.menu_artículos, Me.menu_bancos, Me.ToolStripSeparator8, Me.menu_gastos, Me.LiquidacionDeMédicosToolStripMenuItem, Me.menu_DashBoard, Me.HorariosToolStripMenuItem})
         Me.menu_clinica.Name = "menu_clinica"
         Me.menu_clinica.Size = New System.Drawing.Size(55, 20)
         Me.menu_clinica.Text = "Clínica"
@@ -402,6 +402,13 @@ Partial Class form_centro_medico
         Me.LiquidacionDeMédicosToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
         Me.LiquidacionDeMédicosToolStripMenuItem.Text = "Liquidación de Médicos"
         '
+        'menu_DashBoard
+        '
+        Me.menu_DashBoard.Image = Global.centro_medico.My.Resources.Resources._1449807294_Chart_bar
+        Me.menu_DashBoard.Name = "menu_DashBoard"
+        Me.menu_DashBoard.Size = New System.Drawing.Size(200, 22)
+        Me.menu_DashBoard.Text = "DashBoard"
+        '
         'HorariosToolStripMenuItem
         '
         Me.HorariosToolStripMenuItem.Name = "HorariosToolStripMenuItem"
@@ -410,7 +417,7 @@ Partial Class form_centro_medico
         '
         'PacientesToolStripMenuItem
         '
-        Me.PacientesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menu_pacientes, Me.menu_empresas, Me.ToolStripSeparator9, Me.menu_facturas, Me.PresupuestosDentalesToolStripMenuItem, Me.menu_analíticas, Me.ToolStripSeparator10, Me.menu_generar_recibos, Me.menu_recibos, Me.menu_imprimir_remesas, Me.menu_generar_norma19, Me.ToolStripSeparator11, Me.BonosNoAgotadosToolStripMenuItem, Me.menu_citas, Me.menu_partes_altas_bajas, Me.menu_partes_asistencia, Me.menu_DashBoard, Me.ToolStripSeparator12, Me.menu_generar_facturas_recibos, Me.ToolStripSeparator18, Me.frmProcesosMenuItem, Me.tstComunicacionesToolStripMenuItem1})
+        Me.PacientesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menu_pacientes, Me.menu_empresas, Me.ToolStripSeparator9, Me.menu_facturas, Me.PresupuestosDentalesToolStripMenuItem, Me.menu_analíticas, Me.ToolStripSeparator10, Me.menu_generar_recibos, Me.menu_recibos, Me.menu_imprimir_remesas, Me.menu_generar_norma19, Me.ToolStripSeparator11, Me.BonosNoAgotadosToolStripMenuItem, Me.menu_citas, Me.menu_partes_altas_bajas, Me.menu_partes_asistencia, Me.ToolStripSeparator12, Me.menu_generar_facturas_recibos, Me.ToolStripSeparator18, Me.frmProcesosMenuItem, Me.tstComunicacionesToolStripMenuItem1})
         Me.PacientesToolStripMenuItem.Name = "PacientesToolStripMenuItem"
         Me.PacientesToolStripMenuItem.Size = New System.Drawing.Size(69, 20)
         Me.PacientesToolStripMenuItem.Text = "Pacientes"
@@ -531,13 +538,6 @@ Partial Class form_centro_medico
         Me.menu_partes_asistencia.Name = "menu_partes_asistencia"
         Me.menu_partes_asistencia.Size = New System.Drawing.Size(315, 22)
         Me.menu_partes_asistencia.Text = "Partes Asistencia"
-        '
-        'menu_DashBoard
-        '
-        Me.menu_DashBoard.Image = Global.centro_medico.My.Resources.Resources.Bar_Chart
-        Me.menu_DashBoard.Name = "menu_DashBoard"
-        Me.menu_DashBoard.Size = New System.Drawing.Size(315, 22)
-        Me.menu_DashBoard.Text = "DashBoard"
         '
         'ToolStripSeparator12
         '

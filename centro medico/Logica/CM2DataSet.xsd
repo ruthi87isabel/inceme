@@ -478,52 +478,6 @@ ORDER BY m.ESPECIALIDAD DESC,COUNT(ESPECIALIDAD)
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CitasDiariasTableAdapter" GeneratorDataComponentClassName="CitasDiariasTableAdapter" Name="CitasDiarias" UserDataComponentName="CitasDiariasTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="CMConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT SUBSTRING(CAST(CAST(HORA as TIME) AS varchar),0,6) AS HORARIO,
-		  p.NOMBRE + ' ' + CASE WHEN p.APELLIDO1 IS NULL THEN ''
-								WHEN p.APELLIDO1 IS NOT NULL THEN p.APELLIDO1 END + ' '
-						 + CASE WHEN p.APELLIDO2 IS NULL THEN '' 
-						        WHEN p.APELLIDO2 IS NOT NULL THEN p.APELLIDO2 END AS PACIENTE, 
-		 m.NOMBRE + ' ' + CASE WHEN m.APELLIDO1 IS NULL THEN ''
-								WHEN m.APELLIDO1 IS NOT NULL THEN m.APELLIDO1 END + ' '
-						 + CASE WHEN m.APELLIDO2 IS NULL THEN '' 
-						        WHEN m.APELLIDO2 IS NOT NULL THEN m.APELLIDO2 END AS MEDICO ,
-		 CASE WHEN ESPECIALIDAD IS NULL THEN ''
-			  WHEN ESPECIALIDAD IS NOT NULL THEN ESPECIALIDAD END AS ESPECIALIDAD, 
-		 CASE WHEN CONFIRMADA = 'S' THEN 'Si' 
-			  WHEN CONFIRMADA = 'N' THEN 'No' END AS CONFIRMADA,
-		 CASE WHEN ATENDIDO = 'S' THEN 'Si' 
-			  WHEN ATENDIDO = 'N' THEN 'No' END AS ATENDIDO,
-		 CASE WHEN FALTA  = 'S' THEN 'Si' 
-			  WHEN FALTA  = 'N' THEN 'No' END AS ANULADA,
-		 CASE WHEN PAGADA = 'S' THEN 'Si' 
-			  WHEN PAGADA = 'N' THEN 'No' END AS PAGADA
-		 FROM dbo.CITAS
-		INNER JOIN dbo.PACIENTES p ON dbo.CITAS.REFPACIENTE = p.CPACIENTE
-		INNER JOIN dbo.MEDICOS m ON dbo.CITAS.REFMEDICO = m.CMEDICO
-		WHERE FECHA = CAST(GETDATE() as date) 
-		ORDER BY HORA</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="HORARIO" DataSetColumn="HORARIO" />
-              <Mapping SourceColumn="PACIENTE" DataSetColumn="PACIENTE" />
-              <Mapping SourceColumn="MEDICO" DataSetColumn="MEDICO" />
-              <Mapping SourceColumn="ESPECIALIDAD" DataSetColumn="ESPECIALIDAD" />
-              <Mapping SourceColumn="CONFIRMADA" DataSetColumn="CONFIRMADA" />
-              <Mapping SourceColumn="ATENDIDO" DataSetColumn="ATENDIDO" />
-              <Mapping SourceColumn="ANULADA" DataSetColumn="ANULADA" />
-              <Mapping SourceColumn="PAGADA" DataSetColumn="PAGADA" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EstadistDentalTableAdapter" GeneratorDataComponentClassName="EstadistDentalTableAdapter" Name="EstadistDental" UserDataComponentName="EstadistDentalTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="CMConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
@@ -536,13 +490,14 @@ ORDER BY m.ESPECIALIDAD DESC,COUNT(ESPECIALIDAD)
 			 WHEN Confirmado &lt;&gt; 1 THEN 0 END) AS  Aceptado
 		FROM  dbo.d_PresupuestoLineas p
 		INNER JOIN dbo.d_Presupuesto ON p.IDPresupuesto = dbo.d_Presupuesto.IDPresupuesto
-		WHERE
-		    ((@Fecha5 Is NOT NULL AND @Fecha6 Is NOT NULL) AND (FechaConcepcion&gt;=@Fecha5 AND FechaConcepcion&lt;=@Fecha6))
-			 OR 
-			((@Fecha5 Is NULL AND @Fecha6 IS NULL) AND (DATEPART(MM, FechaConcepcion) = DATEPART(MM, GETDATE()) AND (DATEPART(yyyy, FechaConcepcion) = DATEPART(yyyy, GETDATE()))))
+		WHERE (@Anual=1 AND (DATEPART(yyyy, FechaConcepcion))=@Ano)
+			  OR
+		     (@Anual&lt;&gt;1 AND (FechaConcepcion&gt;=@Fecha5 AND FechaConcepcion&lt;=@Fecha6))
 		GROUP BY SUBSTRING(CAST(CAST(FechaConcepcion as DATE) AS varchar),0,8)
 		ORDER by SUBSTRING(CAST(CAST(FechaConcepcion as DATE) AS varchar),0,8) DESC</CommandText>
                     <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Anual" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Int16" Direction="Input" ParameterName="@Anual" Precision="0" ProviderType="SmallInt" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Ano" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="String" Direction="Input" ParameterName="@Ano" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="Fecha5" ColumnName="FechaConcepcion" DataSourceName="SIESTA.dbo.d_Presupuesto" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Fecha5" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="FechaConcepcion" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="Fecha6" ColumnName="FechaConcepcion" DataSourceName="SIESTA.dbo.d_Presupuesto" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Fecha6" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="FechaConcepcion" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
@@ -555,30 +510,11 @@ ORDER BY m.ESPECIALIDAD DESC,COUNT(ESPECIALIDAD)
               <Mapping SourceColumn="Presupuestado" DataSetColumn="Presupuestado" />
               <Mapping SourceColumn="Aceptado" DataSetColumn="Aceptado" />
             </Mappings>
-            <Sources>
-              <DbSource ConnectionRef="CMConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        SUBSTRING(CAST(CAST(d_Presupuesto.FechaConcepcion AS DATE) AS varchar), 0, 8) AS FECHA, 
-                         SUM(CASE WHEN Confirmado = 0 THEN 1 WHEN Confirmado &lt;&gt; 0 THEN 0 END) AS Presupuestado, 
-                         SUM(CASE WHEN Confirmado = 1 THEN 1 WHEN Confirmado &lt;&gt; 1 THEN 0 END) AS Aceptado
-FROM            d_PresupuestoLineas AS p INNER JOIN
-                         d_Presupuesto ON p.IDPresupuesto = d_Presupuesto.IDPresupuesto
-WHERE        (@Fecha6 IS NOT NULL) AND (DATEPART(yyyy, d_Presupuesto.FechaConcepcion) = DATEPART(yyyy, @Fecha6)) OR
-                         (@Fecha6 IS NULL) AND (DATEPART(yyyy, d_Presupuesto.FechaConcepcion) = DATEPART(yyyy, GETDATE()))
-GROUP BY SUBSTRING(CAST(CAST(d_Presupuesto.FechaConcepcion AS DATE) AS varchar), 0, 8)
-ORDER BY FECHA</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="Fecha6" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Date" Direction="Input" ParameterName="@Fecha6" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </Sources>
+            <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PacienteAnaliticaTableAdapter" GeneratorDataComponentClassName="PacienteAnaliticaTableAdapter" Name="PacienteAnalitica" UserDataComponentName="PacienteAnaliticaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="CMConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="CMConnectionString (MySettings)" DbObjectName="SIESTA.dbo.LINEASANALITICAS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT      l.*, c.COLOR
@@ -599,7 +535,7 @@ FROM            LINEASANALITICAS AS l INNER JOIN
               <Mapping SourceColumn="COLOR" DataSetColumn="COLOR" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="CMConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillLineasByAnaliticas" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetLineasByAnaliticas" GeneratorSourceName="FillLineasByAnaliticas" GetMethodModifier="Public" GetMethodName="GetLineasByAnaliticas" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetLineasByAnaliticas" UserSourceName="FillLineasByAnaliticas">
+              <DbSource ConnectionRef="CMConnectionString (MySettings)" DbObjectName="SIESTA.dbo.LINEASANALITICAS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillLineasByAnaliticas" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetLineasByAnaliticas" GeneratorSourceName="FillLineasByAnaliticas" GetMethodModifier="Public" GetMethodName="GetLineasByAnaliticas" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetLineasByAnaliticas" UserSourceName="FillLineasByAnaliticas">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT l.CONCEPTO, l.ID, l.PRECIO, l.REFANALITICA, l.REFCONCEPTO, l.RESULTADO, c.COLOR
@@ -771,6 +707,52 @@ SELECT CONVERT (varchar(10), CONVERT (date, FECHAALTA, 106), 103) AS FECHA, CPAC
               <Mapping SourceColumn="DNI" DataSetColumn="DNI" />
               <Mapping SourceColumn="TLFNO" DataSetColumn="TLFNO" />
               <Mapping SourceColumn="EMAIL" DataSetColumn="EMAIL" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CitasDiariasTableAdapter" GeneratorDataComponentClassName="CitasDiariasTableAdapter" Name="CitasDiarias" UserDataComponentName="CitasDiariasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CMConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT SUBSTRING(CAST(CAST(HORA as TIME) AS varchar),0,6) AS HORARIO,
+		  p.NOMBRE + ' ' + CASE WHEN p.APELLIDO1 IS NULL THEN ''
+								WHEN p.APELLIDO1 IS NOT NULL THEN p.APELLIDO1 END + ' '
+						 + CASE WHEN p.APELLIDO2 IS NULL THEN '' 
+						        WHEN p.APELLIDO2 IS NOT NULL THEN p.APELLIDO2 END AS PACIENTE, 
+		 m.NOMBRE + ' ' + CASE WHEN m.APELLIDO1 IS NULL THEN ''
+								WHEN m.APELLIDO1 IS NOT NULL THEN m.APELLIDO1 END + ' '
+						 + CASE WHEN m.APELLIDO2 IS NULL THEN '' 
+						        WHEN m.APELLIDO2 IS NOT NULL THEN m.APELLIDO2 END AS MEDICO ,
+		 CASE WHEN ESPECIALIDAD IS NULL THEN ''
+			  WHEN ESPECIALIDAD IS NOT NULL THEN ESPECIALIDAD END AS ESPECIALIDAD, 
+		 CASE WHEN CONFIRMADA = 'S' THEN 'Si' 
+			  WHEN CONFIRMADA = 'N' THEN 'No' END AS CONFIRMADA,
+		 CASE WHEN ATENDIDO = 'S' THEN 'Si' 
+			  WHEN ATENDIDO = 'N' THEN 'No' END AS ATENDIDA,
+		 CASE WHEN FALTA  = 'S' THEN 'Si' 
+			  WHEN FALTA  = 'N' THEN 'No' END AS ANULADA,
+		 CASE WHEN PAGADA = 'S' THEN 'Si' 
+			  WHEN PAGADA = 'N' THEN 'No' END AS PAGADA
+		 FROM dbo.CITAS
+		INNER JOIN dbo.PACIENTES p ON dbo.CITAS.REFPACIENTE = p.CPACIENTE
+		INNER JOIN dbo.MEDICOS m ON dbo.CITAS.REFMEDICO = m.CMEDICO
+		WHERE FECHA = CAST(GETDATE() as date) 
+		ORDER BY HORA</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="HORARIO" DataSetColumn="HORARIO" />
+              <Mapping SourceColumn="PACIENTE" DataSetColumn="PACIENTE" />
+              <Mapping SourceColumn="MEDICO" DataSetColumn="MEDICO" />
+              <Mapping SourceColumn="ESPECIALIDAD" DataSetColumn="ESPECIALIDAD" />
+              <Mapping SourceColumn="CONFIRMADA" DataSetColumn="CONFIRMADA" />
+              <Mapping SourceColumn="ATENDIDA" DataSetColumn="ATENDIDA" />
+              <Mapping SourceColumn="ANULADA" DataSetColumn="ANULADA" />
+              <Mapping SourceColumn="PAGADA" DataSetColumn="PAGADA" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -1477,75 +1459,13 @@ SELECT CONVERT (varchar(10), CONVERT (date, FECHAALTA, 106), 103) AS FECHA, CPAC
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CitasDiarias" msprop:Generator_TableClassName="CitasDiariasDataTable" msprop:Generator_TableVarName="tableCitasDiarias" msprop:Generator_RowChangedName="CitasDiariasRowChanged" msprop:Generator_TablePropName="CitasDiarias" msprop:Generator_RowDeletingName="CitasDiariasRowDeleting" msprop:Generator_RowChangingName="CitasDiariasRowChanging" msprop:Generator_RowEvHandlerName="CitasDiariasRowChangeEventHandler" msprop:Generator_RowDeletedName="CitasDiariasRowDeleted" msprop:Generator_RowClassName="CitasDiariasRow" msprop:Generator_UserTableName="CitasDiarias" msprop:Generator_RowEvArgName="CitasDiariasRowChangeEvent">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="HORARIO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnHORARIO" msprop:Generator_ColumnPropNameInRow="HORARIO" msprop:Generator_ColumnPropNameInTable="HORARIOColumn" msprop:Generator_UserColumnName="HORARIO" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="6" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="PACIENTE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPACIENTE" msprop:Generator_ColumnPropNameInRow="PACIENTE" msprop:Generator_ColumnPropNameInTable="PACIENTEColumn" msprop:Generator_UserColumnName="PACIENTE" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="767" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="MEDICO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMEDICO" msprop:Generator_ColumnPropNameInRow="MEDICO" msprop:Generator_ColumnPropNameInTable="MEDICOColumn" msprop:Generator_UserColumnName="MEDICO" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="57" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="ESPECIALIDAD" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnESPECIALIDAD" msprop:Generator_ColumnPropNameInRow="ESPECIALIDAD" msprop:Generator_ColumnPropNameInTable="ESPECIALIDADColumn" msprop:Generator_UserColumnName="ESPECIALIDAD" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="CONFIRMADA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCONFIRMADA" msprop:Generator_ColumnPropNameInRow="CONFIRMADA" msprop:Generator_ColumnPropNameInTable="CONFIRMADAColumn" msprop:Generator_UserColumnName="CONFIRMADA" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="2" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="ATENDIDO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnATENDIDO" msprop:Generator_ColumnPropNameInRow="ATENDIDO" msprop:Generator_ColumnPropNameInTable="ATENDIDOColumn" msprop:Generator_UserColumnName="ATENDIDO" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="2" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="ANULADA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnANULADA" msprop:Generator_ColumnPropNameInRow="ANULADA" msprop:Generator_ColumnPropNameInTable="ANULADAColumn" msprop:Generator_UserColumnName="ANULADA" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="2" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="PAGADA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPAGADA" msprop:Generator_ColumnPropNameInRow="PAGADA" msprop:Generator_ColumnPropNameInTable="PAGADAColumn" msprop:Generator_UserColumnName="PAGADA" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="2" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
         <xs:element name="EstadistDental" msprop:Generator_TableClassName="EstadistDentalDataTable" msprop:Generator_TableVarName="tableEstadistDental" msprop:Generator_TablePropName="EstadistDental" msprop:Generator_RowDeletingName="EstadistDentalRowDeleting" msprop:Generator_RowChangingName="EstadistDentalRowChanging" msprop:Generator_RowEvHandlerName="EstadistDentalRowChangeEventHandler" msprop:Generator_RowDeletedName="EstadistDentalRowDeleted" msprop:Generator_UserTableName="EstadistDental" msprop:Generator_RowChangedName="EstadistDentalRowChanged" msprop:Generator_RowEvArgName="EstadistDentalRowChangeEvent" msprop:Generator_RowClassName="EstadistDentalRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FECHA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="8" />
+                    <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -1680,6 +1600,68 @@ SELECT CONVERT (varchar(10), CONVERT (date, FECHAALTA, 106), 103) AS FECHA, CPAC
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CitasDiarias" msprop:Generator_TableClassName="CitasDiariasDataTable" msprop:Generator_TableVarName="tableCitasDiarias" msprop:Generator_RowChangedName="CitasDiariasRowChanged" msprop:Generator_TablePropName="CitasDiarias" msprop:Generator_RowDeletingName="CitasDiariasRowDeleting" msprop:Generator_RowChangingName="CitasDiariasRowChanging" msprop:Generator_RowEvHandlerName="CitasDiariasRowChangeEventHandler" msprop:Generator_RowDeletedName="CitasDiariasRowDeleted" msprop:Generator_RowClassName="CitasDiariasRow" msprop:Generator_UserTableName="CitasDiarias" msprop:Generator_RowEvArgName="CitasDiariasRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HORARIO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnHORARIO" msprop:Generator_ColumnPropNameInRow="HORARIO" msprop:Generator_ColumnPropNameInTable="HORARIOColumn" msprop:Generator_UserColumnName="HORARIO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PACIENTE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPACIENTE" msprop:Generator_ColumnPropNameInRow="PACIENTE" msprop:Generator_ColumnPropNameInTable="PACIENTEColumn" msprop:Generator_UserColumnName="PACIENTE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="767" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MEDICO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMEDICO" msprop:Generator_ColumnPropNameInRow="MEDICO" msprop:Generator_ColumnPropNameInTable="MEDICOColumn" msprop:Generator_UserColumnName="MEDICO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="57" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ESPECIALIDAD" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnESPECIALIDAD" msprop:Generator_ColumnPropNameInRow="ESPECIALIDAD" msprop:Generator_ColumnPropNameInTable="ESPECIALIDADColumn" msprop:Generator_UserColumnName="ESPECIALIDAD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CONFIRMADA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCONFIRMADA" msprop:Generator_ColumnPropNameInRow="CONFIRMADA" msprop:Generator_ColumnPropNameInTable="CONFIRMADAColumn" msprop:Generator_UserColumnName="CONFIRMADA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ATENDIDA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnATENDIDA" msprop:Generator_ColumnPropNameInRow="ATENDIDA" msprop:Generator_ColumnPropNameInTable="ATENDIDAColumn" msprop:Generator_UserColumnName="ATENDIDA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ANULADA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnANULADA" msprop:Generator_ColumnPropNameInRow="ANULADA" msprop:Generator_ColumnPropNameInTable="ANULADAColumn" msprop:Generator_UserColumnName="ANULADA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PAGADA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPAGADA" msprop:Generator_ColumnPropNameInRow="PAGADA" msprop:Generator_ColumnPropNameInTable="PAGADAColumn" msprop:Generator_UserColumnName="PAGADA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

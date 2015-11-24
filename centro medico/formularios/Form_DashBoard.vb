@@ -40,7 +40,7 @@ Public Class Form_DashBoard
 
         '***Permisos***
         bImprimir.Enabled = (UiTabPage1.TabVisible Or UiTabPage2.TabVisible Or UiTabPage3.TabVisible Or UiTabPage4.TabVisible Or UiTabPage5.TabVisible Or UiTabPage6.TabVisible)
-        UiTabPage1.TabVisible = Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Cistas_por_estado) = RoleManager.TipoPermisos.Ninguno)
+        UiTabPage1.TabVisible = Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Citas_por_estado) = RoleManager.TipoPermisos.Ninguno)
         UiTabPage2.TabVisible = Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Relacion_de_Altas) = RoleManager.TipoPermisos.Ninguno)
         UiTabPage3.TabVisible = Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Citas_atendidas_por_medicos) = RoleManager.TipoPermisos.Ninguno)
         UiTabPage4.TabVisible = Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Citas_por_Especialidad) = RoleManager.TipoPermisos.Ninguno)
@@ -65,6 +65,7 @@ Public Class Form_DashBoard
 
         Dim dTable11 As New CM2DataSet.Grafic1DataTable
         dTable11 = Me.Grafic1TableAdapter.GetData()
+        Dim total As Integer = dTable11.Rows(0).Item("TOTAL")
         EmptGraf1 = dTable11.Rows(0).Item("CONFIRMADA") + dTable11.Rows(0).Item("ATENDIDA") + dTable11.Rows(0).Item("ANULADA") + dTable11.Rows(0).Item("PAGADA") > 0
         dView11 = dTable11.DefaultView
         If EmptGraf1 Then
@@ -83,12 +84,14 @@ Public Class Form_DashBoard
             Chart7.Series("Serie1").Points.AddXY("Anulada", anul)
             Chart7.Series("Serie1").Points.AddXY("Pagada", paga)
             Chart7.Series("Serie1").IsValueShownAsLabel = False
-            Chart7.Series("Serie1").CustomProperties = "PieDrawingStyle=SoftEdge"
+            Chart7.Series("Serie1").CustomProperties = "PieDrawingStyle=SoftEdge, PieLabelStyle=Outside"
             Chart7.Series("Serie1").Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
-            Chart7.ChartAreas("ChartArea1").Position.Height = 75.0!
-            Chart7.ChartAreas("ChartArea1").Position.Width = 75.0!
-            Chart7.ChartAreas("ChartArea1").Position.X = 12.0!
-            Chart7.ChartAreas("ChartArea1").Position.Y = 8.0!
+            Chart7.Titles("Title1").Text = "Analisis Porcentual del Total de Citas (" & total & ")"
+            Chart7.Titles("Title1").Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold)
+            Chart7.ChartAreas("ChartArea1").Position.Height = 95.0!
+            Chart7.ChartAreas("ChartArea1").Position.Width = 95.0!
+            Chart7.ChartAreas("ChartArea1").Position.X = 10.0!
+            Chart7.ChartAreas("ChartArea1").Position.Y = 2.0!
             Chart7.ChartAreas("ChartArea1").Area3DStyle.Enable3D = True
             Chart7.ChartAreas("ChartArea1").Area3DStyle.Inclination = 40
             Chart7.Legends("Legend1").BackColor = System.Drawing.Color.Transparent
@@ -102,9 +105,18 @@ Public Class Form_DashBoard
             Chart7.Legends("Legend1").Position.Width = 99.0!
             Chart7.Legends("Legend1").Position.Y = 94.0!
             For Each dp As DataPoint In Chart7.Series("Serie1").Points
+                Dim temp As String
+                Dim per As Double
+                temp = dp.AxisLabel
                 dp.IsValueShownAsLabel = True
                 If dp.YValues(0) = 0 Then
                     dp.IsValueShownAsLabel = False
+                End If
+                If dp.YValues(0) <> 0 Then
+                    per = (dp.YValues(0) / total) * 100
+                    dp.Label = Format(per, "###.###") & "%"
+                    If dp.Label.Substring(0, 1) = "," Then dp.Label = "0" & dp.Label
+                    dp.LegendText = temp
                 End If
             Next
         Else
@@ -187,7 +199,7 @@ Public Class Form_DashBoard
         If EmptGraf4 Then
             Chart5.DataSource = dTable4
             Chart9.DataSource = dTable4
-            Label25.Text = "Citas Mensuales por Especialidad (" & DateTimePicker6.Value.ToString("MM / yyyy") & ")"
+            Label25.Text = "Citas Mensuales por Especialidad (" & DateTimePicker6.Value.ToString("MMMM yyyy") & ")"
         Else
             Label25.Visible = False
             UiGroupBox11.Visible = False
@@ -207,13 +219,15 @@ Public Class Form_DashBoard
         DataGridView5.DataSource = dTable5
         dView5 = dTable5.DefaultView
 
-        'Dim dTable51 As New CM2DataSet.Top10_TratamientoDataTable
-        'dTable51 = Me.Top10_TratamientoTableAdapter1.GetDataBy(DateTimePicker8.Value.Date)
+        Dim view As New DataView(dTable5)
+        view.Sort = "CantTratamientos ASC"
+        Dim dTable51 As DataTable = view.ToTable()
+
         EmptGraf5 = dTable5.Count() > 0
         If EmptGraf5 Then
-            Chart6.DataSource = dTable5
+            Chart6.DataSource = dTable51
             Chart10.DataSource = dTable5
-            Label26.Text = "Top 10 Tratamientos Mensuales (" & DateTimePicker8.Value.ToString("MM / yyyy") & ")"
+            Label26.Text = "Top 10 Tratamientos Mensuales (" & DateTimePicker8.Value.ToString("MMMM yyyy") & ")"
         Else
             Label26.Visible = False
             UiGroupBox13.Visible = False
@@ -228,17 +242,31 @@ Public Class Form_DashBoard
         fecha6 = DateTimePicker9.Value
 
         Dim dTable6 As New CM2DataSet.EstadistDentalDataTable
-        dTable6 = Me.EstadistDentalTableAdapter1.GetData(DateTimePicker9.Value.Date, DateTimePicker10.Value.Date)
+        dTable6 = Me.EstadistDentalTableAdapter1.GetData(0, "", DateTimePicker9.Value.Date, DateTimePicker10.Value.Date)
         DataGridView6.DataSource = dTable6
         dView6 = dTable6.DefaultView
 
-        Dim dTable61 As New CM2DataSet.EstadistDentalDataTable
-        dTable61 = Me.EstadistDentalTableAdapter1.GetDataBy(DateTimePicker10.Value.Date)
-        EmptGraf6 = dTable61.Count() > 0
-        dView61 = dTable61.DefaultView
+        dTable6 = Me.EstadistDentalTableAdapter1.GetData(1, DateTimePicker10.Value.Year, DateTimePicker9.Value.Date, DateTimePicker10.Value.Date)
+
+        Dim view1 As New DataView(dTable6)
+        view1.Sort = "FECHA ASC"
+        Dim dTable61 As DataTable = view1.ToTable()
+
+        dTable6.Clear()
+        For Each row As DataRow In dTable61.Rows
+            Dim fecha As String = If(Not IsDBNull(row.Item("FECHA")), row.Item("FECHA"), "")
+            Dim pres As String = If(Not IsDBNull(row.Item("Presupuestado")), row.Item("Presupuestado"), "")
+            Dim acep As String = If(Not IsDBNull(row.Item("Aceptado")), row.Item("Aceptado"), "")
+            Dim fech As DateTime = New DateTime(fecha.Substring(0, 4), fecha.Substring(5, 2), 1)
+            fecha = fech.ToString("MMMM")
+            dTable6.Rows.Add(fecha, pres, acep)
+        Next
+
+        EmptGraf6 = dTable6.Count() > 0
+        dView61 = dTable6.DefaultView
         If EmptGraf6 Then
-            Chart1.DataSource = dTable61
-            Chart11.DataSource = dTable61
+            Chart1.DataSource = dTable6
+            Chart11.DataSource = dTable6
             Label27.Text = "Tratamientos Presupuestados Frente a los Aceptados (" & DateTimePicker10.Value.Year & ")"
         Else
             Label27.Visible = False
@@ -272,16 +300,15 @@ Public Class Form_DashBoard
         If TextBox2.Text.Length > 0 Then medico = TextBox2.Text
 
         For Each row As DataRow In dTable.Rows
+
             paciente1 = If(Not IsDBNull(row.Item("PACIENTE")), row.Item("PACIENTE"), "")
             medico1 = If(Not IsDBNull(row.Item("MEDICO")), row.Item("MEDICO"), "")
             espec = If(Not IsDBNull(row.Item("ESPECIALIDAD")), row.Item("ESPECIALIDAD"), "")
             conf = If(Not IsDBNull(row.Item("CONFIRMADA")), row.Item("CONFIRMADA"), "")
-            atend = If(Not IsDBNull(row.Item("ATENDIDO")), row.Item("ATENDIDO"), "")
+            atend = If(Not IsDBNull(row.Item("ATENDIDA")), row.Item("ATENDIDA"), "")
             anul = If(Not IsDBNull(row.Item("ANULADA")), row.Item("ANULADA"), "")
             pag = If(Not IsDBNull(row.Item("PAGADA")), row.Item("PAGADA"), "")
             hora = If(Not IsDBNull(row.Item("HORARIO")), row.Item("HORARIO"), "")
-
-
 
             If paciente1.ToLower().Contains(paciente.ToLower()) And
                medico1.ToLower().Contains(medico.ToLower()) And
@@ -310,6 +337,7 @@ Public Class Form_DashBoard
         If CheckBox5.Checked Then
             If num.Length < 4 Or Convert.ToInt16(num) < 2005 Or Convert.ToInt16(num) > Date.Now.Year Then
                 MsgBox("El año introducido no es válido", vbExclamation)
+                TextBox6.Text = Date.Now.Year
             Else
                 Anual = 1
                 Dim dTable2 As New CM2DataSet.PacientesAltaDataTable
@@ -331,7 +359,6 @@ Public Class Form_DashBoard
                     Label19.Visible = False
                 Else
                     Chart2.Visible = False
-                    Label19.Text = "El año seleccionado no tiene información disponible"
                     If BVerTabla.Visible Then Label19.Visible = True Else Label19.Visible = False
                 End If
 
@@ -370,7 +397,6 @@ Public Class Form_DashBoard
                     Label19.Visible = False
                 Else
                     Chart2.Visible = False
-                    Label19.Text = "El rango seleccionado no tiene información disponible"
                     If BVerTabla.Visible Then Label19.Visible = True Else Label19.Visible = False
                 End If
 
@@ -498,7 +524,7 @@ Public Class Form_DashBoard
                 Chart5.DataBind()
                 Chart9.DataSource = dTable41
                 Chart9.DataBind()
-                Label25.Text = "Citas Mensuales por Especialidad (" & DateTimePicker6.Value.ToString("MM / yyyy") & ")"
+                Label25.Text = "Citas Mensuales por Especialidad (" & DateTimePicker6.Value.ToString("MMMMM yyyy") & ")"
                 Label21.Visible = False
                 If BVerTabla.Visible Then
                     Label25.Visible = True
@@ -533,25 +559,25 @@ Public Class Form_DashBoard
             fecha5 = DateTimePicker7.Value
             If TextBox5.Text.Length > 0 Then trat = TextBox5.Text
 
-            Dim dTable As New CM2DataSet.Top10_TratamientoDataTable
-            Dim dTable1 As New CM2DataSet.Top10_TratamientoDataTable
-            dTable = Me.Top10_TratamientoTableAdapter1.GetData(DateTimePicker7.Value.Date, DateTimePicker8.Value.Date)
+            Dim dTable5 As New CM2DataSet.Top10_TratamientoDataTable
+            Dim dTable51 As New CM2DataSet.Top10_TratamientoDataTable
+            dTable5 = Me.Top10_TratamientoTableAdapter1.GetData(DateTimePicker7.Value.Date, DateTimePicker8.Value.Date)
 
-            For Each row As DataRow In dTable.Rows
+            For Each row As DataRow In dTable5.Rows
                 fecha = If(Not IsDBNull(row.Item("FECHA")), row.Item("FECHA"), "")
                 trat1 = If(Not IsDBNull(row.Item("Tratamiento")), row.Item("Tratamiento"), "")
                 cant = If(Not IsDBNull(row.Item("CantTratamientos")), row.Item("CantTratamientos"), "")
 
                 If trat1.ToLower().Contains(trat.ToLower()) Then
-                    dTable1.Rows.Add(fecha, trat1, cant)
+                    dTable51.Rows.Add(fecha, trat1, cant)
                 End If
             Next
 
-            DataGridView5.DataSource = dTable1
-            dView5 = dTable1.DefaultView
+            DataGridView5.DataSource = dTable51
+            dView5 = dTable51.DefaultView
 
-            If dTable1.Count() > 0 And Not ((DateTimePicker7.Value.Month = DateTimePicker8.Value.Month) And (DateTimePicker7.Value.Year = DateTimePicker8.Value.Year)) Then 'CheckBox8.Checked And
-                Dim DisInf As String = dTable1.Rows(0).Item("FECHA").ToString()
+            If dTable51.Count() > 0 And Not ((DateTimePicker7.Value.Month = DateTimePicker8.Value.Month) And (DateTimePicker7.Value.Year = DateTimePicker8.Value.Year)) Then 'CheckBox8.Checked And
+                Dim DisInf As String = dTable51.Rows(0).Item("FECHA").ToString()
                 Dim firstOfMonth As DateTime = New DateTime(DisInf.Substring(0, 4), DisInf.Substring(5, 2), 1)
                 Dim lastOfMonth As DateTime = firstOfMonth.Date.AddDays(-(firstOfMonth.Day - 1)).AddMonths(1).AddDays(-1)
                 If DateTimePicker8.Value.Month = firstOfMonth.Month Then
@@ -562,15 +588,19 @@ Public Class Form_DashBoard
                 End If
             End If
 
-            Dim dTable51 As New CM2DataSet.Top10_TratamientoDataTable
-            dTable51 = Me.Top10_TratamientoTableAdapter1.GetData(DateTimePicker7.Value.Date, DateTimePicker8.Value.Date)
-            EmptGraf5 = dTable51.Count() > 0
+            dTable5 = Me.Top10_TratamientoTableAdapter1.GetData(DateTimePicker7.Value.Date, DateTimePicker8.Value.Date)
+
+            Dim view As New DataView(dTable5)
+            view.Sort = "CantTratamientos ASC"
+            Dim dTable As DataTable = view.ToTable()
+
+            EmptGraf5 = dTable5.Count() > 0
             If EmptGraf5 Then
-                Chart6.DataSource = dTable51
+                Chart6.DataSource = dTable
                 Chart6.DataBind()
-                Chart10.DataSource = dTable51
+                Chart10.DataSource = dTable5
                 Chart10.DataBind()
-                Label26.Text = "Top 10 Tratamientos Mensuales (" & DateTimePicker8.Value.ToString("MM / yyyy") & ")"
+                Label26.Text = "Top 10 Tratamientos Mensuales (" & DateTimePicker8.Value.ToString("MMMM yyyy") & ")"
                 Label22.Visible = False
                 If BVerTabla.Visible Then
                     Label26.Visible = True
@@ -579,7 +609,6 @@ Public Class Form_DashBoard
                 Else
                     DateTimePicker7.Value = fecha5
                 End If
-
 
             Else
                 Label26.Visible = False
@@ -590,52 +619,124 @@ Public Class Form_DashBoard
         End If
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button4.Click, Button5.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
 
+        Dim fecha As String
+        Dim pres As String
+        Dim acep As String
         Dim mindate1 As New Date
         mindate1 = DateTimePicker9.Value.Date
+        Dim num As String = TextBox7.Text
+        Dim Anual As Integer = 0
+        If num = "" Then
+            num = "1"
+        End If
+        If CheckBox6.Checked Then
+            If num.Length < 4 Or Convert.ToInt16(num) < 2005 Or Convert.ToInt16(num) > Date.Now.Year Then
+                MsgBox("El año introducido no es válido", vbExclamation)
+                TextBox7.Text = Date.Now.Year
+            Else
+                Anual = 1
+                Dim dTable61 As New CM2DataSet.EstadistDentalDataTable
+                Dim dTable6 As New CM2DataSet.EstadistDentalDataTable
+                dTable6 = Me.EstadistDentalTableAdapter1.GetData(Anual, num, DateTimePicker9.Value.Date, DateTimePicker10.Value.Date)
+                DataGridView6.DataSource = dTable6
+                dView6 = dTable6.DefaultView
 
-        If DateTimePicker9.Value > DateTimePicker10.Value Then
+                Dim view As New DataView(dTable6)
+                view.Sort = "FECHA ASC"
+                Dim dTable As DataTable = view.ToTable()
 
-            DateTimePicker9.Focus()
-            MsgBox("El rango de fecha es incorrecto. Rectifíquelo", vbExclamation)
-        Else
-            If DateTimePicker9.Value.Year < DateTimePicker10.Value.Year Then
-                mindate1 = New DateTime(DateTimePicker10.Value.Year, 1, 1)
-            End If
-            fecha6 = DateTimePicker9.Value
-            Dim dTable As New CM2DataSet.EstadistDentalDataTable
-            dTable = Me.EstadistDentalTableAdapter1.GetData(DateTimePicker9.Value.Date, DateTimePicker10.Value.Date)
-            DataGridView6.DataSource = dTable
-            dView6 = dTable.DefaultView
+                For Each row As DataRow In dTable.Rows
+                    fecha = If(Not IsDBNull(row.Item("FECHA")), row.Item("FECHA"), "")
+                    pres = If(Not IsDBNull(row.Item("Presupuestado")), row.Item("Presupuestado"), "")
+                    acep = If(Not IsDBNull(row.Item("Aceptado")), row.Item("Aceptado"), "")
+                    Dim fech As DateTime = New DateTime(fecha.Substring(0, 4), fecha.Substring(5, 2), 1)
+                    fecha = fech.ToString("MMMM")
+                    dTable61.Rows.Add(fecha, pres, acep)
+                Next
 
-            Dim dTable61 As New CM2DataSet.EstadistDentalDataTable
-            dTable61 = Me.EstadistDentalTableAdapter1.GetDataBy(DateTimePicker10.Value.Date)
-            EmptGraf6 = dTable61.Count() > 0
-            dView61 = dTable61.DefaultView
-            If EmptGraf6 Then
-                Chart1.DataSource = dTable61
-                Chart1.DataBind()
-                Chart11.DataSource = dTable61
-                Chart11.DataBind()
-                Label27.Text = "Tratamientos Presupuestados Frente a los Aceptados (" & DateTimePicker10.Value.Year & ")"
-                Label23.Visible = False
-                If BVerTabla.Visible Then
-                    Label26.Visible = True
-                    UiGroupBox15.Visible = True
-                    UiGroupBox16.Visible = True
-                    DateTimePicker9.Value = mindate1
+                dView61 = dTable61.DefaultView
+
+                EmptGraf6 = dTable61.Count() > 0
+                If EmptGraf6 Then
+                    Chart1.DataSource = dTable61
+                    Chart1.DataBind()
+                    Chart11.DataSource = dTable61
+                    Chart11.DataBind()
+                    Label27.Text = "Tratamientos Presupuestados Frente a los Aceptados (" & num & ")"
+                    Label23.Visible = False
+                    If BVerTabla.Visible Then
+                        Label26.Visible = True
+                        UiGroupBox15.Visible = True
+                        UiGroupBox16.Visible = True
+                    End If
+
+                Else
+                    Label27.Visible = False
+                    UiGroupBox15.Visible = False
+                    UiGroupBox16.Visible = False
+                    If BVerTabla.Visible Then Label23.Visible = True Else Label23.Visible = False
                 End If
 
-            Else
-                Label27.Visible = False
-                UiGroupBox15.Visible = False
-                UiGroupBox16.Visible = False
-                If BVerTabla.Visible Then Label23.Visible = True Else Label23.Visible = False
             End If
+        Else
+            If DateTimePicker9.Value > DateTimePicker10.Value Then
+                DateTimePicker9.Focus()
+                MsgBox("El rango de fecha es incorrecto. Rectifíquelo", vbExclamation)
+            Else
+                If DateTimePicker9.Value.Year < DateTimePicker10.Value.Year Then
+                    mindate1 = New DateTime(DateTimePicker10.Value.Year, 1, 1)
+                End If
+                fecha6 = DateTimePicker9.Value
 
+                Dim dTable6 As New CM2DataSet.EstadistDentalDataTable
+                Dim dTable61 As New CM2DataSet.EstadistDentalDataTable
+                dTable6 = Me.EstadistDentalTableAdapter1.GetData(Anual, num, DateTimePicker9.Value.Date, DateTimePicker10.Value.Date)
+                DataGridView6.DataSource = dTable6
+                dView6 = dTable6.DefaultView
 
+                dTable6 = Me.EstadistDentalTableAdapter1.GetData(Anual, num, mindate1, DateTimePicker10.Value.Date)
+
+                Dim view As New DataView(dTable6)
+                view.Sort = "FECHA ASC"
+                Dim dTable As DataTable = view.ToTable()
+
+                For Each row As DataRow In dTable.Rows
+                    fecha = If(Not IsDBNull(row.Item("FECHA")), row.Item("FECHA"), "")
+                    pres = If(Not IsDBNull(row.Item("Presupuestado")), row.Item("Presupuestado"), "")
+                    acep = If(Not IsDBNull(row.Item("Aceptado")), row.Item("Aceptado"), "")
+                    Dim fech As DateTime = New DateTime(fecha.Substring(0, 4), fecha.Substring(5, 2), 1)
+                    fecha = fech.ToString("MMMM")
+                    dTable61.Rows.Add(fecha, pres, acep)
+                Next
+
+                EmptGraf6 = dTable61.Count() > 0
+                dView61 = dTable61.DefaultView
+                If EmptGraf6 Then
+                    Chart1.DataSource = dTable61
+                    Chart1.DataBind()
+                    Chart11.DataSource = dTable61
+                    Chart11.DataBind()
+                    Label27.Text = "Tratamientos Presupuestados Frente a los Aceptados (" & DateTimePicker10.Value.Year & ")"
+                    Label23.Visible = False
+                    If BVerTabla.Visible Then
+                        Label26.Visible = True
+                        UiGroupBox15.Visible = True
+                        UiGroupBox16.Visible = True
+                        DateTimePicker9.Value = mindate1
+                    End If
+
+                Else
+                    Label27.Visible = False
+                    UiGroupBox15.Visible = False
+                    UiGroupBox16.Visible = False
+                    If BVerTabla.Visible Then Label23.Visible = True Else Label23.Visible = False
+                End If
+
+            End If
         End If
+
     End Sub
 
     Private Sub bImprimir_Click(sender As Object, e As EventArgs) Handles bImprimir.Click
@@ -928,7 +1029,7 @@ Public Class Form_DashBoard
 
     End Sub
 
-    Private Sub TextBox6_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox6.KeyPress
+    Private Sub TextBox6_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox6.KeyPress, TextBox7.KeyPress
         '97 - 122 = Ascii codes for simple letters
         '65 - 90  = Ascii codes for capital letters
         '48 - 57  = Ascii codes for numbers
@@ -951,6 +1052,20 @@ Public Class Form_DashBoard
             TextBox6.Text = ""
             DateTimePicker1.Enabled = True
             DateTimePicker2.Enabled = True
+        End If
+    End Sub
+
+    Private Sub CheckBox6_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles CheckBox6.CheckedChanged
+        If CheckBox6.Checked Then
+            TextBox7.Enabled = True
+            TextBox7.Text = Date.Now.Year
+            DateTimePicker9.Enabled = False
+            DateTimePicker10.Enabled = False
+        Else
+            TextBox7.Enabled = False
+            TextBox7.Text = ""
+            DateTimePicker9.Enabled = True
+            DateTimePicker10.Enabled = True
         End If
     End Sub
 End Class

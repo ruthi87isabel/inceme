@@ -720,7 +720,7 @@
         </ChartLegends>
         <ChartTitles>
           <ChartTitle Name="Default">
-            <Caption>= "Comportamiento Anual (" &amp; Year(First(Fields!FECHAALTA.Value, "DataSet3")) &amp; ")"</Caption>
+            <Caption>= "Comportamiento Anual (" &amp; Year(First(Fields!FECHA.Value, "DataSet3")) &amp; ")"</Caption>
             <Style>
               <BackgroundGradientType>None</BackgroundGradientType>
               <FontSize>12pt</FontSize>
@@ -1027,21 +1027,21 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="FECHAALTA1">
+                    <Textbox Name="FECHA">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Day(Fields!FECHAALTA.Value)&amp;"/"&amp;Month(Fields!FECHAALTA.Value)&amp;"/"&amp;Year(Fields!FECHAALTA.Value)</Value>
+                              <Value>=Fields!FECHA.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>FECHAALTA1</rd:DefaultName>
+                      <rd:DefaultName>FECHA</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -1464,9 +1464,9 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="FECHAALTA">
-          <DataField>FECHAALTA</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
+        <Field Name="FECHA">
+          <DataField>FECHA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="CPACIENTE">
           <DataField>CPACIENTE</DataField>
@@ -1499,7 +1499,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>CM2DataSet</rd:DataSetName>
-        <rd:SchemaPath>G:\1jose\Trabajo1\project\inceme-master\centro medico\Logica\CM2DataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>I:\1jose\Trabajo1\Project\centro medico\Logica\CM2DataSet.xsd</rd:SchemaPath>
         <rd:TableName>PacientesAlta</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

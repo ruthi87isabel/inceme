@@ -16,7 +16,7 @@
               <Label>CONFIRMADA</Label>
             </ChartMember>
             <ChartMember>
-              <Label>ATENDIDO</Label>
+              <Label>ATENDIDA</Label>
             </ChartMember>
             <ChartMember>
               <Label>ANULADA</Label>
@@ -69,11 +69,11 @@
                 <MinMovingDistance>0pt</MinMovingDistance>
               </ChartSmartLabel>
             </ChartSeries>
-            <ChartSeries Name="ATENDIDO">
+            <ChartSeries Name="ATENDIDA">
               <ChartDataPoints>
                 <ChartDataPoint>
                   <ChartDataPointValues>
-                    <Y>=Sum(Fields!ATENDIDO.Value)</Y>
+                    <Y>=Sum(Fields!ATENDIDA.Value)</Y>
                   </ChartDataPointValues>
                   <ChartDataLabel>
                     <Style />
@@ -615,7 +615,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ATENDIDO</Value>
+                              <Value>ATENDIDA</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -862,21 +862,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="ATENDIDO">
+                    <Textbox Name="ATENDIDA">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ATENDIDO.Value</Value>
+                              <Value>=Fields!ATENDIDA.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>ATENDIDO</rd:DefaultName>
+                      <rd:DefaultName>ATENDIDA</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -1135,8 +1135,8 @@
           <DataField>CONFIRMADA</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ATENDIDO">
-          <DataField>ATENDIDO</DataField>
+        <Field Name="ATENDIDA">
+          <DataField>ATENDIDA</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="ANULADA">
@@ -1150,7 +1150,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>CM2DataSet</rd:DataSetName>
-        <rd:SchemaPath>G:\1jose\Trabajo1\project\inceme-master\centro medico\Logica\CM2DataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>I:\1jose\Trabajo1\Project\centro medico\Logica\CM2DataSet.xsd</rd:SchemaPath>
         <rd:TableName>CitasDiarias</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -1167,8 +1167,8 @@
           <DataField>CONFIRMADA</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="ATENDIDO">
-          <DataField>ATENDIDO</DataField>
+        <Field Name="ATENDIDA">
+          <DataField>ATENDIDA</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="ANULADA">
@@ -1186,7 +1186,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>CM2DataSet</rd:DataSetName>
-        <rd:SchemaPath>G:\1jose\Trabajo1\project\inceme-master\centro medico\Logica\CM2DataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>I:\1jose\Trabajo1\Project\centro medico\Logica\CM2DataSet.xsd</rd:SchemaPath>
         <rd:TableName>Grafic1</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

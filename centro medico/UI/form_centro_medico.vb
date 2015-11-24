@@ -318,7 +318,7 @@ Public Class form_centro_medico
         frmProcesosMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Procesos) = RoleManager.TipoPermisos.Ninguno)
 
         'Dashboard
-        menu_DashBoard.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Cistas_por_estado) = RoleManager.TipoPermisos.Ninguno) Or
+        menu_DashBoard.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Citas_por_estado) = RoleManager.TipoPermisos.Ninguno) Or
                                  Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Relacion_de_Altas) = RoleManager.TipoPermisos.Ninguno) Or
                                  Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Citas_atendidas_por_medicos) = RoleManager.TipoPermisos.Ninguno) Or
                                  Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Citas_por_Especialidad) = RoleManager.TipoPermisos.Ninguno) Or
