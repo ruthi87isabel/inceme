@@ -232,7 +232,7 @@ Public Class form_analiticas
             chb_estado.Checked = False
         End If
 
-        ckRecibida.Checked = _data.Rows(0).Item("RECIBIDA")
+        ckRecibida.Checked = If(Not IsDBNull(_data.Rows(0).Item("RECIBIDA")), _data.Rows(0).Item("RECIBIDA"), False)
 
         Dim _dataf As CMDataSet.LINEASANALITICASDataTable
 
@@ -847,5 +847,5 @@ Public Class form_analiticas
         filtra(Me.tb_buscar.Text.Trim)
     End Sub
 
-    
+
 End Class
