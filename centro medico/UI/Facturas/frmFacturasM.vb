@@ -476,7 +476,7 @@ Public Class frmFacturasM
         newFactura.FALTA = Factura.FALTA
         newFactura.FBAJA = Factura.FBAJA
         newFactura.FECHA = Factura.FECHA
-        newFactura.FECHACOBRO = Factura.FECHACOBRO
+        'newFactura.FECHACOBRO = Factura.FECHACOBRO
         newFactura.FEMISION = Factura.FEMISION
         newFactura.FORMASPAGO = Factura.FORMASPAGO
         newFactura.HISTORIAL = Factura.HISTORIAL
@@ -485,24 +485,35 @@ Public Class frmFacturasM
         newFactura.HORA = Factura.HORA
         newFactura.ID_Proceso = Factura.ID_Proceso
         newFactura.IRPF = Factura.IRPF
-        newFactura.LINEASFACTURAs = Factura.LINEASFACTURAs
 
+        For Each linFact As LINEASFACTURA In Factura.LINEASFACTURAs
+            Dim newLinF As LINEASFACTURA = New LINEASFACTURA()
+            newLinF.CONCEPTO = linFact.CONCEPTO
+            newLinF.IMPORTE = linFact.IMPORTE
+            newLinF.REFCONCEPTO = linFact.REFCONCEPTO
+            newLinF.CANTIDAD = linFact.CANTIDAD
+            newLinF.TIPOIVA = linFact.TIPOIVA
+            newLinF.ID_Cita = linFact.ID_Cita
+            newLinF.Descuento = linFact.Descuento
+            newLinF.ImporteOriginal = linFact.ImporteOriginal
+            newLinF.RefLineaCita = linFact.RefLineaCita
+
+            newFactura.LINEASFACTURAs.Add(newLinF)
+        Next
 
         newFactura.LOCALIDAD = Factura.LOCALIDAD
-
         newFactura.MUTUA = Factura.MUTUA
-
 
         newFactura.MUTUA = Factura.MUTUA
         newFactura.MUTUA1 = Factura.MUTUA1
-        'newFactura.NUMERO = Factura.NUMERO
+        newFactura.NUMERO = Factura.NUMERO
         newFactura.N19 = Factura.N19
 
         newFactura.PACIENTE = Factura.PACIENTE
         newFactura.PACIENTE1 = Factura.PACIENTE1
         'newFactura.REFPACIENTE = Factura.REFPACIENTE
 
-        newFactura.PAGADA = Factura.PAGADA
+        'newFactura.PAGADA = Factura.PAGADA
 
         newFactura.PORCENTAJEIRPF = Factura.PORCENTAJEIRPF
 
@@ -519,6 +530,7 @@ Public Class frmFacturasM
         frm.Factura = newFactura
         'frm.Nuevo = True
         frm.Factura.IDFACTURA = GetNewFacturaID()
+        frm.Factura.NUMEROFACTURA = frm.Factura.IDFACTURA
         frm.Context = Context
         frm.Factura.NUMERO = Number(Factura.SERIES)
 

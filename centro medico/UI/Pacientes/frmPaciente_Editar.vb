@@ -58,7 +58,8 @@ Public Class frmPaciente_Editar
         If chb_dpAsociado.Checked Then
             pac.SOCIO = "S"
         Else
-            pac.SOCIO = "N"
+            'pac.SOCIO = "N"
+            DeleteAsociadoYBeneficiarios(pac)
         End If
         If chb_dpFallecido.Checked Then
             pac.DEFUNCION = "S"
@@ -974,6 +975,17 @@ Public Class frmPaciente_Editar
         Else
             Return (nombre & " " & apellido1 & " " & apellido2).Trim()
         End If
+    End Function
+    Private Function DeleteAsociadoYBeneficiarios(paciente As PACIENTE)
+        paciente.SOCIO = "N"
+        Dim asociados As List(Of Asociado) = paciente.Asociados1.ToList()
+
+        For Each asoc As Asociado In asociados
+            asoc.PACIENTE.BENEFICIARIOCODIGOSOCIO = 0
+        Next
+
+        Me.context.Asociados.DeleteAllOnSubmit(asociados)
+        Me.context.SubmitChanges()
     End Function
 
     Private Sub CtrlEmpresa1_EMPRESANoEncontrado()
