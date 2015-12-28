@@ -217,9 +217,18 @@ Public Class frmRoles
 
             For Each i In [Enum].GetValues(GetType(centro_medico.RoleManager.Items))
                 Dim tmp As Integer = rper.Where(Function(o) o.ID_ROLESITEM = i).Count
+                Dim name As String = CType(i, centro_medico.RoleManager.Items).ToString()
                 If tmp > 0 Then
                     esta = True
                 Else
+                    If Not db.ROLESITEMs.Where(Function(o) o.ID_ROLESITEM = i).Count() > 0 Then
+                        Dim ROLESITEMS As New ROLESITEM With {
+                        .ID_ROLESITEM = i,
+                        .Nombre = name
+                                }
+                        db.ROLESITEMs.InsertOnSubmit(ROLESITEMS)
+                    End If
+
                     Dim rolepermision As New ROLESPERMISO With {
                                 .ID_ROLES = id,
                                 .ID_ROLESITEM = i,
@@ -239,10 +248,12 @@ Public Class frmRoles
             End Try
 
         Next
+        log = vbCrLf & log
         MsgBox("Roles Completados: " & log)
     End Sub
 
-    Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripLabel1.Click
+
+    Private Sub tst_Permisos_Click(sender As Object, e As EventArgs) Handles tst_Permisos.Click
         Dim res As MsgBoxResult
         If (Globales.Usuario.EsAdministrador) Then
             res = MsgBox("Se dispone a completar los permisos de todos los roles, no continue si no sabe lo que está haciendo. ¿Desea continuar?", MsgBoxStyle.YesNo)

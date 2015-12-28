@@ -41,7 +41,8 @@ Partial Class frmRoles
         Me.tst_Editar = New System.Windows.Forms.ToolStripButton()
         Me.tst_Eliminar = New System.Windows.Forms.ToolStripButton()
         Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tst_Permisos = New System.Windows.Forms.ToolStripButton()
         Me.lnk_Exportar = New System.Windows.Forms.LinkLabel()
         Me.lnk_GrantALL = New System.Windows.Forms.LinkLabel()
         Me.lnk_DenyAll = New System.Windows.Forms.LinkLabel()
@@ -205,7 +206,7 @@ Partial Class frmRoles
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.tst_Editar, Me.tst_Eliminar, Me.SaveToolStripButton, Me.ToolStripLabel1})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.tst_Editar, Me.tst_Eliminar, Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.tst_Permisos})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(687, 25)
@@ -219,7 +220,7 @@ Partial Class frmRoles
         Me.NewToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.NewToolStripButton.Name = "NewToolStripButton"
         Me.NewToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.NewToolStripButton.Text = "&Añadir"
+        Me.NewToolStripButton.Text = "&Añadir Rol"
         '
         'tst_Editar
         '
@@ -229,7 +230,7 @@ Partial Class frmRoles
         Me.tst_Editar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tst_Editar.Name = "tst_Editar"
         Me.tst_Editar.Size = New System.Drawing.Size(23, 22)
-        Me.tst_Editar.Text = "&Modificar"
+        Me.tst_Editar.Text = "&Modificar Rol"
         '
         'tst_Eliminar
         '
@@ -239,7 +240,7 @@ Partial Class frmRoles
         Me.tst_Eliminar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tst_Eliminar.Name = "tst_Eliminar"
         Me.tst_Eliminar.Size = New System.Drawing.Size(23, 22)
-        Me.tst_Eliminar.Text = "ToolStripButton1"
+        Me.tst_Eliminar.Text = "&Eliminar Rol"
         '
         'SaveToolStripButton
         '
@@ -248,13 +249,21 @@ Partial Class frmRoles
         Me.SaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.SaveToolStripButton.Name = "SaveToolStripButton"
         Me.SaveToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.SaveToolStripButton.Text = "&Save"
+        Me.SaveToolStripButton.Text = "&Guardar Rol"
         '
-        'ToolStripLabel1
+        'ToolStripSeparator1
         '
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(94, 22)
-        Me.ToolStripLabel1.Text = "Completar Roles"
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'tst_Permisos
+        '
+        Me.tst_Permisos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tst_Permisos.Image = Global.centro_medico.My.Resources.Resources.permisos
+        Me.tst_Permisos.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tst_Permisos.Name = "tst_Permisos"
+        Me.tst_Permisos.Size = New System.Drawing.Size(23, 22)
+        Me.tst_Permisos.Text = "&Completar Roles"
         '
         'lnk_Exportar
         '
@@ -368,5 +377,6 @@ Partial Class frmRoles
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Fixed As System.Windows.Forms.DataGridViewCheckBoxColumn
     Friend WithEvents lblInfo As System.Windows.Forms.Label
-    Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents tst_Permisos As System.Windows.Forms.ToolStripButton
 End Class
