@@ -194,7 +194,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=FormatCurrency(Fields!LineasCita_ImporteDr.Value)</Value>
+                              <Value>=FormatCurrency(Fields!LineasCita_ImporteDr.Value * Fields!LineasCita_Cantidad.Value)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -300,7 +300,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=FormatCurrency(Sum(Fields!LineasCita_ImporteDr.Value))</Value>
+                              <Value>=FormatCurrency(Sum(Fields!LineasCita_ImporteDr.Value * Fields!LineasCita_Cantidad.Value))</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -421,7 +421,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=FormatCurrency(Sum(Fields!LineasCita_ImporteDr.Value))</Value>
+                              <Value>=FormatCurrency(Sum(Fields!LineasCita_ImporteDr.Value * Fields!LineasCita_Cantidad.Value))</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>

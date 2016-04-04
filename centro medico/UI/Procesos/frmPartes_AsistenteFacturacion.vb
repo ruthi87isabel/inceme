@@ -191,7 +191,7 @@ Public Class frmPartes_AsistenteFacturacion
         If ID_Proceso <> -1 Then
             factura.ID_Proceso = ID_Proceso
         End If
-
+        Dim txtauditoria As String = ""
         Dim total As Double = 0
         For Each row As DataGridViewRow In GridLineas.Rows
 
@@ -213,6 +213,8 @@ Public Class frmPartes_AsistenteFacturacion
             ' total = total + lineaFactura.IMPORTE
             'lineaFactura.CONCEPTO = lineaFactura.CONCEPTO.Substring(0, Math.Min(lineaFactura.CONCEPTO.Length, 90))
             factura.LINEASFACTURAs.Add(lineaFactura)
+
+            txtauditoria = txtauditoria & vbCrLf & "Linea " & lineaFactura.RefLineaCita & " de la cita " & lineaFactura.ID_Cita & " añadido a la fra " & lineaFactura.REFFACTURA
         Next
 
         factura.TOTAL = total 'Hay que calcularlo
@@ -291,7 +293,7 @@ Public Class frmPartes_AsistenteFacturacion
             End If
 
             context.SubmitChanges()
-            Globales.AuditoriaInfo.Registra(Globales.AuditoriaInfo.Accion.Insertar, RoleManager.Items.Facturas, "FACTURASM", frm.Factura.IDFACTURA, "[" & factura.NUMERO & "] " & "FACTURA PACIENTE :" & frm.Factura.PACIENTE)
+            Globales.AuditoriaInfo.Registra(Globales.AuditoriaInfo.Accion.Insertar, RoleManager.Items.Asistente_Facturacion, "FACTURAS", frm.Factura.IDFACTURA, txtauditoria & " [" & factura.NUMERO & "] " & "FACTURA PACIENTE :" & frm.Factura.PACIENTE)
 
 
             CambiarCitaAFacturada(frm.Factura.IDFACTURA)
@@ -302,7 +304,8 @@ Public Class frmPartes_AsistenteFacturacion
                 Me.Close()
             End If
 
-            If Not IdCitaPreseleccionada.HasValue Then CargaDatos()
+            'If Not IdCitaPreseleccionada.HasValue Then CargaDatos()
+            If GeneraFacturaDirecto = False Then CargaDatos()
         Else
             If GeneraFacturaDirecto Then
                 Me.DialogResult = Windows.Forms.DialogResult.Cancel
@@ -310,6 +313,7 @@ Public Class frmPartes_AsistenteFacturacion
             End If
 
         End If
+
     End Sub
 
     Private Sub AsignarFactura()

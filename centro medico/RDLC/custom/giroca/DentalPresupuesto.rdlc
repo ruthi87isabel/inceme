@@ -723,7 +723,6 @@ FROM d_Presupuesto D
                             <rd:FormatSymbolCulture>es-ES</rd:FormatSymbolCulture>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -964,7 +963,7 @@ FROM d_Presupuesto D
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>PLAN DE TRATAMIENTOdd</Value>
+                    <Value>PLAN DE TRATAMIENTO</Value>
                     <Style>
                       <FontSize>15pt</FontSize>
                     </Style>
@@ -1059,7 +1058,7 @@ FROM d_Presupuesto D
       <Width>19.67586cm</Width>
       <Page>
         <PageHeader>
-          <Height>1.29167in</Height>
+          <Height>1.52403in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -1068,9 +1067,29 @@ FROM d_Presupuesto D
               <Value>logogiroca</Value>
               <MIMEType>image/png</MIMEType>
               <Sizing>FitProportional</Sizing>
-              <Left>6.02345cm</Left>
+              <Left>2.69269cm</Left>
               <Height>3.175cm</Height>
               <Width>7.83167cm</Width>
+              <Visibility>
+                <Hidden>true</Hidden>
+              </Visibility>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Image>
+            <Image Name="ImageClinica">
+              <Source>External</Source>
+              <Value>=First(Fields!LOGOTIPOURLPARAREPORTE.Value, "dsClinica")</Value>
+              <MIMEType>image/jpeg</MIMEType>
+              <Sizing>Fit</Sizing>
+              <Top>0.21028cm</Top>
+              <Left>2.35557in</Left>
+              <Height>3.51966cm</Height>
+              <Width>8.54051cm</Width>
+              <ZIndex>1</ZIndex>
+              <ToolTip>Inceme</ToolTip>
               <Style>
                 <Border>
                   <Style>None</Style>

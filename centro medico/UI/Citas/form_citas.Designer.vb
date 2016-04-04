@@ -525,7 +525,7 @@ Partial Class form_citas
         '
         'pb_UndoCobrar
         '
-        Me.pb_UndoCobrar.Image = Global.centro_medico.My.Resources.Resources.undo_blue
+        Me.pb_UndoCobrar.Image = CType(resources.GetObject("pb_UndoCobrar.Image"), System.Drawing.Image)
         Me.pb_UndoCobrar.Location = New System.Drawing.Point(78, 116)
         Me.pb_UndoCobrar.Name = "pb_UndoCobrar"
         Me.pb_UndoCobrar.Size = New System.Drawing.Size(16, 16)
@@ -602,7 +602,7 @@ Partial Class form_citas
         'bt_factura
         '
         Me.bt_factura.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.bt_factura.Image = Global.centro_medico.My.Resources.Resources.NOTE16
+        Me.bt_factura.Image = CType(resources.GetObject("bt_factura.Image"), System.Drawing.Image)
         Me.bt_factura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.bt_factura.Location = New System.Drawing.Point(3, 1)
         Me.bt_factura.Name = "bt_factura"
@@ -615,7 +615,7 @@ Partial Class form_citas
         '
         'btn_DesasociarFactura
         '
-        Me.btn_DesasociarFactura.Image = Global.centro_medico.My.Resources.Resources._24_em_cross
+        Me.btn_DesasociarFactura.Image = CType(resources.GetObject("btn_DesasociarFactura.Image"), System.Drawing.Image)
         Me.btn_DesasociarFactura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_DesasociarFactura.Location = New System.Drawing.Point(101, 1)
         Me.btn_DesasociarFactura.Name = "btn_DesasociarFactura"
@@ -658,7 +658,7 @@ Partial Class form_citas
         '
         'pb_facturas
         '
-        Me.pb_facturas.Image = Global.centro_medico.My.Resources.Resources.Facturas
+        Me.pb_facturas.Image = CType(resources.GetObject("pb_facturas.Image"), System.Drawing.Image)
         Me.pb_facturas.Location = New System.Drawing.Point(343, 79)
         Me.pb_facturas.Name = "pb_facturas"
         Me.pb_facturas.Size = New System.Drawing.Size(25, 23)
@@ -689,7 +689,7 @@ Partial Class form_citas
         '
         'pb_citas
         '
-        Me.pb_citas.Image = Global.centro_medico.My.Resources.Resources.Citas
+        Me.pb_citas.Image = CType(resources.GetObject("pb_citas.Image"), System.Drawing.Image)
         Me.pb_citas.Location = New System.Drawing.Point(312, 79)
         Me.pb_citas.Name = "pb_citas"
         Me.pb_citas.Size = New System.Drawing.Size(25, 23)
@@ -794,7 +794,7 @@ Partial Class form_citas
         '
         Me.bntAsistenteFacturacion.AutoSize = True
         Me.bntAsistenteFacturacion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.bntAsistenteFacturacion.Image = Global.centro_medico.My.Resources.Resources.Facturas
+        Me.bntAsistenteFacturacion.Image = CType(resources.GetObject("bntAsistenteFacturacion.Image"), System.Drawing.Image)
         Me.bntAsistenteFacturacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.bntAsistenteFacturacion.Location = New System.Drawing.Point(353, 352)
         Me.bntAsistenteFacturacion.Name = "bntAsistenteFacturacion"
@@ -893,7 +893,7 @@ Partial Class form_citas
         Me.bt_AddHistoria.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.bt_AddHistoria.FlatAppearance.BorderSize = 0
         Me.bt_AddHistoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.bt_AddHistoria.Image = Global.centro_medico.My.Resources.Resources._24_book_blue_add
+        Me.bt_AddHistoria.Image = CType(resources.GetObject("bt_AddHistoria.Image"), System.Drawing.Image)
         Me.bt_AddHistoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.bt_AddHistoria.Location = New System.Drawing.Point(5, 562)
         Me.bt_AddHistoria.Name = "bt_AddHistoria"
@@ -906,7 +906,7 @@ Partial Class form_citas
         '
         'bt_actualiza_cbMutuas
         '
-        Me.bt_actualiza_cbMutuas.Image = Global.centro_medico.My.Resources.Resources.icon_update
+        Me.bt_actualiza_cbMutuas.Image = CType(resources.GetObject("bt_actualiza_cbMutuas.Image"), System.Drawing.Image)
         Me.bt_actualiza_cbMutuas.Location = New System.Drawing.Point(620, 144)
         Me.bt_actualiza_cbMutuas.Name = "bt_actualiza_cbMutuas"
         Me.bt_actualiza_cbMutuas.Size = New System.Drawing.Size(23, 22)
@@ -987,7 +987,7 @@ Partial Class form_citas
         '
         'btnDental
         '
-        Me.btnDental.Image = Global.centro_medico.My.Resources.Resources.diente
+        Me.btnDental.Image = CType(resources.GetObject("btnDental.Image"), System.Drawing.Image)
         Me.btnDental.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnDental.Location = New System.Drawing.Point(499, 22)
         Me.btnDental.Name = "btnDental"
@@ -1156,39 +1156,39 @@ Partial Class form_citas
         '
         'ToolStripLabel1
         '
-        Me.ToolStripLabel1.Image = Global.centro_medico.My.Resources.Resources._24_em_check
+        Me.ToolStripLabel1.Image = CType(resources.GetObject("ToolStripLabel1.Image"), System.Drawing.Image)
         Me.ToolStripLabel1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(66, 22)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(69, 22)
         Me.ToolStripLabel1.Text = "&Guardar"
         '
         'ToolStripButton1
         '
-        Me.ToolStripButton1.Image = Global.centro_medico.My.Resources.Resources._24_em_cross
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(69, 22)
+        Me.ToolStripButton1.Size = New System.Drawing.Size(73, 22)
         Me.ToolStripButton1.Text = "&Cancelar"
         '
         'tsdb_imprimir
         '
         Me.tsdb_imprimir.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsm_imprimircita, Me.tsm_imprimirjustificante})
-        Me.tsdb_imprimir.Image = Global.centro_medico.My.Resources.Resources.Print1
+        Me.tsdb_imprimir.Image = CType(resources.GetObject("tsdb_imprimir.Image"), System.Drawing.Image)
         Me.tsdb_imprimir.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsdb_imprimir.Name = "tsdb_imprimir"
-        Me.tsdb_imprimir.Size = New System.Drawing.Size(83, 22)
+        Me.tsdb_imprimir.Size = New System.Drawing.Size(89, 22)
         Me.tsdb_imprimir.Text = "Impresión"
         '
         'tsm_imprimircita
         '
         Me.tsm_imprimircita.Name = "tsm_imprimircita"
-        Me.tsm_imprimircita.Size = New System.Drawing.Size(170, 22)
+        Me.tsm_imprimircita.Size = New System.Drawing.Size(182, 22)
         Me.tsm_imprimircita.Text = "Imprimir Cita"
         '
         'tsm_imprimirjustificante
         '
         Me.tsm_imprimirjustificante.Name = "tsm_imprimirjustificante"
-        Me.tsm_imprimirjustificante.Size = New System.Drawing.Size(170, 22)
+        Me.tsm_imprimirjustificante.Size = New System.Drawing.Size(182, 22)
         Me.tsm_imprimirjustificante.Text = "Imprimir Justificante"
         '
         'ToolStripSeparator3
@@ -1202,7 +1202,7 @@ Partial Class form_citas
         Me.tlsVerPacienteSeleccionado.Image = CType(resources.GetObject("tlsVerPacienteSeleccionado.Image"), System.Drawing.Image)
         Me.tlsVerPacienteSeleccionado.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tlsVerPacienteSeleccionado.Name = "tlsVerPacienteSeleccionado"
-        Me.tlsVerPacienteSeleccionado.Size = New System.Drawing.Size(97, 22)
+        Me.tlsVerPacienteSeleccionado.Size = New System.Drawing.Size(106, 22)
         Me.tlsVerPacienteSeleccionado.Text = "Ficha del Paciente"
         '
         'ToolStripSeparator1
@@ -1217,20 +1217,20 @@ Partial Class form_citas
         Me.tsd_ventas.Image = CType(resources.GetObject("tsd_ventas.Image"), System.Drawing.Image)
         Me.tsd_ventas.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsd_ventas.Name = "tsd_ventas"
-        Me.tsd_ventas.Size = New System.Drawing.Size(53, 22)
+        Me.tsd_ventas.Size = New System.Drawing.Size(55, 22)
         Me.tsd_ventas.Text = "Ventas"
         '
         'HacerTicketToolStripMenuItem
         '
         Me.HacerTicketToolStripMenuItem.Enabled = False
         Me.HacerTicketToolStripMenuItem.Name = "HacerTicketToolStripMenuItem"
-        Me.HacerTicketToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.HacerTicketToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
         Me.HacerTicketToolStripMenuItem.Text = "Hacer Ticket"
         '
         'ListadoDeTicketsToolStripMenuItem
         '
         Me.ListadoDeTicketsToolStripMenuItem.Name = "ListadoDeTicketsToolStripMenuItem"
-        Me.ListadoDeTicketsToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.ListadoDeTicketsToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
         Me.ListadoDeTicketsToolStripMenuItem.Text = "Listado de Tickets"
         '
         'ToolStripSeparator2
@@ -1241,10 +1241,10 @@ Partial Class form_citas
         'tsb_DebitoPaciente
         '
         Me.tsb_DebitoPaciente.Enabled = False
-        Me.tsb_DebitoPaciente.Image = Global.centro_medico.My.Resources.Resources.PacienteDebito
+        Me.tsb_DebitoPaciente.Image = CType(resources.GetObject("tsb_DebitoPaciente.Image"), System.Drawing.Image)
         Me.tsb_DebitoPaciente.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsb_DebitoPaciente.Name = "tsb_DebitoPaciente"
-        Me.tsb_DebitoPaciente.Size = New System.Drawing.Size(102, 22)
+        Me.tsb_DebitoPaciente.Size = New System.Drawing.Size(110, 22)
         Me.tsb_DebitoPaciente.Text = "Débito Paciente"
         '
         'StatusStrip1
@@ -1259,25 +1259,25 @@ Partial Class form_citas
         'ToolStripStatusLabel1
         '
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(92, 17)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(99, 17)
         Me.ToolStripStatusLabel1.Text = "Alt+G -> Guardar"
         '
         'ToolStripStatusLabel2
         '
         Me.ToolStripStatusLabel2.Name = "ToolStripStatusLabel2"
-        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(95, 17)
+        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(103, 17)
         Me.ToolStripStatusLabel2.Text = "Alt+C -> Cancelar"
         '
         'ToolStripStatusLabel3
         '
         Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
-        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(88, 17)
+        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(98, 17)
         Me.ToolStripStatusLabel3.Text = "Alt+I -> Imprimir"
         '
         'tstrip_Info
         '
         Me.tstrip_Info.Name = "tstrip_Info"
-        Me.tstrip_Info.Size = New System.Drawing.Size(15, 17)
+        Me.tstrip_Info.Size = New System.Drawing.Size(13, 17)
         Me.tstrip_Info.Text = ".."
         '
         'dg_LineasCitas
@@ -1343,7 +1343,7 @@ Partial Class form_citas
         '
         Me.colBuscar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
         Me.colBuscar.HeaderText = "..."
-        Me.colBuscar.Image = Global.centro_medico.My.Resources.Resources._24_zoom
+        Me.colBuscar.Image = CType(resources.GetObject("colBuscar.Image"), System.Drawing.Image)
         Me.colBuscar.Name = "colBuscar"
         Me.colBuscar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.colBuscar.Width = 22
@@ -1433,7 +1433,7 @@ Partial Class form_citas
         'bt_AddLinea
         '
         Me.bt_AddLinea.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.bt_AddLinea.Image = Global.centro_medico.My.Resources.Resources._24_em_plus
+        Me.bt_AddLinea.Image = CType(resources.GetObject("bt_AddLinea.Image"), System.Drawing.Image)
         Me.bt_AddLinea.Location = New System.Drawing.Point(922, 375)
         Me.bt_AddLinea.Name = "bt_AddLinea"
         Me.bt_AddLinea.Size = New System.Drawing.Size(34, 32)
@@ -1443,7 +1443,7 @@ Partial Class form_citas
         'bt_DelLinea
         '
         Me.bt_DelLinea.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.bt_DelLinea.Image = Global.centro_medico.My.Resources.Resources._24_em_cross
+        Me.bt_DelLinea.Image = CType(resources.GetObject("bt_DelLinea.Image"), System.Drawing.Image)
         Me.bt_DelLinea.Location = New System.Drawing.Point(922, 411)
         Me.bt_DelLinea.Name = "bt_DelLinea"
         Me.bt_DelLinea.Size = New System.Drawing.Size(34, 31)
@@ -1453,7 +1453,7 @@ Partial Class form_citas
         'btn_HistorialProcesos
         '
         Me.btn_HistorialProcesos.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_HistorialProcesos.Image = Global.centro_medico.My.Resources.Resources._24_imageset
+        Me.btn_HistorialProcesos.Image = CType(resources.GetObject("btn_HistorialProcesos.Image"), System.Drawing.Image)
         Me.btn_HistorialProcesos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_HistorialProcesos.Location = New System.Drawing.Point(6, 69)
         Me.btn_HistorialProcesos.Name = "btn_HistorialProcesos"
@@ -1479,7 +1479,7 @@ Partial Class form_citas
         'btnVerProceso
         '
         Me.btnVerProceso.Enabled = False
-        Me.btnVerProceso.Image = Global.centro_medico.My.Resources.Resources._24_image_open
+        Me.btnVerProceso.Image = CType(resources.GetObject("btnVerProceso.Image"), System.Drawing.Image)
         Me.btnVerProceso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnVerProceso.Location = New System.Drawing.Point(105, 69)
         Me.btnVerProceso.Name = "btnVerProceso"
@@ -1642,7 +1642,7 @@ Partial Class form_citas
         '
         Me.btnAddLineasGenericas.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnAddLineasGenericas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnAddLineasGenericas.Image = Global.centro_medico.My.Resources.Resources._24_imageset_add
+        Me.btnAddLineasGenericas.Image = CType(resources.GetObject("btnAddLineasGenericas.Image"), System.Drawing.Image)
         Me.btnAddLineasGenericas.ImageAlign = System.Drawing.ContentAlignment.BottomRight
         Me.btnAddLineasGenericas.Location = New System.Drawing.Point(922, 448)
         Me.btnAddLineasGenericas.Name = "btnAddLineasGenericas"

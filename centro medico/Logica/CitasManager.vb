@@ -159,7 +159,7 @@ Partial Class LineasCita
     End Property
     Public ReadOnly Property DrImporteConDto As Double
         Get
-            Dim res As Double = Me.ImporteDr
+            Dim res As Double = Me.ImporteDr * Me.Cantidad
             If Me.DescuentoPercent.HasValue AndAlso Me.DescuentoPercent > 0 Then
                 res = (Me.ImporteDr - (Me.ImporteDr) * (Me.DescuentoPercent / 100))
             End If

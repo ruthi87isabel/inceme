@@ -185,7 +185,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="MonthCalendar">
-      <HintPath>..\Tests\MonthCalendar_src_vs2005\bin\Debug\MonthCalendar.dll</HintPath>
+      <HintPath>..\DLLS\MonthCalendar.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -208,11 +208,13 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Forms.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Goltratec\DLLS\System.Windows.Forms.DataVisualization.dll</HintPath>
+      <HintPath>..\DLLS\System.Windows.Forms.DataVisualization.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Windows.Forms.DataVisualization.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Goltratec\DLLS\System.Windows.Forms.DataVisualization.Design.dll</HintPath>
+      <HintPath>..\DLLS\System.Windows.Forms.DataVisualization.Design.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq">
@@ -2206,6 +2208,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="notas.txt" />
     <Content Include="RDLC\custom\ccc\logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -2239,6 +2242,7 @@
     </Content>
     <Content Include="Resources\1449807294_Chart_bar.png" />
     <Content Include="Resources\1449807300_Chart_bar.ico" />
+    <Content Include="Resources\permisos.png" />
     <Content Include="Scripts\db_1.0.3.7.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -2258,13 +2262,16 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Scripts\db_1.0.3.7.sql" />
-    <Content Include="Scripts\db_1.0.3.8.sql" />
+    <Content Include="Scripts\db_1.0.3.8.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Scripts\db_1.0.3.9.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Scripts\Query Dashboard.sql" />
-    <Content Include="Scripts\Script permisos.sql" />
-    <Content Include="Scripts\Top10Tratamiento.sql" />
+    <Content Include="Scripts\db_1.0.4.0.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="UI\Dental\Icons\confirmado.ico" />
     <Content Include="UI\Dental\Icons\confirmado.png" />
     <Content Include="UI\Dental\Icons\confirmado_urgente.ico" />
@@ -2823,12 +2830,24 @@
     <EmbeddedResource Include="RDLC\default\PacientesBonosNoAgotados.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\default\R1_CitasXEstado.rdlc" />
-    <EmbeddedResource Include="RDLC\default\R2_PacientesAltaXMes.rdlc" />
-    <EmbeddedResource Include="RDLC\default\R3_CitasAtendidasMedicosXDias.rdlc" />
-    <EmbeddedResource Include="RDLC\default\R4_CitasEspecialidadXMes.rdlc" />
-    <EmbeddedResource Include="RDLC\default\R5_Top10TratamientosXMes.rdlc" />
-    <EmbeddedResource Include="RDLC\default\R6_EstadiaticaDental.rdlc" />
+    <Content Include="RDLC\default\R1_CitasXEstado.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RDLC\default\R2_PacientesAltaXMes.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RDLC\default\R3_CitasAtendidasMedicosXDias.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RDLC\default\R4_CitasEspecialidadXMes.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RDLC\default\R5_Top10TratamientosXMes.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RDLC\default\R6_EstadiaticaDental.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="RDLC\default\RecetaOficialImpresa.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>

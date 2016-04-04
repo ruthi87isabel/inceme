@@ -2471,12 +2471,15 @@ IIF(First(Fields!REFSERIE.Value, "dsFactura") = "TG" OR First(Fields!REFSERIE.Va
  OR
  First(Fields!REFSERIE.Value, "dsFactura") = "MD14" 
   OR
- First(Fields!REFSERIE.Value, "dsFactura") = "MD15", 
+ First(Fields!REFSERIE.Value, "dsFactura") = "MD15"
+  OR
+ First(Fields!REFSERIE.Value, "dsFactura") = "MD16", 
 "MANUEL DIEZ DIEZ", 
 IIF(First(Fields!REFSERIE.Value, "dsFactura") = "TG"
 OR First(Fields!REFSERIE.Value, "dsFactura") = "TG13"
 OR First(Fields!REFSERIE.Value, "dsFactura") = "TG14" 
-OR First(Fields!REFSERIE.Value, "dsFactura") = "TG15", 
+OR First(Fields!REFSERIE.Value, "dsFactura") = "TG15"
+OR First(Fields!REFSERIE.Value, "dsFactura") = "TG16", 
 "TOMAS GALVAN CAÑIZARES", First(Fields!NOMBRE.Value, "dsClinica")))</Value>
                           <Style>
                             <FontSize>11pt</FontSize>

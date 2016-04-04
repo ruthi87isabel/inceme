@@ -394,7 +394,7 @@ Public Class form_citas
 
         CalculaTotalesCita()
         CargaHistorias()
-
+        checkFactura()
         'fIdfactura = _data.Rows(0).Item("REFFRA")
         'If Not _data.Rows(0).Item("REFFRA").GetType Is GetType(DBNull) Then
 
@@ -562,34 +562,7 @@ Public Class form_citas
         If Me.CurrentAccion = Enums.Accion.Modificar Then
             Inicializa()
             '///////////////////////////////////////////////////////////////
-            Dim _dataf As CMDataSet.FACTURASDataTable
 
-
-            'If fDesdePaciente Then
-            '    _dataf = New CMDataSet.FACTURASDataTable()
-            '    Dim _rows() As CMDataSet.FACTURASRow = fCMDataSet.FACTURAS.Select("IDFACTURA =" & fIdfactura)
-            '    If _rows.Length > 0 Then
-            '        _dataf.ImportRow(_rows(0))
-            '    End If
-            'Else
-            If fIdfactura.HasValue Then
-                _dataf = FACTURASTableAdapter.GetFacturaById(fIdfactura)
-                If _dataf.Rows.Count > 0 Then
-                    'bt_factura.Visible = False
-                    btn_DesasociarFactura.Visible = True
-                    pnl_Facturar.Visible = True
-                    'bt_modificar.Visible = True
-                    lb_factura.Visible = True
-                    lb_ftexto.Visible = True
-                    fIdfactura = _dataf.Rows(0).Item("IDFACTURA")
-                    If Not _dataf(0).IsNUMERONull Then
-                        lb_ftexto.Text = _dataf.Rows(0).Item("NUMERO")
-                    Else
-                        lb_ftexto.Text = String.Empty
-                    End If
-
-                End If
-            End If
 
             'End If
 
@@ -792,7 +765,9 @@ Public Class form_citas
 
         If fIdfactura.HasValue Then
             bntAsistenteFacturacion.Text = "Ver factura"
+            bntAsistenteFacturacion.Enabled = True
             chb_pagada.Enabled = False
+            bt_factura.Enabled = False
         End If
 
         'colImporteDoctor.Visible = colImporteDoctor.Visible And Not Globales.Configuracion.Citas_Medico_OcultarColumna
@@ -852,7 +827,36 @@ Public Class form_citas
         End If
         Return ""
     End Function
+    Private Sub checkFactura()
+        Dim _dataf As CMDataSet.FACTURASDataTable
 
+
+        'If fDesdePaciente Then
+        '    _dataf = New CMDataSet.FACTURASDataTable()
+        '    Dim _rows() As CMDataSet.FACTURASRow = fCMDataSet.FACTURAS.Select("IDFACTURA =" & fIdfactura)
+        '    If _rows.Length > 0 Then
+        '        _dataf.ImportRow(_rows(0))
+        '    End If
+        'Else
+        If fIdfactura.HasValue Then
+            _dataf = FACTURASTableAdapter.GetFacturaById(fIdfactura)
+            If _dataf.Rows.Count > 0 Then
+                'bt_factura.Visible = False
+                btn_DesasociarFactura.Visible = True
+                pnl_Facturar.Visible = True
+                'bt_modificar.Visible = True
+                lb_factura.Visible = True
+                lb_ftexto.Visible = True
+                fIdfactura = _dataf.Rows(0).Item("IDFACTURA")
+                If Not _dataf(0).IsNUMERONull Then
+                    lb_ftexto.Text = _dataf.Rows(0).Item("NUMERO")
+                Else
+                    lb_ftexto.Text = String.Empty
+                End If
+
+            End If
+        End If
+    End Sub
     Private Sub Cancelar()
         clickaccept = True
         If Me.CurrentAccion = Enums.Accion.Insertar And fIdfactura.HasValue Then
@@ -3201,22 +3205,48 @@ Public Class form_citas
 
     Private Sub btn_DesasociarFactura_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_DesasociarFactura.Click
         If MessageBox.Show("Esta seguro que desea desasociar la factura, se perdera toda relacion con la cita", "Confirmación", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-            fIdfactura = Nothing
-            lb_ftexto.Text = String.Empty
-            Guardar()
-            btn_DesasociarFactura.Visible = False
-            bt_factura.Visible = True
-            bt_factura.Enabled = True
-            bntAsistenteFacturacion.Visible = True
-            bntAsistenteFacturacion.Text = "Asist. Facturación"
-            'pnl_Facturar.Enabled = True
+            Dim tempidfactura As Integer = fIdfactura
+            Dim temptxtfactura As String = lb_ftexto.Text
+            If tempidfactura > 0 And Len(temptxtfactura) > 0 Then
 
-            'bt_factura.Text = "Emitir Factura"
+
+                DesvincultaFactura(fIdCITA)
+                fIdfactura = Nothing
+                lb_ftexto.Text = String.Empty
+                Guardar()
+                btn_DesasociarFactura.Visible = False
+                bt_factura.Visible = True
+                bt_factura.Enabled = True
+                bntAsistenteFacturacion.Visible = True
+                bntAsistenteFacturacion.Text = "Asist. Facturación"
+
+                'Registro la desvinculación entre la cita y la fra
+                Globales.AuditoriaInfo.Registra(Globales.AuditoriaInfo.Accion.Modificar, RoleManager.Items.Citas, _
+                                            "Citas", fIdCITA, "Cita del paciente " & CtrlPaciente1.NombreCompleto & " del día " & dtp_fecha.Value & ". Desvincular Fra " & temptxtfactura & "(" & tempidfactura & ") de la cita.")
+            Else
+                MsgBox("No parece que esta cita esté asociada a ninguna factura")
+            End If
         End If
         'fIdfactura = Nothing
         'lb_ftexto.Text = String.Empty
         'btn_DesasociarFactura.Visible = False
         'bt_factura.Visible = True
+    End Sub
+
+    Private Sub DesvincultaFactura(ByVal idcita As Integer)
+        Try
+            Dim lfacturas As List(Of LINEASFACTURA) = (From ln In context.LINEASFACTURAs Where ln.ID_Cita = fIdCITA Select ln).ToList
+
+            Dim l As LINEASFACTURA
+            For Each l In lfacturas
+                l.ID_Cita = Nothing
+                l.RefLineaCita = Nothing
+            Next
+            context.SubmitChanges()
+        Catch ex As Exception
+            Globales.ErrorMsg(ex, "Error al intentar eliminar la asociación entre la cita y la factura " & ex.Message)
+        End Try
+
     End Sub
 
     Private Sub btn_HistorialProcesos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_HistorialProcesos.Click
@@ -4100,11 +4130,6 @@ Public Class form_citas
     End Sub
 
 
-
-  
-    Private Sub ContadorBono1_Load(sender As Object, e As EventArgs) Handles ContadorBono1.Load
-
-    End Sub
 End Class
 
 Partial Public Class MEDICO

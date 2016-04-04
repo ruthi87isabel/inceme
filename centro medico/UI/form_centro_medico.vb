@@ -1494,29 +1494,25 @@ Public Class form_centro_medico
 
 
     Public Sub ChequeaVersionBD()
-
-        ''Verificar que exista la clave vBdNecesaria en la BD, sino crearla
-        'Dim sqlInsert As String = "IF NOT EXISTS (SELECT Valor FROM VariablesGlobales WHERE Clave = 'vBdNecesaria')  INSERT INTO VariablesGlobales(Clave, Valor) VALUES ('vBdNecesaria', '0.0.0.0')"
-        'Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(My.Settings.CMConnectionString, CommandType.Text, sqlInsert)
-
+        '22-01-2016 texto que define la versión mínima de bd para funcionar con la versión de aplicación actual
+        Dim minDatabaseVersion As String = "1.0.4.0"
 
         'Obtiene la version almacenada en la BD y deberia compararse con la version del ensamblado
         Dim strSql As String = "Select Valor from VariablesGlobales WHERE Clave = 'DB_Version'"
         Dim res As Object = Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteScalar(My.Settings.CMConnectionString, CommandType.Text, strSql)
 
-        'Dim strSql2 As String = "Select Valor from VariablesGlobales WHERE Clave = 'vBdNecesaria'"
-        'Dim res2 As Object = Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteScalar(My.Settings.CMConnectionString, CommandType.Text, strSql2)
-
         If Not res Is DBNull.Value Then
+            'versión bd actual
             Dim versionActual As Version = New Version(res.ToString())
+            'versión aplicación
             Dim versionMin As Version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version
             'System.Reflection.Assembly.GetExecutingAssembly().GetName().Version'
 
             lblAppVersion.Text = versionMin.ToString()
             lbl_DbVersionValue.Text = versionActual.ToString()
 
-
-            Dim dbrequiredVersion As New Version("1.0.3.7")
+            'versión mínima necesaria de la bd
+            Dim dbrequiredVersion As New Version(minDatabaseVersion)
 
             If versionActual < dbrequiredVersion Then
                 MessageBox.Show("La version actual de la Base de Datos: " & versionActual.ToString() & " difiere de la mínima requerida " & dbrequiredVersion.ToString() & ". Esto podria ocasionar inestabilidad en el sistema. ", "INFORMACIÓN SOBRE BASE DE DATOS", MessageBoxButtons.OK, MessageBoxIcon.Warning)

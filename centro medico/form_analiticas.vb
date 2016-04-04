@@ -183,14 +183,23 @@ Public Class form_analiticas_ex
         dtg_anConceptosanaliticas.DataSource = _resf
         dtg_anConceptosanaliticas.Columns("PRECIO").Visible = False
         dtg_anConceptosanaliticas.Columns("Color").Visible = False
+        ' Try
+
 
         For i = 0 To dtg_anConceptosanaliticas.Rows.Count - 1
             Dim color1 As String
-            color1 = dtg_anConceptosanaliticas.Rows(i).Cells("Color").Value
+            If (IsDBNull(dtg_anConceptosanaliticas.Rows(i).Cells("Color").Value)) Then
+                color1 = ""
+            Else
+                color1 = dtg_anConceptosanaliticas.Rows(i).Cells("Color").Value
+            End If
+
             Dim readcolor As Color = ColorTranslator.FromHtml(color1)
             dtg_anConceptosanaliticas.Rows(i).DefaultCellStyle.BackColor = readcolor
         Next
-
+        ' Catch ex As Exception
+        'Globales.ErrorMsg(ex, "Error Aplicando colores")
+        ' End Try
 
 
     End Sub
@@ -244,13 +253,18 @@ Public Class form_analiticas_ex
             Dim _add_analitica As form_analiticas = New form_analiticas("Ficha de Analiticas-Editar", Enums.Accion.Modificar, _Cod, fId, CMDataSet)
             _add_analitica.ShowInTaskbar = False
             _add_analitica.ShowDialog()
-            If dtg_anAnaliticas.Rows.Count > 0 Then
-                InicializaAnaliticas(fAnaliticaOrdenado, fAnaliticaIntervalo)
-                Dim _Id As Integer = Integer.Parse(dtg_anAnaliticas.Rows(dtg_anAnaliticas.CurrentRow.Index).Cells("Número").Value.ToString())
-                FillConceptosAnalitica(_Id)
-                tb_anTotal.Text = dtg_anAnaliticas.Rows(dtg_anAnaliticas.CurrentRow.Index).Cells("Importe").Value.ToString()
-                tb_anNotas.Text = dtg_anAnaliticas.Rows(dtg_anAnaliticas.CurrentRow.Index).Cells("Notas").Value.ToString()
-            End If
+            Try
+
+                If dtg_anAnaliticas.Rows.Count > 0 Then
+                    InicializaAnaliticas(fAnaliticaOrdenado, fAnaliticaIntervalo)
+                    Dim _Id As Integer = Integer.Parse(dtg_anAnaliticas.Rows(dtg_anAnaliticas.CurrentRow.Index).Cells("Número").Value.ToString())
+                    FillConceptosAnalitica(_Id)
+                    tb_anTotal.Text = dtg_anAnaliticas.Rows(dtg_anAnaliticas.CurrentRow.Index).Cells("Importe").Value.ToString()
+                    tb_anNotas.Text = dtg_anAnaliticas.Rows(dtg_anAnaliticas.CurrentRow.Index).Cells("Notas").Value.ToString()
+                End If
+            Catch ex As Exception
+                Globales.ErrorMsg(ex, "Error abriendo analítica")
+            End Try
 
             fAnaliticaRowSelected = _index
             fCambios = True

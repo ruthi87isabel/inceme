@@ -1379,12 +1379,9 @@
               <MIMEType>image/jpeg</MIMEType>
               <Sizing>Fit</Sizing>
               <Top>0.00841in</Top>
-              <Left>3.54558in</Left>
+              <Left>4.29558in</Left>
               <Height>3cm</Height>
               <Width>7.04597cm</Width>
-              <Visibility>
-                <Hidden>true</Hidden>
-              </Visibility>
               <ToolTip>Inceme</ToolTip>
               <Style>
                 <Border>
@@ -1430,10 +1427,13 @@
               <Value>logogiroca</Value>
               <Sizing>FitProportional</Sizing>
               <Top>0.02136cm</Top>
-              <Left>10.57374cm</Left>
+              <Left>8.35124cm</Left>
               <Height>3.05662cm</Height>
               <Width>7.67292cm</Width>
               <ZIndex>2</ZIndex>
+              <Visibility>
+                <Hidden>true</Hidden>
+              </Visibility>
               <Style>
                 <Border>
                   <Style>None</Style>

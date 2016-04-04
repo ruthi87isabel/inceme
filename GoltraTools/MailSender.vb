@@ -72,7 +72,7 @@ Namespace Mail
                 Try
                     Cliente.SendAsyncCancel()
                 Catch ex2 As Exception
-
+                    MsgBox(ex2.ToString)
                 End Try
 
             End Try
@@ -158,7 +158,7 @@ Namespace Mail
                     End If
 
                 Else
-                    log.Log(vbTab & "error enviado ")
+                    log.Log(vbTab & "error enviado " & e.Error.Message & vbCrLf & e.Error.StackTrace)
                     'No fue cancelada y SI HUBO ERROR
                     'MessageBox.Show("Error:" & e.Error.Message & e.Error.StackTrace)
                 End If

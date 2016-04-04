@@ -76,6 +76,7 @@ Public Class PacienteManager
 
                 'Analíticas
                 Dim analiticas As IList(Of ANALITICAS) = (From a In ctx.ANALITICAS Where a.REFPACIENTE = PacienteOrigen Select a).ToList
+
                 For Each a As ANALITICAS In analiticas
                     a.REFPACIENTE = PacienteDestino
                     log += vbCrLf & a.ToString & "de paciente: " & PacienteOrigen & " a paciente: " & PacienteDestino
