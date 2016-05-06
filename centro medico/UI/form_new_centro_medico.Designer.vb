@@ -537,19 +537,12 @@ Partial Class form_new_centro_medico
         '
         'ExplorerBar1
         '
-        Me.ExplorerBar1.AlphaMode = Janus.Windows.ExplorerBar.AlphaMode.Transparent
-        Me.ExplorerBar1.BackColorAlphaMode = Janus.Windows.ExplorerBar.AlphaMode.Transparent
-        Me.ExplorerBar1.BackgroundFormatStyle.Alpha = 1
-        Me.ExplorerBar1.BackgroundFormatStyle.BackColor = System.Drawing.Color.Transparent
-        Me.ExplorerBar1.BackgroundFormatStyle.BackColorAlphaMode = Janus.Windows.ExplorerBar.AlphaMode.Transparent
-        Me.ExplorerBar1.BackgroundFormatStyle.BackColorGradient = System.Drawing.Color.Transparent
-        Me.ExplorerBar1.BackgroundFormatStyle.BackColorGradientAlphaMode = Janus.Windows.ExplorerBar.AlphaMode.Transparent
         Me.ExplorerBar1.BackgroundFormatStyle.ForeColor = System.Drawing.Color.White
         Me.ExplorerBar1.BackgroundImage = Global.centro_medico.My.Resources.Resources.PartPag
         Me.ExplorerBar1.BlendColor = System.Drawing.Color.Transparent
         Me.ExplorerBar1.BorderStyle = Janus.Windows.ExplorerBar.BorderStyle.None
         Me.ExplorerBar1.ColumnSeparation = 5
-        Me.ExplorerBar1.FlatBorderColor = System.Drawing.SystemColors.ControlDark
+        Me.ExplorerBar1.FlatBorderColor = System.Drawing.Color.White
         Me.ExplorerBar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.ExplorerBar1.ForeColor = System.Drawing.Color.White
         ExplorerBarGroup1.Cursor = System.Windows.Forms.Cursors.Hand
@@ -570,6 +563,8 @@ Partial Class form_new_centro_medico
         ExplorerBarItem7.Text = "Horarios"
         ExplorerBarGroup1.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem1, ExplorerBarItem2, ExplorerBarItem3, ExplorerBarItem4, ExplorerBarItem5, ExplorerBarItem6, ExplorerBarItem7})
         ExplorerBarGroup1.Key = "Group1"
+        ExplorerBarGroup1.StateStyles.FormatStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(82, Byte), Integer))
+        ExplorerBarGroup1.StateStyles.FormatStyle.BackColorGradient = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(82, Byte), Integer))
         ExplorerBarGroup1.Text = "Clínica"
         ExplorerBarGroup2.Cursor = System.Windows.Forms.Cursors.Hand
         ExplorerBarGroup2.Expanded = False
@@ -740,6 +735,7 @@ Partial Class form_new_centro_medico
         ExplorerBarGroup7.Key = "Group7"
         ExplorerBarGroup7.Text = "Ayuda"
         ExplorerBarGroup8.Cursor = System.Windows.Forms.Cursors.Hand
+        ExplorerBarGroup8.Expanded = False
         ExplorerBarGroup8.Key = "Group8"
         ExplorerBarGroup8.Text = "Desarrollo"
         ExplorerBarGroup9.Cursor = System.Windows.Forms.Cursors.Hand
@@ -753,7 +749,13 @@ Partial Class form_new_centro_medico
         ExplorerBarGroup9.Text = "Salir"
         Me.ExplorerBar1.Groups.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarGroup() {ExplorerBarGroup1, ExplorerBarGroup2, ExplorerBarGroup3, ExplorerBarGroup4, ExplorerBarGroup5, ExplorerBarGroup6, ExplorerBarGroup7, ExplorerBarGroup8, ExplorerBarGroup9})
         Me.ExplorerBar1.GroupSeparation = 1
+        Me.ExplorerBar1.GroupsStateStyles.FormatStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(82, Byte), Integer))
+        Me.ExplorerBar1.GroupsStateStyles.FormatStyle.BackColorGradient = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(82, Byte), Integer))
+        Me.ExplorerBar1.GroupsStateStyles.FormatStyle.BackgroundGradientMode = Janus.Windows.ExplorerBar.BackgroundGradientMode.Solid
         Me.ExplorerBar1.ImeMode = System.Windows.Forms.ImeMode.AlphaFull
+        Me.ExplorerBar1.ItemsStateStyles.FormatStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(82, Byte), Integer))
+        Me.ExplorerBar1.ItemsStateStyles.FormatStyle.BackColorGradient = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(82, Byte), Integer))
+        Me.ExplorerBar1.ItemsStateStyles.FormatStyle.BackgroundGradientMode = Janus.Windows.ExplorerBar.BackgroundGradientMode.Solid
         Me.ExplorerBar1.ItemsStateStyles.FormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.ExplorerBar1.ItemsStateStyles.FormatStyle.FontBold = Janus.Windows.ExplorerBar.TriState.[False]
         Me.ExplorerBar1.ItemsStateStyles.FormatStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(82, Byte), Integer))
@@ -761,6 +763,8 @@ Partial Class form_new_centro_medico
         Me.ExplorerBar1.Name = "ExplorerBar1"
         Me.ExplorerBar1.Size = New System.Drawing.Size(256, 497)
         Me.ExplorerBar1.TabIndex = 0
+        Me.ExplorerBar1.ThemedAreas = CType(((Janus.Windows.ExplorerBar.ThemedArea.Background Or Janus.Windows.ExplorerBar.ThemedArea.Border) _
+            Or Janus.Windows.ExplorerBar.ThemedArea.Items), Janus.Windows.ExplorerBar.ThemedArea)
         Me.ExplorerBar1.VisualStyleAreas.BackgroundStyle = Janus.Windows.ExplorerBar.VisualStyle.Office2010
         Me.ExplorerBar1.VisualStyleAreas.BorderStyle = Janus.Windows.ExplorerBar.VisualStyle.Office2010
         Me.ExplorerBar1.VisualStyleAreas.GroupHeaderStyle = Janus.Windows.ExplorerBar.VisualStyle.Office2010
