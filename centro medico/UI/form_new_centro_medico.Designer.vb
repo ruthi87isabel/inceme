@@ -124,7 +124,6 @@ Partial Class form_new_centro_medico
         Me.Citas = New System.Windows.Forms.PictureBox()
         Me.Dashboard = New System.Windows.Forms.PictureBox()
         Me.PROVEEDORESTableAdapter = New centro_medico.CMDataSetTableAdapters.PROVEEDORESTableAdapter()
-        Me.PROVEEDORESBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CMDataSet = New centro_medico.CMDataSet()
         Me.PERMISOS_USUARIOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PLANTILLASTableAdapter = New centro_medico.CMDataSetTableAdapters.PLANTILLASTableAdapter()
@@ -167,6 +166,25 @@ Partial Class form_new_centro_medico
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.UiGroupBox3 = New Janus.Windows.EditControls.UIGroupBox()
+        Me.PictureBox26 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox25 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox24 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox23 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox22 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox21 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox20 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox19 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox18 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
+        Me.PROVEEDORESBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UiGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -177,7 +195,6 @@ Partial Class form_new_centro_medico
         CType(Me.Paciente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Citas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Dashboard, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PROVEEDORESBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CMDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PERMISOS_USUARIOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MEDICAMENTOSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -205,10 +222,31 @@ Partial Class form_new_centro_medico
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UiGroupBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.UiGroupBox3.SuspendLayout()
+        CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PROVEEDORESBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
         '
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox1.Image = Global.centro_medico.My.Resources.Resources.PicAdmin1
         Me.PictureBox1.Location = New System.Drawing.Point(24, 18)
         Me.PictureBox1.Name = "PictureBox1"
@@ -220,6 +258,7 @@ Partial Class form_new_centro_medico
         '
         Me.lb_usuario.AutoSize = True
         Me.lb_usuario.BackColor = System.Drawing.Color.Transparent
+        Me.lb_usuario.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lb_usuario.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lb_usuario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(82, Byte), Integer))
         Me.lb_usuario.Location = New System.Drawing.Point(79, 28)
@@ -279,7 +318,7 @@ Partial Class form_new_centro_medico
         '
         Me.DebitoPaciente.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DebitoPaciente.Image = CType(resources.GetObject("DebitoPaciente.Image"), System.Drawing.Image)
-        Me.DebitoPaciente.Location = New System.Drawing.Point(188, 174)
+        Me.DebitoPaciente.Location = New System.Drawing.Point(188, 172)
         Me.DebitoPaciente.Name = "DebitoPaciente"
         Me.DebitoPaciente.Size = New System.Drawing.Size(172, 155)
         Me.DebitoPaciente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -290,7 +329,7 @@ Partial Class form_new_centro_medico
         '
         Me.Factura.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Factura.Image = CType(resources.GetObject("Factura.Image"), System.Drawing.Image)
-        Me.Factura.Location = New System.Drawing.Point(3, 174)
+        Me.Factura.Location = New System.Drawing.Point(3, 172)
         Me.Factura.Name = "Factura"
         Me.Factura.Size = New System.Drawing.Size(172, 155)
         Me.Factura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -344,10 +383,6 @@ Partial Class form_new_centro_medico
         'PROVEEDORESTableAdapter
         '
         Me.PROVEEDORESTableAdapter.ClearBeforeFill = True
-        '
-        'PROVEEDORESBindingSource
-        '
-        Me.PROVEEDORESBindingSource.DataMember = "PROVEEDORES"
         '
         'CMDataSet
         '
@@ -510,6 +545,7 @@ Partial Class form_new_centro_medico
         Me.ExplorerBar1.BackgroundFormatStyle.BackColorGradient = System.Drawing.Color.Transparent
         Me.ExplorerBar1.BackgroundFormatStyle.BackColorGradientAlphaMode = Janus.Windows.ExplorerBar.AlphaMode.Transparent
         Me.ExplorerBar1.BackgroundFormatStyle.ForeColor = System.Drawing.Color.White
+        Me.ExplorerBar1.BackgroundImage = Global.centro_medico.My.Resources.Resources.PartPag
         Me.ExplorerBar1.BlendColor = System.Drawing.Color.Transparent
         Me.ExplorerBar1.BorderStyle = Janus.Windows.ExplorerBar.BorderStyle.None
         Me.ExplorerBar1.ColumnSeparation = 5
@@ -535,6 +571,7 @@ Partial Class form_new_centro_medico
         ExplorerBarGroup1.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem1, ExplorerBarItem2, ExplorerBarItem3, ExplorerBarItem4, ExplorerBarItem5, ExplorerBarItem6, ExplorerBarItem7})
         ExplorerBarGroup1.Key = "Group1"
         ExplorerBarGroup1.Text = "Clínica"
+        ExplorerBarGroup2.Cursor = System.Windows.Forms.Cursors.Hand
         ExplorerBarGroup2.Expanded = False
         ExplorerBarItem8.Key = "Item10"
         ExplorerBarItem8.Text = "Pacientes"
@@ -573,6 +610,7 @@ Partial Class form_new_centro_medico
         ExplorerBarGroup2.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem8, ExplorerBarItem9, ExplorerBarItem10, ExplorerBarItem11, ExplorerBarItem12, ExplorerBarItem13, ExplorerBarItem14, ExplorerBarItem15, ExplorerBarItem16, ExplorerBarItem17, ExplorerBarItem18, ExplorerBarItem19, ExplorerBarItem20, ExplorerBarItem21, ExplorerBarItem22, ExplorerBarItem23, ExplorerBarItem24})
         ExplorerBarGroup2.Key = "Group2"
         ExplorerBarGroup2.Text = "Pacientes"
+        ExplorerBarGroup3.Cursor = System.Windows.Forms.Cursors.Hand
         ExplorerBarGroup3.Expanded = False
         ExplorerBarItem25.Key = "Item1"
         ExplorerBarItem25.Text = "Alarmas"
@@ -617,6 +655,7 @@ Partial Class form_new_centro_medico
         ExplorerBarGroup3.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem25, ExplorerBarItem26, ExplorerBarItem27, ExplorerBarItem28, ExplorerBarItem29, ExplorerBarItem30, ExplorerBarItem31, ExplorerBarItem32, ExplorerBarItem33, ExplorerBarItem34, ExplorerBarItem35, ExplorerBarItem36, ExplorerBarItem37, ExplorerBarItem38, ExplorerBarItem39, ExplorerBarItem40, ExplorerBarItem41, ExplorerBarItem42, ExplorerBarItem43, ExplorerBarItem44})
         ExplorerBarGroup3.Key = "Group3"
         ExplorerBarGroup3.Text = "Mantenimiento"
+        ExplorerBarGroup4.Cursor = System.Windows.Forms.Cursors.Hand
         ExplorerBarGroup4.Expanded = False
         ExplorerBarItem45.Key = "Item1"
         ExplorerBarItem45.Text = "Listado de Pacientes"
@@ -647,6 +686,7 @@ Partial Class form_new_centro_medico
         ExplorerBarGroup4.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem45, ExplorerBarItem46, ExplorerBarItem47, ExplorerBarItem48, ExplorerBarItem49, ExplorerBarItem50, ExplorerBarItem51, ExplorerBarItem52, ExplorerBarItem53, ExplorerBarItem54, ExplorerBarItem55, ExplorerBarItem56, ExplorerBarItem57})
         ExplorerBarGroup4.Key = "Group4"
         ExplorerBarGroup4.Text = "Listado"
+        ExplorerBarGroup5.Cursor = System.Windows.Forms.Cursors.Hand
         ExplorerBarGroup5.Expanded = False
         ExplorerBarItem58.Key = "Item1"
         ExplorerBarItem58.Text = "Proveedores"
@@ -667,6 +707,7 @@ Partial Class form_new_centro_medico
         ExplorerBarGroup5.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem58, ExplorerBarItem59, ExplorerBarItem60, ExplorerBarItem61, ExplorerBarItem62, ExplorerBarItem63, ExplorerBarItem64, ExplorerBarItem65})
         ExplorerBarGroup5.Key = "Group5"
         ExplorerBarGroup5.Text = "TPV"
+        ExplorerBarGroup6.Cursor = System.Windows.Forms.Cursors.Hand
         ExplorerBarGroup6.Expanded = False
         ExplorerBarItem66.Key = "Item1"
         ExplorerBarItem66.Text = "Usarios"
@@ -691,14 +732,17 @@ Partial Class form_new_centro_medico
         ExplorerBarGroup6.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem66, ExplorerBarItem67, ExplorerBarItem68, ExplorerBarItem69, ExplorerBarItem70, ExplorerBarItem71, ExplorerBarItem72, ExplorerBarItem73, ExplorerBarItem74, ExplorerBarItem75})
         ExplorerBarGroup6.Key = "Group6"
         ExplorerBarGroup6.Text = "Utilidades"
+        ExplorerBarGroup7.Cursor = System.Windows.Forms.Cursors.Hand
         ExplorerBarGroup7.Expanded = False
         ExplorerBarItem76.Key = "Item1"
         ExplorerBarItem76.Text = "Manual de Instrucciones"
         ExplorerBarGroup7.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem76})
         ExplorerBarGroup7.Key = "Group7"
         ExplorerBarGroup7.Text = "Ayuda"
+        ExplorerBarGroup8.Cursor = System.Windows.Forms.Cursors.Hand
         ExplorerBarGroup8.Key = "Group8"
         ExplorerBarGroup8.Text = "Desarrollo"
+        ExplorerBarGroup9.Cursor = System.Windows.Forms.Cursors.Hand
         ExplorerBarGroup9.Expanded = False
         ExplorerBarItem77.Key = "Item1"
         ExplorerBarItem77.Text = "Cerrar Sesión"
@@ -713,9 +757,9 @@ Partial Class form_new_centro_medico
         Me.ExplorerBar1.ItemsStateStyles.FormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.ExplorerBar1.ItemsStateStyles.FormatStyle.FontBold = Janus.Windows.ExplorerBar.TriState.[False]
         Me.ExplorerBar1.ItemsStateStyles.FormatStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(82, Byte), Integer))
-        Me.ExplorerBar1.Location = New System.Drawing.Point(-4, 147)
+        Me.ExplorerBar1.Location = New System.Drawing.Point(0, 147)
         Me.ExplorerBar1.Name = "ExplorerBar1"
-        Me.ExplorerBar1.Size = New System.Drawing.Size(256, 487)
+        Me.ExplorerBar1.Size = New System.Drawing.Size(256, 497)
         Me.ExplorerBar1.TabIndex = 0
         Me.ExplorerBar1.VisualStyleAreas.BackgroundStyle = Janus.Windows.ExplorerBar.VisualStyle.Office2010
         Me.ExplorerBar1.VisualStyleAreas.BorderStyle = Janus.Windows.ExplorerBar.VisualStyle.Office2010
@@ -738,7 +782,7 @@ Partial Class form_new_centro_medico
         Me.UiGroupBox2.Controls.Add(Me.PictureBox7)
         Me.UiGroupBox2.Location = New System.Drawing.Point(258, 150)
         Me.UiGroupBox2.Name = "UiGroupBox2"
-        Me.UiGroupBox2.Size = New System.Drawing.Size(750, 498)
+        Me.UiGroupBox2.Size = New System.Drawing.Size(750, 483)
         Me.UiGroupBox2.TabIndex = 9
         Me.UiGroupBox2.Visible = False
         '
@@ -819,6 +863,226 @@ Partial Class form_new_centro_medico
         Me.PictureBox7.TabIndex = 1
         Me.PictureBox7.TabStop = False
         '
+        'UiGroupBox3
+        '
+        Me.UiGroupBox3.AutoScroll = True
+        Me.UiGroupBox3.BackColor = System.Drawing.Color.Transparent
+        Me.UiGroupBox3.BorderColor = System.Drawing.Color.Transparent
+        Me.UiGroupBox3.Controls.Add(Me.PictureBox26)
+        Me.UiGroupBox3.Controls.Add(Me.PictureBox25)
+        Me.UiGroupBox3.Controls.Add(Me.PictureBox24)
+        Me.UiGroupBox3.Controls.Add(Me.PictureBox23)
+        Me.UiGroupBox3.Controls.Add(Me.PictureBox22)
+        Me.UiGroupBox3.Controls.Add(Me.PictureBox21)
+        Me.UiGroupBox3.Controls.Add(Me.PictureBox20)
+        Me.UiGroupBox3.Controls.Add(Me.PictureBox19)
+        Me.UiGroupBox3.Controls.Add(Me.PictureBox18)
+        Me.UiGroupBox3.Controls.Add(Me.PictureBox17)
+        Me.UiGroupBox3.Controls.Add(Me.PictureBox6)
+        Me.UiGroupBox3.Controls.Add(Me.PictureBox8)
+        Me.UiGroupBox3.Controls.Add(Me.PictureBox12)
+        Me.UiGroupBox3.Controls.Add(Me.PictureBox13)
+        Me.UiGroupBox3.Controls.Add(Me.PictureBox14)
+        Me.UiGroupBox3.Controls.Add(Me.PictureBox15)
+        Me.UiGroupBox3.Controls.Add(Me.PictureBox16)
+        Me.UiGroupBox3.Location = New System.Drawing.Point(258, 150)
+        Me.UiGroupBox3.Name = "UiGroupBox3"
+        Me.UiGroupBox3.Size = New System.Drawing.Size(750, 494)
+        Me.UiGroupBox3.TabIndex = 10
+        Me.UiGroupBox3.Visible = False
+        '
+        'PictureBox26
+        '
+        Me.PictureBox26.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox26.Image = Global.centro_medico.My.Resources.Resources.Icon_Recibos
+        Me.PictureBox26.Location = New System.Drawing.Point(2, 340)
+        Me.PictureBox26.Name = "PictureBox26"
+        Me.PictureBox26.Size = New System.Drawing.Size(172, 155)
+        Me.PictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox26.TabIndex = 18
+        Me.PictureBox26.TabStop = False
+        '
+        'PictureBox25
+        '
+        Me.PictureBox25.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox25.Image = Global.centro_medico.My.Resources.Resources.Icon_Cominicaciones
+        Me.PictureBox25.Location = New System.Drawing.Point(3, 676)
+        Me.PictureBox25.Name = "PictureBox25"
+        Me.PictureBox25.Size = New System.Drawing.Size(172, 155)
+        Me.PictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox25.TabIndex = 17
+        Me.PictureBox25.TabStop = False
+        '
+        'PictureBox24
+        '
+        Me.PictureBox24.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox24.Image = Global.centro_medico.My.Resources.Resources.Icon_Procesos
+        Me.PictureBox24.Location = New System.Drawing.Point(559, 508)
+        Me.PictureBox24.Name = "PictureBox24"
+        Me.PictureBox24.Size = New System.Drawing.Size(172, 155)
+        Me.PictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox24.TabIndex = 16
+        Me.PictureBox24.TabStop = False
+        '
+        'PictureBox23
+        '
+        Me.PictureBox23.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox23.Image = Global.centro_medico.My.Resources.Resources.Icon_ParteAsistencia
+        Me.PictureBox23.Location = New System.Drawing.Point(374, 508)
+        Me.PictureBox23.Name = "PictureBox23"
+        Me.PictureBox23.Size = New System.Drawing.Size(172, 155)
+        Me.PictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox23.TabIndex = 15
+        Me.PictureBox23.TabStop = False
+        '
+        'PictureBox22
+        '
+        Me.PictureBox22.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox22.Image = Global.centro_medico.My.Resources.Resources.Icon_ParteAltas_Bajas
+        Me.PictureBox22.Location = New System.Drawing.Point(188, 508)
+        Me.PictureBox22.Name = "PictureBox22"
+        Me.PictureBox22.Size = New System.Drawing.Size(172, 155)
+        Me.PictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox22.TabIndex = 14
+        Me.PictureBox22.TabStop = False
+        '
+        'PictureBox21
+        '
+        Me.PictureBox21.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox21.Image = Global.centro_medico.My.Resources.Resources.icon_Citas
+        Me.PictureBox21.Location = New System.Drawing.Point(2, 508)
+        Me.PictureBox21.Name = "PictureBox21"
+        Me.PictureBox21.Size = New System.Drawing.Size(172, 155)
+        Me.PictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox21.TabIndex = 13
+        Me.PictureBox21.TabStop = False
+        '
+        'PictureBox20
+        '
+        Me.PictureBox20.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox20.Image = Global.centro_medico.My.Resources.Resources.Icon_BonosNoAgotados
+        Me.PictureBox20.Location = New System.Drawing.Point(558, 340)
+        Me.PictureBox20.Name = "PictureBox20"
+        Me.PictureBox20.Size = New System.Drawing.Size(172, 155)
+        Me.PictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox20.TabIndex = 12
+        Me.PictureBox20.TabStop = False
+        '
+        'PictureBox19
+        '
+        Me.PictureBox19.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox19.Image = Global.centro_medico.My.Resources.Resources.Icon_GenerarNorma19
+        Me.PictureBox19.Location = New System.Drawing.Point(373, 340)
+        Me.PictureBox19.Name = "PictureBox19"
+        Me.PictureBox19.Size = New System.Drawing.Size(172, 155)
+        Me.PictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox19.TabIndex = 11
+        Me.PictureBox19.TabStop = False
+        '
+        'PictureBox18
+        '
+        Me.PictureBox18.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox18.Image = Global.centro_medico.My.Resources.Resources.Icon_ImprimirRemesa
+        Me.PictureBox18.Location = New System.Drawing.Point(187, 340)
+        Me.PictureBox18.Name = "PictureBox18"
+        Me.PictureBox18.Size = New System.Drawing.Size(172, 155)
+        Me.PictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox18.TabIndex = 10
+        Me.PictureBox18.TabStop = False
+        '
+        'PictureBox17
+        '
+        Me.PictureBox17.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox17.Image = Global.centro_medico.My.Resources.Resources.Icon_GenerarRecibo
+        Me.PictureBox17.Location = New System.Drawing.Point(558, 172)
+        Me.PictureBox17.Name = "PictureBox17"
+        Me.PictureBox17.Size = New System.Drawing.Size(172, 155)
+        Me.PictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox17.TabIndex = 9
+        Me.PictureBox17.TabStop = False
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox6.Image = Global.centro_medico.My.Resources.Resources.Icon_Analitica
+        Me.PictureBox6.Location = New System.Drawing.Point(373, 172)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(172, 155)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox6.TabIndex = 8
+        Me.PictureBox6.TabStop = False
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox8.Image = Global.centro_medico.My.Resources.Resources.Icon_PresupuestosDentales
+        Me.PictureBox8.Location = New System.Drawing.Point(188, 172)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(172, 155)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox8.TabIndex = 7
+        Me.PictureBox8.TabStop = False
+        '
+        'PictureBox12
+        '
+        Me.PictureBox12.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox12.Image = Global.centro_medico.My.Resources.Resources.Icon_Empresa
+        Me.PictureBox12.Location = New System.Drawing.Point(188, 4)
+        Me.PictureBox12.Name = "PictureBox12"
+        Me.PictureBox12.Size = New System.Drawing.Size(172, 155)
+        Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox12.TabIndex = 6
+        Me.PictureBox12.TabStop = False
+        '
+        'PictureBox13
+        '
+        Me.PictureBox13.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox13.Image = Global.centro_medico.My.Resources.Resources.Icon_AsistenteFacturacion
+        Me.PictureBox13.Location = New System.Drawing.Point(558, 4)
+        Me.PictureBox13.Name = "PictureBox13"
+        Me.PictureBox13.Size = New System.Drawing.Size(172, 155)
+        Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox13.TabIndex = 5
+        Me.PictureBox13.TabStop = False
+        '
+        'PictureBox14
+        '
+        Me.PictureBox14.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox14.Image = Global.centro_medico.My.Resources.Resources.Icon_Factura
+        Me.PictureBox14.Location = New System.Drawing.Point(373, 4)
+        Me.PictureBox14.Name = "PictureBox14"
+        Me.PictureBox14.Size = New System.Drawing.Size(172, 155)
+        Me.PictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox14.TabIndex = 4
+        Me.PictureBox14.TabStop = False
+        '
+        'PictureBox15
+        '
+        Me.PictureBox15.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox15.Image = Global.centro_medico.My.Resources.Resources.Icon_Paciente
+        Me.PictureBox15.Location = New System.Drawing.Point(3, 4)
+        Me.PictureBox15.Name = "PictureBox15"
+        Me.PictureBox15.Size = New System.Drawing.Size(172, 155)
+        Me.PictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox15.TabIndex = 3
+        Me.PictureBox15.TabStop = False
+        '
+        'PictureBox16
+        '
+        Me.PictureBox16.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox16.Image = Global.centro_medico.My.Resources.Resources.Icon_GenerarFactura
+        Me.PictureBox16.Location = New System.Drawing.Point(2, 172)
+        Me.PictureBox16.Name = "PictureBox16"
+        Me.PictureBox16.Size = New System.Drawing.Size(172, 155)
+        Me.PictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox16.TabIndex = 1
+        Me.PictureBox16.TabStop = False
+        '
+        'PROVEEDORESBindingSource
+        '
+        Me.PROVEEDORESBindingSource.DataMember = "PROVEEDORES"
+        Me.PROVEEDORESBindingSource.DataSource = Me.CMDataSet
+        '
         'form_new_centro_medico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -826,6 +1090,7 @@ Partial Class form_new_centro_medico
         Me.BackgroundImage = Global.centro_medico.My.Resources.Resources.newpag
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1008, 645)
+        Me.Controls.Add(Me.UiGroupBox3)
         Me.Controls.Add(Me.UiGroupBox2)
         Me.Controls.Add(Me.ExplorerBar1)
         Me.Controls.Add(Me.UiGroupBox1)
@@ -853,7 +1118,6 @@ Partial Class form_new_centro_medico
         CType(Me.Paciente, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Citas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Dashboard, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PROVEEDORESBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CMDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PERMISOS_USUARIOBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MEDICAMENTOSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -881,6 +1145,26 @@ Partial Class form_new_centro_medico
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UiGroupBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.UiGroupBox3.ResumeLayout(False)
+        CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PROVEEDORESBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -898,7 +1182,6 @@ Partial Class form_new_centro_medico
     Friend WithEvents Factura As System.Windows.Forms.PictureBox
     Friend WithEvents DebitoPaciente As System.Windows.Forms.PictureBox
     Friend WithEvents PROVEEDORESTableAdapter As centro_medico.CMDataSetTableAdapters.PROVEEDORESTableAdapter
-    Friend WithEvents PROVEEDORESBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents CMDataSet As centro_medico.CMDataSet
     Friend WithEvents PERMISOS_USUARIOBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents PLANTILLASTableAdapter As centro_medico.CMDataSetTableAdapters.PLANTILLASTableAdapter
@@ -941,4 +1224,23 @@ Partial Class form_new_centro_medico
     Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox7 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox9 As System.Windows.Forms.PictureBox
+    Friend WithEvents UiGroupBox3 As Janus.Windows.EditControls.UIGroupBox
+    Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox8 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox12 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox13 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox14 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox15 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox16 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox17 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox18 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox19 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox20 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox21 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox22 As System.Windows.Forms.PictureBox
+    Friend WithEvents PROVEEDORESBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents PictureBox23 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox24 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox25 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox26 As System.Windows.Forms.PictureBox
 End Class

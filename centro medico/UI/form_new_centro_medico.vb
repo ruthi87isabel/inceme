@@ -607,6 +607,305 @@ Public Class form_new_centro_medico
             frm.ShowDialog()
         End If
 
+        If ExplorerBar1.Groups("Group3").Items("Item1").Selected Then
+            Me.ALARMASTableAdapter.Fill(Me.CMDataSet.ALARMAS)
+            Dim _name As String = "Listado de alarmas"
+            MostrarListado(_name, ALARMASBindingSource, RoleManager.Items.Alarmas)
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group3").Items("Item2").Selected Then
+            Dim frm As New frmDiagnosticos()
+            frm.ShowDialog()
+        ElseIf ExplorerBar1.Groups("Group3").Items("Item3").Selected Then
+            Dim frm As New frmMedicamentos
+            frm.StartPosition = FormStartPosition.CenterScreen
+            frm.ShowInTaskbar = False
+            frm.ShowDialog()
+        ElseIf ExplorerBar1.Groups("Group3").Items("Item4").Selected Then
+            Me.INDICACIONESTableAdapter.Fill(Me.CMDataSet.INDICACIONES)
+            Dim _name As String = "Listado de indicaciones"
+
+            MostrarListado(_name, INDICACIONESBindingSource, RoleManager.Items.Indicaciones)
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group3").Items("Item5").Selected Then
+            Dim frm As New frmListadoConceptos()
+            frm.tstAnnadirSeleccionados.Visible = False
+            frm.ShowDialog()
+        ElseIf ExplorerBar1.Groups("Group3").Items("Item6").Selected Then
+            Dim frm As New frmFamiliaSelector()
+            frm.Modo = Globales.ModoParaFormas.Edicion
+            frm.ShowDialog()
+        ElseIf ExplorerBar1.Groups("Group3").Items("Item7").Selected Then
+            Dim frm As New frmTarifas()
+            frm.ShowDialog()
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group3").Items("Item8").Selected Then
+            Dim frm As New frmConceptoAnaliticaListado()
+            frm.ShowDialog()
+        ElseIf ExplorerBar1.Groups("Group3").Items("Item9").Selected Then
+            Dim frm As New frmPlantillaAnalitica()
+            frm.ShowDialog()
+        ElseIf ExplorerBar1.Groups("Group3").Items("Item10").Selected Then
+            Dim frm As New frmModelosRevisionesComparativas()
+            frm.ShowDialog()
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group3").Items("Item11").Selected Then
+            Dim frm As New frmPlantillasdeTexto()
+            frm.ShowDialog()
+        ElseIf ExplorerBar1.Groups("Group3").Items("Item12").Selected Then
+            Me.PLANTILLA_HISTORIALESTableAdapter.Fill(Me.CMDataSet.PLANTILLA_HISTORIALES)
+            Dim _name As String = "Listado de Plantillas de Historial"
+            MostrarListado(_name, PLANTILLA_HISTORIALESBindingSource, RoleManager.Items.Plantilla_de_Historial)
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group3").Items("Item13").Selected Then
+            Dim frm As frmPoblaciones = New frmPoblaciones()
+            frm.Modo = Globales.ModoParaFormas.Edicion
+            frm.ShowDialog()
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group3").Items("Item14").Selected Then
+            Me.PAISESTableAdapter.Fill(Me.CMDataSet.PAISES)
+            Dim _name As String = "Listado de países"
+            MostrarListado(_name, PAISESBindingSource, RoleManager.Items.Paises)
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group3").Items("Item15").Selected Then
+            Dim frm As frmComoConocio = New frmComoConocio()
+            frm.Modo = Globales.ModoParaFormas.Edicion
+            frm.ShowDialog()
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group3").Items("Item16").Selected Then
+            Dim frm As New frmFormasDePago()
+            frm.ShowDialog()
+        ElseIf ExplorerBar1.Groups("Group3").Items("Item17").Selected Then
+            Dim frm As New frmClinicasExternas()
+            frm.ShowDialog()
+        ElseIf ExplorerBar1.Groups("Group3").Items("Item17").Selected Then
+            If RoleManager.PermisoPorItem(fIduser, RoleManager.Items.Almacen) = RoleManager.TipoPermisos.Ninguno Then
+                MsgBox("No tiene permisos para acceder a esta parte de la aplicación.", MsgBoxStyle.Exclamation)
+                Exit Sub
+            End If
+            Dim frm As frmAlmacen = New frmAlmacen()
+            frm.Modo = Globales.ModoParaFormas.Edicion
+            frm.ShowDialog()
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group3").Items("Item17").Selected Then
+            Dim frm As New frmSalas
+            frm.Show()
+        ElseIf ExplorerBar1.Groups("Group3").Items("Item18").Selected Then
+            Dim frm As New frm_BancoImag_Galeria()
+            frm.ShowDialog()
+        End If
+
+        If ExplorerBar1.Groups("Group4").Items("Item1").Selected Then
+            Dim frm As New frmPacientesListado()
+            frm.ShowDialog()
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group4").Items("Item2").Selected Then
+            Dim _faltas As listado_faltas
+            _faltas = New listado_faltas(Globales.Configuracion)
+            _faltas.ShowInTaskbar = False
+            _faltas.ShowDialog()
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group4").Items("Item3").Selected Then
+            Dim _partes As Partes
+            _partes = New Partes(Globales.Configuracion)
+            _partes.ShowInTaskbar = False
+            _partes.ShowDialog()
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group4").Items("Item4").Selected Then
+            Dim frm As New frmRecetasListadoFiltrado()
+            frm.ShowDialog()
+        ElseIf ExplorerBar1.Groups("Group4").Items("Item5").Selected Then
+            Dim frm As New frmListadoCitas()
+            frm.ShowInTaskbar = False
+            frm.ShowDialog()
+        ElseIf ExplorerBar1.Groups("Group4").Items("Item6").Selected Then
+            Dim _citas As Citas_Por_Especialista
+            _citas = New Citas_Por_Especialista(Globales.Configuracion)
+            _citas.ShowInTaskbar = False
+            _citas.ShowDialog()
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group4").Items("Item7").Selected Then
+            Dim _citas As Citas_Por_Procedencia
+            _citas = New Citas_Por_Procedencia(Globales.Configuracion)
+            _citas.ShowInTaskbar = False
+            _citas.ShowDialog()
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group4").Items("Item8").Selected Then
+            Dim frm As New frmFacturasM()
+            frm.ShowDialog()
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group4").Items("Item9").Selected Then
+            Dim _recibo As Recibos = New Recibos(Globales.Configuracion)
+            _recibo.ShowInTaskbar = False
+            _recibo.ShowDialog()
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group4").Items("Item10").Selected Then
+            Dim frm As New frmLibroIngresosGastos()
+            frm.ShowDialog()
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group4").Items("Item11").Selected Then
+            Dim rdatasource As New Microsoft.Reporting.WinForms.ReportDataSource
+
+            rdatasource.Name = "CMDataSet_EstadisticasDiagnosticos"
+            rdatasource.Value = Me.EstadisticasDiagnosticosTableAdapter.GetDataTodos
+            UI.Reportes.ReportesManager.Imprime("EstadisticasDiagnosticos.rdlc", {rdatasource})
+        ElseIf ExplorerBar1.Groups("Group4").Items("Item12").Selected Then
+            Dim frm As New frmPacientesPorDiagnosticos
+            frm.ShowInTaskbar = False
+            frm.ShowDialog()
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group4").Items("Item13").Selected Then
+            Dim frm As New frmPacientesPorDerivaciones
+            frm.ShowInTaskbar = False
+            frm.Show()
+            GC.Collect()
+        End If
+
+        If ExplorerBar1.Groups("Group5").Items("Item1").Selected Then
+            If RoleManager.PermisoPorItem(Globales.Usuario.CODIGO, RoleManager.Items.Proveedores) = RoleManager.TipoPermisos.Ninguno Then
+                Globales.MsgboxErrorPermisoNoAutorizado()
+                Exit Sub
+            End If
+            Dim frm As frmProveedores = New frmProveedores()
+            frm.Modo = Globales.ModoParaFormas.Edicion
+            frm.ShowDialog()
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group5").Items("Item2").Selected Then
+            If RoleManager.PermisoPorItem(Globales.Usuario.CODIGO, RoleManager.Items.Articulos) = RoleManager.TipoPermisos.Ninguno Then
+                Globales.MsgboxErrorPermisoNoAutorizado()
+                Exit Sub
+            End If
+            Dim frm As frmArticulos = New frmArticulos()
+            frm.Modo = Globales.ModoParaFormas.Edicion
+            frm.ShowDialog()
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group5").Items("Item3").Selected Then
+            If RoleManager.PermisoPorItem(Globales.Usuario.CODIGO, RoleManager.Items.Entradas) = RoleManager.TipoPermisos.Ninguno Then
+                Globales.MsgboxErrorPermisoNoAutorizado()
+                Exit Sub
+            End If
+
+            Dim frm As frmEntradas = New frmEntradas()
+            frm.Modo = Globales.ModoParaFormas.Edicion
+            frm.ShowDialog()
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group5").Items("Item4").Selected Then
+            If RoleManager.PermisoPorItem(Globales.Usuario.CODIGO, RoleManager.Items.Pedidos_Compras) = RoleManager.TipoPermisos.Ninguno Then
+                Globales.MsgboxErrorPermisoNoAutorizado()
+                Exit Sub
+            End If
+            Dim frm As frmPedidosProveedor = New frmPedidosProveedor()
+            frm.Modo = Globales.ModoParaFormas.Edicion
+            frm.ShowDialog()
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group5").Items("Item5").Selected Then
+            If RoleManager.PermisoPorItem(Globales.Usuario.CODIGO, RoleManager.Items.Facturas_Compras) = RoleManager.TipoPermisos.Ninguno Then
+                Globales.MsgboxErrorPermisoNoAutorizado()
+                Exit Sub
+            End If
+            Dim frm As frmFacturasRecibidas = New frmFacturasRecibidas()
+            frm.Modo = Globales.ModoParaFormas.Edicion
+            frm.ShowDialog()
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group5").Items("Item6").Selected Then
+            If RoleManager.PermisoPorItem(Globales.Usuario.CODIGO, RoleManager.Items.Facturas_Ventas) = RoleManager.TipoPermisos.Ninguno Then
+                Globales.MsgboxErrorPermisoNoAutorizado()
+                Exit Sub
+            End If
+
+            Dim frm As frmFacturasMedicas = New frmFacturasMedicas()
+            frm.Modo = Globales.ModoParaFormas.Edicion
+            frm.ShowDialog()
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group5").Items("Item7").Selected Then
+            Dim frm As New frmTPVTicketsListado()
+            frm.ShowDialog()
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group5").Items("Item8").Selected Then
+            Dim frm As frmConsolidacionStock = New frmConsolidacionStock()
+            frm.Modo = Globales.ModoParaFormas.Edicion
+            frm.ShowDialog()
+            GC.Collect()
+        End If
+
+        If ExplorerBar1.Groups("Group6").Items("Item1").Selected Then
+            Dim frm As frmUsuarios = New frmUsuarios()
+            frm.ShowDialog()
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group6").Items("Item2").Selected Then
+            Dim frmconfusr As New form_ConfiguracionUsuario
+            frmconfusr.ShowDialog()
+            frmconfusr.ShowInTaskbar = False
+        ElseIf ExplorerBar1.Groups("Group6").Items("Item3").Selected Then
+             Dim frm As frmRoles = New frmRoles()
+            frm.ShowDialog()
+            GC.Collect()
+            MessageBox.Show("Los cambios seran aplicados luego de reiniciada la sesión")
+        ElseIf ExplorerBar1.Groups("Group6").Items("Item4").Selected Then
+            Dim _conf As form_configuracion = New form_configuracion()
+            _conf.ShowInTaskbar = False
+            _conf.ShowDialog()
+        ElseIf ExplorerBar1.Groups("Group6").Items("Item5").Selected Then
+            Dim frm As New frmChequeoIntegridad()
+            frm.ShowDialog()
+        ElseIf ExplorerBar1.Groups("Group6").Items("Item6").Selected Then
+           Dim frm As New frmChequeoTotalesCitas
+            frm.ShowDialog()
+        ElseIf ExplorerBar1.Groups("Group6").Items("Item7").Selected Then
+            If MsgBox("La importación de una Base de datos implica la eliminación de los datos actuales en su Base de datos, desea continuar?", MsgBoxStyle.OkCancel, "Importador Datos") = MsgBoxResult.Cancel Then
+                Return
+            End If
+
+            Dim frm As Importer.FrmConnector = New FrmConnector(Configuration.ConfigurationManager.ConnectionStrings("centro_medico.My.MySettings.CMConnectionString").ConnectionString)
+            frm.ShowDialog()
+        ElseIf ExplorerBar1.Groups("Group6").Items("Item8").Selected Then
+            Try
+                'MessageBox.Show(Application.StartupPath & "\Updater\UpdaterClient.exe")
+                'Dim conStrFile As String = IO.Path.GetTempPath() & "\INCEME.conn"
+                'Dim fs As StreamWriter = File.CreateText(conStrFile)
+                'fs.Write(My.MySettings.Default.CMConnectionString)
+                'fs.Close()
+                ''Dim command As String = """" & "ConnString=" & My.MySettings.Default.CMConnectionString & """"
+                'MessageBox.Show(command)
+                Dim res As MsgBoxResult = MsgBox("Es necesario cerrar inceme para actualizar. Se abrirá una carpeta donde debe ejecutar UPDATERCLIENT.EXE ¿Desea cerrar y continuar con el actualizador?", vbYesNo)
+                If res = MsgBoxResult.Yes Then
+                    If File.Exists(Application.StartupPath & "\updater\updaterclient.exe") Then
+                        Dim path As String
+                        path = Application.StartupPath & "\updater"
+                        Process.Start("explorer.exe", path)
+                        Application.Exit()
+                    Else
+                        MessageBox.Show("No se encuentra el fichero " & Application.StartupPath & "\updater\UpdaterClient.exe")
+                    End If
+                End If
+
+            Catch ex As Exception
+                Globales.ShowError(ex.Message, ex)
+            End Try
+            GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group6").Items("Item9").Selected Then
+           Dim frm As New frmAuditoria()
+            frm.ShowDialog()
+        ElseIf ExplorerBar1.Groups("Group6").Items("Item10").Selected Then
+             Dim a As New frmMigrarPacientes
+            a.ShowDialog()
+        End If
+
+        If ExplorerBar1.Groups("Group7").Items("Item1").Selected Then
+            Dim a As New Process
+            a.Start("http://www.youtube.com/goltratec")
+
+            GC.Collect()
+        End If
+
+        If ExplorerBar1.Groups("Group9").Items("Item1").Selected Then
+            Me.DialogResult = Windows.Forms.DialogResult.No
+            GC.Collect()
+            Me.Close()
+        ElseIf ExplorerBar1.Groups("Group9").Items("Item2").Selected Then
+            Me.DialogResult = Windows.Forms.DialogResult.OK
+            Me.Close()
+        End If
+
     End Sub
 
     Private Sub ListadoDeEmpresas()
@@ -614,14 +913,45 @@ Public Class form_new_centro_medico
         empresa.ShowDialog()
     End Sub
 
-    Private Sub ExplorerBar1_GroupClick(sender As Object, e As Janus.Windows.ExplorerBar.GroupEventArgs) Handles ExplorerBar1.GroupClick
+    Private Sub ExplorerBar1_GroupExpanding(sender As Object, e As Janus.Windows.ExplorerBar.GroupCancelEventArgs) Handles ExplorerBar1.GroupExpanding
 
-        If Not ExplorerBar1.Groups("Group1").Expanded Then
-            UiGroupBox1.Visible = False
-            UiGroupBox2.Visible = True
-        ElseIf ExplorerBar1.Groups("Group1").Expanded Then
+        If ExplorerBar1.Groups("Group1").Expanded Then ExplorerBar1.Groups("Group1").Expanded = False
+        If ExplorerBar1.Groups("Group2").Expanded Then ExplorerBar1.Groups("Group2").Expanded = False
+        If ExplorerBar1.Groups("Group3").Expanded Then ExplorerBar1.Groups("Group3").Expanded = False
+        If ExplorerBar1.Groups("Group4").Expanded Then ExplorerBar1.Groups("Group4").Expanded = False
+        If ExplorerBar1.Groups("Group5").Expanded Then ExplorerBar1.Groups("Group5").Expanded = False
+        If ExplorerBar1.Groups("Group6").Expanded Then ExplorerBar1.Groups("Group6").Expanded = False
+        If ExplorerBar1.Groups("Group7").Expanded Then ExplorerBar1.Groups("Group7").Expanded = False
+        If ExplorerBar1.Groups("Group8").Expanded Then ExplorerBar1.Groups("Group8").Expanded = False
+        If ExplorerBar1.Groups("Group9").Expanded Then ExplorerBar1.Groups("Group9").Expanded = False
+    End Sub
+
+    Private Sub ExplorerBar1_GroupExpanded(sender As Object, e As Janus.Windows.ExplorerBar.GroupEventArgs) Handles ExplorerBar1.GroupExpanded
+
+        UiGroupBox1.Visible = False
+        UiGroupBox2.Visible = False
+        UiGroupBox3.Visible = False
+
+        If ExplorerBar1.Groups("Group1").Expanded Then UiGroupBox2.Visible = True
+        If ExplorerBar1.Groups("Group2").Expanded Then UiGroupBox3.Visible = True
+
+    End Sub
+
+    Private Sub ExplorerBar1_GroupCollapsing(sender As Object, e As Janus.Windows.ExplorerBar.GroupCancelEventArgs) Handles ExplorerBar1.GroupCollapsing
+        Dim a As Integer
+        If ExplorerBar1.Groups("Group1").Expanded Then a += 1
+        If ExplorerBar1.Groups("Group2").Expanded Then a += 1
+        If ExplorerBar1.Groups("Group3").Expanded Then a += 1
+        If ExplorerBar1.Groups("Group4").Expanded Then a += 1
+        If ExplorerBar1.Groups("Group5").Expanded Then a += 1
+        If ExplorerBar1.Groups("Group6").Expanded Then a += 1
+        If ExplorerBar1.Groups("Group7").Expanded Then a += 1
+        If ExplorerBar1.Groups("Group8").Expanded Then a += 1
+        If ExplorerBar1.Groups("Group9").Expanded Then a += 1
+        If a = 1 Then
             UiGroupBox1.Visible = True
             UiGroupBox2.Visible = False
+            UiGroupBox3.Visible = False
         End If
     End Sub
 
@@ -669,6 +999,132 @@ Public Class form_new_centro_medico
 
     Private Sub PictureBox11_Click(sender As Object, e As EventArgs)
         Dim frm As New frmHorarios()
+        frm.ShowDialog()
+    End Sub
+
+
+    Private Sub PictureBox15_Click(sender As Object, e As EventArgs) Handles PictureBox15.Click
+        Dim frm As New frmPacientesListado()
+        frm.ShowDialog()
+        frm.Dispose()
+        frm = Nothing
+        FreeMemory.FlushMemory()
+    End Sub
+
+    Private Sub PictureBox12_Click(sender As Object, e As EventArgs) Handles PictureBox12.Click
+        ListadoDeEmpresas()
+    End Sub
+
+    Private Sub PictureBox14_Click(sender As Object, e As EventArgs) Handles PictureBox14.Click
+        Dim frm As New frmFacturasM()
+        frm.ShowDialog()
+        FreeMemory.FlushMemory()
+    End Sub
+
+    Private Sub PictureBox13_Click(sender As Object, e As EventArgs) Handles PictureBox13.Click
+        Dim frm As New frmPartes_AsistenteFacturacion()
+        frm.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub PictureBox16_Click(sender As Object, e As EventArgs) Handles PictureBox16.Click
+        Dim _generar As New form_generar_recfact
+        _generar.ShowInTaskbar = False
+        _generar.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub PictureBox8_Click_1(sender As Object, e As EventArgs) Handles PictureBox8.Click
+        Dim frm As New frmDental_ListadoPresupuestos()
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub PictureBox6_Click_1(sender As Object, e As EventArgs) Handles PictureBox6.Click
+        Dim adapter As New CMDataSetTableAdapters.ANALITICASTableAdapter
+        adapter.Fill(Me.CMDataSet.ANALITICAS)
+
+        Dim source As New BindingSource
+        source.DataSource = CMDataSet
+        source.DataMember = "ANALITICAS"
+
+        MostrarListado("Listado de analiticas", source, RoleManager.Items.Analiticas)
+        GC.Collect()
+    End Sub
+
+    Private Sub PictureBox17_Click(sender As Object, e As EventArgs) Handles PictureBox17.Click
+        Dim _generar_recibos As form_generar_recibos = New form_generar_recibos(Globales.Configuracion)
+        _generar_recibos.ShowInTaskbar = False
+        _generar_recibos.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub PictureBox26_Click(sender As Object, e As EventArgs) Handles PictureBox26.Click
+        Me.RECIBOSTableAdapter.Fill(Me.CMDataSet.RECIBOS)
+        Dim _name As String = "Listado de Modelos de Recibos"
+        MostrarListado(_name, RECIBOSBindingSource, RoleManager.Items.Recibos)
+        GC.Collect()
+    End Sub
+
+    Private Sub PictureBox18_Click(sender As Object, e As EventArgs) Handles PictureBox18.Click
+        Dim _remesas As form_remesa_de_recibos = New form_remesa_de_recibos(Globales.Configuracion)
+        _remesas.ShowInTaskbar = False
+        _remesas.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub PictureBox19_Click(sender As Object, e As EventArgs) Handles PictureBox19.Click
+        Dim frm As New frmNorma19()
+        frm.ShowDialog()
+
+        GC.Collect()
+    End Sub
+
+    Private Sub PictureBox20_Click(sender As Object, e As EventArgs) Handles PictureBox20.Click
+        Dim _remesas As form_bonos_no_agotados = New form_bonos_no_agotados()
+        _remesas.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub PictureBox21_Click(sender As Object, e As EventArgs) Handles PictureBox21.Click
+        Dim frm As New frmCalendarioCitas()
+        frm.ShowDialog()
+        frm.Dispose()
+        frm = Nothing
+        FreeMemory.FlushMemory()
+    End Sub
+
+    Private Sub PictureBox22_Click(sender As Object, e As EventArgs) Handles PictureBox22.Click
+        Dim frm As New frmPartes()
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub PictureBox23_Click(sender As Object, e As EventArgs) Handles PictureBox23.Click
+        Dim frm As New frmPartesAsistencia()
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub PictureBox24_Click(sender As Object, e As EventArgs) Handles PictureBox24.Click
+        Dim frm As New frmProcesos()
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub PictureBox25_Click(sender As Object, e As EventArgs) Handles PictureBox25.Click
+        Dim frm As New frmComunicaciones()
+        frm.ShowDialog()
+    End Sub
+
+    
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Dim frm As New frmUsuarios_ADD(True)
+        frm.CODIGO = Globales.Usuario.CODIGO
+        frm.ShowInTaskbar = False
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub lb_usuario_Click(sender As Object, e As EventArgs) Handles lb_usuario.Click
+        Dim frm As New frmUsuarios_ADD(True)
+        frm.CODIGO = Globales.Usuario.CODIGO
+        frm.ShowInTaskbar = False
         frm.ShowDialog()
     End Sub
 End Class
