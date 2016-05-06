@@ -34,7 +34,9 @@ Module Main
             res = frmPassword.ShowDialog()
             If res = DialogResult.OK Then
 
-                Dim centromedico As form_centro_medico = New form_centro_medico(frmPassword._Idusuario, frmPassword.diaNoValido)
+                'Dim centromedico As form_centro_medico = New form_centro_medico(frmPassword._Idusuario, frmPassword.diaNoValido)
+                'res = centromedico.ShowDialog()
+                Dim centromedico As form_new_centro_medico = New form_new_centro_medico(frmPassword._Idusuario, frmPassword.diaNoValido)
                 res = centromedico.ShowDialog()
             End If
         Loop

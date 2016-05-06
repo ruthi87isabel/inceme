@@ -155,6 +155,7 @@
       <HintPath>..\DLLS\Janus.Windows.Common.v4.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Janus.Windows.ExplorerBar.v4, Version=4.0.36.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
     <Reference Include="Janus.Windows.GridEX.v4, Version=4.0.36.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLLS\Janus.Windows.GridEX.v4.dll</HintPath>
@@ -639,6 +640,12 @@
     </Compile>
     <Compile Include="UI\Dental\Odontograma.vb">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\form_new_centro_medico.Designer.vb">
+      <DependentUpon>form_new_centro_medico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\form_new_centro_medico.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Horario\Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -2208,7 +2215,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="notas.txt" />
     <Content Include="RDLC\custom\ccc\logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -2242,6 +2248,42 @@
     </Content>
     <Content Include="Resources\1449807294_Chart_bar.png" />
     <Content Include="Resources\1449807300_Chart_bar.ico" />
+    <None Include="Resources\new\Icon_Analitica.png" />
+    <Content Include="Resources\new\Icon_Articulos.jpg" />
+    <None Include="Resources\new\Icon_AsistenteFacturacion.png" />
+    <Content Include="Resources\new\Icon_Banco.jpg" />
+    <None Include="Resources\new\Icon_BonosNoAgotados.png" />
+    <Content Include="Resources\new\icon_Citas.jpg" />
+    <None Include="Resources\new\Icon_Cominicaciones.png" />
+    <Content Include="Resources\new\Icon_DashBoard.jpg" />
+    <Content Include="Resources\new\Icon_DebitoPaciente.jpg" />
+    <None Include="Resources\new\Icon_Empresa.png" />
+    <Content Include="Resources\new\Icon_Factura.jpg" />
+    <Content Include="Resources\new\Icon_Gastos.jpg" />
+    <None Include="Resources\new\Icon_GenerarFactura.png" />
+    <None Include="Resources\new\Icon_GenerarRecibo.png" />
+    <None Include="Resources\new\Icon_GenerarNorma19.png" />
+    <Content Include="Resources\new\Icon_Horario.jpg" />
+    <None Include="Resources\new\Icon_ImprimirRemesa.png" />
+    <Content Include="Resources\new\Icon_LiquidacionMedicos.jpg" />
+    <Content Include="Resources\new\Icon_Medico.jpg" />
+    <Content Include="Resources\new\Icon_Mutuas.jpg" />
+    <Content Include="Resources\new\Icon_Paciente.jpg" />
+    <None Include="Resources\new\Icon_PresupuestosDentales.png" />
+    <None Include="Resources\new\Icon_ParteAltas-Bajas.png" />
+    <None Include="Resources\new\Icon_ParteAsistencia.png" />
+    <None Include="Resources\new\Icon_Procesos.png" />
+    <Content Include="Resources\new\Icon_Proveedores.jpg" />
+    <None Include="Resources\new\Icon_Recibos.png" />
+    <Content Include="Resources\new\INCEME.png" />
+    <Content Include="Resources\new\Micon_Clinica.png" />
+    <Content Include="Resources\new\newpag.png" />
+    <None Include="Resources\new\PartPag.png" />
+    <Content Include="Resources\new\PicAdmin.jpg" />
+    <Content Include="Resources\new\PicAdmin1.jpg" />
+    <Content Include="Resources\new\PicDoctor.jpg" />
+    <Content Include="Resources\new\PicReception.jpg" />
+    <Content Include="Resources\new\Search.jpg" />
     <Content Include="Resources\permisos.png" />
     <Content Include="Scripts\db_1.0.3.7.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -2268,7 +2310,6 @@
     <Content Include="Scripts\db_1.0.3.9.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Scripts\Query Dashboard.sql" />
     <Content Include="Scripts\db_1.0.4.0.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -4063,6 +4104,9 @@
     <EmbeddedResource Include="controles\ctrlVisorHistoria.resx">
       <SubType>Designer</SubType>
       <DependentUpon>ctrlVisorHistoria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\form_new_centro_medico.resx">
+      <DependentUpon>form_new_centro_medico.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Horario\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>

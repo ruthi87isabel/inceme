@@ -9,6 +9,8 @@ Public Class frmPacientesListado
     Dim lista As New List(Of WRAPPER_PACIENTE)
 
     Public seleccion As Integer = 0
+    Public Buscar As Integer = 0
+    Public SQLSentence As String
     Public Modo As Globales.ModoParaFormas = Globales.ModoParaFormas.Edicion
     Public Paciente As PACIENTE = Nothing
     Public Context As New CMLinqDataContext()
@@ -323,6 +325,7 @@ Public Class frmPacientesListado
 
     Private Sub bt_filtrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bt_filtrar.Click
         PopulateGrid()
+        Buscar = 0
     End Sub
 
 #Region "Public Sub AplicarFormato()"
@@ -366,218 +369,19 @@ Public Class frmPacientesListado
 
     Protected Overrides Sub PopulateGrid()
 
-        If Not Me.IsHandleCreated Then
+        If Not Me.IsHandleCreated And Buscar = 0 Then
             Return
         End If
 
-        Dim condition As New List(Of String)
-
-        'Dim condition As New GridEXFilterCondition()
-        'condition.LogicalOperator = LogicalOperator.And
-
-
-        If Not grpFiltrarPorCodigo.Enabled Then
-
-            If txtCodigoPropio.Text.Length > 0 Then condition.Add(" PACIENTES.CODIGOPROPIO LIKE '" & txtCodigoPropio.Text & "%'")
-
-            If txtNombre.Text.Length > 0 Then condition.Add(" PACIENTES.NOMBRE LIKE '" & txtNombre.Text & "%'")
-
-            If txtApellido1.Text.Length > 0 Then condition.Add(" PACIENTES.APELLIDO1 LIKE '" & txtApellido1.Text & "%'")
-
-            If txtApellido2.Text.Length > 0 Then condition.Add(" PACIENTES.APELLIDO2 LIKE '" & txtApellido2.Text & "%'")
-
-            If txtDni.Text.Length > 0 Then condition.Add("PACIENTES.DNI LIKE '" & txtDni.Text & "%'")
-
-        Else
-            If CtrlPacienteDesde.ID_PACIENTE.HasValue Then
-                condition.Add("PACIENTES.CPACIENTE >=" & CtrlPacienteDesde.ID_PACIENTE)
-            End If
-            If CtrlPacienteHasta.ID_PACIENTE.HasValue Then
-                condition.Add("PACIENTES.CPACIENTE <=" & CtrlPacienteHasta.ID_PACIENTE)
-            End If
-        End If
-
-        If txtDireccion.Text.Length > 0 Then
-            condition.Add(" PACIENTES.DOMICILIO LIKE '%" & txtDireccion.Text & "%'")
-        End If
-
-        If txtTelefono.Text.Length > 0 Then
-            condition.Add(" PACIENTES.TLFNO LIKE '" & txtTelefono.Text & "%'")
-        End If
-
-        If txtMovil.Text.Length > 0 Then
-            condition.Add(" PACIENTES.MOVIL LIKE '" & txtMovil.Text & "%'")
-        End If
-
-
-
-        If Not CtrlFormaPago21.ID_FORMASPAGO Is Nothing Then
-            condition.Add("PACIENTES.REFFORMAPAGO ='" & CtrlFormaPago21.ID_FORMASPAGO & "'")
-        End If
-
-        If CtrlEmpresa1.ID_EMPRESAS.HasValue Then
-            condition.Add("PACIENTES.REFEMPRESA =" & CtrlEmpresa1.ID_EMPRESAS.Value)
-        End If
-
-        If CtrlMutua1.ID_Mutuas.HasValue Then
-            condition.Add("PACIENTES.REFMUTUA=" & CtrlMutua1.ID_Mutuas.Value)
-        End If
-
-        If CtrlPaises1.ID_PAISES.HasValue Then
-            condition.Add("PACIENTES.REFPAIS=" & CtrlPaises1.ID_PAISES.Value)
-        End If
-
-        If chb_ingreso.Checked Then
-            condition.Add("PACIENTES.FECHAALTA >='" & dtp_fi.Value.ToShortDateString() & "' AND PACIENTES.FECHAALTA<='" & dtp_ff.Value.ToShortDateString() & "'")
-            'condition.AddCondition(New GridEXFilterCondition(GridEX1.RootTable.Columns("FECHAALTA"), _
-            '                                                ConditionOperator.Between, dtp_fi.Value, dtp_ff.Value))
-
-        End If
-
-        If chb_nac.Checked Then
-            condition.Add("PACIENTES.FECHAN >='" & dtp_fin.Value.ToShortDateString() & "' AND PACIENTES.FECHAN<='" & dtp_ffn.Value.ToShortDateString() & "'")
-            'condition.AddCondition(New GridEXFilterCondition(GridEX1.RootTable.Columns("FECHAN"), _
-            '                                              ConditionOperator.Between, dtp_fin.Value, dtp_ffn.Value))
-
-        End If
-
-        If chb_baja.Checked Then
-            condition.Add("PACIENTES.FECHABAJA >='" & dtp_fib.Value.ToShortDateString() & "' AND PACIENTES.FECHABAJA<='" & dtp_ffb.Value.ToShortDateString() & "'")
-            'condition.AddCondition(New GridEXFilterCondition(GridEX1.RootTable.Columns("FECHABAJA"), _
-            '                                               ConditionOperator.Between, dtp_fib.Value, dtp_ffb.Value))
-
-        End If
-
-        If chb_asoc.Checked Then
-            If rb_asocsi.Checked Then
-                condition.Add("PACIENTES.SOCIO='S'")
-
-                If (Me.chkSocioActivo.CheckState = CheckState.Checked) Then
-                    condition.Add("PACIENTES.SOCIOVALIDOHASTA>=" & "'" & Now.ToShortDateString() & "'")
-                ElseIf Me.chkSocioActivo.CheckState = CheckState.Unchecked Then
-                    condition.Add("PACIENTES.SOCIOVALIDOHASTA<" & "'" & Now.ToShortDateString() & "'")
-                End If
-
-
-                'condition.AddCondition(New GridEXFilterCondition(GridEX1.RootTable.Columns("SOCIO"), ConditionOperator.Equal, "S"))
-
-            Else
-                condition.Add("PACIENTES.SOCIO='N'")
-                'condition.AddCondition(New GridEXFilterCondition(GridEX1.RootTable.Columns("SOCIO"), ConditionOperator.Equal, "N"))
-            End If
-        End If
-
-        If chb_activo.Checked Then
-            If rb_activosi.Checked Then
-                condition.Add("PACIENTES.ACTIVO='S'")
-                'condition.AddCondition(New GridEXFilterCondition(GridEX1.RootTable.Columns("ACTIVO"), ConditionOperator.Equal, "S"))
-            Else
-                condition.Add("PACIENTES.ACTIVO='N'")
-                'condition.AddCondition(New GridEXFilterCondition(GridEX1.RootTable.Columns("ACTIVO"), ConditionOperator.Equal, "N"))
-            End If
-        End If
-
-        If chb_fallecidos.Checked Then
-            If rb_fallecsi.Checked Then
-                condition.Add("PACIENTES.DEFUNCION='S'")
-                'condition.AddCondition(New GridEXFilterCondition(GridEX1.RootTable.Columns("DEFUNCION"), ConditionOperator.Equal, "S"))
-            Else
-                condition.Add("PACIENTES.DEFUNCION='N' OR PACIENTES.DEFUNCION IS NULL")
-                'Dim fc As GridEXFilterCondition
-                'condition.AddCondition(New GridEXFilterCondition(GridEX1.RootTable.Columns("DEFUNCION"), ConditionOperator.Equal, "N"))
-                'condition.AddCondition(LogicalOperator.Or, New GridEXFilterCondition(GridEX1.RootTable.Columns("DEFUNCION"), ConditionOperator.IsNull, "N"))
-            End If
-        End If
-
-        If rb_crec.Checked Then
-            condition.Add("PACIENTES.PAGOBANCO='S'")
-            'condition.AddCondition(LogicalOperator.And, New GridEXFilterCondition(GridEX1.RootTable.Columns("PAGOBANCO"), ConditionOperator.Equal, "S"))
-
-        End If
-
-        If rb_srec.Checked Then
-            condition.Add("PACIENTES.PAGOBANCO='N'")
-            'condition.AddCondition(New GridEXFilterCondition(GridEX1.RootTable.Columns("PAGOBANCO"), ConditionOperator.Equal, "N"))
-
-        End If
-
-        If chkFiltroCumple.Checked Then
-            If rbCumple_Hoy.Checked Then
-                condition.Add("datepart(d, PACIENTES.FECHAN) = datepart(d, getdate()) and datepart(m, PACIENTES.FECHAN) = datepart(m, getdate())")
-            End If
-
-            If rbCumple_Dias.Checked Then
-                Dim dias As Integer = tb_CantDias.Value
-                Dim con As String = "(1 = (FLOOR(DATEDIFF(dd,PACIENTES.FECHAN,GETDATE()+@DIAS) / 365.25)) - (FLOOR(DATEDIFF(dd,PACIENTES.FECHAN,GETDATE()-1) / 365.25)))".Replace("@DIAS", dias.ToString())
-                condition.Add(con)
-            End If
-        End If
-
-        If rbConEMail.Checked = True Then
-            condition.Add("(not email is null and email<>'')")
-        End If
-        If rbSinEmail.Checked = True Then
-            condition.Add("(email is null or email='')")
-        End If
-        'If rbTodosEMail.Checked = True Then
-        '    condition.Add("email is null or email like '%'")
-        'End If
-
-        Try
-
-
-            Dim query As String = My.Resources.queryListadoPacientes
-            Dim c As New CMLinqDataContext
-
-            If txtTop100.Checked Then
-                query = My.Resources.queryListadoPacientesTop100
-            End If
-
-
-
-            If condition.Count > 0 Then
-
-                query = query.Insert(query.IndexOf("GROUP"), _
-                             " WHERE " & String.Join(" AND ", condition.ToArray()) & " ")
-
-
-            End If
-            If query.Contains("WHERE") Then
-                query = query.Insert(query.IndexOf("WHERE") + 5, _
-                             " (PACIENTES.Eliminado is NULL or PACIENTES.Eliminado = 0) AND ")
-            Else
-                query = query.Insert(query.IndexOf("GROUP"), _
-                             " WHERE (PACIENTES.Eliminado is NULL or PACIENTES.Eliminado = 0) ")
-            End If
-
-            query += " ORDER BY PACIENTES.CPACIENTE DESC "
-
-
-            Dim dt As DataTable = Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteDataset(My.Settings.CMConnectionString, CommandType.Text, query).Tables(0)
-
+        If Buscar = 1 Then
             Dim listapacientes As New List(Of PACIENTE)
             Dim contextemp As New CMLinqDataContext
+            Dim dt As DataTable = Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteDataset(My.Settings.CMConnectionString, CommandType.Text, SQLSentence).Tables(0)
 
             For Each row As DataRow In dt.AsEnumerable
                 listapacientes.Add((From o In contextemp.PACIENTEs Where o.CPACIENTE = row.Field(Of Integer)("CPACIENTE") Select o).SingleOrDefault)
             Next
-
-            'GridEX1.DataSource = dt
-            If Not ListadoPacientesBindingSource.DataSource Is Nothing Then ListadoPacientesBindingSource.DataSource = Nothing
-            ListadoPacientesBindingSource.DataSource = listapacientes 'dt
-
-            Dim a As Integer = GridEX1.RowCount
-            Dim i As Integer
-
-            For i = 0 To GridEX1.RowCount - 1
-
-                If GridEX1.GetRow(i).DataRow.cpaciente = seleccion Then
-                    GridEX1.MoveTo(i)
-
-                End If
-
-            Next
-
+            ListadoPacientesBindingSource.DataSource = listapacientes
 
             tsTotalPacientes.Text = GridEX1.RowCount
             Dim total As Object = dt.Compute("SUM(IMPORTE)", Nothing)
@@ -587,14 +391,235 @@ Public Class frmPacientesListado
                 tsImporte.Text = 0
             End If
 
-            'Globales.Context.Refresh(Data.Linq.RefreshMode.OverwriteCurrentValues, Globales.Context.PACIENTEs)
-            'CType(Me.Parent, FormConfigurable).GridEx1 = Me.GridEX1
+            Dim i As Integer
 
-            dt.Dispose()
-        Catch ex As Exception
-            Globales.ErrorMsg(ex, "Ocurrio un error al intentar listar los pacientes")
-        End Try
+            For i = 0 To GridEX1.RowCount - 1
+                If GridEX1.GetRow(i).DataRow.cpaciente = seleccion Then
+                    GridEX1.MoveTo(i)
+                End If
+            Next
+        Else
 
+            Dim condition As New List(Of String)
+
+            'Dim condition As New GridEXFilterCondition()
+            'condition.LogicalOperator = LogicalOperator.And
+
+
+            If Not grpFiltrarPorCodigo.Enabled Then
+
+                If txtCodigoPropio.Text.Length > 0 Then condition.Add(" PACIENTES.CODIGOPROPIO LIKE '" & txtCodigoPropio.Text & "%'")
+
+                If txtNombre.Text.Length > 0 Then condition.Add(" PACIENTES.NOMBRE LIKE '" & txtNombre.Text & "%'")
+
+                If txtApellido1.Text.Length > 0 Then condition.Add(" PACIENTES.APELLIDO1 LIKE '" & txtApellido1.Text & "%'")
+
+                If txtApellido2.Text.Length > 0 Then condition.Add(" PACIENTES.APELLIDO2 LIKE '" & txtApellido2.Text & "%'")
+
+                If txtDni.Text.Length > 0 Then condition.Add("PACIENTES.DNI LIKE '" & txtDni.Text & "%'")
+
+            Else
+                If CtrlPacienteDesde.ID_PACIENTE.HasValue Then
+                    condition.Add("PACIENTES.CPACIENTE >=" & CtrlPacienteDesde.ID_PACIENTE)
+                End If
+                If CtrlPacienteHasta.ID_PACIENTE.HasValue Then
+                    condition.Add("PACIENTES.CPACIENTE <=" & CtrlPacienteHasta.ID_PACIENTE)
+                End If
+            End If
+
+            If txtDireccion.Text.Length > 0 Then
+                condition.Add(" PACIENTES.DOMICILIO LIKE '%" & txtDireccion.Text & "%'")
+            End If
+
+            If txtTelefono.Text.Length > 0 Then
+                condition.Add(" PACIENTES.TLFNO LIKE '" & txtTelefono.Text & "%'")
+            End If
+
+            If txtMovil.Text.Length > 0 Then
+                condition.Add(" PACIENTES.MOVIL LIKE '" & txtMovil.Text & "%'")
+            End If
+
+
+
+            If Not CtrlFormaPago21.ID_FORMASPAGO Is Nothing Then
+                condition.Add("PACIENTES.REFFORMAPAGO ='" & CtrlFormaPago21.ID_FORMASPAGO & "'")
+            End If
+
+            If CtrlEmpresa1.ID_EMPRESAS.HasValue Then
+                condition.Add("PACIENTES.REFEMPRESA =" & CtrlEmpresa1.ID_EMPRESAS.Value)
+            End If
+
+            If CtrlMutua1.ID_Mutuas.HasValue Then
+                condition.Add("PACIENTES.REFMUTUA=" & CtrlMutua1.ID_Mutuas.Value)
+            End If
+
+            If CtrlPaises1.ID_PAISES.HasValue Then
+                condition.Add("PACIENTES.REFPAIS=" & CtrlPaises1.ID_PAISES.Value)
+            End If
+
+            If chb_ingreso.Checked Then
+                condition.Add("PACIENTES.FECHAALTA >='" & dtp_fi.Value.ToShortDateString() & "' AND PACIENTES.FECHAALTA<='" & dtp_ff.Value.ToShortDateString() & "'")
+                'condition.AddCondition(New GridEXFilterCondition(GridEX1.RootTable.Columns("FECHAALTA"), _
+                '                                                ConditionOperator.Between, dtp_fi.Value, dtp_ff.Value))
+
+            End If
+
+            If chb_nac.Checked Then
+                condition.Add("PACIENTES.FECHAN >='" & dtp_fin.Value.ToShortDateString() & "' AND PACIENTES.FECHAN<='" & dtp_ffn.Value.ToShortDateString() & "'")
+                'condition.AddCondition(New GridEXFilterCondition(GridEX1.RootTable.Columns("FECHAN"), _
+                '                                              ConditionOperator.Between, dtp_fin.Value, dtp_ffn.Value))
+
+            End If
+
+            If chb_baja.Checked Then
+                condition.Add("PACIENTES.FECHABAJA >='" & dtp_fib.Value.ToShortDateString() & "' AND PACIENTES.FECHABAJA<='" & dtp_ffb.Value.ToShortDateString() & "'")
+                'condition.AddCondition(New GridEXFilterCondition(GridEX1.RootTable.Columns("FECHABAJA"), _
+                '                                               ConditionOperator.Between, dtp_fib.Value, dtp_ffb.Value))
+
+            End If
+
+            If chb_asoc.Checked Then
+                If rb_asocsi.Checked Then
+                    condition.Add("PACIENTES.SOCIO='S'")
+
+                    If (Me.chkSocioActivo.CheckState = CheckState.Checked) Then
+                        condition.Add("PACIENTES.SOCIOVALIDOHASTA>=" & "'" & Now.ToShortDateString() & "'")
+                    ElseIf Me.chkSocioActivo.CheckState = CheckState.Unchecked Then
+                        condition.Add("PACIENTES.SOCIOVALIDOHASTA<" & "'" & Now.ToShortDateString() & "'")
+                    End If
+
+
+                    'condition.AddCondition(New GridEXFilterCondition(GridEX1.RootTable.Columns("SOCIO"), ConditionOperator.Equal, "S"))
+
+                Else
+                    condition.Add("PACIENTES.SOCIO='N'")
+                    'condition.AddCondition(New GridEXFilterCondition(GridEX1.RootTable.Columns("SOCIO"), ConditionOperator.Equal, "N"))
+                End If
+            End If
+
+            If chb_activo.Checked Then
+                If rb_activosi.Checked Then
+                    condition.Add("PACIENTES.ACTIVO='S'")
+                    'condition.AddCondition(New GridEXFilterCondition(GridEX1.RootTable.Columns("ACTIVO"), ConditionOperator.Equal, "S"))
+                Else
+                    condition.Add("PACIENTES.ACTIVO='N'")
+                    'condition.AddCondition(New GridEXFilterCondition(GridEX1.RootTable.Columns("ACTIVO"), ConditionOperator.Equal, "N"))
+                End If
+            End If
+
+            If chb_fallecidos.Checked Then
+                If rb_fallecsi.Checked Then
+                    condition.Add("PACIENTES.DEFUNCION='S'")
+                    'condition.AddCondition(New GridEXFilterCondition(GridEX1.RootTable.Columns("DEFUNCION"), ConditionOperator.Equal, "S"))
+                Else
+                    condition.Add("PACIENTES.DEFUNCION='N' OR PACIENTES.DEFUNCION IS NULL")
+                    'Dim fc As GridEXFilterCondition
+                    'condition.AddCondition(New GridEXFilterCondition(GridEX1.RootTable.Columns("DEFUNCION"), ConditionOperator.Equal, "N"))
+                    'condition.AddCondition(LogicalOperator.Or, New GridEXFilterCondition(GridEX1.RootTable.Columns("DEFUNCION"), ConditionOperator.IsNull, "N"))
+                End If
+            End If
+
+            If rb_crec.Checked Then
+                condition.Add("PACIENTES.PAGOBANCO='S'")
+                'condition.AddCondition(LogicalOperator.And, New GridEXFilterCondition(GridEX1.RootTable.Columns("PAGOBANCO"), ConditionOperator.Equal, "S"))
+
+            End If
+
+            If rb_srec.Checked Then
+                condition.Add("PACIENTES.PAGOBANCO='N'")
+                'condition.AddCondition(New GridEXFilterCondition(GridEX1.RootTable.Columns("PAGOBANCO"), ConditionOperator.Equal, "N"))
+
+            End If
+
+            If chkFiltroCumple.Checked Then
+                If rbCumple_Hoy.Checked Then
+                    condition.Add("datepart(d, PACIENTES.FECHAN) = datepart(d, getdate()) and datepart(m, PACIENTES.FECHAN) = datepart(m, getdate())")
+                End If
+
+                If rbCumple_Dias.Checked Then
+                    Dim dias As Integer = tb_CantDias.Value
+                    Dim con As String = "(1 = (FLOOR(DATEDIFF(dd,PACIENTES.FECHAN,GETDATE()+@DIAS) / 365.25)) - (FLOOR(DATEDIFF(dd,PACIENTES.FECHAN,GETDATE()-1) / 365.25)))".Replace("@DIAS", dias.ToString())
+                    condition.Add(con)
+                End If
+            End If
+
+            If rbConEMail.Checked = True Then
+                condition.Add("(not email is null and email<>'')")
+            End If
+            If rbSinEmail.Checked = True Then
+                condition.Add("(email is null or email='')")
+            End If
+            'If rbTodosEMail.Checked = True Then
+            '    condition.Add("email is null or email like '%'")
+            'End If
+
+            Try
+
+
+                Dim query As String = My.Resources.queryListadoPacientes
+                Dim c As New CMLinqDataContext
+
+                If txtTop100.Checked Then
+                    query = My.Resources.queryListadoPacientesTop100
+                End If
+
+
+
+                If condition.Count > 0 Then
+
+                    query = query.Insert(query.IndexOf("GROUP"), _
+                                 " WHERE " & String.Join(" AND ", condition.ToArray()) & " ")
+
+
+                End If
+                If query.Contains("WHERE") Then
+                    query = query.Insert(query.IndexOf("WHERE") + 5, _
+                                 " (PACIENTES.Eliminado is NULL or PACIENTES.Eliminado = 0) AND ")
+                Else
+                    query = query.Insert(query.IndexOf("GROUP"), _
+                                 " WHERE (PACIENTES.Eliminado is NULL or PACIENTES.Eliminado = 0) ")
+                End If
+
+                query += " ORDER BY PACIENTES.CPACIENTE DESC "
+
+
+                Dim dt As DataTable = Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteDataset(My.Settings.CMConnectionString, CommandType.Text, query).Tables(0)
+
+                Dim listapacientes As New List(Of PACIENTE)
+                Dim contextemp As New CMLinqDataContext
+
+                For Each row As DataRow In dt.AsEnumerable
+                    listapacientes.Add((From o In contextemp.PACIENTEs Where o.CPACIENTE = row.Field(Of Integer)("CPACIENTE") Select o).SingleOrDefault)
+                Next
+
+                'GridEX1.DataSource = dt
+                If Not ListadoPacientesBindingSource.DataSource Is Nothing Then ListadoPacientesBindingSource.DataSource = Nothing
+                ListadoPacientesBindingSource.DataSource = listapacientes 'dt
+
+                Dim i As Integer
+
+                For i = 0 To GridEX1.RowCount - 1
+                    If GridEX1.GetRow(i).DataRow.cpaciente = seleccion Then
+                        GridEX1.MoveTo(i)
+                    End If
+                Next
+
+                tsTotalPacientes.Text = GridEX1.RowCount
+                Dim total As Object = dt.Compute("SUM(IMPORTE)", Nothing)
+                If Not total Is DBNull.Value Then
+                    tsImporte.Text = CType(total, Double).ToString("C2")
+                Else
+                    tsImporte.Text = 0
+                End If
+
+                'Globales.Context.Refresh(Data.Linq.RefreshMode.OverwriteCurrentValues, Globales.Context.PACIENTEs)
+                'CType(Me.Parent, FormConfigurable).GridEx1 = Me.GridEX1
+
+                dt.Dispose()
+            Catch ex As Exception
+                Globales.ErrorMsg(ex, "Ocurrio un error al intentar listar los pacientes")
+            End Try
+        End If
     End Sub
 
 #End Region
@@ -944,6 +969,10 @@ Public Class frmPacientesListado
 
     Private Sub BindingNavigator1_RefreshItems(sender As Object, e As EventArgs) Handles BindingNavigator1.RefreshItems
 
+    End Sub
+
+    Private Sub Label11_TextChanged(sender As Object, e As EventArgs) Handles Label11.TextChanged
+        If Buscar = 1 Then PopulateGrid()
     End Sub
 End Class
 
