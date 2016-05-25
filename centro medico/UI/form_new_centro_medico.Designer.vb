@@ -24,93 +24,93 @@ Partial Class form_new_centro_medico
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(form_new_centro_medico))
-        Dim ExplorerBarGroup1 As Janus.Windows.ExplorerBar.ExplorerBarGroup = New Janus.Windows.ExplorerBar.ExplorerBarGroup()
-        Dim ExplorerBarItem1 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem2 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem3 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem4 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem5 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem6 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem7 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarGroup2 As Janus.Windows.ExplorerBar.ExplorerBarGroup = New Janus.Windows.ExplorerBar.ExplorerBarGroup()
-        Dim ExplorerBarItem8 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem9 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem10 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem11 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem12 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem13 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem14 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem15 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem16 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem17 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem18 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem19 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem20 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem21 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem22 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem23 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem24 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarGroup3 As Janus.Windows.ExplorerBar.ExplorerBarGroup = New Janus.Windows.ExplorerBar.ExplorerBarGroup()
-        Dim ExplorerBarItem25 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem26 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem27 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem28 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem29 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem30 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem31 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem32 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem33 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem34 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem35 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem36 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem37 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem38 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem39 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem40 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem41 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem42 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem43 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem44 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarGroup4 As Janus.Windows.ExplorerBar.ExplorerBarGroup = New Janus.Windows.ExplorerBar.ExplorerBarGroup()
-        Dim ExplorerBarItem45 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem46 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem47 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem48 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem49 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem50 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem51 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem52 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem53 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem54 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem55 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem56 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem57 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarGroup5 As Janus.Windows.ExplorerBar.ExplorerBarGroup = New Janus.Windows.ExplorerBar.ExplorerBarGroup()
-        Dim ExplorerBarItem58 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem59 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem60 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem61 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem62 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem63 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem64 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem65 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarGroup6 As Janus.Windows.ExplorerBar.ExplorerBarGroup = New Janus.Windows.ExplorerBar.ExplorerBarGroup()
-        Dim ExplorerBarItem66 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem67 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem68 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem69 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem70 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem71 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem72 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem73 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem74 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem75 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarGroup7 As Janus.Windows.ExplorerBar.ExplorerBarGroup = New Janus.Windows.ExplorerBar.ExplorerBarGroup()
-        Dim ExplorerBarItem76 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarGroup8 As Janus.Windows.ExplorerBar.ExplorerBarGroup = New Janus.Windows.ExplorerBar.ExplorerBarGroup()
-        Dim ExplorerBarGroup9 As Janus.Windows.ExplorerBar.ExplorerBarGroup = New Janus.Windows.ExplorerBar.ExplorerBarGroup()
-        Dim ExplorerBarItem77 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem78 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarGroup10 As Janus.Windows.ExplorerBar.ExplorerBarGroup = New Janus.Windows.ExplorerBar.ExplorerBarGroup()
+        Dim ExplorerBarItem79 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem80 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem81 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem82 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem83 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem84 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem85 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarGroup11 As Janus.Windows.ExplorerBar.ExplorerBarGroup = New Janus.Windows.ExplorerBar.ExplorerBarGroup()
+        Dim ExplorerBarItem86 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem87 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem88 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem89 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem90 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem91 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem92 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem93 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem94 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem95 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem96 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem97 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem98 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem99 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem100 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem101 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem102 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarGroup12 As Janus.Windows.ExplorerBar.ExplorerBarGroup = New Janus.Windows.ExplorerBar.ExplorerBarGroup()
+        Dim ExplorerBarItem103 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem104 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem105 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem106 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem107 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem108 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem109 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem110 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem111 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem112 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem113 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem114 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem115 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem116 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem117 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem118 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem119 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem120 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem121 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem122 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarGroup13 As Janus.Windows.ExplorerBar.ExplorerBarGroup = New Janus.Windows.ExplorerBar.ExplorerBarGroup()
+        Dim ExplorerBarItem123 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem124 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem125 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem126 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem127 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem128 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem129 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem130 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem131 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem132 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem133 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem134 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem135 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarGroup14 As Janus.Windows.ExplorerBar.ExplorerBarGroup = New Janus.Windows.ExplorerBar.ExplorerBarGroup()
+        Dim ExplorerBarItem136 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem137 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem138 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem139 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem140 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem141 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem142 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem143 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarGroup15 As Janus.Windows.ExplorerBar.ExplorerBarGroup = New Janus.Windows.ExplorerBar.ExplorerBarGroup()
+        Dim ExplorerBarItem144 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem145 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem146 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem147 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem148 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem149 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem150 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem151 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem152 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem153 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarGroup16 As Janus.Windows.ExplorerBar.ExplorerBarGroup = New Janus.Windows.ExplorerBar.ExplorerBarGroup()
+        Dim ExplorerBarItem154 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarGroup17 As Janus.Windows.ExplorerBar.ExplorerBarGroup = New Janus.Windows.ExplorerBar.ExplorerBarGroup()
+        Dim ExplorerBarGroup18 As Janus.Windows.ExplorerBar.ExplorerBarGroup = New Janus.Windows.ExplorerBar.ExplorerBarGroup()
+        Dim ExplorerBarItem155 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem156 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lb_usuario = New System.Windows.Forms.Label()
         Me.SearchText = New System.Windows.Forms.TextBox()
@@ -167,6 +167,8 @@ Partial Class form_new_centro_medico
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.UiGroupBox3 = New Janus.Windows.EditControls.UIGroupBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox26 = New System.Windows.Forms.PictureBox()
         Me.PictureBox25 = New System.Windows.Forms.PictureBox()
         Me.PictureBox24 = New System.Windows.Forms.PictureBox()
@@ -178,13 +180,18 @@ Partial Class form_new_centro_medico
         Me.PictureBox18 = New System.Windows.Forms.PictureBox()
         Me.PictureBox17 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.PictureBox14 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
         Me.PictureBox16 = New System.Windows.Forms.PictureBox()
         Me.PROVEEDORESBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.UiGroupBox4 = New Janus.Windows.EditControls.UIGroupBox()
+        Me.lblInfoBD = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lbl_DbVersionValue = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.lblAppVersion = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UiGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -235,13 +242,13 @@ Partial Class form_new_centro_medico
         CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PROVEEDORESBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UiGroupBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.UiGroupBox4.SuspendLayout()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -311,7 +318,7 @@ Partial Class form_new_centro_medico
         Me.UiGroupBox1.Controls.Add(Me.Dashboard)
         Me.UiGroupBox1.Location = New System.Drawing.Point(258, 150)
         Me.UiGroupBox1.Name = "UiGroupBox1"
-        Me.UiGroupBox1.Size = New System.Drawing.Size(750, 483)
+        Me.UiGroupBox1.Size = New System.Drawing.Size(750, 471)
         Me.UiGroupBox1.TabIndex = 5
         '
         'DebitoPaciente
@@ -545,209 +552,209 @@ Partial Class form_new_centro_medico
         Me.ExplorerBar1.FlatBorderColor = System.Drawing.Color.White
         Me.ExplorerBar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.ExplorerBar1.ForeColor = System.Drawing.Color.White
-        ExplorerBarGroup1.Cursor = System.Windows.Forms.Cursors.Hand
-        ExplorerBarGroup1.Expanded = False
-        ExplorerBarItem1.Key = "Item1"
-        ExplorerBarItem1.Text = "Médicos"
-        ExplorerBarItem2.Key = "Item2"
-        ExplorerBarItem2.Text = "Mutuas"
-        ExplorerBarItem3.Key = "Item5"
-        ExplorerBarItem3.Text = "Bancos"
-        ExplorerBarItem4.Key = "Item6"
-        ExplorerBarItem4.Text = "Gastos"
-        ExplorerBarItem5.Key = "Item7"
-        ExplorerBarItem5.Text = "Liquidación de Médicos"
-        ExplorerBarItem6.Key = "Item8"
-        ExplorerBarItem6.Text = "Dashboard"
-        ExplorerBarItem7.Key = "Item9"
-        ExplorerBarItem7.Text = "Horarios"
-        ExplorerBarGroup1.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem1, ExplorerBarItem2, ExplorerBarItem3, ExplorerBarItem4, ExplorerBarItem5, ExplorerBarItem6, ExplorerBarItem7})
-        ExplorerBarGroup1.Key = "Group1"
-        ExplorerBarGroup1.StateStyles.FormatStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(82, Byte), Integer))
-        ExplorerBarGroup1.StateStyles.FormatStyle.BackColorGradient = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(82, Byte), Integer))
-        ExplorerBarGroup1.Text = "Clínica"
-        ExplorerBarGroup2.Cursor = System.Windows.Forms.Cursors.Hand
-        ExplorerBarGroup2.Expanded = False
-        ExplorerBarItem8.Key = "Item10"
-        ExplorerBarItem8.Text = "Pacientes"
-        ExplorerBarItem9.Key = "Item11"
-        ExplorerBarItem9.Text = "Empresas"
-        ExplorerBarItem10.Key = "Item12"
-        ExplorerBarItem10.Text = "Facturas"
-        ExplorerBarItem11.Key = "Item13"
-        ExplorerBarItem11.Text = "Asistente de Facturación"
-        ExplorerBarItem12.Key = "Item14"
-        ExplorerBarItem12.Text = "Generar Facturas/Recibos Servicios Periódicos"
-        ExplorerBarItem13.Key = "Item15"
-        ExplorerBarItem13.Text = "Presupuestos Dentales"
-        ExplorerBarItem14.Key = "Item16"
-        ExplorerBarItem14.Text = "Analíticas"
-        ExplorerBarItem15.Key = "Item17"
-        ExplorerBarItem15.Text = "Generar Recibos"
-        ExplorerBarItem16.Key = "Item18"
-        ExplorerBarItem16.Text = "Recibos"
-        ExplorerBarItem17.Key = "Item19"
-        ExplorerBarItem17.Text = "Imprimir Remesa"
-        ExplorerBarItem18.Key = "Item20"
-        ExplorerBarItem18.Text = "Generar Norma 19"
-        ExplorerBarItem19.Key = "Item21"
-        ExplorerBarItem19.Text = "Bonos no Agotados"
-        ExplorerBarItem20.Key = "Item22"
-        ExplorerBarItem20.Text = "Citas"
-        ExplorerBarItem21.Key = "Item23"
-        ExplorerBarItem21.Text = "Partes Altas/Bajas"
-        ExplorerBarItem22.Key = "Item24"
-        ExplorerBarItem22.Text = "Partes Asistencia"
-        ExplorerBarItem23.Key = "Item25"
-        ExplorerBarItem23.Text = "Procesos"
-        ExplorerBarItem24.Key = "Item26"
-        ExplorerBarItem24.Text = "Comunicaciones"
-        ExplorerBarGroup2.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem8, ExplorerBarItem9, ExplorerBarItem10, ExplorerBarItem11, ExplorerBarItem12, ExplorerBarItem13, ExplorerBarItem14, ExplorerBarItem15, ExplorerBarItem16, ExplorerBarItem17, ExplorerBarItem18, ExplorerBarItem19, ExplorerBarItem20, ExplorerBarItem21, ExplorerBarItem22, ExplorerBarItem23, ExplorerBarItem24})
-        ExplorerBarGroup2.Key = "Group2"
-        ExplorerBarGroup2.Text = "Pacientes"
-        ExplorerBarGroup3.Cursor = System.Windows.Forms.Cursors.Hand
-        ExplorerBarGroup3.Expanded = False
-        ExplorerBarItem25.Key = "Item1"
-        ExplorerBarItem25.Text = "Alarmas"
-        ExplorerBarItem26.Key = "Item2"
-        ExplorerBarItem26.Text = "Diagnóstico"
-        ExplorerBarItem27.Key = "Item3"
-        ExplorerBarItem27.Text = "Medicamentos"
-        ExplorerBarItem28.Key = "Item4"
-        ExplorerBarItem28.Text = "Indicaciones"
-        ExplorerBarItem29.Key = "Item5"
-        ExplorerBarItem29.Text = "Conceptos Facturables"
-        ExplorerBarItem30.Key = "Item6"
-        ExplorerBarItem30.Text = "Familia"
-        ExplorerBarItem31.Key = "Item7"
-        ExplorerBarItem31.Text = "Tarifas"
-        ExplorerBarItem32.Key = "Item8"
-        ExplorerBarItem32.Text = "Conceptos de Analítica"
-        ExplorerBarItem33.Key = "Item9"
-        ExplorerBarItem33.Text = "Planillas para Analíticas"
-        ExplorerBarItem34.Key = "Item10"
-        ExplorerBarItem34.Text = "Modelo de Reviciones Comparadas"
-        ExplorerBarItem35.Key = "Item11"
-        ExplorerBarItem35.Text = "Plantillas de Texto"
-        ExplorerBarItem36.Key = "Item12"
-        ExplorerBarItem36.Text = "Planillas de Historial"
-        ExplorerBarItem37.Key = "Item13"
-        ExplorerBarItem37.Text = "Poblaciones"
-        ExplorerBarItem38.Key = "Item14"
-        ExplorerBarItem38.Text = "Paises"
-        ExplorerBarItem39.Key = "Item15"
-        ExplorerBarItem39.Text = "Como nos Conoció"
-        ExplorerBarItem40.Key = "Item16"
-        ExplorerBarItem40.Text = "Formas de Pago"
-        ExplorerBarItem41.Key = "Item17"
-        ExplorerBarItem41.Text = "Clínicas Externas"
-        ExplorerBarItem42.Key = "Item18"
-        ExplorerBarItem42.Text = "Almacen"
-        ExplorerBarItem43.Key = "Item19"
-        ExplorerBarItem43.Text = "Salas"
-        ExplorerBarItem44.Key = "Item20"
-        ExplorerBarItem44.Text = "Galerias de Imágenes"
-        ExplorerBarGroup3.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem25, ExplorerBarItem26, ExplorerBarItem27, ExplorerBarItem28, ExplorerBarItem29, ExplorerBarItem30, ExplorerBarItem31, ExplorerBarItem32, ExplorerBarItem33, ExplorerBarItem34, ExplorerBarItem35, ExplorerBarItem36, ExplorerBarItem37, ExplorerBarItem38, ExplorerBarItem39, ExplorerBarItem40, ExplorerBarItem41, ExplorerBarItem42, ExplorerBarItem43, ExplorerBarItem44})
-        ExplorerBarGroup3.Key = "Group3"
-        ExplorerBarGroup3.Text = "Mantenimiento"
-        ExplorerBarGroup4.Cursor = System.Windows.Forms.Cursors.Hand
-        ExplorerBarGroup4.Expanded = False
-        ExplorerBarItem45.Key = "Item1"
-        ExplorerBarItem45.Text = "Listado de Pacientes"
-        ExplorerBarItem46.Key = "Item2"
-        ExplorerBarItem46.Text = "Listado de Faltas"
-        ExplorerBarItem47.Key = "Item3"
-        ExplorerBarItem47.Text = "Partes"
-        ExplorerBarItem48.Key = "Item4"
-        ExplorerBarItem48.Text = "Listado de Tratamientos/Recetas"
-        ExplorerBarItem49.Key = "Item5"
-        ExplorerBarItem49.Text = "Listado de Citas"
-        ExplorerBarItem50.Key = "Item6"
-        ExplorerBarItem50.Text = "Ingresos por Citas/Médicos"
-        ExplorerBarItem51.Key = "Item7"
-        ExplorerBarItem51.Text = "Ingreso por Procedencia de Cita"
-        ExplorerBarItem52.Key = "Item8"
-        ExplorerBarItem52.Text = "Listado de Facturas"
-        ExplorerBarItem53.Key = "Item9"
-        ExplorerBarItem53.Text = "Listado de Recibos"
-        ExplorerBarItem54.Key = "Item10"
-        ExplorerBarItem54.Text = "Informe de Ingresos y Gastos"
-        ExplorerBarItem55.Key = "Item11"
-        ExplorerBarItem55.Text = "Diagnosticos Emitidos"
-        ExplorerBarItem56.Key = "Item12"
-        ExplorerBarItem56.Text = "Pacientes por Dignosticos"
-        ExplorerBarItem57.Key = "Item13"
-        ExplorerBarItem57.Text = "Derivaciones"
-        ExplorerBarGroup4.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem45, ExplorerBarItem46, ExplorerBarItem47, ExplorerBarItem48, ExplorerBarItem49, ExplorerBarItem50, ExplorerBarItem51, ExplorerBarItem52, ExplorerBarItem53, ExplorerBarItem54, ExplorerBarItem55, ExplorerBarItem56, ExplorerBarItem57})
-        ExplorerBarGroup4.Key = "Group4"
-        ExplorerBarGroup4.Text = "Listado"
-        ExplorerBarGroup5.Cursor = System.Windows.Forms.Cursors.Hand
-        ExplorerBarGroup5.Expanded = False
-        ExplorerBarItem58.Key = "Item1"
-        ExplorerBarItem58.Text = "Proveedores"
-        ExplorerBarItem59.Key = "Item2"
-        ExplorerBarItem59.Text = "Artículos"
-        ExplorerBarItem60.Key = "Item3"
-        ExplorerBarItem60.Text = "Entradas"
-        ExplorerBarItem61.Key = "Item4"
-        ExplorerBarItem61.Text = "Pedidos a Proveedor"
-        ExplorerBarItem62.Key = "Item5"
-        ExplorerBarItem62.Text = "Facturas  Proveedor"
-        ExplorerBarItem63.Key = "Item6"
-        ExplorerBarItem63.Text = "Facturas"
-        ExplorerBarItem64.Key = "Item7"
-        ExplorerBarItem64.Text = "Listado de Tickets"
-        ExplorerBarItem65.Key = "Item8"
-        ExplorerBarItem65.Text = "Consolidación Stock"
-        ExplorerBarGroup5.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem58, ExplorerBarItem59, ExplorerBarItem60, ExplorerBarItem61, ExplorerBarItem62, ExplorerBarItem63, ExplorerBarItem64, ExplorerBarItem65})
-        ExplorerBarGroup5.Key = "Group5"
-        ExplorerBarGroup5.Text = "TPV"
-        ExplorerBarGroup6.Cursor = System.Windows.Forms.Cursors.Hand
-        ExplorerBarGroup6.Expanded = False
-        ExplorerBarItem66.Key = "Item1"
-        ExplorerBarItem66.Text = "Usarios"
-        ExplorerBarItem67.Key = "Item2"
-        ExplorerBarItem67.Text = "Configuración de Usarios"
-        ExplorerBarItem68.Key = "Item3"
-        ExplorerBarItem68.Text = "Roles y Permisos"
-        ExplorerBarItem69.Key = "Item4"
-        ExplorerBarItem69.Text = "Opciones"
-        ExplorerBarItem70.Key = "Item5"
-        ExplorerBarItem70.Text = "Efectuar Chequeo Integridad"
-        ExplorerBarItem71.Key = "Item6"
-        ExplorerBarItem71.Text = "Efectuar Chequeo Totales de Citas"
-        ExplorerBarItem72.Key = "Item7"
-        ExplorerBarItem72.Text = "Importar Datos"
-        ExplorerBarItem73.Key = "Item8"
-        ExplorerBarItem73.Text = "Buscar Actualizaciones"
-        ExplorerBarItem74.Key = "Item9"
-        ExplorerBarItem74.Text = "Auditorias"
-        ExplorerBarItem75.Key = "Item10"
-        ExplorerBarItem75.Text = "Migrar Pacientes"
-        ExplorerBarGroup6.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem66, ExplorerBarItem67, ExplorerBarItem68, ExplorerBarItem69, ExplorerBarItem70, ExplorerBarItem71, ExplorerBarItem72, ExplorerBarItem73, ExplorerBarItem74, ExplorerBarItem75})
-        ExplorerBarGroup6.Key = "Group6"
-        ExplorerBarGroup6.Text = "Utilidades"
-        ExplorerBarGroup7.Cursor = System.Windows.Forms.Cursors.Hand
-        ExplorerBarGroup7.Expanded = False
-        ExplorerBarItem76.Key = "Item1"
-        ExplorerBarItem76.Text = "Manual de Instrucciones"
-        ExplorerBarGroup7.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem76})
-        ExplorerBarGroup7.Key = "Group7"
-        ExplorerBarGroup7.Text = "Ayuda"
-        ExplorerBarGroup8.Cursor = System.Windows.Forms.Cursors.Hand
-        ExplorerBarGroup8.Expanded = False
-        ExplorerBarGroup8.Key = "Group8"
-        ExplorerBarGroup8.Text = "Desarrollo"
-        ExplorerBarGroup9.Cursor = System.Windows.Forms.Cursors.Hand
-        ExplorerBarGroup9.Expanded = False
-        ExplorerBarItem77.Key = "Item1"
-        ExplorerBarItem77.Text = "Cerrar Sesión"
-        ExplorerBarItem78.Key = "Item2"
-        ExplorerBarItem78.Text = "Salir de INCEME"
-        ExplorerBarGroup9.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem77, ExplorerBarItem78})
-        ExplorerBarGroup9.Key = "Group9"
-        ExplorerBarGroup9.Text = "Salir"
-        Me.ExplorerBar1.Groups.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarGroup() {ExplorerBarGroup1, ExplorerBarGroup2, ExplorerBarGroup3, ExplorerBarGroup4, ExplorerBarGroup5, ExplorerBarGroup6, ExplorerBarGroup7, ExplorerBarGroup8, ExplorerBarGroup9})
+        ExplorerBarGroup10.Cursor = System.Windows.Forms.Cursors.Hand
+        ExplorerBarGroup10.Expanded = False
+        ExplorerBarItem79.Key = "Item1"
+        ExplorerBarItem79.Text = "Médicos"
+        ExplorerBarItem80.Key = "Item2"
+        ExplorerBarItem80.Text = "Mutuas"
+        ExplorerBarItem81.Key = "Item5"
+        ExplorerBarItem81.Text = "Bancos"
+        ExplorerBarItem82.Key = "Item6"
+        ExplorerBarItem82.Text = "Gastos"
+        ExplorerBarItem83.Key = "Item7"
+        ExplorerBarItem83.Text = "Liquidación de Médicos"
+        ExplorerBarItem84.Key = "Item8"
+        ExplorerBarItem84.Text = "Dashboard"
+        ExplorerBarItem85.Key = "Item9"
+        ExplorerBarItem85.Text = "Horarios"
+        ExplorerBarGroup10.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem79, ExplorerBarItem80, ExplorerBarItem81, ExplorerBarItem82, ExplorerBarItem83, ExplorerBarItem84, ExplorerBarItem85})
+        ExplorerBarGroup10.Key = "Group1"
+        ExplorerBarGroup10.StateStyles.FormatStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(82, Byte), Integer))
+        ExplorerBarGroup10.StateStyles.FormatStyle.BackColorGradient = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(82, Byte), Integer))
+        ExplorerBarGroup10.Text = "Clínica"
+        ExplorerBarGroup11.Cursor = System.Windows.Forms.Cursors.Hand
+        ExplorerBarGroup11.Expanded = False
+        ExplorerBarItem86.Key = "Item10"
+        ExplorerBarItem86.Text = "Pacientes"
+        ExplorerBarItem87.Key = "Item11"
+        ExplorerBarItem87.Text = "Empresas"
+        ExplorerBarItem88.Key = "Item12"
+        ExplorerBarItem88.Text = "Facturas"
+        ExplorerBarItem89.Key = "Item13"
+        ExplorerBarItem89.Text = "Asistente de Facturación"
+        ExplorerBarItem90.Key = "Item14"
+        ExplorerBarItem90.Text = "Generar Facturas/Recibos Servicios Periódicos"
+        ExplorerBarItem91.Key = "Item15"
+        ExplorerBarItem91.Text = "Presupuestos Dentales"
+        ExplorerBarItem92.Key = "Item16"
+        ExplorerBarItem92.Text = "Analíticas"
+        ExplorerBarItem93.Key = "Item17"
+        ExplorerBarItem93.Text = "Generar Recibos"
+        ExplorerBarItem94.Key = "Item18"
+        ExplorerBarItem94.Text = "Recibos"
+        ExplorerBarItem95.Key = "Item19"
+        ExplorerBarItem95.Text = "Imprimir Remesa"
+        ExplorerBarItem96.Key = "Item20"
+        ExplorerBarItem96.Text = "Generar Norma 19"
+        ExplorerBarItem97.Key = "Item21"
+        ExplorerBarItem97.Text = "Bonos no Agotados"
+        ExplorerBarItem98.Key = "Item22"
+        ExplorerBarItem98.Text = "Citas"
+        ExplorerBarItem99.Key = "Item23"
+        ExplorerBarItem99.Text = "Partes Altas/Bajas"
+        ExplorerBarItem100.Key = "Item24"
+        ExplorerBarItem100.Text = "Partes Asistencia"
+        ExplorerBarItem101.Key = "Item25"
+        ExplorerBarItem101.Text = "Procesos"
+        ExplorerBarItem102.Key = "Item26"
+        ExplorerBarItem102.Text = "Comunicaciones"
+        ExplorerBarGroup11.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem86, ExplorerBarItem87, ExplorerBarItem88, ExplorerBarItem89, ExplorerBarItem90, ExplorerBarItem91, ExplorerBarItem92, ExplorerBarItem93, ExplorerBarItem94, ExplorerBarItem95, ExplorerBarItem96, ExplorerBarItem97, ExplorerBarItem98, ExplorerBarItem99, ExplorerBarItem100, ExplorerBarItem101, ExplorerBarItem102})
+        ExplorerBarGroup11.Key = "Group2"
+        ExplorerBarGroup11.Text = "Pacientes"
+        ExplorerBarGroup12.Cursor = System.Windows.Forms.Cursors.Hand
+        ExplorerBarGroup12.Expanded = False
+        ExplorerBarItem103.Key = "Item1"
+        ExplorerBarItem103.Text = "Alarmas"
+        ExplorerBarItem104.Key = "Item2"
+        ExplorerBarItem104.Text = "Diagnóstico"
+        ExplorerBarItem105.Key = "Item3"
+        ExplorerBarItem105.Text = "Medicamentos"
+        ExplorerBarItem106.Key = "Item4"
+        ExplorerBarItem106.Text = "Indicaciones"
+        ExplorerBarItem107.Key = "Item5"
+        ExplorerBarItem107.Text = "Conceptos Facturables"
+        ExplorerBarItem108.Key = "Item6"
+        ExplorerBarItem108.Text = "Familia"
+        ExplorerBarItem109.Key = "Item7"
+        ExplorerBarItem109.Text = "Tarifas"
+        ExplorerBarItem110.Key = "Item8"
+        ExplorerBarItem110.Text = "Conceptos de Analítica"
+        ExplorerBarItem111.Key = "Item9"
+        ExplorerBarItem111.Text = "Planillas para Analíticas"
+        ExplorerBarItem112.Key = "Item10"
+        ExplorerBarItem112.Text = "Modelo de Reviciones Comparadas"
+        ExplorerBarItem113.Key = "Item11"
+        ExplorerBarItem113.Text = "Plantillas de Texto"
+        ExplorerBarItem114.Key = "Item12"
+        ExplorerBarItem114.Text = "Planillas de Historial"
+        ExplorerBarItem115.Key = "Item13"
+        ExplorerBarItem115.Text = "Poblaciones"
+        ExplorerBarItem116.Key = "Item14"
+        ExplorerBarItem116.Text = "Paises"
+        ExplorerBarItem117.Key = "Item15"
+        ExplorerBarItem117.Text = "Como nos Conoció"
+        ExplorerBarItem118.Key = "Item16"
+        ExplorerBarItem118.Text = "Formas de Pago"
+        ExplorerBarItem119.Key = "Item17"
+        ExplorerBarItem119.Text = "Clínicas Externas"
+        ExplorerBarItem120.Key = "Item18"
+        ExplorerBarItem120.Text = "Almacen"
+        ExplorerBarItem121.Key = "Item19"
+        ExplorerBarItem121.Text = "Salas"
+        ExplorerBarItem122.Key = "Item20"
+        ExplorerBarItem122.Text = "Galerias de Imágenes"
+        ExplorerBarGroup12.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem103, ExplorerBarItem104, ExplorerBarItem105, ExplorerBarItem106, ExplorerBarItem107, ExplorerBarItem108, ExplorerBarItem109, ExplorerBarItem110, ExplorerBarItem111, ExplorerBarItem112, ExplorerBarItem113, ExplorerBarItem114, ExplorerBarItem115, ExplorerBarItem116, ExplorerBarItem117, ExplorerBarItem118, ExplorerBarItem119, ExplorerBarItem120, ExplorerBarItem121, ExplorerBarItem122})
+        ExplorerBarGroup12.Key = "Group3"
+        ExplorerBarGroup12.Text = "Mantenimiento"
+        ExplorerBarGroup13.Cursor = System.Windows.Forms.Cursors.Hand
+        ExplorerBarGroup13.Expanded = False
+        ExplorerBarItem123.Key = "Item1"
+        ExplorerBarItem123.Text = "Listado de Pacientes"
+        ExplorerBarItem124.Key = "Item2"
+        ExplorerBarItem124.Text = "Listado de Faltas"
+        ExplorerBarItem125.Key = "Item3"
+        ExplorerBarItem125.Text = "Partes"
+        ExplorerBarItem126.Key = "Item4"
+        ExplorerBarItem126.Text = "Listado de Tratamientos/Recetas"
+        ExplorerBarItem127.Key = "Item5"
+        ExplorerBarItem127.Text = "Listado de Citas"
+        ExplorerBarItem128.Key = "Item6"
+        ExplorerBarItem128.Text = "Ingresos por Citas/Médicos"
+        ExplorerBarItem129.Key = "Item7"
+        ExplorerBarItem129.Text = "Ingreso por Procedencia de Cita"
+        ExplorerBarItem130.Key = "Item8"
+        ExplorerBarItem130.Text = "Listado de Facturas"
+        ExplorerBarItem131.Key = "Item9"
+        ExplorerBarItem131.Text = "Listado de Recibos"
+        ExplorerBarItem132.Key = "Item10"
+        ExplorerBarItem132.Text = "Informe de Ingresos y Gastos"
+        ExplorerBarItem133.Key = "Item11"
+        ExplorerBarItem133.Text = "Diagnosticos Emitidos"
+        ExplorerBarItem134.Key = "Item12"
+        ExplorerBarItem134.Text = "Pacientes por Dignosticos"
+        ExplorerBarItem135.Key = "Item13"
+        ExplorerBarItem135.Text = "Derivaciones"
+        ExplorerBarGroup13.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem123, ExplorerBarItem124, ExplorerBarItem125, ExplorerBarItem126, ExplorerBarItem127, ExplorerBarItem128, ExplorerBarItem129, ExplorerBarItem130, ExplorerBarItem131, ExplorerBarItem132, ExplorerBarItem133, ExplorerBarItem134, ExplorerBarItem135})
+        ExplorerBarGroup13.Key = "Group4"
+        ExplorerBarGroup13.Text = "Listado"
+        ExplorerBarGroup14.Cursor = System.Windows.Forms.Cursors.Hand
+        ExplorerBarGroup14.Expanded = False
+        ExplorerBarItem136.Key = "Item1"
+        ExplorerBarItem136.Text = "Proveedores"
+        ExplorerBarItem137.Key = "Item2"
+        ExplorerBarItem137.Text = "Artículos"
+        ExplorerBarItem138.Key = "Item3"
+        ExplorerBarItem138.Text = "Entradas"
+        ExplorerBarItem139.Key = "Item4"
+        ExplorerBarItem139.Text = "Pedidos a Proveedor"
+        ExplorerBarItem140.Key = "Item5"
+        ExplorerBarItem140.Text = "Facturas  Proveedor"
+        ExplorerBarItem141.Key = "Item6"
+        ExplorerBarItem141.Text = "Facturas"
+        ExplorerBarItem142.Key = "Item7"
+        ExplorerBarItem142.Text = "Listado de Tickets"
+        ExplorerBarItem143.Key = "Item8"
+        ExplorerBarItem143.Text = "Consolidación Stock"
+        ExplorerBarGroup14.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem136, ExplorerBarItem137, ExplorerBarItem138, ExplorerBarItem139, ExplorerBarItem140, ExplorerBarItem141, ExplorerBarItem142, ExplorerBarItem143})
+        ExplorerBarGroup14.Key = "Group5"
+        ExplorerBarGroup14.Text = "TPV"
+        ExplorerBarGroup15.Cursor = System.Windows.Forms.Cursors.Hand
+        ExplorerBarGroup15.Expanded = False
+        ExplorerBarItem144.Key = "Item1"
+        ExplorerBarItem144.Text = "Usarios"
+        ExplorerBarItem145.Key = "Item2"
+        ExplorerBarItem145.Text = "Configuración de Usarios"
+        ExplorerBarItem146.Key = "Item3"
+        ExplorerBarItem146.Text = "Roles y Permisos"
+        ExplorerBarItem147.Key = "Item4"
+        ExplorerBarItem147.Text = "Opciones"
+        ExplorerBarItem148.Key = "Item5"
+        ExplorerBarItem148.Text = "Efectuar Chequeo Integridad"
+        ExplorerBarItem149.Key = "Item6"
+        ExplorerBarItem149.Text = "Efectuar Chequeo Totales de Citas"
+        ExplorerBarItem150.Key = "Item7"
+        ExplorerBarItem150.Text = "Importar Datos"
+        ExplorerBarItem151.Key = "Item8"
+        ExplorerBarItem151.Text = "Buscar Actualizaciones"
+        ExplorerBarItem152.Key = "Item9"
+        ExplorerBarItem152.Text = "Auditorias"
+        ExplorerBarItem153.Key = "Item10"
+        ExplorerBarItem153.Text = "Migrar Pacientes"
+        ExplorerBarGroup15.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem144, ExplorerBarItem145, ExplorerBarItem146, ExplorerBarItem147, ExplorerBarItem148, ExplorerBarItem149, ExplorerBarItem150, ExplorerBarItem151, ExplorerBarItem152, ExplorerBarItem153})
+        ExplorerBarGroup15.Key = "Group6"
+        ExplorerBarGroup15.Text = "Utilidades"
+        ExplorerBarGroup16.Cursor = System.Windows.Forms.Cursors.Hand
+        ExplorerBarGroup16.Expanded = False
+        ExplorerBarItem154.Key = "Item1"
+        ExplorerBarItem154.Text = "Manual de Instrucciones"
+        ExplorerBarGroup16.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem154})
+        ExplorerBarGroup16.Key = "Group7"
+        ExplorerBarGroup16.Text = "Ayuda"
+        ExplorerBarGroup17.Cursor = System.Windows.Forms.Cursors.Hand
+        ExplorerBarGroup17.Expanded = False
+        ExplorerBarGroup17.Key = "Group8"
+        ExplorerBarGroup17.Text = "Desarrollo"
+        ExplorerBarGroup18.Cursor = System.Windows.Forms.Cursors.Hand
+        ExplorerBarGroup18.Expanded = False
+        ExplorerBarItem155.Key = "Item1"
+        ExplorerBarItem155.Text = "Cerrar Sesión"
+        ExplorerBarItem156.Key = "Item2"
+        ExplorerBarItem156.Text = "Salir de INCEME"
+        ExplorerBarGroup18.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem155, ExplorerBarItem156})
+        ExplorerBarGroup18.Key = "Group9"
+        ExplorerBarGroup18.Text = "Salir"
+        Me.ExplorerBar1.Groups.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarGroup() {ExplorerBarGroup10, ExplorerBarGroup11, ExplorerBarGroup12, ExplorerBarGroup13, ExplorerBarGroup14, ExplorerBarGroup15, ExplorerBarGroup16, ExplorerBarGroup17, ExplorerBarGroup18})
         Me.ExplorerBar1.GroupSeparation = 1
         Me.ExplorerBar1.GroupsStateStyles.FormatStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(82, Byte), Integer))
         Me.ExplorerBar1.GroupsStateStyles.FormatStyle.BackColorGradient = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(82, Byte), Integer))
@@ -761,7 +768,7 @@ Partial Class form_new_centro_medico
         Me.ExplorerBar1.ItemsStateStyles.FormatStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(82, Byte), Integer))
         Me.ExplorerBar1.Location = New System.Drawing.Point(0, 147)
         Me.ExplorerBar1.Name = "ExplorerBar1"
-        Me.ExplorerBar1.Size = New System.Drawing.Size(256, 497)
+        Me.ExplorerBar1.Size = New System.Drawing.Size(256, 469)
         Me.ExplorerBar1.TabIndex = 0
         Me.ExplorerBar1.ThemedAreas = CType(((Janus.Windows.ExplorerBar.ThemedArea.Background Or Janus.Windows.ExplorerBar.ThemedArea.Border) _
             Or Janus.Windows.ExplorerBar.ThemedArea.Items), Janus.Windows.ExplorerBar.ThemedArea)
@@ -786,7 +793,7 @@ Partial Class form_new_centro_medico
         Me.UiGroupBox2.Controls.Add(Me.PictureBox7)
         Me.UiGroupBox2.Location = New System.Drawing.Point(258, 150)
         Me.UiGroupBox2.Name = "UiGroupBox2"
-        Me.UiGroupBox2.Size = New System.Drawing.Size(750, 483)
+        Me.UiGroupBox2.Size = New System.Drawing.Size(750, 477)
         Me.UiGroupBox2.TabIndex = 9
         Me.UiGroupBox2.Visible = False
         '
@@ -872,6 +879,8 @@ Partial Class form_new_centro_medico
         Me.UiGroupBox3.AutoScroll = True
         Me.UiGroupBox3.BackColor = System.Drawing.Color.Transparent
         Me.UiGroupBox3.BorderColor = System.Drawing.Color.Transparent
+        Me.UiGroupBox3.Controls.Add(Me.Button2)
+        Me.UiGroupBox3.Controls.Add(Me.Button1)
         Me.UiGroupBox3.Controls.Add(Me.PictureBox26)
         Me.UiGroupBox3.Controls.Add(Me.PictureBox25)
         Me.UiGroupBox3.Controls.Add(Me.PictureBox24)
@@ -883,17 +892,35 @@ Partial Class form_new_centro_medico
         Me.UiGroupBox3.Controls.Add(Me.PictureBox18)
         Me.UiGroupBox3.Controls.Add(Me.PictureBox17)
         Me.UiGroupBox3.Controls.Add(Me.PictureBox6)
-        Me.UiGroupBox3.Controls.Add(Me.PictureBox8)
         Me.UiGroupBox3.Controls.Add(Me.PictureBox12)
         Me.UiGroupBox3.Controls.Add(Me.PictureBox13)
         Me.UiGroupBox3.Controls.Add(Me.PictureBox14)
-        Me.UiGroupBox3.Controls.Add(Me.PictureBox15)
         Me.UiGroupBox3.Controls.Add(Me.PictureBox16)
         Me.UiGroupBox3.Location = New System.Drawing.Point(258, 150)
         Me.UiGroupBox3.Name = "UiGroupBox3"
-        Me.UiGroupBox3.Size = New System.Drawing.Size(750, 494)
+        Me.UiGroupBox3.Size = New System.Drawing.Size(750, 466)
         Me.UiGroupBox3.TabIndex = 10
         Me.UiGroupBox3.Visible = False
+        '
+        'Button2
+        '
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button2.Image = Global.centro_medico.My.Resources.Resources.Icon_PresupuestosDentales
+        Me.Button2.Location = New System.Drawing.Point(188, 172)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(172, 155)
+        Me.Button2.TabIndex = 19
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Image = Global.centro_medico.My.Resources.Resources.Icon_Paciente
+        Me.Button1.Location = New System.Drawing.Point(2, 4)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(172, 155)
+        Me.Button1.TabIndex = 12
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'PictureBox26
         '
@@ -1016,17 +1043,6 @@ Partial Class form_new_centro_medico
         Me.PictureBox6.TabIndex = 8
         Me.PictureBox6.TabStop = False
         '
-        'PictureBox8
-        '
-        Me.PictureBox8.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox8.Image = Global.centro_medico.My.Resources.Resources.Icon_PresupuestosDentales
-        Me.PictureBox8.Location = New System.Drawing.Point(188, 172)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(172, 155)
-        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox8.TabIndex = 7
-        Me.PictureBox8.TabStop = False
-        '
         'PictureBox12
         '
         Me.PictureBox12.Cursor = System.Windows.Forms.Cursors.Hand
@@ -1060,17 +1076,6 @@ Partial Class form_new_centro_medico
         Me.PictureBox14.TabIndex = 4
         Me.PictureBox14.TabStop = False
         '
-        'PictureBox15
-        '
-        Me.PictureBox15.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox15.Image = Global.centro_medico.My.Resources.Resources.Icon_Paciente
-        Me.PictureBox15.Location = New System.Drawing.Point(3, 4)
-        Me.PictureBox15.Name = "PictureBox15"
-        Me.PictureBox15.Size = New System.Drawing.Size(172, 155)
-        Me.PictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox15.TabIndex = 3
-        Me.PictureBox15.TabStop = False
-        '
         'PictureBox16
         '
         Me.PictureBox16.Cursor = System.Windows.Forms.Cursors.Hand
@@ -1087,6 +1092,87 @@ Partial Class form_new_centro_medico
         Me.PROVEEDORESBindingSource.DataMember = "PROVEEDORES"
         Me.PROVEEDORESBindingSource.DataSource = Me.CMDataSet
         '
+        'UiGroupBox4
+        '
+        Me.UiGroupBox4.BackColor = System.Drawing.Color.Transparent
+        Me.UiGroupBox4.BorderColor = System.Drawing.Color.Transparent
+        Me.UiGroupBox4.Controls.Add(Me.lblInfoBD)
+        Me.UiGroupBox4.Controls.Add(Me.Label3)
+        Me.UiGroupBox4.Controls.Add(Me.lbl_DbVersionValue)
+        Me.UiGroupBox4.Controls.Add(Me.Label9)
+        Me.UiGroupBox4.Controls.Add(Me.lblAppVersion)
+        Me.UiGroupBox4.Controls.Add(Me.Label7)
+        Me.UiGroupBox4.Location = New System.Drawing.Point(0, 622)
+        Me.UiGroupBox4.Name = "UiGroupBox4"
+        Me.UiGroupBox4.Size = New System.Drawing.Size(464, 23)
+        Me.UiGroupBox4.TabIndex = 11
+        '
+        'lblInfoBD
+        '
+        Me.lblInfoBD.AutoSize = True
+        Me.lblInfoBD.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInfoBD.ForeColor = System.Drawing.Color.Black
+        Me.lblInfoBD.Location = New System.Drawing.Point(247, 2)
+        Me.lblInfoBD.Name = "lblInfoBD"
+        Me.lblInfoBD.Size = New System.Drawing.Size(64, 15)
+        Me.lblInfoBD.TabIndex = 9
+        Me.lblInfoBD.Text = "Sin Definir"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.Location = New System.Drawing.Point(159, 2)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(90, 15)
+        Me.Label3.TabIndex = 8
+        Me.Label3.Text = "Base de Datos:"
+        '
+        'lbl_DbVersionValue
+        '
+        Me.lbl_DbVersionValue.AutoSize = True
+        Me.lbl_DbVersionValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_DbVersionValue.ForeColor = System.Drawing.Color.Black
+        Me.lbl_DbVersionValue.Location = New System.Drawing.Point(414, 2)
+        Me.lbl_DbVersionValue.Name = "lbl_DbVersionValue"
+        Me.lbl_DbVersionValue.Size = New System.Drawing.Size(44, 15)
+        Me.lbl_DbVersionValue.TabIndex = 7
+        Me.lbl_DbVersionValue.Text = "1.1.0.0"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.Black
+        Me.Label9.Location = New System.Drawing.Point(350, 2)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(69, 15)
+        Me.Label9.TabIndex = 6
+        Me.Label9.Text = "Bd Version:"
+        '
+        'lblAppVersion
+        '
+        Me.lblAppVersion.AutoSize = True
+        Me.lblAppVersion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAppVersion.ForeColor = System.Drawing.Color.Black
+        Me.lblAppVersion.Location = New System.Drawing.Point(76, 2)
+        Me.lblAppVersion.Name = "lblAppVersion"
+        Me.lblAppVersion.Size = New System.Drawing.Size(44, 15)
+        Me.lblAppVersion.TabIndex = 5
+        Me.lblAppVersion.Text = "1.1.0.0"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.Black
+        Me.Label7.Location = New System.Drawing.Point(5, 2)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(75, 15)
+        Me.Label7.TabIndex = 4
+        Me.Label7.Text = "App Version:"
+        '
         'form_new_centro_medico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1094,6 +1180,7 @@ Partial Class form_new_centro_medico
         Me.BackgroundImage = Global.centro_medico.My.Resources.Resources.newpag
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1008, 645)
+        Me.Controls.Add(Me.UiGroupBox4)
         Me.Controls.Add(Me.UiGroupBox3)
         Me.Controls.Add(Me.UiGroupBox2)
         Me.Controls.Add(Me.ExplorerBar1)
@@ -1162,13 +1249,14 @@ Partial Class form_new_centro_medico
         CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PROVEEDORESBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UiGroupBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.UiGroupBox4.ResumeLayout(False)
+        Me.UiGroupBox4.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1230,11 +1318,9 @@ Partial Class form_new_centro_medico
     Friend WithEvents PictureBox9 As System.Windows.Forms.PictureBox
     Friend WithEvents UiGroupBox3 As Janus.Windows.EditControls.UIGroupBox
     Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox8 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox12 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox13 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox14 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox15 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox16 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox17 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox18 As System.Windows.Forms.PictureBox
@@ -1247,4 +1333,13 @@ Partial Class form_new_centro_medico
     Friend WithEvents PictureBox24 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox25 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox26 As System.Windows.Forms.PictureBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents UiGroupBox4 As Janus.Windows.EditControls.UIGroupBox
+    Friend WithEvents lbl_DbVersionValue As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents lblAppVersion As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents lblInfoBD As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 End Class

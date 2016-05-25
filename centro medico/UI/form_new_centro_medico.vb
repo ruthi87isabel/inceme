@@ -55,6 +55,56 @@ Public Class form_new_centro_medico
         End If
     End Sub
 
+    Private Function ConfiguracionBasicaCorrecta() As Boolean
+
+        ChequeaVersionBD()
+
+
+        Dim mensajeError As String = ""
+
+        If Me.dir Is Nothing Then
+            mensajeError = "No se ha definido la ruta para almacenar las imagenes."
+        Else
+            If dir.Trim.Length < 4 Then
+                mensajeError = "No se ha definido la ruta para almacenar las imagenes."
+            End If
+        End If
+        If Me.dirFiles Is Nothing Then
+            If mensajeError.Trim.Length > 0 Then mensajeError += vbCrLf
+            mensajeError += "No se ha definido la ruta para almacenar los ficheros."
+        Else
+            If dirFiles.Trim.Length < 4 Then
+                mensajeError = "No se ha definido la ruta para almacenar los ficheros."
+            End If
+        End If
+        If Me.dirRdlc Is Nothing Then
+            If mensajeError.Trim.Length > 0 Then mensajeError += vbCrLf
+            mensajeError += "No se ha definido la ruta para las plantillas de impresión."
+        Else
+            If Me.dirRdlc.Trim.Length < 4 Then
+                If mensajeError.Trim.Length > 0 Then mensajeError += vbCrLf
+                mensajeError += "No se ha definido la ruta para las plantillas de impresión."
+            End If
+        End If
+
+        If mensajeError.Trim.Length > 0 Then
+            aviso = New TestNotifyWindow.NotifyWindow
+
+            Me.aviso.WaitOnMouseOver = True
+            Me.aviso.SetDimensions(500, 200)
+            Me.aviso.BackColor = Color.FromArgb(253, 66, 57)
+            'Me.aviso.Top = -500
+            Me.aviso.Text = mensajeError
+            Me.aviso.Text += vbCrLf & " Vaya al menu Utilidades/Configuración y complete los valores indicados."
+            Me.aviso.Title = "Parámetros necesarios para continuar"
+
+            Me.aviso.Notify()
+            Return False
+        Else
+            Return True
+        End If
+    End Function
+
     ' ROLES y chequeo de Permisos
     Public Shared IDUser As Integer
 
@@ -136,7 +186,7 @@ Public Class form_new_centro_medico
             'Me.lblRolUsuario.Text = "Rol: " & Globales.Usuario.ROLESUSUARIOs(0).ROLE.Nombre
 
             Dim index As Integer = My.MySettings.Default.CMConnectionString.IndexOf("Initial Catalog=") + "Initial Catalog=".Length
-            'Me.lblInfoBD.Text = My.MySettings.Default.CMConnectionString.Substring(index, My.MySettings.Default.CMConnectionString.IndexOf(";", index) - index)
+            Me.lblInfoBD.Text = My.MySettings.Default.CMConnectionString.Substring(index, My.MySettings.Default.CMConnectionString.IndexOf(";", index) - index)
 
         Catch ex As Exception
         End Try
@@ -153,7 +203,7 @@ Public Class form_new_centro_medico
         '************* Menu Clinicas ******************
 
         'Medicos
-        'menu_médicos.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Medicos) = RoleManager.TipoPermisos.Ninguno)
+        ExplorerBar1.Groups("Group1").Items("Item1").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Medicos) = RoleManager.TipoPermisos.Ninguno)
         'bt_medicos.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Medicos) = RoleManager.TipoPermisos.Ninguno)
 
         ''Mutuas
@@ -385,7 +435,7 @@ Public Class form_new_centro_medico
         'Me.bt_citas.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Citas) = RoleManager.TipoPermisos.Ninguno)
 
 
-
+        Me.ConfiguracionBasicaCorrecta()
         ''Se controla que unos valores de la configuración esten establecidos.
         'If Me.ConfiguracionBasicaCorrecta = False Then
         '    Me.menu_clinica.Enabled = False
@@ -414,6 +464,33 @@ Public Class form_new_centro_medico
     End Sub
 #End Region
 
+    Public Sub ChequeaVersionBD()
+        '22-01-2016 texto que define la versión mínima de bd para funcionar con la versión de aplicación actual
+        Dim minDatabaseVersion As String = "1.0.4.0"
+
+        'Obtiene la version almacenada en la BD y deberia compararse con la version del ensamblado
+        Dim strSql As String = "Select Valor from VariablesGlobales WHERE Clave = 'DB_Version'"
+        Dim res As Object = Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteScalar(My.Settings.CMConnectionString, CommandType.Text, strSql)
+
+        If Not res Is DBNull.Value Then
+            'versión bd actual
+            Dim versionActual As Version = New Version(res.ToString())
+            'versión aplicación
+            Dim versionMin As Version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version
+            'System.Reflection.Assembly.GetExecutingAssembly().GetName().Version'
+
+            lblAppVersion.Text = versionMin.ToString()
+            lbl_DbVersionValue.Text = versionActual.ToString()
+
+            'versión mínima necesaria de la bd
+            Dim dbrequiredVersion As New Version(minDatabaseVersion)
+
+            If versionActual < dbrequiredVersion Then
+                MessageBox.Show("La version actual de la Base de Datos: " & versionActual.ToString() & " difiere de la mínima requerida " & dbrequiredVersion.ToString() & ". Esto podria ocasionar inestabilidad en el sistema. ", "INFORMACIÓN SOBRE BASE DE DATOS", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            End If
+
+        End If
+    End Sub
 
     Private Sub SearchText_KeyUp(sender As Object, e As KeyEventArgs) Handles SearchText.KeyUp
         If SearchText.Text = " " And e.KeyData = Keys.Space Then
@@ -445,8 +522,20 @@ Public Class form_new_centro_medico
                           "%' AND (PACIENTES.Eliminado is NULL or PACIENTES.Eliminado = 0)")
             query += " ORDER BY PACIENTES.CPACIENTE DESC "
             Dim dt As DataTable = Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteDataset(My.Settings.CMConnectionString, CommandType.Text, query).Tables(0)
+            If dt.Rows.Count() = 1 Then
+                Dim context As New CMLinqDataContext
+                Dim paciente As PACIENTE = (From p In context.PACIENTEs Where p.CPACIENTE = dt.Rows(0).Item("CPACIENTE").ToString() And (Not p.Eliminado.HasValue Or p.Eliminado = False) Select p).SingleOrDefault()
+                If Not paciente Is Nothing Then
+                    Dim _nuevo_paciente As formPaciente = New formPaciente("Ficha de Paciente-Editar", Enums.Accion.Modificar, paciente.CPACIENTE)
+                    _nuevo_paciente.ShowInTaskbar = False
+                    _nuevo_paciente.ShowDialog()
 
-            If dt.Rows.Count() > 0 Then
+                    _nuevo_paciente.Dispose()
+                    _nuevo_paciente = Nothing
+
+                    FreeMemory.FlushMemory()
+                End If
+            ElseIf dt.Rows.Count() > 1 Then
                 Dim frm As New frmPacientesListado()
                 frm.Buscar = 1
                 frm.SQLSentence = query
@@ -1002,15 +1091,6 @@ Public Class form_new_centro_medico
         frm.ShowDialog()
     End Sub
 
-
-    Private Sub PictureBox15_Click(sender As Object, e As EventArgs) Handles PictureBox15.Click
-        Dim frm As New frmPacientesListado()
-        frm.ShowDialog()
-        frm.Dispose()
-        frm = Nothing
-        FreeMemory.FlushMemory()
-    End Sub
-
     Private Sub PictureBox12_Click(sender As Object, e As EventArgs) Handles PictureBox12.Click
         ListadoDeEmpresas()
     End Sub
@@ -1032,11 +1112,6 @@ Public Class form_new_centro_medico
         _generar.ShowInTaskbar = False
         _generar.ShowDialog()
         GC.Collect()
-    End Sub
-
-    Private Sub PictureBox8_Click_1(sender As Object, e As EventArgs) Handles PictureBox8.Click
-        Dim frm As New frmDental_ListadoPresupuestos()
-        frm.ShowDialog()
     End Sub
 
     Private Sub PictureBox6_Click_1(sender As Object, e As EventArgs) Handles PictureBox6.Click
@@ -1125,6 +1200,19 @@ Public Class form_new_centro_medico
         Dim frm As New frmUsuarios_ADD(True)
         frm.CODIGO = Globales.Usuario.CODIGO
         frm.ShowInTaskbar = False
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim frm As New frmPacientesListado()
+        frm.ShowDialog()
+        frm.Dispose()
+        frm = Nothing
+        FreeMemory.FlushMemory()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim frm As New frmDental_ListadoPresupuestos()
         frm.ShowDialog()
     End Sub
 
