@@ -204,123 +204,148 @@ Public Class form_new_centro_medico
 
         'Medicos
         ExplorerBar1.Groups("Group1").Items("Item1").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Medicos) = RoleManager.TipoPermisos.Ninguno)
-        'bt_medicos.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Medicos) = RoleManager.TipoPermisos.Ninguno)
+        Button6.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Medicos) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Medicos) = RoleManager.TipoPermisos.Ninguno) Then Button6.Image = Global.centro_medico.My.Resources.Resources.IconE_Medico
+        Button9.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Medicos) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Medicos) = RoleManager.TipoPermisos.Ninguno) Then Button9.Image = Global.centro_medico.My.Resources.Resources.IconE_Medico
 
-        ''Mutuas
-        'menu_mutuas.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Mutuas) = RoleManager.TipoPermisos.Ninguno)
-        'bt_mutuas.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Mutuas) = RoleManager.TipoPermisos.Ninguno)
+        'Mutuas
+        ExplorerBar1.Groups("Group1").Items("Item2").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Mutuas) = RoleManager.TipoPermisos.Ninguno)
+        Button10.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Mutuas) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Mutuas) = RoleManager.TipoPermisos.Ninguno) Then Button10.Image = Global.centro_medico.My.Resources.Resources.IconE_Mutuas
 
-        ''Proveedores
-        'menu_proveedores.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Proveedores) = RoleManager.TipoPermisos.Ninguno)
+        'Bancos
+        ExplorerBar1.Groups("Group1").Items("Item5").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Bancos) = RoleManager.TipoPermisos.Ninguno)
+        Button11.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Bancos) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Bancos) = RoleManager.TipoPermisos.Ninguno) Then Button11.Image = Global.centro_medico.My.Resources.Resources.IconE_Banco
 
-        ''Articulos
-        'menu_artículos.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Articulos) = RoleManager.TipoPermisos.Ninguno)
-
-        ''Bancos
-        'menu_bancos.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Bancos) = RoleManager.TipoPermisos.Ninguno)
-
-        ''Gastos
-        'menu_gastos.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Gastos) = RoleManager.TipoPermisos.Ninguno)
+        'Gastos
+        ExplorerBar1.Groups("Group1").Items("Item6").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Gastos) = RoleManager.TipoPermisos.Ninguno)
+        Button12.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Gastos) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Gastos) = RoleManager.TipoPermisos.Ninguno) Then Button12.Image = Global.centro_medico.My.Resources.Resources.IconE_Gastos
 
         'Liquidacion de Médicos
-        'LiquidacionDeMédicosToolStripMenuItem.Visible = Globales.Configuracion.ModuloLiquidacionMedicos_Activo
-        'LiquidacionDeMédicosToolStripMenuItem.Enabled = (Globales.Usuario.Permisos(RoleManager.Items.Gastos) >= RoleManager.TipoPermisos.Modificar)
+        ExplorerBar1.Groups("Group1").Items("Item7").Visible = Globales.Configuracion.ModuloLiquidacionMedicos_Activo
+        ExplorerBar1.Groups("Group1").Items("Item7").Enabled = (Globales.Usuario.Permisos(RoleManager.Items.Gastos) >= RoleManager.TipoPermisos.Modificar)
+        Button13.Visible = Globales.Configuracion.ModuloLiquidacionMedicos_Activo
+        Button13.Enabled = (Globales.Usuario.Permisos(RoleManager.Items.Gastos) >= RoleManager.TipoPermisos.Modificar)
+        If Not (Globales.Usuario.Permisos(RoleManager.Items.Gastos) >= RoleManager.TipoPermisos.Modificar) Then Button13.Image = Global.centro_medico.My.Resources.Resources.IconE_LiquidacionMedicos
 
-        ''Horarios
-        'HorariosToolStripMenuItem.Enabled = (Globales.Usuario.Permisos(RoleManager.Items.Horarios) >= RoleManager.TipoPermisos.Modificar)
+        'Dashboard
+        Dim DB As Boolean = Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Citas_por_estado) = RoleManager.TipoPermisos.Ninguno) Or
+                                 Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Relacion_de_Altas) = RoleManager.TipoPermisos.Ninguno) Or
+                                 Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Citas_atendidas_por_medicos) = RoleManager.TipoPermisos.Ninguno) Or
+                                 Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Citas_por_Especialidad) = RoleManager.TipoPermisos.Ninguno) Or
+                                 Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Top_10_Tratamientos) = RoleManager.TipoPermisos.Ninguno) Or
+                                 Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Resumen_Dental) = RoleManager.TipoPermisos.Ninguno)
 
-        ''************ End Clinicas ********************
+        ExplorerBar1.Groups("Group1").Items("Item8").Enabled = DB
+        Button3.Enabled = DB
+        Button14.Enabled = DB
+        If Not DB Then Button3.Image = Global.centro_medico.My.Resources.Resources.IconE_DashBoard
+        If Not DB Then Button14.Image = Global.centro_medico.My.Resources.Resources.IconE_DashBoard
+
+        'Horarios
+        ExplorerBar1.Groups("Group1").Items("Item9").Enabled = (Globales.Usuario.Permisos(RoleManager.Items.Horarios) >= RoleManager.TipoPermisos.Modificar)
+        Button15.Enabled = (Globales.Usuario.Permisos(RoleManager.Items.Horarios) >= RoleManager.TipoPermisos.Modificar)
+        If Not (Globales.Usuario.Permisos(RoleManager.Items.Horarios) >= RoleManager.TipoPermisos.Modificar) Then Button15.Image = Global.centro_medico.My.Resources.Resources.IconE_Horario
+
+        ''************ End Clinicas **************************
 
         ''************ Begin Pacientes ************************
 
-        ''Pacientes
-        'menu_pacientes.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Pacientes) = RoleManager.TipoPermisos.Ninguno)
-        'bt_pacientes.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Pacientes) = RoleManager.TipoPermisos.Ninguno)
+        'Pacientes
+        ExplorerBar1.Groups("Group2").Items("Item10").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Pacientes) = RoleManager.TipoPermisos.Ninguno)
+        Button5.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Pacientes) = RoleManager.TipoPermisos.Ninguno)
+        Button1.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Pacientes) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Pacientes) = RoleManager.TipoPermisos.Ninguno) Then Button1.Image = Global.centro_medico.My.Resources.Resources.IconE_Paciente
+        If (Globales.Usuario.Permisos(RoleManager.Items.Pacientes) = RoleManager.TipoPermisos.Ninguno) Then Button5.Image = Global.centro_medico.My.Resources.Resources.IconE_Paciente
 
-        ''Empresas
-        'menu_empresas.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Empresas) = RoleManager.TipoPermisos.Ninguno)
-        'bt_empresas.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Empresas) = RoleManager.TipoPermisos.Ninguno)
+        'Empresas
+        ExplorerBar1.Groups("Group2").Items("Item11").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Empresas) = RoleManager.TipoPermisos.Ninguno)
+        Button16.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Empresas) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Empresas) = RoleManager.TipoPermisos.Ninguno) Then Button16.Image = Global.centro_medico.My.Resources.Resources.IconE_Empresa
 
-        ''Facturas
-        'menu_facturas.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Facturas) = RoleManager.TipoPermisos.Ninguno)
-        'bt_facturas.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Facturas) = RoleManager.TipoPermisos.Ninguno)
+        'Facturas
+        ExplorerBar1.Groups("Group2").Items("Item12").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Facturas) = RoleManager.TipoPermisos.Ninguno)
+        ExplorerBar1.Groups("Group2").Items("Item13").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Facturas) = RoleManager.TipoPermisos.Ninguno)
+        Button18.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Facturas) = RoleManager.TipoPermisos.Ninguno)
+        Button17.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Facturas) = RoleManager.TipoPermisos.Ninguno)
+        Button7.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Facturas) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Facturas) = RoleManager.TipoPermisos.Ninguno) Then Button18.Image = Global.centro_medico.My.Resources.Resources.IconE_AsistenteFacturacion
+        If (Globales.Usuario.Permisos(RoleManager.Items.Facturas) = RoleManager.TipoPermisos.Ninguno) Then Button17.Image = Global.centro_medico.My.Resources.Resources.IconE_Factura
+        If (Globales.Usuario.Permisos(RoleManager.Items.Facturas) = RoleManager.TipoPermisos.Ninguno) Then Button7.Image = Global.centro_medico.My.Resources.Resources.IconE_Factura
 
-        ''Analiticas
-        'Select Case Globales.Usuario.Permisos(RoleManager.Items.Analiticas)
-        '    Case RoleManager.TipoPermisos.Ninguno
-        '        menu_analíticas.Enabled = False
-        'End Select
+        'Generar Facturas/Recibos Mensuales
+        ExplorerBar1.Groups("Group2").Items("Item14").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Generar_Facturas_Recibos_Mensuales) = RoleManager.TipoPermisos.Ninguno)
+        Button19.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Generar_Facturas_Recibos_Mensuales) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Generar_Facturas_Recibos_Mensuales) = RoleManager.TipoPermisos.Ninguno) Then Button19.Image = Global.centro_medico.My.Resources.Resources.IconE_GenerarFactura
 
-        ''Generar Recibos
-        'Select Case Globales.Usuario.Permisos(RoleManager.Items.Generar_Recibos)
-        '    Case RoleManager.TipoPermisos.Ninguno
-        '        menu_generar_recibos.Enabled = False
-        'End Select
+        'Dental
+        ExplorerBar1.Groups("Group2").Items("Item15").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Dental_Presupuestos) = RoleManager.TipoPermisos.Ninguno)
+        ExplorerBar1.Groups("Group2").Items("Item15").Visible = Globales.Configuracion.Dental_ModuloActivo
+        Button2.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Dental_Presupuestos) = RoleManager.TipoPermisos.Ninguno)
+        Button2.Visible = Globales.Configuracion.Dental_ModuloActivo
+        If (Globales.Usuario.Permisos(RoleManager.Items.Dental_Presupuestos) = RoleManager.TipoPermisos.Ninguno) Then Button2.Image = Global.centro_medico.My.Resources.Resources.IconE_PresupuestosDentales
 
-        ''Recibos
-        'Select Case Globales.Usuario.Permisos(RoleManager.Items.Recibos)
-        '    Case RoleManager.TipoPermisos.Ninguno
-        '        menu_recibos.Enabled = False
-        'End Select
+        'Analiticas
+        ExplorerBar1.Groups("Group2").Items("Item16").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Analiticas) = RoleManager.TipoPermisos.Ninguno)
+        Button20.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Analiticas) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Analiticas) = RoleManager.TipoPermisos.Ninguno) Then Button20.Image = Global.centro_medico.My.Resources.Resources.IconE_Analitica
+
+        'Generar Recibos
+        ExplorerBar1.Groups("Group2").Items("Item17").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Generar_Recibos) = RoleManager.TipoPermisos.Ninguno)
+        Button21.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Generar_Recibos) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Generar_Recibos) = RoleManager.TipoPermisos.Ninguno) Then Button21.Image = Global.centro_medico.My.Resources.Resources.IconE_GenerarRecibo
+
+        'Recibos
+        ExplorerBar1.Groups("Group2").Items("Item18").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Recibos) = RoleManager.TipoPermisos.Ninguno)
+        Button22.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Recibos) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Recibos) = RoleManager.TipoPermisos.Ninguno) Then Button22.Image = Global.centro_medico.My.Resources.Resources.IconE_Recibos
 
         ''Imprimir Remesa
-        'Select Case Globales.Usuario.Permisos(RoleManager.Items.Imprimir_Remesa)
-        '    Case RoleManager.TipoPermisos.Ninguno
-        '        menu_imprimir_remesas.Enabled = False
-        'End Select
+        ExplorerBar1.Groups("Group2").Items("Item19").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Imprimir_Remesa) = RoleManager.TipoPermisos.Ninguno)
+        Button23.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Imprimir_Remesa) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Imprimir_Remesa) = RoleManager.TipoPermisos.Ninguno) Then Button23.Image = Global.centro_medico.My.Resources.Resources.IconE_ImprimirRemesa
 
-        ''Generar Norma 19
-        'Select Case Globales.Usuario.Permisos(RoleManager.Items.Generar_norma_19)
-        '    Case RoleManager.TipoPermisos.Ninguno
-        '        menu_generar_norma19.Enabled = False
-        'End Select
+        'Generar Norma 19
+        ExplorerBar1.Groups("Group2").Items("Item20").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Generar_norma_19) = RoleManager.TipoPermisos.Ninguno)
+        Button24.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Generar_norma_19) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Generar_norma_19) = RoleManager.TipoPermisos.Ninguno) Then Button24.Image = Global.centro_medico.My.Resources.Resources.IconE_GenerarNorma19
 
-        ''Citas
-        'Select Case Globales.Usuario.Permisos(RoleManager.Items.Citas)
-        '    Case RoleManager.TipoPermisos.Ninguno
-        '        bt_citas.Enabled = False
-        '        menu_citas.Enabled = False
-        'End Select
+        'Citas
+        ExplorerBar1.Groups("Group2").Items("Item22").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Citas) = RoleManager.TipoPermisos.Ninguno)
+        Button26.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Citas) = RoleManager.TipoPermisos.Ninguno)
+        Button4.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Citas) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Citas) = RoleManager.TipoPermisos.Ninguno) Then Button26.Image = Global.centro_medico.My.Resources.Resources.IconE_Citas
+        If (Globales.Usuario.Permisos(RoleManager.Items.Citas) = RoleManager.TipoPermisos.Ninguno) Then Button4.Image = Global.centro_medico.My.Resources.Resources.IconE_Citas
 
-        ''Bajas y Altas
-        'Select Case Globales.Usuario.Permisos(RoleManager.Items.Partes_Altas_Bajas)
-        '    Case RoleManager.TipoPermisos.Ninguno
-        '        bt_bajas_altas.Enabled = False
-        '        menu_partes_altas_bajas.Enabled = False
-        'End Select
+        'Bajas y Altas
+        ExplorerBar1.Groups("Group2").Items("Item23").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Partes_Altas_Bajas) = RoleManager.TipoPermisos.Ninguno)
+        Button27.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Partes_Altas_Bajas) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Partes_Altas_Bajas) = RoleManager.TipoPermisos.Ninguno) Then Button27.Image = Global.centro_medico.My.Resources.Resources.IconE_ParteAltas_Bajas
 
-        ''Asistencias
-        'Select Case Globales.Usuario.Permisos(RoleManager.Items.Partes_Asistencia)
-        '    Case RoleManager.TipoPermisos.Ninguno
-        '        bt_asistencias.Enabled = False
-        '        menu_partes_asistencia.Enabled = False
-        'End Select
+        'Asistencias
+        ExplorerBar1.Groups("Group2").Items("Item24").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Partes_Asistencia) = RoleManager.TipoPermisos.Ninguno)
+        Button28.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Partes_Asistencia) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Partes_Asistencia) = RoleManager.TipoPermisos.Ninguno) Then Button28.Image = Global.centro_medico.My.Resources.Resources.IconE_ParteAsistencia
 
-        ''Generar Facturas/Recibos Mensuales
-        'Select Case Globales.Usuario.Permisos(RoleManager.Items.Generar_Facturas_Recibos_Mensuales)
-        '    Case RoleManager.TipoPermisos.Ninguno
-        '        menu_generar_facturas_recibos.Enabled = False
-        'End Select
+        'Pacientes Debito
+        ExplorerBar1.Groups("Group2").Items("Item25").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Pacientes_Debito) = RoleManager.TipoPermisos.Ninguno)
+        Button8.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Pacientes_Debito) = RoleManager.TipoPermisos.Ninguno)
+        Button82.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Pacientes_Debito) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Pacientes_Debito) = RoleManager.TipoPermisos.Ninguno) Then Button8.Image = Global.centro_medico.My.Resources.Resources.IconE_DebitoPaciente
+        If (Globales.Usuario.Permisos(RoleManager.Items.Pacientes_Debito) = RoleManager.TipoPermisos.Ninguno) Then Button82.Image = Global.centro_medico.My.Resources.Resources.IconE_DebitoPaciente
 
-        ''Pacientes Debito
-        'Select Case Globales.Usuario.Permisos(RoleManager.Items.Pacientes_Debito)
-        '    Case RoleManager.TipoPermisos.Ninguno
-        '        btnDebitoPaciente.Enabled = False
-        'End Select
+        'Procesos
+        ExplorerBar1.Groups("Group2").Items("Item24").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Procesos) = RoleManager.TipoPermisos.Ninguno)
+        Button29.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Procesos) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Procesos) = RoleManager.TipoPermisos.Ninguno) Then Button29.Image = Global.centro_medico.My.Resources.Resources.IconE_Procesos
 
-        'frmProcesosMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Procesos) = RoleManager.TipoPermisos.Ninguno)
-
-        ''Dashboard
-        'menu_DashBoard.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Citas_por_estado) = RoleManager.TipoPermisos.Ninguno) Or
-        '                         Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Relacion_de_Altas) = RoleManager.TipoPermisos.Ninguno) Or
-        '                         Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Citas_atendidas_por_medicos) = RoleManager.TipoPermisos.Ninguno) Or
-        '                         Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Citas_por_Especialidad) = RoleManager.TipoPermisos.Ninguno) Or
-        '                         Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Top_10_Tratamientos) = RoleManager.TipoPermisos.Ninguno) Or
-        '                         Not (Globales.Usuario.Permisos(RoleManager.Items.DashB_Resumen_Dental) = RoleManager.TipoPermisos.Ninguno)
-
-        ''Dental
-        'PresupuestosDentalesToolStripMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Dental_Presupuestos) = RoleManager.TipoPermisos.Ninguno)
-        'PresupuestosDentalesToolStripMenuItem.Visible = Globales.Configuracion.Dental_ModuloActivo
+        'Comunicaciones
+        ExplorerBar1.Groups("Group2").Items("Item24").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Comunicaciones) = RoleManager.TipoPermisos.Ninguno)
+        Button30.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Comunicaciones) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Comunicaciones) = RoleManager.TipoPermisos.Ninguno) Then Button30.Image = Global.centro_medico.My.Resources.Resources.IconE_Comunicaciones
 
         ''************ End Pacientes ********************
 
@@ -328,91 +353,265 @@ Public Class form_new_centro_medico
 
         ''************ Begin Mantenimiento ********************
 
-        'menu_alarmas.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Alarmas) = RoleManager.TipoPermisos.Ninguno)
-        'menu_diagnóstico.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Diagnosticos) = RoleManager.TipoPermisos.Ninguno)
-        'menu_medicamentos.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Medicamentos) = RoleManager.TipoPermisos.Ninguno)
-        'menu_indicaciones.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Indicaciones) = RoleManager.TipoPermisos.Ninguno)
+        'Alarma
+        ExplorerBar1.Groups("Group3").Items("Item1").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Alarmas) = RoleManager.TipoPermisos.Ninguno)
+        Button37.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Alarmas) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Alarmas) = RoleManager.TipoPermisos.Ninguno) Then Button37.Image = Global.centro_medico.My.Resources.Resources.IconE_Alarma
 
-        'menu_conceptos_facturables.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Conceptos_Facturables) = RoleManager.TipoPermisos.Ninguno)
-        ''ConceptosFacturablesDentalToolStripMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Dental_Presupuestos) = RoleManager.TipoPermisos.Ninguno)
-        'FamiliasToolStripMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Conceptos_Facturables) = RoleManager.TipoPermisos.Ninguno)
+        'Diagnostico 
+        ExplorerBar1.Groups("Group3").Items("Item2").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Diagnosticos) = RoleManager.TipoPermisos.Ninguno)
+        Button36.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Diagnosticos) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Diagnosticos) = RoleManager.TipoPermisos.Ninguno) Then Button36.Image = Global.centro_medico.My.Resources.Resources.IconE_Diagnostico
 
-        'menu_conceptos_analíticas.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Conceptos_de_Analiticas) = RoleManager.TipoPermisos.Ninguno)
-        'menu_plantillas_analíticas.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Plantillas_para_Analiticas) = RoleManager.TipoPermisos.Ninguno)
-        'menu_modelo_revisiones.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Modelos_Revisiones_Comparativas) = RoleManager.TipoPermisos.Ninguno)
-        'menu_plantillas_texto.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Plantillas_de_texto) = RoleManager.TipoPermisos.Ninguno)
-        'menu_plantillas_historial.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Plantilla_de_Historial) = RoleManager.TipoPermisos.Ninguno)
-        'menu_paises.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Paises) = RoleManager.TipoPermisos.Ninguno)
-        'menu_formas_pago.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Formas_de_Pago) = RoleManager.TipoPermisos.Ninguno)
-        'menu_clínicas_externas.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Clinica_externas) = RoleManager.TipoPermisos.Ninguno)
-        'Me.ComoNosConocióToolStripMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.ComoConocio) = RoleManager.TipoPermisos.Ninguno)
+        'Medicamentos 
+        ExplorerBar1.Groups("Group3").Items("Item3").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Medicamentos) = RoleManager.TipoPermisos.Ninguno)
+        Button35.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Medicamentos) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Medicamentos) = RoleManager.TipoPermisos.Ninguno) Then Button35.Image = Global.centro_medico.My.Resources.Resources.IconE_Medicamentos
 
-        'AlmacenToolStripMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Almacen) = RoleManager.TipoPermisos.Ninguno)
-        'PoblacionesToolStripMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Poblaciones) = RoleManager.TipoPermisos.Ninguno)
+        'Indicaciones 
+        ExplorerBar1.Groups("Group3").Items("Item4").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Indicaciones) = RoleManager.TipoPermisos.Ninguno)
+        Button34.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Indicaciones) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Indicaciones) = RoleManager.TipoPermisos.Ninguno) Then Button34.Image = Global.centro_medico.My.Resources.Resources.IconE_Indicaciones
 
-        'TarifasToolStripMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Tarifas) = RoleManager.TipoPermisos.Ninguno)
+        'Conceptos Facturables 
+        ExplorerBar1.Groups("Group3").Items("Item5").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Conceptos_Facturables) = RoleManager.TipoPermisos.Ninguno)
+        Button33.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Conceptos_Facturables) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Conceptos_Facturables) = RoleManager.TipoPermisos.Ninguno) Then Button33.Image = Global.centro_medico.My.Resources.Resources.IconE_Conceptos_Facturables
 
-        'SalasToolStripMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Citas) = RoleManager.TipoPermisos.Ninguno)
+        'Conceptos Facturables 
+        ExplorerBar1.Groups("Group3").Items("Item5").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Conceptos_Facturables) = RoleManager.TipoPermisos.Ninguno)
+        ExplorerBar1.Groups("Group3").Items("Item6").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Conceptos_Facturables) = RoleManager.TipoPermisos.Ninguno)
+        Button32.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Conceptos_Facturables) = RoleManager.TipoPermisos.Ninguno)
+        Button33.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Conceptos_Facturables) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Conceptos_Facturables) = RoleManager.TipoPermisos.Ninguno) Then Button32.Image = Global.centro_medico.My.Resources.Resources.IconE_Familia
+        If (Globales.Usuario.Permisos(RoleManager.Items.Conceptos_Facturables) = RoleManager.TipoPermisos.Ninguno) Then Button33.Image = Global.centro_medico.My.Resources.Resources.IconE_Conceptos_Facturables
 
-        'GaleriaDeImágenesToolStripMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Galeria_Imagenes) = RoleManager.TipoPermisos.Ninguno)
+        'Tarifas
+        ExplorerBar1.Groups("Group3").Items("Item7").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Tarifas) = RoleManager.TipoPermisos.Ninguno)
+        Button31.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Tarifas) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Tarifas) = RoleManager.TipoPermisos.Ninguno) Then Button31.Image = Global.centro_medico.My.Resources.Resources.IconE_Tarifa
+
+        'Conceptos de Analiticas
+        ExplorerBar1.Groups("Group3").Items("Item8").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Conceptos_de_Analiticas) = RoleManager.TipoPermisos.Ninguno)
+        Button38.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Conceptos_de_Analiticas) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Conceptos_de_Analiticas) = RoleManager.TipoPermisos.Ninguno) Then Button38.Image = Global.centro_medico.My.Resources.Resources.IconE_Conceptos_Analitica
+
+        'Plantillas para Analiticas
+        ExplorerBar1.Groups("Group3").Items("Item9").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Plantillas_para_Analiticas) = RoleManager.TipoPermisos.Ninguno)
+        Button46.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Plantillas_para_Analiticas) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Plantillas_para_Analiticas) = RoleManager.TipoPermisos.Ninguno) Then Button46.Image = Global.centro_medico.My.Resources.Resources.IconE_Planillas_Analiticas
+
+        'Modelos Revisiones Comparativas
+        ExplorerBar1.Groups("Group3").Items("Item10").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Modelos_Revisiones_Comparativas) = RoleManager.TipoPermisos.Ninguno)
+        Button45.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Modelos_Revisiones_Comparativas) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Modelos_Revisiones_Comparativas) = RoleManager.TipoPermisos.Ninguno) Then Button45.Image = Global.centro_medico.My.Resources.Resources.IconE_Reviciones_Comparadas
+
+        'Plantillas de texto
+        ExplorerBar1.Groups("Group3").Items("Item11").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Plantillas_de_texto) = RoleManager.TipoPermisos.Ninguno)
+        Button44.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Plantillas_de_texto) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Plantillas_de_texto) = RoleManager.TipoPermisos.Ninguno) Then Button44.Image = Global.centro_medico.My.Resources.Resources.IconE_Planillas_Texto
+
+        'Plantilla de Historial
+        ExplorerBar1.Groups("Group3").Items("Item12").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Plantilla_de_Historial) = RoleManager.TipoPermisos.Ninguno)
+        Button43.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Plantilla_de_Historial) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Plantilla_de_Historial) = RoleManager.TipoPermisos.Ninguno) Then Button43.Image = Global.centro_medico.My.Resources.Resources.IconE_Planillas_Historial
+
+        'Poblaciones
+        ExplorerBar1.Groups("Group3").Items("Item13").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Poblaciones) = RoleManager.TipoPermisos.Ninguno)
+        Button42.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Poblaciones) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Poblaciones) = RoleManager.TipoPermisos.Ninguno) Then Button42.Image = Global.centro_medico.My.Resources.Resources.IconE_Poblacion
+
+        'Paises
+        ExplorerBar1.Groups("Group3").Items("Item14").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Paises) = RoleManager.TipoPermisos.Ninguno)
+        Button41.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Paises) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Paises) = RoleManager.TipoPermisos.Ninguno) Then Button41.Image = Global.centro_medico.My.Resources.Resources.IconE_Paises
+
+        'ComoConocio
+        ExplorerBar1.Groups("Group3").Items("Item15").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.ComoConocio) = RoleManager.TipoPermisos.Ninguno)
+        Button40.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.ComoConocio) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.ComoConocio) = RoleManager.TipoPermisos.Ninguno) Then Button40.Image = Global.centro_medico.My.Resources.Resources.IconE_Como_nos_Conocio
+
+        'Formas de Pago
+        ExplorerBar1.Groups("Group3").Items("Item16").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Formas_de_Pago) = RoleManager.TipoPermisos.Ninguno)
+        Button39.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Formas_de_Pago) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Formas_de_Pago) = RoleManager.TipoPermisos.Ninguno) Then Button39.Image = Global.centro_medico.My.Resources.Resources.IconE_Formas_de_pago
+
+        'Clinica externas
+        ExplorerBar1.Groups("Group3").Items("Item17").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Clinica_externas) = RoleManager.TipoPermisos.Ninguno)
+        Button50.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Clinica_externas) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Clinica_externas) = RoleManager.TipoPermisos.Ninguno) Then Button50.Image = Global.centro_medico.My.Resources.Resources.IconE_Hospitales_Externos
+
+        'Almacen
+        ExplorerBar1.Groups("Group3").Items("Item18").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Almacen) = RoleManager.TipoPermisos.Ninguno)
+        Button49.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Almacen) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Almacen) = RoleManager.TipoPermisos.Ninguno) Then Button49.Image = Global.centro_medico.My.Resources.Resources.IconE_Almacen
+
+        'Salas
+        ExplorerBar1.Groups("Group3").Items("Item19").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Salas) = RoleManager.TipoPermisos.Ninguno)
+        Button48.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Salas) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Salas) = RoleManager.TipoPermisos.Ninguno) Then Button48.Image = Global.centro_medico.My.Resources.Resources.IconE_Salas
+
+        'Galeria Imagenes
+        ExplorerBar1.Groups("Group3").Items("Item20").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Galeria_Imagenes) = RoleManager.TipoPermisos.Ninguno)
+        Button47.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Galeria_Imagenes) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Galeria_Imagenes) = RoleManager.TipoPermisos.Ninguno) Then Button47.Image = Global.centro_medico.My.Resources.Resources.IconE_Galeria_de_Imagenes
 
         ''************ End Mantenimiento ********************
 
         ''************ Begin Listados ********************
-        'menu_ListadoDePacientes.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Listado_de_Pacientes) = RoleManager.TipoPermisos.Ninguno)
-        'menu_ListadoDeFaltas.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Listado_de_Faltas) = RoleManager.TipoPermisos.Ninguno)
-        'menu_Partes.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Partes) = RoleManager.TipoPermisos.Ninguno)
-        'menu_Recetas.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Recetas) = RoleManager.TipoPermisos.Ninguno)
-        'menu_ListadoDeCitas.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Listado_de_Citas) = RoleManager.TipoPermisos.Ninguno)
 
-        ''Ingresos por citas/medicos
-        'menu_CitasAgrupadasPorEspecialista.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Ingresos_por_citas_médicos) = RoleManager.TipoPermisos.Ninguno)
+        'Listado de Pacientes
+        ExplorerBar1.Groups("Group4").Items("Item1").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Listado_de_Pacientes) = RoleManager.TipoPermisos.Ninguno)
+        Button67.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Listado_de_Pacientes) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Listado_de_Pacientes) = RoleManager.TipoPermisos.Ninguno) Then Button67.Image = Global.centro_medico.My.Resources.Resources.IconE_Paciente
 
-        ''Ingresos por procedencia de cita (no tiene enumerador, usado el mismo que el Ingresos por Citas)
-        'menu_CitasAgrupadasPorProcedencia.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Ingresos_por_citas_médicos) = RoleManager.TipoPermisos.Ninguno)
+        'Listado de Faltas
+        ExplorerBar1.Groups("Group4").Items("Item2").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Listado_de_Faltas) = RoleManager.TipoPermisos.Ninguno)
+        Button65.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Listado_de_Faltas) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Listado_de_Faltas) = RoleManager.TipoPermisos.Ninguno) Then Button65.Image = Global.centro_medico.My.Resources.Resources.IconE_Listado_de_Faltas
 
-        'menu_ListadoDeFacturas.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Listado_de_Facturas) = RoleManager.TipoPermisos.Ninguno)
-        'menu_ListadoDeRecibos.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Listado_de_Recibos) = RoleManager.TipoPermisos.Ninguno)
+        'Partes
+        ExplorerBar1.Groups("Group4").Items("Item3").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Partes) = RoleManager.TipoPermisos.Ninguno)
+        Button64.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Partes) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Partes) = RoleManager.TipoPermisos.Ninguno) Then Button64.Image = Global.centro_medico.My.Resources.Resources.IconE_Partes
 
-        ''Informe de Ingresos y Saldos
-        'menu_LibroDiario.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Informe_de_Ingresos_y_Gastos) = RoleManager.TipoPermisos.Ninguno)
+        'Recetas
+        ExplorerBar1.Groups("Group4").Items("Item4").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Recetas) = RoleManager.TipoPermisos.Ninguno)
+        Button63.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Recetas) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Recetas) = RoleManager.TipoPermisos.Ninguno) Then Button63.Image = Global.centro_medico.My.Resources.Resources.IconE_Recetas_y_Tratamientos
 
-        'ComoNosConocióToolStripMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.ComoConocio) = RoleManager.TipoPermisos.Ninguno)
-        'ComoNosConocióToolStripMenuItem1.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.ComoConocio) = RoleManager.TipoPermisos.Ninguno)
+        'Listado de Citas
+        ExplorerBar1.Groups("Group4").Items("Item5").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Listado_de_Citas) = RoleManager.TipoPermisos.Ninguno)
+        Button62.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Listado_de_Citas) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Listado_de_Citas) = RoleManager.TipoPermisos.Ninguno) Then Button62.Image = Global.centro_medico.My.Resources.Resources.IconE_Listado_de_Citas
 
-        'PacientesPorDiagnosticosToolStripMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Diagnosticos) = RoleManager.TipoPermisos.Ninguno)
-        'DiagnosticosEmitidosToolStripMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Diagnosticos) = RoleManager.TipoPermisos.Ninguno)
-        ''DerivacionesToolStripMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Pacientes_Derivaciones) = RoleManager.TipoPermisos.Ninguno)
-        ''DerivacionesToolStripMenuItem1.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Pacientes_Derivaciones) = RoleManager.TipoPermisos.Ninguno)
+        'Ingresos por citas/medicos
+        ExplorerBar1.Groups("Group4").Items("Item6").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Ingresos_por_citas_médicos) = RoleManager.TipoPermisos.Ninguno)
+        Button66.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Ingresos_por_citas_médicos) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Ingresos_por_citas_médicos) = RoleManager.TipoPermisos.Ninguno) Then Button66.Image = Global.centro_medico.My.Resources.Resources.IconE_Ingresos_Citas_Medicos
 
-        ''EstadisticasToolStripMenuItem.Enabled = ComoNosConocióToolStripMenuItem.Enabled Or PacientesPorDiagnosticosToolStripMenuItem.Enabled
+        'Ingresos por procedencia de cita (no tiene enumerador, usado el mismo que el Ingresos por Citas)
+        ExplorerBar1.Groups("Group4").Items("Item7").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Ingresos_por_citas_médicos) = RoleManager.TipoPermisos.Ninguno)
+        Button61.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Ingresos_por_citas_médicos) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Ingresos_por_citas_médicos) = RoleManager.TipoPermisos.Ninguno) Then Button61.Image = Global.centro_medico.My.Resources.Resources.IconE_Ingresos_Procedencia_Citas
 
+        'Listado de Facturas
+        ExplorerBar1.Groups("Group4").Items("Item8").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Listado_de_Facturas) = RoleManager.TipoPermisos.Ninguno)
+        Button60.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Listado_de_Facturas) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Listado_de_Facturas) = RoleManager.TipoPermisos.Ninguno) Then Button60.Image = Global.centro_medico.My.Resources.Resources.IconE_Listado_de_Facturas
+
+        'Listado de Recibos
+        ExplorerBar1.Groups("Group4").Items("Item9").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Listado_de_Recibos) = RoleManager.TipoPermisos.Ninguno)
+        Button59.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Listado_de_Recibos) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Listado_de_Recibos) = RoleManager.TipoPermisos.Ninguno) Then Button59.Image = Global.centro_medico.My.Resources.Resources.IconE_Listado_de_Recibos
+
+        'Informe de Ingresos y Saldos
+        ExplorerBar1.Groups("Group4").Items("Item10").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Informe_de_Ingresos_y_Gastos) = RoleManager.TipoPermisos.Ninguno)
+        Button58.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Informe_de_Ingresos_y_Gastos) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Informe_de_Ingresos_y_Gastos) = RoleManager.TipoPermisos.Ninguno) Then Button58.Image = Global.centro_medico.My.Resources.Resources.IconE_Informe_de_Ingresos_y_Gastos
+
+        'Diagnosticos Emitidos
+        ExplorerBar1.Groups("Group4").Items("Item11").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Diagnosticos) = RoleManager.TipoPermisos.Ninguno)
+        Button57.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Diagnosticos) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Diagnosticos) = RoleManager.TipoPermisos.Ninguno) Then Button57.Image = Global.centro_medico.My.Resources.Resources.IconE_Diagnosticos_Emitidos
+
+        'Pacientes por Diagnosticos 
+        ExplorerBar1.Groups("Group4").Items("Item12").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Diagnosticos) = RoleManager.TipoPermisos.Ninguno)
+        Button56.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Diagnosticos) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Diagnosticos) = RoleManager.TipoPermisos.Ninguno) Then Button56.Image = Global.centro_medico.My.Resources.Resources.IconE_Pacientes_por_Diagnostico
+
+        'Pacientes Derivaciones
+        ExplorerBar1.Groups("Group4").Items("Item13").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Pacientes_Derivaciones) = RoleManager.TipoPermisos.Ninguno)
+        Button55.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Pacientes_Derivaciones) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Pacientes_Derivaciones) = RoleManager.TipoPermisos.Ninguno) Then Button55.Image = Global.centro_medico.My.Resources.Resources.IconE_Derivaciones
 
         ''************ End Listados ********************
 
-        'menu_Configuracion.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Configuracion) = RoleManager.TipoPermisos.Ninguno)
-        'menu_Usuarios.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Configuracion_Usuarios) = RoleManager.TipoPermisos.Ninguno)
-        'menu_roles.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Configuracion_Roles_y_permisos) = RoleManager.TipoPermisos.Ninguno)
-        'menu_opciones.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Configuracion_Opciones) = RoleManager.TipoPermisos.Ninguno)
-        'menu_CopiasDeSeguridad.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Copias_de_seguridad) = RoleManager.TipoPermisos.Ninguno)
-        'menu_ImportarDatos.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Importar_Datos) = RoleManager.TipoPermisos.Ninguno)
-        'menu_RenumerarFacturas.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Renumerar_Facturas) = RoleManager.TipoPermisos.Ninguno)
-
         ''************ Begin TPV ********************
-        'ProveedoresToolStripMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Proveedores) = RoleManager.TipoPermisos.Ninguno)
-        'ArticulosToolStripMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Articulos) = RoleManager.TipoPermisos.Ninguno)
-        'EntradasToolStripMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Entradas) = RoleManager.TipoPermisos.Ninguno)
-        'PedidosAProveedorToolStripMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Pedidos_Compras) = RoleManager.TipoPermisos.Ninguno)
-        'FacturasProveedorToolStripMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Facturas_Compras) = RoleManager.TipoPermisos.Ninguno)
-        'FacturasToolStripMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Facturas_Ventas) = RoleManager.TipoPermisos.Ninguno)
-        'TicketsToolStripMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Tickets_Ventas) = RoleManager.TipoPermisos.Ninguno)
-        'ConsolidacionStockToolStripMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Consolidar_Stock) = RoleManager.TipoPermisos.Ninguno)
+
+        'Proveedores
+        ExplorerBar1.Groups("Group5").Items("Item1").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Proveedores) = RoleManager.TipoPermisos.Ninguno)
+        Button70.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Proveedores) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Proveedores) = RoleManager.TipoPermisos.Ninguno) Then Button70.Image = Global.centro_medico.My.Resources.Resources.IconE_Proveedores
+
+        'Articulos
+        ExplorerBar1.Groups("Group5").Items("Item2").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Articulos) = RoleManager.TipoPermisos.Ninguno)
+        Button69.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Articulos) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Articulos) = RoleManager.TipoPermisos.Ninguno) Then Button69.Image = Global.centro_medico.My.Resources.Resources.IconE_Articulos
+
+        'Entradas
+        ExplorerBar1.Groups("Group5").Items("Item3").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Entradas) = RoleManager.TipoPermisos.Ninguno)
+        Button68.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Entradas) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Entradas) = RoleManager.TipoPermisos.Ninguno) Then Button68.Image = Global.centro_medico.My.Resources.Resources.IconE_Entradas
+
+        'Pedidos Proveedores
+        ExplorerBar1.Groups("Group5").Items("Item4").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Pedidos_Compras) = RoleManager.TipoPermisos.Ninguno)
+        Button54.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Pedidos_Compras) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Pedidos_Compras) = RoleManager.TipoPermisos.Ninguno) Then Button54.Image = Global.centro_medico.My.Resources.Resources.IconE_Pedido_a_Proveedor
+
+        'Facturas Proveedores
+        ExplorerBar1.Groups("Group5").Items("Item5").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Facturas_Compras) = RoleManager.TipoPermisos.Ninguno)
+        Button53.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Facturas_Compras) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Facturas_Compras) = RoleManager.TipoPermisos.Ninguno) Then Button53.Image = Global.centro_medico.My.Resources.Resources.IconE_Facturas_Proveedor
+
+        'Facturas Ventas
+        ExplorerBar1.Groups("Group5").Items("Item6").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Facturas_Ventas) = RoleManager.TipoPermisos.Ninguno)
+        Button52.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Facturas_Ventas) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Facturas_Ventas) = RoleManager.TipoPermisos.Ninguno) Then Button52.Image = Global.centro_medico.My.Resources.Resources.IconE_Factura
+
+        'Tickets
+        ExplorerBar1.Groups("Group5").Items("Item7").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Tickets_Ventas) = RoleManager.TipoPermisos.Ninguno)
+        Button51.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Tickets_Ventas) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Tickets_Ventas) = RoleManager.TipoPermisos.Ninguno) Then Button51.Image = Global.centro_medico.My.Resources.Resources.IconE_Listado_de_Tickets
+
+        'Consolidar Stock
+        ExplorerBar1.Groups("Group5").Items("Item8").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Consolidar_Stock) = RoleManager.TipoPermisos.Ninguno)
+        Button71.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Consolidar_Stock) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Consolidar_Stock) = RoleManager.TipoPermisos.Ninguno) Then Button71.Image = Global.centro_medico.My.Resources.Resources.IconE_Consolidacion_Stock
 
         ''************ End TPV ********************
 
-        ''************ Begin Utilidades ********************
-        'BuscarActualizacionesToolStripMenuItem.Enabled = Globales.Usuario.EsAdministrador() '(Globales.Usuario.ADMINISTRADOR = "S")
-        'AuditoriaToolStripMenuItem.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Auditorias) = RoleManager.TipoPermisos.Ninguno)
+        ''************ Begin Ulilidades ********************
+
+        'Usuarios
+        ExplorerBar1.Groups("Group6").Items("Item1").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Configuracion_Usuarios) = RoleManager.TipoPermisos.Ninguno)
+        Button79.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Configuracion_Usuarios) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Configuracion_Usuarios) = RoleManager.TipoPermisos.Ninguno) Then Button79.Image = Global.centro_medico.My.Resources.Resources.IconE_Usuario
+
+        'Configuracion Roles y permisos
+        ExplorerBar1.Groups("Group6").Items("Item3").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Configuracion_Roles_y_permisos) = RoleManager.TipoPermisos.Ninguno)
+        Button77.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Configuracion_Roles_y_permisos) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Configuracion_Roles_y_permisos) = RoleManager.TipoPermisos.Ninguno) Then Button77.Image = Global.centro_medico.My.Resources.Resources.IconE_Roles_y_Permisos
+
+        'Configuracion Opciones
+        ExplorerBar1.Groups("Group6").Items("Item4").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Configuracion_Opciones) = RoleManager.TipoPermisos.Ninguno)
+        Button76.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Configuracion_Opciones) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Configuracion_Opciones) = RoleManager.TipoPermisos.Ninguno) Then Button76.Image = Global.centro_medico.My.Resources.Resources.IconE_Opciones
+
+        'Importar Datos
+        ExplorerBar1.Groups("Group6").Items("Item7").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Importar_Datos) = RoleManager.TipoPermisos.Ninguno)
+        Button73.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Importar_Datos) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Importar_Datos) = RoleManager.TipoPermisos.Ninguno) Then Button73.Image = Global.centro_medico.My.Resources.Resources.IconE_Importar_Datos
+
+        'Integridad
+        ExplorerBar1.Groups("Group6").Items("Item5").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Configuracion) = RoleManager.TipoPermisos.Ninguno)
+        Button75.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Configuracion) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Configuracion) = RoleManager.TipoPermisos.Ninguno) Then Button75.Image = Global.centro_medico.My.Resources.Resources.IconE_Chequeo_Integridad
+
+        'Totales de Citas
+        ExplorerBar1.Groups("Group6").Items("Item6").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Configuracion) = RoleManager.TipoPermisos.Ninguno)
+        Button74.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Configuracion) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Configuracion) = RoleManager.TipoPermisos.Ninguno) Then Button74.Image = Global.centro_medico.My.Resources.Resources.IconE_Totales_en_Citas
+
+        'Buscar Actualizaciones
+        ExplorerBar1.Groups("Group6").Items("Item8").Enabled = Globales.Usuario.EsAdministrador()
+        Button72.Enabled = Globales.Usuario.EsAdministrador()
+        If Not Globales.Usuario.EsAdministrador() Then Button72.Image = Global.centro_medico.My.Resources.Resources.IconE_Bascar_Actualizaciones
+
+        'Auditorias
+        ExplorerBar1.Groups("Group6").Items("Item9").Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Auditorias) = RoleManager.TipoPermisos.Ninguno)
+        Button81.Enabled = Not (Globales.Usuario.Permisos(RoleManager.Items.Auditorias) = RoleManager.TipoPermisos.Ninguno)
+        If (Globales.Usuario.Permisos(RoleManager.Items.Auditorias) = RoleManager.TipoPermisos.Ninguno) Then Button81.Image = Global.centro_medico.My.Resources.Resources.IconE_Auditoria
 
         ''************ End Utilidades ********************
 
@@ -514,7 +713,7 @@ Public Class form_new_centro_medico
     End Sub
 
     Private Sub BuscaPaciente()
-        If SearchText.Text.Length > 0 Then
+        If Not SearchText.Text = "Buscar Pacientes" And SearchText.Text.Length > 0 Then
             Dim query As String = My.Resources.queryListadoPacientes
             query = query.Insert(query.IndexOf("GROUP"), _
                         " WHERE CONVERT(varchar(10),PACIENTES.CPACIENTE)= '" & SearchText.Text & "' OR PACIENTES.CODIGOPROPIO = '" & SearchText.Text &
@@ -545,45 +744,6 @@ Public Class form_new_centro_medico
                 MessageBox.Show("No se encontraron resultados con el criterio de búsqueda  introducido")
             End If
         End If
-    End Sub
-
-    Private Sub Dashboard_Click(sender As Object, e As EventArgs) Handles Dashboard.Click
-        Dim _dash As Form_DashBoard = New Form_DashBoard()
-        _dash.Show()
-        GC.Collect()
-    End Sub
-
-    Private Sub Citas_Click(sender As Object, e As EventArgs) Handles Citas.Click
-        Dim frm As New frmCalendarioCitas()
-        frm.ShowDialog()
-        frm.Dispose()
-        frm = Nothing
-        FreeMemory.FlushMemory()
-    End Sub
-
-    Private Sub Factura_Click(sender As Object, e As EventArgs) Handles Factura.Click
-        Dim frm As New frmFacturasM()
-        frm.ShowDialog()
-
-        FreeMemory.FlushMemory()
-    End Sub
-
-    Private Sub Medico_Click(sender As Object, e As EventArgs) Handles Medico.Click
-        Dim medListado As New frmMedicosListado()
-        medListado.ShowDialog()
-        FreeMemory.FlushMemory()
-    End Sub
-
-    Private Sub DebitoPaciente_Click(sender As Object, e As EventArgs) Handles DebitoPaciente.Click
-        Dim frm As New frmPacienteDebito()
-        frm.ShowDialog()
-        FreeMemory.FlushMemory()
-    End Sub
-
-    Private Sub Paciente_Click(sender As Object, e As EventArgs) Handles Paciente.Click
-        Dim frmPaciente As New frmPacientesListado
-        frmPaciente.ShowDialog()
-        FreeMemory.FlushMemory()
     End Sub
 
     Private Sub MostrarListado(ByVal aName As String, ByVal aBindingSource As BindingSource, ByVal aCurrentList As RoleManager.Items)
@@ -689,9 +849,13 @@ Public Class form_new_centro_medico
             Dim frm As New frmPartesAsistencia()
             frm.ShowDialog()
         ElseIf ExplorerBar1.Groups("Group2").Items("Item25").Selected Then
+            Dim frm As New frmPacienteDebito()
+            frm.ShowDialog()
+            FreeMemory.FlushMemory()
+        ElseIf ExplorerBar1.Groups("Group2").Items("Item26").Selected Then
             Dim frm As New frmProcesos()
             frm.ShowDialog()
-        ElseIf ExplorerBar1.Groups("Group2").Items("Item26").Selected Then
+        ElseIf ExplorerBar1.Groups("Group2").Items("Item27").Selected Then
             Dim frm As New frmComunicaciones()
             frm.ShowDialog()
         End If
@@ -712,7 +876,6 @@ Public Class form_new_centro_medico
         ElseIf ExplorerBar1.Groups("Group3").Items("Item4").Selected Then
             Me.INDICACIONESTableAdapter.Fill(Me.CMDataSet.INDICACIONES)
             Dim _name As String = "Listado de indicaciones"
-
             MostrarListado(_name, INDICACIONESBindingSource, RoleManager.Items.Indicaciones)
             GC.Collect()
         ElseIf ExplorerBar1.Groups("Group3").Items("Item5").Selected Then
@@ -766,7 +929,7 @@ Public Class form_new_centro_medico
         ElseIf ExplorerBar1.Groups("Group3").Items("Item17").Selected Then
             Dim frm As New frmClinicasExternas()
             frm.ShowDialog()
-        ElseIf ExplorerBar1.Groups("Group3").Items("Item17").Selected Then
+        ElseIf ExplorerBar1.Groups("Group3").Items("Item18").Selected Then
             If RoleManager.PermisoPorItem(fIduser, RoleManager.Items.Almacen) = RoleManager.TipoPermisos.Ninguno Then
                 MsgBox("No tiene permisos para acceder a esta parte de la aplicación.", MsgBoxStyle.Exclamation)
                 Exit Sub
@@ -775,10 +938,10 @@ Public Class form_new_centro_medico
             frm.Modo = Globales.ModoParaFormas.Edicion
             frm.ShowDialog()
             GC.Collect()
-        ElseIf ExplorerBar1.Groups("Group3").Items("Item17").Selected Then
+        ElseIf ExplorerBar1.Groups("Group3").Items("Item19").Selected Then
             Dim frm As New frmSalas
             frm.Show()
-        ElseIf ExplorerBar1.Groups("Group3").Items("Item18").Selected Then
+        ElseIf ExplorerBar1.Groups("Group3").Items("Item20").Selected Then
             Dim frm As New frm_BancoImag_Galeria()
             frm.ShowDialog()
         End If
@@ -833,7 +996,6 @@ Public Class form_new_centro_medico
             GC.Collect()
         ElseIf ExplorerBar1.Groups("Group4").Items("Item11").Selected Then
             Dim rdatasource As New Microsoft.Reporting.WinForms.ReportDataSource
-
             rdatasource.Name = "CMDataSet_EstadisticasDiagnosticos"
             rdatasource.Value = Me.EstadisticasDiagnosticosTableAdapter.GetDataTodos
             UI.Reportes.ReportesManager.Imprime("EstadisticasDiagnosticos.rdlc", {rdatasource})
@@ -986,14 +1148,14 @@ Public Class form_new_centro_medico
             GC.Collect()
         End If
 
-        If ExplorerBar1.Groups("Group9").Items("Item1").Selected Then
-            Me.DialogResult = Windows.Forms.DialogResult.No
-            GC.Collect()
-            Me.Close()
-        ElseIf ExplorerBar1.Groups("Group9").Items("Item2").Selected Then
-            Me.DialogResult = Windows.Forms.DialogResult.OK
-            Me.Close()
-        End If
+        'If ExplorerBar1.Groups("Group9").Items("Item1").Selected Then
+        '    Me.DialogResult = Windows.Forms.DialogResult.No
+        '    GC.Collect()
+        '    Me.Close()
+        'ElseIf ExplorerBar1.Groups("Group9").Items("Item2").Selected Then
+        '    Me.DialogResult = Windows.Forms.DialogResult.OK
+        '    Me.Close()
+        'End If
 
     End Sub
 
@@ -1012,7 +1174,6 @@ Public Class form_new_centro_medico
         If ExplorerBar1.Groups("Group6").Expanded Then ExplorerBar1.Groups("Group6").Expanded = False
         If ExplorerBar1.Groups("Group7").Expanded Then ExplorerBar1.Groups("Group7").Expanded = False
         If ExplorerBar1.Groups("Group8").Expanded Then ExplorerBar1.Groups("Group8").Expanded = False
-        If ExplorerBar1.Groups("Group9").Expanded Then ExplorerBar1.Groups("Group9").Expanded = False
     End Sub
 
     Private Sub ExplorerBar1_GroupExpanded(sender As Object, e As Janus.Windows.ExplorerBar.GroupEventArgs) Handles ExplorerBar1.GroupExpanded
@@ -1020,9 +1181,46 @@ Public Class form_new_centro_medico
         UiGroupBox1.Visible = False
         UiGroupBox2.Visible = False
         UiGroupBox3.Visible = False
+        UiGroupBox4.Visible = False
+        UiGroupBox5.Visible = False
+        UiGroupBox6.Visible = False
+        UiGroupBox7.Visible = False
+        UiGroupBox8.Visible = False
 
-        If ExplorerBar1.Groups("Group1").Expanded Then UiGroupBox2.Visible = True
-        If ExplorerBar1.Groups("Group2").Expanded Then UiGroupBox3.Visible = True
+        If ExplorerBar1.Groups("Group1").Expanded Then
+            UiGroupBox2.Visible = True
+            UiGroupBox2.AutoScrollPosition = New Point(0, 0)
+        End If
+
+        If ExplorerBar1.Groups("Group2").Expanded Then
+            UiGroupBox3.Visible = True
+            UiGroupBox3.AutoScrollPosition = New Point(0, 0)
+        End If
+
+        If ExplorerBar1.Groups("Group3").Expanded Then
+            UiGroupBox4.Visible = True
+            UiGroupBox4.AutoScrollPosition = New Point(0, 0)
+        End If
+
+        If ExplorerBar1.Groups("Group4").Expanded Then
+            UiGroupBox5.Visible = True
+            UiGroupBox5.AutoScrollPosition = New Point(0, 0)
+        End If
+
+        If ExplorerBar1.Groups("Group5").Expanded Then
+            UiGroupBox6.Visible = True
+            UiGroupBox6.AutoScrollPosition = New Point(0, 0)
+        End If
+
+        If ExplorerBar1.Groups("Group6").Expanded Then
+            UiGroupBox7.Visible = True
+            UiGroupBox7.AutoScrollPosition = New Point(0, 0)
+        End If
+
+        If ExplorerBar1.Groups("Group7").Expanded Then
+            UiGroupBox8.Visible = True
+            UiGroupBox8.AutoScrollPosition = New Point(0, 0)
+        End If
 
     End Sub
 
@@ -1036,12 +1234,33 @@ Public Class form_new_centro_medico
         If ExplorerBar1.Groups("Group6").Expanded Then a += 1
         If ExplorerBar1.Groups("Group7").Expanded Then a += 1
         If ExplorerBar1.Groups("Group8").Expanded Then a += 1
-        If ExplorerBar1.Groups("Group9").Expanded Then a += 1
         If a = 1 Then
             UiGroupBox1.Visible = True
+            UiGroupBox1.Focus()
+            UiGroupBox4.AutoScrollPosition = New Point(0, 0)
             UiGroupBox2.Visible = False
             UiGroupBox3.Visible = False
+            UiGroupBox4.Visible = False
+            UiGroupBox5.Visible = False
+            UiGroupBox6.Visible = False
+            UiGroupBox7.Visible = False
+            UiGroupBox8.Visible = False
         End If
+    End Sub
+
+    Private Sub ExplorerBar1_MouseLeave(sender As Object, e As EventArgs) Handles ExplorerBar1.MouseLeave
+        If UiGroupBox1.Visible = True Then UiGroupBox1.Focus()
+        If UiGroupBox2.Visible = True Then UiGroupBox2.Focus()
+        If UiGroupBox3.Visible = True Then UiGroupBox3.Focus()
+        If UiGroupBox4.Visible = True Then UiGroupBox4.Focus()
+        If UiGroupBox5.Visible = True Then UiGroupBox5.Focus()
+        If UiGroupBox6.Visible = True Then UiGroupBox6.Focus()
+        If UiGroupBox7.Visible = True Then UiGroupBox7.Focus()
+        If UiGroupBox8.Visible = True Then UiGroupBox8.Focus()
+    End Sub
+
+    Private Sub ExplorerBar1_MouseHover(sender As Object, e As EventArgs) Handles ExplorerBar1.MouseHover
+        ExplorerBar1.Focus()
     End Sub
 
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs)
@@ -1091,30 +1310,30 @@ Public Class form_new_centro_medico
         frm.ShowDialog()
     End Sub
 
-    Private Sub PictureBox12_Click(sender As Object, e As EventArgs) Handles PictureBox12.Click
+    Private Sub PictureBox12_Click(sender As Object, e As EventArgs)
         ListadoDeEmpresas()
     End Sub
 
-    Private Sub PictureBox14_Click(sender As Object, e As EventArgs) Handles PictureBox14.Click
+    Private Sub PictureBox14_Click(sender As Object, e As EventArgs)
         Dim frm As New frmFacturasM()
         frm.ShowDialog()
         FreeMemory.FlushMemory()
     End Sub
 
-    Private Sub PictureBox13_Click(sender As Object, e As EventArgs) Handles PictureBox13.Click
+    Private Sub PictureBox13_Click(sender As Object, e As EventArgs)
         Dim frm As New frmPartes_AsistenteFacturacion()
         frm.ShowDialog()
         GC.Collect()
     End Sub
 
-    Private Sub PictureBox16_Click(sender As Object, e As EventArgs) Handles PictureBox16.Click
+    Private Sub PictureBox16_Click(sender As Object, e As EventArgs)
         Dim _generar As New form_generar_recfact
         _generar.ShowInTaskbar = False
         _generar.ShowDialog()
         GC.Collect()
     End Sub
 
-    Private Sub PictureBox6_Click_1(sender As Object, e As EventArgs) Handles PictureBox6.Click
+    Private Sub PictureBox6_Click_1(sender As Object, e As EventArgs)
         Dim adapter As New CMDataSetTableAdapters.ANALITICASTableAdapter
         adapter.Fill(Me.CMDataSet.ANALITICAS)
 
@@ -1126,41 +1345,41 @@ Public Class form_new_centro_medico
         GC.Collect()
     End Sub
 
-    Private Sub PictureBox17_Click(sender As Object, e As EventArgs) Handles PictureBox17.Click
+    Private Sub PictureBox17_Click(sender As Object, e As EventArgs)
         Dim _generar_recibos As form_generar_recibos = New form_generar_recibos(Globales.Configuracion)
         _generar_recibos.ShowInTaskbar = False
         _generar_recibos.ShowDialog()
         GC.Collect()
     End Sub
 
-    Private Sub PictureBox26_Click(sender As Object, e As EventArgs) Handles PictureBox26.Click
+    Private Sub PictureBox26_Click(sender As Object, e As EventArgs)
         Me.RECIBOSTableAdapter.Fill(Me.CMDataSet.RECIBOS)
         Dim _name As String = "Listado de Modelos de Recibos"
         MostrarListado(_name, RECIBOSBindingSource, RoleManager.Items.Recibos)
         GC.Collect()
     End Sub
 
-    Private Sub PictureBox18_Click(sender As Object, e As EventArgs) Handles PictureBox18.Click
+    Private Sub PictureBox18_Click(sender As Object, e As EventArgs)
         Dim _remesas As form_remesa_de_recibos = New form_remesa_de_recibos(Globales.Configuracion)
         _remesas.ShowInTaskbar = False
         _remesas.ShowDialog()
         GC.Collect()
     End Sub
 
-    Private Sub PictureBox19_Click(sender As Object, e As EventArgs) Handles PictureBox19.Click
+    Private Sub PictureBox19_Click(sender As Object, e As EventArgs)
         Dim frm As New frmNorma19()
         frm.ShowDialog()
 
         GC.Collect()
     End Sub
 
-    Private Sub PictureBox20_Click(sender As Object, e As EventArgs) Handles PictureBox20.Click
+    Private Sub PictureBox20_Click(sender As Object, e As EventArgs)
         Dim _remesas As form_bonos_no_agotados = New form_bonos_no_agotados()
         _remesas.ShowDialog()
         GC.Collect()
     End Sub
 
-    Private Sub PictureBox21_Click(sender As Object, e As EventArgs) Handles PictureBox21.Click
+    Private Sub PictureBox21_Click(sender As Object, e As EventArgs)
         Dim frm As New frmCalendarioCitas()
         frm.ShowDialog()
         frm.Dispose()
@@ -1168,27 +1387,27 @@ Public Class form_new_centro_medico
         FreeMemory.FlushMemory()
     End Sub
 
-    Private Sub PictureBox22_Click(sender As Object, e As EventArgs) Handles PictureBox22.Click
+    Private Sub PictureBox22_Click(sender As Object, e As EventArgs)
         Dim frm As New frmPartes()
         frm.ShowDialog()
     End Sub
 
-    Private Sub PictureBox23_Click(sender As Object, e As EventArgs) Handles PictureBox23.Click
+    Private Sub PictureBox23_Click(sender As Object, e As EventArgs)
         Dim frm As New frmPartesAsistencia()
         frm.ShowDialog()
     End Sub
 
-    Private Sub PictureBox24_Click(sender As Object, e As EventArgs) Handles PictureBox24.Click
+    Private Sub PictureBox24_Click(sender As Object, e As EventArgs)
         Dim frm As New frmProcesos()
         frm.ShowDialog()
     End Sub
 
-    Private Sub PictureBox25_Click(sender As Object, e As EventArgs) Handles PictureBox25.Click
+    Private Sub PictureBox25_Click(sender As Object, e As EventArgs)
         Dim frm As New frmComunicaciones()
         frm.ShowDialog()
     End Sub
 
-    
+
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         Dim frm As New frmUsuarios_ADD(True)
         frm.CODIGO = Globales.Usuario.CODIGO
@@ -1216,4 +1435,639 @@ Public Class form_new_centro_medico
         frm.ShowDialog()
     End Sub
 
+    Private Sub SearchText_MouseClick(sender As Object, e As MouseEventArgs) Handles SearchText.MouseClick
+        SearchText.Text = ""
+        SearchText.ForeColor = Color.Black
+        SearchText.Font = New System.Drawing.Font("Arial Narrow", 11.25!)
+    End Sub
+
+    Private Sub SearchText_LostFocus(sender As Object, e As EventArgs) Handles SearchText.LostFocus
+        If Not PictureBox2.Focused = True Then
+            SearchText.Text = "Buscar Pacientes"
+            SearchText.ForeColor = Color.DarkGray
+            SearchText.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic)
+            ExplorerBar1.Focus()
+        End If
+    End Sub
+
+    Private Sub form_new_centro_medico_MouseClick(sender As Object, e As MouseEventArgs)
+        SearchText.Text = "Buscar Pacientes"
+        SearchText.ForeColor = Color.DarkGray
+        SearchText.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic)
+        ExplorerBar1.Focus()
+    End Sub
+
+    Private Sub UiGroupBox1_Click(sender As Object, e As EventArgs) Handles UiGroupBox1.Click
+        UiGroupBox1.Focus()
+    End Sub
+
+    Private Sub UiGroupBox2_Click(sender As Object, e As EventArgs) Handles UiGroupBox2.Click
+        UiGroupBox2.Focus()
+    End Sub
+
+    Private Sub UiGroupBox3_Click(sender As Object, e As EventArgs) Handles UiGroupBox3.Click
+        UiGroupBox3.Focus()
+    End Sub
+
+    Private Sub UiGroupBox4_Click(sender As Object, e As EventArgs) Handles UiGroupBox4.Click
+        UiGroupBox4.Focus()
+    End Sub
+
+    Private Sub PictExit1_MouseHover(sender As Object, e As EventArgs) Handles PictExit1.MouseHover
+        PictExit1.Visible = False
+        PictExit2.Visible = True
+    End Sub
+
+    Private Sub PictExit2_MouseLeave(sender As Object, e As EventArgs) Handles PictExit2.MouseLeave
+        PictExit2.Visible = False
+        PictExit1.Visible = True
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        Me.DialogResult = Windows.Forms.DialogResult.No
+        GC.Collect()
+        Me.Close()
+    End Sub
+
+    Private Sub PictureBox8_Click_1(sender As Object, e As EventArgs) Handles PictureBox8.Click
+        Me.DialogResult = Windows.Forms.DialogResult.No
+        GC.Collect()
+        Me.Close()
+    End Sub
+
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+        Me.DialogResult = Windows.Forms.DialogResult.OK
+        Me.Close()
+    End Sub
+
+    Private Sub PictExit2_Click(sender As Object, e As EventArgs) Handles PictExit2.Click
+        Me.DialogResult = Windows.Forms.DialogResult.OK
+        Me.Close()
+    End Sub
+
+    Private Sub PictExit1_Click(sender As Object, e As EventArgs) Handles PictExit1.Click
+        Me.DialogResult = Windows.Forms.DialogResult.OK
+        Me.Close()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim _dash As Form_DashBoard = New Form_DashBoard()
+        _dash.Show()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim frm As New frmCalendarioCitas()
+        frm.ShowDialog()
+        frm.Dispose()
+        frm = Nothing
+        FreeMemory.FlushMemory()
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Dim frmPaciente As New frmPacientesListado
+        frmPaciente.ShowDialog()
+        FreeMemory.FlushMemory()
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Dim medListado As New frmMedicosListado()
+        medListado.ShowDialog()
+        FreeMemory.FlushMemory()
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Dim frm As New frmFacturasM()
+        frm.ShowDialog()
+
+        FreeMemory.FlushMemory()
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        Dim frm As New frmPacienteDebito()
+        frm.ShowDialog()
+        FreeMemory.FlushMemory()
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        Dim medListado As New frmMedicosListado()
+        medListado.ShowDialog()
+        FreeMemory.FlushMemory()
+    End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        Dim _listados As frmListadoMutua = New frmListadoMutua()
+        _listados.ShowDialog()
+    End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        Dim frm As New frmBancosListado
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        Dim frm As New frmGastosListados()
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
+        Dim frm As New frmLiquidacion_Medicos()
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+        Dim _dash As Form_DashBoard = New Form_DashBoard()
+        _dash.Show()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
+        Dim frm As New frmHorarios()
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
+        ListadoDeEmpresas()
+    End Sub
+
+    Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
+        Dim frm As New frmFacturasM()
+        frm.ShowDialog()
+        FreeMemory.FlushMemory()
+    End Sub
+
+    Private Sub Button18_Click(sender As Object, e As EventArgs) Handles Button18.Click
+        Dim frm As New frmPartes_AsistenteFacturacion()
+        frm.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button19_Click(sender As Object, e As EventArgs) Handles Button19.Click
+        Dim _generar As New form_generar_recfact
+        _generar.ShowInTaskbar = False
+        _generar.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button20_Click(sender As Object, e As EventArgs) Handles Button20.Click
+        Dim adapter As New CMDataSetTableAdapters.ANALITICASTableAdapter
+        adapter.Fill(Me.CMDataSet.ANALITICAS)
+
+        Dim source As New BindingSource
+        source.DataSource = CMDataSet
+        source.DataMember = "ANALITICAS"
+
+        MostrarListado("Listado de analiticas", source, RoleManager.Items.Analiticas)
+        GC.Collect()
+    End Sub
+
+    Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
+        Dim _generar_recibos As form_generar_recibos = New form_generar_recibos(Globales.Configuracion)
+        _generar_recibos.ShowInTaskbar = False
+        _generar_recibos.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button22_Click(sender As Object, e As EventArgs) Handles Button22.Click
+        Me.RECIBOSTableAdapter.Fill(Me.CMDataSet.RECIBOS)
+        Dim _name As String = "Listado de Modelos de Recibos"
+        MostrarListado(_name, RECIBOSBindingSource, RoleManager.Items.Recibos)
+        GC.Collect()
+    End Sub
+
+    Private Sub Button23_Click(sender As Object, e As EventArgs) Handles Button23.Click
+        Dim _remesas As form_remesa_de_recibos = New form_remesa_de_recibos(Globales.Configuracion)
+        _remesas.ShowInTaskbar = False
+        _remesas.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button24_Click(sender As Object, e As EventArgs) Handles Button24.Click
+        Dim frm As New frmNorma19()
+        frm.ShowDialog()
+
+        GC.Collect()
+    End Sub
+
+    Private Sub Button25_Click(sender As Object, e As EventArgs) Handles Button25.Click
+        Dim _remesas As form_bonos_no_agotados = New form_bonos_no_agotados()
+        _remesas.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button26_Click(sender As Object, e As EventArgs) Handles Button26.Click
+        Dim frm As New frmCalendarioCitas()
+        frm.ShowDialog()
+        frm.Dispose()
+        frm = Nothing
+        FreeMemory.FlushMemory()
+    End Sub
+
+    Private Sub Button27_Click(sender As Object, e As EventArgs) Handles Button27.Click
+        Dim frm As New frmPartes()
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button28_Click(sender As Object, e As EventArgs) Handles Button28.Click
+        Dim frm As New frmPartesAsistencia()
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button29_Click(sender As Object, e As EventArgs) Handles Button29.Click
+        Dim frm As New frmProcesos()
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button30_Click(sender As Object, e As EventArgs) Handles Button30.Click
+        Dim frm As New frmComunicaciones()
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button37_Click(sender As Object, e As EventArgs) Handles Button37.Click
+        Me.ALARMASTableAdapter.Fill(Me.CMDataSet.ALARMAS)
+        Dim _name As String = "Listado de alarmas"
+        MostrarListado(_name, ALARMASBindingSource, RoleManager.Items.Alarmas)
+        GC.Collect()
+    End Sub
+
+    Private Sub Button36_Click(sender As Object, e As EventArgs) Handles Button36.Click
+        Dim frm As New frmDiagnosticos()
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button35_Click(sender As Object, e As EventArgs) Handles Button35.Click
+        Dim frm As New frmMedicamentos
+        frm.StartPosition = FormStartPosition.CenterScreen
+        frm.ShowInTaskbar = False
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button34_Click(sender As Object, e As EventArgs) Handles Button34.Click
+        Me.INDICACIONESTableAdapter.Fill(Me.CMDataSet.INDICACIONES)
+        Dim _name As String = "Listado de indicaciones"
+        MostrarListado(_name, INDICACIONESBindingSource, RoleManager.Items.Indicaciones)
+        GC.Collect()
+    End Sub
+
+    Private Sub Button33_Click(sender As Object, e As EventArgs) Handles Button33.Click
+        Dim frm As New frmListadoConceptos()
+        frm.tstAnnadirSeleccionados.Visible = False
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button32_Click(sender As Object, e As EventArgs) Handles Button32.Click
+        Dim frm As New frmFamiliaSelector()
+        frm.Modo = Globales.ModoParaFormas.Edicion
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button31_Click(sender As Object, e As EventArgs) Handles Button31.Click
+        Dim frm As New frmTarifas()
+        frm.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button38_Click(sender As Object, e As EventArgs) Handles Button38.Click
+        Dim frm As New frmConceptoAnaliticaListado()
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button46_Click(sender As Object, e As EventArgs) Handles Button46.Click
+        Dim frm As New frmPlantillaAnalitica()
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button45_Click(sender As Object, e As EventArgs) Handles Button45.Click
+        Dim frm As New frmModelosRevisionesComparativas()
+        frm.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button44_Click(sender As Object, e As EventArgs) Handles Button44.Click
+        Dim frm As New frmPlantillasdeTexto()
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button43_Click(sender As Object, e As EventArgs) Handles Button43.Click
+        Me.PLANTILLA_HISTORIALESTableAdapter.Fill(Me.CMDataSet.PLANTILLA_HISTORIALES)
+        Dim _name As String = "Listado de Plantillas de Historial"
+        MostrarListado(_name, PLANTILLA_HISTORIALESBindingSource, RoleManager.Items.Plantilla_de_Historial)
+        GC.Collect()
+    End Sub
+
+    Private Sub Button42_Click(sender As Object, e As EventArgs) Handles Button42.Click
+        Dim frm As frmPoblaciones = New frmPoblaciones()
+        frm.Modo = Globales.ModoParaFormas.Edicion
+        frm.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button41_Click(sender As Object, e As EventArgs) Handles Button41.Click
+        Me.PAISESTableAdapter.Fill(Me.CMDataSet.PAISES)
+        Dim _name As String = "Listado de países"
+        MostrarListado(_name, PAISESBindingSource, RoleManager.Items.Paises)
+        GC.Collect()
+    End Sub
+
+    Private Sub Button40_Click(sender As Object, e As EventArgs) Handles Button40.Click
+        Dim frm As frmComoConocio = New frmComoConocio()
+        frm.Modo = Globales.ModoParaFormas.Edicion
+        frm.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button39_Click(sender As Object, e As EventArgs) Handles Button39.Click
+        Dim frm As New frmFormasDePago()
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button50_Click(sender As Object, e As EventArgs) Handles Button50.Click
+        Dim frm As New frmClinicasExternas()
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button49_Click(sender As Object, e As EventArgs) Handles Button49.Click
+        If RoleManager.PermisoPorItem(fIduser, RoleManager.Items.Almacen) = RoleManager.TipoPermisos.Ninguno Then
+            MsgBox("No tiene permisos para acceder a esta parte de la aplicación.", MsgBoxStyle.Exclamation)
+            Exit Sub
+        End If
+        Dim frm As frmAlmacen = New frmAlmacen()
+        frm.Modo = Globales.ModoParaFormas.Edicion
+        frm.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button48_Click(sender As Object, e As EventArgs) Handles Button48.Click
+        Dim frm As New frmSalas
+        frm.Show()
+    End Sub
+
+    Private Sub Button47_Click(sender As Object, e As EventArgs) Handles Button47.Click
+        Dim frm As New frm_BancoImag_Galeria()
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button67_Click(sender As Object, e As EventArgs) Handles Button67.Click
+        Dim frm As New frmPacientesListado()
+        frm.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button65_Click(sender As Object, e As EventArgs) Handles Button65.Click
+        Dim _faltas As listado_faltas
+        _faltas = New listado_faltas(Globales.Configuracion)
+        _faltas.ShowInTaskbar = False
+        _faltas.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button64_Click(sender As Object, e As EventArgs) Handles Button64.Click
+        Dim _partes As Partes
+        _partes = New Partes(Globales.Configuracion)
+        _partes.ShowInTaskbar = False
+        _partes.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button63_Click(sender As Object, e As EventArgs) Handles Button63.Click
+        Dim frm As New frmRecetasListadoFiltrado()
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button62_Click(sender As Object, e As EventArgs) Handles Button62.Click
+        Dim frm As New frmListadoCitas()
+        frm.ShowInTaskbar = False
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button66_Click(sender As Object, e As EventArgs) Handles Button66.Click
+        Dim _citas As Citas_Por_Especialista
+        _citas = New Citas_Por_Especialista(Globales.Configuracion)
+        _citas.ShowInTaskbar = False
+        _citas.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button61_Click(sender As Object, e As EventArgs) Handles Button61.Click
+        Dim _citas As Citas_Por_Procedencia
+        _citas = New Citas_Por_Procedencia(Globales.Configuracion)
+        _citas.ShowInTaskbar = False
+        _citas.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button60_Click(sender As Object, e As EventArgs) Handles Button60.Click
+        Dim frm As New frmFacturasM()
+        frm.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button59_Click(sender As Object, e As EventArgs) Handles Button59.Click
+        Dim _recibo As Recibos = New Recibos(Globales.Configuracion)
+        _recibo.ShowInTaskbar = False
+        _recibo.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button58_Click(sender As Object, e As EventArgs) Handles Button58.Click
+        Dim frm As New frmLibroIngresosGastos()
+        frm.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button57_Click(sender As Object, e As EventArgs) Handles Button57.Click
+        Dim rdatasource As New Microsoft.Reporting.WinForms.ReportDataSource
+        rdatasource.Name = "CMDataSet_EstadisticasDiagnosticos"
+        rdatasource.Value = Me.EstadisticasDiagnosticosTableAdapter.GetDataTodos
+        UI.Reportes.ReportesManager.Imprime("EstadisticasDiagnosticos.rdlc", {rdatasource})
+    End Sub
+
+    Private Sub Button56_Click(sender As Object, e As EventArgs) Handles Button56.Click
+        Dim frm As New frmPacientesPorDiagnosticos
+        frm.ShowInTaskbar = False
+        frm.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button55_Click(sender As Object, e As EventArgs) Handles Button55.Click
+        Dim frm As New frmPacientesPorDerivaciones
+        frm.ShowInTaskbar = False
+        frm.Show()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button70_Click(sender As Object, e As EventArgs) Handles Button70.Click
+        If RoleManager.PermisoPorItem(Globales.Usuario.CODIGO, RoleManager.Items.Proveedores) = RoleManager.TipoPermisos.Ninguno Then
+            Globales.MsgboxErrorPermisoNoAutorizado()
+            Exit Sub
+        End If
+        Dim frm As frmProveedores = New frmProveedores()
+        frm.Modo = Globales.ModoParaFormas.Edicion
+        frm.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button69_Click(sender As Object, e As EventArgs) Handles Button69.Click
+        If RoleManager.PermisoPorItem(Globales.Usuario.CODIGO, RoleManager.Items.Articulos) = RoleManager.TipoPermisos.Ninguno Then
+            Globales.MsgboxErrorPermisoNoAutorizado()
+            Exit Sub
+        End If
+        Dim frm As frmArticulos = New frmArticulos()
+        frm.Modo = Globales.ModoParaFormas.Edicion
+        frm.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button68_Click(sender As Object, e As EventArgs) Handles Button68.Click
+        If RoleManager.PermisoPorItem(Globales.Usuario.CODIGO, RoleManager.Items.Entradas) = RoleManager.TipoPermisos.Ninguno Then
+            Globales.MsgboxErrorPermisoNoAutorizado()
+            Exit Sub
+        End If
+
+        Dim frm As frmEntradas = New frmEntradas()
+        frm.Modo = Globales.ModoParaFormas.Edicion
+        frm.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button54_Click(sender As Object, e As EventArgs) Handles Button54.Click
+        If RoleManager.PermisoPorItem(Globales.Usuario.CODIGO, RoleManager.Items.Pedidos_Compras) = RoleManager.TipoPermisos.Ninguno Then
+            Globales.MsgboxErrorPermisoNoAutorizado()
+            Exit Sub
+        End If
+        Dim frm As frmPedidosProveedor = New frmPedidosProveedor()
+        frm.Modo = Globales.ModoParaFormas.Edicion
+        frm.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button53_Click(sender As Object, e As EventArgs) Handles Button53.Click
+        If RoleManager.PermisoPorItem(Globales.Usuario.CODIGO, RoleManager.Items.Facturas_Compras) = RoleManager.TipoPermisos.Ninguno Then
+            Globales.MsgboxErrorPermisoNoAutorizado()
+            Exit Sub
+        End If
+        Dim frm As frmFacturasRecibidas = New frmFacturasRecibidas()
+        frm.Modo = Globales.ModoParaFormas.Edicion
+        frm.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button52_Click(sender As Object, e As EventArgs) Handles Button52.Click
+        If RoleManager.PermisoPorItem(Globales.Usuario.CODIGO, RoleManager.Items.Facturas_Ventas) = RoleManager.TipoPermisos.Ninguno Then
+            Globales.MsgboxErrorPermisoNoAutorizado()
+            Exit Sub
+        End If
+
+        Dim frm As frmFacturasMedicas = New frmFacturasMedicas()
+        frm.Modo = Globales.ModoParaFormas.Edicion
+        frm.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button51_Click(sender As Object, e As EventArgs) Handles Button51.Click
+        Dim frm As New frmTPVTicketsListado()
+        frm.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button71_Click(sender As Object, e As EventArgs) Handles Button71.Click
+        Dim frm As frmConsolidacionStock = New frmConsolidacionStock()
+        frm.Modo = Globales.ModoParaFormas.Edicion
+        frm.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button79_Click(sender As Object, e As EventArgs) Handles Button79.Click
+        Dim frm As frmUsuarios = New frmUsuarios()
+        frm.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub Button78_Click(sender As Object, e As EventArgs) Handles Button78.Click
+        Dim frmconfusr As New form_ConfiguracionUsuario
+        frmconfusr.ShowDialog()
+        frmconfusr.ShowInTaskbar = False
+    End Sub
+
+    Private Sub Button77_Click(sender As Object, e As EventArgs) Handles Button77.Click
+        Dim frm As frmRoles = New frmRoles()
+        frm.ShowDialog()
+        GC.Collect()
+        MessageBox.Show("Los cambios seran aplicados luego de reiniciada la sesión")
+    End Sub
+
+    Private Sub Button76_Click(sender As Object, e As EventArgs) Handles Button76.Click
+        Dim _conf As form_configuracion = New form_configuracion()
+        _conf.ShowInTaskbar = False
+        _conf.ShowDialog()
+    End Sub
+
+    Private Sub Button75_Click(sender As Object, e As EventArgs) Handles Button75.Click
+        Dim frm As New frmChequeoIntegridad()
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button74_Click(sender As Object, e As EventArgs) Handles Button74.Click
+        Dim frm As New frmChequeoTotalesCitas
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button73_Click(sender As Object, e As EventArgs) Handles Button73.Click
+        If MsgBox("La importación de una Base de datos implica la eliminación de los datos actuales en su Base de datos, desea continuar?", MsgBoxStyle.OkCancel, "Importador Datos") = MsgBoxResult.Cancel Then
+            Return
+        End If
+
+        Dim frm As Importer.FrmConnector = New FrmConnector(Configuration.ConfigurationManager.ConnectionStrings("centro_medico.My.MySettings.CMConnectionString").ConnectionString)
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button72_Click(sender As Object, e As EventArgs) Handles Button72.Click
+        Try
+            'MessageBox.Show(Application.StartupPath & "\Updater\UpdaterClient.exe")
+            'Dim conStrFile As String = IO.Path.GetTempPath() & "\INCEME.conn"
+            'Dim fs As StreamWriter = File.CreateText(conStrFile)
+            'fs.Write(My.MySettings.Default.CMConnectionString)
+            'fs.Close()
+            ''Dim command As String = """" & "ConnString=" & My.MySettings.Default.CMConnectionString & """"
+            'MessageBox.Show(command)
+            Dim res As MsgBoxResult = MsgBox("Es necesario cerrar inceme para actualizar. Se abrirá una carpeta donde debe ejecutar UPDATERCLIENT.EXE ¿Desea cerrar y continuar con el actualizador?", vbYesNo)
+            If res = MsgBoxResult.Yes Then
+                If File.Exists(Application.StartupPath & "\updater\updaterclient.exe") Then
+                    Dim path As String
+                    path = Application.StartupPath & "\updater"
+                    Process.Start("explorer.exe", path)
+                    Application.Exit()
+                Else
+                    MessageBox.Show("No se encuentra el fichero " & Application.StartupPath & "\updater\UpdaterClient.exe")
+                End If
+            End If
+
+        Catch ex As Exception
+            Globales.ShowError(ex.Message, ex)
+        End Try
+        GC.Collect()
+    End Sub
+
+    Private Sub Button81_Click(sender As Object, e As EventArgs) Handles Button81.Click
+        Dim frm As New frmAuditoria()
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button80_Click(sender As Object, e As EventArgs) Handles Button80.Click
+        Dim a As New frmMigrarPacientes
+        a.ShowDialog()
+    End Sub
+
+    Private Sub Button87_Click(sender As Object, e As EventArgs) Handles Button87.Click
+        Dim a As New Process
+        a.Start("http://www.youtube.com/goltratec")
+
+        GC.Collect()
+    End Sub
+
+    Private Sub Button82_Click(sender As Object, e As EventArgs) Handles Button82.Click
+        Dim frm As New frmPacienteDebito()
+        frm.ShowDialog()
+        FreeMemory.FlushMemory()
+    End Sub
 End Class
