@@ -254,6 +254,8 @@ Partial Class form_new_centro_medico
         Me.Button79 = New System.Windows.Forms.Button()
         Me.UiGroupBox8 = New Janus.Windows.EditControls.UIGroupBox()
         Me.Button87 = New System.Windows.Forms.Button()
+        Me.SearchCPropio = New System.Windows.Forms.TextBox()
+        Me.SearchCPaciente = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UiGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1966,6 +1968,26 @@ Partial Class form_new_centro_medico
         Me.Button87.TabIndex = 13
         Me.Button87.UseVisualStyleBackColor = True
         '
+        'SearchCPropio
+        '
+        Me.SearchCPropio.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic)
+        Me.SearchCPropio.ForeColor = System.Drawing.Color.DarkGray
+        Me.SearchCPropio.Location = New System.Drawing.Point(720, 61)
+        Me.SearchCPropio.Name = "SearchCPropio"
+        Me.SearchCPropio.Size = New System.Drawing.Size(105, 25)
+        Me.SearchCPropio.TabIndex = 31
+        Me.SearchCPropio.Text = "Cod. Propio"
+        '
+        'SearchCPaciente
+        '
+        Me.SearchCPaciente.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic)
+        Me.SearchCPaciente.ForeColor = System.Drawing.Color.DarkGray
+        Me.SearchCPaciente.Location = New System.Drawing.Point(838, 61)
+        Me.SearchCPaciente.Name = "SearchCPaciente"
+        Me.SearchCPaciente.Size = New System.Drawing.Size(105, 25)
+        Me.SearchCPaciente.TabIndex = 32
+        Me.SearchCPaciente.Text = "Cod. Paciente"
+        '
         'form_new_centro_medico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1973,6 +1995,8 @@ Partial Class form_new_centro_medico
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1008, 645)
+        Me.Controls.Add(Me.SearchCPaciente)
+        Me.Controls.Add(Me.SearchCPropio)
         Me.Controls.Add(Me.UiGroupBox7)
         Me.Controls.Add(Me.UiGroupBox6)
         Me.Controls.Add(Me.UiGroupBox5)
@@ -2194,4 +2218,6 @@ Partial Class form_new_centro_medico
     Friend WithEvents UiGroupBox8 As Janus.Windows.EditControls.UIGroupBox
     Friend WithEvents Button87 As System.Windows.Forms.Button
     Friend WithEvents Button82 As System.Windows.Forms.Button
+    Friend WithEvents SearchCPropio As System.Windows.Forms.TextBox
+    Friend WithEvents SearchCPaciente As System.Windows.Forms.TextBox
 End Class

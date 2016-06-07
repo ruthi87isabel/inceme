@@ -691,9 +691,66 @@ Public Class form_new_centro_medico
         End If
     End Sub
 
-    Private Sub SearchText_KeyUp(sender As Object, e As KeyEventArgs) Handles SearchText.KeyUp
+    Private Sub SearchText_MouseClick(sender As Object, e As MouseEventArgs) Handles SearchText.MouseClick
+        If SearchText.Text = "Buscar Pacientes" Then
+            SearchText.Text = ""
+            SearchText.ForeColor = Color.Black
+            SearchText.Font = New System.Drawing.Font("Arial Narrow", 11.25!)
+        End If
+    End Sub
+
+    Private Sub SearchCPropio_MouseClick(sender As Object, e As MouseEventArgs) Handles SearchCPropio.MouseClick
+        If SearchCPropio.Text = "Cod. Propio" Then
+            SearchCPropio.Text = ""
+            SearchCPropio.ForeColor = Color.Black
+            SearchCPropio.Font = New System.Drawing.Font("Arial Narrow", 11.25!)
+        End If
+    End Sub
+
+    Private Sub SearchCPaciente_MouseClick(sender As Object, e As MouseEventArgs) Handles SearchCPaciente.MouseClick
+        If SearchCPaciente.Text = "Cod. Paciente" Then
+            SearchCPaciente.Text = ""
+            SearchCPaciente.ForeColor = Color.Black
+            SearchCPaciente.Font = New System.Drawing.Font("Arial Narrow", 11.25!)
+        End If
+    End Sub
+
+    Private Sub SearchText_LostFocus(sender As Object, e As EventArgs) Handles SearchText.LostFocus
+        If SearchText.Text = "" Then
+            SearchText.Text = "Buscar Pacientes"
+            SearchText.ForeColor = Color.DarkGray
+            SearchText.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic)
+            ExplorerBar1.Focus()
+        End If
+    End Sub
+
+    Private Sub SearchCPropio_LostFocus(sender As Object, e As EventArgs) Handles SearchCPropio.LostFocus
+        If SearchCPropio.Text = "" Then
+            SearchCPropio.Text = "Cod. Propio"
+            SearchCPropio.ForeColor = Color.DarkGray
+            SearchCPropio.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic)
+            ExplorerBar1.Focus()
+        End If
+    End Sub
+
+    Private Sub SearchCPaciente_LostFocus(sender As Object, e As EventArgs) Handles SearchCPaciente.LostFocus
+        If SearchCPaciente.Text = "" Then
+            SearchCPaciente.Text = "Cod. Paciente"
+            SearchCPaciente.ForeColor = Color.DarkGray
+            SearchCPaciente.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic)
+            ExplorerBar1.Focus()
+        End If
+    End Sub
+
+    Private Sub SearchText_KeyUp(sender As Object, e As KeyEventArgs) Handles SearchText.KeyUp, SearchCPaciente.KeyUp, SearchCPropio.KeyUp
         If SearchText.Text = " " And e.KeyData = Keys.Space Then
             SearchText.Text = ""
+        End If
+        If SearchCPropio.Text = " " And e.KeyData = Keys.Space Then
+            SearchCPropio.Text = ""
+        End If
+        If SearchCPaciente.Text = " " And e.KeyData = Keys.Space Then
+            SearchCPaciente.Text = ""
         End If
         If e.KeyData = Keys.Enter Then
             'Buscar paciente por codigo propio
@@ -713,12 +770,23 @@ Public Class form_new_centro_medico
     End Sub
 
     Private Sub BuscaPaciente()
-        If Not SearchText.Text = "Buscar Pacientes" And SearchText.Text.Length > 0 Then
-            Dim query As String = My.Resources.queryListadoPacientes
+
+        If (Not SearchText.Text = "Buscar Pacientes" And SearchText.Text.Length > 0) Or
+            (Not SearchCPropio.Text = "Cod. Propio" And SearchCPropio.Text.Length > 0) Or
+            (Not SearchCPaciente.Text = "Cod. Paciente" And SearchCPaciente.Text.Length > 0) Then
+
+            Dim criterio As String = ""
+            Dim cpropio As String = ""
+            Dim cpaciente As String = ""
+            If SearchText.Text <> "Buscar Pacientes" And SearchText.Text.Length > 0 Then criterio = SearchText.Text
+            If SearchCPropio.Text <> "Cod. Propio" And SearchCPropio.Text.Length > 0 Then cpropio = SearchCPropio.Text
+            If SearchCPaciente.Text <> "Cod. Paciente" And SearchCPaciente.Text.Length > 0 Then cpaciente = SearchCPaciente.Text
+
+            Dim query As String = My.Resources.queryListadoPacientesTop100
             query = query.Insert(query.IndexOf("GROUP"), _
-                        " WHERE CONVERT(varchar(10),PACIENTES.CPACIENTE)= '" & SearchText.Text & "' OR PACIENTES.CODIGOPROPIO = '" & SearchText.Text &
-                          "' OR PACIENTES.DNI='" & SearchText.Text & "' OR (PACIENTES.NOMBRE + ' ' + ISNULL(PACIENTES.APELLIDO1, '') + ' ' + ISNULL(PACIENTES.APELLIDO2, '')) LIKE '%" & SearchText.Text &
-                          "%' AND (PACIENTES.Eliminado is NULL or PACIENTES.Eliminado = 0)")
+                        " WHERE ('" & cpaciente & "'<> '' AND CONVERT(varchar(10),PACIENTES.CPACIENTE)= '" & cpaciente & "') OR ('" & cpropio & "' <> '' AND PACIENTES.CODIGOPROPIO = '" & cpropio &
+                          "') OR ('" & criterio & "' <> '' AND (PACIENTES.DNI='" & criterio & "' OR (PACIENTES.NOMBRE + ' ' + ISNULL(PACIENTES.APELLIDO1, '') + ' ' + ISNULL(PACIENTES.APELLIDO2, '')) LIKE '%" & criterio &
+                          "%')) AND (PACIENTES.Eliminado is NULL or PACIENTES.Eliminado = 0)")
             query += " ORDER BY PACIENTES.CPACIENTE DESC "
             Dim dt As DataTable = Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteDataset(My.Settings.CMConnectionString, CommandType.Text, query).Tables(0)
             If dt.Rows.Count() = 1 Then
@@ -1435,28 +1503,6 @@ Public Class form_new_centro_medico
         frm.ShowDialog()
     End Sub
 
-    Private Sub SearchText_MouseClick(sender As Object, e As MouseEventArgs) Handles SearchText.MouseClick
-        SearchText.Text = ""
-        SearchText.ForeColor = Color.Black
-        SearchText.Font = New System.Drawing.Font("Arial Narrow", 11.25!)
-    End Sub
-
-    Private Sub SearchText_LostFocus(sender As Object, e As EventArgs) Handles SearchText.LostFocus
-        If Not PictureBox2.Focused = True Then
-            SearchText.Text = "Buscar Pacientes"
-            SearchText.ForeColor = Color.DarkGray
-            SearchText.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic)
-            ExplorerBar1.Focus()
-        End If
-    End Sub
-
-    Private Sub form_new_centro_medico_MouseClick(sender As Object, e As MouseEventArgs)
-        SearchText.Text = "Buscar Pacientes"
-        SearchText.ForeColor = Color.DarkGray
-        SearchText.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic)
-        ExplorerBar1.Focus()
-    End Sub
-
     Private Sub UiGroupBox1_Click(sender As Object, e As EventArgs) Handles UiGroupBox1.Click
         UiGroupBox1.Focus()
     End Sub
@@ -2070,4 +2116,6 @@ Public Class form_new_centro_medico
         frm.ShowDialog()
         FreeMemory.FlushMemory()
     End Sub
+
+    
 End Class
