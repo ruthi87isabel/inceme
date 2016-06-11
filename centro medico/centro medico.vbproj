@@ -1191,6 +1191,12 @@
     <Compile Include="UI\Facturas\frmListadoConceptos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UI\Pacientes\formPaciente_Captura.Designer.vb">
+      <DependentUpon>formPaciente_Captura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pacientes\formPaciente_Captura.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\Pacientes\frmMigrarPacientes.Designer.vb">
       <DependentUpon>frmMigrarPacientes.vb</DependentUpon>
     </Compile>
@@ -2327,6 +2333,9 @@
     <None Include="Resources\new\IconE_Articulos.jpg" />
     <None Include="Resources\new\IconE_AsistenteFacturacion.png" />
     <None Include="Resources\new\IconE_Auditoria.png" />
+    <None Include="Resources\camera.png" />
+    <None Include="Resources\floppy.png" />
+    <None Include="Resources\delete_picture.png" />
     <Content Include="Resources\new\Icon_Articulos.jpg" />
     <None Include="Resources\new\Icon_AsistenteFacturacion.png" />
     <None Include="Resources\new\Icon_Auditoria.png" />
@@ -2339,7 +2348,6 @@
     <None Include="Resources\new\Icon_Conceptos Facturables.png" />
     <None Include="Resources\new\Icon_Conceptos Analitica.png" />
     <None Include="Resources\new\Icon_Como nos Conocio.png" />
-    <None Include="Resources\new\Icon_Cosolidacion Stock.png" />
     <None Include="Resources\new\Icon_Consolidacion Stock.png" />
     <None Include="Resources\new\Icon_Configuración de Usuario.png" />
     <Content Include="Resources\new\Icon_DashBoard.jpg" />
@@ -2411,6 +2419,8 @@
     <Content Include="Resources\new\PicReception.jpg" />
     <Content Include="Resources\new\Search.jpg" />
     <Content Include="Resources\permisos.png" />
+    <None Include="Resources\webcam.png" />
+    <None Include="Resources\wc.png" />
     <Content Include="Scripts\db_1.0.3.7.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -4424,6 +4434,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\GraphicsAssets\LoadingForm.resx">
       <DependentUpon>LoadingForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Pacientes\formPaciente_Captura.resx">
+      <DependentUpon>formPaciente_Captura.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Pacientes\frmMigrarPacientes.resx">
       <DependentUpon>frmMigrarPacientes.vb</DependentUpon>

@@ -55,31 +55,61 @@ Partial Class frmPaciente_Editar
         Dim GridEXEmpresas_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPageDetalles = New System.Windows.Forms.TabPage()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.gb_dpDatPer = New System.Windows.Forms.GroupBox()
         Me.lb_dpLetradni = New System.Windows.Forms.Label()
+        Me.tb_web = New centro_medico.ctrlTextboxAvanzado()
         Me.PACIENTESBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.tb_dpCodigopostal = New centro_medico.ctrlTextboxAvanzado()
+        Me.CtrlPaises1 = New centro_medico.ctrlPaises()
+        Me.tb_Email = New centro_medico.ctrlTextboxAvanzado()
         Me.dtp_dpFeNac = New System.Windows.Forms.DateTimePicker()
+        Me.tb_dpTutorLegal = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_dpNie = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_dpPasaporte = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_dpMovil = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_dpProvincia = New centro_medico.ctrlTextboxAvanzado()
         Me.cb_dpSexo = New System.Windows.Forms.ComboBox()
+        Me.tb_dpTlfno = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_dpPoblacion = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_dpEdad = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_dpDni = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_domicilio = New centro_medico.ctrlTextboxAvanzado()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.gb_dpObservaciones = New System.Windows.Forms.GroupBox()
+        Me.tb_dpObservaciones = New centro_medico.ctrlTextboxAvanzado()
         Me.lblCodigoPaciente = New System.Windows.Forms.Label()
         Me.lbl_Apellido2 = New System.Windows.Forms.Label()
+        Me.tb_CodigoPaciente = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_Nombre = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_CodigoPropio = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_Apellido2 = New centro_medico.ctrlTextboxAvanzado()
         Me.lblCodigoPropio = New System.Windows.Forms.Label()
         Me.pb_dpImagen = New System.Windows.Forms.PictureBox()
         Me.lbl_Nombre = New System.Windows.Forms.Label()
+        Me.tb_Apellido1 = New centro_medico.ctrlTextboxAvanzado()
         Me.lbl_Apellido1 = New System.Windows.Forms.Label()
         Me.gb_dpDatosadmin = New System.Windows.Forms.GroupBox()
+        Me.dtpsociohasta = New System.Windows.Forms.DateTimePicker()
+        Me.CtrlMutua1 = New centro_medico.ctrlMutuaMejorado()
+        Me.CtrlEmpresa1 = New centro_medico.ctrlEmpresa()
         Me.cb_comoconocio = New System.Windows.Forms.ComboBox()
         Me.pnlBeneficiario = New System.Windows.Forms.Panel()
+        Me.lblFechaValidoBeneficiario = New System.Windows.Forms.Label()
+        Me.lblValido = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.lblSocioBeneficiario = New System.Windows.Forms.Label()
+        Me.txtNomSocio = New centro_medico.ctrlTextboxAvanzado()
+        Me.txtParentescoSocio = New centro_medico.ctrlTextboxAvanzado()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.dtp_dpFechaAlta = New System.Windows.Forms.DateTimePicker()
         Me.dtp_dpFechabaja = New System.Windows.Forms.DateTimePicker()
         Me.chb_dpFallecido = New System.Windows.Forms.CheckBox()
         Me.chb_dpAsociado = New System.Windows.Forms.CheckBox()
         Me.chb_dpActivo = New System.Windows.Forms.CheckBox()
+        Me.tb_dpTarsanit = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_dpNss = New centro_medico.ctrlTextboxAvanzado()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.grpAsociados = New System.Windows.Forms.GroupBox()
         Me.btnRemoveSocio = New System.Windows.Forms.Button()
@@ -114,42 +144,13 @@ Partial Class frmPaciente_Editar
         Me.LMUTUABindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GridEXEmpresas = New Janus.Windows.GridEX.GridEX()
         Me.LEMPRESABindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.tb_hlPuesto = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_hlProfesion = New centro_medico.ctrlTextboxAvanzado()
         Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
         Me.tsbGuardar = New System.Windows.Forms.ToolStripButton()
         Me.tsbCancelar = New System.Windows.Forms.ToolStripButton()
         Me.ComoConocioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.lblEliminado = New System.Windows.Forms.Label()
-        Me.dtpsociohasta = New System.Windows.Forms.DateTimePicker()
-        Me.tb_web = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_dpCodigopostal = New centro_medico.ctrlTextboxAvanzado()
-        Me.CtrlPaises1 = New centro_medico.ctrlPaises()
-        Me.tb_Email = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_dpTutorLegal = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_dpNie = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_dpPasaporte = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_dpMovil = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_dpProvincia = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_dpTlfno = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_dpPoblacion = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_dpEdad = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_dpDni = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_domicilio = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_dpObservaciones = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_CodigoPaciente = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_Nombre = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_CodigoPropio = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_Apellido2 = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_Apellido1 = New centro_medico.ctrlTextboxAvanzado()
-        Me.CtrlMutua1 = New centro_medico.ctrlMutuaMejorado()
-        Me.CtrlEmpresa1 = New centro_medico.ctrlEmpresa()
-        Me.txtNomSocio = New centro_medico.ctrlTextboxAvanzado()
-        Me.txtParentescoSocio = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_dpTarsanit = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_dpNss = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_hlPuesto = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_hlProfesion = New centro_medico.ctrlTextboxAvanzado()
-        Me.lblValido = New System.Windows.Forms.Label()
-        Me.lblFechaValidoBeneficiario = New System.Windows.Forms.Label()
         lb_dpComonosconocio = New System.Windows.Forms.Label()
         Label1 = New System.Windows.Forms.Label()
         lb_dpFechabaja = New System.Windows.Forms.Label()
@@ -468,6 +469,7 @@ Partial Class frmPaciente_Editar
         'TabPageDetalles
         '
         Me.TabPageDetalles.BackColor = System.Drawing.SystemColors.Window
+        Me.TabPageDetalles.Controls.Add(Me.Button3)
         Me.TabPageDetalles.Controls.Add(Me.gb_dpDatPer)
         Me.TabPageDetalles.Controls.Add(Me.Button1)
         Me.TabPageDetalles.Controls.Add(Me.Button2)
@@ -490,6 +492,20 @@ Partial Class frmPaciente_Editar
         Me.TabPageDetalles.Size = New System.Drawing.Size(922, 532)
         Me.TabPageDetalles.TabIndex = 0
         Me.TabPageDetalles.Text = "Detalles"
+        '
+        'Button3
+        '
+        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Image = Global.centro_medico.My.Resources.Resources.webcam
+        Me.Button3.Location = New System.Drawing.Point(847, 141)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(16, 16)
+        Me.Button3.TabIndex = 63
+        Me.Button3.TabStop = False
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'gb_dpDatPer
         '
@@ -550,9 +566,52 @@ Partial Class frmPaciente_Editar
         Me.lb_dpLetradni.Text = "-"
         Me.lb_dpLetradni.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'tb_web
+        '
+        Me.tb_web.AcceptsReturn = True
+        Me.tb_web.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "WEB", True))
+        Me.tb_web.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_web.Location = New System.Drawing.Point(399, 100)
+        Me.tb_web.MaxLength = 200
+        Me.tb_web.Name = "tb_web"
+        Me.tb_web.Size = New System.Drawing.Size(139, 20)
+        Me.tb_web.TabIndex = 9
+        '
         'PACIENTESBindingSource
         '
         Me.PACIENTESBindingSource.DataSource = GetType(centro_medico.PACIENTE)
+        '
+        'tb_dpCodigopostal
+        '
+        Me.tb_dpCodigopostal.AcceptsReturn = True
+        Me.tb_dpCodigopostal.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "CP", True))
+        Me.tb_dpCodigopostal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_dpCodigopostal.Location = New System.Drawing.Point(544, 48)
+        Me.tb_dpCodigopostal.MaxLength = 5
+        Me.tb_dpCodigopostal.Name = "tb_dpCodigopostal"
+        Me.tb_dpCodigopostal.Size = New System.Drawing.Size(93, 20)
+        Me.tb_dpCodigopostal.TabIndex = 4
+        '
+        'CtrlPaises1
+        '
+        Me.CtrlPaises1.DataBindings.Add(New System.Windows.Forms.Binding("ID_PAISES", Me.PACIENTESBindingSource, "REFPAIS", True))
+        Me.CtrlPaises1.ID_PAISES = Nothing
+        Me.CtrlPaises1.Location = New System.Drawing.Point(509, 97)
+        Me.CtrlPaises1.Name = "CtrlPaises1"
+        Me.CtrlPaises1.Size = New System.Drawing.Size(258, 25)
+        Me.CtrlPaises1.TabIndex = 10
+        '
+        'tb_Email
+        '
+        Me.tb_Email.AcceptsReturn = True
+        Me.tb_Email.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
+        Me.tb_Email.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "EMAIL", True))
+        Me.tb_Email.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_Email.Location = New System.Drawing.Point(236, 100)
+        Me.tb_Email.MaxLength = 200
+        Me.tb_Email.Name = "tb_Email"
+        Me.tb_Email.Size = New System.Drawing.Size(157, 20)
+        Me.tb_Email.TabIndex = 8
         '
         'dtp_dpFeNac
         '
@@ -564,6 +623,61 @@ Partial Class frmPaciente_Editar
         Me.dtp_dpFeNac.Size = New System.Drawing.Size(92, 20)
         Me.dtp_dpFeNac.TabIndex = 11
         '
+        'tb_dpTutorLegal
+        '
+        Me.tb_dpTutorLegal.AcceptsReturn = True
+        Me.tb_dpTutorLegal.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "TUTOR", True))
+        Me.tb_dpTutorLegal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_dpTutorLegal.Location = New System.Drawing.Point(553, 149)
+        Me.tb_dpTutorLegal.MaxLength = 90
+        Me.tb_dpTutorLegal.Name = "tb_dpTutorLegal"
+        Me.tb_dpTutorLegal.Size = New System.Drawing.Size(214, 20)
+        Me.tb_dpTutorLegal.TabIndex = 16
+        '
+        'tb_dpNie
+        '
+        Me.tb_dpNie.AcceptsReturn = True
+        Me.tb_dpNie.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "NIE", True))
+        Me.tb_dpNie.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_dpNie.Location = New System.Drawing.Point(438, 148)
+        Me.tb_dpNie.MaxLength = 15
+        Me.tb_dpNie.Name = "tb_dpNie"
+        Me.tb_dpNie.Size = New System.Drawing.Size(97, 20)
+        Me.tb_dpNie.TabIndex = 15
+        '
+        'tb_dpPasaporte
+        '
+        Me.tb_dpPasaporte.AcceptsReturn = True
+        Me.tb_dpPasaporte.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "PASAPORTE", True))
+        Me.tb_dpPasaporte.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_dpPasaporte.Location = New System.Drawing.Point(300, 149)
+        Me.tb_dpPasaporte.MaxLength = 25
+        Me.tb_dpPasaporte.Name = "tb_dpPasaporte"
+        Me.tb_dpPasaporte.Size = New System.Drawing.Size(124, 20)
+        Me.tb_dpPasaporte.TabIndex = 14
+        '
+        'tb_dpMovil
+        '
+        Me.tb_dpMovil.AcceptsReturn = True
+        Me.tb_dpMovil.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "MOVIL", True))
+        Me.tb_dpMovil.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_dpMovil.Location = New System.Drawing.Point(129, 100)
+        Me.tb_dpMovil.MaxLength = 200
+        Me.tb_dpMovil.Name = "tb_dpMovil"
+        Me.tb_dpMovil.Size = New System.Drawing.Size(99, 20)
+        Me.tb_dpMovil.TabIndex = 7
+        '
+        'tb_dpProvincia
+        '
+        Me.tb_dpProvincia.AcceptsReturn = True
+        Me.tb_dpProvincia.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "PROVINCIA", True))
+        Me.tb_dpProvincia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_dpProvincia.Location = New System.Drawing.Point(399, 48)
+        Me.tb_dpProvincia.MaxLength = 300
+        Me.tb_dpProvincia.Name = "tb_dpProvincia"
+        Me.tb_dpProvincia.Size = New System.Drawing.Size(139, 20)
+        Me.tb_dpProvincia.TabIndex = 3
+        '
         'cb_dpSexo
         '
         Me.cb_dpSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -573,6 +687,62 @@ Partial Class frmPaciente_Editar
         Me.cb_dpSexo.Name = "cb_dpSexo"
         Me.cb_dpSexo.Size = New System.Drawing.Size(95, 21)
         Me.cb_dpSexo.TabIndex = 5
+        '
+        'tb_dpTlfno
+        '
+        Me.tb_dpTlfno.AcceptsReturn = True
+        Me.tb_dpTlfno.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "TLFNO", True))
+        Me.tb_dpTlfno.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_dpTlfno.Location = New System.Drawing.Point(20, 100)
+        Me.tb_dpTlfno.MaxLength = 200
+        Me.tb_dpTlfno.Name = "tb_dpTlfno"
+        Me.tb_dpTlfno.Size = New System.Drawing.Size(100, 20)
+        Me.tb_dpTlfno.TabIndex = 6
+        '
+        'tb_dpPoblacion
+        '
+        Me.tb_dpPoblacion.AcceptsReturn = True
+        Me.tb_dpPoblacion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "LOCALIDAD", True))
+        Me.tb_dpPoblacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_dpPoblacion.Location = New System.Drawing.Point(253, 48)
+        Me.tb_dpPoblacion.MaxLength = 200
+        Me.tb_dpPoblacion.Name = "tb_dpPoblacion"
+        Me.tb_dpPoblacion.Size = New System.Drawing.Size(140, 20)
+        Me.tb_dpPoblacion.TabIndex = 2
+        '
+        'tb_dpEdad
+        '
+        Me.tb_dpEdad.AcceptsReturn = True
+        Me.tb_dpEdad.BackColor = System.Drawing.SystemColors.Info
+        Me.tb_dpEdad.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_dpEdad.Location = New System.Drawing.Point(129, 149)
+        Me.tb_dpEdad.Name = "tb_dpEdad"
+        Me.tb_dpEdad.ReadOnly = True
+        Me.tb_dpEdad.Size = New System.Drawing.Size(39, 20)
+        Me.tb_dpEdad.TabIndex = 12
+        '
+        'tb_dpDni
+        '
+        Me.tb_dpDni.AcceptsReturn = True
+        Me.tb_dpDni.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "DNI", True))
+        Me.tb_dpDni.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_dpDni.Location = New System.Drawing.Point(185, 148)
+        Me.tb_dpDni.MaxLength = 8
+        Me.tb_dpDni.Name = "tb_dpDni"
+        Me.tb_dpDni.Size = New System.Drawing.Size(80, 20)
+        Me.tb_dpDni.TabIndex = 13
+        '
+        'tb_domicilio
+        '
+        Me.tb_domicilio.AcceptsReturn = True
+        Me.tb_domicilio.AccessibleDescription = "l"
+        Me.tb_domicilio.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "DOMICILIO", True))
+        Me.tb_domicilio.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_domicilio.Location = New System.Drawing.Point(19, 48)
+        Me.tb_domicilio.MaxLength = 150
+        Me.tb_domicilio.Name = "tb_domicilio"
+        Me.tb_domicilio.Size = New System.Drawing.Size(228, 20)
+        Me.tb_domicilio.TabIndex = 1
         '
         'Button1
         '
@@ -617,6 +787,21 @@ Partial Class frmPaciente_Editar
         Me.gb_dpObservaciones.TabStop = False
         Me.gb_dpObservaciones.Text = "Observaciones"
         '
+        'tb_dpObservaciones
+        '
+        Me.tb_dpObservaciones.AcceptsReturn = True
+        Me.tb_dpObservaciones.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tb_dpObservaciones.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "OBSERVACIONES", True))
+        Me.tb_dpObservaciones.Location = New System.Drawing.Point(6, 19)
+        Me.tb_dpObservaciones.MaxLength = 2147483647
+        Me.tb_dpObservaciones.Multiline = True
+        Me.tb_dpObservaciones.Name = "tb_dpObservaciones"
+        Me.tb_dpObservaciones.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.tb_dpObservaciones.Size = New System.Drawing.Size(893, 69)
+        Me.tb_dpObservaciones.TabIndex = 0
+        '
         'lblCodigoPaciente
         '
         Me.lblCodigoPaciente.AutoSize = True
@@ -634,6 +819,45 @@ Partial Class frmPaciente_Editar
         Me.lbl_Apellido2.Size = New System.Drawing.Size(50, 13)
         Me.lbl_Apellido2.TabIndex = 60
         Me.lbl_Apellido2.Text = "Apellido2"
+        '
+        'tb_CodigoPaciente
+        '
+        Me.tb_CodigoPaciente.AcceptsReturn = True
+        Me.tb_CodigoPaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "CPACIENTE", True))
+        Me.tb_CodigoPaciente.Location = New System.Drawing.Point(112, 32)
+        Me.tb_CodigoPaciente.Name = "tb_CodigoPaciente"
+        Me.tb_CodigoPaciente.ReadOnly = True
+        Me.tb_CodigoPaciente.Size = New System.Drawing.Size(47, 20)
+        Me.tb_CodigoPaciente.TabIndex = 1
+        '
+        'tb_Nombre
+        '
+        Me.tb_Nombre.AcceptsReturn = True
+        Me.tb_Nombre.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "NOMBRE", True))
+        Me.tb_Nombre.Location = New System.Drawing.Point(544, 32)
+        Me.tb_Nombre.MaxLength = 255
+        Me.tb_Nombre.Name = "tb_Nombre"
+        Me.tb_Nombre.Size = New System.Drawing.Size(147, 20)
+        Me.tb_Nombre.TabIndex = 4
+        '
+        'tb_CodigoPropio
+        '
+        Me.tb_CodigoPropio.AcceptsReturn = True
+        Me.tb_CodigoPropio.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "CODIGOPROPIO", True))
+        Me.tb_CodigoPropio.Location = New System.Drawing.Point(25, 32)
+        Me.tb_CodigoPropio.Name = "tb_CodigoPropio"
+        Me.tb_CodigoPropio.Size = New System.Drawing.Size(70, 20)
+        Me.tb_CodigoPropio.TabIndex = 0
+        '
+        'tb_Apellido2
+        '
+        Me.tb_Apellido2.AcceptsReturn = True
+        Me.tb_Apellido2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "APELLIDO2", True))
+        Me.tb_Apellido2.Location = New System.Drawing.Point(377, 32)
+        Me.tb_Apellido2.MaxLength = 255
+        Me.tb_Apellido2.Name = "tb_Apellido2"
+        Me.tb_Apellido2.Size = New System.Drawing.Size(147, 20)
+        Me.tb_Apellido2.TabIndex = 3
         '
         'lblCodigoPropio
         '
@@ -665,6 +889,16 @@ Partial Class frmPaciente_Editar
         Me.lbl_Nombre.Size = New System.Drawing.Size(44, 13)
         Me.lbl_Nombre.TabIndex = 62
         Me.lbl_Nombre.Text = "Nombre"
+        '
+        'tb_Apellido1
+        '
+        Me.tb_Apellido1.AcceptsReturn = True
+        Me.tb_Apellido1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "APELLIDO1", True))
+        Me.tb_Apellido1.Location = New System.Drawing.Point(185, 32)
+        Me.tb_Apellido1.MaxLength = 255
+        Me.tb_Apellido1.Name = "tb_Apellido1"
+        Me.tb_Apellido1.Size = New System.Drawing.Size(176, 20)
+        Me.tb_Apellido1.TabIndex = 2
         '
         'lbl_Apellido1
         '
@@ -706,6 +940,37 @@ Partial Class frmPaciente_Editar
         Me.gb_dpDatosadmin.TabStop = False
         Me.gb_dpDatosadmin.Text = "Datos Administrativos"
         '
+        'dtpsociohasta
+        '
+        Me.dtpsociohasta.AccessibleDescription = "Define hasta que fecha es socio el paciente"
+        Me.dtpsociohasta.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PACIENTESBindingSource, "SOCIOVALIDOHASTA", True))
+        Me.dtpsociohasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpsociohasta.Location = New System.Drawing.Point(598, 95)
+        Me.dtpsociohasta.Name = "dtpsociohasta"
+        Me.dtpsociohasta.Size = New System.Drawing.Size(86, 20)
+        Me.dtpsociohasta.TabIndex = 66
+        Me.dtpsociohasta.Visible = False
+        '
+        'CtrlMutua1
+        '
+        Me.CtrlMutua1.ID_MUTUA = Nothing
+        Me.CtrlMutua1.Location = New System.Drawing.Point(42, 123)
+        Me.CtrlMutua1.Name = "CtrlMutua1"
+        Me.CtrlMutua1.Size = New System.Drawing.Size(378, 29)
+        Me.CtrlMutua1.TabIndex = 65
+        '
+        'CtrlEmpresa1
+        '
+        Me.CtrlEmpresa1.DataBindings.Add(New System.Windows.Forms.Binding("ID_EMPRESAS", Me.PACIENTESBindingSource, "REFEMPRESA", True))
+        Me.CtrlEmpresa1.DataBindings.Add(New System.Windows.Forms.Binding("IDPACIENTE", Me.PACIENTESBindingSource, "CPACIENTE", True))
+        Me.CtrlEmpresa1.EsEmpresaPorDefecto = True
+        Me.CtrlEmpresa1.ID_EMPRESAS = Nothing
+        Me.CtrlEmpresa1.IDPACIENTE = Nothing
+        Me.CtrlEmpresa1.Location = New System.Drawing.Point(38, 93)
+        Me.CtrlEmpresa1.Name = "CtrlEmpresa1"
+        Me.CtrlEmpresa1.Size = New System.Drawing.Size(383, 25)
+        Me.CtrlEmpresa1.TabIndex = 9
+        '
         'cb_comoconocio
         '
         Me.cb_comoconocio.DataBindings.Add(New System.Windows.Forms.Binding("SelectedItem", Me.PACIENTESBindingSource, "CONOCIO", True))
@@ -732,6 +997,24 @@ Partial Class frmPaciente_Editar
         Me.pnlBeneficiario.TabIndex = 63
         Me.pnlBeneficiario.Visible = False
         '
+        'lblFechaValidoBeneficiario
+        '
+        Me.lblFechaValidoBeneficiario.AutoSize = True
+        Me.lblFechaValidoBeneficiario.Location = New System.Drawing.Point(74, 122)
+        Me.lblFechaValidoBeneficiario.Name = "lblFechaValidoBeneficiario"
+        Me.lblFechaValidoBeneficiario.Size = New System.Drawing.Size(16, 13)
+        Me.lblFechaValidoBeneficiario.TabIndex = 51
+        Me.lblFechaValidoBeneficiario.Text = "..."
+        '
+        'lblValido
+        '
+        Me.lblValido.AutoSize = True
+        Me.lblValido.Location = New System.Drawing.Point(6, 122)
+        Me.lblValido.Name = "lblValido"
+        Me.lblValido.Size = New System.Drawing.Size(68, 13)
+        Me.lblValido.TabIndex = 50
+        Me.lblValido.Text = "Válido hasta:"
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -749,6 +1032,24 @@ Partial Class frmPaciente_Editar
         Me.lblSocioBeneficiario.Size = New System.Drawing.Size(196, 18)
         Me.lblSocioBeneficiario.TabIndex = 0
         Me.lblSocioBeneficiario.Text = "0000"
+        '
+        'txtNomSocio
+        '
+        Me.txtNomSocio.AcceptsReturn = True
+        Me.txtNomSocio.Location = New System.Drawing.Point(6, 48)
+        Me.txtNomSocio.Name = "txtNomSocio"
+        Me.txtNomSocio.ReadOnly = True
+        Me.txtNomSocio.Size = New System.Drawing.Size(193, 20)
+        Me.txtNomSocio.TabIndex = 1
+        '
+        'txtParentescoSocio
+        '
+        Me.txtParentescoSocio.AcceptsReturn = True
+        Me.txtParentescoSocio.Location = New System.Drawing.Point(6, 87)
+        Me.txtParentescoSocio.Name = "txtParentescoSocio"
+        Me.txtParentescoSocio.ReadOnly = True
+        Me.txtParentescoSocio.Size = New System.Drawing.Size(193, 20)
+        Me.txtParentescoSocio.TabIndex = 2
         '
         'Label7
         '
@@ -804,6 +1105,28 @@ Partial Class frmPaciente_Editar
         Me.chb_dpActivo.Size = New System.Drawing.Size(17, 24)
         Me.chb_dpActivo.TabIndex = 3
         Me.chb_dpActivo.Text = "En activo"
+        '
+        'tb_dpTarsanit
+        '
+        Me.tb_dpTarsanit.AcceptsReturn = True
+        Me.tb_dpTarsanit.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "TARJETASANITARIA", True))
+        Me.tb_dpTarsanit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_dpTarsanit.Location = New System.Drawing.Point(93, 64)
+        Me.tb_dpTarsanit.MaxLength = 50
+        Me.tb_dpTarsanit.Name = "tb_dpTarsanit"
+        Me.tb_dpTarsanit.Size = New System.Drawing.Size(120, 20)
+        Me.tb_dpTarsanit.TabIndex = 2
+        '
+        'tb_dpNss
+        '
+        Me.tb_dpNss.AcceptsReturn = True
+        Me.tb_dpNss.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "NSS", True))
+        Me.tb_dpNss.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_dpNss.Location = New System.Drawing.Point(95, 33)
+        Me.tb_dpNss.MaxLength = 12
+        Me.tb_dpNss.Name = "tb_dpNss"
+        Me.tb_dpNss.Size = New System.Drawing.Size(122, 20)
+        Me.tb_dpNss.TabIndex = 1
         '
         'TabPage2
         '
@@ -983,7 +1306,7 @@ Partial Class frmPaciente_Editar
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(60, 22)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(63, 22)
         Me.ToolStripLabel1.Text = "Empresas :"
         '
         'ToolStripSeparator2
@@ -996,7 +1319,7 @@ Partial Class frmPaciente_Editar
         Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
         Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(58, 22)
+        Me.ToolStripButton2.Size = New System.Drawing.Size(62, 22)
         Me.ToolStripButton2.Text = "&Añadir"
         '
         'ToolStripButton3
@@ -1004,7 +1327,7 @@ Partial Class frmPaciente_Editar
         Me.ToolStripButton3.Image = Global.centro_medico.My.Resources.Resources._24_tag_pencil
         Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(70, 22)
+        Me.ToolStripButton3.Size = New System.Drawing.Size(78, 22)
         Me.ToolStripButton3.Text = "&Modificar"
         '
         'ToolStripButton4
@@ -1012,7 +1335,7 @@ Partial Class frmPaciente_Editar
         Me.ToolStripButton4.Image = CType(resources.GetObject("ToolStripButton4.Image"), System.Drawing.Image)
         Me.ToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton4.Name = "ToolStripButton4"
-        Me.ToolStripButton4.Size = New System.Drawing.Size(63, 22)
+        Me.ToolStripButton4.Size = New System.Drawing.Size(70, 22)
         Me.ToolStripButton4.Text = "&Eliminar"
         '
         'ToolStripSeparator3
@@ -1026,7 +1349,7 @@ Partial Class frmPaciente_Editar
         Me.ToolStripButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton5.Name = "ToolStripButton5"
-        Me.ToolStripButton5.Size = New System.Drawing.Size(66, 22)
+        Me.ToolStripButton5.Size = New System.Drawing.Size(73, 22)
         Me.ToolStripButton5.Text = "Principal"
         Me.ToolStripButton5.ToolTipText = "Marcar como principal"
         '
@@ -1046,7 +1369,7 @@ Partial Class frmPaciente_Editar
         'ToolStripLabel2
         '
         Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(52, 22)
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(56, 22)
         Me.ToolStripLabel2.Text = "Mutuas : "
         '
         'ToolStripSeparator4
@@ -1059,7 +1382,7 @@ Partial Class frmPaciente_Editar
         Me.tstAnnadir_Tratamiento.Image = CType(resources.GetObject("tstAnnadir_Tratamiento.Image"), System.Drawing.Image)
         Me.tstAnnadir_Tratamiento.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tstAnnadir_Tratamiento.Name = "tstAnnadir_Tratamiento"
-        Me.tstAnnadir_Tratamiento.Size = New System.Drawing.Size(58, 22)
+        Me.tstAnnadir_Tratamiento.Size = New System.Drawing.Size(62, 22)
         Me.tstAnnadir_Tratamiento.Text = "&Añadir"
         '
         'tst_Modificar_Tratamiento
@@ -1067,7 +1390,7 @@ Partial Class frmPaciente_Editar
         Me.tst_Modificar_Tratamiento.Image = Global.centro_medico.My.Resources.Resources._24_tag_pencil
         Me.tst_Modificar_Tratamiento.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tst_Modificar_Tratamiento.Name = "tst_Modificar_Tratamiento"
-        Me.tst_Modificar_Tratamiento.Size = New System.Drawing.Size(70, 22)
+        Me.tst_Modificar_Tratamiento.Size = New System.Drawing.Size(78, 22)
         Me.tst_Modificar_Tratamiento.Text = "&Modificar"
         '
         'tst_Eliminar_Tratamiento
@@ -1075,7 +1398,7 @@ Partial Class frmPaciente_Editar
         Me.tst_Eliminar_Tratamiento.Image = CType(resources.GetObject("tst_Eliminar_Tratamiento.Image"), System.Drawing.Image)
         Me.tst_Eliminar_Tratamiento.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tst_Eliminar_Tratamiento.Name = "tst_Eliminar_Tratamiento"
-        Me.tst_Eliminar_Tratamiento.Size = New System.Drawing.Size(63, 22)
+        Me.tst_Eliminar_Tratamiento.Size = New System.Drawing.Size(70, 22)
         Me.tst_Eliminar_Tratamiento.Text = "&Eliminar"
         '
         'ToolStripSeparator1
@@ -1089,7 +1412,7 @@ Partial Class frmPaciente_Editar
         Me.ToolStripButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(66, 22)
+        Me.ToolStripButton1.Size = New System.Drawing.Size(73, 22)
         Me.ToolStripButton1.Text = "Principal"
         Me.ToolStripButton1.ToolTipText = "Marcar como principal"
         '
@@ -1146,337 +1469,6 @@ Partial Class frmPaciente_Editar
         '
         Me.LEMPRESABindingSource.DataSource = GetType(centro_medico.LEMPRESA)
         '
-        'ToolStrip2
-        '
-        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbGuardar, Me.tsbCancelar})
-        Me.ToolStrip2.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip2.Name = "ToolStrip2"
-        Me.ToolStrip2.Size = New System.Drawing.Size(938, 25)
-        Me.ToolStrip2.TabIndex = 0
-        Me.ToolStrip2.Text = "ToolStrip2"
-        '
-        'tsbGuardar
-        '
-        Me.tsbGuardar.Image = Global.centro_medico.My.Resources.Resources._24_em_check
-        Me.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbGuardar.Name = "tsbGuardar"
-        Me.tsbGuardar.Size = New System.Drawing.Size(66, 22)
-        Me.tsbGuardar.Text = "Gu&ardar"
-        '
-        'tsbCancelar
-        '
-        Me.tsbCancelar.Image = CType(resources.GetObject("tsbCancelar.Image"), System.Drawing.Image)
-        Me.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbCancelar.Name = "tsbCancelar"
-        Me.tsbCancelar.Size = New System.Drawing.Size(69, 22)
-        Me.tsbCancelar.Text = "Can&celar"
-        '
-        'ComoConocioBindingSource
-        '
-        Me.ComoConocioBindingSource.DataSource = GetType(centro_medico.ComoConocio)
-        '
-        'lblEliminado
-        '
-        Me.lblEliminado.AutoSize = True
-        Me.lblEliminado.BackColor = System.Drawing.Color.Transparent
-        Me.lblEliminado.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEliminado.ForeColor = System.Drawing.Color.Red
-        Me.lblEliminado.Location = New System.Drawing.Point(406, 5)
-        Me.lblEliminado.Name = "lblEliminado"
-        Me.lblEliminado.Size = New System.Drawing.Size(183, 18)
-        Me.lblEliminado.TabIndex = 39
-        Me.lblEliminado.Text = "PACIENTE ELIMINADO"
-        Me.lblEliminado.Visible = False
-        '
-        'dtpsociohasta
-        '
-        Me.dtpsociohasta.AccessibleDescription = "Define hasta que fecha es socio el paciente"
-        Me.dtpsociohasta.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PACIENTESBindingSource, "SOCIOVALIDOHASTA", True))
-        Me.dtpsociohasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpsociohasta.Location = New System.Drawing.Point(598, 95)
-        Me.dtpsociohasta.Name = "dtpsociohasta"
-        Me.dtpsociohasta.Size = New System.Drawing.Size(86, 20)
-        Me.dtpsociohasta.TabIndex = 66
-        Me.dtpsociohasta.Visible = False
-        '
-        'tb_web
-        '
-        Me.tb_web.AcceptsReturn = True
-        Me.tb_web.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "WEB", True))
-        Me.tb_web.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_web.Location = New System.Drawing.Point(399, 100)
-        Me.tb_web.MaxLength = 200
-        Me.tb_web.Name = "tb_web"
-        Me.tb_web.Size = New System.Drawing.Size(139, 20)
-        Me.tb_web.TabIndex = 9
-        '
-        'tb_dpCodigopostal
-        '
-        Me.tb_dpCodigopostal.AcceptsReturn = True
-        Me.tb_dpCodigopostal.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "CP", True))
-        Me.tb_dpCodigopostal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_dpCodigopostal.Location = New System.Drawing.Point(544, 48)
-        Me.tb_dpCodigopostal.MaxLength = 5
-        Me.tb_dpCodigopostal.Name = "tb_dpCodigopostal"
-        Me.tb_dpCodigopostal.Size = New System.Drawing.Size(93, 20)
-        Me.tb_dpCodigopostal.TabIndex = 4
-        '
-        'CtrlPaises1
-        '
-        Me.CtrlPaises1.DataBindings.Add(New System.Windows.Forms.Binding("ID_PAISES", Me.PACIENTESBindingSource, "REFPAIS", True))
-        Me.CtrlPaises1.ID_PAISES = Nothing
-        Me.CtrlPaises1.Location = New System.Drawing.Point(509, 97)
-        Me.CtrlPaises1.Name = "CtrlPaises1"
-        Me.CtrlPaises1.Size = New System.Drawing.Size(258, 25)
-        Me.CtrlPaises1.TabIndex = 10
-        '
-        'tb_Email
-        '
-        Me.tb_Email.AcceptsReturn = True
-        Me.tb_Email.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
-        Me.tb_Email.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "EMAIL", True))
-        Me.tb_Email.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_Email.Location = New System.Drawing.Point(236, 100)
-        Me.tb_Email.MaxLength = 200
-        Me.tb_Email.Name = "tb_Email"
-        Me.tb_Email.Size = New System.Drawing.Size(157, 20)
-        Me.tb_Email.TabIndex = 8
-        '
-        'tb_dpTutorLegal
-        '
-        Me.tb_dpTutorLegal.AcceptsReturn = True
-        Me.tb_dpTutorLegal.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "TUTOR", True))
-        Me.tb_dpTutorLegal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_dpTutorLegal.Location = New System.Drawing.Point(553, 149)
-        Me.tb_dpTutorLegal.MaxLength = 90
-        Me.tb_dpTutorLegal.Name = "tb_dpTutorLegal"
-        Me.tb_dpTutorLegal.Size = New System.Drawing.Size(214, 20)
-        Me.tb_dpTutorLegal.TabIndex = 16
-        '
-        'tb_dpNie
-        '
-        Me.tb_dpNie.AcceptsReturn = True
-        Me.tb_dpNie.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "NIE", True))
-        Me.tb_dpNie.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_dpNie.Location = New System.Drawing.Point(438, 148)
-        Me.tb_dpNie.MaxLength = 15
-        Me.tb_dpNie.Name = "tb_dpNie"
-        Me.tb_dpNie.Size = New System.Drawing.Size(97, 20)
-        Me.tb_dpNie.TabIndex = 15
-        '
-        'tb_dpPasaporte
-        '
-        Me.tb_dpPasaporte.AcceptsReturn = True
-        Me.tb_dpPasaporte.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "PASAPORTE", True))
-        Me.tb_dpPasaporte.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_dpPasaporte.Location = New System.Drawing.Point(300, 149)
-        Me.tb_dpPasaporte.MaxLength = 25
-        Me.tb_dpPasaporte.Name = "tb_dpPasaporte"
-        Me.tb_dpPasaporte.Size = New System.Drawing.Size(124, 20)
-        Me.tb_dpPasaporte.TabIndex = 14
-        '
-        'tb_dpMovil
-        '
-        Me.tb_dpMovil.AcceptsReturn = True
-        Me.tb_dpMovil.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "MOVIL", True))
-        Me.tb_dpMovil.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_dpMovil.Location = New System.Drawing.Point(129, 100)
-        Me.tb_dpMovil.MaxLength = 200
-        Me.tb_dpMovil.Name = "tb_dpMovil"
-        Me.tb_dpMovil.Size = New System.Drawing.Size(99, 20)
-        Me.tb_dpMovil.TabIndex = 7
-        '
-        'tb_dpProvincia
-        '
-        Me.tb_dpProvincia.AcceptsReturn = True
-        Me.tb_dpProvincia.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "PROVINCIA", True))
-        Me.tb_dpProvincia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_dpProvincia.Location = New System.Drawing.Point(399, 48)
-        Me.tb_dpProvincia.MaxLength = 300
-        Me.tb_dpProvincia.Name = "tb_dpProvincia"
-        Me.tb_dpProvincia.Size = New System.Drawing.Size(139, 20)
-        Me.tb_dpProvincia.TabIndex = 3
-        '
-        'tb_dpTlfno
-        '
-        Me.tb_dpTlfno.AcceptsReturn = True
-        Me.tb_dpTlfno.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "TLFNO", True))
-        Me.tb_dpTlfno.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_dpTlfno.Location = New System.Drawing.Point(20, 100)
-        Me.tb_dpTlfno.MaxLength = 200
-        Me.tb_dpTlfno.Name = "tb_dpTlfno"
-        Me.tb_dpTlfno.Size = New System.Drawing.Size(100, 20)
-        Me.tb_dpTlfno.TabIndex = 6
-        '
-        'tb_dpPoblacion
-        '
-        Me.tb_dpPoblacion.AcceptsReturn = True
-        Me.tb_dpPoblacion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "LOCALIDAD", True))
-        Me.tb_dpPoblacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_dpPoblacion.Location = New System.Drawing.Point(253, 48)
-        Me.tb_dpPoblacion.MaxLength = 200
-        Me.tb_dpPoblacion.Name = "tb_dpPoblacion"
-        Me.tb_dpPoblacion.Size = New System.Drawing.Size(140, 20)
-        Me.tb_dpPoblacion.TabIndex = 2
-        '
-        'tb_dpEdad
-        '
-        Me.tb_dpEdad.AcceptsReturn = True
-        Me.tb_dpEdad.BackColor = System.Drawing.SystemColors.Info
-        Me.tb_dpEdad.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_dpEdad.Location = New System.Drawing.Point(129, 149)
-        Me.tb_dpEdad.Name = "tb_dpEdad"
-        Me.tb_dpEdad.ReadOnly = True
-        Me.tb_dpEdad.Size = New System.Drawing.Size(39, 20)
-        Me.tb_dpEdad.TabIndex = 12
-        '
-        'tb_dpDni
-        '
-        Me.tb_dpDni.AcceptsReturn = True
-        Me.tb_dpDni.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "DNI", True))
-        Me.tb_dpDni.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_dpDni.Location = New System.Drawing.Point(185, 148)
-        Me.tb_dpDni.MaxLength = 8
-        Me.tb_dpDni.Name = "tb_dpDni"
-        Me.tb_dpDni.Size = New System.Drawing.Size(80, 20)
-        Me.tb_dpDni.TabIndex = 13
-        '
-        'tb_domicilio
-        '
-        Me.tb_domicilio.AcceptsReturn = True
-        Me.tb_domicilio.AccessibleDescription = "l"
-        Me.tb_domicilio.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "DOMICILIO", True))
-        Me.tb_domicilio.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_domicilio.Location = New System.Drawing.Point(19, 48)
-        Me.tb_domicilio.MaxLength = 150
-        Me.tb_domicilio.Name = "tb_domicilio"
-        Me.tb_domicilio.Size = New System.Drawing.Size(228, 20)
-        Me.tb_domicilio.TabIndex = 1
-        '
-        'tb_dpObservaciones
-        '
-        Me.tb_dpObservaciones.AcceptsReturn = True
-        Me.tb_dpObservaciones.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tb_dpObservaciones.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "OBSERVACIONES", True))
-        Me.tb_dpObservaciones.Location = New System.Drawing.Point(6, 19)
-        Me.tb_dpObservaciones.MaxLength = 2147483647
-        Me.tb_dpObservaciones.Multiline = True
-        Me.tb_dpObservaciones.Name = "tb_dpObservaciones"
-        Me.tb_dpObservaciones.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.tb_dpObservaciones.Size = New System.Drawing.Size(893, 69)
-        Me.tb_dpObservaciones.TabIndex = 0
-        '
-        'tb_CodigoPaciente
-        '
-        Me.tb_CodigoPaciente.AcceptsReturn = True
-        Me.tb_CodigoPaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "CPACIENTE", True))
-        Me.tb_CodigoPaciente.Location = New System.Drawing.Point(112, 32)
-        Me.tb_CodigoPaciente.Name = "tb_CodigoPaciente"
-        Me.tb_CodigoPaciente.ReadOnly = True
-        Me.tb_CodigoPaciente.Size = New System.Drawing.Size(47, 20)
-        Me.tb_CodigoPaciente.TabIndex = 1
-        '
-        'tb_Nombre
-        '
-        Me.tb_Nombre.AcceptsReturn = True
-        Me.tb_Nombre.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "NOMBRE", True))
-        Me.tb_Nombre.Location = New System.Drawing.Point(544, 32)
-        Me.tb_Nombre.MaxLength = 255
-        Me.tb_Nombre.Name = "tb_Nombre"
-        Me.tb_Nombre.Size = New System.Drawing.Size(147, 20)
-        Me.tb_Nombre.TabIndex = 4
-        '
-        'tb_CodigoPropio
-        '
-        Me.tb_CodigoPropio.AcceptsReturn = True
-        Me.tb_CodigoPropio.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "CODIGOPROPIO", True))
-        Me.tb_CodigoPropio.Location = New System.Drawing.Point(25, 32)
-        Me.tb_CodigoPropio.Name = "tb_CodigoPropio"
-        Me.tb_CodigoPropio.Size = New System.Drawing.Size(70, 20)
-        Me.tb_CodigoPropio.TabIndex = 0
-        '
-        'tb_Apellido2
-        '
-        Me.tb_Apellido2.AcceptsReturn = True
-        Me.tb_Apellido2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "APELLIDO2", True))
-        Me.tb_Apellido2.Location = New System.Drawing.Point(377, 32)
-        Me.tb_Apellido2.MaxLength = 255
-        Me.tb_Apellido2.Name = "tb_Apellido2"
-        Me.tb_Apellido2.Size = New System.Drawing.Size(147, 20)
-        Me.tb_Apellido2.TabIndex = 3
-        '
-        'tb_Apellido1
-        '
-        Me.tb_Apellido1.AcceptsReturn = True
-        Me.tb_Apellido1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "APELLIDO1", True))
-        Me.tb_Apellido1.Location = New System.Drawing.Point(185, 32)
-        Me.tb_Apellido1.MaxLength = 255
-        Me.tb_Apellido1.Name = "tb_Apellido1"
-        Me.tb_Apellido1.Size = New System.Drawing.Size(176, 20)
-        Me.tb_Apellido1.TabIndex = 2
-        '
-        'CtrlMutua1
-        '
-        Me.CtrlMutua1.ID_MUTUA = Nothing
-        Me.CtrlMutua1.Location = New System.Drawing.Point(42, 123)
-        Me.CtrlMutua1.Name = "CtrlMutua1"
-        Me.CtrlMutua1.Size = New System.Drawing.Size(378, 29)
-        Me.CtrlMutua1.TabIndex = 65
-        '
-        'CtrlEmpresa1
-        '
-        Me.CtrlEmpresa1.DataBindings.Add(New System.Windows.Forms.Binding("ID_EMPRESAS", Me.PACIENTESBindingSource, "REFEMPRESA", True))
-        Me.CtrlEmpresa1.DataBindings.Add(New System.Windows.Forms.Binding("IDPACIENTE", Me.PACIENTESBindingSource, "CPACIENTE", True))
-        Me.CtrlEmpresa1.EsEmpresaPorDefecto = True
-        Me.CtrlEmpresa1.ID_EMPRESAS = Nothing
-        Me.CtrlEmpresa1.IDPACIENTE = Nothing
-        Me.CtrlEmpresa1.Location = New System.Drawing.Point(38, 93)
-        Me.CtrlEmpresa1.Name = "CtrlEmpresa1"
-        Me.CtrlEmpresa1.Size = New System.Drawing.Size(383, 25)
-        Me.CtrlEmpresa1.TabIndex = 9
-        '
-        'txtNomSocio
-        '
-        Me.txtNomSocio.AcceptsReturn = True
-        Me.txtNomSocio.Location = New System.Drawing.Point(6, 48)
-        Me.txtNomSocio.Name = "txtNomSocio"
-        Me.txtNomSocio.ReadOnly = True
-        Me.txtNomSocio.Size = New System.Drawing.Size(193, 20)
-        Me.txtNomSocio.TabIndex = 1
-        '
-        'txtParentescoSocio
-        '
-        Me.txtParentescoSocio.AcceptsReturn = True
-        Me.txtParentescoSocio.Location = New System.Drawing.Point(6, 87)
-        Me.txtParentescoSocio.Name = "txtParentescoSocio"
-        Me.txtParentescoSocio.ReadOnly = True
-        Me.txtParentescoSocio.Size = New System.Drawing.Size(193, 20)
-        Me.txtParentescoSocio.TabIndex = 2
-        '
-        'tb_dpTarsanit
-        '
-        Me.tb_dpTarsanit.AcceptsReturn = True
-        Me.tb_dpTarsanit.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "TARJETASANITARIA", True))
-        Me.tb_dpTarsanit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_dpTarsanit.Location = New System.Drawing.Point(93, 64)
-        Me.tb_dpTarsanit.MaxLength = 50
-        Me.tb_dpTarsanit.Name = "tb_dpTarsanit"
-        Me.tb_dpTarsanit.Size = New System.Drawing.Size(120, 20)
-        Me.tb_dpTarsanit.TabIndex = 2
-        '
-        'tb_dpNss
-        '
-        Me.tb_dpNss.AcceptsReturn = True
-        Me.tb_dpNss.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "NSS", True))
-        Me.tb_dpNss.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_dpNss.Location = New System.Drawing.Point(95, 33)
-        Me.tb_dpNss.MaxLength = 12
-        Me.tb_dpNss.Name = "tb_dpNss"
-        Me.tb_dpNss.Size = New System.Drawing.Size(122, 20)
-        Me.tb_dpNss.TabIndex = 1
-        '
         'tb_hlPuesto
         '
         Me.tb_hlPuesto.AcceptsReturn = True
@@ -1497,23 +1489,47 @@ Partial Class frmPaciente_Editar
         Me.tb_hlProfesion.TabIndex = 0
         Me.tb_hlProfesion.Visible = False
         '
-        'lblValido
+        'ToolStrip2
         '
-        Me.lblValido.AutoSize = True
-        Me.lblValido.Location = New System.Drawing.Point(6, 122)
-        Me.lblValido.Name = "lblValido"
-        Me.lblValido.Size = New System.Drawing.Size(68, 13)
-        Me.lblValido.TabIndex = 50
-        Me.lblValido.Text = "Válido hasta:"
+        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbGuardar, Me.tsbCancelar})
+        Me.ToolStrip2.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip2.Name = "ToolStrip2"
+        Me.ToolStrip2.Size = New System.Drawing.Size(938, 25)
+        Me.ToolStrip2.TabIndex = 0
+        Me.ToolStrip2.Text = "ToolStrip2"
         '
-        'lblFechaValidoBeneficiario
+        'tsbGuardar
         '
-        Me.lblFechaValidoBeneficiario.AutoSize = True
-        Me.lblFechaValidoBeneficiario.Location = New System.Drawing.Point(74, 122)
-        Me.lblFechaValidoBeneficiario.Name = "lblFechaValidoBeneficiario"
-        Me.lblFechaValidoBeneficiario.Size = New System.Drawing.Size(16, 13)
-        Me.lblFechaValidoBeneficiario.TabIndex = 51
-        Me.lblFechaValidoBeneficiario.Text = "..."
+        Me.tsbGuardar.Image = Global.centro_medico.My.Resources.Resources._24_em_check
+        Me.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbGuardar.Name = "tsbGuardar"
+        Me.tsbGuardar.Size = New System.Drawing.Size(69, 22)
+        Me.tsbGuardar.Text = "Gu&ardar"
+        '
+        'tsbCancelar
+        '
+        Me.tsbCancelar.Image = CType(resources.GetObject("tsbCancelar.Image"), System.Drawing.Image)
+        Me.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbCancelar.Name = "tsbCancelar"
+        Me.tsbCancelar.Size = New System.Drawing.Size(73, 22)
+        Me.tsbCancelar.Text = "Can&celar"
+        '
+        'ComoConocioBindingSource
+        '
+        Me.ComoConocioBindingSource.DataSource = GetType(centro_medico.ComoConocio)
+        '
+        'lblEliminado
+        '
+        Me.lblEliminado.AutoSize = True
+        Me.lblEliminado.BackColor = System.Drawing.Color.Transparent
+        Me.lblEliminado.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEliminado.ForeColor = System.Drawing.Color.Red
+        Me.lblEliminado.Location = New System.Drawing.Point(406, 5)
+        Me.lblEliminado.Name = "lblEliminado"
+        Me.lblEliminado.Size = New System.Drawing.Size(183, 18)
+        Me.lblEliminado.TabIndex = 39
+        Me.lblEliminado.Text = "PACIENTE ELIMINADO"
+        Me.lblEliminado.Visible = False
         '
         'frmPaciente_Editar
         '
@@ -1662,4 +1678,5 @@ Partial Class frmPaciente_Editar
     Friend WithEvents dtpsociohasta As System.Windows.Forms.DateTimePicker
     Friend WithEvents lblFechaValidoBeneficiario As System.Windows.Forms.Label
     Friend WithEvents lblValido As System.Windows.Forms.Label
+    Friend WithEvents Button3 As System.Windows.Forms.Button
 End Class
