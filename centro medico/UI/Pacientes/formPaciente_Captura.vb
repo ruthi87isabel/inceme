@@ -144,4 +144,20 @@ Public Class formPaciente_Captura
 
     End Property
 
+    Public Function TestConnection() As Boolean
+        hHwnd = capCreateCaptureWindowA(iDevice, WS_VISIBLE Or WS_CHILD, 0, 0, 640, _
+           480, Display.Handle.ToInt32, 0)
+
+        ' Connect to device
+        '
+        SendMessage(hHwnd, WM_CAP_DRIVER_CONNECT, iDevice, 0)
+        If SendMessage(hHwnd, WM_CAP_DRIVER_CONNECT, iDevice, 0) Then
+            DestroyWindow(hHwnd)
+            Return True
+        Else
+            DestroyWindow(hHwnd)
+            Return False
+        End If
+    End Function
+
 End Class

@@ -55,7 +55,7 @@ Partial Class frmPaciente_Editar
         Dim GridEXEmpresas_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPageDetalles = New System.Windows.Forms.TabPage()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.webcam = New System.Windows.Forms.Button()
         Me.gb_dpDatPer = New System.Windows.Forms.GroupBox()
         Me.lb_dpLetradni = New System.Windows.Forms.Label()
         Me.tb_web = New centro_medico.ctrlTextboxAvanzado()
@@ -469,7 +469,7 @@ Partial Class frmPaciente_Editar
         'TabPageDetalles
         '
         Me.TabPageDetalles.BackColor = System.Drawing.SystemColors.Window
-        Me.TabPageDetalles.Controls.Add(Me.Button3)
+        Me.TabPageDetalles.Controls.Add(Me.webcam)
         Me.TabPageDetalles.Controls.Add(Me.gb_dpDatPer)
         Me.TabPageDetalles.Controls.Add(Me.Button1)
         Me.TabPageDetalles.Controls.Add(Me.Button2)
@@ -493,19 +493,19 @@ Partial Class frmPaciente_Editar
         Me.TabPageDetalles.TabIndex = 0
         Me.TabPageDetalles.Text = "Detalles"
         '
-        'Button3
+        'webcam
         '
-        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Image = Global.centro_medico.My.Resources.Resources.webcam
-        Me.Button3.Location = New System.Drawing.Point(847, 141)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(16, 16)
-        Me.Button3.TabIndex = 63
-        Me.Button3.TabStop = False
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.webcam.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.webcam.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.webcam.FlatAppearance.BorderSize = 0
+        Me.webcam.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.webcam.Image = Global.centro_medico.My.Resources.Resources.webcam
+        Me.webcam.Location = New System.Drawing.Point(847, 141)
+        Me.webcam.Name = "webcam"
+        Me.webcam.Size = New System.Drawing.Size(16, 16)
+        Me.webcam.TabIndex = 63
+        Me.webcam.TabStop = False
+        Me.webcam.UseVisualStyleBackColor = True
         '
         'gb_dpDatPer
         '
@@ -1678,5 +1678,5 @@ Partial Class frmPaciente_Editar
     Friend WithEvents dtpsociohasta As System.Windows.Forms.DateTimePicker
     Friend WithEvents lblFechaValidoBeneficiario As System.Windows.Forms.Label
     Friend WithEvents lblValido As System.Windows.Forms.Label
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents webcam As System.Windows.Forms.Button
 End Class

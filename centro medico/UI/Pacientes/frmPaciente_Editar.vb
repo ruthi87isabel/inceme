@@ -114,6 +114,9 @@ Public Class frmPaciente_Editar
         Me.pac = (From p In Me.context.PACIENTEs Where p.CPACIENTE = idPaciente Select p).First()
         Me.PACIENTESBindingSource.DataSource = Me.pac
 
+        Dim frm As formPaciente_Captura = New formPaciente_Captura()
+        webcam.Enabled = frm.TestConnection()
+
 
         ' Dim context As New CMLinqDataContext()
 
@@ -1077,13 +1080,18 @@ Public Class frmPaciente_Editar
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub webcam_Click(sender As Object, e As EventArgs) Handles webcam.Click
         Dim frm As formPaciente_Captura = New formPaciente_Captura()
         frm.ShowDialog()
-        If frm.Selected <> Nothing And frm.Selected <> "" And frm.Selected.Contains(":\") Then
-            Dim Path As String = frm.Selected
-            LoadPicture(Path)
+        If frm.TestConnection() Then
+            If frm.Selected <> Nothing And frm.Selected <> "" Then
+                If frm.Selected.Contains(":\") Then
+                    Dim Path As String = frm.Selected
+                    LoadPicture(Path)
+                End If
+            End If
         End If
+
         GC.Collect()
     End Sub
 End Class
