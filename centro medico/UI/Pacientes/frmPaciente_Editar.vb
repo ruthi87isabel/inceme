@@ -425,32 +425,6 @@ Public Class frmPaciente_Editar
         End If
     End Sub
 
-    Public Sub LoadPicture(dir As String)
-        If dir <> "" Then
-            Try
-                Dim context As New CMLinqDataContext()
-                Dim pac As PACIENTE = (From p In context.PACIENTEs Where p.CPACIENTE = Me.IDPACIENTE Select p).First()
-                Dim _imagen As Bitmap = New Bitmap(dir)
-                Dim _indice As Integer = dir.LastIndexOf("\")
-                Dim _name As String = dir.Substring(_indice + 1)
-                Dim _bytes() As Byte = ConvertToByteArray(_imagen)
-                pac.FOTO() = _bytes
-                pac.FOTOGRAFIA = _name
-
-                fImagen = _bytes
-                Using stream As New System.IO.MemoryStream(fImagen)
-                    Dim _imagenPintar As Bitmap = New Bitmap(stream)
-                    pb_dpImagen.BackgroundImage = _imagenPintar
-                    pb_dpImagen.BackgroundImageLayout = ImageLayout.Stretch
-                End Using
-                context.SubmitChanges()
-                pb_dpImagen.Refresh()
-            Catch ex As Exception
-                MessageBox.Show("Error al cargar imagen " & ex.Message)
-            End Try
-        End If
-    End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If Not fImagen Is Nothing Then
             Dim context As New CMLinqDataContext()
@@ -1082,16 +1056,13 @@ Public Class frmPaciente_Editar
 
     Private Sub webcam_Click(sender As Object, e As EventArgs) Handles webcam.Click
         Dim frm As formPaciente_Captura = New formPaciente_Captura()
+        frm.IDPAC = IDPACIENTE
         frm.ShowDialog()
-        If frm.TestConnection() Then
-            If frm.Selected <> Nothing And frm.Selected <> "" Then
-                If frm.Selected.Contains(":\") Then
-                    Dim Path As String = frm.Selected
-                    LoadPicture(Path)
-                End If
-            End If
+        If Not frm.Selected Is Nothing Then
+            Dim IMAGEN As Image = frm.Selected
+            pb_dpImagen.BackgroundImage = IMAGEN
+            pb_dpImagen.BackgroundImageLayout = ImageLayout.Stretch
         End If
-
         GC.Collect()
     End Sub
 End Class

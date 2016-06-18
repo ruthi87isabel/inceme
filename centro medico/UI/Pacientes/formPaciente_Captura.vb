@@ -1,15 +1,11 @@
 ﻿Imports System.Runtime.InteropServices
 
 Public Class formPaciente_Captura
-    Public direccion As String
+    Public IDPAC As Integer
     Dim DATOS As IDataObject
     Dim IMAGEN As Image
-    Dim CARPETA As String
-    Dim FECHA As String = DateTime.Now.ToShortDateString().Replace("/", "_") + "_" + DateTime.Now.ToLongTimeString().Replace(":", "_")
-    Dim DIRECTORIO As String = "C:\Users\SALVADOR\Desktop\" ' AQUI COLOCA LA RUTA A TU ESCRITORIO
-    Dim DESTINO As String
-    Dim CONTADOR As Integer = 1
-    Dim CARPETAS_DIARIAS As String
+    Dim IMG As Image
+
     Public Const WM_CAP As Short = &H400S
     Public Const WM_CAP_DLG_VIDEOFORMAT As Integer = WM_CAP + 41
     Public Const WM_CAP_DRIVER_CONNECT As Integer = WM_CAP + 10
@@ -106,6 +102,7 @@ Public Class formPaciente_Captura
         DATOS = Clipboard.GetDataObject()
 
         IMAGEN = CType(DATOS.GetData(GetType(System.Drawing.Bitmap)), Image)
+
         Display.Visible = False
         GPicture.Visible = False
         Visor.Visible = True
@@ -114,7 +111,7 @@ Public Class formPaciente_Captura
         Visor.Image = IMAGEN
     End Sub
 
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PDelete.Click
+    Private Sub PDelete_Click(sender As Object, e As EventArgs) Handles PDelete.Click
         Display.Visible = True
         GPicture.Visible = True
         Visor.Visible = False
@@ -124,22 +121,37 @@ Public Class formPaciente_Captura
 
     Private Sub Save_Click(sender As Object, e As EventArgs) Handles Save.Click
 
-        SFD.FileName = FECHA
-        SFD.Title = "GUARDAR IMAGEN"
-
-        SFD.Filter = "Jpeg|*.jpg"
-        If SFD.ShowDialog = DialogResult.OK Then IMAGEN.Save(SFD.FileName, Imaging.ImageFormat.Jpeg)
-        direccion = SFD.FileName
+        Try
+            Dim context As New CMLinqDataContext()
+            Dim pac As PACIENTE = (From p In context.PACIENTEs Where p.CPACIENTE = Me.IDPAC Select p).First()
+            Dim _imagen As Bitmap = New Bitmap(IMAGEN)
+            Dim _bytes() As Byte = ConvertToByteArray(_imagen)
+            pac.FOTO() = _bytes
+            pac.FOTOGRAFIA = (DateTime.Now).ToString()
+            IMG = IMAGEN
+            context.SubmitChanges()
+        Catch ex As Exception
+            MessageBox.Show("Error al cargar imagen " & ex.Message)
+        End Try
 
         Me.DialogResult = Windows.Forms.DialogResult.OK
         Me.Close()
 
     End Sub
 
-    Public ReadOnly Property Selected() As String
+    Public Shared Function ConvertToByteArray(ByVal value As Bitmap) As Byte()
+        Dim bitmapBytes As Byte()
+        Using stream As New System.IO.MemoryStream
+            value.Save(stream, System.Drawing.Imaging.ImageFormat.Bmp)
+            bitmapBytes = stream.ToArray
+        End Using
+        Return bitmapBytes
+    End Function
+
+    Public ReadOnly Property Selected() As Image
         ' la parte Get es la que devuelve el valor de la propiedad
         Get
-            Return direccion
+            Return IMG
         End Get
 
     End Property

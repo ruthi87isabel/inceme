@@ -44,7 +44,7 @@ Partial Class formPaciente_Captura
         Me.Display.Location = New System.Drawing.Point(1, 26)
         Me.Display.Name = "Display"
         Me.Display.Size = New System.Drawing.Size(336, 335)
-        Me.Display.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Display.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Display.TabIndex = 1
         Me.Display.TabStop = False
         '
@@ -73,14 +73,14 @@ Partial Class formPaciente_Captura
         '
         'Save
         '
-        Me.Save.Image = Global.centro_medico.My.Resources.Resources.floppy
+        Me.Save.Image = Global.centro_medico.My.Resources.Resources.ok_picture
         Me.Save.Location = New System.Drawing.Point(12, 1)
         Me.Save.Name = "Save"
         Me.Save.Size = New System.Drawing.Size(25, 25)
         Me.Save.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Save.TabIndex = 7
         Me.Save.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.Save, "Cancelar")
+        Me.ToolTip1.SetToolTip(Me.Save, "Aceptar")
         Me.Save.Visible = False
         '
         'GPicture
@@ -92,7 +92,7 @@ Partial Class formPaciente_Captura
         Me.GPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.GPicture.TabIndex = 8
         Me.GPicture.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.GPicture, "Cancelar")
+        Me.ToolTip1.SetToolTip(Me.GPicture, "Capturar")
         '
         'formPaciente_Captura
         '

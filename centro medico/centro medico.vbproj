@@ -2418,6 +2418,7 @@
     <Content Include="Resources\new\PicDoctor.jpg" />
     <Content Include="Resources\new\PicReception.jpg" />
     <Content Include="Resources\new\Search.jpg" />
+    <None Include="Resources\ok_picture.png" />
     <Content Include="Resources\permisos.png" />
     <None Include="Resources\webcam.png" />
     <None Include="Resources\wc.png" />
