@@ -2413,6 +2413,7 @@
     <Content Include="Resources\new\Micon_Clinica.png" />
     <Content Include="Resources\new\newpag.png" />
     <None Include="Resources\new\PartPag.png" />
+    <None Include="Resources\new\PartPag1.png" />
     <Content Include="Resources\new\PicAdmin.jpg" />
     <Content Include="Resources\new\PicAdmin1.jpg" />
     <Content Include="Resources\new\PicDoctor.jpg" />
