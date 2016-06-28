@@ -358,6 +358,8 @@ Partial Class form_new_centro_medico
         '
         'UiGroupBox1
         '
+        Me.UiGroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.UiGroupBox1.AutoScroll = True
         Me.UiGroupBox1.BackColor = System.Drawing.Color.Transparent
         Me.UiGroupBox1.BorderColor = System.Drawing.Color.Transparent
@@ -595,8 +597,9 @@ Partial Class form_new_centro_medico
         '
         'ExplorerBar1
         '
+        Me.ExplorerBar1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ExplorerBar1.BackgroundFormatStyle.ForeColor = System.Drawing.Color.White
-        Me.ExplorerBar1.BackgroundImage = CType(resources.GetObject("ExplorerBar1.BackgroundImage"), System.Drawing.Image)
         Me.ExplorerBar1.BlendColor = System.Drawing.Color.Transparent
         Me.ExplorerBar1.BorderStyle = Janus.Windows.ExplorerBar.BorderStyle.None
         Me.ExplorerBar1.ColumnSeparation = 5
@@ -825,6 +828,8 @@ Partial Class form_new_centro_medico
         '
         'UiGroupBox2
         '
+        Me.UiGroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.UiGroupBox2.AutoScroll = True
         Me.UiGroupBox2.BackColor = System.Drawing.Color.Transparent
         Me.UiGroupBox2.BorderColor = System.Drawing.Color.Transparent
@@ -920,6 +925,8 @@ Partial Class form_new_centro_medico
         '
         'UiGroupBox3
         '
+        Me.UiGroupBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.UiGroupBox3.AutoScroll = True
         Me.UiGroupBox3.BackColor = System.Drawing.Color.Transparent
         Me.UiGroupBox3.BorderColor = System.Drawing.Color.Transparent
@@ -1151,6 +1158,7 @@ Partial Class form_new_centro_medico
         '
         'UiGBoxInfo
         '
+        Me.UiGBoxInfo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.UiGBoxInfo.BackColor = System.Drawing.Color.Transparent
         Me.UiGBoxInfo.BorderColor = System.Drawing.Color.Transparent
         Me.UiGBoxInfo.Controls.Add(Me.lblInfoBD)
@@ -1292,6 +1300,8 @@ Partial Class form_new_centro_medico
         '
         'UiGroupBox4
         '
+        Me.UiGroupBox4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.UiGroupBox4.AutoScroll = True
         Me.UiGroupBox4.BackColor = System.Drawing.Color.Transparent
         Me.UiGroupBox4.BorderColor = System.Drawing.Color.Transparent
@@ -1543,6 +1553,8 @@ Partial Class form_new_centro_medico
         '
         'UiGroupBox5
         '
+        Me.UiGroupBox5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.UiGroupBox5.AutoScroll = True
         Me.UiGroupBox5.BackColor = System.Drawing.Color.Transparent
         Me.UiGroupBox5.BorderColor = System.Drawing.Color.Transparent
@@ -1709,6 +1721,8 @@ Partial Class form_new_centro_medico
         '
         'UiGroupBox6
         '
+        Me.UiGroupBox6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.UiGroupBox6.AutoScroll = True
         Me.UiGroupBox6.BackColor = System.Drawing.Color.Transparent
         Me.UiGroupBox6.BorderColor = System.Drawing.Color.Transparent
@@ -1816,6 +1830,8 @@ Partial Class form_new_centro_medico
         '
         'UiGroupBox7
         '
+        Me.UiGroupBox7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.UiGroupBox7.AutoScroll = True
         Me.UiGroupBox7.BackColor = System.Drawing.Color.Transparent
         Me.UiGroupBox7.BorderColor = System.Drawing.Color.Transparent
@@ -1947,6 +1963,8 @@ Partial Class form_new_centro_medico
         '
         'UiGroupBox8
         '
+        Me.UiGroupBox8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.UiGroupBox8.AutoScroll = True
         Me.UiGroupBox8.BackColor = System.Drawing.Color.Transparent
         Me.UiGroupBox8.BorderColor = System.Drawing.Color.Transparent
@@ -1995,13 +2013,13 @@ Partial Class form_new_centro_medico
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1008, 645)
+        Me.Controls.Add(Me.UiGroupBox3)
         Me.Controls.Add(Me.SearchCPaciente)
         Me.Controls.Add(Me.SearchCPropio)
         Me.Controls.Add(Me.UiGroupBox7)
         Me.Controls.Add(Me.UiGroupBox6)
         Me.Controls.Add(Me.UiGroupBox5)
         Me.Controls.Add(Me.UiGroupBox4)
-        Me.Controls.Add(Me.UiGroupBox3)
         Me.Controls.Add(Me.UiGroupBox1)
         Me.Controls.Add(Me.UiGroupBox2)
         Me.Controls.Add(Me.UiGroupBox8)
@@ -2020,8 +2038,7 @@ Partial Class form_new_centro_medico
         Me.DoubleBuffered = True
         Me.ForeColor = System.Drawing.Color.Transparent
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MaximumSize = New System.Drawing.Size(1024, 683)
-        Me.MinimumSize = New System.Drawing.Size(1022, 683)
+        Me.MinimumSize = New System.Drawing.Size(1024, 683)
         Me.Name = "form_new_centro_medico"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -2113,7 +2130,6 @@ Partial Class form_new_centro_medico
     Friend WithEvents ASISTENCIASBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ESTADISTICASDIAGNOSTICOSBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ASISTENCIASTableAdapter As centro_medico.CMDataSetTableAdapters.ASISTENCIASTableAdapter
-    Friend WithEvents ExplorerBar1 As Janus.Windows.ExplorerBar.ExplorerBar
     Friend WithEvents UiGroupBox2 As Janus.Windows.EditControls.UIGroupBox
     Friend WithEvents UiGroupBox3 As Janus.Windows.EditControls.UIGroupBox
     Friend WithEvents PROVEEDORESBindingSource As System.Windows.Forms.BindingSource
@@ -2220,4 +2236,5 @@ Partial Class form_new_centro_medico
     Friend WithEvents Button82 As System.Windows.Forms.Button
     Friend WithEvents SearchCPropio As System.Windows.Forms.TextBox
     Friend WithEvents SearchCPaciente As System.Windows.Forms.TextBox
+    Private WithEvents ExplorerBar1 As Janus.Windows.ExplorerBar.ExplorerBar
 End Class
