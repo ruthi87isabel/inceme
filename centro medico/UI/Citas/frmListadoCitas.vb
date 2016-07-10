@@ -80,11 +80,20 @@ Public Class frmListadoCitas
                       .StatusPago = IIf(rb_cobradas.Checked, StatusPago.Pagado, (IIf(rb_sincobrar.Checked, StatusPago.NoPagado, StatusPago.Todos))),
                       .NOMBREPACIENTE = IIf(txtNombre.Text <> "", txtNombre.Text, Nothing),
                       .APELLIDO1 = IIf(txtApellido1.Text <> "", txtApellido1.Text, Nothing),
-                      .APELLIDO2 = IIf(txtApellido2.Text <> "", txtApellido2.Text, Nothing)
+                      .APELLIDO2 = IIf(txtApellido2.Text <> "", txtApellido2.Text, Nothing),
+                      .NumeroCita = IIf((LLenaNum() < 4 And LLenaNum() > 0), LLenaNum(), Nothing)
                   }
 
         _worker.RunWorkerAsync()
     End Sub
+
+    Private Function LLenaNum() As Integer
+        Dim citas As Integer
+        If CBcitas.SelectedItem = "3ra Cita" Then citas = 3
+        If CBcitas.SelectedItem = "2da Cita" Then citas = 2
+        If CBcitas.SelectedItem = "1ra Cita" Then citas = 1
+        Return citas
+    End Function
 
     Private Sub CargaCitaTerminada()
         pnl_Loading.Visible = False
@@ -99,12 +108,12 @@ Public Class frmListadoCitas
         Next
     End Sub
 
-  
+
     Private Sub loadCitas()
 
         context = New CMLinqDataContext()
 
-        
+
         Dim tmp As IQueryable(Of CITA) = CitasManager.ListadoCitas(context, filtros)
 
         If txtDni.Text <> "" Then
@@ -121,7 +130,7 @@ Public Class frmListadoCitas
 
         If CtrlMutua1.ID_Mutuas.HasValue Then
             tmp = From c In tmp Where c.REFPROCEDENCIA = CtrlMutua1.ID_Mutuas.Value Select c
-         End If
+        End If
 
         If CtrlMedico1.ID_Medico.HasValue Then
             tmp = From c In tmp Where c.REFMEDICO = CtrlMedico1.ID_Medico.Value Select c
@@ -153,11 +162,11 @@ Public Class frmListadoCitas
 
         If rb_Facturadas.Checked Then
             tmp = From c In tmp Where c.REFFRA.HasValue And c.REFFRA > 0 Select c
-         End If
+        End If
 
         If rb_NoFacturadas.Checked Then
             tmp = From c In tmp Where Not c.REFFRA.HasValue Or c.REFFRA = 0 Select c
-          End If
+        End If
 
         If Not CtrlConceptoFacturable1.ID_ConceptosFra Is Nothing Then
             'Dim condition As New GridEXFilterCondition(GridEX1.RootTable.ChildTables(0).Columns("RefConcepto"), ConditionOperator.Equal, CtrlConceptoFacturable1.ID_ConceptosFra)
@@ -175,12 +184,17 @@ Public Class frmListadoCitas
 
         If rb_SoloMutuas.Checked Then
             tmp = From c In tmp Where c.REFPROCEDENCIA.HasValue Select c
-          End If
+        End If
 
         If rb_SoloPrivados.Checked Then
             tmp = From c In tmp Where Not c.REFPROCEDENCIA.HasValue Select c
 
-          End If
+        End If
+
+        If CBcitas.SelectedItem <> "" Then
+
+            tmp = From c In tmp Where c.NumeroCita = LLenaNum() Select c
+        End If
 
 
         citas = tmp.ToList()
@@ -418,7 +432,7 @@ Public Class frmListadoCitas
 
     Private Sub bt_Filtrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bt_Filtrar.Click
         CargarCitas()
-        
+
     End Sub
 
     'Private Sub chk_FechaInicio_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles chk_FechaInicio.CheckedChanged
@@ -507,7 +521,7 @@ Public Class frmListadoCitas
         ds.Value = lista
 
         parametros(0) = New Microsoft.Reporting.WinForms.ReportParameter("Filtro", "Filtro aplicado: " & tipofiltro)
-      
+
         UI.Reportes.ReportesManager.Imprime("CitasListadoConImportes.rdlc", {ds}, parametros)
 
 
@@ -808,7 +822,7 @@ Public Class frmListadoCitas
 
     End Sub
 
-    
+
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
 
         Me.GridEX1.Refresh()

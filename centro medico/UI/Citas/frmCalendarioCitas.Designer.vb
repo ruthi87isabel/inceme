@@ -27,10 +27,17 @@
             Dim ScheduleCitas_DesignTimeLayout As Janus.Windows.Schedule.ScheduleLayout = New Janus.Windows.Schedule.ScheduleLayout()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCalendarioCitas))
             Dim GridEX1_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout()
+            Dim GridEX1_DesignTimeLayout_Reference_0 As Janus.Windows.Common.Layouts.JanusLayoutReference = New Janus.Windows.Common.Layouts.JanusLayoutReference("GridEXLayoutData.RootTable.FormatConditions.Condition2.FormatStyle.BackgroundImag" & _
+            "e")
+            Dim GridEX1_DesignTimeLayout_Reference_1 As Janus.Windows.Common.Layouts.JanusLayoutReference = New Janus.Windows.Common.Layouts.JanusLayoutReference("GridEXLayoutData.RootTable.FormatConditions.Condition3.FormatStyle.BackgroundImag" & _
+            "e")
+            Dim GridEX1_DesignTimeLayout_Reference_2 As Janus.Windows.Common.Layouts.JanusLayoutReference = New Janus.Windows.Common.Layouts.JanusLayoutReference("GridEXLayoutData.RootTable.FormatConditions.Condition4.FormatStyle.BackgroundImag" & _
+            "e")
             Dim GridEXMedicos_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout()
             Dim GridEXMutuas_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout()
             Dim GridEXSalas_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout()
             Dim GridEXNotas_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout()
+            Me.CITABindingSource = New System.Windows.Forms.BindingSource(Me.components)
             Me.TabControl1 = New System.Windows.Forms.TabControl()
             Me.tabCalendario = New System.Windows.Forms.TabPage()
             Me.ScheduleCitas = New Janus.Windows.Schedule.Schedule()
@@ -100,6 +107,7 @@
             Me.TimerCitas = New System.Windows.Forms.Timer(Me.components)
             Me.GridEXMedicos = New Janus.Windows.GridEX.GridEX()
             Me.GridEXMutuas = New Janus.Windows.GridEX.GridEX()
+            Me.MUTUABindingSource = New System.Windows.Forms.BindingSource(Me.components)
             Me.Panel1 = New System.Windows.Forms.Panel()
             Me.PanelIntervalo = New System.Windows.Forms.Panel()
             Me.Label2 = New System.Windows.Forms.Label()
@@ -108,16 +116,17 @@
             Me.dtpFechaInicio = New System.Windows.Forms.DateTimePicker()
             Me.GridEXExporter1 = New Janus.Windows.GridEX.Export.GridEXExporter(Me.components)
             Me.GridEXSalas = New Janus.Windows.GridEX.GridEX()
+            Me.SALABindingSource = New System.Windows.Forms.BindingSource(Me.components)
             Me.GroupBox1 = New System.Windows.Forms.GroupBox()
             Me.GridEXNotas = New Janus.Windows.GridEX.GridEX()
+            Me.NOTABindingSource = New System.Windows.Forms.BindingSource(Me.components)
             Me.btnNota_Agregar = New System.Windows.Forms.Button()
             Me.PanelNotas = New System.Windows.Forms.Panel()
             Me.btnNota_Delete = New System.Windows.Forms.Button()
             Me.btnNota_Editar = New System.Windows.Forms.Button()
-            Me.NOTABindingSource = New System.Windows.Forms.BindingSource(Me.components)
-            Me.SALABindingSource = New System.Windows.Forms.BindingSource(Me.components)
-            Me.CITABindingSource = New System.Windows.Forms.BindingSource(Me.components)
-            Me.MUTUABindingSource = New System.Windows.Forms.BindingSource(Me.components)
+            Me.Label17 = New System.Windows.Forms.Label()
+            Me.CBcitas = New System.Windows.Forms.ComboBox()
+            CType(Me.CITABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.TabControl1.SuspendLayout()
             Me.tabCalendario.SuspendLayout()
             CType(Me.ScheduleCitas, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -131,17 +140,20 @@
             Me.StatusStrip1.SuspendLayout()
             CType(Me.GridEXMedicos, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.GridEXMutuas, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.MUTUABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.Panel1.SuspendLayout()
             Me.PanelIntervalo.SuspendLayout()
             CType(Me.GridEXSalas, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.SALABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.GroupBox1.SuspendLayout()
             CType(Me.GridEXNotas, System.ComponentModel.ISupportInitialize).BeginInit()
-            Me.PanelNotas.SuspendLayout()
             CType(Me.NOTABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.SALABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.CITABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.MUTUABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.PanelNotas.SuspendLayout()
             Me.SuspendLayout()
+            '
+            'CITABindingSource
+            '
+            Me.CITABindingSource.DataSource = GetType(centro_medico.CITA)
             '
             'TabControl1
             '
@@ -188,7 +200,6 @@
             ScheduleCitas_DesignTimeLayout.LayoutString = resources.GetString("ScheduleCitas_DesignTimeLayout.LayoutString")
             Me.ScheduleCitas.DesignTimeLayout = ScheduleCitas_DesignTimeLayout
             Me.ScheduleCitas.EndTimeMember = "HORAFIN"
-            Me.ScheduleCitas.FirstDayOfWeek = Janus.Windows.Schedule.ScheduleDayOfWeek.Monday
             Me.ScheduleCitas.ImageList = Me.ImageList1
             Me.ScheduleCitas.Interval = Janus.Windows.Schedule.Interval.FifteenMinutes
             Me.ScheduleCitas.Location = New System.Drawing.Point(8, 9)
@@ -214,6 +225,9 @@
             Me.ImageList1.Images.SetKeyName(0, "handshake.png")
             Me.ImageList1.Images.SetKeyName(1, "24-image.png")
             Me.ImageList1.Images.SetKeyName(2, "exclamation-octagon-fram-icon.png")
+            Me.ImageList1.Images.SetKeyName(3, "1.png")
+            Me.ImageList1.Images.SetKeyName(4, "2.png")
+            Me.ImageList1.Images.SetKeyName(5, "3.png")
             '
             'TabListado
             '
@@ -234,6 +248,10 @@
                 Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.GridEX1.ColumnAutoResize = True
             Me.GridEX1.DataSource = Me.CITABindingSource
+            GridEX1_DesignTimeLayout_Reference_0.Instance = CType(resources.GetObject("GridEX1_DesignTimeLayout_Reference_0.Instance"), Object)
+            GridEX1_DesignTimeLayout_Reference_1.Instance = CType(resources.GetObject("GridEX1_DesignTimeLayout_Reference_1.Instance"), Object)
+            GridEX1_DesignTimeLayout_Reference_2.Instance = CType(resources.GetObject("GridEX1_DesignTimeLayout_Reference_2.Instance"), Object)
+            GridEX1_DesignTimeLayout.LayoutReferences.AddRange(New Janus.Windows.Common.Layouts.JanusLayoutReference() {GridEX1_DesignTimeLayout_Reference_0, GridEX1_DesignTimeLayout_Reference_1, GridEX1_DesignTimeLayout_Reference_2})
             GridEX1_DesignTimeLayout.LayoutString = resources.GetString("GridEX1_DesignTimeLayout.LayoutString")
             Me.GridEX1.DesignTimeLayout = GridEX1_DesignTimeLayout
             Me.GridEX1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
@@ -352,75 +370,75 @@
             '
             Me.menu_citas.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VerCitaToolStripMenuItem, Me.ModificarCitaToolStripMenuItem, Me.BorrarCitaToolStripMenuItem, Me.DuplicarCitaToolStripMenuItem, Me.ToolStripSeparator2, Me.mi_cambiar})
             Me.menu_citas.Name = "ContextMenuStrip1"
-            Me.menu_citas.Size = New System.Drawing.Size(150, 120)
+            Me.menu_citas.Size = New System.Drawing.Size(158, 120)
             '
             'VerCitaToolStripMenuItem
             '
             Me.VerCitaToolStripMenuItem.Image = Global.centro_medico.My.Resources.Resources._24_zoom
             Me.VerCitaToolStripMenuItem.Name = "VerCitaToolStripMenuItem"
-            Me.VerCitaToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+            Me.VerCitaToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
             Me.VerCitaToolStripMenuItem.Text = "Ver Cita"
             '
             'ModificarCitaToolStripMenuItem
             '
             Me.ModificarCitaToolStripMenuItem.Image = Global.centro_medico.My.Resources.Resources._24_tag_pencil
             Me.ModificarCitaToolStripMenuItem.Name = "ModificarCitaToolStripMenuItem"
-            Me.ModificarCitaToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+            Me.ModificarCitaToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
             Me.ModificarCitaToolStripMenuItem.Text = "Modificar Cita"
             '
             'BorrarCitaToolStripMenuItem
             '
             Me.BorrarCitaToolStripMenuItem.Image = Global.centro_medico.My.Resources.Resources._24_em_cross
             Me.BorrarCitaToolStripMenuItem.Name = "BorrarCitaToolStripMenuItem"
-            Me.BorrarCitaToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+            Me.BorrarCitaToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
             Me.BorrarCitaToolStripMenuItem.Text = "Borrar Cita"
             '
             'DuplicarCitaToolStripMenuItem
             '
             Me.DuplicarCitaToolStripMenuItem.Image = Global.centro_medico.My.Resources.Resources._24_imageset
             Me.DuplicarCitaToolStripMenuItem.Name = "DuplicarCitaToolStripMenuItem"
-            Me.DuplicarCitaToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+            Me.DuplicarCitaToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
             Me.DuplicarCitaToolStripMenuItem.Text = "Duplicar Cita"
             '
             'ToolStripSeparator2
             '
             Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-            Me.ToolStripSeparator2.Size = New System.Drawing.Size(146, 6)
+            Me.ToolStripSeparator2.Size = New System.Drawing.Size(154, 6)
             '
             'mi_cambiar
             '
             Me.mi_cambiar.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mi_atendida, Me.mi_confirmada, Me.mi_falta, Me.mi_cobrada})
             Me.mi_cambiar.Name = "mi_cambiar"
             Me.mi_cambiar.RightToLeftAutoMirrorImage = True
-            Me.mi_cambiar.Size = New System.Drawing.Size(149, 22)
+            Me.mi_cambiar.Size = New System.Drawing.Size(157, 22)
             Me.mi_cambiar.Text = "Cambiar estado"
             '
             'mi_atendida
             '
             Me.mi_atendida.CheckOnClick = True
             Me.mi_atendida.Name = "mi_atendida"
-            Me.mi_atendida.Size = New System.Drawing.Size(129, 22)
+            Me.mi_atendida.Size = New System.Drawing.Size(137, 22)
             Me.mi_atendida.Text = "Atendida"
             '
             'mi_confirmada
             '
             Me.mi_confirmada.CheckOnClick = True
             Me.mi_confirmada.Name = "mi_confirmada"
-            Me.mi_confirmada.Size = New System.Drawing.Size(129, 22)
+            Me.mi_confirmada.Size = New System.Drawing.Size(137, 22)
             Me.mi_confirmada.Text = "Confirmada"
             '
             'mi_falta
             '
             Me.mi_falta.CheckOnClick = True
             Me.mi_falta.Name = "mi_falta"
-            Me.mi_falta.Size = New System.Drawing.Size(129, 22)
+            Me.mi_falta.Size = New System.Drawing.Size(137, 22)
             Me.mi_falta.Text = "Falta"
             '
             'mi_cobrada
             '
             Me.mi_cobrada.CheckOnClick = True
             Me.mi_cobrada.Name = "mi_cobrada"
-            Me.mi_cobrada.Size = New System.Drawing.Size(129, 22)
+            Me.mi_cobrada.Size = New System.Drawing.Size(137, 22)
             Me.mi_cobrada.Text = "Cobrada"
             '
             'ToolStrip1
@@ -429,7 +447,7 @@
             Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tstNuevaCitas, Me.tstModificar, Me.tstEliminar, Me.ToolStripSeparator1, Me.tstDuplicarCita, Me.tstVer, Me.tstImprimir, Me.tstImprimirJustificante})
             Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
             Me.ToolStrip1.Name = "ToolStrip1"
-            Me.ToolStrip1.Size = New System.Drawing.Size(522, 25)
+            Me.ToolStrip1.Size = New System.Drawing.Size(565, 25)
             Me.ToolStrip1.TabIndex = 6
             Me.ToolStrip1.Text = "ToolStrip1"
             '
@@ -438,7 +456,7 @@
             Me.tstNuevaCitas.Image = Global.centro_medico.My.Resources.Resources._24_em_plus
             Me.tstNuevaCitas.ImageTransparentColor = System.Drawing.Color.Magenta
             Me.tstNuevaCitas.Name = "tstNuevaCitas"
-            Me.tstNuevaCitas.Size = New System.Drawing.Size(80, 22)
+            Me.tstNuevaCitas.Size = New System.Drawing.Size(85, 22)
             Me.tstNuevaCitas.Text = "&Nueva Cita"
             '
             'tstModificar
@@ -447,7 +465,7 @@
             Me.tstModificar.Image = Global.centro_medico.My.Resources.Resources._24_tag_pencil
             Me.tstModificar.ImageTransparentColor = System.Drawing.Color.Magenta
             Me.tstModificar.Name = "tstModificar"
-            Me.tstModificar.Size = New System.Drawing.Size(92, 22)
+            Me.tstModificar.Size = New System.Drawing.Size(102, 22)
             Me.tstModificar.Text = "&Modificar Cita"
             '
             'tstEliminar
@@ -456,7 +474,7 @@
             Me.tstEliminar.Image = Global.centro_medico.My.Resources.Resources._24_em_cross
             Me.tstEliminar.ImageTransparentColor = System.Drawing.Color.Magenta
             Me.tstEliminar.Name = "tstEliminar"
-            Me.tstEliminar.Size = New System.Drawing.Size(63, 22)
+            Me.tstEliminar.Size = New System.Drawing.Size(70, 22)
             Me.tstEliminar.Text = "&Eliminar"
             '
             'ToolStripSeparator1
@@ -470,7 +488,7 @@
             Me.tstDuplicarCita.Image = Global.centro_medico.My.Resources.Resources._24_imageset
             Me.tstDuplicarCita.ImageTransparentColor = System.Drawing.Color.Magenta
             Me.tstDuplicarCita.Name = "tstDuplicarCita"
-            Me.tstDuplicarCita.Size = New System.Drawing.Size(87, 22)
+            Me.tstDuplicarCita.Size = New System.Drawing.Size(95, 22)
             Me.tstDuplicarCita.Text = "&Duplicar Cita"
             '
             'tstVer
@@ -479,7 +497,7 @@
             Me.tstVer.Image = Global.centro_medico.My.Resources.Resources._24_zoom
             Me.tstVer.ImageTransparentColor = System.Drawing.Color.Magenta
             Me.tstVer.Name = "tstVer"
-            Me.tstVer.Size = New System.Drawing.Size(43, 22)
+            Me.tstVer.Size = New System.Drawing.Size(44, 22)
             Me.tstVer.Text = "&Ver"
             '
             'tstImprimir
@@ -487,7 +505,7 @@
             Me.tstImprimir.Image = Global.centro_medico.My.Resources.Resources.Print
             Me.tstImprimir.ImageTransparentColor = System.Drawing.Color.Magenta
             Me.tstImprimir.Name = "tstImprimir"
-            Me.tstImprimir.Size = New System.Drawing.Size(65, 22)
+            Me.tstImprimir.Size = New System.Drawing.Size(73, 22)
             Me.tstImprimir.Text = "&Imprimir"
             '
             'tstImprimirJustificante
@@ -495,7 +513,7 @@
             Me.tstImprimirJustificante.Image = Global.centro_medico.My.Resources.Resources.Print
             Me.tstImprimirJustificante.ImageTransparentColor = System.Drawing.Color.Magenta
             Me.tstImprimirJustificante.Name = "tstImprimirJustificante"
-            Me.tstImprimirJustificante.Size = New System.Drawing.Size(76, 22)
+            Me.tstImprimirJustificante.Size = New System.Drawing.Size(78, 22)
             Me.tstImprimirJustificante.Text = "&Impr. Just"
             '
             'tlbPrev
@@ -759,6 +777,10 @@
             Me.GridEXMutuas.Size = New System.Drawing.Size(283, 104)
             Me.GridEXMutuas.TabIndex = 21
             '
+            'MUTUABindingSource
+            '
+            Me.MUTUABindingSource.DataSource = GetType(centro_medico.MUTUA)
+            '
             'Panel1
             '
             Me.Panel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -829,6 +851,10 @@
             Me.GridEXSalas.Size = New System.Drawing.Size(283, 77)
             Me.GridEXSalas.TabIndex = 24
             '
+            'SALABindingSource
+            '
+            Me.SALABindingSource.DataSource = GetType(centro_medico.SALA)
+            '
             'GroupBox1
             '
             Me.GroupBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -858,6 +884,10 @@
             Me.GridEXNotas.Name = "GridEXNotas"
             Me.GridEXNotas.Size = New System.Drawing.Size(279, 58)
             Me.GridEXNotas.TabIndex = 26
+            '
+            'NOTABindingSource
+            '
+            Me.NOTABindingSource.DataSource = GetType(centro_medico.NOTA)
             '
             'btnNota_Agregar
             '
@@ -914,27 +944,36 @@
             Me.btnNota_Editar.TabIndex = 27
             Me.btnNota_Editar.UseVisualStyleBackColor = True
             '
-            'NOTABindingSource
+            'Label17
             '
-            Me.NOTABindingSource.DataSource = GetType(centro_medico.NOTA)
+            Me.Label17.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Me.Label17.AutoSize = True
+            Me.Label17.Location = New System.Drawing.Point(728, 165)
+            Me.Label17.Name = "Label17"
+            Me.Label17.Size = New System.Drawing.Size(64, 13)
+            Me.Label17.TabIndex = 216
+            Me.Label17.Text = "Tipo de Cita"
+            Me.Label17.Visible = False
             '
-            'SALABindingSource
+            'CBcitas
             '
-            Me.SALABindingSource.DataSource = GetType(centro_medico.SALA)
-            '
-            'CITABindingSource
-            '
-            Me.CITABindingSource.DataSource = GetType(centro_medico.CITA)
-            '
-            'MUTUABindingSource
-            '
-            Me.MUTUABindingSource.DataSource = GetType(centro_medico.MUTUA)
+            Me.CBcitas.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Me.CBcitas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+            Me.CBcitas.FormattingEnabled = True
+            Me.CBcitas.Items.AddRange(New Object() {"", "1ra Cita", "2da Cita", "3ra Cita"})
+            Me.CBcitas.Location = New System.Drawing.Point(728, 182)
+            Me.CBcitas.Name = "CBcitas"
+            Me.CBcitas.Size = New System.Drawing.Size(121, 21)
+            Me.CBcitas.TabIndex = 215
+            Me.CBcitas.Visible = False
             '
             'frmCalendarioCitas
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.ClientSize = New System.Drawing.Size(1008, 684)
+            Me.Controls.Add(Me.Label17)
+            Me.Controls.Add(Me.CBcitas)
             Me.Controls.Add(Me.PanelNotas)
             Me.Controls.Add(Me.GroupBox1)
             Me.Controls.Add(Me.GridEXSalas)
@@ -950,6 +989,7 @@
             Me.Name = "frmCalendarioCitas"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
             Me.Text = "Calendario de Citas"
+            CType(Me.CITABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
             Me.TabControl1.ResumeLayout(False)
             Me.tabCalendario.ResumeLayout(False)
             CType(Me.ScheduleCitas, System.ComponentModel.ISupportInitialize).EndInit()
@@ -966,18 +1006,17 @@
             Me.StatusStrip1.PerformLayout()
             CType(Me.GridEXMedicos, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.GridEXMutuas, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.MUTUABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
             Me.Panel1.ResumeLayout(False)
             Me.PanelIntervalo.ResumeLayout(False)
             Me.PanelIntervalo.PerformLayout()
             CType(Me.GridEXSalas, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.SALABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
             Me.GroupBox1.ResumeLayout(False)
             Me.GroupBox1.PerformLayout()
             CType(Me.GridEXNotas, System.ComponentModel.ISupportInitialize).EndInit()
-            Me.PanelNotas.ResumeLayout(False)
             CType(Me.NOTABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.SALABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.CITABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.MUTUABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.PanelNotas.ResumeLayout(False)
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -1069,5 +1108,7 @@
         Friend WithEvents btnNota_Editar As System.Windows.Forms.Button
         Friend WithEvents tstImprimirJustificante As System.Windows.Forms.ToolStripButton
         Friend WithEvents tlsPagadaFalta As System.Windows.Forms.ToolStripStatusLabel
+        Friend WithEvents Label17 As System.Windows.Forms.Label
+        Friend WithEvents CBcitas As System.Windows.Forms.ComboBox
     End Class
 End Namespace

@@ -132,6 +132,8 @@ Namespace UI.Citas
             'GridEX1.RootTable.ChildTables(0).Columns ("CODIGOPROPIO").Visible = Globals.Configuracion.citaCodPropioPac
             If IdPaciente <> -1 Then
                 PanelIntervalo.Visible = True
+                Label17.Visible = True
+                CBcitas.Visible = True
                 Panel1.Visible = False
                 TabControl1.SelectedIndex = 1
 
@@ -302,7 +304,6 @@ Namespace UI.Citas
                           And c.REFPACIENTE = IdPaciente _
                     Order By c.FECHA Descending).ToList()
             End If
-
 
             Me.CITABindingSource.DataSource = citas
 
@@ -525,7 +526,13 @@ Namespace UI.Citas
         '    Return str
         'End Function
 
-
+        Private Function LLenaNum() As Integer
+            Dim citas As Integer
+            If CBcitas.SelectedItem = "3ra Cita" Then citas = 3
+            If CBcitas.SelectedItem = "2da Cita" Then citas = 2
+            If CBcitas.SelectedItem = "1ra Cita" Then citas = 1
+            Return citas
+        End Function
 
 
 #Region "Private Sub CargarMutuas()"
@@ -564,6 +571,11 @@ Namespace UI.Citas
             If rb_pendientes.Checked Then
                 condition.AddCondition(Janus.Windows.GridEX.LogicalOperator.And, _
                                        New GridEXFilterCondition(GridEX1.RootTable.Columns("ATENDIDO"), Janus.Windows.GridEX.ConditionOperator.Equal, "N"))
+            End If
+
+            If CBcitas.SelectedItem <> "" Then
+                condition.AddCondition(Janus.Windows.GridEX.LogicalOperator.And, _
+                                       New GridEXFilterCondition(GridEX1.RootTable.Columns("NumeroCita"), Janus.Windows.GridEX.ConditionOperator.Equal, LLenaNum()))
             End If
 
             Dim mutuaCondition As New GridEXFilterCondition()
@@ -639,6 +651,10 @@ Namespace UI.Citas
                                        New ScheduleFilterCondition(ScheduleCitas.Fields("ATENDIDO"), Janus.Windows.GridEX.ConditionOperator.Equal, "N"))
             End If
 
+            If CBcitas.SelectedItem <> "" Then
+                condition.AddCondition(Janus.Windows.GridEX.LogicalOperator.And, _
+                                       New ScheduleFilterCondition(ScheduleCitas.Fields("NumeroCita"), Janus.Windows.GridEX.ConditionOperator.Equal, LLenaNum()))
+            End If
 
             If GridEXMutuas.GetCheckedRows().Count > 0 Then
                 Dim mutuaCondition As New ScheduleFilterCondition()
@@ -1662,6 +1678,12 @@ Namespace UI.Citas
 
         Private Sub GridEXMedicos_DoubleClick(sender As Object, e As EventArgs) Handles GridEXMedicos.DoubleClick
             MuestraHorarioDialog()
+        End Sub
+
+        Private Sub CBcitas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBcitas.SelectedIndexChanged
+            If Me.IsHandleCreated Then
+                LoadCitas()
+            End If
         End Sub
     End Class
 
