@@ -599,6 +599,7 @@ Partial Class form_new_centro_medico
         '
         Me.ExplorerBar1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ExplorerBar1.BackgroundFormatStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(239, Byte), Integer))
         Me.ExplorerBar1.BackgroundFormatStyle.ForeColor = System.Drawing.Color.White
         Me.ExplorerBar1.BlendColor = System.Drawing.Color.Transparent
         Me.ExplorerBar1.BorderStyle = Janus.Windows.ExplorerBar.BorderStyle.None
@@ -812,7 +813,7 @@ Partial Class form_new_centro_medico
         Me.ExplorerBar1.ItemsStateStyles.FormatStyle.BackgroundGradientMode = Janus.Windows.ExplorerBar.BackgroundGradientMode.Solid
         Me.ExplorerBar1.ItemsStateStyles.FormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.ExplorerBar1.ItemsStateStyles.FormatStyle.FontBold = Janus.Windows.ExplorerBar.TriState.[False]
-        Me.ExplorerBar1.ItemsStateStyles.FormatStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(82, Byte), Integer))
+        Me.ExplorerBar1.ItemsStateStyles.FormatStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.ExplorerBar1.Location = New System.Drawing.Point(0, 147)
         Me.ExplorerBar1.Name = "ExplorerBar1"
         Me.ExplorerBar1.Size = New System.Drawing.Size(256, 469)
@@ -2012,7 +2013,7 @@ Partial Class form_new_centro_medico
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1008, 645)
+        Me.ClientSize = New System.Drawing.Size(1016, 656)
         Me.Controls.Add(Me.UiGroupBox3)
         Me.Controls.Add(Me.SearchCPaciente)
         Me.Controls.Add(Me.SearchCPropio)
