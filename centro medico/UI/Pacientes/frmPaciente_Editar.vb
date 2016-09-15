@@ -114,7 +114,6 @@ Public Class frmPaciente_Editar
         Me.pac = (From p In Me.context.PACIENTEs Where p.CPACIENTE = idPaciente Select p).First()
         Me.PACIENTESBindingSource.DataSource = Me.pac
 
-
         ' Dim context As New CMLinqDataContext()
 
         pac = Me.pac
@@ -1049,5 +1048,19 @@ Public Class frmPaciente_Editar
     End Sub
     Private Sub CtrlMutua1_MutuasSeleccionado(IdMutuas As Integer)
 
+    End Sub
+
+    Private Sub webcam_Click(sender As Object, e As EventArgs) Handles webcam.Click
+        Dim frm As formPaciente_Captura = New formPaciente_Captura()
+        If frm.TestConnection() Then
+            frm.IDPAC = IDPACIENTE
+            frm.ShowDialog()
+            If Not frm.Selected Is Nothing Then
+                Dim IMAGEN As Image = frm.Selected
+                pb_dpImagen.BackgroundImage = IMAGEN
+                pb_dpImagen.BackgroundImageLayout = ImageLayout.Stretch
+            End If
+            GC.Collect()
+        End If
     End Sub
 End Class

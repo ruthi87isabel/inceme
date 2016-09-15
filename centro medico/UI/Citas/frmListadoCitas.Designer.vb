@@ -21,7 +21,13 @@ Partial Class frmListadoCitas
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim GridEX1_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout()
+        Dim GridEX1_DesignTimeLayout_Reference_0 As Janus.Windows.Common.Layouts.JanusLayoutReference = New Janus.Windows.Common.Layouts.JanusLayoutReference("GridEXLayoutData.RootTable.FormatConditions.Condition2.FormatStyle.BackgroundImag" & _
+        "e")
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmListadoCitas))
+        Dim GridEX1_DesignTimeLayout_Reference_1 As Janus.Windows.Common.Layouts.JanusLayoutReference = New Janus.Windows.Common.Layouts.JanusLayoutReference("GridEXLayoutData.RootTable.FormatConditions.Condition3.FormatStyle.BackgroundImag" & _
+        "e")
+        Dim GridEX1_DesignTimeLayout_Reference_2 As Janus.Windows.Common.Layouts.JanusLayoutReference = New Janus.Windows.Common.Layouts.JanusLayoutReference("GridEXLayoutData.RootTable.FormatConditions.Condition4.FormatStyle.BackgroundImag" & _
+        "e")
         Me.bt_cerrar = New System.Windows.Forms.Button()
         Me.bt_ver = New System.Windows.Forms.Button()
         Me.bt_modificar = New System.Windows.Forms.Button()
@@ -65,7 +71,6 @@ Partial Class frmListadoCitas
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.rb_Facturadas = New System.Windows.Forms.RadioButton()
         Me.btn_FacturarSeleccionadas = New System.Windows.Forms.Button()
-        Me.LineasCitaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.btnComunicaciones = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -80,6 +85,9 @@ Partial Class frmListadoCitas
         Me.pb_Loading = New System.Windows.Forms.PictureBox()
         Me.btnImprimirJustificante = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.chkFalta0 = New System.Windows.Forms.CheckBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.CBcitas = New System.Windows.Forms.ComboBox()
         Me.txtDni = New centro_medico.ctrlTextboxAvanzado()
         Me.txtApellido2 = New centro_medico.ctrlTextboxAvanzado()
         Me.txtApellido1 = New centro_medico.ctrlTextboxAvanzado()
@@ -89,7 +97,7 @@ Partial Class frmListadoCitas
         Me.CtrlMedico1 = New centro_medico.ctrlMedico()
         Me.CtrlMutua1 = New centro_medico.ctrlMutua()
         Me.CtrlFormaPago21 = New centro_medico.ctrlFormaPago2()
-        Me.chkFalta0 = New System.Windows.Forms.CheckBox()
+        Me.LineasCitaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -97,10 +105,10 @@ Partial Class frmListadoCitas
         CType(Me.GridEX1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CITABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBoxFacturacion.SuspendLayout()
-        CType(Me.LineasCitaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
         Me.pnl_Loading.SuspendLayout()
         CType(Me.pb_Loading, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LineasCitaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'bt_cerrar
@@ -191,7 +199,7 @@ Partial Class frmListadoCitas
         Me.chb_importe.AutoSize = True
         Me.chb_importe.Checked = True
         Me.chb_importe.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chb_importe.Location = New System.Drawing.Point(507, 205)
+        Me.chb_importe.Location = New System.Drawing.Point(638, 188)
         Me.chb_importe.Name = "chb_importe"
         Me.chb_importe.Size = New System.Drawing.Size(147, 17)
         Me.chb_importe.TabIndex = 9
@@ -266,7 +274,7 @@ Partial Class frmListadoCitas
         Me.bt_Filtrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bt_Filtrar.Image = Global.centro_medico.My.Resources.Resources._24_zoom_actual
         Me.bt_Filtrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.bt_Filtrar.Location = New System.Drawing.Point(865, 180)
+        Me.bt_Filtrar.Location = New System.Drawing.Point(865, 190)
         Me.bt_Filtrar.Name = "bt_Filtrar"
         Me.bt_Filtrar.Size = New System.Drawing.Size(80, 27)
         Me.bt_Filtrar.TabIndex = 124
@@ -299,31 +307,31 @@ Partial Class frmListadoCitas
         'tlsAtendida
         '
         Me.tlsAtendida.Name = "tlsAtendida"
-        Me.tlsAtendida.Size = New System.Drawing.Size(50, 17)
+        Me.tlsAtendida.Size = New System.Drawing.Size(55, 17)
         Me.tlsAtendida.Text = "Atendida"
         '
         'tlsConfirmada
         '
         Me.tlsConfirmada.Name = "tlsConfirmada"
-        Me.tlsConfirmada.Size = New System.Drawing.Size(62, 17)
+        Me.tlsConfirmada.Size = New System.Drawing.Size(70, 17)
         Me.tlsConfirmada.Text = "Confirmada"
         '
         'tlsFalta
         '
         Me.tlsFalta.Name = "tlsFalta"
-        Me.tlsFalta.Size = New System.Drawing.Size(74, 17)
+        Me.tlsFalta.Size = New System.Drawing.Size(81, 17)
         Me.tlsFalta.Text = "Anulada/Falta"
         '
         'tlsCobrada
         '
         Me.tlsCobrada.Name = "tlsCobrada"
-        Me.tlsCobrada.Size = New System.Drawing.Size(48, 17)
+        Me.tlsCobrada.Size = New System.Drawing.Size(52, 17)
         Me.tlsCobrada.Text = "Cobrada"
         '
         'lblPagadaFalta
         '
         Me.lblPagadaFalta.Name = "lblPagadaFalta"
-        Me.lblPagadaFalta.Size = New System.Drawing.Size(71, 17)
+        Me.lblPagadaFalta.Size = New System.Drawing.Size(76, 17)
         Me.lblPagadaFalta.Text = "Pagada-Falta"
         '
         'ToolStripStatusLabel2
@@ -345,31 +353,31 @@ Partial Class frmListadoCitas
         'ToolStripStatusLabel3
         '
         Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
-        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(77, 17)
+        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(82, 17)
         Me.ToolStripStatusLabel3.Text = "Alt+E-> Editar"
         '
         'ToolStripStatusLabel4
         '
         Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
-        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(79, 17)
+        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(85, 17)
         Me.ToolStripStatusLabel4.Text = "Alt+B-> Borrar"
         '
         'ToolStripStatusLabel5
         '
         Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
-        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(85, 17)
+        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(95, 17)
         Me.ToolStripStatusLabel5.Text = "Alt+I-> Imprimir"
         '
         'ToolStripStatusLabel7
         '
         Me.ToolStripStatusLabel7.Name = "ToolStripStatusLabel7"
-        Me.ToolStripStatusLabel7.Size = New System.Drawing.Size(65, 17)
+        Me.ToolStripStatusLabel7.Size = New System.Drawing.Size(70, 17)
         Me.ToolStripStatusLabel7.Text = "Alt+V-> Ver"
         '
         'ToolStripStatusLabel8
         '
         Me.ToolStripStatusLabel8.Name = "ToolStripStatusLabel8"
-        Me.ToolStripStatusLabel8.Size = New System.Drawing.Size(81, 17)
+        Me.ToolStripStatusLabel8.Size = New System.Drawing.Size(86, 17)
         Me.ToolStripStatusLabel8.Text = "Alt+C-> Cerrar"
         '
         'GroupBox2
@@ -448,6 +456,10 @@ Partial Class frmListadoCitas
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GridEX1.ColumnAutoResize = True
         Me.GridEX1.DataSource = Me.CITABindingSource
+        GridEX1_DesignTimeLayout_Reference_0.Instance = CType(resources.GetObject("GridEX1_DesignTimeLayout_Reference_0.Instance"), Object)
+        GridEX1_DesignTimeLayout_Reference_1.Instance = CType(resources.GetObject("GridEX1_DesignTimeLayout_Reference_1.Instance"), Object)
+        GridEX1_DesignTimeLayout_Reference_2.Instance = CType(resources.GetObject("GridEX1_DesignTimeLayout_Reference_2.Instance"), Object)
+        GridEX1_DesignTimeLayout.LayoutReferences.AddRange(New Janus.Windows.Common.Layouts.JanusLayoutReference() {GridEX1_DesignTimeLayout_Reference_0, GridEX1_DesignTimeLayout_Reference_1, GridEX1_DesignTimeLayout_Reference_2})
         GridEX1_DesignTimeLayout.LayoutString = resources.GetString("GridEX1_DesignTimeLayout.LayoutString")
         Me.GridEX1.DesignTimeLayout = GridEX1_DesignTimeLayout
         Me.GridEX1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
@@ -529,10 +541,6 @@ Partial Class frmListadoCitas
         Me.btn_FacturarSeleccionadas.Text = "Facturar"
         Me.btn_FacturarSeleccionadas.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btn_FacturarSeleccionadas.UseVisualStyleBackColor = True
-        '
-        'LineasCitaBindingSource
-        '
-        Me.LineasCitaBindingSource.DataSource = GetType(centro_medico.LineasCita)
         '
         'btnComunicaciones
         '
@@ -679,6 +687,35 @@ Partial Class frmListadoCitas
         Me.Button1.UseVisualStyleBackColor = True
         Me.Button1.Visible = False
         '
+        'chkFalta0
+        '
+        Me.chkFalta0.AutoSize = True
+        Me.chkFalta0.Location = New System.Drawing.Point(638, 208)
+        Me.chkFalta0.Name = "chkFalta0"
+        Me.chkFalta0.Size = New System.Drawing.Size(216, 17)
+        Me.chkFalta0.TabIndex = 208
+        Me.chkFalta0.Text = "Poner a 0 las citas con el estado ""Falta"""
+        Me.chkFalta0.UseVisualStyleBackColor = True
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(495, 186)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(64, 13)
+        Me.Label17.TabIndex = 210
+        Me.Label17.Text = "Tipo de Cita"
+        '
+        'CBcitas
+        '
+        Me.CBcitas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CBcitas.FormattingEnabled = True
+        Me.CBcitas.Items.AddRange(New Object() {"", "1ra Cita", "2da Cita", "3ra Cita"})
+        Me.CBcitas.Location = New System.Drawing.Point(495, 203)
+        Me.CBcitas.Name = "CBcitas"
+        Me.CBcitas.Size = New System.Drawing.Size(121, 21)
+        Me.CBcitas.TabIndex = 209
+        '
         'txtDni
         '
         Me.txtDni.AcceptsReturn = True
@@ -743,7 +780,7 @@ Partial Class frmListadoCitas
         Me.CtrlMutua1.IDPACIENTE = Nothing
         Me.CtrlMutua1.Location = New System.Drawing.Point(223, 202)
         Me.CtrlMutua1.Name = "CtrlMutua1"
-        Me.CtrlMutua1.Size = New System.Drawing.Size(281, 21)
+        Me.CtrlMutua1.Size = New System.Drawing.Size(253, 21)
         Me.CtrlMutua1.TabIndex = 122
         '
         'CtrlFormaPago21
@@ -754,21 +791,17 @@ Partial Class frmListadoCitas
         Me.CtrlFormaPago21.Size = New System.Drawing.Size(279, 23)
         Me.CtrlFormaPago21.TabIndex = 121
         '
-        'chkFalta0
+        'LineasCitaBindingSource
         '
-        Me.chkFalta0.AutoSize = True
-        Me.chkFalta0.Location = New System.Drawing.Point(662, 206)
-        Me.chkFalta0.Name = "chkFalta0"
-        Me.chkFalta0.Size = New System.Drawing.Size(216, 17)
-        Me.chkFalta0.TabIndex = 208
-        Me.chkFalta0.Text = "Poner a 0 las citas con el estado ""Falta"""
-        Me.chkFalta0.UseVisualStyleBackColor = True
+        Me.LineasCitaBindingSource.DataSource = GetType(centro_medico.LineasCita)
         '
         'frmListadoCitas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(961, 621)
+        Me.Controls.Add(Me.Label17)
+        Me.Controls.Add(Me.CBcitas)
         Me.Controls.Add(Me.chkFalta0)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.pnl_Loading)
@@ -819,12 +852,12 @@ Partial Class frmListadoCitas
         CType(Me.CITABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBoxFacturacion.ResumeLayout(False)
         Me.GroupBoxFacturacion.PerformLayout()
-        CType(Me.LineasCitaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         Me.pnl_Loading.ResumeLayout(False)
         Me.pnl_Loading.PerformLayout()
         CType(Me.pb_Loading, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LineasCitaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -897,4 +930,6 @@ Partial Class frmListadoCitas
     Friend WithEvents lblPagadaFalta As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents chkFalta0 As System.Windows.Forms.CheckBox
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents CBcitas As System.Windows.Forms.ComboBox
 End Class

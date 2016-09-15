@@ -30,7 +30,7 @@ Public Class FormConfigurable
     Protected Sub UnSerializeXML()
 
         Dim cm As New CMLinqDataContext()
-        Dim currentUser As USUARIO = cm.USUARIOs.SingleOrDefault(Function(u) u.CODIGO = form_centro_medico.IDUser)
+        Dim currentUser As USUARIO = cm.USUARIOs.SingleOrDefault(Function(u) u.CODIGO = form_new_centro_medico.IDUser)
 
         If currentUser.CONFIGURACIONXML.<Listados>.Count() = 0 Then Exit Sub
         If GridEX1 Is Nothing Then Exit Sub

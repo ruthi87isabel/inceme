@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Siesta" Class="CMLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DAW-JBLANCO\MSSQLSERVERLOCAL;Initial Catalog=Siesta;User ID=sa" SettingsObjectName="centro_medico.My.MySettings" SettingsPropertyName="CMConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=Siesta;User ID=sa" SettingsObjectName="centro_medico.My.MySettings" SettingsPropertyName="CMConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.PACIENTES" Member="PACIENTEs">
     <Type Name="PACIENTE">
       <Column Name="NOMBRE" Type="System.String" DbType="VarChar(25)" CanBeNull="true" UpdateCheck="Never" />
@@ -59,7 +59,6 @@
       <Association Name="PACIENTE_LEMPRESA" Member="LEMPRESAs" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="LEMPRESA" />
       <Association Name="PACIENTE_N_Factura" Member="N_Facturas" ThisKey="CPACIENTE" OtherKey="ID_Cliente" Type="N_Factura" />
       <Association Name="PACIENTE_Comunicacion" Member="Comunicacions" ThisKey="CPACIENTE" OtherKey="ID_PacienteDestino" Type="Comunicacion" />
-      <Association Name="PACIENTE_CITA" Member="CITAs" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="CITA" />
       <Association Name="PACIENTE_N_Proceso" Member="N_Procesos" ThisKey="CPACIENTE" OtherKey="ID_Paciente" Type="N_Proceso" />
       <Association Name="PACIENTE_AntecedentesDiagnostico" Member="AntecedentesDiagnosticos" ThisKey="CPACIENTE" OtherKey="CPACIENTE" Type="AntecedentesDiagnostico" />
       <Association Name="PACIENTE_COMPARATIVA" Member="COMPARATIVAs" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="COMPARATIVA" />
@@ -80,6 +79,7 @@
       <Association Name="PACIENTE_HISTORIALES_REVISIONES" Member="HISTORIALES_REVISIONES" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="HISTORIALES_REVISIONES" />
       <Association Name="PACIENTE_IMAGENES" Member="IMAGENES" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="IMAGENES" />
       <Association Name="PACIENTE_PRESUPUESTOS" Member="PRESUPUESTOS" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="PRESUPUESTOS" />
+      <Association Name="PACIENTE_CITA" Member="CITAs" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="CITA" />
       <Association Name="EMPRESA_PACIENTE" Member="EMPRESA" ThisKey="REFEMPRESA" OtherKey="CEMPRESA" Type="EMPRESA" IsForeignKey="true" />
       <Association Name="FORMASPAGO_PACIENTE" Member="FORMASPAGO" ThisKey="REFFORMAPAGO" OtherKey="CODIGO" Type="FORMASPAGO" IsForeignKey="true" />
       <Association Name="MUTUA_PACIENTE" Member="MUTUA" ThisKey="REFMUTUA" OtherKey="CMUTUA" Type="MUTUA" IsForeignKey="true" />
@@ -94,13 +94,13 @@
       <Association Name="FORMASPAGO_PagosPaciente" Member="PagosPacientes" ThisKey="CODIGO" OtherKey="IDFormaPago" Type="PagosPaciente" />
       <Association Name="FORMASPAGO_GASTO" Member="GASTOs" ThisKey="CODIGO" OtherKey="REFFORMAPAGO" Type="GASTO" />
       <Association Name="FORMASPAGO_N_Factura" Member="N_Facturas" ThisKey="CODIGO" OtherKey="ID_FormaPago" Type="N_Factura" />
-      <Association Name="FORMASPAGO_CITA" Member="CITAs" ThisKey="CODIGO" OtherKey="REFFORMAPAGO" Type="CITA" />
       <Association Name="FORMASPAGO_Liquidacion_Medico" Member="Liquidacion_Medicos" ThisKey="CODIGO" OtherKey="ID_FormaPago" Type="Liquidacion_Medico" />
       <Association Name="FORMASPAGO_N_PedidosProveedor" Member="N_PedidosProveedors" ThisKey="CODIGO" OtherKey="ID_FormaPago" Type="N_PedidosProveedor" />
       <Association Name="FORMASPAGO_N_Proveedor" Member="N_Proveedors" ThisKey="CODIGO" OtherKey="ID_FormaPago" Type="N_Proveedor" />
       <Association Name="FORMASPAGO_N_Ticket" Member="N_Tickets" ThisKey="CODIGO" OtherKey="ID_FormaPago" Type="N_Ticket" />
       <Association Name="FORMASPAGO_EntregasCuenta" Member="EntregasCuentas" ThisKey="CODIGO" OtherKey="IDFormaPago" Type="EntregasCuenta" />
       <Association Name="FORMASPAGO_RECIBO" Member="RECIBOs" ThisKey="CODIGO" OtherKey="REFFORMAPAGO" Type="RECIBO" />
+      <Association Name="FORMASPAGO_CITA" Member="CITAs" ThisKey="CODIGO" OtherKey="REFFORMAPAGO" Type="CITA" />
     </Type>
   </Table>
   <Table Name="dbo.EMPRESAS" Member="EMPRESAs">
@@ -881,54 +881,6 @@
       <Association Name="SALA_CITA" Member="CITAs" ThisKey="ID_SALA" OtherKey="ID_SALA" Type="CITA" />
     </Type>
   </Table>
-  <Table Name="dbo.CITAS" Member="CITAs">
-    <Type Name="CITA">
-      <Column Name="IDCITA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="REFPACIENTE" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="HORA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="CONFIRMADA" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
-      <Column Name="NOTAS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="REFMEDICO" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="PACIENTE" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
-      <Column Name="IMPORTEDR" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
-      <Column Name="IMPORTECL" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
-      <Column Name="CONTINUA" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
-      <Column Name="FALTA" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
-      <Column Name="BANCO" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
-      <Column Name="PAGADA" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
-      <Column Name="REFRECIBO" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ATENDIDO" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
-      <Column Name="REFFRA" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="REFFORMAPAGO" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-      <Column Name="HORAFIN" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="FECHACOBRO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="REFPROCEDENCIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ID_Proceso" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="EstadoRecurrencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="FechaUltimoEstadoRecurrencia" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="Descuento" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="ID_SALA" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TOTAL" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="TipoCita" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Eliminado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="IDEntregaCuenta" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="PagadoConCredito" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="PagadoDesdeFactura" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Association Name="CITA_d_PresupuestoLinea" Member="d_PresupuestoLineas" ThisKey="IDCITA" OtherKey="IDCITA" Type="d_PresupuestoLinea" />
-      <Association Name="CITA_LINEASFACTURA" Member="LINEASFACTURAs" ThisKey="IDCITA" OtherKey="ID_Cita" Type="LINEASFACTURA" />
-      <Association Name="CITA_LCOMPARATIVAS_TRATAMIENTO" Member="LCOMPARATIVAS_TRATAMIENTOs" ThisKey="IDCITA" OtherKey="ID_Cita" Type="LCOMPARATIVAS_TRATAMIENTO" />
-      <Association Name="CITA_LineasCita" Member="LineasCitas" ThisKey="IDCITA" OtherKey="IdCita" Type="LineasCita" />
-      <Association Name="CITA_Sesiones" Member="Sesiones" ThisKey="IDCITA" OtherKey="refcita" Type="Sesiones" Cardinality="One" />
-      <Association Name="FORMASPAGO_CITA" Member="FORMASPAGO" ThisKey="REFFORMAPAGO" OtherKey="CODIGO" Type="FORMASPAGO" IsForeignKey="true" DeleteRule="CASCADE" />
-      <Association Name="SALA_CITA" Member="SALA" ThisKey="ID_SALA" OtherKey="ID_SALA" Type="SALA" IsForeignKey="true" DeleteRule="SET NULL" />
-      <Association Name="PACIENTE_CITA" Member="PACIENTE1" ThisKey="REFPACIENTE" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
-      <Association Name="MEDICO_CITA" Member="MEDICO" ThisKey="REFMEDICO" OtherKey="CMEDICO" Type="MEDICO" IsForeignKey="true" DeleteRule="CASCADE" />
-      <Association Name="N_Proceso_CITA" Member="N_Proceso" ThisKey="ID_Proceso" OtherKey="ID_Proceso" Type="N_Proceso" IsForeignKey="true" DeleteRule="SET NULL" />
-      <Association Name="MUTUA_CITA" Member="MUTUA" ThisKey="REFPROCEDENCIA" OtherKey="CMUTUA" Type="MUTUA" IsForeignKey="true" />
-      <Association Name="EntregasCuenta_CITA" Member="EntregasCuenta" ThisKey="IDEntregaCuenta" OtherKey="IDEntregaCuenta" Type="EntregasCuenta" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.LINEASFACTURAS" Member="LINEASFACTURAs">
     <Type Name="LINEASFACTURA">
       <Column Name="IDLINEAFACTURA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -944,9 +896,9 @@
       <Column Name="RefLineaCita" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
       <Association Name="LINEASFACTURA_LCOMPARATIVAS_TRATAMIENTO" Member="LCOMPARATIVAS_TRATAMIENTOs" ThisKey="IDLINEAFACTURA" OtherKey="ID_LineaFactura" Type="LCOMPARATIVAS_TRATAMIENTO" />
       <Association Name="CONCEPTOSFRA_LINEASFACTURA" Member="CONCEPTOSFRA" ThisKey="REFCONCEPTO" OtherKey="CODIGO" Type="CONCEPTOSFRA" IsForeignKey="true" />
-      <Association Name="CITA_LINEASFACTURA" Member="CITA" ThisKey="ID_Cita" OtherKey="IDCITA" Type="CITA" IsForeignKey="true" />
       <Association Name="FACTURA_LINEASFACTURA" Member="FACTURA" ThisKey="REFFACTURA" OtherKey="IDFACTURA" Type="FACTURA" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="LineasCita_LINEASFACTURA" Member="LineasCita" ThisKey="RefLineaCita,ID_Cita" OtherKey="IdLinea,IdCita" Type="LineasCita" IsForeignKey="true" />
+      <Association Name="CITA_LINEASFACTURA" Member="CITA" ThisKey="ID_Cita" OtherKey="IDCITA" Type="CITA" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.MEDICOS" Member="MEDICOs">
@@ -973,7 +925,6 @@
       <Column Name="Logo2Receta" Type="System.String" CanBeNull="true" />
       <Association Name="MEDICO_d_Accione" Member="d_Acciones" ThisKey="CMEDICO" OtherKey="IDMedico" Type="d_Accione" />
       <Association Name="MEDICO_N_Parte" Member="N_Partes" ThisKey="CMEDICO" OtherKey="ID_Medico" Type="N_Parte" />
-      <Association Name="MEDICO_CITA" Member="CITAs" ThisKey="CMEDICO" OtherKey="REFMEDICO" Type="CITA" />
       <Association Name="MEDICO_MEDICOS_CONCEPTOFRA" Member="MEDICOS_CONCEPTOFRAs" ThisKey="CMEDICO" OtherKey="CMEDICO" Type="MEDICOS_CONCEPTOFRA" />
       <Association Name="MEDICO_Liquidacion_Medico" Member="Liquidacion_Medicos" ThisKey="CMEDICO" OtherKey="ID_Medico" Type="Liquidacion_Medico" />
       <Association Name="MEDICO_CALENDARIO_MEDICO" Member="CALENDARIO_MEDICOs" ThisKey="CMEDICO" OtherKey="ID_MEDICO" Type="CALENDARIO_MEDICO" />
@@ -987,6 +938,7 @@
       <Association Name="MEDICO_HORARIOS_MEDICOS" Member="HORARIOS_MEDICOS" ThisKey="CMEDICO" OtherKey="id" Type="HORARIOS_MEDICOS" Cardinality="One" />
       <Association Name="MEDICO_DERIVACIONES" Member="DERIVACIONES" ThisKey="CMEDICO" OtherKey="REFMEDICO" Type="DERIVACIONES" />
       <Association Name="MEDICO_HISTORIALES_REVISIONES" Member="HISTORIALES_REVISIONES" ThisKey="CMEDICO" OtherKey="REFMEDICO" Type="HISTORIALES_REVISIONES" />
+      <Association Name="MEDICO_CITA" Member="CITAs" ThisKey="CMEDICO" OtherKey="REFMEDICO" Type="CITA" />
     </Type>
   </Table>
   <Table Name="dbo.MEDICOS_CONCEPTOFRA" Member="MEDICOS_CONCEPTOFRAs">
@@ -1120,8 +1072,8 @@
       <Column Name="ID_UsuarioCreador" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="N_Proceso_FACTURA" Member="FACTURAs" ThisKey="ID_Proceso" OtherKey="ID_Proceso" Type="FACTURA" />
       <Association Name="N_Proceso_N_Parte" Member="N_Partes" ThisKey="ID_Proceso" OtherKey="ID_Proceso" Type="N_Parte" />
-      <Association Name="N_Proceso_CITA" Member="CITAs" ThisKey="ID_Proceso" OtherKey="ID_Proceso" Type="CITA" />
       <Association Name="N_Proceso_N_Partes_Asistencia" Member="N_Partes_Asistencias" ThisKey="ID_Proceso" OtherKey="ID_Proceso" Type="N_Partes_Asistencia" />
+      <Association Name="N_Proceso_CITA" Member="CITAs" ThisKey="ID_Proceso" OtherKey="ID_Proceso" Type="CITA" />
       <Association Name="EMPRESA_N_Proceso" Member="EMPRESA" ThisKey="ID_Empresa" OtherKey="CEMPRESA" Type="EMPRESA" IsForeignKey="true" DeleteRule="CASCADE" />
       <Association Name="PACIENTE_N_Proceso" Member="PACIENTE" ThisKey="ID_Paciente" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="MUTUA_N_Proceso" Member="MUTUA" ThisKey="ID_Mutua" OtherKey="CMUTUA" Type="MUTUA" IsForeignKey="true" DeleteRule="CASCADE" />
@@ -1344,9 +1296,9 @@
       <Column Name="ID_LineaFactura" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ID_LineaCita" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
       <Association Name="LCOMPARATIVAS_TRATAMIENTO_LineasCita" Member="LineasCitas" ThisKey="ID" OtherKey="RefLineaTratamiento" Type="LineasCita" />
-      <Association Name="CITA_LCOMPARATIVAS_TRATAMIENTO" Member="CITA" ThisKey="ID_Cita" OtherKey="IDCITA" Type="CITA" IsForeignKey="true" />
       <Association Name="LCOMPARATIVA_LCOMPARATIVAS_TRATAMIENTO" Member="LCOMPARATIVA" ThisKey="ID_LCOMPARATIVA" OtherKey="ID" Type="LCOMPARATIVA" IsForeignKey="true" />
       <Association Name="LINEASFACTURA_LCOMPARATIVAS_TRATAMIENTO" Member="LINEASFACTURA" ThisKey="ID_LineaFactura" OtherKey="IDLINEAFACTURA" Type="LINEASFACTURA" IsForeignKey="true" />
+      <Association Name="CITA_LCOMPARATIVAS_TRATAMIENTO" Member="CITA" ThisKey="ID_Cita" OtherKey="IDCITA" Type="CITA" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.LineasCitas" Member="LineasCitas">
@@ -1365,9 +1317,9 @@
       <Column Name="Liquidada_al_Medico" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="RefLineaTratamiento" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="LineasCita_LINEASFACTURA" Member="LINEASFACTURAs" ThisKey="IdLinea,IdCita" OtherKey="RefLineaCita,ID_Cita" Type="LINEASFACTURA" />
-      <Association Name="CITA_LineasCita" Member="CITA" ThisKey="IdCita" OtherKey="IDCITA" Type="CITA" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="d_PresupuestoLinea_LineasCita" Member="d_PresupuestoLinea" ThisKey="RefLineaPresupuestoDental" OtherKey="IDPresupuestoLinea" Type="d_PresupuestoLinea" IsForeignKey="true" DeleteRule="SET NULL" />
       <Association Name="LCOMPARATIVAS_TRATAMIENTO_LineasCita" Member="LCOMPARATIVAS_TRATAMIENTO" ThisKey="RefLineaTratamiento" OtherKey="ID" Type="LCOMPARATIVAS_TRATAMIENTO" IsForeignKey="true" />
+      <Association Name="CITA_LineasCita" Member="CITA" ThisKey="IdCita" OtherKey="IDCITA" Type="CITA" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.LINEASALARMA" Member="LINEASALARMAs">
@@ -1637,10 +1589,10 @@
       <Column Name="Eliminado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Association Name="MUTUA_PACIENTE" Member="PACIENTEs" ThisKey="CMUTUA" OtherKey="REFMUTUA" Type="PACIENTE" />
       <Association Name="MUTUA_FACTURA" Member="FACTURAs" ThisKey="CMUTUA" OtherKey="REFMUTUA" Type="FACTURA" />
-      <Association Name="MUTUA_CITA" Member="CITAs" ThisKey="CMUTUA" OtherKey="REFPROCEDENCIA" Type="CITA" />
       <Association Name="MUTUA_N_Proceso" Member="N_Procesos" ThisKey="CMUTUA" OtherKey="ID_Mutua" Type="N_Proceso" />
       <Association Name="MUTUA_LMUTUA" Member="LMUTUAs" ThisKey="CMUTUA" OtherKey="REFMUTUA" Type="LMUTUA" />
       <Association Name="MUTUA_PRESUPUESTOS" Member="PRESUPUESTOS" ThisKey="CMUTUA" OtherKey="REFMUTUA" Type="PRESUPUESTOS" />
+      <Association Name="MUTUA_CITA" Member="CITAs" ThisKey="CMUTUA" OtherKey="REFPROCEDENCIA" Type="CITA" />
     </Type>
   </Table>
   <Table Name="dbo.RECETAS" Member="RECETAs">
@@ -1742,9 +1694,9 @@
       <Column Name="IDFormaPago" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Association Name="EntregasCuenta_FACTURA" Member="FACTURAs" ThisKey="IDEntregaCuenta" OtherKey="IDEntregaCuenta" Type="FACTURA" />
       <Association Name="EntregasCuenta_N_Factura" Member="N_Facturas" ThisKey="IDEntregaCuenta" OtherKey="IDEntregaCuenta" Type="N_Factura" />
-      <Association Name="EntregasCuenta_CITA" Member="CITAs" ThisKey="IDEntregaCuenta" OtherKey="IDEntregaCuenta" Type="CITA" />
       <Association Name="EntregasCuenta_N_Ticket" Member="N_Tickets" ThisKey="IDEntregaCuenta" OtherKey="IDEntregaCuenta" Type="N_Ticket" />
       <Association Name="EntregasCuenta_RECIBO" Member="RECIBOs" ThisKey="IDEntregaCuenta" OtherKey="IDEntregaCuenta" Type="RECIBO" />
+      <Association Name="EntregasCuenta_CITA" Member="CITAs" ThisKey="IDEntregaCuenta" OtherKey="IDEntregaCuenta" Type="CITA" />
       <Association Name="FORMASPAGO_EntregasCuenta" Member="FORMASPAGO" ThisKey="IDFormaPago" OtherKey="CODIGO" Type="FORMASPAGO" IsForeignKey="true" />
       <Association Name="PACIENTE_EntregasCuenta" Member="PACIENTE" ThisKey="IDPaciente" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
       <Association Name="USUARIO_EntregasCuenta" Member="USUARIO" ThisKey="IDUsuarioEfectua" OtherKey="CODIGO" Type="USUARIO" IsForeignKey="true" />
@@ -1991,6 +1943,55 @@
       <Column Name="IMPORTE" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
       <Column Name="NOTAS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="COLOR" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CITAS" Member="CITAs">
+    <Type Name="CITA">
+      <Column Name="IDCITA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REFPACIENTE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HORA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CONFIRMADA" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="NOTAS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="REFMEDICO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PACIENTE" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="IMPORTEDR" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="IMPORTECL" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="CONTINUA" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="FALTA" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="BANCO" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="PAGADA" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="REFRECIBO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ATENDIDO" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="REFFRA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="REFFORMAPAGO" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="HORAFIN" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FECHACOBRO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="REFPROCEDENCIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_Proceso" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EstadoRecurrencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FechaUltimoEstadoRecurrencia" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Descuento" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ID_SALA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TOTAL" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TipoCita" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Eliminado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IDEntregaCuenta" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="PagadoConCredito" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PagadoDesdeFactura" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NumeroCita" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Association Name="CITA_d_PresupuestoLinea" Member="d_PresupuestoLineas" ThisKey="IDCITA" OtherKey="IDCITA" Type="d_PresupuestoLinea" />
+      <Association Name="CITA_LINEASFACTURA" Member="LINEASFACTURAs" ThisKey="IDCITA" OtherKey="ID_Cita" Type="LINEASFACTURA" />
+      <Association Name="CITA_LCOMPARATIVAS_TRATAMIENTO" Member="LCOMPARATIVAS_TRATAMIENTOs" ThisKey="IDCITA" OtherKey="ID_Cita" Type="LCOMPARATIVAS_TRATAMIENTO" />
+      <Association Name="CITA_LineasCita" Member="LineasCitas" ThisKey="IDCITA" OtherKey="IdCita" Type="LineasCita" />
+      <Association Name="CITA_Sesiones" Member="Sesiones" ThisKey="IDCITA" OtherKey="refcita" Type="Sesiones" />
+      <Association Name="FORMASPAGO_CITA" Member="FORMASPAGO" ThisKey="REFFORMAPAGO" OtherKey="CODIGO" Type="FORMASPAGO" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="EntregasCuenta_CITA" Member="EntregasCuenta" ThisKey="IDEntregaCuenta" OtherKey="IDEntregaCuenta" Type="EntregasCuenta" IsForeignKey="true" />
+      <Association Name="N_Proceso_CITA" Member="N_Proceso" ThisKey="ID_Proceso" OtherKey="ID_Proceso" Type="N_Proceso" IsForeignKey="true" DeleteRule="SET NULL" />
+      <Association Name="PACIENTE_CITA" Member="PACIENTE1" ThisKey="REFPACIENTE" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="SALA_CITA" Member="SALA" ThisKey="ID_SALA" OtherKey="ID_SALA" Type="SALA" IsForeignKey="true" DeleteRule="SET NULL" />
+      <Association Name="MEDICO_CITA" Member="MEDICO" ThisKey="REFMEDICO" OtherKey="CMEDICO" Type="MEDICO" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="MUTUA_CITA" Member="MUTUA" ThisKey="REFPROCEDENCIA" OtherKey="CMUTUA" Type="MUTUA" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

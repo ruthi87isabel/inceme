@@ -5,6 +5,8 @@ Imports Microsoft.Reporting.WinForms
 Imports centro_medico.UI.Reportes
 
 Public Class form_citas
+    Dim citas As Integer
+    Dim cit As CITA
     Dim context As New CMLinqDataContext()
     Dim cargando As Boolean
     Dim fcurrentAcc As Integer
@@ -411,7 +413,7 @@ Public Class form_citas
         Dim cita As CITA = (From c In context.CITAs
                            Where c.IDCITA = fIdCITA
                            Select c).SingleOrDefault
-
+        cit = cita
         If cita.ID_SALA.HasValue Then
             CtrlSalasvb1.ID_SALA = cita.ID_SALA
 
@@ -423,6 +425,9 @@ Public Class form_citas
             bt_factura.Enabled = False
         End If
 
+        If CurrentAccion = Enums.Accion.Modificar Or CurrentAccion = Enums.Accion.Ver Then
+            CargaBDCitas()
+        End If
 
         pnl_Facturar.Visible = Globales.Usuario.EsAdministrador Or _
             RoleManager.PermisoPorItem(Globales.Usuario.CODIGO, RoleManager.Items.Citas) > RoleManager.TipoPermisos.Modificar
@@ -453,10 +458,10 @@ Public Class form_citas
         Me.ContadorBono1.cita = cita
         Me.ContadorBono1.context = context
         Me.cargaSesionesPaciente()
-        
+
 
     End Sub
- 
+
     Private Function BuscaMutua(ByVal idMutua As Integer)
         Dim i As Integer = 0
         For i = 0 To cb_aseguradora.Items.Count - 1
@@ -1165,6 +1170,10 @@ Public Class form_citas
 
         End Try
 
+        If CBcitas.SelectedItem = "Cita Sucesiva" Then citas = 4
+        If CBcitas.SelectedItem = "3ra Cita" Then citas = 3
+        If CBcitas.SelectedItem = "2da Cita" Then citas = 2
+        If CBcitas.SelectedItem = "1ra Cita" Then citas = 1
 
         If Not Me.CurrentAccion = Enums.Accion.Ver Then
             Dim _notas As String = tb_notas.Text.Trim()
@@ -1334,7 +1343,7 @@ Public Class form_citas
                 End Try
 
 
-                Dim n As Integer = Me.CITASTableAdapter.Update1(_idpac, _fecha, _inicio, _confirmada, _notas, _idmedico, _paciente, _importedr, _importeclinica, "N", _falta, "", _pagada, freciboo, _atendida, fIdfactura, _idforma, _fin, _fechacobro, _idmutua, IdProceso, Nothing, Nothing, descuento, CtrlSalasvb1.ID_SALA, total, fIdCITA)
+                Dim n As Integer = Me.CITASTableAdapter.Update1(_idpac, _fecha, _inicio, _confirmada, _notas, _idmedico, _paciente, _importedr, _importeclinica, "N", _falta, "", _pagada, freciboo, _atendida, fIdfactura, _idforma, _fin, _fechacobro, _idmutua, IdProceso, Nothing, Nothing, descuento, CtrlSalasvb1.ID_SALA, total, citas, fIdCITA)
 
                 'este update es solo para el descuento,  ineficiente pero el VS2010 no me deja modificar el dataset
                 'Try
@@ -1398,7 +1407,7 @@ Public Class form_citas
 
                 End If
                 Me.CITASBindingSource.EndEdit()
-                Me.CITASTableAdapter.Insert(_idpac, _fecha, _inicio, _confirmada, _notas, _idmedico, _paciente, _importedr, _importeclinica, "N", _falta, "", _pagada, freciboo, _atendida, fIdfactura, _idforma, _fin, _fechacobro, _idmutua, IdProceso, Nothing, Nothing, txtDescuentoTotal.Text, CtrlSalasvb1.ID_SALA, total, 0, False)
+                Me.CITASTableAdapter.Insert(_idpac, _fecha, _inicio, _confirmada, _notas, _idmedico, _paciente, _importedr, _importeclinica, "N", _falta, "", _pagada, freciboo, _atendida, fIdfactura, _idforma, _fin, _fechacobro, _idmutua, IdProceso, Nothing, Nothing, txtDescuentoTotal.Text, CtrlSalasvb1.ID_SALA, total, 0, False, citas)
 
                 idCitaTrasInsertar = CITASTableAdapter.GetData().Rows(CITASTableAdapter.GetData().Rows.Count - 1).Item("IDCITA")
 
@@ -1513,7 +1522,7 @@ Public Class form_citas
                     End If
                 Next
                 context.SubmitChanges()
-                
+
             Catch ex As Exception
             End Try
 
@@ -1618,10 +1627,10 @@ Public Class form_citas
                     _inicio = New Date(_fecha.Year, _fecha.Month, _fecha.Day, _horainicio.Hour, _horainicio.Minute, 0)
                     _fin = New Date(_fecha.Year, _fecha.Month, _fecha.Day, _horafin.Hour, _horafin.Minute, 0)
                     If fIdfactura.HasValue Then
-                        Me.CITASTableAdapter.Insert(_idpac, _fecha, _inicio, "N", _notas, _idmedico, _paciente, _importedr, _importeclinica, "N", "N", "", "N", Nothing, "N", fIdfactura, _idforma, _fin, _fechafinal, _idmutua, IdProceso, Nothing, Nothing, txtDescuentoTotal.Text, CtrlSalasvb1.ID_SALA, total, 0, False)
+                        Me.CITASTableAdapter.Insert(_idpac, _fecha, _inicio, "N", _notas, _idmedico, _paciente, _importedr, _importeclinica, "N", "N", "", "N", Nothing, "N", fIdfactura, _idforma, _fin, _fechafinal, _idmutua, IdProceso, Nothing, Nothing, txtDescuentoTotal.Text, CtrlSalasvb1.ID_SALA, total, 0, False, citas)
                         FACTURASTableAdapter.UpdateRefCita(CITASTableAdapter.GetData().Rows(CITASTableAdapter.GetData().Rows.Count - 1).Item("IDCITA"), fIdfactura)
                     Else
-                        Me.CITASTableAdapter.Insert(_idpac, _fecha, _inicio, "N", _notas, _idmedico, _paciente, _importedr, _importeclinica, "N", "N", "", "N", Nothing, "N", Nothing, _idforma, _fin, _fechafinal, _idmutua, IdProceso, Nothing, Nothing, txtDescuentoTotal.Text, CtrlSalasvb1.ID_SALA, total, 0, False)
+                        Me.CITASTableAdapter.Insert(_idpac, _fecha, _inicio, "N", _notas, _idmedico, _paciente, _importedr, _importeclinica, "N", "N", "", "N", Nothing, "N", Nothing, _idforma, _fin, _fechafinal, _idmutua, IdProceso, Nothing, Nothing, txtDescuentoTotal.Text, CtrlSalasvb1.ID_SALA, total, 0, False, citas)
                     End If
 
                     'INICIO - tras insertar relleno todos los datos
@@ -1755,12 +1764,12 @@ Public Class form_citas
 
             CtrlStatusPaciente1.CargaDatos()
 
-         
+
 
 
         End If
 
-      
+
 
     End Sub
 
@@ -1788,7 +1797,7 @@ Public Class form_citas
         Dim factura As FACTURA = Globales.Factura_Modifica_y_Salva(fIdfactura)
 
         If CurrentAccion = Enums.Accion.Insertar Or CurrentAccion = Enums.Accion.Modificar Then
-          
+
             Me.chb_pagada.Checked = (factura.PAGADA = "S")
             If Not factura.FECHACOBRO Is Nothing Then
                 Me.dtp_fechacobro.Value = factura.FECHACOBRO
@@ -1978,7 +1987,7 @@ Public Class form_citas
         frmvisor.StartPosition = FormStartPosition.CenterScreen
         frmvisor.ShowInTaskbar = False
 
-        frmVisor.ShowDialog()
+        frmvisor.ShowDialog()
     End Sub
 
     Private Sub DataGridView1_RowEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
@@ -2084,7 +2093,7 @@ Public Class form_citas
 
     Private Sub tb_horainicio_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tb_horainicio.ValueChanged
         Me.tb_horainicio_TextChanged(Nothing, Nothing)
-       
+
     End Sub
 
     Private Sub HORALabel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -3168,6 +3177,7 @@ Public Class form_citas
         End If
 
         Me.cargaSesionesPaciente()
+        CargaBDCitas()
     End Sub
 
     Private Function ProcesosDePaciente(ByVal idPaciente) As CM3DataSet.N_Procesos_ResumenDataTable
@@ -3600,7 +3610,7 @@ Public Class form_citas
 
     Private Sub lnkSugerirHorario_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles lnkSugerirHorario.LinkClicked
         Dim duration As TimeSpan = tb_horafin.Value - tb_horainicio.Value
-        If(Not ctrlSalasvb1.ID_SALA is nothing) then 
+        If (Not CtrlSalasvb1.ID_SALA Is Nothing) Then
             dtp_fecha.Value = FindFreeSlot(tb_horainicio.Value, duration, CtrlSalasvb1.ID_SALA)
             tb_horainicio.Value = dtp_fecha.Value
             tb_horafin.Value = dtp_fecha.Value.Add(duration)
@@ -3963,6 +3973,7 @@ Public Class form_citas
         RecalculaImporteMedico()
         'End If
         ChequeaFechaDiaDisponible()
+        CargaBDCitas()
     End Sub
 
     Private Sub CtrlMedico1_MedicoNoEncontrado() Handles CtrlMedico1.MedicoNoEncontrado
@@ -4094,8 +4105,8 @@ Public Class form_citas
         ImprimirCita()
     End Sub
 
-  
-  
+
+
     Private Sub tlsVerPacienteSeleccionado_Click(sender As Object, e As EventArgs) Handles tlsVerPacienteSeleccionado.Click
         Me.CtrlPaciente1.abrirFicha()
     End Sub
@@ -4129,6 +4140,59 @@ Public Class form_citas
         End If
     End Sub
 
+    Private Sub bt_ActualizaNumeracion_Click(sender As Object, e As EventArgs) Handles bt_ActualizaNumeracion.Click
+        CargaBDCitas()
+    End Sub
+
+    Private Sub CargaBDCitas()
+
+        Dim dt As DataTable
+        If CtrlPaciente1.ID_PACIENTE.HasValue And CtrlMedico1.txt_Especialidad.Text <> "" Then
+
+            If CurrentAccion = Enums.Accion.Insertar Then
+
+                Dim query As String = "SELECT IDCITA,NumeroCita FROM citas c INNER JOIN dbo.MEDICOS m ON c.REFMEDICO = m.CMEDICO WHERE REFPACIENTE='" & CtrlPaciente1.ID_PACIENTE &
+                                "' AND ESPECIALIDAD='" & CtrlMedico1.txt_Especialidad.Text & "'AND FALTA='N' AND c.Eliminado=0"
+                dt = Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteDataset(My.Settings.CMConnectionString, CommandType.Text, query).Tables(0)
+
+                If dt.Rows.Count() = 0 Then
+                    CBcitas.SelectedItem = "1ra Cita"
+                    citas = 1
+                Else
+                    citas = If(Not IsDBNull(dt.Rows(dt.Rows.Count() - 1).Item("NumeroCita")), dt.Rows(dt.Rows.Count() - 1).Item("NumeroCita"), -1)
+                    If citas = -1 Or citas = 0 Then citas = dt.Rows.Count()
+
+                    If citas > 2 Then
+                        CBcitas.SelectedItem = "Cita Sucesiva"
+                    ElseIf citas = 2 Then
+                        CBcitas.SelectedItem = "3ra Cita"
+                    ElseIf citas = 1 Then
+                        CBcitas.SelectedItem = "2da Cita"
+                    End If
+                    citas = citas + 1
+                End If
+            End If
+            If CurrentAccion = Enums.Accion.Modificar Or CurrentAccion = Enums.Accion.Ver Then
+
+                Dim query As String = "SELECT IDCITA,NumeroCita FROM citas c INNER JOIN dbo.MEDICOS m ON c.REFMEDICO = m.CMEDICO WHERE REFPACIENTE='" & CtrlPaciente1.ID_PACIENTE &
+                                "' AND ESPECIALIDAD='" & CtrlMedico1.txt_Especialidad.Text & "'AND FALTA='N' AND c.Eliminado=0 AND IDCITA <= " & cit.IDCITA
+                dt = Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteDataset(My.Settings.CMConnectionString, CommandType.Text, query).Tables(0)
+
+                citas = If(Not IsDBNull(cit.NumeroCita), cit.NumeroCita, -1)
+                If citas = -1 Or citas = 0 Then citas = dt.Rows.Count()
+
+                If citas > 3 Then
+                    CBcitas.SelectedItem = "Cita Sucesiva"
+                ElseIf citas = 3 Then
+                    CBcitas.SelectedItem = "3ra Cita"
+                ElseIf citas = 2 Then
+                    CBcitas.SelectedItem = "2da Cita"
+                ElseIf citas = 1 Then
+                    CBcitas.SelectedItem = "1ra Cita"
+                End If
+            End If
+        End If
+    End Sub
 
 End Class
 

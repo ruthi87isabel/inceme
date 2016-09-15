@@ -9,6 +9,7 @@
 
     Private _HoraEmisionInicial As DateTime?
     Private _HoraEmisionFinal As DateTime?
+    Public NumeroCita As Integer?
 
     Public Property CPACIENTE As Integer?
 

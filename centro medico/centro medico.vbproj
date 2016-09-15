@@ -155,6 +155,7 @@
       <HintPath>..\DLLS\Janus.Windows.Common.v4.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Janus.Windows.ExplorerBar.v4, Version=4.0.36.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL" />
     <Reference Include="Janus.Windows.GridEX.v4, Version=4.0.36.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLLS\Janus.Windows.GridEX.v4.dll</HintPath>
@@ -616,6 +617,11 @@
     <Compile Include="Logica\PacienteDebitoManager.vb" />
     <Compile Include="Logica\RecibosManager.vb" />
     <Compile Include="Logica\ReportWrappers\WRAPPER_ANALITICA.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI\Bonos\Bonos_form.Designer.vb">
       <DependentUpon>Bonos_form.vb</DependentUpon>
     </Compile>
@@ -639,6 +645,12 @@
     </Compile>
     <Compile Include="UI\Dental\Odontograma.vb">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\form_new_centro_medico.Designer.vb">
+      <DependentUpon>form_new_centro_medico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\form_new_centro_medico.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Horario\Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -1177,6 +1189,12 @@
       <DependentUpon>frmListadoConceptos.vb</DependentUpon>
     </Compile>
     <Compile Include="UI\Facturas\frmListadoConceptos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Pacientes\formPaciente_Captura.Designer.vb">
+      <DependentUpon>formPaciente_Captura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pacientes\formPaciente_Captura.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Pacientes\frmMigrarPacientes.Designer.vb">
@@ -1838,11 +1856,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -2208,7 +2221,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="notas.txt" />
     <Content Include="RDLC\custom\ccc\logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -2242,7 +2254,175 @@
     </Content>
     <Content Include="Resources\1449807294_Chart_bar.png" />
     <Content Include="Resources\1449807300_Chart_bar.ico" />
+    <None Include="Resources\new\Icon_Analitica.png" />
+    <None Include="Resources\new\Exit1.png" />
+    <None Include="Resources\new\Exit2.png" />
+    <None Include="Resources\new\Icon_Alarma.png" />
+    <None Include="Resources\new\Icon_Almacen.png" />
+    <None Include="Resources\new\IconE_Banco.jpg" />
+    <None Include="Resources\new\IconE_Bascar Actualizaciones.png" />
+    <None Include="Resources\new\IconE_BonosNoAgotados.png" />
+    <None Include="Resources\new\IconE_Chequeo Integridad.png" />
+    <None Include="Resources\new\IconE_Citas.jpg" />
+    <None Include="Resources\new\IconE_Cominicaciones.png" />
+    <None Include="Resources\new\IconE_Como nos Conocio.png" />
+    <None Include="Resources\new\IconE_Conceptos Analitica.png" />
+    <None Include="Resources\new\IconE_Conceptos Facturables.png" />
+    <None Include="Resources\new\IconE_Configuración de Usuario.png" />
+    <None Include="Resources\new\IconE_Consolidacion Stock.png" />
+    <None Include="Resources\new\IconE_DashBoard.jpg" />
+    <None Include="Resources\new\IconE_DebitoPaciente.jpg" />
+    <None Include="Resources\new\IconE_Derivaciones.png" />
+    <None Include="Resources\new\IconE_Diagnostico.png" />
+    <None Include="Resources\new\IconE_Diagnosticos Emitidos.png" />
+    <None Include="Resources\new\IconE_Empresa.png" />
+    <None Include="Resources\new\IconE_Entradas.png" />
+    <None Include="Resources\new\IconE_Factura.png" />
+    <None Include="Resources\new\IconE_Facturas Proveedor.png" />
+    <None Include="Resources\new\IconE_Familia.png" />
+    <None Include="Resources\new\IconE_Formas de pago.png" />
+    <None Include="Resources\new\IconE_Galeria de Imagenes.png" />
+    <None Include="Resources\new\IconE_Gastos.jpg" />
+    <None Include="Resources\new\IconE_GenerarFactura.png" />
+    <None Include="Resources\new\IconE_GenerarNorma19.png" />
+    <None Include="Resources\new\IconE_GenerarRecibo.png" />
+    <None Include="Resources\new\IconE_Horario.jpg" />
+    <None Include="Resources\new\IconE_Hospitales Externos.png" />
+    <None Include="Resources\new\IconE_Importar Datos.png" />
+    <None Include="Resources\new\IconE_ImprimirRemesa.png" />
+    <None Include="Resources\new\IconE_Indicaciones.png" />
+    <None Include="Resources\new\IconE_Informe de Ingresos y Gastos.png" />
+    <None Include="Resources\new\IconE_Ingresos Citas-Medicos.png" />
+    <None Include="Resources\new\IconE_Ingresos Procedencia Citas.png" />
+    <None Include="Resources\new\IconE_LiquidacionMedicos.jpg" />
+    <None Include="Resources\new\IconE_Listado de Citas.png" />
+    <None Include="Resources\new\IconE_Listado de Facturas.png" />
+    <None Include="Resources\new\IconE_Listado de Faltas.png" />
+    <None Include="Resources\new\IconE_Listado de Recibos.png" />
+    <None Include="Resources\new\IconE_Listado de Tickets.png" />
+    <None Include="Resources\new\IconE_Medicamentos.png" />
+    <None Include="Resources\new\IconE_Medico.jpg" />
+    <None Include="Resources\new\IconE_Migrar Pacientes.png" />
+    <None Include="Resources\new\IconE_Mutuas.jpg" />
+    <None Include="Resources\new\IconE_Opciones.png" />
+    <None Include="Resources\new\IconE_Paciente.jpg" />
+    <None Include="Resources\new\IconE_Pacientes por Diagnostico.png" />
+    <None Include="Resources\new\IconE_Paises.png" />
+    <None Include="Resources\new\IconE_ParteAltas-Bajas.png" />
+    <None Include="Resources\new\IconE_ParteAsistencia.png" />
+    <None Include="Resources\new\IconE_Partes.png" />
+    <None Include="Resources\new\IconE_Pedodo a Proveedor.png" />
+    <None Include="Resources\new\IconE_Planillas Analiticas.png" />
+    <None Include="Resources\new\IconE_Planillas Historial.png" />
+    <None Include="Resources\new\IconE_Planillas Texto.png" />
+    <None Include="Resources\new\IconE_Poblacion.png" />
+    <None Include="Resources\new\IconE_PresupuestosDentales.png" />
+    <None Include="Resources\new\IconE_Procesos.png" />
+    <None Include="Resources\new\IconE_Proveedores.jpg" />
+    <None Include="Resources\new\IconE_Recetas y Tratamientos.png" />
+    <None Include="Resources\new\IconE_Recibos.png" />
+    <None Include="Resources\new\IconE_Reviciones Comparadas.png" />
+    <None Include="Resources\new\IconE_Roles y Permisos.png" />
+    <None Include="Resources\new\IconE_Salas.png" />
+    <None Include="Resources\new\IconE_Tarifa.png" />
+    <None Include="Resources\new\IconE_Totales en Citas.png" />
+    <None Include="Resources\new\IconE_Usuario.png" />
+    <None Include="Resources\new\IconE_Alarma.png" />
+    <None Include="Resources\new\IconE_Almacen.png" />
+    <None Include="Resources\new\IconE_Analitica.png" />
+    <None Include="Resources\new\IconE_Articulos.jpg" />
+    <None Include="Resources\new\IconE_AsistenteFacturacion.png" />
+    <None Include="Resources\new\IconE_Auditoria.png" />
+    <None Include="Resources\camera.png" />
+    <None Include="Resources\floppy.png" />
+    <None Include="Resources\delete_picture.png" />
+    <Content Include="Resources\new\Icon_Articulos.jpg" />
+    <None Include="Resources\new\Icon_AsistenteFacturacion.png" />
+    <None Include="Resources\new\Icon_Auditoria.png" />
+    <Content Include="Resources\new\Icon_Banco.jpg" />
+    <None Include="Resources\new\Icon_BonosNoAgotados.png" />
+    <None Include="Resources\new\Icon_Chequeo Integridad.png" />
+    <None Include="Resources\new\Icon_Bascar Actualizaciones.png" />
+    <Content Include="Resources\new\icon_Citas.jpg" />
+    <None Include="Resources\new\Icon_Cominicaciones.png" />
+    <None Include="Resources\new\Icon_Conceptos Facturables.png" />
+    <None Include="Resources\new\Icon_Conceptos Analitica.png" />
+    <None Include="Resources\new\Icon_Como nos Conocio.png" />
+    <None Include="Resources\new\Icon_Consolidacion Stock.png" />
+    <None Include="Resources\new\Icon_Configuración de Usuario.png" />
+    <Content Include="Resources\new\Icon_DashBoard.jpg" />
+    <Content Include="Resources\new\Icon_DebitoPaciente.jpg" />
+    <None Include="Resources\new\Icon_Empresa.png" />
+    <None Include="Resources\new\Icon_Diagnostico.png" />
+    <None Include="Resources\new\Icon_Diagnosticos Emitidos.png" />
+    <None Include="Resources\new\Icon_Derivaciones.png" />
+    <None Include="Resources\new\Icon_Entradas.png" />
+    <Content Include="Resources\new\Icon_Factura.jpg" />
+    <None Include="Resources\new\Icon_Familia.png" />
+    <None Include="Resources\new\Icon_Formas de pago.png" />
+    <None Include="Resources\new\Icon_Galeria de Imagenes.png" />
+    <None Include="Resources\new\Icon_Facturas Proveedor.png" />
+    <Content Include="Resources\new\Icon_Gastos.jpg" />
+    <None Include="Resources\new\Icon_GenerarFactura.png" />
+    <None Include="Resources\new\Icon_GenerarRecibo.png" />
+    <None Include="Resources\new\Icon_GenerarNorma19.png" />
+    <Content Include="Resources\new\Icon_Horario.jpg" />
+    <None Include="Resources\new\Icon_ImprimirRemesa.png" />
+    <None Include="Resources\new\Icon_Indicaciones.png" />
+    <None Include="Resources\new\Icon_Hospitales Externos.png" />
+    <None Include="Resources\new\Icon_Ingresos Citas-Medicos.png" />
+    <None Include="Resources\new\Icon_Ingresos Procedencia Citas.png" />
+    <None Include="Resources\new\Icon_Informe de Ingresos y Gastos.png" />
+    <None Include="Resources\new\Icon_Importar Datos.png" />
+    <Content Include="Resources\new\Icon_LiquidacionMedicos.jpg" />
+    <None Include="Resources\new\Icon_Medicamentos.png" />
+    <None Include="Resources\new\Icon_Listado de Faltas.png" />
+    <None Include="Resources\new\Icon_Listado de Citas.png" />
+    <None Include="Resources\new\Icon_Listado de Facturas.png" />
+    <None Include="Resources\new\Icon_Listado de Recibos.png" />
+    <None Include="Resources\new\Icon_Listado de Tickets.png" />
+    <None Include="Resources\new\Icon_Manual de Instrucciones.png" />
+    <Content Include="Resources\new\Icon_Medico.jpg" />
+    <None Include="Resources\new\Icon_Migrar Pacientes.png" />
+    <Content Include="Resources\new\Icon_Mutuas.jpg" />
+    <None Include="Resources\new\Icon_Opciones.png" />
+    <Content Include="Resources\new\Icon_Paciente.jpg" />
+    <None Include="Resources\new\Icon_PresupuestosDentales.png" />
+    <None Include="Resources\new\Icon_ParteAltas-Bajas.png" />
+    <None Include="Resources\new\Icon_ParteAsistencia.png" />
+    <None Include="Resources\new\Icon_Procesos.png" />
+    <None Include="Resources\new\Icon_Planillas Analiticas.png" />
+    <None Include="Resources\new\Icon_Planillas Texto.png" />
+    <None Include="Resources\new\Icon_Planillas Historial.png" />
+    <None Include="Resources\new\Icon_Poblacion.png" />
+    <None Include="Resources\new\Icon_Paises.png" />
+    <None Include="Resources\new\Icon_Partes.png" />
+    <None Include="Resources\new\Icon_Pacientes por Diagnostico.png" />
+    <None Include="Resources\new\Icon_Pedodo a Proveedor.png" />
+    <Content Include="Resources\new\Icon_Proveedores.jpg" />
+    <None Include="Resources\new\Icon_Recibos.png" />
+    <None Include="Resources\new\Icon_Tarifa.png" />
+    <None Include="Resources\new\Icon_Reviciones Comparadas.png" />
+    <None Include="Resources\new\Icon_Salas.png" />
+    <None Include="Resources\new\Icon_Recetas y Tratamientos.png" />
+    <None Include="Resources\new\Icon_Usuario.png" />
+    <None Include="Resources\new\Icon_Roles y Permisos.png" />
+    <None Include="Resources\new\Icon_Totales en Citas.png" />
+    <Content Include="Resources\new\INCEME.png" />
+    <None Include="Resources\new\Log Off.png" />
+    <Content Include="Resources\new\Micon_Clinica.png" />
+    <Content Include="Resources\new\newpag.png" />
+    <None Include="Resources\new\PartPag.png" />
+    <None Include="Resources\new\PartPag1.png" />
+    <Content Include="Resources\new\PicAdmin.jpg" />
+    <Content Include="Resources\new\PicAdmin1.jpg" />
+    <Content Include="Resources\new\PicDoctor.jpg" />
+    <Content Include="Resources\new\PicReception.jpg" />
+    <Content Include="Resources\new\Search.jpg" />
+    <None Include="Resources\ok_picture.png" />
     <Content Include="Resources\permisos.png" />
+    <None Include="Resources\webcam.png" />
+    <None Include="Resources\wc.png" />
     <Content Include="Scripts\db_1.0.3.7.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -2268,7 +2448,6 @@
     <Content Include="Scripts\db_1.0.3.9.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Scripts\Query Dashboard.sql" />
     <Content Include="Scripts\db_1.0.4.0.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -3290,9 +3469,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <Content Include="RDLC\default\AlarmasListado.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -4064,6 +4243,9 @@
       <SubType>Designer</SubType>
       <DependentUpon>ctrlVisorHistoria.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\form_new_centro_medico.resx">
+      <DependentUpon>form_new_centro_medico.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Horario\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -4254,6 +4436,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\GraphicsAssets\LoadingForm.resx">
       <DependentUpon>LoadingForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Pacientes\formPaciente_Captura.resx">
+      <DependentUpon>formPaciente_Captura.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Pacientes\frmMigrarPacientes.resx">
       <DependentUpon>frmMigrarPacientes.vb</DependentUpon>

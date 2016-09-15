@@ -182,8 +182,8 @@ Partial Class frmPacientesListado
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(38, 22)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
         '
         'BindingNavigatorDeleteItem
@@ -386,14 +386,14 @@ Partial Class frmPacientesListado
         '
         Me.ToolStripStatusLabel1.ForeColor = System.Drawing.Color.Purple
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(50, 19)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(56, 19)
         Me.ToolStripStatusLabel1.Text = "Asociado"
         '
         'ToolStripStatusLabel2
         '
         Me.ToolStripStatusLabel2.ForeColor = System.Drawing.Color.Blue
         Me.ToolStripStatusLabel2.Name = "ToolStripStatusLabel2"
-        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(62, 19)
+        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(69, 19)
         Me.ToolStripStatusLabel2.Text = "Beneficiario"
         '
         'ToolStripStatusLabel4
@@ -405,7 +405,7 @@ Partial Class frmPacientesListado
         'ToolStripStatusLabel5
         '
         Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
-        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(202, 19)
+        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(222, 19)
         Me.ToolStripStatusLabel5.Text = "Total importe por conceptos facturables:"
         '
         'tsImporte
@@ -426,7 +426,7 @@ Partial Class frmPacientesListado
         'ToolStripStatusLabel6
         '
         Me.ToolStripStatusLabel6.Name = "ToolStripStatusLabel6"
-        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(84, 19)
+        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(90, 19)
         Me.ToolStripStatusLabel6.Text = "Total pacientes:"
         '
         'tsTotalPacientes
@@ -452,7 +452,7 @@ Partial Class frmPacientesListado
         Me.tstNuevo.Image = Global.centro_medico.My.Resources.Resources._24_em_plus
         Me.tstNuevo.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tstNuevo.Name = "tstNuevo"
-        Me.tstNuevo.Size = New System.Drawing.Size(58, 22)
+        Me.tstNuevo.Size = New System.Drawing.Size(62, 22)
         Me.tstNuevo.Text = "&Añadir"
         Me.tstNuevo.ToolTipText = "Nuevo"
         '
@@ -462,7 +462,7 @@ Partial Class frmPacientesListado
         Me.tst_Editar.Image = Global.centro_medico.My.Resources.Resources._24_tag_pencil
         Me.tst_Editar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tst_Editar.Name = "tst_Editar"
-        Me.tst_Editar.Size = New System.Drawing.Size(70, 22)
+        Me.tst_Editar.Size = New System.Drawing.Size(78, 22)
         Me.tst_Editar.Text = "&Modificar"
         Me.tst_Editar.ToolTipText = "Editar"
         '
@@ -472,7 +472,7 @@ Partial Class frmPacientesListado
         Me.tst_Eliminar.Image = Global.centro_medico.My.Resources.Resources._16_em_cross
         Me.tst_Eliminar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tst_Eliminar.Name = "tst_Eliminar"
-        Me.tst_Eliminar.Size = New System.Drawing.Size(63, 22)
+        Me.tst_Eliminar.Size = New System.Drawing.Size(70, 22)
         Me.tst_Eliminar.Text = "&Eliminar"
         Me.tst_Eliminar.ToolTipText = "Borrar"
         '
@@ -486,7 +486,7 @@ Partial Class frmPacientesListado
         Me.tlbImprimir.Image = Global.centro_medico.My.Resources.Resources.Print1
         Me.tlbImprimir.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tlbImprimir.Name = "tlbImprimir"
-        Me.tlbImprimir.Size = New System.Drawing.Size(65, 22)
+        Me.tlbImprimir.Size = New System.Drawing.Size(73, 22)
         Me.tlbImprimir.Text = "Imprimir"
         '
         'ToolStripSeparator2
@@ -499,7 +499,7 @@ Partial Class frmPacientesListado
         Me.tstMsgSelected.Image = Global.centro_medico.My.Resources.Resources.Email
         Me.tstMsgSelected.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tstMsgSelected.Name = "tstMsgSelected"
-        Me.tstMsgSelected.Size = New System.Drawing.Size(145, 22)
+        Me.tstMsgSelected.Size = New System.Drawing.Size(157, 22)
         Me.tstMsgSelected.Text = "Mensaje a seleccionados"
         '
         'tstMsgAll
@@ -507,7 +507,7 @@ Partial Class frmPacientesListado
         Me.tstMsgAll.Image = Global.centro_medico.My.Resources.Resources.Email
         Me.tstMsgAll.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tstMsgAll.Name = "tstMsgAll"
-        Me.tstMsgAll.Size = New System.Drawing.Size(114, 22)
+        Me.tstMsgAll.Size = New System.Drawing.Size(122, 22)
         Me.tstMsgAll.Text = "Mensaje a TODOS"
         '
         'txtTop100
