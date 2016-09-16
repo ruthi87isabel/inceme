@@ -608,6 +608,7 @@ Partial Class form_new_centro_medico
         Me.ExplorerBar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.ExplorerBar1.ForeColor = System.Drawing.Color.White
         ExplorerBarGroup1.Cursor = System.Windows.Forms.Cursors.Hand
+        ExplorerBarGroup1.Expanded = False
         ExplorerBarItem1.Key = "Item1"
         ExplorerBarItem1.Text = "Médicos"
         ExplorerBarItem2.Key = "Item2"
