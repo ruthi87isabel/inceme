@@ -10,6 +10,7 @@ Public Class frmHistoriales_Editar
     'Public ParentHistorial As Null
     Dim pac As PACIENTE
     Dim context As CMLinqDataContext
+    Dim fCambios As Boolean = False
 
 
     Sub New(IdPaciente As Integer, IDHISTORIAL As Integer)
@@ -769,6 +770,21 @@ Public Class frmHistoriales_Editar
         TimerMsg.Stop()
     End Sub
 
+    Private Sub frmHistoriales_Editar_FormClosing(sender As Object, e As FormClosingEventArgs)
+        Dim res As MsgBoxResult
+        If fCambios = True Then
+            res = MsgBox("Hay cambios sin guardar. Si continua los perderá. ¿Seguro que desea continuar y perderlos?", MsgBoxStyle.YesNo)
+            If res = MsgBoxResult.Yes Then
+                Me.Close()
+            End If
+        Else
+            Me.Close()
+        End If
+    End Sub
+
+    Private Sub EditMotivo_TextChanged(sender As Object, e As EventArgs)
+        fCambios = True
+    End Sub
 End Class
 
 
