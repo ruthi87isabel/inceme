@@ -173,6 +173,7 @@ Public Class frmHistoriales_Editar
     Private Sub tsbGuardar_Click(sender As System.Object, e As System.EventArgs) Handles tsbGuardar.Click
         If Guardar() Then
             Me.DialogResult = Windows.Forms.DialogResult.OK
+            fCambios = False
             Me.Close()
         End If
     End Sub
@@ -770,19 +771,39 @@ Public Class frmHistoriales_Editar
         TimerMsg.Stop()
     End Sub
 
-    Private Sub frmHistoriales_Editar_FormClosing(sender As Object, e As FormClosingEventArgs)
+    Private Sub frmHistoriales_Editar_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         Dim res As MsgBoxResult
         If fCambios = True Then
-            res = MsgBox("Hay cambios sin guardar. Si continua los perderá. ¿Seguro que desea continuar y perderlos?", MsgBoxStyle.YesNo)
+            res = MsgBox("Hay cambios sin guardar. ¿Desea guardar los cambios?", MsgBoxStyle.YesNo)
             If res = MsgBoxResult.Yes Then
-                Me.Close()
+                'e.Cancel = True
+                fCambios = False
+                Call tsbGuardar_Click(sender, e)
             End If
-        Else
-            Me.Close()
         End If
     End Sub
 
-    Private Sub EditMotivo_TextChanged(sender As Object, e As EventArgs)
+    Private Sub EditMotivo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles EditMotivo.KeyPress, editHistorial.KeyPress, editExploracion.KeyPress, editPruebas.KeyPress
+        fCambios = True
+    End Sub
+
+    Private Sub InfoPrimariaGridEX_AddingRecord(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles InfoPrimariaGridEX.AddingRecord
+        fCambios = True
+    End Sub
+
+    Private Sub InfoPrimariaGridEX_DeletingRecord(sender As Object, e As Janus.Windows.GridEX.RowActionCancelEventArgs) Handles InfoPrimariaGridEX.DeletingRecord
+        fCambios = True
+    End Sub
+
+    Private Sub GridEXHipoDiag_AddingRecord(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles GridEXHipoDiag.AddingRecord
+        fCambios = True
+    End Sub
+
+    Private Sub GridEXHipoDiag_DeletingRecord(sender As Object, e As Janus.Windows.GridEX.RowActionCancelEventArgs) Handles GridEXHipoDiag.DeletingRecord
+        fCambios = True
+    End Sub
+
+    Private Sub editTratamiento_KeyPress(sender As Object, e As KeyPressEventArgs) Handles editTratamiento.KeyPress, editHipDiagnostica.KeyPress, editOtrasObservaciones.KeyPress, EditAntecedentes.KeyPress, editNotasFinales.KeyPress
         fCambios = True
     End Sub
 End Class
