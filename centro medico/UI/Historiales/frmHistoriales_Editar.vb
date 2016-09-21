@@ -419,12 +419,12 @@ Public Class frmHistoriales_Editar
     End Sub
 
     Private Sub bt_HtCancelar_Click(sender As System.Object, e As System.EventArgs) Handles bt_HtCancelar.Click
-        Dim res As MsgBoxResult
-        res = MsgBox("Si continua los datos que tenga sin guardar se perderán. ¿Desea continuar?", MsgBoxStyle.YesNo, "Cancelar Edición")
-        If res = MsgBoxResult.Yes Then
-            Me.DialogResult = Windows.Forms.DialogResult.Cancel
-            Me.Close()
-        End If
+        'Dim res As MsgBoxResult
+        'res = MsgBox("Si continua los datos que tenga sin guardar se perderán. ¿Desea continuar?", MsgBoxStyle.YesNo, "Cancelar Edición")
+        'If res = MsgBoxResult.Yes Then
+        '    Me.DialogResult = Windows.Forms.DialogResult.Cancel
+        Me.Close()
+        'End If
 
     End Sub
 
