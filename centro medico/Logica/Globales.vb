@@ -628,6 +628,7 @@ Public Class Globales
             Modificar = 5
             Pagar = 6
             Despagar = 7
+            Cambio_de_tipo_de_Cita = 8
         End Enum
 
         Public Shared Sub Registra(ByVal eAccion As Accion, _

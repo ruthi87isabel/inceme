@@ -5,6 +5,7 @@ Imports Microsoft.Reporting.WinForms
 Imports centro_medico.UI.Reportes
 
 Public Class form_citas
+    Dim cambioCT As Integer
     Dim citas As Integer
     Dim cit As CITA
     Dim context As New CMLinqDataContext()
@@ -1174,6 +1175,14 @@ Public Class form_citas
         If CBcitas.SelectedItem = "3ra Cita" Then citas = 3
         If CBcitas.SelectedItem = "2da Cita" Then citas = 2
         If CBcitas.SelectedItem = "1ra Cita" Then citas = 1
+
+        If citas <> cambioCT And Me.CurrentAccion = Enums.Accion.Modificar Then
+            Globales.AuditoriaInfo.Registra(Globales.AuditoriaInfo.Accion.Cambio_de_tipo_de_Cita, RoleManager.Items.Citas, "Citas", fIdCITA.ToString(), CtrlPaciente1.NombreCompleto)
+        End If
+
+        If citas <> cambioCT And Me.CurrentAccion = Enums.Accion.Insertar Then
+            Globales.AuditoriaInfo.Registra(Globales.AuditoriaInfo.Accion.Cambio_de_tipo_de_Cita, RoleManager.Items.Citas, "Citas", fIdCITA.ToString(), CtrlPaciente1.NombreCompleto)
+        End If
 
         If Not Me.CurrentAccion = Enums.Accion.Ver Then
             Dim _notas As String = tb_notas.Text.Trim()
@@ -4183,6 +4192,7 @@ Public Class form_citas
 
                 If citas > 3 Then
                     CBcitas.SelectedItem = "Cita Sucesiva"
+                    citas = 4
                 ElseIf citas = 3 Then
                     CBcitas.SelectedItem = "3ra Cita"
                 ElseIf citas = 2 Then
@@ -4191,6 +4201,7 @@ Public Class form_citas
                     CBcitas.SelectedItem = "1ra Cita"
                 End If
             End If
+            cambioCT = citas
         End If
     End Sub
 
