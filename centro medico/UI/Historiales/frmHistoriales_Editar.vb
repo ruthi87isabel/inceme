@@ -11,6 +11,7 @@ Public Class frmHistoriales_Editar
     Dim pac As PACIENTE
     Dim context As CMLinqDataContext
     Dim fCambios As Boolean = False
+    Dim OnLoad As Boolean = False
 
 
     Sub New(IdPaciente As Integer, IDHISTORIAL As Integer)
@@ -70,6 +71,7 @@ Public Class frmHistoriales_Editar
     End Sub
 
     Private Sub frmHistoriales_Editar_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        OnLoad = True
         Filtrar_InformacionPrimaria()
         Cargar_AntecedentesDiagnostico()
         Cargar_LineasAlarmas()
@@ -105,6 +107,7 @@ Public Class frmHistoriales_Editar
                 End If
             End If
         End If
+        OnLoad = False
     End Sub
 
     Private Sub SoloLectura()
@@ -787,24 +790,16 @@ Public Class frmHistoriales_Editar
         fCambios = True
     End Sub
 
-    Private Sub InfoPrimariaGridEX_AddingRecord(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles InfoPrimariaGridEX.AddingRecord
-        fCambios = True
-    End Sub
-
-    Private Sub InfoPrimariaGridEX_DeletingRecord(sender As Object, e As Janus.Windows.GridEX.RowActionCancelEventArgs) Handles InfoPrimariaGridEX.DeletingRecord
-        fCambios = True
-    End Sub
-
-    Private Sub GridEXHipoDiag_AddingRecord(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles GridEXHipoDiag.AddingRecord
-        fCambios = True
-    End Sub
-
-    Private Sub GridEXHipoDiag_DeletingRecord(sender As Object, e As Janus.Windows.GridEX.RowActionCancelEventArgs) Handles GridEXHipoDiag.DeletingRecord
-        fCambios = True
-    End Sub
-
     Private Sub editTratamiento_KeyPress(sender As Object, e As KeyPressEventArgs) Handles editTratamiento.KeyPress, editHipDiagnostica.KeyPress, editOtrasObservaciones.KeyPress, EditAntecedentes.KeyPress, editNotasFinales.KeyPress
         fCambios = True
+    End Sub
+
+    Private Sub dtp_Fecha_ValueChanged(sender As Object, e As EventArgs) Handles dtp_Fecha.ValueChanged, dpt_hora.ValueChanged
+        If Me.Visible Then fCambios = True
+    End Sub
+
+    Private Sub GridEXHipoDiag_RowCountChanged(sender As Object, e As EventArgs) Handles GridEXHipoDiag.RowCountChanged, GridEXRecetas.RowCountChanged, InfoPrimariaGridEX.RowCountChanged, GridEXDiagnosticoAntecedente.RowCountChanged, GridEXLineaAlarma.RowCountChanged
+        If OnLoad = False Then fCambios = True
     End Sub
 End Class
 

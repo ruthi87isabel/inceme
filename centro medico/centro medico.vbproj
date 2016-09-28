@@ -622,6 +622,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI\Admin\Actualizar_BD.Designer.vb">
+      <DependentUpon>Actualizar_BD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\Actualizar_BD.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\Bonos\Bonos_form.Designer.vb">
       <DependentUpon>Bonos_form.vb</DependentUpon>
     </Compile>
@@ -3283,6 +3289,9 @@
     <EmbeddedResource Include="formularios\form_analresult.resx">
       <SubType>Designer</SubType>
       <DependentUpon>form_analresult.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\Actualizar_BD.resx">
+      <DependentUpon>Actualizar_BD.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Alarmas\frmAlarmas.resx">
       <DependentUpon>frmAlarmas.vb</DependentUpon>

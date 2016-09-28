@@ -1207,6 +1207,9 @@ Public Class form_new_centro_medico
         ElseIf ExplorerBar1.Groups("Group6").Items("Item10").Selected Then
              Dim a As New frmMigrarPacientes
             a.ShowDialog()
+        ElseIf ExplorerBar1.Groups("Group6").Items("Item11").Selected Then
+            Dim a As New form_Actualizar_BD
+            a.ShowDialog()
         End If
 
         If ExplorerBar1.Groups("Group7").Items("Item1").Selected Then
