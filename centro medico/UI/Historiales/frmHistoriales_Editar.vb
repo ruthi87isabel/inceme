@@ -12,6 +12,7 @@ Public Class frmHistoriales_Editar
     Dim context As CMLinqDataContext
     Dim fCambios As Boolean = False
     Dim OnLoad As Boolean = False
+    Dim Med As String = ""
 
 
     Sub New(IdPaciente As Integer, IDHISTORIAL As Integer)
@@ -72,6 +73,7 @@ Public Class frmHistoriales_Editar
 
     Private Sub frmHistoriales_Editar_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         OnLoad = True
+        Med = CtrlMedicoHistorial.ID_Medico.ToString()
         Filtrar_InformacionPrimaria()
         Cargar_AntecedentesDiagnostico()
         Cargar_LineasAlarmas()
@@ -776,6 +778,10 @@ Public Class frmHistoriales_Editar
 
     Private Sub frmHistoriales_Editar_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         Dim res As MsgBoxResult
+        If Not Med = CtrlMedicoHistorial.ID_Medico.ToString() Then
+            fCambios = True
+            Med = CtrlMedicoHistorial.ID_Medico.ToString()
+        End If
         If fCambios = True Then
             res = MsgBox("Hay cambios sin guardar. ¿Desea guardar los cambios?", MsgBoxStyle.YesNo)
             If res = MsgBoxResult.Yes Then
