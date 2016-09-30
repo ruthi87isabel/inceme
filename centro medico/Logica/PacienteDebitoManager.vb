@@ -307,7 +307,7 @@ Public Class PacienteDebitoManager
                         .Importe = doc.Importe * -1,
                         .IDFormaPago = doc.IDFormaPago,
                         .Automatico = True,
-            .Notas = "Abono de sistema al cancelar pago de documento -> " & doc.DescripcionDocumento
+                        .Notas = "Abono de sistema al cancelar pago de documento -> " & doc.DescripcionDocumento
                          }
             context.PagosPacientes.InsertOnSubmit(pago)
 

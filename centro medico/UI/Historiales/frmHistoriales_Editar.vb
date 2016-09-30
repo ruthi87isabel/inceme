@@ -13,6 +13,8 @@ Public Class frmHistoriales_Editar
     Dim fCambios As Boolean = False
     Dim OnLoad As Boolean = False
     Dim Med As String = ""
+    Dim Diag As String = ""
+    Dim D1 As Integer = 0
 
 
     Sub New(IdPaciente As Integer, IDHISTORIAL As Integer)
@@ -619,7 +621,10 @@ Public Class frmHistoriales_Editar
         '    pn_FormaTextbox.Controls(2 * Integer.Parse(Globales.Configuracion.campodiagnostico) + 1).Text = CtrlDiagnosticos1.NombreCompleto
         'End If
         btn_AnnadirAntecentes.Enabled = True
-
+        If D1 = 0 Then
+            Diag = CtrlDiagnosticosPrincipal.ID_DIAGNOSTICOS.ToString()
+            D1 = 1
+        End If
     End Sub
 
     Private Sub btn_AnnadirAntecentes_Click(sender As Object, e As EventArgs) Handles btn_AnnadirAntecentes.Click
@@ -782,6 +787,10 @@ Public Class frmHistoriales_Editar
             fCambios = True
             Med = CtrlMedicoHistorial.ID_Medico.ToString()
         End If
+        If Not Diag = CtrlDiagnosticosPrincipal.ID_DIAGNOSTICOS.ToString() Then
+            fCambios = True
+            Diag = CtrlDiagnosticosPrincipal.ID_DIAGNOSTICOS.ToString()
+        End If
         If fCambios = True Then
             res = MsgBox("Hay cambios sin guardar. ¿Desea guardar los cambios?", MsgBoxStyle.YesNo)
             If res = MsgBoxResult.Yes Then
@@ -792,12 +801,12 @@ Public Class frmHistoriales_Editar
         End If
     End Sub
 
-    Private Sub EditMotivo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles EditMotivo.KeyPress, editHistorial.KeyPress, editExploracion.KeyPress, editPruebas.KeyPress
-        fCambios = True
+    Private Sub EditMotivo_TextChanged(sender As Object, e As EventArgs) Handles EditMotivo.TextChanged, editHistorial.TextChanged, editExploracion.TextChanged, editPruebas.TextChanged
+        If OnLoad = False Then fCambios = True
     End Sub
 
-    Private Sub editTratamiento_KeyPress(sender As Object, e As KeyPressEventArgs) Handles editTratamiento.KeyPress, editHipDiagnostica.KeyPress, editOtrasObservaciones.KeyPress, EditAntecedentes.KeyPress, editNotasFinales.KeyPress
-        fCambios = True
+    Private Sub editTratamiento_TextChanged(sender As Object, e As EventArgs) Handles editTratamiento.TextChanged, editHipDiagnostica.TextChanged, editOtrasObservaciones.TextChanged, EditAntecedentes.TextChanged, editNotasFinales.TextChanged
+        If OnLoad = False Then fCambios = True
     End Sub
 
     Private Sub dtp_Fecha_ValueChanged(sender As Object, e As EventArgs) Handles dtp_Fecha.ValueChanged, dpt_hora.ValueChanged
@@ -807,6 +816,8 @@ Public Class frmHistoriales_Editar
     Private Sub GridEXHipoDiag_RowCountChanged(sender As Object, e As EventArgs) Handles GridEXHipoDiag.RowCountChanged, GridEXRecetas.RowCountChanged, InfoPrimariaGridEX.RowCountChanged, GridEXDiagnosticoAntecedente.RowCountChanged, GridEXLineaAlarma.RowCountChanged
         If OnLoad = False Then fCambios = True
     End Sub
+
+   
 End Class
 
 
