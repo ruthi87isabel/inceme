@@ -2,6 +2,7 @@
 
     Public Property Items As List(Of LibroIngresoGastosItem)
     Public Property Filtro As FiltroLibroIngresosGastos
+    Dim ImpDlt As Double?
 
     Public ReadOnly Property Credito As Double
         Get
@@ -9,7 +10,9 @@
             Dim pagos = Items.Where(Function(o) o.PAGADA = "S" And o.PagadoConCredito = False And _
                                         o.TIPO <> PacienteDebitoManager.TipoDocumento.PagoCuenta And _
                                         o.TIPO <> Nothing).Sum(Function(k) k.IMPORTE)
-            Dim res = pagocuenta - pagos
+            Dim desp = Items.Where(Function(o) o.IMPORTE < 0).Sum(Function(k) k.IMPORTE)
+            Dim res = (pagocuenta + (-desp - ImpDlt)) - pagos
+
             Return res
         End Get
     End Property
@@ -63,6 +66,37 @@
         Dim pagos As IQueryable(Of PagosPaciente)
         Dim gastos As IQueryable(Of GASTO)
         Dim comisiones As IQueryable(Of Liquidacion_Medico)
+
+        'Cargar el importe total de las citas despagadas
+        Dim EntregaEliminados As IQueryable(Of EntregasCuenta)
+        EntregaEliminados = context.EntregasCuentas.Where(Function(o) o.Eliminado = True)
+
+        If (filtro.FechaEmisionInicial.HasValue) Then
+            EntregaEliminados = EntregaEliminados.Where(Function(o) o.Fecha >= filtro.FechaEmisionInicial)
+        End If
+
+        If (filtro.FechaEmisionFinal.HasValue) Then
+            EntregaEliminados = EntregaEliminados.Where(Function(o) o.Fecha <= filtro.FechaEmisionFinal)
+        End If
+
+        If (filtro.HoraEmisionInicial.HasValue) Then
+            EntregaEliminados = EntregaEliminados.Where(Function(o) o.Fecha >= New Date(filtro.FechaEmisionInicial.Value.Year, filtro.FechaEmisionInicial.Value.Month, _
+                                                               filtro.FechaEmisionInicial.Value.Day, filtro.HoraEmisionInicial.Value.Hour, filtro.HoraEmisionInicial.Value.Minute, _
+                                                               filtro.HoraEmisionInicial.Value.Second))
+        End If
+
+        If (filtro.HoraEmisionFinal.HasValue) Then
+            EntregaEliminados = EntregaEliminados.Where(Function(o) o.Fecha <= New Date(filtro.FechaEmisionFinal.Value.Year, filtro.FechaEmisionFinal.Value.Month, _
+                                                               filtro.FechaEmisionFinal.Value.Day, filtro.HoraEmisionFinal.Value.Hour, filtro.HoraEmisionFinal.Value.Minute, _
+                                                               filtro.HoraEmisionFinal.Value.Second))
+        End If
+
+        If (Not filtro.FormaPago Is Nothing) Then
+            EntregaEliminados = EntregaEliminados.Where(Function(o) o.IDFormaPago = filtro.FormaPago)
+        End If
+
+        ImpDlt = EntregaEliminados.Sum(Function(k) k.Importe)
+        ImpDlt = If(ImpDlt Is Nothing, 0, ImpDlt)
 
 
         Dim lista As New List(Of LibroIngresoGastosItem)
