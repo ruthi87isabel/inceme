@@ -71,6 +71,19 @@
         Dim EntregaEliminados As IQueryable(Of EntregasCuenta)
         EntregaEliminados = context.EntregasCuentas.Where(Function(o) o.Eliminado = True)
 
+        Dim tipo As New List(Of Integer)
+        If filtro.IncluirTPVFacturas = True Then tipo.Add(PacienteDebitoManager.TipoDocumento.N_Facturas)
+
+        If filtro.IncluirTickets = True Then tipo.Add(PacienteDebitoManager.TipoDocumento.N_Tickets)
+
+        If filtro.IncluirCitas = True Then tipo.Add(PacienteDebitoManager.TipoDocumento.Cita)
+
+        If filtro.IncluirFacturas = True Then tipo.Add(PacienteDebitoManager.TipoDocumento.Factura)
+
+        If tipo.Count > 0 Then
+            entregas = EntregaEliminados.Where(Function(o) tipo.Contains(o.TipoDocumento))
+        End If
+
         If (filtro.FechaEmisionInicial.HasValue) Then
             EntregaEliminados = EntregaEliminados.Where(Function(o) o.Fecha >= filtro.FechaEmisionInicial)
         End If
@@ -98,7 +111,7 @@
         ImpDlt = EntregaEliminados.Sum(Function(k) k.Importe)
         ImpDlt = If(ImpDlt Is Nothing, 0, ImpDlt)
 
-
+        'Aplicar filtro
         Dim lista As New List(Of LibroIngresoGastosItem)
 
         If Not filtro.StatusPago = StatusPago.NoPagado Then
