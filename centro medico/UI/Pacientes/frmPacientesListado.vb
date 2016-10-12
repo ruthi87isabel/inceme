@@ -324,8 +324,18 @@ Public Class frmPacientesListado
     End Sub
 
     Private Sub bt_filtrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bt_filtrar.Click
-        PopulateGrid()
-        Buscar = 0
+        If Not CtrlTMail.Text = "" Then
+            If Not (ValidateEmail(CtrlTMail.Text)) Then
+                MessageBox.Show("El email introducino no es válido")
+            Else
+                PopulateGrid()
+                Buscar = 0
+            End If
+        Else
+            PopulateGrid()
+            Buscar = 0
+        End If
+        
     End Sub
 
 #Region "Public Sub AplicarFormato()"
@@ -545,6 +555,7 @@ Public Class frmPacientesListado
 
             If rbConEMail.Checked = True Then
                 condition.Add("(not email is null and email<>'')")
+                If CtrlTMail.Text <> "" Then condition.Add("PACIENTES.EMAIL ='" & CtrlTMail.Text & "'")
             End If
             If rbSinEmail.Checked = True Then
                 condition.Add("(email is null or email='')")
@@ -974,6 +985,27 @@ Public Class frmPacientesListado
     Private Sub Label11_TextChanged(sender As Object, e As EventArgs) Handles Label11.TextChanged
         If Buscar = 1 Then PopulateGrid()
     End Sub
+
+    Private Sub rbConEMail_CheckedChanged(sender As Object, e As EventArgs) Handles rbConEMail.CheckedChanged
+        CtrlTMail.Enabled = True
+    End Sub
+
+    Private Sub rbSinEmail_CheckedChanged(sender As Object, e As EventArgs) Handles rbSinEmail.CheckedChanged
+        CtrlTMail.Enabled = False
+    End Sub
+
+    Private Sub rbTodosEMail_CheckedChanged(sender As Object, e As EventArgs) Handles rbTodosEMail.CheckedChanged
+        CtrlTMail.Enabled = False
+    End Sub
+
+    Function ValidateEmail(ByVal email As String) As Boolean
+        Dim emailRegex As New System.Text.RegularExpressions.Regex(
+            "^(?<user>[^@]+)@(?<host>.+)$")
+        Dim emailMatch As System.Text.RegularExpressions.Match =
+           emailRegex.Match(email)
+        Return emailMatch.Success
+    End Function
+
 End Class
 
 Partial Public Class Paciente

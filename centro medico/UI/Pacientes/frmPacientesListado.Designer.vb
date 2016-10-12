@@ -41,6 +41,7 @@ Partial Class frmPacientesListado
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.CtrlTMail = New centro_medico.ctrlTextboxAvanzado()
         Me.rbTodosEMail = New System.Windows.Forms.RadioButton()
         Me.rbSinEmail = New System.Windows.Forms.RadioButton()
         Me.rbConEMail = New System.Windows.Forms.RadioButton()
@@ -257,19 +258,29 @@ Partial Class frmPacientesListado
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.CtrlTMail)
         Me.Panel1.Controls.Add(Me.rbTodosEMail)
         Me.Panel1.Controls.Add(Me.rbSinEmail)
         Me.Panel1.Controls.Add(Me.rbConEMail)
-        Me.Panel1.Location = New System.Drawing.Point(757, 198)
+        Me.Panel1.Location = New System.Drawing.Point(746, 192)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(235, 32)
+        Me.Panel1.Size = New System.Drawing.Size(235, 44)
         Me.Panel1.TabIndex = 227
+        '
+        'CtrlTMail
+        '
+        Me.CtrlTMail.AcceptsReturn = True
+        Me.CtrlTMail.Enabled = False
+        Me.CtrlTMail.Location = New System.Drawing.Point(15, 23)
+        Me.CtrlTMail.Name = "CtrlTMail"
+        Me.CtrlTMail.Size = New System.Drawing.Size(142, 20)
+        Me.CtrlTMail.TabIndex = 196
         '
         'rbTodosEMail
         '
         Me.rbTodosEMail.AutoSize = True
         Me.rbTodosEMail.Checked = True
-        Me.rbTodosEMail.Location = New System.Drawing.Point(168, 10)
+        Me.rbTodosEMail.Location = New System.Drawing.Point(169, 3)
         Me.rbTodosEMail.Name = "rbTodosEMail"
         Me.rbTodosEMail.Size = New System.Drawing.Size(51, 17)
         Me.rbTodosEMail.TabIndex = 2
@@ -280,7 +291,7 @@ Partial Class frmPacientesListado
         'rbSinEmail
         '
         Me.rbSinEmail.AutoSize = True
-        Me.rbSinEmail.Location = New System.Drawing.Point(92, 10)
+        Me.rbSinEmail.Location = New System.Drawing.Point(93, 3)
         Me.rbSinEmail.Name = "rbSinEmail"
         Me.rbSinEmail.Size = New System.Drawing.Size(66, 17)
         Me.rbSinEmail.TabIndex = 1
@@ -290,7 +301,7 @@ Partial Class frmPacientesListado
         'rbConEMail
         '
         Me.rbConEMail.AutoSize = True
-        Me.rbConEMail.Location = New System.Drawing.Point(15, 10)
+        Me.rbConEMail.Location = New System.Drawing.Point(16, 3)
         Me.rbConEMail.Name = "rbConEMail"
         Me.rbConEMail.Size = New System.Drawing.Size(71, 17)
         Me.rbConEMail.TabIndex = 0
@@ -515,7 +526,7 @@ Partial Class frmPacientesListado
         Me.txtTop100.AutoSize = True
         Me.txtTop100.Checked = True
         Me.txtTop100.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.txtTop100.Location = New System.Drawing.Point(758, 236)
+        Me.txtTop100.Location = New System.Drawing.Point(744, 237)
         Me.txtTop100.Name = "txtTop100"
         Me.txtTop100.Size = New System.Drawing.Size(162, 17)
         Me.txtTop100.TabIndex = 222
@@ -687,7 +698,7 @@ Partial Class frmPacientesListado
         '
         Me.bt_filtrar.Image = Global.centro_medico.My.Resources.Resources._24_zoom
         Me.bt_filtrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.bt_filtrar.Location = New System.Drawing.Point(922, 231)
+        Me.bt_filtrar.Location = New System.Drawing.Point(922, 233)
         Me.bt_filtrar.Name = "bt_filtrar"
         Me.bt_filtrar.Size = New System.Drawing.Size(73, 25)
         Me.bt_filtrar.TabIndex = 208
@@ -1164,7 +1175,7 @@ Partial Class frmPacientesListado
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 684)
-        Me.Controls.Add(Me.BindingNavigator1)
+        Me.Controls.Add(Me.bt_filtrar)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.grpFiltrosEspeciales)
         Me.Controls.Add(Me.btnConfigGrid)
@@ -1172,7 +1183,6 @@ Partial Class frmPacientesListado
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.txtTop100)
         Me.Controls.Add(Me.grpFiltrarPorNombre)
-        Me.Controls.Add(Me.bt_filtrar)
         Me.Controls.Add(Me.GroupBox8)
         Me.Controls.Add(Me.pnl_Loading)
         Me.Controls.Add(Me.GridEX1)
@@ -1187,6 +1197,7 @@ Partial Class frmPacientesListado
         Me.Controls.Add(Me.grpFiltrarPorCodigo)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox3)
+        Me.Controls.Add(Me.BindingNavigator1)
         Me.Name = "frmPacientesListado"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -1334,4 +1345,5 @@ Partial Class frmPacientesListado
     Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents chkSocioActivo As System.Windows.Forms.CheckBox
+    Friend WithEvents CtrlTMail As centro_medico.ctrlTextboxAvanzado
 End Class
