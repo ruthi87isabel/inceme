@@ -106,9 +106,8 @@ Partial Class form_new_centro_medico
         Dim ExplorerBarItem74 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
         Dim ExplorerBarItem75 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
         Dim ExplorerBarItem76 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
-        Dim ExplorerBarItem77 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
         Dim ExplorerBarGroup7 As Janus.Windows.ExplorerBar.ExplorerBarGroup = New Janus.Windows.ExplorerBar.ExplorerBarGroup()
-        Dim ExplorerBarItem78 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
+        Dim ExplorerBarItem77 As Janus.Windows.ExplorerBar.ExplorerBarItem = New Janus.Windows.ExplorerBar.ExplorerBarItem()
         Dim ExplorerBarGroup8 As Janus.Windows.ExplorerBar.ExplorerBarGroup = New Janus.Windows.ExplorerBar.ExplorerBarGroup()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lb_usuario = New System.Windows.Forms.Label()
@@ -789,16 +788,14 @@ Partial Class form_new_centro_medico
         ExplorerBarItem75.Text = "Auditorias"
         ExplorerBarItem76.Key = "Item10"
         ExplorerBarItem76.Text = "Migrar Pacientes"
-        ExplorerBarItem77.Key = "Item11"
-        ExplorerBarItem77.Text = "Actualizar Base de Datos"
-        ExplorerBarGroup6.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem67, ExplorerBarItem68, ExplorerBarItem69, ExplorerBarItem70, ExplorerBarItem71, ExplorerBarItem72, ExplorerBarItem73, ExplorerBarItem74, ExplorerBarItem75, ExplorerBarItem76, ExplorerBarItem77})
+        ExplorerBarGroup6.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem67, ExplorerBarItem68, ExplorerBarItem69, ExplorerBarItem70, ExplorerBarItem71, ExplorerBarItem72, ExplorerBarItem73, ExplorerBarItem74, ExplorerBarItem75, ExplorerBarItem76})
         ExplorerBarGroup6.Key = "Group6"
         ExplorerBarGroup6.Text = "Utilidades"
         ExplorerBarGroup7.Cursor = System.Windows.Forms.Cursors.Hand
         ExplorerBarGroup7.Expanded = False
-        ExplorerBarItem78.Key = "Item1"
-        ExplorerBarItem78.Text = "Manual de Instrucciones"
-        ExplorerBarGroup7.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem78})
+        ExplorerBarItem77.Key = "Item1"
+        ExplorerBarItem77.Text = "Manual de Instrucciones"
+        ExplorerBarGroup7.Items.AddRange(New Janus.Windows.ExplorerBar.ExplorerBarItem() {ExplorerBarItem77})
         ExplorerBarGroup7.Key = "Group7"
         ExplorerBarGroup7.Text = "Ayuda"
         ExplorerBarGroup8.Cursor = System.Windows.Forms.Cursors.Hand

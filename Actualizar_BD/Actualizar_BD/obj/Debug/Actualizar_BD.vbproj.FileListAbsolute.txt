@@ -1,0 +1,22 @@
+c:\users\ruthi\documents\visual studio 2012\Projects\Actualizar_BD\Actualizar_BD\bin\Debug\Actualizar_BD.exe.config
+c:\users\ruthi\documents\visual studio 2012\Projects\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.Form1.resources
+c:\users\ruthi\documents\visual studio 2012\Projects\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.Resources.resources
+c:\users\ruthi\documents\visual studio 2012\Projects\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.vbproj.GenerateResource.Cache
+C:\Users\ruthi\Documents\Visual Studio 2012\Projects\Actualizar_BD\Actualizar_BD\bin\Debug\Actualizar_BD.exe
+C:\Users\ruthi\Documents\Visual Studio 2012\Projects\Actualizar_BD\Actualizar_BD\bin\Debug\Actualizar_BD.pdb
+C:\Users\ruthi\Documents\Visual Studio 2012\Projects\Actualizar_BD\Actualizar_BD\bin\Debug\Actualizar_BD.xml
+C:\Users\ruthi\Documents\Visual Studio 2012\Projects\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.exe
+C:\Users\ruthi\Documents\Visual Studio 2012\Projects\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.xml
+C:\Users\ruthi\Documents\Visual Studio 2012\Projects\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.pdb
+C:\Users\ruthi\Documents\Visual Studio 2012\Projects\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.Exception.resources
+D:\Work\GitRepo\Actualizar_BD\Actualizar_BD\bin\Debug\Actualizar_BD.exe.config
+D:\Work\GitRepo\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.exe
+D:\Work\GitRepo\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.xml
+D:\Work\GitRepo\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.pdb
+D:\Work\GitRepo\Actualizar_BD\Actualizar_BD\bin\Debug\Actualizar_BD.exe
+D:\Work\GitRepo\Actualizar_BD\Actualizar_BD\bin\Debug\Actualizar_BD.pdb
+D:\Work\GitRepo\Actualizar_BD\Actualizar_BD\bin\Debug\Actualizar_BD.xml
+D:\Work\GitRepo\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.Exception.resources
+D:\Work\GitRepo\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.Crea_Actualiza_BD.resources
+D:\Work\GitRepo\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.Resources.resources
+D:\Work\GitRepo\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.vbproj.GenerateResource.Cache
