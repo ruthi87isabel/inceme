@@ -335,7 +335,7 @@ Public Class frmPacientesListado
             PopulateGrid()
             Buscar = 0
         End If
-        
+
     End Sub
 
 #Region "Public Sub AplicarFormato()"
@@ -553,16 +553,11 @@ Public Class frmPacientesListado
                 End If
             End If
 
-            If rbConEMail.Checked = True Then
-                condition.Add("(not email is null and email<>'')")
-                If CtrlTMail.Text <> "" Then condition.Add("PACIENTES.EMAIL ='" & CtrlTMail.Text & "'")
-            End If
-            If rbSinEmail.Checked = True Then
-                condition.Add("(email is null or email='')")
-            End If
-            'If rbTodosEMail.Checked = True Then
-            '    condition.Add("email is null or email like '%'")
-            'End If
+
+            If Not CbSinEmail.Checked And CtrlTMail.Text <> "" Then condition.Add("PACIENTES.EMAIL LIKE '%" & CtrlTMail.Text & "%'")
+            If CbSinEmail.Checked And Not CbConEmail.Checked Then condition.Add("(email is null or email='')")
+            If CbConEmail.Checked And CtrlTMail.Text = "" And Not CbSinEmail.Checked Then condition.Add("(not email is null and email<>'')")
+            If CbSinEmail.Checked And CtrlTMail.Text <> "" Then condition.Add("(email is null or email='') OR (PACIENTES.EMAIL LIKE '%" & CtrlTMail.Text & "%')")
 
             Try
 
@@ -986,18 +981,6 @@ Public Class frmPacientesListado
         If Buscar = 1 Then PopulateGrid()
     End Sub
 
-    Private Sub rbConEMail_CheckedChanged(sender As Object, e As EventArgs) Handles rbConEMail.CheckedChanged
-        CtrlTMail.Enabled = True
-    End Sub
-
-    Private Sub rbSinEmail_CheckedChanged(sender As Object, e As EventArgs) Handles rbSinEmail.CheckedChanged
-        CtrlTMail.Enabled = False
-    End Sub
-
-    Private Sub rbTodosEMail_CheckedChanged(sender As Object, e As EventArgs) Handles rbTodosEMail.CheckedChanged
-        CtrlTMail.Enabled = False
-    End Sub
-
     Function ValidateEmail(ByVal email As String) As Boolean
         Dim emailRegex As New System.Text.RegularExpressions.Regex(
             "^(?<user>[^@]+)@(?<host>.+)$")
@@ -1005,6 +988,16 @@ Public Class frmPacientesListado
            emailRegex.Match(email)
         Return emailMatch.Success
     End Function
+
+    Private Sub CbConEmail_CheckedChanged(sender As Object, e As EventArgs) Handles CbConEmail.CheckedChanged
+        If CbConEmail.Checked Then
+            CtrlTMail.Enabled = True
+        Else
+            CtrlTMail.Enabled = False
+            CtrlTMail.Text = ""
+        End If
+    End Sub
+
 
 End Class
 

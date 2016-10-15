@@ -41,10 +41,9 @@ Partial Class frmPacientesListado
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.CbSinEmail = New System.Windows.Forms.CheckBox()
+        Me.CbConEmail = New System.Windows.Forms.CheckBox()
         Me.CtrlTMail = New centro_medico.ctrlTextboxAvanzado()
-        Me.rbTodosEMail = New System.Windows.Forms.RadioButton()
-        Me.rbSinEmail = New System.Windows.Forms.RadioButton()
-        Me.rbConEMail = New System.Windows.Forms.RadioButton()
         Me.grpFiltrosEspeciales = New System.Windows.Forms.GroupBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.tb_CantDias = New Janus.Windows.GridEX.EditControls.NumericEditBox()
@@ -258,55 +257,42 @@ Partial Class frmPacientesListado
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.CbSinEmail)
+        Me.Panel1.Controls.Add(Me.CbConEmail)
         Me.Panel1.Controls.Add(Me.CtrlTMail)
-        Me.Panel1.Controls.Add(Me.rbTodosEMail)
-        Me.Panel1.Controls.Add(Me.rbSinEmail)
-        Me.Panel1.Controls.Add(Me.rbConEMail)
         Me.Panel1.Location = New System.Drawing.Point(746, 192)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(235, 44)
+        Me.Panel1.Size = New System.Drawing.Size(246, 44)
         Me.Panel1.TabIndex = 227
+        '
+        'CbSinEmail
+        '
+        Me.CbSinEmail.AutoSize = True
+        Me.CbSinEmail.Location = New System.Drawing.Point(18, 25)
+        Me.CbSinEmail.Name = "CbSinEmail"
+        Me.CbSinEmail.Size = New System.Drawing.Size(69, 17)
+        Me.CbSinEmail.TabIndex = 198
+        Me.CbSinEmail.Text = "Sin Email"
+        Me.CbSinEmail.UseVisualStyleBackColor = True
+        '
+        'CbConEmail
+        '
+        Me.CbConEmail.AutoSize = True
+        Me.CbConEmail.Location = New System.Drawing.Point(18, 6)
+        Me.CbConEmail.Name = "CbConEmail"
+        Me.CbConEmail.Size = New System.Drawing.Size(73, 17)
+        Me.CbConEmail.TabIndex = 197
+        Me.CbConEmail.Text = "Con Email"
+        Me.CbConEmail.UseVisualStyleBackColor = True
         '
         'CtrlTMail
         '
         Me.CtrlTMail.AcceptsReturn = True
         Me.CtrlTMail.Enabled = False
-        Me.CtrlTMail.Location = New System.Drawing.Point(15, 23)
+        Me.CtrlTMail.Location = New System.Drawing.Point(102, 5)
         Me.CtrlTMail.Name = "CtrlTMail"
         Me.CtrlTMail.Size = New System.Drawing.Size(142, 20)
         Me.CtrlTMail.TabIndex = 196
-        '
-        'rbTodosEMail
-        '
-        Me.rbTodosEMail.AutoSize = True
-        Me.rbTodosEMail.Checked = True
-        Me.rbTodosEMail.Location = New System.Drawing.Point(169, 3)
-        Me.rbTodosEMail.Name = "rbTodosEMail"
-        Me.rbTodosEMail.Size = New System.Drawing.Size(51, 17)
-        Me.rbTodosEMail.TabIndex = 2
-        Me.rbTodosEMail.TabStop = True
-        Me.rbTodosEMail.Text = "todos"
-        Me.rbTodosEMail.UseVisualStyleBackColor = True
-        '
-        'rbSinEmail
-        '
-        Me.rbSinEmail.AutoSize = True
-        Me.rbSinEmail.Location = New System.Drawing.Point(93, 3)
-        Me.rbSinEmail.Name = "rbSinEmail"
-        Me.rbSinEmail.Size = New System.Drawing.Size(66, 17)
-        Me.rbSinEmail.TabIndex = 1
-        Me.rbSinEmail.Text = "sin Email"
-        Me.rbSinEmail.UseVisualStyleBackColor = True
-        '
-        'rbConEMail
-        '
-        Me.rbConEMail.AutoSize = True
-        Me.rbConEMail.Location = New System.Drawing.Point(16, 3)
-        Me.rbConEMail.Name = "rbConEMail"
-        Me.rbConEMail.Size = New System.Drawing.Size(71, 17)
-        Me.rbConEMail.TabIndex = 0
-        Me.rbConEMail.Text = "con Email"
-        Me.rbConEMail.UseVisualStyleBackColor = True
         '
         'grpFiltrosEspeciales
         '
@@ -1329,9 +1315,6 @@ Partial Class frmPacientesListado
     Friend WithEvents tb_CantDias As Janus.Windows.GridEX.EditControls.NumericEditBox
     Friend WithEvents rbCumple_Dias As System.Windows.Forms.RadioButton
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents rbTodosEMail As System.Windows.Forms.RadioButton
-    Friend WithEvents rbSinEmail As System.Windows.Forms.RadioButton
-    Friend WithEvents rbConEMail As System.Windows.Forms.RadioButton
     Friend WithEvents BindingNavigator1 As System.Windows.Forms.BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
@@ -1346,4 +1329,6 @@ Partial Class frmPacientesListado
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents chkSocioActivo As System.Windows.Forms.CheckBox
     Friend WithEvents CtrlTMail As centro_medico.ctrlTextboxAvanzado
+    Friend WithEvents CbSinEmail As System.Windows.Forms.CheckBox
+    Friend WithEvents CbConEmail As System.Windows.Forms.CheckBox
 End Class
