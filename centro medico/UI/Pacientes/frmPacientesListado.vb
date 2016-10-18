@@ -324,17 +324,8 @@ Public Class frmPacientesListado
     End Sub
 
     Private Sub bt_filtrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bt_filtrar.Click
-        If Not CtrlTMail.Text = "" Then
-            If Not (ValidateEmail(CtrlTMail.Text)) Then
-                MessageBox.Show("El email introducino no es válido")
-            Else
-                PopulateGrid()
-                Buscar = 0
-            End If
-        Else
-            PopulateGrid()
-            Buscar = 0
-        End If
+        PopulateGrid()
+        Buscar = 0
 
     End Sub
 

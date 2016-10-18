@@ -2423,6 +2423,7 @@
     <Content Include="Resources\permisos.png" />
     <None Include="Resources\webcam.png" />
     <None Include="Resources\wc.png" />
+    <Content Include="Scripts\db_0.0.0.1.sql" />
     <Content Include="Scripts\db_1.0.3.7.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -2583,9 +2584,6 @@
     <Content Include="Resources\textAreaResizeCorner.png" />
     <None Include="Resources\yellow_plus.jpg" />
     <None Include="Resources\yellow_cross.jpg" />
-    <Content Include="Scripts\db_0.0.0.1_dbcreator.sql">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Scripts\db_0.0.0.2_CM.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -40,7 +40,6 @@ Partial Class frmPacientesListado
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.CbSinEmail = New System.Windows.Forms.CheckBox()
         Me.CbConEmail = New System.Windows.Forms.CheckBox()
         Me.CtrlTMail = New centro_medico.ctrlTextboxAvanzado()
@@ -134,7 +133,6 @@ Partial Class frmPacientesListado
         CType(Me.ListadoPacientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
-        Me.Panel1.SuspendLayout()
         Me.grpFiltrosEspeciales.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -255,20 +253,10 @@ Partial Class frmPacientesListado
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.CbSinEmail)
-        Me.Panel1.Controls.Add(Me.CbConEmail)
-        Me.Panel1.Controls.Add(Me.CtrlTMail)
-        Me.Panel1.Location = New System.Drawing.Point(746, 192)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(246, 44)
-        Me.Panel1.TabIndex = 227
-        '
         'CbSinEmail
         '
         Me.CbSinEmail.AutoSize = True
-        Me.CbSinEmail.Location = New System.Drawing.Point(18, 25)
+        Me.CbSinEmail.Location = New System.Drawing.Point(107, 129)
         Me.CbSinEmail.Name = "CbSinEmail"
         Me.CbSinEmail.Size = New System.Drawing.Size(69, 17)
         Me.CbSinEmail.TabIndex = 198
@@ -278,7 +266,7 @@ Partial Class frmPacientesListado
         'CbConEmail
         '
         Me.CbConEmail.AutoSize = True
-        Me.CbConEmail.Location = New System.Drawing.Point(18, 6)
+        Me.CbConEmail.Location = New System.Drawing.Point(189, 129)
         Me.CbConEmail.Name = "CbConEmail"
         Me.CbConEmail.Size = New System.Drawing.Size(73, 17)
         Me.CbConEmail.TabIndex = 197
@@ -289,9 +277,9 @@ Partial Class frmPacientesListado
         '
         Me.CtrlTMail.AcceptsReturn = True
         Me.CtrlTMail.Enabled = False
-        Me.CtrlTMail.Location = New System.Drawing.Point(102, 5)
+        Me.CtrlTMail.Location = New System.Drawing.Point(266, 126)
         Me.CtrlTMail.Name = "CtrlTMail"
-        Me.CtrlTMail.Size = New System.Drawing.Size(142, 20)
+        Me.CtrlTMail.Size = New System.Drawing.Size(162, 20)
         Me.CtrlTMail.TabIndex = 196
         '
         'grpFiltrosEspeciales
@@ -301,7 +289,7 @@ Partial Class frmPacientesListado
         Me.grpFiltrosEspeciales.Controls.Add(Me.rbCumple_Dias)
         Me.grpFiltrosEspeciales.Controls.Add(Me.rbCumple_Hoy)
         Me.grpFiltrosEspeciales.Controls.Add(Me.chkFiltroCumple)
-        Me.grpFiltrosEspeciales.Location = New System.Drawing.Point(453, 209)
+        Me.grpFiltrosEspeciales.Location = New System.Drawing.Point(453, 228)
         Me.grpFiltrosEspeciales.Name = "grpFiltrosEspeciales"
         Me.grpFiltrosEspeciales.Size = New System.Drawing.Size(271, 44)
         Me.grpFiltrosEspeciales.TabIndex = 226
@@ -402,7 +390,7 @@ Partial Class frmPacientesListado
         'ToolStripStatusLabel5
         '
         Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
-        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(222, 19)
+        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(221, 19)
         Me.ToolStripStatusLabel5.Text = "Total importe por conceptos facturables:"
         '
         'tsImporte
@@ -423,7 +411,7 @@ Partial Class frmPacientesListado
         'ToolStripStatusLabel6
         '
         Me.ToolStripStatusLabel6.Name = "ToolStripStatusLabel6"
-        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(90, 19)
+        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(89, 19)
         Me.ToolStripStatusLabel6.Text = "Total pacientes:"
         '
         'tsTotalPacientes
@@ -504,7 +492,7 @@ Partial Class frmPacientesListado
         Me.tstMsgAll.Image = Global.centro_medico.My.Resources.Resources.Email
         Me.tstMsgAll.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tstMsgAll.Name = "tstMsgAll"
-        Me.tstMsgAll.Size = New System.Drawing.Size(122, 22)
+        Me.tstMsgAll.Size = New System.Drawing.Size(121, 22)
         Me.tstMsgAll.Text = "Mensaje a TODOS"
         '
         'txtTop100
@@ -512,7 +500,7 @@ Partial Class frmPacientesListado
         Me.txtTop100.AutoSize = True
         Me.txtTop100.Checked = True
         Me.txtTop100.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.txtTop100.Location = New System.Drawing.Point(744, 237)
+        Me.txtTop100.Location = New System.Drawing.Point(749, 240)
         Me.txtTop100.Name = "txtTop100"
         Me.txtTop100.Size = New System.Drawing.Size(162, 17)
         Me.txtTop100.TabIndex = 222
@@ -521,7 +509,10 @@ Partial Class frmPacientesListado
         '
         'grpFiltrarPorNombre
         '
+        Me.grpFiltrarPorNombre.Controls.Add(Me.CtrlTMail)
+        Me.grpFiltrarPorNombre.Controls.Add(Me.CbSinEmail)
         Me.grpFiltrarPorNombre.Controls.Add(Me.Label10)
+        Me.grpFiltrarPorNombre.Controls.Add(Me.CbConEmail)
         Me.grpFiltrarPorNombre.Controls.Add(Me.txtDni)
         Me.grpFiltrarPorNombre.Controls.Add(Me.Label8)
         Me.grpFiltrarPorNombre.Controls.Add(Me.Label7)
@@ -537,9 +528,9 @@ Partial Class frmPacientesListado
         Me.grpFiltrarPorNombre.Controls.Add(Me.txtDireccion)
         Me.grpFiltrarPorNombre.Controls.Add(Me.txtCodigoPropio)
         Me.grpFiltrarPorNombre.Controls.Add(Me.txtNombre)
-        Me.grpFiltrarPorNombre.Location = New System.Drawing.Point(4, 121)
+        Me.grpFiltrarPorNombre.Location = New System.Drawing.Point(4, 119)
         Me.grpFiltrarPorNombre.Name = "grpFiltrarPorNombre"
-        Me.grpFiltrarPorNombre.Size = New System.Drawing.Size(443, 134)
+        Me.grpFiltrarPorNombre.Size = New System.Drawing.Size(443, 153)
         Me.grpFiltrarPorNombre.TabIndex = 219
         Me.grpFiltrarPorNombre.TabStop = False
         Me.grpFiltrarPorNombre.Text = "Filtrar pacientes por:"
@@ -547,7 +538,7 @@ Partial Class frmPacientesListado
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(231, 29)
+        Me.Label10.Location = New System.Drawing.Point(231, 26)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(29, 13)
         Me.Label10.TabIndex = 196
@@ -556,7 +547,7 @@ Partial Class frmPacientesListado
         'txtDni
         '
         Me.txtDni.AcceptsReturn = True
-        Me.txtDni.Location = New System.Drawing.Point(266, 26)
+        Me.txtDni.Location = New System.Drawing.Point(266, 23)
         Me.txtDni.Name = "txtDni"
         Me.txtDni.Size = New System.Drawing.Size(142, 20)
         Me.txtDni.TabIndex = 195
@@ -564,7 +555,7 @@ Partial Class frmPacientesListado
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(19, 102)
+        Me.Label8.Location = New System.Drawing.Point(19, 99)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(56, 13)
         Me.Label8.TabIndex = 194
@@ -573,7 +564,7 @@ Partial Class frmPacientesListado
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(19, 79)
+        Me.Label7.Location = New System.Drawing.Point(19, 76)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(56, 13)
         Me.Label7.TabIndex = 194
@@ -582,7 +573,7 @@ Partial Class frmPacientesListado
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(225, 103)
+        Me.Label9.Location = New System.Drawing.Point(225, 100)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(35, 13)
         Me.Label9.TabIndex = 194
@@ -591,7 +582,7 @@ Partial Class frmPacientesListado
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(208, 80)
+        Me.Label6.Location = New System.Drawing.Point(208, 77)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(52, 13)
         Me.Label6.TabIndex = 194
@@ -600,7 +591,7 @@ Partial Class frmPacientesListado
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(205, 54)
+        Me.Label4.Location = New System.Drawing.Point(205, 51)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(55, 13)
         Me.Label4.TabIndex = 194
@@ -609,7 +600,7 @@ Partial Class frmPacientesListado
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(22, 28)
+        Me.Label3.Location = New System.Drawing.Point(22, 25)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(53, 13)
         Me.Label3.TabIndex = 194
@@ -618,7 +609,7 @@ Partial Class frmPacientesListado
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(28, 53)
+        Me.Label5.Location = New System.Drawing.Point(28, 50)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(47, 13)
         Me.Label5.TabIndex = 194
@@ -627,7 +618,7 @@ Partial Class frmPacientesListado
         'txtApellido2
         '
         Me.txtApellido2.AcceptsReturn = True
-        Me.txtApellido2.Location = New System.Drawing.Point(81, 102)
+        Me.txtApellido2.Location = New System.Drawing.Point(81, 99)
         Me.txtApellido2.Name = "txtApellido2"
         Me.txtApellido2.Size = New System.Drawing.Size(107, 20)
         Me.txtApellido2.TabIndex = 5
@@ -635,7 +626,7 @@ Partial Class frmPacientesListado
         'txtApellido1
         '
         Me.txtApellido1.AcceptsReturn = True
-        Me.txtApellido1.Location = New System.Drawing.Point(81, 76)
+        Me.txtApellido1.Location = New System.Drawing.Point(81, 73)
         Me.txtApellido1.Name = "txtApellido1"
         Me.txtApellido1.Size = New System.Drawing.Size(107, 20)
         Me.txtApellido1.TabIndex = 4
@@ -643,7 +634,7 @@ Partial Class frmPacientesListado
         'txtMovil
         '
         Me.txtMovil.AcceptsReturn = True
-        Me.txtMovil.Location = New System.Drawing.Point(266, 103)
+        Me.txtMovil.Location = New System.Drawing.Point(266, 100)
         Me.txtMovil.Name = "txtMovil"
         Me.txtMovil.Size = New System.Drawing.Size(162, 20)
         Me.txtMovil.TabIndex = 3
@@ -651,7 +642,7 @@ Partial Class frmPacientesListado
         'txtTelefono
         '
         Me.txtTelefono.AcceptsReturn = True
-        Me.txtTelefono.Location = New System.Drawing.Point(266, 77)
+        Me.txtTelefono.Location = New System.Drawing.Point(266, 74)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(162, 20)
         Me.txtTelefono.TabIndex = 3
@@ -659,7 +650,7 @@ Partial Class frmPacientesListado
         'txtDireccion
         '
         Me.txtDireccion.AcceptsReturn = True
-        Me.txtDireccion.Location = New System.Drawing.Point(266, 51)
+        Me.txtDireccion.Location = New System.Drawing.Point(266, 48)
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(162, 20)
         Me.txtDireccion.TabIndex = 3
@@ -667,7 +658,7 @@ Partial Class frmPacientesListado
         'txtCodigoPropio
         '
         Me.txtCodigoPropio.AcceptsReturn = True
-        Me.txtCodigoPropio.Location = New System.Drawing.Point(81, 25)
+        Me.txtCodigoPropio.Location = New System.Drawing.Point(81, 22)
         Me.txtCodigoPropio.Name = "txtCodigoPropio"
         Me.txtCodigoPropio.Size = New System.Drawing.Size(107, 20)
         Me.txtCodigoPropio.TabIndex = 3
@@ -675,7 +666,7 @@ Partial Class frmPacientesListado
         'txtNombre
         '
         Me.txtNombre.AcceptsReturn = True
-        Me.txtNombre.Location = New System.Drawing.Point(81, 50)
+        Me.txtNombre.Location = New System.Drawing.Point(81, 47)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(107, 20)
         Me.txtNombre.TabIndex = 3
@@ -684,7 +675,7 @@ Partial Class frmPacientesListado
         '
         Me.bt_filtrar.Image = Global.centro_medico.My.Resources.Resources._24_zoom
         Me.bt_filtrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.bt_filtrar.Location = New System.Drawing.Point(922, 233)
+        Me.bt_filtrar.Location = New System.Drawing.Point(917, 235)
         Me.bt_filtrar.Name = "bt_filtrar"
         Me.bt_filtrar.Size = New System.Drawing.Size(73, 25)
         Me.bt_filtrar.TabIndex = 208
@@ -706,7 +697,7 @@ Partial Class frmPacientesListado
         'chb_fallecidos
         '
         Me.chb_fallecidos.AutoSize = True
-        Me.chb_fallecidos.Location = New System.Drawing.Point(3, 12)
+        Me.chb_fallecidos.Location = New System.Drawing.Point(6, 12)
         Me.chb_fallecidos.Name = "chb_fallecidos"
         Me.chb_fallecidos.Size = New System.Drawing.Size(73, 17)
         Me.chb_fallecidos.TabIndex = 68
@@ -717,7 +708,7 @@ Partial Class frmPacientesListado
         '
         Me.rb_fallecno.AutoSize = True
         Me.rb_fallecno.Enabled = False
-        Me.rb_fallecno.Location = New System.Drawing.Point(41, 30)
+        Me.rb_fallecno.Location = New System.Drawing.Point(43, 30)
         Me.rb_fallecno.Name = "rb_fallecno"
         Me.rb_fallecno.Size = New System.Drawing.Size(37, 17)
         Me.rb_fallecno.TabIndex = 1
@@ -729,7 +720,7 @@ Partial Class frmPacientesListado
         Me.rb_fallecsi.AutoSize = True
         Me.rb_fallecsi.Checked = True
         Me.rb_fallecsi.Enabled = False
-        Me.rb_fallecsi.Location = New System.Drawing.Point(3, 30)
+        Me.rb_fallecsi.Location = New System.Drawing.Point(4, 30)
         Me.rb_fallecsi.Name = "rb_fallecsi"
         Me.rb_fallecsi.Size = New System.Drawing.Size(32, 17)
         Me.rb_fallecsi.TabIndex = 0
@@ -796,10 +787,10 @@ Partial Class frmPacientesListado
         Me.GridEX1.FocusCellFormatStyle.BackColor = System.Drawing.SystemColors.Highlight
         Me.GridEX1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.GridEX1.GridLines = Janus.Windows.GridEX.GridLines.RowOutline
-        Me.GridEX1.Location = New System.Drawing.Point(4, 258)
+        Me.GridEX1.Location = New System.Drawing.Point(4, 276)
         Me.GridEX1.Name = "GridEX1"
         Me.GridEX1.SelectedInactiveFormatStyle.BackColorGradient = System.Drawing.SystemColors.Highlight
-        Me.GridEX1.Size = New System.Drawing.Size(999, 399)
+        Me.GridEX1.Size = New System.Drawing.Size(999, 384)
         Me.GridEX1.TabIndex = 220
         Me.GridEX1.TotalRowPosition = Janus.Windows.GridEX.TotalRowPosition.BottomFixed
         '
@@ -809,7 +800,7 @@ Partial Class frmPacientesListado
         Me.CtrlMutua1.FiltrarMutuasPorPAciente = False
         Me.CtrlMutua1.ID_Mutuas = Nothing
         Me.CtrlMutua1.IDPACIENTE = Nothing
-        Me.CtrlMutua1.Location = New System.Drawing.Point(724, 147)
+        Me.CtrlMutua1.Location = New System.Drawing.Point(724, 163)
         Me.CtrlMutua1.Name = "CtrlMutua1"
         Me.CtrlMutua1.Size = New System.Drawing.Size(268, 21)
         Me.CtrlMutua1.TabIndex = 207
@@ -817,7 +808,7 @@ Partial Class frmPacientesListado
         'CtrlPaises1
         '
         Me.CtrlPaises1.ID_PAISES = Nothing
-        Me.CtrlPaises1.Location = New System.Drawing.Point(728, 170)
+        Me.CtrlPaises1.Location = New System.Drawing.Point(728, 186)
         Me.CtrlPaises1.Name = "CtrlPaises1"
         Me.CtrlPaises1.Size = New System.Drawing.Size(264, 25)
         Me.CtrlPaises1.TabIndex = 206
@@ -825,7 +816,7 @@ Partial Class frmPacientesListado
         'CtrlFormaPago21
         '
         Me.CtrlFormaPago21.ID_FORMASPAGO = Nothing
-        Me.CtrlFormaPago21.Location = New System.Drawing.Point(695, 96)
+        Me.CtrlFormaPago21.Location = New System.Drawing.Point(695, 112)
         Me.CtrlFormaPago21.Name = "CtrlFormaPago21"
         Me.CtrlFormaPago21.Size = New System.Drawing.Size(297, 23)
         Me.CtrlFormaPago21.TabIndex = 205
@@ -835,7 +826,7 @@ Partial Class frmPacientesListado
         Me.CtrlEmpresa1.EsEmpresaPorDefecto = False
         Me.CtrlEmpresa1.ID_EMPRESAS = Nothing
         Me.CtrlEmpresa1.IDPACIENTE = Nothing
-        Me.CtrlEmpresa1.Location = New System.Drawing.Point(707, 121)
+        Me.CtrlEmpresa1.Location = New System.Drawing.Point(707, 137)
         Me.CtrlEmpresa1.Name = "CtrlEmpresa1"
         Me.CtrlEmpresa1.Size = New System.Drawing.Size(288, 25)
         Me.CtrlEmpresa1.TabIndex = 204
@@ -892,14 +883,14 @@ Partial Class frmPacientesListado
         Me.GroupBox6.Controls.Add(Me.rb_asocsi)
         Me.GroupBox6.Location = New System.Drawing.Point(707, 28)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(84, 67)
+        Me.GroupBox6.Size = New System.Drawing.Size(89, 70)
         Me.GroupBox6.TabIndex = 203
         Me.GroupBox6.TabStop = False
         '
         'chkSocioActivo
         '
         Me.chkSocioActivo.AutoSize = True
-        Me.chkSocioActivo.Location = New System.Drawing.Point(4, 47)
+        Me.chkSocioActivo.Location = New System.Drawing.Point(4, 50)
         Me.chkSocioActivo.Name = "chkSocioActivo"
         Me.chkSocioActivo.Size = New System.Drawing.Size(56, 17)
         Me.chkSocioActivo.TabIndex = 2
@@ -955,7 +946,7 @@ Partial Class frmPacientesListado
         'chb_activo
         '
         Me.chb_activo.AutoSize = True
-        Me.chb_activo.Location = New System.Drawing.Point(3, 12)
+        Me.chb_activo.Location = New System.Drawing.Point(7, 12)
         Me.chb_activo.Name = "chb_activo"
         Me.chb_activo.Size = New System.Drawing.Size(61, 17)
         Me.chb_activo.TabIndex = 0
@@ -966,7 +957,7 @@ Partial Class frmPacientesListado
         '
         Me.rb_activono.AutoSize = True
         Me.rb_activono.Enabled = False
-        Me.rb_activono.Location = New System.Drawing.Point(43, 30)
+        Me.rb_activono.Location = New System.Drawing.Point(46, 30)
         Me.rb_activono.Name = "rb_activono"
         Me.rb_activono.Size = New System.Drawing.Size(37, 17)
         Me.rb_activono.TabIndex = 2
@@ -991,7 +982,7 @@ Partial Class frmPacientesListado
         Me.GroupBox4.Controls.Add(Me.chb_baja)
         Me.GroupBox4.Controls.Add(Me.dtp_ffb)
         Me.GroupBox4.Controls.Add(Me.dtp_fib)
-        Me.GroupBox4.Location = New System.Drawing.Point(452, 146)
+        Me.GroupBox4.Location = New System.Drawing.Point(453, 161)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(239, 60)
         Me.GroupBox4.TabIndex = 202
@@ -1000,7 +991,7 @@ Partial Class frmPacientesListado
         'chb_baja
         '
         Me.chb_baja.AutoSize = True
-        Me.chb_baja.Location = New System.Drawing.Point(12, 13)
+        Me.chb_baja.Location = New System.Drawing.Point(12, 11)
         Me.chb_baja.Name = "chb_baja"
         Me.chb_baja.Size = New System.Drawing.Size(121, 17)
         Me.chb_baja.TabIndex = 0
@@ -1035,7 +1026,7 @@ Partial Class frmPacientesListado
         Me.grpFiltrarPorCodigo.Controls.Add(Me.Label1)
         Me.grpFiltrarPorCodigo.Location = New System.Drawing.Point(4, 28)
         Me.grpFiltrarPorCodigo.Name = "grpFiltrarPorCodigo"
-        Me.grpFiltrarPorCodigo.Size = New System.Drawing.Size(328, 84)
+        Me.grpFiltrarPorCodigo.Size = New System.Drawing.Size(328, 90)
         Me.grpFiltrarPorCodigo.TabIndex = 196
         Me.grpFiltrarPorCodigo.TabStop = False
         Me.grpFiltrarPorCodigo.Text = "Filtrar pacientes por código"
@@ -1120,7 +1111,7 @@ Partial Class frmPacientesListado
         Me.GroupBox3.Controls.Add(Me.chb_nac)
         Me.GroupBox3.Controls.Add(Me.dtp_ffn)
         Me.GroupBox3.Controls.Add(Me.dtp_fin)
-        Me.GroupBox3.Location = New System.Drawing.Point(452, 87)
+        Me.GroupBox3.Location = New System.Drawing.Point(452, 95)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(239, 60)
         Me.GroupBox3.TabIndex = 200
@@ -1129,7 +1120,7 @@ Partial Class frmPacientesListado
         'chb_nac
         '
         Me.chb_nac.AutoSize = True
-        Me.chb_nac.Location = New System.Drawing.Point(12, 14)
+        Me.chb_nac.Location = New System.Drawing.Point(12, 12)
         Me.chb_nac.Name = "chb_nac"
         Me.chb_nac.Size = New System.Drawing.Size(152, 17)
         Me.chb_nac.TabIndex = 0
@@ -1162,7 +1153,6 @@ Partial Class frmPacientesListado
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 684)
         Me.Controls.Add(Me.bt_filtrar)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.grpFiltrosEspeciales)
         Me.Controls.Add(Me.btnConfigGrid)
         Me.Controls.Add(Me.StatusStrip1)
@@ -1192,8 +1182,6 @@ Partial Class frmPacientesListado
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.grpFiltrosEspeciales.ResumeLayout(False)
         Me.grpFiltrosEspeciales.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
@@ -1314,7 +1302,6 @@ Partial Class frmPacientesListado
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents tb_CantDias As Janus.Windows.GridEX.EditControls.NumericEditBox
     Friend WithEvents rbCumple_Dias As System.Windows.Forms.RadioButton
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents BindingNavigator1 As System.Windows.Forms.BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
