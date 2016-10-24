@@ -2720,12 +2720,14 @@
                       <Value>=IIF(First(Fields!REFSERIE.Value, "dsFactura") = "MD"
 OR First(Fields!REFSERIE.Value, "dsFactura") = "MD13"
 OR First(Fields!REFSERIE.Value, "dsFactura") = "MD14"
-OR First(Fields!REFSERIE.Value, "dsFactura") = "MD15", 
+OR First(Fields!REFSERIE.Value, "dsFactura") = "MD15" 
+OR First(Fields!REFSERIE.Value, "dsFactura") = "MD16", 
 "MANUEL DIEZ DIEZ", 
 IIF(First(Fields!REFSERIE.Value, "dsFactura") = "TG"
 OR First(Fields!REFSERIE.Value, "dsFactura") = "TG13"
 OR First(Fields!REFSERIE.Value, "dsFactura") = "TG14"
-OR First(Fields!REFSERIE.Value, "dsFactura") = "TG15",
+OR First(Fields!REFSERIE.Value, "dsFactura") = "TG15"
+OR First(Fields!REFSERIE.Value, "dsFactura") = "TG16",
  "TOMAS GALVAN CAÑIZARES", First(Fields!NOMBRE.Value, "dsClinica")))</Value>
                       <Style>
                         <FontSize>11pt</FontSize>
@@ -2756,9 +2758,17 @@ OR First(Fields!REFSERIE.Value, "dsFactura") = "TG15",
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=IIF(First(Fields!REFSERIE.Value, "dsFactura") = "MD" OR First(Fields!REFSERIE.Value, "dsFactura") = "MD13"  OR First(Fields!REFSERIE.Value, "dsFactura") = "MD14" OR First(Fields!REFSERIE.Value, "dsFactura") = "MD15", 
+                      <Value>=IIF(First(Fields!REFSERIE.Value, "dsFactura") = "MD" 
+OR First(Fields!REFSERIE.Value, "dsFactura") = "MD13"  
+OR First(Fields!REFSERIE.Value, "dsFactura") = "MD14" 
+OR First(Fields!REFSERIE.Value, "dsFactura") = "MD15"
+OR First(Fields!REFSERIE.Value, "dsFactura") = "MD16", 
 "DNI: 22112466J", 
-IIF(First(Fields!REFSERIE.Value, "dsFactura") = "TG" OR First(Fields!REFSERIE.Value, "dsFactura") = "TG13"  OR First(Fields!REFSERIE.Value, "dsFactura") = "TG14"  OR First(Fields!REFSERIE.Value, "dsFactura") = "TG15", 
+IIF(First(Fields!REFSERIE.Value, "dsFactura") = "TG" 
+OR First(Fields!REFSERIE.Value, "dsFactura") = "TG13"  
+OR First(Fields!REFSERIE.Value, "dsFactura") = "TG14"  
+OR First(Fields!REFSERIE.Value, "dsFactura") = "TG15"
+OR First(Fields!REFSERIE.Value, "dsFactura") = "TG16", 
 "DNI: 74211891E", "CIF: "+ First(Fields!CIF.Value, "dsClinica")))</Value>
                       <Style>
                         <FontSize>8pt</FontSize>
@@ -2790,12 +2800,14 @@ IIF(First(Fields!REFSERIE.Value, "dsFactura") = "TG" OR First(Fields!REFSERIE.Va
                       <Value>=IIF(First(Fields!REFSERIE.Value, "dsFactura") = "MD"
 OR First(Fields!REFSERIE.Value, "dsFactura") = "MD13"
 OR First(Fields!REFSERIE.Value, "dsFactura") = "MD14"
-OR First(Fields!REFSERIE.Value, "dsFactura") = "MD15", 
+OR First(Fields!REFSERIE.Value, "dsFactura") = "MD15"
+OR First(Fields!REFSERIE.Value, "dsFactura") = "MD16", 
 " ", 
 IIF(First(Fields!REFSERIE.Value, "dsFactura") = "TG" 
 OR First(Fields!REFSERIE.Value, "dsFactura") = "TG13"
 OR First(Fields!REFSERIE.Value, "dsFactura") = "TG14"
 OR First(Fields!REFSERIE.Value, "dsFactura") = "TG15"
+OR First(Fields!REFSERIE.Value, "dsFactura") = "TG16"
 , " ", "Registro Sanitario: 04820"))</Value>
                       <Style>
                         <FontSize>9pt</FontSize>
