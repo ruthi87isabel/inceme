@@ -4,6 +4,7 @@ Imports System.Data.SqlClient
 Imports System.Data.Sql
 Imports System.ComponentModel
 Imports System.Text
+Imports System.Configuration
 
 
 Public Class Crea_Actualiza_BD
@@ -13,6 +14,8 @@ Public Class Crea_Actualiza_BD
     Dim version As String = ""
     Dim newbd As Boolean = True
     Dim ver As String = ""
+    Protected configuration As ConnectionStringSettings = ConfigurationManager.ConnectionStrings("CMConnectionString")
+    Dim Conn As New SqlConnection(configuration.ConnectionString)
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TBDireccion.ReadOnly = True
@@ -124,7 +127,7 @@ Public Class Crea_Actualiza_BD
             LbError.Visible = False
             PictureBox1.Visible = False
             If RbCrear.Checked Then newbd = True
-            Dim oConn As New SqlConnection("Data Source=localhost;Integrated Security=SSPI")
+            'Dim oConn As New SqlConnection("Data Source=localhost;Integrated Security=SSPI")
             exception = ""
 
             While (ListBScripts.Items.Count()) > 0 And exception = ""
@@ -143,16 +146,16 @@ Public Class Crea_Actualiza_BD
                 Dim separators() As String = {vbCrLf & "go" & vbCrLf & "go" & vbCrLf, vbCrLf & "go" & vbCrLf, " go" & vbCrLf, vbCrLf & "go ", ";" & vbCrLf & "go", " go "}
                 strArrays = str.Split(separators, StringSplitOptions.RemoveEmptyEntries)
 
-                oConn.Open()
+                Conn.Open()
                 For Each strArray In strArrays
                     If Not strArray = "" Then
-                        Dim cmd As New SqlCommand(strArray, oConn)
+                        Dim cmd As New SqlCommand(strArray, Conn)
                         ver = strArray
                         cmd.CommandTimeout = 60
                         cmd.ExecuteNonQuery()
                     End If
                 Next
-                oConn.Close()
+                Conn.Close()
                 ListBScripts.Items.Remove(name)
                 newbd = False
             End While
@@ -213,10 +216,10 @@ Public Class Crea_Actualiza_BD
         If RbAct.Checked And Not TbNombre.Text = "" Then
 
             Dim Dr As SqlDataReader
-            Dim Conn As New SqlConnection("Data Source=localhost; Initial Catalog=" & TbNombre.Text & "; Integrated Security=SSPI")
+            'Dim oConn As New SqlConnection("Data Source=localhost; Initial Catalog=" & TbNombre.Text & "; Integrated Security=SSPI")
             Try
                 Conn.Open()
-                Dim cmd As New SqlCommand("SELECT Valor FROM VariablesGlobales where Clave = 'DB_Version'", Conn)
+                Dim cmd As New SqlCommand("USE " & TbNombre.Text & " SELECT Valor FROM VariablesGlobales where Clave = 'DB_Version'", Conn)
                 Dr = cmd.ExecuteReader()
                 Dr.Read()
                 LbVersion.Visible = True
