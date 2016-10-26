@@ -20,3 +20,14 @@ D:\Work\GitRepo\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.Exception.re
 D:\Work\GitRepo\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.Crea_Actualiza_BD.resources
 D:\Work\GitRepo\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.Resources.resources
 D:\Work\GitRepo\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.vbproj.GenerateResource.Cache
+C:\INCEME-GITHUB\inceme\Actualizar_BD\Actualizar_BD\bin\Debug\Actualizar_BD.exe.config
+C:\INCEME-GITHUB\inceme\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.exe
+C:\INCEME-GITHUB\inceme\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.xml
+C:\INCEME-GITHUB\inceme\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.pdb
+C:\INCEME-GITHUB\inceme\Actualizar_BD\Actualizar_BD\bin\Debug\Actualizar_BD.exe
+C:\INCEME-GITHUB\inceme\Actualizar_BD\Actualizar_BD\bin\Debug\Actualizar_BD.pdb
+C:\INCEME-GITHUB\inceme\Actualizar_BD\Actualizar_BD\bin\Debug\Actualizar_BD.xml
+C:\INCEME-GITHUB\inceme\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.Exception.resources
+C:\INCEME-GITHUB\inceme\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.Crea_Actualiza_BD.resources
+C:\INCEME-GITHUB\inceme\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.Resources.resources
+C:\INCEME-GITHUB\inceme\Actualizar_BD\Actualizar_BD\obj\Debug\Actualizar_BD.vbproj.GenerateResource.Cache

@@ -685,7 +685,7 @@ que de forma resumida consiste en:
       <Width>18.60396cm</Width>
       <Page>
         <PageHeader>
-          <Height>4.56692cm</Height>
+          <Height>3.64088cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -709,10 +709,10 @@ que de forma resumida consiste en:
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox12</rd:DefaultName>
-              <Top>3.40417cm</Top>
-              <Left>0.98196cm</Left>
+              <Top>1.49917cm</Top>
+              <Left>4.448cm</Left>
               <Height>0.78521cm</Height>
-              <Width>16.53094cm</Width>
+              <Width>13.0649cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -724,12 +724,13 @@ que de forma resumida consiste en:
               </Style>
             </Textbox>
             <Image Name="Image1">
-              <Source>Embedded</Source>
-              <Value>pico</Value>
+              <Source>External</Source>
+              <Value>=First(Fields!LOGOTIPOURLPARAREPORTE.Value, "dsClinica")</Value>
+              <Sizing>FitProportional</Sizing>
               <Top>0.17197cm</Top>
               <Left>1.36448cm</Left>
-              <Height>1.10417in</Height>
-              <Width>6.25in</Width>
+              <Height>3cm</Height>
+              <Width>3cm</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>
