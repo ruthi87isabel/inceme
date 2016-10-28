@@ -3,10 +3,10 @@ GO
 
 /****** Object:  Database [siesta]    Script Date: 10/06/2016 20:16:47 ******/
 CREATE DATABASE [siesta] ON  PRIMARY 
-( NAME = N'siesta', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\DATA\siesta.mdf' , SIZE = 2048KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
+( NAME = N'siesta', FILENAME = N'Direction\siesta.mdf' , SIZE = 2048KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
  LOG ON 
-( NAME = N'siesta_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\DATA\siesta_log.ldf' , SIZE = 1024KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
-GO
+( NAME = N'siesta_log', FILENAME = N'Direction\siesta_log.ldf' , SIZE = 1024KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
+GO									
 
 ALTER DATABASE [siesta] SET COMPATIBILITY_LEVEL = 100
 GO

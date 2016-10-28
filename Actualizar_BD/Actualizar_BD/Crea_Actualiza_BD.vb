@@ -5,6 +5,7 @@ Imports System.Data.Sql
 Imports System.ComponentModel
 Imports System.Text
 Imports System.Configuration
+Imports System.Text.RegularExpressions
 
 
 Public Class Crea_Actualiza_BD
@@ -18,7 +19,6 @@ Public Class Crea_Actualiza_BD
     Dim Conn As New SqlConnection(configuration.ConnectionString)
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        TBDireccion.ReadOnly = True
         Me.Show()
         TbNombre.Focus()
         Initialize()
@@ -28,6 +28,8 @@ Public Class Crea_Actualiza_BD
 
         TBDireccion.ReadOnly = True
         TBDireccion.BackColor = Color.White
+        TbDestino.ReadOnly = True
+        TbDestino.BackColor = Color.White
     End Sub
 
     Private Sub Examinar_Click(sender As Object, e As EventArgs) Handles Examinar.Click
@@ -115,6 +117,8 @@ Public Class Crea_Actualiza_BD
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorker1.DoWork
 
+        TbDestino.Enabled = False
+        ExaminarDestino.Enabled = False
         RbAct.Enabled = False
         RbCrear.Enabled = False
         TbNombre.Enabled = False
@@ -122,15 +126,16 @@ Public Class Crea_Actualiza_BD
 
         Dim nombre As String = TbNombre.Text
 
-        If Not nombre = "" Then
+        If (RbCrear.Checked And nombre <> "" And TbDestino.Text <> "") Or (RbAct.Checked And nombre <> "") Then
             LbSuccess.Visible = False
             LbError.Visible = False
             PictureBox1.Visible = False
-            If RbCrear.Checked Then newbd = True
+            newbd = RbCrear.Checked
             'Dim oConn As New SqlConnection("Data Source=localhost;Integrated Security=SSPI")
             exception = ""
 
             While (ListBScripts.Items.Count()) > 0 And exception = ""
+                Conn.Open()
                 Dim str As String
                 Dim strArrays() As String
 
@@ -141,12 +146,18 @@ Public Class Crea_Actualiza_BD
                 End Using
 
                 str = If(newbd, str.Replace("siesta", nombre), "USE " & nombre & " GO " & vbCrLf & str)
+                str = If(newbd, str.Replace("Direction", TbDestino.Text), str)
                 str = str.Replace("GO", "go")
 
+                'Eliminar comentarios sql
+                Dim pattern As String = "/\*([^*]|[\r\n])*\*/"
+                Dim rgx As New Regex(pattern)
+                str = rgx.Replace(str, "")
+
+                'guardar en un erreglo subquerys determinas por distintos separadores
                 Dim separators() As String = {vbCrLf & "go" & vbCrLf & "go" & vbCrLf, vbCrLf & "go" & vbCrLf, " go" & vbCrLf, vbCrLf & "go ", ";" & vbCrLf & "go", " go "}
                 strArrays = str.Split(separators, StringSplitOptions.RemoveEmptyEntries)
 
-                Conn.Open()
                 For Each strArray In strArrays
                     If Not strArray = "" Then
                         Dim cmd As New SqlCommand(strArray, Conn)
@@ -155,14 +166,19 @@ Public Class Crea_Actualiza_BD
                         cmd.ExecuteNonQuery()
                     End If
                 Next
-                Conn.Close()
                 ListBScripts.Items.Remove(name)
                 newbd = False
+                Conn.Close()
             End While
+
         Else
-            MsgBox("El nombre de la BD no puede ser vacio", vbExclamation)
+            MsgBox("Debe especificar todos los datos", vbExclamation)
         End If
 
+        If RbCrear.Checked Then
+            TbDestino.Enabled = True
+            ExaminarDestino.Enabled = True
+        End If
         RbAct.Enabled = True
         RbCrear.Enabled = True
         TbNombre.Enabled = True
@@ -171,7 +187,9 @@ Public Class Crea_Actualiza_BD
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
 
-        If ListBScripts.Items.Count() > 0 And Not (TbNombre.Text = "") Then
+        Conn.Close()
+
+        If ListBScripts.Items.Count() > 0 And ((RbCrear.Checked And TbNombre.Text <> "" And TbDestino.Text <> "") Or (RbAct.Checked And TbNombre.Text <> "")) Then
             If Not e.Error.Message = "" Then
                 exception = e.Error.Message & vbCrLf & vbCrLf & "query ejecutada:" & ver
                 LbError.Text = "Error Script " + name + ".sql"
@@ -182,6 +200,10 @@ Public Class Crea_Actualiza_BD
                 RbCrear.Enabled = True
                 TbNombre.Enabled = True
                 Examinar.Enabled = True
+                If RbCrear.Checked Then
+                    TbDestino.Enabled = True
+                    ExaminarDestino.Enabled = True
+                End If
             End If
         End If
 
@@ -239,6 +261,9 @@ Public Class Crea_Actualiza_BD
 
     Private Sub RbCrear_CheckedChanged(sender As Object, e As EventArgs) Handles RbCrear.CheckedChanged
         If RbCrear.Checked Then
+            ExaminarDestino.Enabled = True
+            TbDestino.Enabled = True
+            TbDestino.Text = ""
             LbVersion.Visible = False
             TbNombre.Text = ""
             TBDireccion.Text = ""
@@ -253,6 +278,9 @@ Public Class Crea_Actualiza_BD
 
     Private Sub RbAct_CheckedChanged(sender As Object, e As EventArgs) Handles RbAct.CheckedChanged
         If RbAct.Checked Then
+            ExaminarDestino.Enabled = False
+            TbDestino.Enabled = False
+            TbDestino.Text = ""
             TbNombre.Text = ""
             TBDireccion.Text = ""
             ListBScripts.Items.Clear()
@@ -264,4 +292,8 @@ Public Class Crea_Actualiza_BD
         End If
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles ExaminarDestino.Click
+        FolderBrowserDialog2.ShowDialog()
+        TbDestino.Text = FolderBrowserDialog2.SelectedPath
+    End Sub
 End Class

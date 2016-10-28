@@ -23,6 +23,7 @@ Partial Class Crea_Actualiza_BD
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Crea_Actualiza_BD))
         Me.RbAct = New System.Windows.Forms.RadioButton()
         Me.RbCrear = New System.Windows.Forms.RadioButton()
         Me.TbNombre = New System.Windows.Forms.TextBox()
@@ -39,6 +40,10 @@ Partial Class Crea_Actualiza_BD
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.LbVersion = New System.Windows.Forms.Label()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TbDestino = New System.Windows.Forms.TextBox()
+        Me.ExaminarDestino = New System.Windows.Forms.Button()
+        Me.FolderBrowserDialog2 = New System.Windows.Forms.FolderBrowserDialog()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -86,7 +91,7 @@ Partial Class Crea_Actualiza_BD
         Me.LbSuccess.AutoSize = True
         Me.LbSuccess.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LbSuccess.ForeColor = System.Drawing.Color.Blue
-        Me.LbSuccess.Location = New System.Drawing.Point(28, 269)
+        Me.LbSuccess.Location = New System.Drawing.Point(28, 317)
         Me.LbSuccess.Name = "LbSuccess"
         Me.LbSuccess.Size = New System.Drawing.Size(55, 13)
         Me.LbSuccess.TabIndex = 21
@@ -97,7 +102,7 @@ Partial Class Crea_Actualiza_BD
         '
         Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox1.Image = Global.Actualizar_BD.My.Resources.Resources.report
-        Me.PictureBox1.Location = New System.Drawing.Point(3, 267)
+        Me.PictureBox1.Location = New System.Drawing.Point(3, 315)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(19, 18)
         Me.PictureBox1.TabIndex = 18
@@ -110,7 +115,7 @@ Partial Class Crea_Actualiza_BD
         Me.LbError.AutoSize = True
         Me.LbError.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LbError.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LbError.Location = New System.Drawing.Point(21, 269)
+        Me.LbError.Location = New System.Drawing.Point(21, 317)
         Me.LbError.Name = "LbError"
         Me.LbError.Size = New System.Drawing.Size(34, 13)
         Me.LbError.TabIndex = 17
@@ -120,7 +125,7 @@ Partial Class Crea_Actualiza_BD
         'ListBScripts
         '
         Me.ListBScripts.FormattingEnabled = True
-        Me.ListBScripts.Location = New System.Drawing.Point(16, 108)
+        Me.ListBScripts.Location = New System.Drawing.Point(16, 156)
         Me.ListBScripts.Name = "ListBScripts"
         Me.ListBScripts.Size = New System.Drawing.Size(250, 121)
         Me.ListBScripts.TabIndex = 16
@@ -128,7 +133,7 @@ Partial Class Crea_Actualiza_BD
         'Examinar
         '
         Me.Examinar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Examinar.Location = New System.Drawing.Point(243, 80)
+        Me.Examinar.Location = New System.Drawing.Point(243, 126)
         Me.Examinar.Name = "Examinar"
         Me.Examinar.Size = New System.Drawing.Size(24, 22)
         Me.Examinar.TabIndex = 15
@@ -137,7 +142,7 @@ Partial Class Crea_Actualiza_BD
         '
         'TBDireccion
         '
-        Me.TBDireccion.Location = New System.Drawing.Point(16, 81)
+        Me.TBDireccion.Location = New System.Drawing.Point(16, 127)
         Me.TBDireccion.Name = "TBDireccion"
         Me.TBDireccion.Size = New System.Drawing.Size(228, 20)
         Me.TBDireccion.TabIndex = 14
@@ -145,7 +150,7 @@ Partial Class Crea_Actualiza_BD
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(17, 62)
+        Me.Label1.Location = New System.Drawing.Point(17, 109)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(227, 13)
         Me.Label1.TabIndex = 13
@@ -153,7 +158,7 @@ Partial Class Crea_Actualiza_BD
         '
         'BtnExecute
         '
-        Me.BtnExecute.Location = New System.Drawing.Point(74, 234)
+        Me.BtnExecute.Location = New System.Drawing.Point(74, 282)
         Me.BtnExecute.Name = "BtnExecute"
         Me.BtnExecute.Size = New System.Drawing.Size(138, 29)
         Me.BtnExecute.TabIndex = 12
@@ -176,11 +181,40 @@ Partial Class Crea_Actualiza_BD
         Me.BackgroundWorker1.WorkerReportsProgress = True
         Me.BackgroundWorker1.WorkerSupportsCancellation = True
         '
-        'Form1
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(17, 63)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(191, 13)
+        Me.Label2.TabIndex = 25
+        Me.Label2.Text = "Seleccione el Directorio Destino de BD"
+        '
+        'TbDestino
+        '
+        Me.TbDestino.Location = New System.Drawing.Point(16, 81)
+        Me.TbDestino.Name = "TbDestino"
+        Me.TbDestino.Size = New System.Drawing.Size(228, 20)
+        Me.TbDestino.TabIndex = 26
+        '
+        'ExaminarDestino
+        '
+        Me.ExaminarDestino.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ExaminarDestino.Location = New System.Drawing.Point(243, 80)
+        Me.ExaminarDestino.Name = "ExaminarDestino"
+        Me.ExaminarDestino.Size = New System.Drawing.Size(24, 22)
+        Me.ExaminarDestino.TabIndex = 27
+        Me.ExaminarDestino.Text = "..."
+        Me.ExaminarDestino.UseVisualStyleBackColor = True
+        '
+        'Crea_Actualiza_BD
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 292)
+        Me.ClientSize = New System.Drawing.Size(284, 336)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.TbDestino)
+        Me.Controls.Add(Me.ExaminarDestino)
         Me.Controls.Add(Me.LbVersion)
         Me.Controls.Add(Me.TbNombre)
         Me.Controls.Add(Me.RbAct)
@@ -194,7 +228,8 @@ Partial Class Crea_Actualiza_BD
         Me.Controls.Add(Me.LbError)
         Me.Controls.Add(Me.TBDireccion)
         Me.Controls.Add(Me.Examinar)
-        Me.name = "Form1"
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.name = "Crea_Actualiza_BD"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Crear y Actualizar BD"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -218,5 +253,9 @@ Partial Class Crea_Actualiza_BD
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents LbVersion As System.Windows.Forms.Label
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents TbDestino As System.Windows.Forms.TextBox
+    Friend WithEvents ExaminarDestino As System.Windows.Forms.Button
+    Friend WithEvents FolderBrowserDialog2 As System.Windows.Forms.FolderBrowserDialog
 
 End Class
