@@ -61,7 +61,10 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>GesBD.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\GesBD.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -134,6 +137,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -196,6 +200,7 @@
     <Content Include="Querys\db_1.0.3.9.sql" />
     <Content Include="Querys\db_1.0.4.0.sql" />
     <Content Include="Querys\db_1.0.4.1.sql" />
+    <Content Include="Resources\GesBD.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
