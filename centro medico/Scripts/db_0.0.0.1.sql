@@ -6,7 +6,7 @@ CREATE DATABASE [siesta] ON  PRIMARY
 ( NAME = N'siesta', FILENAME = N'Direction\siesta.mdf' , SIZE = 2048KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
  LOG ON 
 ( NAME = N'siesta_log', FILENAME = N'Direction\siesta_log.ldf' , SIZE = 1024KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
-GO									
+GO
 
 ALTER DATABASE [siesta] SET COMPATIBILITY_LEVEL = 100
 GO
