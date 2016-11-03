@@ -1,0 +1,5 @@
+﻿Para poner el nº de versión de la aplicación:
+My Proyect (lo abrimos). -> En Application pulsamos "Assembly Information"-> en la ventana resultante ponemos la versión.
+
+Para definir la versión mínima de base de datos:
+En form_centro_medico.vb -> funcion "ChequeaVersionBD" -> cambiar el valor a la variable "minDatabaseVersion"
