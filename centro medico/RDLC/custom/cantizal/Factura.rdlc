@@ -1468,7 +1468,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!CP.Value, "dsFactura")</Value>
+                    <Value>=First(Fields!CP.Value, "dsFactura") &amp; " " &amp; First(Fields!PACIENTE_LOCALIDAD.Value, "dsFactura") &amp; " " &amp; First(Fields!PACIENTE_PROVINCIA.Value, "dsFactura")</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>

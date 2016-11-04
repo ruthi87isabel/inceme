@@ -2586,10 +2586,10 @@
     <Content Include="Resources\textAreaResizeCorner.png" />
     <None Include="Resources\yellow_plus.jpg" />
     <None Include="Resources\yellow_cross.jpg" />
-    <Content Include="Scripts\db_0.0.0.2_CM.sql">
+    <Content Include="Scripts\db_0.0.0.2.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Scripts\db_0.0.0.3_nomencladores.sql">
+    <Content Include="Scripts\db_0.0.0.3.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Scripts\db_1.0.1.7.sql">
