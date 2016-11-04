@@ -53,6 +53,7 @@
         Paciente.DC = CtrlCuentaBancaria1.DC
         Paciente.ENTIDAD = CtrlCuentaBancaria1.Entidad
         Paciente.OFICINA = CtrlCuentaBancaria1.Oficina
+        Paciente.TITULAR = tb_fpTitularCuentaORecibo.Text
 
         Context.SubmitChanges()
 

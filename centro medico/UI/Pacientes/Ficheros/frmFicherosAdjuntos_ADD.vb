@@ -99,6 +99,7 @@ Public Class frmFicherosAdjuntos_ADD
                     Fichero.FICHERO = Path.GetFileName(target.FileName)
                     Fichero.FECHA = dtp_FiFechacreacion.Value
                     Fichero.FECHAMODIFICACION = dtp_FiUltimamodificacion.Value
+                    Fichero.NOTAS = tb_FiNotas.Text
                     If Me.chkConsentimiento.Checked Then
                         Fichero.ESCONSENTIMIENTO = True
                     Else
