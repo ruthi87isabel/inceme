@@ -41,6 +41,7 @@
 
     Private Sub tsbGuardar_Click(sender As Object, e As EventArgs) Handles tsbGuardar.Click
         Paciente.REFFORMAPAGO = CtrlFormaPago21.ID_FORMASPAGO
+        Dim titular As String = tb_fpTitularCuentaORecibo.Text
         If chkPagoBanco.Checked Then
             Paciente.PAGOBANCO = "S"
         Else
@@ -53,7 +54,7 @@
         Paciente.DC = CtrlCuentaBancaria1.DC
         Paciente.ENTIDAD = CtrlCuentaBancaria1.Entidad
         Paciente.OFICINA = CtrlCuentaBancaria1.Oficina
-        Paciente.TITULAR = tb_fpTitularCuentaORecibo.Text
+        Paciente.TITULAR = titular
 
         Context.SubmitChanges()
 
