@@ -15,6 +15,7 @@ Public Class frmHistoriales_Editar
     Dim Med As String = ""
     Dim Diag As String = ""
     Dim D1 As Integer = 0
+    Dim log As New GoltraTools.clsLog()
 
 
     Sub New(IdPaciente As Integer, IDHISTORIAL As Integer)
@@ -99,22 +100,31 @@ Public Class frmHistoriales_Editar
         pac = hist.PACIENTE
         tb_Paciente.Text = pac.NombreCompleto
 
+        Try
 
-        If RoleManager.PermisoPorItem(Globales.Usuario.CODIGO, RoleManager.Items.Pacientes_Historiales_Actuales) < RoleManager.TipoPermisos.Modificar Then
-            SoloLectura()
-        End If
+            If RoleManager.PermisoPorItem(Globales.Usuario.CODIGO, RoleManager.Items.Pacientes_Historiales_Actuales) < RoleManager.TipoPermisos.Modificar Then
+                SoloLectura()
+            End If
 
-        If Not Globales.Usuario.EsAdministrador Then
-            If RoleManager.PermisoPorItem(Globales.Usuario.CODIGO, RoleManager.Items.Bloquear_historial) = RoleManager.TipoPermisos.Ninguno Then
-                If MasDeUnDia(hist.FECHA) Then
-                    SoloLectura()
+            If Not Globales.Usuario.EsAdministrador Then
+                'log.Log("frmHistoriales_editar.frmhistoriales_editar_load - El usuario no es administrador")
+                'log.Log("frmHistoriales_editar.frmhistoriales_editar_load - eL permiso Bloquear_historial es " & RoleManager.PermisoPorItem(Globales.Usuario.CODIGO, RoleManager.Items.Bloquear_historial))
+
+                If RoleManager.PermisoPorItem(Globales.Usuario.CODIGO, RoleManager.Items.Bloquear_historial) = RoleManager.TipoPermisos.Ninguno Then
+                    If Not IsNothing(hist.FECHA) AndAlso MasDeUnDia(hist.FECHA) Then
+                        'log.Log("frmHistoriales_editar.frmhistoriales_editar_load - Bloquear_historial es Ninguno, si hace más de un día del historial al que accedo, entro en esta condicion")
+                        SoloLectura()
+                    End If
                 End If
             End If
-        End If
-        OnLoad = False
+            OnLoad = False
+        Catch ex As Exception
+            Globales.ErrorMsg(ex, "frmHitoriales_editar frmHistoriales_editar_load")
+        End Try
     End Sub
 
     Private Sub SoloLectura()
+        ' log.Log("frmHistoriales_editar.SoloLectura - Entro en función sololectura")
         Me.bt_HtAceptar.Enabled = False
         Me.tsbGuardar.Enabled = False
         Me.bt_HtRecetas.Enabled = False
@@ -152,6 +162,7 @@ Public Class frmHistoriales_Editar
     End Sub
 
     Private Function MasDeUnDia(fecha As Date)
+        'log.Log("frmHistoriales_editar.MasDeUnDia - Entro en función masdeundia - el parametro fecha recibido vale " & fecha.ToString)
         Return (Date.Now - fecha).Days > 1
     End Function
 
