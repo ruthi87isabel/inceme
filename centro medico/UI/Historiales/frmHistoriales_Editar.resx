@@ -149,26 +149,26 @@
   <data name="tlbImprimir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
+        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
 </value>
   </data>
   <metadata name="HISTORIALEBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -178,7 +178,7 @@
     <value>870, 22</value>
   </metadata>
   <data name="GridEXLineaAlarma_DesignTimeLayout.LayoutString" xml:space="preserve">
-    <value>&lt;GridEXLayoutData&gt;&lt;RootTable&gt;&lt;Key&gt;LINEASALARMA&lt;/Key&gt;&lt;Caption&gt;LINEASALARMA&lt;/Caption&gt;&lt;Columns Collection="true" ElementName="Column"&gt;&lt;Column0 ID="ALARMA"&gt;&lt;Caption&gt;NIVEL&lt;/Caption&gt;&lt;DataMember&gt;ALARMA.NIVEL&lt;/DataMember&gt;&lt;Key&gt;ALARMA&lt;/Key&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;Width&gt;132&lt;/Width&gt;&lt;/Column0&gt;&lt;Column1 ID="DESCRIPCION"&gt;&lt;Caption&gt;DESCRIPCION&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;ALARMA.ALARMA&lt;/DataMember&gt;&lt;Key&gt;DESCRIPCION&lt;/Key&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;Width&gt;775&lt;/Width&gt;&lt;/Column1&gt;&lt;/Columns&gt;&lt;SortKeys Collection="true" ElementName="SortKey"&gt;&lt;SortKey0 ID="SortKey0"&gt;&lt;ColIndex&gt;1&lt;/ColIndex&gt;&lt;/SortKey0&gt;&lt;/SortKeys&gt;&lt;GroupCondition /&gt;&lt;/RootTable&gt;&lt;/GridEXLayoutData&gt;</value>
+    <value>&lt;GridEXLayoutData&gt;&lt;RootTable&gt;&lt;Key&gt;LINEASALARMA&lt;/Key&gt;&lt;Caption&gt;LINEASALARMA&lt;/Caption&gt;&lt;Columns Collection="true" ElementName="Column"&gt;&lt;Column0 ID="ALARMA"&gt;&lt;Caption&gt;NIVEL&lt;/Caption&gt;&lt;DataMember&gt;ALARMA.NIVEL&lt;/DataMember&gt;&lt;Key&gt;ALARMA&lt;/Key&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;Width&gt;132&lt;/Width&gt;&lt;/Column0&gt;&lt;Column1 ID="DESCRIPCION"&gt;&lt;Caption&gt;DESCRIPCION&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;ALARMA.ALARMA&lt;/DataMember&gt;&lt;Key&gt;DESCRIPCION&lt;/Key&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;Width&gt;777&lt;/Width&gt;&lt;/Column1&gt;&lt;/Columns&gt;&lt;SortKeys Collection="true" ElementName="SortKey"&gt;&lt;SortKey0 ID="SortKey0"&gt;&lt;ColIndex&gt;1&lt;/ColIndex&gt;&lt;/SortKey0&gt;&lt;/SortKeys&gt;&lt;GroupCondition /&gt;&lt;/RootTable&gt;&lt;/GridEXLayoutData&gt;</value>
   </data>
   <metadata name="AntecedentesDiagnosticoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>600, 22</value>

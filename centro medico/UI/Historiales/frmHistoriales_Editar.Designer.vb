@@ -131,7 +131,7 @@ Partial Class frmHistoriales_Editar
         Me.tsbGuardar.Image = CType(resources.GetObject("tsbGuardar.Image"), System.Drawing.Image)
         Me.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbGuardar.Name = "tsbGuardar"
-        Me.tsbGuardar.Size = New System.Drawing.Size(69, 22)
+        Me.tsbGuardar.Size = New System.Drawing.Size(66, 22)
         Me.tsbGuardar.Text = "Guardar"
         '
         'tsbCancelar
@@ -139,7 +139,7 @@ Partial Class frmHistoriales_Editar
         Me.tsbCancelar.Image = CType(resources.GetObject("tsbCancelar.Image"), System.Drawing.Image)
         Me.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbCancelar.Name = "tsbCancelar"
-        Me.tsbCancelar.Size = New System.Drawing.Size(73, 22)
+        Me.tsbCancelar.Size = New System.Drawing.Size(69, 22)
         Me.tsbCancelar.Text = "Cancelar"
         '
         'tlbImprimir
@@ -147,7 +147,7 @@ Partial Class frmHistoriales_Editar
         Me.tlbImprimir.Image = CType(resources.GetObject("tlbImprimir.Image"), System.Drawing.Image)
         Me.tlbImprimir.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tlbImprimir.Name = "tlbImprimir"
-        Me.tlbImprimir.Size = New System.Drawing.Size(73, 22)
+        Me.tlbImprimir.Size = New System.Drawing.Size(65, 22)
         Me.tlbImprimir.Text = "Imprimir"
         '
         'gb_DatosHistorial
@@ -276,7 +276,7 @@ Partial Class frmHistoriales_Editar
         Me.UiTabPage1.Controls.Add(Me.EditMotivo)
         Me.UiTabPage1.Location = New System.Drawing.Point(1, 21)
         Me.UiTabPage1.Name = "UiTabPage1"
-        Me.UiTabPage1.Size = New System.Drawing.Size(907, 246)
+        Me.UiTabPage1.Size = New System.Drawing.Size(909, 248)
         Me.UiTabPage1.TabStop = True
         Me.UiTabPage1.Text = "Motivo de Consulta"
         '
@@ -289,7 +289,7 @@ Partial Class frmHistoriales_Editar
         Me.EditMotivo.Location = New System.Drawing.Point(3, 3)
         Me.EditMotivo.Multiline = True
         Me.EditMotivo.Name = "EditMotivo"
-        Me.EditMotivo.Size = New System.Drawing.Size(903, 242)
+        Me.EditMotivo.Size = New System.Drawing.Size(905, 244)
         Me.EditMotivo.TabIndex = 0
         '
         'UiTabPage2

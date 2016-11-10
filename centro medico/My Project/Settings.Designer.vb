@@ -95,8 +95,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=DAW-JBLANCO\MSSQLSERVERLOCAL;Initial Catalog=Siesta;User ID=sa;Passwo"& _ 
-            "rd=Admin123")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=PC2-NUEVO\GOLTRATEC;Initial Catalog=siesta;User ID=sa;Password=goltra"& _ 
+            "0121")>  _
         Public ReadOnly Property CMConnectionString() As String
             Get
                 Return CType(Me("CMConnectionString"),String)
