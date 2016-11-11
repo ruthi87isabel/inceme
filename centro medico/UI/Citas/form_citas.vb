@@ -3212,7 +3212,9 @@ Public Class form_citas
 
         tsb_DebitoPaciente.Enabled = False
         cb_aseguradora.Enabled = False
-        LLenaCombo(-1)
+        cb_aseguradora.Items.Remove(cb_aseguradora.Items)
+
+        'LLenaCombo(-1)
         CtrlStatusPaciente1.ID_PACIENTE = Nothing
         ContadorBono1.Visible = False
     End Sub
