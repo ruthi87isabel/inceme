@@ -10,7 +10,7 @@
             Dim pagos = Items.Where(Function(o) o.PAGADA = "S" And o.PagadoConCredito = False And _
                                         o.TIPO <> PacienteDebitoManager.TipoDocumento.PagoCuenta And _
                                         o.TIPO <> Nothing).Sum(Function(k) k.IMPORTE)
-            Dim desp = Items.Where(Function(o) o.IMPORTE < 0).Sum(Function(k) k.IMPORTE)
+            Dim desp = Items.Where(Function(o) o.IMPORTE < 0 And o.TIPO <> Nothing).Sum(Function(k) k.IMPORTE)
             Dim res = (pagocuenta + (-desp - ImpDlt)) - pagos
 
             Return res
