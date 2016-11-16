@@ -6,7 +6,7 @@ Imports centro_medico.UI.Reportes
 
 Public Class form_citas
     Dim cambioCT As Integer
-    Dim citas As Integer
+    Dim citas As Nullable(Of Integer)
     Dim cit As CITA
     Dim context As New CMLinqDataContext()
     Dim cargando As Boolean
@@ -1171,7 +1171,7 @@ Public Class form_citas
 
         End Try
 
-        If CBcitas.SelectedItem = "Cita Sucesiva" Then citas = 4
+        If CBcitas.SelectedItem = "Cita Sucesiva" Then citas = Nothing
         If CBcitas.SelectedItem = "3ra Cita" Then citas = 3
         If CBcitas.SelectedItem = "2da Cita" Then citas = 2
         If CBcitas.SelectedItem = "1ra Cita" Then citas = 1
@@ -4189,7 +4189,12 @@ Public Class form_citas
                                 "' AND ESPECIALIDAD='" & CtrlMedico1.txt_Especialidad.Text & "'AND FALTA='N' AND c.Eliminado=0 AND IDCITA <= " & cit.IDCITA
                 dt = Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteDataset(My.Settings.CMConnectionString, CommandType.Text, query).Tables(0)
 
-                citas = If(Not IsDBNull(cit.NumeroCita), cit.NumeroCita, -1)
+                If (Not cit.NumeroCita Is Nothing) Then
+                    citas = cit.NumeroCita
+                Else
+                    citas = -1
+                End If
+
                 If citas = -1 Or citas = 0 Then citas = dt.Rows.Count()
 
                 If citas > 3 Then

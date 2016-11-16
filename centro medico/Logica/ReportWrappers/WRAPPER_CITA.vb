@@ -12,6 +12,12 @@
         Me.MUTUA_ = _cita.MUTUA
     End Sub
 
+    Public ReadOnly Property NUMEROCITA() As System.Nullable(Of Byte)
+        Get
+            Return Me._cita.NumeroCita
+        End Get
+    End Property
+
     Public ReadOnly Property ATENDIDO() As String
         Get
             Return Me._cita.ATENDIDO
