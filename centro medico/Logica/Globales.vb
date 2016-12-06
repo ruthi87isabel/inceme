@@ -2341,7 +2341,7 @@ Public Class Globales
             Dim citassalas As List(Of CITA) = (From c In con.CITAs
                                               Where ((c.HORA >= fInicio And c.HORA < fFinal) _
                                               Or (c.HORAFIN > fInicio And c.HORAFIN <= fFinal)) _
-                                              And c.ID_SALA = ID_Sala
+                                              And c.ID_SALA = ID_Sala And c.Eliminado = False
                                               Select c).ToList()
             Return (citassalas.Count = 0)
 

@@ -797,7 +797,7 @@ Public Class frmPaciente_Editar
 
 
         Dim pacienteOtro As PACIENTE = (From p In context.PACIENTEs Where p.CPACIENTE <> IDPACIENTE _
-                                       And p.DNI = dni
+                                       And p.DNI = dni And (p.Eliminado Is Nothing Or p.Eliminado = False)
                                        Select p).SingleOrDefault()
         If Not pacienteOtro Is Nothing Then
             If tb_dpDni.ForeColor <> Color.Red Then
@@ -815,7 +815,7 @@ Public Class frmPaciente_Editar
         Dim res As Boolean = False
         If pasaporte = String.Empty Then Return res
         Dim pacienteOtro As PACIENTE = (From p In context.PACIENTEs Where p.CPACIENTE <> IDPACIENTE _
-                                       And p.PASAPORTE = pasaporte
+                                       And p.PASAPORTE = pasaporte And (p.Eliminado Is Nothing Or p.Eliminado = False)
                                        Select p).SingleOrDefault()
         If Not pacienteOtro Is Nothing Then
             If tb_dpPasaporte.ForeColor <> Color.Red Then
@@ -836,7 +836,7 @@ Public Class frmPaciente_Editar
 
         'Dim context As New CMLinqDataContext
         Dim pacienteOtro As PACIENTE = (From p In context.PACIENTEs Where p.CPACIENTE <> IDPACIENTE _
-                                       And p.NIE = nie
+                                       And p.NIE = nie And (p.Eliminado Is Nothing Or p.Eliminado = False)
                                        Select p).SingleOrDefault()
         If Not pacienteOtro Is Nothing Then
             If tb_dpNie.ForeColor <> Color.Red Then

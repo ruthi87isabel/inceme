@@ -4170,7 +4170,8 @@ Public Class form_citas
                     CBcitas.SelectedItem = "1ra Cita"
                     citas = 1
                 Else
-                    citas = If(Not IsDBNull(dt.Rows(dt.Rows.Count() - 1).Item("NumeroCita")), dt.Rows(dt.Rows.Count() - 1).Item("NumeroCita"), -1)
+                    citas = If((Not (dt.Rows(dt.Rows.Count() - 1).Item("NumeroCita")) Is Nothing), Convert.ToInt32(dt.Rows(dt.Rows.Count() - 1).Item("NumeroCita")), -1)
+
                     If citas = -1 Or citas = 0 Then citas = dt.Rows.Count()
 
                     If citas > 2 Then

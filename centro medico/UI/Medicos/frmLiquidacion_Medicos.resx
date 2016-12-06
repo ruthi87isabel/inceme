@@ -127,86 +127,86 @@
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABq
-        EgAAAk1TRnQBSQFMAgEBBQEAAbgBBQG4AQUBEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
-        AwABIAMAAQEBAAEgBgABIP8ALwABvQHBAcUB/wIAAREB/wM6AWDwAANMAY8BKgGzAegB/wIAAZIB/wIA
-        AYMB/wNMAY/pAAEbAZMB/wETAaUB4QH/AYgBvwH0Af8CAAGSAf8CAAGmAf8CAAGmAf8CAAGPAf/hAAEU
-        AaUB/wEAAZAB0gH/ARMBpQHhAf8BhgG9AfMB/wIAAZIB/wIAAaYB/wIAAaYB/wIAAaYB/wIAAaUB/wNi
-        Ae/VAAETAakB/wEAAYEBxwH/AQABkAHSAf8BEwGlAeEB/wGHAb4B9AH/AgABkgH/AgABpgH/AgABpgH/
-        AgABpgH/AgABpgH/AgABpgH/AgABDgH/zAABIgEmASoB/wEAARgBtwH/AQABJwHEAf8BAAGTAdUB/wET
-        AaUB4QH/ARgBmgHHAf8CAAElAf8CAAGNAf8CAAGmAf8CAAGmAf8CAAGmAf8CAAGmAf8CAAGmAf/NAAEJ
-        ARUB/wEAARoBugH/AQABKQHFAf8BAAGQAdIB/wEAARkBmwH/AQsBngHcAf8CAAGSAf8CAAGhAf8CAAEk
-        Af8CAAGmAf8CAAGmAf8CAAGmAf8CAAGmAf/OAAEFAf8BAAEVAbUB/wIAASIB/wIAASQB/wEAAYEBxwH/
-        AQsBngHcAf8CAAGSAf8CAAGmAf8CAAGmAf8CAAGQAf8CAAESAf8CAAGmAf8CAAGmAf/PAAH/AgABJAH/
-        AQABFQGyAf8BAAElAcIB/wEAAY4B0QH/AQwBnwHdAf8CAAGSAf8CAAGmAf8CAAGmAf8CAAGmAf8CAAGm
-        Af8CAAGeAf8DAAH/zgABFAH/AQABDwGyAf8BAAEPAbIB/wEAASQBwAH/AgABBgH/AQABHgG6Af8BAAEY
-        AbcB/wEAARgBtwH/AwAB/wIAAaMB/wIAAaYB/wIAAaYB/wIAAaYB/84AAY0B/wEAAQ4BsAH/AQABCgGf
-        Af8CAAEcAf8BAAEnAboB/wEAASYBvAH/AQABJAG9Af8BAAEgAboB/wEAASABugH/AQABGgG4Af8CAAEc
-        Af8CAAGSAf8CAAGTAf/OAAEjAf8BAAEJAYgB/wEBAY8ByAH/AQEBjwHIAf8BAAGMAcYB/wEAAYkBxgH/
-        AQABhgG+Af8BAAGAAcMB/wEAASgBwAH/AQABKAHAAf8BAAEkAbsB/wEAARIBlQH/A0wBj8wAAzoBYAM6
-        AWADOgFgAzoBYAEAAQUBggH/AQMBiwG+Af8BAgGQAckB/wEGAZIBygH/AgABKgH/AzoBYAM6AWDoAAMh
-        ATADIQEwAdoB4wHtAf8DIQEw/wD/AB4AAc4BugGmAf8BrAGXAYQB/wGRAgAB/wGPAgAB/wGPAgAB/wGP
-        AgAB/wGPAgAB/wGPAgAB/wGPAgAB/wGPAgAB/wGPAgAB/wGPAgAB/wGPAgAB/wQAAw4BEwMfAS0DPAFm
-        A0MBdwMqAUEDQwF3AyoBQQNDAXcDKgFBA0MBdwMqAUEDQwF3AzwBZgMgAS4DDgETFAADSwGOA1kB8gNL
-        AY5EAAMDAQQDLwFJA1MBqgM0AVQDBAEGFAAB0QG9Aakt/wGPAgAB/wwAA0IBdAL5AekB/wNCAXYC8wHi
-        Af8DQgF2AvMB4gH/A0IBdgLzAeIB/wNCAXYC+QHpAf8DQgF0HAADWQHyA8IB/wNZAfIDSwGOLAADKwH8
-        A1kBvwMsAUQEAANRAaADXQH+A68B/wPMAf8D1gH/A38B/gNUAa4QAAHRAb0BqQX/A+0B/wPtAf8D7QH/
-        A+0B/wPtAf8D7QH/A+0B/wPtAf8D7QX/AY8CAAH/DAADQAFxAvQB5AH/AvQB5AH/AugB2AH/AvQB5AH/
-        AugB2AH/AvQB5AH/AugB2AH/AvQB5AH/AvQB5AH/A0ABcRQAA0sBjgNZAfIDWQHyA8UB/wPFAf8DWQHy
-        A0sBjiQAAwMBBAGOAroB/wGTAu8B/wGEArwB/wMAAf8DqgH/A6wB/wPcAf8D1wH/A+gB/wPOAf8D9gH/
-        A1gB6QwAAdEBvQGpBf8B4AHTAcUB/wHgAdMBxQH/AeAB0wHFAf8B4AHTAcUB/wPwAf8D8AH/A/AB/wPw
-        Af8D8AX/AY8CAAH/DAADQAFvAvQB5gH/AukB2wH/AukB2wH/AukB2wH/AukB2wH/AukB2wH/AukB2wH/
-        AukB2wH/AvQB5gH/A0ABbxQAA1kB8gPJAf8DyQH/A8kB/wNfAfsDyQH/A1kB8gNLAY4gAAMiATIBAAKe
-        Af8BmAL+Af8BAALHAf8DrAH/A9YB/wPfAf8D/AH/A/4B/wP+Af8D/gH/A/gB/wP2Af8DRAF6CAAB0QG9
-        AakF/wPzAf8D8wH/A/MB/wPzAf8D8wH/A/MB/wPzAf8D8wH/A/MF/wGPAgAB/wwAA0ABbgL1AegB/wLr
-        Ad4B/wLrAd4B/wLrAd4B/wLrAd4B/wLrAd4B/wLrAd4B/wLrAd4B/wL1AegB/wNAAW4MAANLAY4DWQHy
-        A1kB8gPNAf8DzQH/A18B+wPNAf8DzQH/A80B/wNZAfIDSwGOHAADYgHpAYsC6AH/AYwC6wH/AwAB/wMA
-        Af8DyQH/A/wB/wP+Af8D/gH/A/4B/wP+Af8D/gH/A/MB/wNiAe8IAAHRAb0BqQX/AdEBvQGpAf8B0QG9
-        AakB/wHRAb0BqQH/AdEBvQGpAf8B0QG9AakB/wHRAb0BqQH/AdEBvQGpAf8B0QG9AakB/wHRAb0BqQX/
-        AY8CAAH/DAADPwFtAvYB6wH/Ar0BrAH/Ar0BrAH/As4BvQH/AsYBtQH/Au0B4QH/Au0B4QH/Au0B4QH/
-        AvYB6wH/Az8BbQwAA1kB8gPRAf8D0QH/A9EB/wNfAfsD0QH/A9EB/wPRAf8D0QH/A9EB/wNZAfIDSwGO
-        FAADOAFcAwAB/wGYAv4B/wGRAvMB/wMAAf8DtwH/A+MB/wP+Af8D/QH/A5AB/wPtAf8D7QH/A/4B/wPx
-        Af8DywH/CAAB0QG9AakF/wHRAb0BqQH/A/gB/wP4Af8B0QG9AakB/wP4Af8D+AH/AdEBvQGpAf8D+AH/
-        AdEBvQGpBf8BjwIAAf8MAAM/AWwC+AHtAf8C4QHQAf8C4QHQAf8C4QHQAf8C4QHQAf8C8AHlAf8C8AHl
-        Af8C8AHlAf8C+AHtAf8DPwFsDAADSwGOA1kB8gPWAf8DXwH7A9YB/wPWAf8D1gH/A9YB/wPWAf8D1gH/
-        A9YB/wNZAfIDSwGOEQACmwH/AY8C8AH/AZkD/wGLAugB/wGAAoEB/wO4Af8D6An/A7ER/wPCAf8IAAHR
-        Ab0BqQX/AdEBvQGpAf8B6wHfAdMB/wHrAd8B0wH/Ac0BtAGdAf8B6wHfAdMB/wHrAd8B0wH/Ac0BtAGd
-        Af8B6wHfAdMB/wHRAb0BqQX/AY8CAAH/DAADPgFrAvkB8AH/AsIBsQH/AsIBsQH/AsIBsQH/AsIBsQH/
-        AtMBwgH/AtMBwgH/AssBugH/AvkB8AH/Az4BaxAAA0sBjgNZAfID2gH/A9oB/wPaAf8D2gH/A9oB/wPa
-        Af8D2gH/A9oB/wPaAf8DWQHyA0sBjggAA0YBfgMAAf8BmQP/AZUC+AH/AQACyAH/AQACgQH/AwAB/wPQ
-        Cf8DvQ3/A+0B/wNiAekIAAHRAb0BqQX/AdEBvQGpAf8B0QG9AakB/wHRAb0BqQH/AdEBvQGpAf8B0QG9
-        AakB/wHRAb0BqQH/AdEBvQGpAf8B0QG9AakB/wHRAb0BqQX/AY8CAAH/DAADPgFrAvoB8gH/AuYB1QH/
-        AuYB1QH/AuYB1QH/AuYB1QH/AuYB1QH/AuYB1QH/AuYB1QH/AvoB8gH/Az4BaxQAA0sBjgNZAfID3wH/
-        A98B/wPfAf8D3wH/A98B/wPfAf8D3wH/A98B/wPfAf8DWQHyA0sBjgQAAZwCtgH/AYoC6AH/AZgC/gH/
-        AYEC2AH/AQAC0wH/AY4C5AH/AwAB/wPbAf8D+gX/AwAN/wOpAf8DQAFvCAAB0QG9AakF/wP9Af8D/QH/
-        A/0B/wP9Af8D/QH/A/0B/wP9Af8D/QH/A/0F/wGPAgAB/wwAAz4BagL7AfUB/wLHAbYB/wLYAccB/wLH
-        AbYB/wLHAbYB/wLHAbYB/wLYAccB/wLQAb8B/wL7AfUB/wM+AWoYAANLAY4DZgHyA+QB/wPkAf8D5AH/
-        A+QB/wPkAf8D5AH/A+QB/wNfAfsD5AH/A2YB8gNLAY4DYQHmAZgC/gH/AZgC/gH/AZgC/gH/AZgC/gH/
-        AYgC4wH/AZQCvwH/AwAB/wOmAf8D+AH/A/UB/wP+Af8D9gH/A5QB/wMrAUIMAAHRAb0BqQX/AeAB0wHF
-        Af8B4AHTAcUB/wHgAdMBxQH/AeAB0wHFAf8D/gH/AeAB0wHFAf8B4AHTAcUB/wHgAdMBxQH/AeAB0wHF
-        Af8B9AHxAe8B/wGWAYABAAH/DAADPQFpAvwB+AH/AuwB2wH/AuwB2wH/AuwB2wH/AuwB2wH/AvkB9AH/
-        AvkB9AH/AvkB9AH/AvwB+AH/Az0BaRwAA0sBjgNnAfID6AH/A+gB/wPoAf8D6AH/A+gB/wNfAfsD6AH/
-        A+gB/wPoAf8DZwHyAwIBAwNSAaEBmQP/AZkD/wGNAu0B/wGVAvoB/wGZA/8DXwH7AywBRANaAdMDAAH/
-        A0cB+QNIAYQDCQEMEAAB0QG9AakF/wPBAf8DtgH/A8EB/wP+Af8D/gH/A9UB/wOiAf8BuwG5AbgB/wHZ
-        AdEBygH/AcgBvgG2Af8BvgGpAZUB/wwAAz0BaAL9AfoB/wLMAbsB/wLMAbsB/wLdAcwB/wLVAcQB/wL7
-        AfcB/wL7AfcB/wL7AfcB/wL9AfoB/wM9AWggAANLAY4DZwHyA+wB/wPsAf8D7AH/A18B+wPsAf8D7AH/
-        A2cB8gNnAfIDSwGOCAADBAEFAzYBWANfAfMBAAKZAf8BmAL+Af8BmAL+Af8DTQH6A14BziAAAdEBvQGp
-        Bf8BzgHJAcQB/wHEAb8BugH/AeAB2wHYCf8D6gH/A+oB/wP9Af8D6AH/AdABwwG3Af8DXAHPDAADPQFo
-        Av4B/AH/AvwB+gH/AvwB+gH/AvwB+gH/AvwB+gH/AvwB+gH/AvwB+gH/AvwB+gH/Av4B/AH/Az0BaCQA
-        A0sBjgNnAfID8AH/A18B+wPwAf8D8AH/A/AB/wNnAfIYAAMBAQIDVgG2AzEBTgFZAlsBwwNfAeMDZAHs
-        IAAB0QG9AakF/wGrAZsBjAH/AasBmwGMAf8BsgGjAZYN/wP+Af8D6wH/AdMByAG9Af8DXAHPAwwBEAwA
-        Az0BZwL/Af4B/wL+Af0B/wL+Af0B/wL+Af0B/wL+Af0B/wL+Af0B/wL+Af0B/wL+Af0D/wH+Af8DPQFn
-        KAADSwGOA2cB8gPzAf8D8wH/A2cB8gNnAfIDSwGOUAAB0QG9AakZ/wH8AfsB+gH/AeMB3QHYAf8B1AHJ
-        Ab4B/wNUAa8DDAEQEAADPQFnBP8DPAFmBP8DPAFmBP8DPAFmBP8DPAFmBP8DPQFnLAADSwGOA2cB8gP1
-        Af8DZwHyWAAB0QG9AakB/wHRAb0BqQH/AdEBvQGpAf8B0QG9AakB/wHRAb0BqQH/AdEBvQGpAf8B0QG9
-        AakB/wHRAb0BqQH/AdEBvQGpAf8DUQGfGAADMQFNAzwBZgMTARoDPAFmAxMBGgM8AWYDEwEaAzwBZgMT
-        ARoDPAFmAzEBTTAAA0sBjgNnAfIDSwGOEAABQgFNAT4HAAE+AwABKAMAAUADAAEgAwABAQEAAQEGAAEB
-        FgAD/wEAAv8GAAH+AT8GAAH8AR8GAAH4AQ8GAAHwAQMGAAHgAQEGAAHAAQEGAAHAAQEGAAHAAQEGAAHA
-        AQEGAAHAAQEGAAHAAQEGAAHAAQEGAAHAAQcGAAH+AR8GAAL/BgAC/wHAAQEBAAEBAfEC/wEHAcABAQHA
-        AQcB8AH/AeIBAwHAAQEBwAEHAcABfwHAAQEBwAEBAcABBwHAAT8BwAEAAcABAQHAAQcBAAEfAcABAAHA
-        AQEBwAEHAQABDwGAAQABwAEBAcABBwEAAQcBgAEAAcABAQHAAQcBgAEDAgABwAEBAcABBwHAAQECAAHA
-        AQEBwAEHAeACAAEBAcABAQHAAQcB8AIAAQMBwAEBAcABBwH4AQABwAE/AcABAQHAAQcB/AEDAfABPwHA
-        AQEBwAEHAf4BAwL/AcABAwHAAQcB/wEPAv8BwAEPAcABBwH/AY8L
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABk
+        EgAAAk1TRnQBSQFMAgEBBQEAAfgBBQH4AQUBEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
+        AwABIAMAAQEBAAEgBgABIP8ALwABvQHBAcUB/wIAAQkB/wM6AWDwAANMAY8BIgGzAegB/wIAAZIB/wIA
+        AYMB/wNMAY/pAAETAZMB/wELAaUB4QH/AYgBvwH0Af8CAAGSAf8CAAGmAf8CAAGmAf8CAAGPAf/hAAEM
+        AaUB/wEAAZAB0gH/AQsBpQHhAf8BhgG9AfMB/wIAAZIB/wIAAaYB/wIAAaYB/wIAAaYB/wIAAaUB/wNi
+        Ae/VAAELAakB/wEAAYEBxwH/AQABkAHSAf8BCwGlAeEB/wGHAb4B9AH/AgABkgH/AgABpgH/AgABpgH/
+        AgABpgH/AgABpgH/AgABpgH/AgABBgH/zAABGgEeASIB/wEAARABtwH/AQABHwHEAf8BAAGTAdUB/wEL
+        AaUB4QH/ARABmgHHAf8CAAEdAf8CAAGNAf8CAAGmAf8CAAGmAf8CAAGmAf8CAAGmAf8CAAGmAf/NAAEB
+        AQ0B/wEAARIBugH/AQABIQHFAf8BAAGQAdIB/wEAAREBmwH/AQMBngHcAf8CAAGSAf8CAAGhAf8CAAEc
+        Af8CAAGmAf8CAAGmAf8CAAGmAf8CAAGmAf/PAAH/AQABDQG1Af8CAAEaAf8CAAEcAf8BAAGBAccB/wED
+        AZ4B3AH/AgABkgH/AgABpgH/AgABpgH/AgABkAH/AgABCgH/AgABpgH/AgABpgH/zwAB/wIAARwB/wEA
+        AQ0BsgH/AQABHQHCAf8BAAGOAdEB/wEEAZ8B3QH/AgABkgH/AgABpgH/AgABpgH/AgABpgH/AgABpgH/
+        AgABngH/AwAB/84AAQwB/wEAAQcBsgH/AQABBwGyAf8BAAEcAcAB/wMAAf8BAAEWAboB/wEAARABtwH/
+        AQABEAG3Af8DAAH/AgABowH/AgABpgH/AgABpgH/AgABpgH/zgABjQH/AQABBgGwAf8BAAECAZ8B/wIA
+        ARQB/wEAAR8BugH/AQABHgG8Af8BAAEcAb0B/wEAARgBugH/AQABGAG6Af8BAAESAbgB/wIAARQB/wIA
+        AZIB/wIAAZMB/84AARsB/wEAAQEBiAH/AQABjwHIAf8BAAGPAcgB/wEAAYwBxgH/AQABiQHGAf8BAAGG
+        Ab4B/wEAAYABwwH/AQABIAHAAf8BAAEgAcAB/wEAARwBuwH/AQABCgGVAf8DTAGPzAADOgFgAzoBYAM6
+        AWADOgFgAgABggH/AQABiwG+Af8BAAGQAckB/wEAAZIBygH/AgABIgH/AzoBYAM6AWDoAAMhATADIQEw
+        AdoB4wHtAf8DIQEw/wD/AB4AAc4BugGmAf8BrAGXAYQB/wGRAgAB/wGPAgAB/wGPAgAB/wGPAgAB/wGP
+        AgAB/wGPAgAB/wGPAgAB/wGPAgAB/wGPAgAB/wGPAgAB/wGPAgAB/wQAAw4BEwMfAS0DPAFmA0MBdwMq
+        AUEDQwF3AyoBQQNDAXcDKgFBA0MBdwMqAUEDQwF3AzwBZgMgAS4DDgETFAADSwGOA1kB8gNLAY5EAAMD
+        AQQDLwFJA1MBqgM0AVQDBAEGFAAB0QG9Aakt/wGPAgAB/wwAA0IBdAL5AekB/wNCAXYC8wHiAf8DQgF2
+        AvMB4gH/A0IBdgLzAeIB/wNCAXYC+QHpAf8DQgF0HAADWQHyA8IB/wNZAfIDSwGOLAADKwH8A1kBvwMs
+        AUQEAANRAaADXQH+A68B/wPMAf8D1gH/A38B/gNUAa4QAAHRAb0BqQX/A+0B/wPtAf8D7QH/A+0B/wPt
+        Af8D7QH/A+0B/wPtAf8D7QX/AY8CAAH/DAADQAFxAvQB5AH/AvQB5AH/AugB2AH/AvQB5AH/AugB2AH/
+        AvQB5AH/AugB2AH/AvQB5AH/AvQB5AH/A0ABcRQAA0sBjgNZAfIDWQHyA8UB/wPFAf8DWQHyA0sBjiQA
+        AwMBBAGOAroB/wGTAu8B/wGEArwB/wMAAf8DqgH/A6wB/wPcAf8D1wH/A+gB/wPOAf8D9gH/A1gB6QwA
+        AdEBvQGpBf8B4AHTAcUB/wHgAdMBxQH/AeAB0wHFAf8B4AHTAcUB/wPwAf8D8AH/A/AB/wPwAf8D8AX/
+        AY8CAAH/DAADQAFvAvQB5gH/AukB2wH/AukB2wH/AukB2wH/AukB2wH/AukB2wH/AukB2wH/AukB2wH/
+        AvQB5gH/A0ABbxQAA1kB8gPJAf8DyQH/A8kB/wNfAfsDyQH/A1kB8gNLAY4gAAMiATIBAAKeAf8BmAL+
+        Af8BAALHAf8DrAH/A9YB/wPfAf8D/AH/A/4B/wP+Af8D/gH/A/gB/wP2Af8DRAF6CAAB0QG9AakF/wPz
+        Af8D8wH/A/MB/wPzAf8D8wH/A/MB/wPzAf8D8wH/A/MF/wGPAgAB/wwAA0ABbgL1AegB/wLrAd4B/wLr
+        Ad4B/wLrAd4B/wLrAd4B/wLrAd4B/wLrAd4B/wLrAd4B/wL1AegB/wNAAW4MAANLAY4DWQHyA1kB8gPN
+        Af8DzQH/A18B+wPNAf8DzQH/A80B/wNZAfIDSwGOHAADYgHpAYsC6AH/AYwC6wH/AwAB/wMAAf8DyQH/
+        A/wB/wP+Af8D/gH/A/4B/wP+Af8D/gH/A/MB/wNiAe8IAAHRAb0BqQX/AdEBvQGpAf8B0QG9AakB/wHR
+        Ab0BqQH/AdEBvQGpAf8B0QG9AakB/wHRAb0BqQH/AdEBvQGpAf8B0QG9AakB/wHRAb0BqQX/AY8CAAH/
+        DAADPwFtAvYB6wH/Ar0BrAH/Ar0BrAH/As4BvQH/AsYBtQH/Au0B4QH/Au0B4QH/Au0B4QH/AvYB6wH/
+        Az8BbQwAA1kB8gPRAf8D0QH/A9EB/wNfAfsD0QH/A9EB/wPRAf8D0QH/A9EB/wNZAfIDSwGOFAADOAFc
+        AwAB/wGYAv4B/wGRAvMB/wMAAf8DtwH/A+MB/wP+Af8D/QH/A5AB/wPtAf8D7QH/A/4B/wPxAf8DywH/
+        CAAB0QG9AakF/wHRAb0BqQH/A/gB/wP4Af8B0QG9AakB/wP4Af8D+AH/AdEBvQGpAf8D+AH/AdEBvQGp
+        Bf8BjwIAAf8MAAM/AWwC+AHtAf8C4QHQAf8C4QHQAf8C4QHQAf8C4QHQAf8C8AHlAf8C8AHlAf8C8AHl
+        Af8C+AHtAf8DPwFsDAADSwGOA1kB8gPWAf8DXwH7A9YB/wPWAf8D1gH/A9YB/wPWAf8D1gH/A9YB/wNZ
+        AfIDSwGOEQACmwH/AY8C8AH/AZkD/wGLAugB/wGAAoEB/wO4Af8D6An/A7ER/wPCAf8IAAHRAb0BqQX/
+        AdEBvQGpAf8B6wHfAdMB/wHrAd8B0wH/Ac0BtAGdAf8B6wHfAdMB/wHrAd8B0wH/Ac0BtAGdAf8B6wHf
+        AdMB/wHRAb0BqQX/AY8CAAH/DAADPgFrAvkB8AH/AsIBsQH/AsIBsQH/AsIBsQH/AsIBsQH/AtMBwgH/
+        AtMBwgH/AssBugH/AvkB8AH/Az4BaxAAA0sBjgNZAfID2gH/A9oB/wPaAf8D2gH/A9oB/wPaAf8D2gH/
+        A9oB/wPaAf8DWQHyA0sBjggAA0YBfgMAAf8BmQP/AZUC+AH/AQACyAH/AQACgQH/AwAB/wPQCf8DvQ3/
+        A+0B/wNiAekIAAHRAb0BqQX/AdEBvQGpAf8B0QG9AakB/wHRAb0BqQH/AdEBvQGpAf8B0QG9AakB/wHR
+        Ab0BqQH/AdEBvQGpAf8B0QG9AakB/wHRAb0BqQX/AY8CAAH/DAADPgFrAvoB8gH/AuYB1QH/AuYB1QH/
+        AuYB1QH/AuYB1QH/AuYB1QH/AuYB1QH/AuYB1QH/AvoB8gH/Az4BaxQAA0sBjgNZAfID3wH/A98B/wPf
+        Af8D3wH/A98B/wPfAf8D3wH/A98B/wPfAf8DWQHyA0sBjgQAAZwCtgH/AYoC6AH/AZgC/gH/AYEC2AH/
+        AQAC0wH/AY4C5AH/AwAB/wPbAf8D+gX/AwAN/wOpAf8DQAFvCAAB0QG9AakF/wP9Af8D/QH/A/0B/wP9
+        Af8D/QH/A/0B/wP9Af8D/QH/A/0F/wGPAgAB/wwAAz4BagL7AfUB/wLHAbYB/wLYAccB/wLHAbYB/wLH
+        AbYB/wLHAbYB/wLYAccB/wLQAb8B/wL7AfUB/wM+AWoYAANLAY4DZgHyA+QB/wPkAf8D5AH/A+QB/wPk
+        Af8D5AH/A+QB/wNfAfsD5AH/A2YB8gNLAY4DYQHmAZgC/gH/AZgC/gH/AZgC/gH/AZgC/gH/AYgC4wH/
+        AZQCvwH/AwAB/wOmAf8D+AH/A/UB/wP+Af8D9gH/A5QB/wMrAUIMAAHRAb0BqQX/AeAB0wHFAf8B4AHT
+        AcUB/wHgAdMBxQH/AeAB0wHFAf8D/gH/AeAB0wHFAf8B4AHTAcUB/wHgAdMBxQH/AeAB0wHFAf8B9AHx
+        Ae8B/wGWAYABAAH/DAADPQFpAvwB+AH/AuwB2wH/AuwB2wH/AuwB2wH/AuwB2wH/AvkB9AH/AvkB9AH/
+        AvkB9AH/AvwB+AH/Az0BaRwAA0sBjgNnAfID6AH/A+gB/wPoAf8D6AH/A+gB/wNfAfsD6AH/A+gB/wPo
+        Af8DZwHyAwIBAwNSAaEBmQP/AZkD/wGNAu0B/wGVAvoB/wGZA/8DXwH7AywBRANaAdMDAAH/A0cB+QNI
+        AYQDCQEMEAAB0QG9AakF/wPBAf8DtgH/A8EB/wP+Af8D/gH/A9UB/wOiAf8BuwG5AbgB/wHZAdEBygH/
+        AcgBvgG2Af8BvgGpAZUB/wwAAz0BaAL9AfoB/wLMAbsB/wLMAbsB/wLdAcwB/wLVAcQB/wL7AfcB/wL7
+        AfcB/wL7AfcB/wL9AfoB/wM9AWggAANLAY4DZwHyA+wB/wPsAf8D7AH/A18B+wPsAf8D7AH/A2cB8gNn
+        AfIDSwGOCAADBAEFAzYBWANfAfMBAAKZAf8BmAL+Af8BmAL+Af8DTQH6A14BziAAAdEBvQGpBf8BzgHJ
+        AcQB/wHEAb8BugH/AeAB2wHYCf8D6gH/A+oB/wP9Af8D6AH/AdABwwG3Af8DXAHPDAADPQFoAv4B/AH/
+        AvwB+gH/AvwB+gH/AvwB+gH/AvwB+gH/AvwB+gH/AvwB+gH/AvwB+gH/Av4B/AH/Az0BaCQAA0sBjgNn
+        AfID8AH/A18B+wPwAf8D8AH/A/AB/wNnAfIYAAMBAQIDVgG2AzEBTgFZAlsBwwNfAeMDZAHsIAAB0QG9
+        AakF/wGrAZsBjAH/AasBmwGMAf8BsgGjAZYN/wP+Af8D6wH/AdMByAG9Af8DXAHPAwwBEAwAAz0BZwL/
+        Af4B/wL+Af0B/wL+Af0B/wL+Af0B/wL+Af0B/wL+Af0B/wL+Af0B/wL+Af0D/wH+Af8DPQFnKAADSwGO
+        A2cB8gPzAf8D8wH/A2cB8gNnAfIDSwGOUAAB0QG9AakZ/wH8AfsB+gH/AeMB3QHYAf8B1AHJAb4B/wNU
+        Aa8DDAEQEAADPQFnBP8DPAFmBP8DPAFmBP8DPAFmBP8DPAFmBP8DPQFnLAADSwGOA2cB8gP1Af8DZwHy
+        WAAB0QG9AakB/wHRAb0BqQH/AdEBvQGpAf8B0QG9AakB/wHRAb0BqQH/AdEBvQGpAf8B0QG9AakB/wHR
+        Ab0BqQH/AdEBvQGpAf8DUQGfGAADMQFNAzwBZgMTARoDPAFmAxMBGgM8AWYDEwEaAzwBZgMTARoDPAFm
+        AzEBTTAAA0sBjgNnAfIDSwGOEAABQgFNAT4HAAE+AwABKAMAAUADAAEgAwABAQEAAQEGAAEBFgAD/wEA
+        Av8GAAH+AT8GAAH8AR8GAAH4AQ8GAAHwAQMGAAHgAQEGAAHAAQEGAAHAAQEGAAHAAQEGAAHAAQEGAAHA
+        AQEGAAHAAQEGAAHAAQEGAAHAAQcGAAH+AR8GAAL/BgAC/wHAAQEBAAEBAfEC/wEHAcABAQHAAQcB8AH/
+        AeIBAwHAAQEBwAEHAcABfwHAAQEBwAEBAcABBwHAAT8BwAEAAcABAQHAAQcBAAEfAcABAAHAAQEBwAEH
+        AQABDwGAAQABwAEBAcABBwEAAQcBgAEAAcABAQHAAQcBgAEDAgABwAEBAcABBwHAAQECAAHAAQEBwAEH
+        AeACAAEBAcABAQHAAQcB8AIAAQMBwAEBAcABBwH4AQABwAE/AcABAQHAAQcB/AEDAfABPwHAAQEBwAEH
+        Af4BAwL/AcABAwHAAQcB/wEPAv8BwAEPAcABBwH/AY8L
 </value>
   </data>
   <metadata name="MEDICOBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -218,18 +218,18 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="GridEX1_DesignTimeLayout_Reference_0.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAlVJREFUOE+d
-        ku1PUlEcx/kT/BP8E3rdq970oraac2Zb2iZN7WHixFbhehKXmQuEmQFiEiAP4QNSFKA8XAVZFAaRcz0A
-        3cX1KlcdoBmrV9/uPZs015ba2T77vfidz/d3zs4RifZZs7HPZ3kSPBBY/MhAbx4/vZ9X6QvyemEbK1yJ
-        yGaHSwjAYQKw86OMnZ0yQrEP6FdrCIcL4OXdgAOJ0YnWqveeNlrA6QlhNhDCfCQKm2MSqRkJYcl7BZN9
-        R5v+CgyOiasWxluS2agM65nhPfwsOPFry034NCdHzFK/9yoURVWH/VPJr2/VRBzouwqxWIy6ujo099bC
-        67iM0soYkQWGFR1/Ani5Jh6PFxmGQT6fB8dx4Ng08t8SeDNnR+DFEFbTLkQpJwwGA6TSTpysbaBFvFgV
-        Doenk8kkstksPF4faJomNZfLwfI8AJZlkUqloNPp0NPTg0HtE8hVRhyvaYDI5/N1JBIJCJMFSdgs1Ewm
-        A6PfREKFvkajwWOtHgqtFa1dKsKJMxcgsr2M0IXtMjaK35HfLCLHcjxrYFZWsbrGkclWmx1P7S7I+kcr
-        cqOkG6fOXUqKrDPvEFhMI/GFRZrZBLuxBa4ghJVIoDe4gJGJAG6prZB0a9B8Q4HGtrvF+pbrHeQJH9n8
-        MLpjEIIcwRSm5pbgiizDOx8nGN2voTR5cHPAgov8sZs670+fb5dXV96/S2lW3VZbqTuDdvQOO6E0vsLQ
-        syDMUzPQTwYxMh0hcotsgOanH/vnT2yXa49I7+mbrj0YVckemii+7t65+0Bf+H82/QZ1J/U+FM6JvQAA
-        AABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAllJREFUOE+t
+        kG1PUmEcxs9H8CP4EXrdq970oraac2Zb2iZN7WHiwFbhehKXmUuEmYFiGqJAKCBlASqIgiwKg8i5HoDO
+        Ag9y1IEasXp1de57x5xbizdd22/3dv737/qfc5hymQt/PisQFQBh5WMGeuPkaXFcPkTezO9hnd+hstHq
+        JAUQx+VDthZ/lFAslrAQ/oAejZYijsuHFgjyfoH4+N8JTTVXvHe1sASHawFz3gUsBUMwW22Iz0opq+4r
+        sHUfbRCVg/jGJRXLk02xVEiBzeTQIX7mHfi1O0P5tKhEeKL28Bv5/f7KwLw99vWthgp93VchkUhQU1OD
+        xq5quK2XsbM+TmXCUK/soECQqyKRSCGTySCXy4HnefBcArlvUbxZtMD7YgDZhBMhvwOjo6OQy9twsrqO
+        JWJFIBCYjsViSKVScLk9YFmWnul0GhPPveA4DvF4HIODg+js7ES/7gmUagOOV9WB8Xg8smg0CrKZSOQy
+        OZPJJAzzY7SUzLVaLR7r9OjVmdDcrqacOHMBjPllkM3vlbBV+I7cdgFpjhfYQGY9i+wGTzebzBY8tTih
+        6Bn5I9dLO3Dq3KUYY5p9B+9KAtEvHBKZbXBbu+DzpGyHFrp9yxie8uKWxgRphxaNN3pR33K3UNt0XUZ/
+        3iPzPAwzYZAiqy8O++IqnME1uJciFMPMa6jGXLjZN4GLwuaGtvvT51uVlVQmaVcZ1bc1Jv+dfgu6hhxQ
+        GV5h4JkPRvss9DYfhqeDVG5S9LHC9mOi9ve0KnVH5Pf0DdcejKgVD8f8wrn/zR3ilf8dhvkNdSf1Pv5T
+        bOUAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="GridEX1_DesignTimeLayout.LayoutString" xml:space="preserve">
@@ -239,7 +239,7 @@
     <value>819, 17</value>
   </metadata>
   <data name="GridEXDocs_DesignTimeLayout.LayoutString" xml:space="preserve">
-    <value>&lt;GridEXLayoutData&gt;&lt;RootTable&gt;&lt;Key&gt;CITA&lt;/Key&gt;&lt;Caption&gt;CITAS&lt;/Caption&gt;&lt;Columns Collection="true" ElementName="Column"&gt;&lt;Column0 ID="IDCITA"&gt;&lt;Caption&gt;IDCITA&lt;/Caption&gt;&lt;DataTypeCode&gt;Int32&lt;/DataTypeCode&gt;&lt;BoundMode&gt;UnboundFetch&lt;/BoundMode&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;IDCITA&lt;/DataMember&gt;&lt;Key&gt;IDCITA&lt;/Key&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;Width&gt;22&lt;/Width&gt;&lt;ActAsSelector&gt;True&lt;/ActAsSelector&gt;&lt;CellStyle&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;/CellStyle&gt;&lt;HeaderStyle&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;/HeaderStyle&gt;&lt;DataTypeCode&gt;Int32&lt;/DataTypeCode&gt;&lt;/Column0&gt;&lt;Column1 ID="FECHA"&gt;&lt;Caption&gt;Fecha&lt;/Caption&gt;&lt;DataTypeCode&gt;DateTime&lt;/DataTypeCode&gt;&lt;DataMember&gt;FECHA&lt;/DataMember&gt;&lt;DefaultGroupInterval&gt;Date&lt;/DefaultGroupInterval&gt;&lt;EditType&gt;CalendarCombo&lt;/EditType&gt;&lt;FormatString&gt;d&lt;/FormatString&gt;&lt;Key&gt;FECHA&lt;/Key&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;Width&gt;72&lt;/Width&gt;&lt;/Column1&gt;&lt;Column2 ID="HORA"&gt;&lt;Caption&gt;Inicio&lt;/Caption&gt;&lt;DataTypeCode&gt;DateTime&lt;/DataTypeCode&gt;&lt;DataMember&gt;HORA&lt;/DataMember&gt;&lt;DefaultGroupInterval&gt;Date&lt;/DefaultGroupInterval&gt;&lt;EditType&gt;CalendarCombo&lt;/EditType&gt;&lt;FormatString&gt;t&lt;/FormatString&gt;&lt;Key&gt;HORA&lt;/Key&gt;&lt;Position&gt;2&lt;/Position&gt;&lt;Width&gt;52&lt;/Width&gt;&lt;/Column2&gt;&lt;Column3 ID="HORAFIN"&gt;&lt;Caption&gt;Fin&lt;/Caption&gt;&lt;DataTypeCode&gt;DateTime&lt;/DataTypeCode&gt;&lt;DataMember&gt;HORAFIN&lt;/DataMember&gt;&lt;DefaultGroupInterval&gt;Date&lt;/DefaultGroupInterval&gt;&lt;EditType&gt;CalendarCombo&lt;/EditType&gt;&lt;FormatString&gt;t&lt;/FormatString&gt;&lt;Key&gt;HORAFIN&lt;/Key&gt;&lt;Position&gt;3&lt;/Position&gt;&lt;Width&gt;47&lt;/Width&gt;&lt;/Column3&gt;&lt;Column4 ID="PAGADA"&gt;&lt;Caption&gt;PAG&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;PAGADA&lt;/DataMember&gt;&lt;Key&gt;PAGADA&lt;/Key&gt;&lt;Position&gt;4&lt;/Position&gt;&lt;Width&gt;40&lt;/Width&gt;&lt;/Column4&gt;&lt;Column5 ID="FORMASPAGO"&gt;&lt;Caption&gt;Forma Pago&lt;/Caption&gt;&lt;DataMember&gt;FORMASPAGO.DESCRIPCION&lt;/DataMember&gt;&lt;Key&gt;FORMASPAGO&lt;/Key&gt;&lt;Position&gt;5&lt;/Position&gt;&lt;Width&gt;224&lt;/Width&gt;&lt;/Column5&gt;&lt;Column6 ID="IMPORTEDR"&gt;&lt;Caption&gt;Importe Dr&lt;/Caption&gt;&lt;DataTypeCode&gt;Decimal&lt;/DataTypeCode&gt;&lt;DataMember&gt;DrImporteConDtoSum&lt;/DataMember&gt;&lt;FormatString&gt;c2&lt;/FormatString&gt;&lt;Key&gt;IMPORTEDR&lt;/Key&gt;&lt;Position&gt;6&lt;/Position&gt;&lt;Width&gt;72&lt;/Width&gt;&lt;CellStyle&gt;&lt;FontBold&gt;True&lt;/FontBold&gt;&lt;/CellStyle&gt;&lt;/Column6&gt;&lt;Column7 ID="ATENDIDO"&gt;&lt;Caption&gt;ATENDIDO&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;ATENDIDO&lt;/DataMember&gt;&lt;Key&gt;ATENDIDO&lt;/Key&gt;&lt;Position&gt;7&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column7&gt;&lt;/Columns&gt;&lt;SortKeys Collection="true" ElementName="SortKey"&gt;&lt;SortKey0 ID="SortKey0"&gt;&lt;ColIndex&gt;1&lt;/ColIndex&gt;&lt;SortOrder&gt;Descending&lt;/SortOrder&gt;&lt;/SortKey0&gt;&lt;/SortKeys&gt;&lt;ChildTables Collection="true" ElementName="Table"&gt;&lt;Table0 ID="LineasCitas"&gt;&lt;DataMember&gt;LineasCitas&lt;/DataMember&gt;&lt;Key&gt;LineasCitas&lt;/Key&gt;&lt;Caption&gt;LineasCita&lt;/Caption&gt;&lt;Columns Collection="true" ElementName="Column"&gt;&lt;Column0 ID="IdLinea"&gt;&lt;Caption&gt;Id Linea&lt;/Caption&gt;&lt;DataTypeCode&gt;Int64&lt;/DataTypeCode&gt;&lt;BoundMode&gt;UnboundFetch&lt;/BoundMode&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;IdLinea&lt;/DataMember&gt;&lt;Key&gt;IdLinea&lt;/Key&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;Width&gt;23&lt;/Width&gt;&lt;ActAsSelector&gt;True&lt;/ActAsSelector&gt;&lt;DataTypeCode&gt;Int64&lt;/DataTypeCode&gt;&lt;/Column0&gt;&lt;Column1 ID="RefConcepto"&gt;&lt;Caption&gt;COD&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;RefConcepto&lt;/DataMember&gt;&lt;Key&gt;RefConcepto&lt;/Key&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;Width&gt;85&lt;/Width&gt;&lt;/Column1&gt;&lt;Column2 ID="DESCRIPCION"&gt;&lt;Caption&gt;Descripción&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;DESCRIPCION&lt;/DataMember&gt;&lt;Key&gt;DESCRIPCION&lt;/Key&gt;&lt;Position&gt;2&lt;/Position&gt;&lt;Width&gt;253&lt;/Width&gt;&lt;/Column2&gt;&lt;Column3 ID="ImporteDr"&gt;&lt;Caption&gt;Importe Dr&lt;/Caption&gt;&lt;DataTypeCode&gt;Double&lt;/DataTypeCode&gt;&lt;DataMember&gt;DrImporteConDto&lt;/DataMember&gt;&lt;FormatString&gt;c2&lt;/FormatString&gt;&lt;Key&gt;ImporteDr&lt;/Key&gt;&lt;Position&gt;3&lt;/Position&gt;&lt;Width&gt;73&lt;/Width&gt;&lt;/Column3&gt;&lt;Column4 ID="Liquidada_al_Medico"&gt;&lt;Caption&gt;Liquidada al Medico&lt;/Caption&gt;&lt;DataTypeCode&gt;Boolean&lt;/DataTypeCode&gt;&lt;DataMember&gt;Liquidada_al_Medico&lt;/DataMember&gt;&lt;Key&gt;Liquidada_al_Medico&lt;/Key&gt;&lt;Position&gt;4&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column4&gt;&lt;Column5 ID="DescuentoPercent"&gt;&lt;Caption&gt;Dto en Cita(%)&lt;/Caption&gt;&lt;DataTypeCode&gt;Double&lt;/DataTypeCode&gt;&lt;DataMember&gt;DescuentoPercent&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;DescuentoPercent&lt;/Key&gt;&lt;Position&gt;5&lt;/Position&gt;&lt;/Column5&gt;&lt;/Columns&gt;&lt;GroupCondition /&gt;&lt;StoredFilters Collection="true" ElementName="StoredFilter"&gt;&lt;StoredFilter0 ID="StoredLineasLiquidadas"&gt;&lt;FilterCondition&gt;&lt;ColumnIndex&gt;4&lt;/ColumnIndex&gt;&lt;ConditionOperator&gt;IsNull&lt;/ConditionOperator&gt;&lt;Conditions Collection="true" ElementName="FilterCondition"&gt;&lt;FilterCondition0&gt;&lt;ColumnIndex&gt;4&lt;/ColumnIndex&gt;&lt;LogicalOperator&gt;Or&lt;/LogicalOperator&gt;&lt;TypeNameValue1&gt;System.Boolean&lt;/TypeNameValue1&gt;&lt;Value1&gt;False&lt;/Value1&gt;&lt;/FilterCondition0&gt;&lt;/Conditions&gt;&lt;/FilterCondition&gt;&lt;IsCurrent&gt;True&lt;/IsCurrent&gt;&lt;Key&gt;StoredLineasLiquidadas&lt;/Key&gt;&lt;/StoredFilter0&gt;&lt;/StoredFilters&gt;&lt;/Table0&gt;&lt;/ChildTables&gt;&lt;GroupCondition /&gt;&lt;TableHeader&gt;False&lt;/TableHeader&gt;&lt;/RootTable&gt;&lt;/GridEXLayoutData&gt;</value>
+    <value>&lt;GridEXLayoutData&gt;&lt;RootTable&gt;&lt;Key&gt;CITA&lt;/Key&gt;&lt;Caption&gt;CITAS&lt;/Caption&gt;&lt;Columns Collection="true" ElementName="Column"&gt;&lt;Column0 ID="IDCITA"&gt;&lt;Caption&gt;IDCITA&lt;/Caption&gt;&lt;DataTypeCode&gt;Int32&lt;/DataTypeCode&gt;&lt;BoundMode&gt;UnboundFetch&lt;/BoundMode&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;IDCITA&lt;/DataMember&gt;&lt;Key&gt;IDCITA&lt;/Key&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;Width&gt;22&lt;/Width&gt;&lt;ActAsSelector&gt;True&lt;/ActAsSelector&gt;&lt;CellStyle&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;/CellStyle&gt;&lt;HeaderStyle&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;/HeaderStyle&gt;&lt;DataTypeCode&gt;Int32&lt;/DataTypeCode&gt;&lt;/Column0&gt;&lt;Column1 ID="FECHA"&gt;&lt;Caption&gt;Fecha&lt;/Caption&gt;&lt;DataTypeCode&gt;DateTime&lt;/DataTypeCode&gt;&lt;DataMember&gt;FECHA&lt;/DataMember&gt;&lt;DefaultGroupInterval&gt;Date&lt;/DefaultGroupInterval&gt;&lt;EditType&gt;CalendarCombo&lt;/EditType&gt;&lt;FormatString&gt;d&lt;/FormatString&gt;&lt;Key&gt;FECHA&lt;/Key&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;Width&gt;72&lt;/Width&gt;&lt;/Column1&gt;&lt;Column2 ID="HORA"&gt;&lt;Caption&gt;Inicio&lt;/Caption&gt;&lt;DataTypeCode&gt;DateTime&lt;/DataTypeCode&gt;&lt;DataMember&gt;HORA&lt;/DataMember&gt;&lt;DefaultGroupInterval&gt;Date&lt;/DefaultGroupInterval&gt;&lt;EditType&gt;CalendarCombo&lt;/EditType&gt;&lt;FormatString&gt;t&lt;/FormatString&gt;&lt;Key&gt;HORA&lt;/Key&gt;&lt;Position&gt;2&lt;/Position&gt;&lt;Width&gt;52&lt;/Width&gt;&lt;/Column2&gt;&lt;Column3 ID="HORAFIN"&gt;&lt;Caption&gt;Fin&lt;/Caption&gt;&lt;DataTypeCode&gt;DateTime&lt;/DataTypeCode&gt;&lt;DataMember&gt;HORAFIN&lt;/DataMember&gt;&lt;DefaultGroupInterval&gt;Date&lt;/DefaultGroupInterval&gt;&lt;EditType&gt;CalendarCombo&lt;/EditType&gt;&lt;FormatString&gt;t&lt;/FormatString&gt;&lt;Key&gt;HORAFIN&lt;/Key&gt;&lt;Position&gt;3&lt;/Position&gt;&lt;Width&gt;47&lt;/Width&gt;&lt;/Column3&gt;&lt;Column4 ID="PAGADA"&gt;&lt;Caption&gt;PAG&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;PAGADA&lt;/DataMember&gt;&lt;Key&gt;PAGADA&lt;/Key&gt;&lt;Position&gt;4&lt;/Position&gt;&lt;Width&gt;40&lt;/Width&gt;&lt;/Column4&gt;&lt;Column5 ID="FORMASPAGO"&gt;&lt;Caption&gt;Forma Pago&lt;/Caption&gt;&lt;DataMember&gt;FORMASPAGO.DESCRIPCION&lt;/DataMember&gt;&lt;Key&gt;FORMASPAGO&lt;/Key&gt;&lt;Position&gt;5&lt;/Position&gt;&lt;Width&gt;224&lt;/Width&gt;&lt;/Column5&gt;&lt;Column6 ID="IMPORTEDR"&gt;&lt;Caption&gt;Importe Dr&lt;/Caption&gt;&lt;DataTypeCode&gt;Decimal&lt;/DataTypeCode&gt;&lt;DataMember&gt;DrImporteConDtoSum&lt;/DataMember&gt;&lt;FormatString&gt;c2&lt;/FormatString&gt;&lt;Key&gt;IMPORTEDR&lt;/Key&gt;&lt;Position&gt;6&lt;/Position&gt;&lt;Width&gt;72&lt;/Width&gt;&lt;CellStyle&gt;&lt;FontBold&gt;True&lt;/FontBold&gt;&lt;/CellStyle&gt;&lt;/Column6&gt;&lt;Column7 ID="ATENDIDO"&gt;&lt;Caption&gt;ATENDIDO&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;ATENDIDO&lt;/DataMember&gt;&lt;Key&gt;ATENDIDO&lt;/Key&gt;&lt;Position&gt;7&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column7&gt;&lt;Column8 ID="REFPACIENTE"&gt;&lt;Caption&gt;Cod. Paciente&lt;/Caption&gt;&lt;DataTypeCode&gt;Int32&lt;/DataTypeCode&gt;&lt;DataMember&gt;REFPACIENTE&lt;/DataMember&gt;&lt;Key&gt;REFPACIENTE&lt;/Key&gt;&lt;Position&gt;8&lt;/Position&gt;&lt;Width&gt;80&lt;/Width&gt;&lt;/Column8&gt;&lt;Column9 ID="PACIENTE"&gt;&lt;Caption&gt;Paciente&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;PACIENTE&lt;/DataMember&gt;&lt;Key&gt;PACIENTE&lt;/Key&gt;&lt;Position&gt;9&lt;/Position&gt;&lt;Width&gt;180&lt;/Width&gt;&lt;/Column9&gt;&lt;/Columns&gt;&lt;SortKeys Collection="true" ElementName="SortKey"&gt;&lt;SortKey0 ID="SortKey0"&gt;&lt;ColIndex&gt;1&lt;/ColIndex&gt;&lt;SortOrder&gt;Descending&lt;/SortOrder&gt;&lt;/SortKey0&gt;&lt;/SortKeys&gt;&lt;ChildTables Collection="true" ElementName="Table"&gt;&lt;Table0 ID="LineasCitas"&gt;&lt;DataMember&gt;LineasCitas&lt;/DataMember&gt;&lt;Key&gt;LineasCitas&lt;/Key&gt;&lt;Caption&gt;LineasCita&lt;/Caption&gt;&lt;Columns Collection="true" ElementName="Column"&gt;&lt;Column0 ID="IdLinea"&gt;&lt;Caption&gt;Id Linea&lt;/Caption&gt;&lt;DataTypeCode&gt;Int64&lt;/DataTypeCode&gt;&lt;BoundMode&gt;UnboundFetch&lt;/BoundMode&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;DataMember&gt;IdLinea&lt;/DataMember&gt;&lt;Key&gt;IdLinea&lt;/Key&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;Width&gt;23&lt;/Width&gt;&lt;ActAsSelector&gt;True&lt;/ActAsSelector&gt;&lt;DataTypeCode&gt;Int64&lt;/DataTypeCode&gt;&lt;/Column0&gt;&lt;Column1 ID="RefConcepto"&gt;&lt;Caption&gt;COD&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;RefConcepto&lt;/DataMember&gt;&lt;Key&gt;RefConcepto&lt;/Key&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;Width&gt;85&lt;/Width&gt;&lt;/Column1&gt;&lt;Column2 ID="DESCRIPCION"&gt;&lt;Caption&gt;Descripción&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;DESCRIPCION&lt;/DataMember&gt;&lt;Key&gt;DESCRIPCION&lt;/Key&gt;&lt;Position&gt;2&lt;/Position&gt;&lt;Width&gt;253&lt;/Width&gt;&lt;/Column2&gt;&lt;Column3 ID="ImporteDr"&gt;&lt;Caption&gt;Importe Dr&lt;/Caption&gt;&lt;DataTypeCode&gt;Double&lt;/DataTypeCode&gt;&lt;DataMember&gt;DrImporteConDto&lt;/DataMember&gt;&lt;FormatString&gt;c2&lt;/FormatString&gt;&lt;Key&gt;ImporteDr&lt;/Key&gt;&lt;Position&gt;3&lt;/Position&gt;&lt;Width&gt;73&lt;/Width&gt;&lt;/Column3&gt;&lt;Column4 ID="Liquidada_al_Medico"&gt;&lt;Caption&gt;Liquidada al Medico&lt;/Caption&gt;&lt;DataTypeCode&gt;Boolean&lt;/DataTypeCode&gt;&lt;DataMember&gt;Liquidada_al_Medico&lt;/DataMember&gt;&lt;Key&gt;Liquidada_al_Medico&lt;/Key&gt;&lt;Position&gt;4&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column4&gt;&lt;Column5 ID="DescuentoPercent"&gt;&lt;Caption&gt;Dto en Cita(%)&lt;/Caption&gt;&lt;DataTypeCode&gt;Double&lt;/DataTypeCode&gt;&lt;DataMember&gt;DescuentoPercent&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;DescuentoPercent&lt;/Key&gt;&lt;Position&gt;5&lt;/Position&gt;&lt;/Column5&gt;&lt;/Columns&gt;&lt;GroupCondition /&gt;&lt;StoredFilters Collection="true" ElementName="StoredFilter"&gt;&lt;StoredFilter0 ID="StoredLineasLiquidadas"&gt;&lt;FilterCondition&gt;&lt;ColumnIndex&gt;4&lt;/ColumnIndex&gt;&lt;ConditionOperator&gt;IsNull&lt;/ConditionOperator&gt;&lt;Conditions Collection="true" ElementName="FilterCondition"&gt;&lt;FilterCondition0&gt;&lt;ColumnIndex&gt;4&lt;/ColumnIndex&gt;&lt;LogicalOperator&gt;Or&lt;/LogicalOperator&gt;&lt;TypeNameValue1&gt;System.Boolean&lt;/TypeNameValue1&gt;&lt;Value1&gt;False&lt;/Value1&gt;&lt;/FilterCondition0&gt;&lt;/Conditions&gt;&lt;/FilterCondition&gt;&lt;IsCurrent&gt;True&lt;/IsCurrent&gt;&lt;Key&gt;StoredLineasLiquidadas&lt;/Key&gt;&lt;/StoredFilter0&gt;&lt;/StoredFilters&gt;&lt;/Table0&gt;&lt;/ChildTables&gt;&lt;GroupCondition /&gt;&lt;TableHeader&gt;False&lt;/TableHeader&gt;&lt;/RootTable&gt;&lt;/GridEXLayoutData&gt;</value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>62</value>

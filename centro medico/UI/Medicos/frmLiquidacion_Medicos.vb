@@ -506,7 +506,6 @@ Public Class frmLiquidacion_Medicos
         CargaDatos()
     End Sub
 
-
 End Class
 
 Partial Public Class Liquidacion_Medico

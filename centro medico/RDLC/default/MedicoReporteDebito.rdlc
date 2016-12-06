@@ -9,7 +9,7 @@
               <Width>0.68972in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.23971in</Width>
+              <Width>3.08138in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.89843in</Width>
@@ -462,7 +462,7 @@
           <TablixMembers>
             <TablixMember>
               <TablixHeader>
-                <Size>2.45635in</Size>
+                <Size>2.74677in</Size>
                 <CellContents>
                   <Textbox Name="Textbox82">
                     <CanGrow>true</CanGrow>
@@ -513,7 +513,7 @@
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>2.45635in</Size>
+                        <Size>2.74677in</Size>
                         <CellContents>
                           <Textbox Name="CITA_FECHA">
                             <CanGrow>true</CanGrow>
@@ -524,7 +524,7 @@
                                   <TextRun>
                                     <Value>="Fecha: " + FormatDateTime(Fields!CITA_FECHA.Value, DateFormat.ShortDate) 
 + " - " + FormatDateTime(Fields!CITA_HORA.Value, DateFormat.ShortTime)
-+ VBCRLF + "Paciente:" + VBCRLF + Fields!CITA_PACIENTE.Value</Value>
++ VBCRLF + "Paciente:" + VBCRLF + "[" + Format(Fields!CITA_REFPACIENTE.Value) + "] " + Fields!CITA_PACIENTE.Value</Value>
                                     <Style />
                                   </TextRun>
                                 </TextRuns>
@@ -564,7 +564,7 @@
                     </TablixMember>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>2.45635in</Size>
+                        <Size>2.74677in</Size>
                         <CellContents>
                           <Textbox Name="Textbox105">
                             <CanGrow>true</CanGrow>
@@ -598,7 +598,7 @@
                     </TablixMember>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>2.45635in</Size>
+                        <Size>2.74677in</Size>
                         <CellContents>
                           <Textbox Name="Textbox126">
                             <CanGrow>true</CanGrow>
@@ -639,7 +639,7 @@
             </TablixMember>
             <TablixMember>
               <TablixHeader>
-                <Size>2.45635in</Size>
+                <Size>2.74677in</Size>
                 <CellContents>
                   <Textbox Name="Textbox118">
                     <CanGrow>true</CanGrow>
@@ -677,7 +677,7 @@
         <Top>0.18417in</Top>
         <Left>0.01156in</Left>
         <Height>1.11458in</Height>
-        <Width>7.28421in</Width>
+        <Width>7.41629in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -692,7 +692,7 @@
     <Height>1.48958in</Height>
     <Style />
   </Body>
-  <Width>7.29578in</Width>
+  <Width>7.42785in</Width>
   <Page>
     <PageHeader>
       <Height>1.60416in</Height>
@@ -887,7 +887,6 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox28</rd:DefaultName>
-          <Top>0cm</Top>
           <Left>8.02332cm</Left>
           <Height>2.88431cm</Height>
           <Width>7.40789cm</Width>
