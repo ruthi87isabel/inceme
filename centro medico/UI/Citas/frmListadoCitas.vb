@@ -14,6 +14,7 @@ Public Class frmListadoCitas
     Dim _worker As New BackgroundWorker()
 
     Dim filtros As FiltroListadoCitas
+    Dim cit As Integer = 0
 
     Private Sub frmListadoCitas_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         GC.Collect()
@@ -71,6 +72,7 @@ Public Class frmListadoCitas
         SetEnabled(False)
         'elimino los filtros que puedan estar establecidos con anterioridad
         GridEX1.RootTable.FilterCondition = Nothing
+        cit = LLenaNum()
         filtros = New FiltroListadoCitas With
                   {
                       .FechaEmisionInicial = IIf(dtp_fi.Checked, dtp_fi.Value, Nothing),
@@ -81,7 +83,7 @@ Public Class frmListadoCitas
                       .NOMBREPACIENTE = IIf(txtNombre.Text <> "", txtNombre.Text, Nothing),
                       .APELLIDO1 = IIf(txtApellido1.Text <> "", txtApellido1.Text, Nothing),
                       .APELLIDO2 = IIf(txtApellido2.Text <> "", txtApellido2.Text, Nothing),
-                      .NumeroCita = IIf((LLenaNum() < 4 And LLenaNum() > 0), LLenaNum(), Nothing)
+                      .NumeroCita = IIf((cit < 4 And cit > 0), cit, Nothing)
                   }
 
         _worker.RunWorkerAsync()
@@ -112,7 +114,6 @@ Public Class frmListadoCitas
     Private Sub loadCitas()
 
         context = New CMLinqDataContext()
-
 
         Dim tmp As IQueryable(Of CITA) = CitasManager.ListadoCitas(context, filtros)
 
@@ -191,9 +192,8 @@ Public Class frmListadoCitas
 
         End If
 
-        If CBcitas.SelectedItem <> "" Then
-
-            tmp = From c In tmp Where c.NumeroCita = LLenaNum() Select c
+        If cit <> 0 Then
+            tmp = From c In tmp Where c.NumeroCita = cit Select c
         End If
 
 
