@@ -121,15 +121,16 @@
   <reporte id="R2_PacientesAltaXMes.rdlc"         fichero="R2_PacientesAltaXMes.rdlc"                     info="Ingreso Mensual de Nuevos Pacientes" />
   <reporte id="R1_CitasXEstado.rdlc"              fichero="R1_CitasXEstado.rdlc"                          info="Citas de Hoy por Estado" />
   <reporte id="R3_CitasAtendidasMedicosXDias.rdlc"    fichero="R3_CitasAtendidasMedicosXDias.rdlc"        info="Cantidad de Citas Diarias Atendidas por Médicos" />
-  <reporte id="R4_CitasEspecialidadXMes.rdlc"        fichero="R4_CitasEspecialidadXMes.rdlc"              info="Cantidad de Citas Mensuales por Especialidad" />
-  <reporte id="R5_Top10TratamientosXMes.rdlc"        fichero="R5_Top10TratamientosXMes.rdlc"               info="Top 10 Tratamientos por Mes" />
-  <reporte id="R6_EstadiaticaDental.rdlc"        fichero="R6_EstadiaticaDental.rdlc"                     info="Estadística Dental" />
+  <reporte id="R4_CitasEspecialidadXMes.rdlc"         fichero="R4_CitasEspecialidadXMes.rdlc"             info="Cantidad de Citas Mensuales por Especialidad" />
+  <reporte id="R5_Top10TratamientosXMes.rdlc"         fichero="R5_Top10TratamientosXMes.rdlc"             info="Top 10 Tratamientos por Mes" />
+  <reporte id="R6_EstadiaticaDental.rdlc"        fichero="R6_EstadiaticaDental.rdlc"                      info="Estadística Dental" />
 
-  <reporte id="MedicamentosListado.rdlc"          fichero="MedicamentosListado.rdlc"                      info="Listado de Medicamentos" />
+  <reporte id="MedicamentosListado.rdlc"         fichero="MedicamentosListado.rdlc"                       info="Listado de Medicamentos" />
   <reporte id="HistorialesResumen.rdlc"          fichero="HistorialesResumen.rdlc"                        info="Resumen de Historiales" />
 
-  <reporte id="EntregaJustificante.rdlc"          fichero="EntregaJustificante.rdlc"                      info="Justificante de Entrega de crédito" />
-  <reporte id="Consentimiento.rdlc"               fichero="Consentimiento.rdlc"                           info="Consentimiento genérico para firmar el paciente" />
-  <reporte id="AnaliticasListado.rdlc"               fichero="AnaliticasListado.rdlc"                        info="Listado de las Analíticas solicitadas" />
+  <reporte id="EntregaJustificante.rdlc"         fichero="EntregaJustificante.rdlc"                       info="Justificante de Entrega de crédito" />
+  <reporte id="Consentimiento.rdlc"              fichero="Consentimiento.rdlc"                            info="Consentimiento genérico para firmar el paciente" />
+  <reporte id="AnaliticasListado.rdlc"           fichero="AnaliticasListado.rdlc"                         info="Listado de las Analíticas solicitadas" />
+  <reporte id="PacientesComoNosConocio.rdlc"        fichero="PacientesComoNosConocio.rdlc"                      info="Listado de Pacientes por Cómo nos Conoció" />
 </lista>
 

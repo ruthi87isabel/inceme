@@ -1077,6 +1077,10 @@ Public Class form_new_centro_medico
             frm.ShowInTaskbar = False
             frm.Show()
             GC.Collect()
+        ElseIf ExplorerBar1.Groups("Group4").Items("Item14").Selected Then
+            Dim frm As New form_pac_como_nos_conocio
+            frm.ShowDialog()
+            GC.Collect()
         End If
 
         If ExplorerBar1.Groups("Group5").Items("Item1").Selected Then

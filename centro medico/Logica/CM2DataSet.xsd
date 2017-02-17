@@ -2,11 +2,11 @@
 <xs:schema id="CM2DataSet" targetNamespace="http://tempuri.org/CM2DataSet.xsd" xmlns:mstns="http://tempuri.org/CM2DataSet.xsd" xmlns="http://tempuri.org/CM2DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="3" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="-1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="CMConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CMConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.centro_medico.My.MySettings.GlobalReference.Default.CMConnectionString" Provider="System.Data.SqlClient" />
-          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="CMSIESTAConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CMSIESTAConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.centro_medico.My.MySettings.GlobalReference.Default.CMConnectionString" Provider="System.Data.SqlClient" />
-          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="constitucionConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="constitucionConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.centro_medico.My.MySettings.GlobalReference.Default.constitucionConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="CMSIESTAConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="CMSIESTAConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.centro_medico.My.MySettings.GlobalReference.Default.CMConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="constitucionConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="constitucionConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.centro_medico.My.MySettings.GlobalReference.Default.constitucionConnectionString" Provider="System.Data.SqlClient" />
           <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="SiestaConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="SiestaConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.centro_medico.My.MySettings.GlobalReference.Default.SiestaConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
@@ -779,6 +779,81 @@ ORDER BY SUBSTRING(CAST(CAST(FECHAALTA as DATE) AS varchar),0,8) ASC</CommandTex
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PACIENTESCONOCIOTableAdapter" GeneratorDataComponentClassName="PACIENTESCONOCIOTableAdapter" Name="PACIENTESCONOCIO" UserDataComponentName="PACIENTESCONOCIOTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CMConnectionString (MySettings)" DbObjectName="siesta.dbo.PACIENTES" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[PACIENTES] WHERE (([CPACIENTE] = @Original_CPACIENTE) AND ((@IsNull_NOMBRE = 1 AND [NOMBRE] IS NULL) OR ([NOMBRE] = @Original_NOMBRE)) AND ((@IsNull_APELLIDO1 = 1 AND [APELLIDO1] IS NULL) OR ([APELLIDO1] = @Original_APELLIDO1)) AND ((@IsNull_APELLIDO2 = 1 AND [APELLIDO2] IS NULL) OR ([APELLIDO2] = @Original_APELLIDO2)) AND ((@IsNull_DNI = 1 AND [DNI] IS NULL) OR ([DNI] = @Original_DNI)) AND ((@IsNull_CONOCIO = 1 AND [CONOCIO] IS NULL) OR ([CONOCIO] = @Original_CONOCIO)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CPACIENTE" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CPACIENTE" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_NOMBRE" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NOMBRE" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_NOMBRE" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="NOMBRE" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_APELLIDO1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="APELLIDO1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_APELLIDO1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="APELLIDO1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_APELLIDO2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="APELLIDO2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_APELLIDO2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="APELLIDO2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DNI" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DNI" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_DNI" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DNI" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CONOCIO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CONOCIO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_CONOCIO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CONOCIO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT CPACIENTE,NOMBRE,APELLIDO1,APELLIDO2,DNI,Convert(varchar(10),CONVERT(date,FECHAALTA,106),103) AS FechaIngreso,CONOCIO FROM dbo.PACIENTES
+WHERE  (((@nombre Is NULL) OR (@nombre IS NOT NULL AND nombre LIKE '%'+@nombre+'%'))  And
+((@pApellido Is NULL) OR (@pApellido IS NOT NULL AND Apellido1 LIKE '%'+@pApellido+'%')) And
+((@sApellido Is NULL) Or (@sApellido IS NOT NULL AND Apellido2 LIKE '%'+@sApellido+'%'))) And
+((@conocio Is NULL) Or (@conocio IS NOT NULL AND CONOCIO LIKE '%'+@conocio+'%')) AND CONOCIO IS NOT null
+ORDER BY NOMBRE,APELLIDO1,APELLIDO2 </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="nombre" ColumnName="NOMBRE" DataSourceName="siesta.dbo.PACIENTES" DataTypeServer="varchar(255)" DbType="AnsiString" Direction="Input" ParameterName="@nombre" Precision="0" ProviderType="VarChar" Scale="0" Size="255" SourceColumn="NOMBRE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="pApellido" ColumnName="APELLIDO1" DataSourceName="siesta.dbo.PACIENTES" DataTypeServer="varchar(255)" DbType="AnsiString" Direction="Input" ParameterName="@pApellido" Precision="0" ProviderType="VarChar" Scale="0" Size="255" SourceColumn="APELLIDO1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="sApellido" ColumnName="APELLIDO2" DataSourceName="siesta.dbo.PACIENTES" DataTypeServer="varchar(255)" DbType="AnsiString" Direction="Input" ParameterName="@sApellido" Precision="0" ProviderType="VarChar" Scale="0" Size="255" SourceColumn="APELLIDO2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="conocio" ColumnName="CONOCIO" DataSourceName="siesta.dbo.PACIENTES" DataTypeServer="varchar(250)" DbType="AnsiString" Direction="Input" ParameterName="@conocio" Precision="0" ProviderType="VarChar" Scale="0" Size="250" SourceColumn="CONOCIO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[PACIENTES] SET [CPACIENTE] = @CPACIENTE, [NOMBRE] = @NOMBRE, [APELLIDO1] = @APELLIDO1, [APELLIDO2] = @APELLIDO2, [DNI] = @DNI, [CONOCIO] = @CONOCIO WHERE (([CPACIENTE] = @Original_CPACIENTE) AND ((@IsNull_NOMBRE = 1 AND [NOMBRE] IS NULL) OR ([NOMBRE] = @Original_NOMBRE)) AND ((@IsNull_APELLIDO1 = 1 AND [APELLIDO1] IS NULL) OR ([APELLIDO1] = @Original_APELLIDO1)) AND ((@IsNull_APELLIDO2 = 1 AND [APELLIDO2] IS NULL) OR ([APELLIDO2] = @Original_APELLIDO2)) AND ((@IsNull_DNI = 1 AND [DNI] IS NULL) OR ([DNI] = @Original_DNI)) AND ((@IsNull_CONOCIO = 1 AND [CONOCIO] IS NULL) OR ([CONOCIO] = @Original_CONOCIO)));
+SELECT CPACIENTE, NOMBRE, APELLIDO1, APELLIDO2, DNI, CONVERT (varchar(10), CONVERT (date, FECHAALTA, 106), 103) AS FechaIngreso, CONOCIO FROM PACIENTES WHERE (CPACIENTE = @CPACIENTE) ORDER BY NOMBRE, APELLIDO1, APELLIDO2</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@CPACIENTE" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CPACIENTE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@NOMBRE" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="NOMBRE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@APELLIDO1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="APELLIDO1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@APELLIDO2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="APELLIDO2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@DNI" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DNI" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@CONOCIO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CONOCIO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CPACIENTE" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CPACIENTE" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_NOMBRE" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NOMBRE" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_NOMBRE" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="NOMBRE" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_APELLIDO1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="APELLIDO1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_APELLIDO1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="APELLIDO1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_APELLIDO2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="APELLIDO2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_APELLIDO2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="APELLIDO2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DNI" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DNI" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_DNI" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DNI" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CONOCIO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CONOCIO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_CONOCIO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CONOCIO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CPACIENTE" DataSetColumn="CPACIENTE" />
+              <Mapping SourceColumn="NOMBRE" DataSetColumn="NOMBRE" />
+              <Mapping SourceColumn="APELLIDO1" DataSetColumn="APELLIDO1" />
+              <Mapping SourceColumn="APELLIDO2" DataSetColumn="APELLIDO2" />
+              <Mapping SourceColumn="DNI" DataSetColumn="DNI" />
+              <Mapping SourceColumn="FechaIngreso" DataSetColumn="FechaIngreso" />
+              <Mapping SourceColumn="CONOCIO" DataSetColumn="CONOCIO" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1384,7 +1459,7 @@ ORDER BY SUBSTRING(CAST(CAST(FECHAALTA as DATE) AS varchar),0,8) ASC</CommandTex
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PacientesBonos" msprop:Generator_TableClassName="PacientesBonosDataTable" msprop:Generator_TableVarName="tablePacientesBonos" msprop:Generator_TablePropName="PacientesBonos" msprop:Generator_RowDeletingName="PacientesBonosRowDeleting" msprop:Generator_RowChangingName="PacientesBonosRowChanging" msprop:Generator_RowEvHandlerName="PacientesBonosRowChangeEventHandler" msprop:Generator_RowDeletedName="PacientesBonosRowDeleted" msprop:Generator_UserTableName="PacientesBonos" msprop:Generator_RowChangedName="PacientesBonosRowChanged" msprop:Generator_RowEvArgName="PacientesBonosRowChangeEvent" msprop:Generator_RowClassName="PacientesBonosRow">
+        <xs:element name="PacientesBonos" msprop:Generator_TableClassName="PacientesBonosDataTable" msprop:Generator_TableVarName="tablePacientesBonos" msprop:Generator_RowChangedName="PacientesBonosRowChanged" msprop:Generator_TablePropName="PacientesBonos" msprop:Generator_RowDeletingName="PacientesBonosRowDeleting" msprop:Generator_RowChangingName="PacientesBonosRowChanging" msprop:Generator_RowEvHandlerName="PacientesBonosRowChangeEventHandler" msprop:Generator_RowDeletedName="PacientesBonosRowDeleted" msprop:Generator_RowClassName="PacientesBonosRow" msprop:Generator_UserTableName="PacientesBonos" msprop:Generator_RowEvArgName="PacientesBonosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_UserColumnName="NOMBRE" minOccurs="0">
@@ -1421,7 +1496,7 @@ ORDER BY SUBSTRING(CAST(CAST(FECHAALTA as DATE) AS varchar),0,8) ASC</CommandTex
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="EspecialidadCitas" msprop:Generator_TableClassName="EspecialidadCitasDataTable" msprop:Generator_TableVarName="tableEspecialidadCitas" msprop:Generator_RowChangedName="EspecialidadCitasRowChanged" msprop:Generator_TablePropName="EspecialidadCitas" msprop:Generator_RowDeletingName="EspecialidadCitasRowDeleting" msprop:Generator_RowChangingName="EspecialidadCitasRowChanging" msprop:Generator_RowEvHandlerName="EspecialidadCitasRowChangeEventHandler" msprop:Generator_RowDeletedName="EspecialidadCitasRowDeleted" msprop:Generator_RowClassName="EspecialidadCitasRow" msprop:Generator_UserTableName="EspecialidadCitas" msprop:Generator_RowEvArgName="EspecialidadCitasRowChangeEvent">
+        <xs:element name="EspecialidadCitas" msprop:Generator_TableClassName="EspecialidadCitasDataTable" msprop:Generator_TableVarName="tableEspecialidadCitas" msprop:Generator_TablePropName="EspecialidadCitas" msprop:Generator_RowDeletingName="EspecialidadCitasRowDeleting" msprop:Generator_RowChangingName="EspecialidadCitasRowChanging" msprop:Generator_RowEvHandlerName="EspecialidadCitasRowChangeEventHandler" msprop:Generator_RowDeletedName="EspecialidadCitasRowDeleted" msprop:Generator_UserTableName="EspecialidadCitas" msprop:Generator_RowChangedName="EspecialidadCitasRowChanged" msprop:Generator_RowEvArgName="EspecialidadCitasRowChangeEvent" msprop:Generator_RowClassName="EspecialidadCitasRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FECHA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" minOccurs="0">
@@ -1442,7 +1517,7 @@ ORDER BY SUBSTRING(CAST(CAST(FECHAALTA as DATE) AS varchar),0,8) ASC</CommandTex
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Top10_Tratamiento" msprop:Generator_TableClassName="Top10_TratamientoDataTable" msprop:Generator_TableVarName="tableTop10_Tratamiento" msprop:Generator_RowChangedName="Top10_TratamientoRowChanged" msprop:Generator_TablePropName="Top10_Tratamiento" msprop:Generator_RowDeletingName="Top10_TratamientoRowDeleting" msprop:Generator_RowChangingName="Top10_TratamientoRowChanging" msprop:Generator_RowEvHandlerName="Top10_TratamientoRowChangeEventHandler" msprop:Generator_RowDeletedName="Top10_TratamientoRowDeleted" msprop:Generator_RowClassName="Top10_TratamientoRow" msprop:Generator_UserTableName="Top10_Tratamiento" msprop:Generator_RowEvArgName="Top10_TratamientoRowChangeEvent">
+        <xs:element name="Top10_Tratamiento" msprop:Generator_TableClassName="Top10_TratamientoDataTable" msprop:Generator_TableVarName="tableTop10_Tratamiento" msprop:Generator_TablePropName="Top10_Tratamiento" msprop:Generator_RowDeletingName="Top10_TratamientoRowDeleting" msprop:Generator_RowChangingName="Top10_TratamientoRowChanging" msprop:Generator_RowEvHandlerName="Top10_TratamientoRowChangeEventHandler" msprop:Generator_RowDeletedName="Top10_TratamientoRowDeleted" msprop:Generator_UserTableName="Top10_Tratamiento" msprop:Generator_RowChangedName="Top10_TratamientoRowChanged" msprop:Generator_RowEvArgName="Top10_TratamientoRowChangeEvent" msprop:Generator_RowClassName="Top10_TratamientoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FECHA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" minOccurs="0">
@@ -1463,7 +1538,7 @@ ORDER BY SUBSTRING(CAST(CAST(FECHAALTA as DATE) AS varchar),0,8) ASC</CommandTex
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="EstadistDental" msprop:Generator_TableClassName="EstadistDentalDataTable" msprop:Generator_TableVarName="tableEstadistDental" msprop:Generator_TablePropName="EstadistDental" msprop:Generator_RowDeletingName="EstadistDentalRowDeleting" msprop:Generator_RowChangingName="EstadistDentalRowChanging" msprop:Generator_RowEvHandlerName="EstadistDentalRowChangeEventHandler" msprop:Generator_RowDeletedName="EstadistDentalRowDeleted" msprop:Generator_UserTableName="EstadistDental" msprop:Generator_RowChangedName="EstadistDentalRowChanged" msprop:Generator_RowEvArgName="EstadistDentalRowChangeEvent" msprop:Generator_RowClassName="EstadistDentalRow">
+        <xs:element name="EstadistDental" msprop:Generator_TableClassName="EstadistDentalDataTable" msprop:Generator_TableVarName="tableEstadistDental" msprop:Generator_RowChangedName="EstadistDentalRowChanged" msprop:Generator_TablePropName="EstadistDental" msprop:Generator_RowDeletingName="EstadistDentalRowDeleting" msprop:Generator_RowChangingName="EstadistDentalRowChanging" msprop:Generator_RowEvHandlerName="EstadistDentalRowChangeEventHandler" msprop:Generator_RowDeletedName="EstadistDentalRowDeleted" msprop:Generator_RowClassName="EstadistDentalRow" msprop:Generator_UserTableName="EstadistDental" msprop:Generator_RowEvArgName="EstadistDentalRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FECHA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" minOccurs="0">
@@ -1478,7 +1553,7 @@ ORDER BY SUBSTRING(CAST(CAST(FECHAALTA as DATE) AS varchar),0,8) ASC</CommandTex
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PacienteAnalitica" msprop:Generator_TableClassName="PacienteAnaliticaDataTable" msprop:Generator_TableVarName="tablePacienteAnalitica" msprop:Generator_RowChangedName="PacienteAnaliticaRowChanged" msprop:Generator_TablePropName="PacienteAnalitica" msprop:Generator_RowDeletingName="PacienteAnaliticaRowDeleting" msprop:Generator_RowChangingName="PacienteAnaliticaRowChanging" msprop:Generator_RowEvHandlerName="PacienteAnaliticaRowChangeEventHandler" msprop:Generator_RowDeletedName="PacienteAnaliticaRowDeleted" msprop:Generator_RowClassName="PacienteAnaliticaRow" msprop:Generator_UserTableName="PacienteAnalitica" msprop:Generator_RowEvArgName="PacienteAnaliticaRowChangeEvent">
+        <xs:element name="PacienteAnalitica" msprop:Generator_TableClassName="PacienteAnaliticaDataTable" msprop:Generator_TableVarName="tablePacienteAnalitica" msprop:Generator_TablePropName="PacienteAnalitica" msprop:Generator_RowDeletingName="PacienteAnaliticaRowDeleting" msprop:Generator_RowChangingName="PacienteAnaliticaRowChanging" msprop:Generator_RowEvHandlerName="PacienteAnaliticaRowChangeEventHandler" msprop:Generator_RowDeletedName="PacienteAnaliticaRowDeleted" msprop:Generator_UserTableName="PacienteAnalitica" msprop:Generator_RowChangedName="PacienteAnaliticaRowChanged" msprop:Generator_RowEvArgName="PacienteAnaliticaRowChangeEvent" msprop:Generator_RowClassName="PacienteAnaliticaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -1515,7 +1590,7 @@ ORDER BY SUBSTRING(CAST(CAST(FECHAALTA as DATE) AS varchar),0,8) ASC</CommandTex
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="MedicoCitas" msprop:Generator_TableClassName="MedicoCitasDataTable" msprop:Generator_TableVarName="tableMedicoCitas" msprop:Generator_TablePropName="MedicoCitas" msprop:Generator_RowDeletingName="MedicoCitasRowDeleting" msprop:Generator_RowChangingName="MedicoCitasRowChanging" msprop:Generator_RowEvHandlerName="MedicoCitasRowChangeEventHandler" msprop:Generator_RowDeletedName="MedicoCitasRowDeleted" msprop:Generator_UserTableName="MedicoCitas" msprop:Generator_RowChangedName="MedicoCitasRowChanged" msprop:Generator_RowEvArgName="MedicoCitasRowChangeEvent" msprop:Generator_RowClassName="MedicoCitasRow">
+        <xs:element name="MedicoCitas" msprop:Generator_TableClassName="MedicoCitasDataTable" msprop:Generator_TableVarName="tableMedicoCitas" msprop:Generator_RowChangedName="MedicoCitasRowChanged" msprop:Generator_TablePropName="MedicoCitas" msprop:Generator_RowDeletingName="MedicoCitasRowDeleting" msprop:Generator_RowChangingName="MedicoCitasRowChanging" msprop:Generator_RowEvHandlerName="MedicoCitasRowChangeEventHandler" msprop:Generator_RowDeletedName="MedicoCitasRowDeleted" msprop:Generator_RowClassName="MedicoCitasRow" msprop:Generator_UserTableName="MedicoCitas" msprop:Generator_RowEvArgName="MedicoCitasRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FECHA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" minOccurs="0">
@@ -1543,7 +1618,7 @@ ORDER BY SUBSTRING(CAST(CAST(FECHAALTA as DATE) AS varchar),0,8) ASC</CommandTex
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Grafic1" msprop:Generator_TableClassName="Grafic1DataTable" msprop:Generator_TableVarName="tableGrafic1" msprop:Generator_RowChangedName="Grafic1RowChanged" msprop:Generator_TablePropName="Grafic1" msprop:Generator_RowDeletingName="Grafic1RowDeleting" msprop:Generator_RowChangingName="Grafic1RowChanging" msprop:Generator_RowEvHandlerName="Grafic1RowChangeEventHandler" msprop:Generator_RowDeletedName="Grafic1RowDeleted" msprop:Generator_RowClassName="Grafic1Row" msprop:Generator_UserTableName="Grafic1" msprop:Generator_RowEvArgName="Grafic1RowChangeEvent">
+        <xs:element name="Grafic1" msprop:Generator_TableClassName="Grafic1DataTable" msprop:Generator_TableVarName="tableGrafic1" msprop:Generator_TablePropName="Grafic1" msprop:Generator_RowDeletingName="Grafic1RowDeleting" msprop:Generator_RowChangingName="Grafic1RowChanging" msprop:Generator_RowEvHandlerName="Grafic1RowChangeEventHandler" msprop:Generator_RowDeletedName="Grafic1RowDeleted" msprop:Generator_UserTableName="Grafic1" msprop:Generator_RowChangedName="Grafic1RowChanged" msprop:Generator_RowEvArgName="Grafic1RowChangeEvent" msprop:Generator_RowClassName="Grafic1Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CONFIRMADA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCONFIRMADA" msprop:Generator_ColumnPropNameInRow="CONFIRMADA" msprop:Generator_ColumnPropNameInTable="CONFIRMADAColumn" msprop:Generator_UserColumnName="CONFIRMADA" type="xs:int" minOccurs="0" />
@@ -1554,7 +1629,7 @@ ORDER BY SUBSTRING(CAST(CAST(FECHAALTA as DATE) AS varchar),0,8) ASC</CommandTex
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PacientesAlta" msprop:Generator_TableClassName="PacientesAltaDataTable" msprop:Generator_TableVarName="tablePacientesAlta" msprop:Generator_TablePropName="PacientesAlta" msprop:Generator_RowDeletingName="PacientesAltaRowDeleting" msprop:Generator_RowChangingName="PacientesAltaRowChanging" msprop:Generator_RowEvHandlerName="PacientesAltaRowChangeEventHandler" msprop:Generator_RowDeletedName="PacientesAltaRowDeleted" msprop:Generator_UserTableName="PacientesAlta" msprop:Generator_RowChangedName="PacientesAltaRowChanged" msprop:Generator_RowEvArgName="PacientesAltaRowChangeEvent" msprop:Generator_RowClassName="PacientesAltaRow">
+        <xs:element name="PacientesAlta" msprop:Generator_TableClassName="PacientesAltaDataTable" msprop:Generator_TableVarName="tablePacientesAlta" msprop:Generator_RowChangedName="PacientesAltaRowChanged" msprop:Generator_TablePropName="PacientesAlta" msprop:Generator_RowDeletingName="PacientesAltaRowDeleting" msprop:Generator_RowChangingName="PacientesAltaRowChanging" msprop:Generator_RowEvHandlerName="PacientesAltaRowChangeEventHandler" msprop:Generator_RowDeletedName="PacientesAltaRowDeleted" msprop:Generator_RowClassName="PacientesAltaRow" msprop:Generator_UserTableName="PacientesAlta" msprop:Generator_RowEvArgName="PacientesAltaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FECHA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" minOccurs="0">
@@ -1610,7 +1685,7 @@ ORDER BY SUBSTRING(CAST(CAST(FECHAALTA as DATE) AS varchar),0,8) ASC</CommandTex
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CitasDiarias" msprop:Generator_TableClassName="CitasDiariasDataTable" msprop:Generator_TableVarName="tableCitasDiarias" msprop:Generator_RowChangedName="CitasDiariasRowChanged" msprop:Generator_TablePropName="CitasDiarias" msprop:Generator_RowDeletingName="CitasDiariasRowDeleting" msprop:Generator_RowChangingName="CitasDiariasRowChanging" msprop:Generator_RowEvHandlerName="CitasDiariasRowChangeEventHandler" msprop:Generator_RowDeletedName="CitasDiariasRowDeleted" msprop:Generator_RowClassName="CitasDiariasRow" msprop:Generator_UserTableName="CitasDiarias" msprop:Generator_RowEvArgName="CitasDiariasRowChangeEvent">
+        <xs:element name="CitasDiarias" msprop:Generator_TableClassName="CitasDiariasDataTable" msprop:Generator_TableVarName="tableCitasDiarias" msprop:Generator_TablePropName="CitasDiarias" msprop:Generator_RowDeletingName="CitasDiariasRowDeleting" msprop:Generator_RowChangingName="CitasDiariasRowChanging" msprop:Generator_RowEvHandlerName="CitasDiariasRowChangeEventHandler" msprop:Generator_RowDeletedName="CitasDiariasRowDeleted" msprop:Generator_UserTableName="CitasDiarias" msprop:Generator_RowChangedName="CitasDiariasRowChanged" msprop:Generator_RowEvArgName="CitasDiariasRowChangeEvent" msprop:Generator_RowClassName="CitasDiariasRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="HORARIO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnHORARIO" msprop:Generator_ColumnPropNameInRow="HORARIO" msprop:Generator_ColumnPropNameInTable="HORARIOColumn" msprop:Generator_UserColumnName="HORARIO" minOccurs="0">
@@ -1672,7 +1747,7 @@ ORDER BY SUBSTRING(CAST(CAST(FECHAALTA as DATE) AS varchar),0,8) ASC</CommandTex
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Grafic2" msprop:Generator_TableClassName="Grafic2DataTable" msprop:Generator_TableVarName="tableGrafic2" msprop:Generator_TablePropName="Grafic2" msprop:Generator_RowDeletingName="Grafic2RowDeleting" msprop:Generator_RowChangingName="Grafic2RowChanging" msprop:Generator_RowEvHandlerName="Grafic2RowChangeEventHandler" msprop:Generator_RowDeletedName="Grafic2RowDeleted" msprop:Generator_UserTableName="Grafic2" msprop:Generator_RowChangedName="Grafic2RowChanged" msprop:Generator_RowEvArgName="Grafic2RowChangeEvent" msprop:Generator_RowClassName="Grafic2Row">
+        <xs:element name="Grafic2" msprop:Generator_TableClassName="Grafic2DataTable" msprop:Generator_TableVarName="tableGrafic2" msprop:Generator_RowChangedName="Grafic2RowChanged" msprop:Generator_TablePropName="Grafic2" msprop:Generator_RowDeletingName="Grafic2RowDeleting" msprop:Generator_RowChangingName="Grafic2RowChanging" msprop:Generator_RowEvHandlerName="Grafic2RowChangeEventHandler" msprop:Generator_RowDeletedName="Grafic2RowDeleted" msprop:Generator_RowClassName="Grafic2Row" msprop:Generator_UserTableName="Grafic2" msprop:Generator_RowEvArgName="Grafic2RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Meses" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMeses" msprop:Generator_ColumnPropNameInRow="Meses" msprop:Generator_ColumnPropNameInTable="MesesColumn" msprop:Generator_UserColumnName="Meses" minOccurs="0">
@@ -1687,6 +1762,55 @@ ORDER BY SUBSTRING(CAST(CAST(FECHAALTA as DATE) AS varchar),0,8) ASC</CommandTex
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PACIENTESCONOCIO" msprop:Generator_TableClassName="PACIENTESCONOCIODataTable" msprop:Generator_TableVarName="tablePACIENTESCONOCIO" msprop:Generator_TablePropName="PACIENTESCONOCIO" msprop:Generator_RowDeletingName="PACIENTESCONOCIORowDeleting" msprop:Generator_RowChangingName="PACIENTESCONOCIORowChanging" msprop:Generator_RowEvHandlerName="PACIENTESCONOCIORowChangeEventHandler" msprop:Generator_RowDeletedName="PACIENTESCONOCIORowDeleted" msprop:Generator_UserTableName="PACIENTESCONOCIO" msprop:Generator_RowChangedName="PACIENTESCONOCIORowChanged" msprop:Generator_RowEvArgName="PACIENTESCONOCIORowChangeEvent" msprop:Generator_RowClassName="PACIENTESCONOCIORow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CPACIENTE" msprop:Generator_ColumnVarNameInTable="columnCPACIENTE" msprop:Generator_ColumnPropNameInRow="CPACIENTE" msprop:Generator_ColumnPropNameInTable="CPACIENTEColumn" msprop:Generator_UserColumnName="CPACIENTE" type="xs:int" />
+              <xs:element name="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_UserColumnName="NOMBRE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="APELLIDO1" msprop:Generator_ColumnVarNameInTable="columnAPELLIDO1" msprop:Generator_ColumnPropNameInRow="APELLIDO1" msprop:Generator_ColumnPropNameInTable="APELLIDO1Column" msprop:Generator_UserColumnName="APELLIDO1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="APELLIDO2" msprop:Generator_ColumnVarNameInTable="columnAPELLIDO2" msprop:Generator_ColumnPropNameInRow="APELLIDO2" msprop:Generator_ColumnPropNameInTable="APELLIDO2Column" msprop:Generator_UserColumnName="APELLIDO2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DNI" msprop:Generator_ColumnVarNameInTable="columnDNI" msprop:Generator_ColumnPropNameInRow="DNI" msprop:Generator_ColumnPropNameInTable="DNIColumn" msprop:Generator_UserColumnName="DNI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FechaIngreso" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFechaIngreso" msprop:Generator_ColumnPropNameInRow="FechaIngreso" msprop:Generator_ColumnPropNameInTable="FechaIngresoColumn" msprop:Generator_UserColumnName="FechaIngreso" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CONOCIO" msprop:Generator_ColumnVarNameInTable="columnCONOCIO" msprop:Generator_ColumnPropNameInRow="CONOCIO" msprop:Generator_ColumnPropNameInTable="CONOCIOColumn" msprop:Generator_UserColumnName="CONOCIO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -1715,10 +1839,15 @@ ORDER BY SUBSTRING(CAST(CAST(FECHAALTA as DATE) AS varchar),0,8) ASC</CommandTex
       <xs:selector xpath=".//mstns:PacientesAlta" />
       <xs:field xpath="mstns:CPACIENTE" />
     </xs:unique>
+    <xs:unique name="PACIENTESCONOCIO_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PACIENTESCONOCIO" />
+      <xs:field xpath="mstns:CPACIENTE" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_N_Ticket_N_Pacientes" msdata:parent="PacientesAlta" msdata:child="N_TicketAux" msdata:parentkey="CPACIENTE" msdata:childkey="ID_Cliente" msprop:Generator_UserChildTable="N_TicketAux" msprop:Generator_ChildPropName="GetN_TicketAuxRows" msprop:Generator_UserRelationName="FK_N_Ticket_N_Pacientes" msprop:Generator_RelationVarName="relationFK_N_Ticket_N_Pacientes" msprop:Generator_UserParentTable="PacientesAlta" msprop:Generator_ParentPropName="PacientesAltaRow" />
+      <msdata:Relationship name="FK_N_Ticket_N_Pacientes" msdata:parent="PacientesAlta" msdata:child="N_TicketAux" msdata:parentkey="CPACIENTE" msdata:childkey="ID_Cliente" msprop:Generator_UserChildTable="N_TicketAux" msprop:Generator_ChildPropName="GetN_TicketAuxRows" msprop:Generator_UserRelationName="FK_N_Ticket_N_Pacientes" msprop:Generator_ParentPropName="PacientesAltaRow" msprop:Generator_RelationVarName="relationFK_N_Ticket_N_Pacientes" msprop:Generator_UserParentTable="PacientesAlta" />
+      <msdata:Relationship name="FK_N_Ticket_N_Pacientes1" msdata:parent="PACIENTESCONOCIO" msdata:child="N_TicketAux" msdata:parentkey="CPACIENTE" msdata:childkey="ID_Cliente" msprop:Generator_UserChildTable="N_TicketAux" msprop:Generator_ChildPropName="GetN_TicketAuxRows" msprop:Generator_UserRelationName="FK_N_Ticket_N_Pacientes1" msprop:Generator_RelationVarName="relationFK_N_Ticket_N_Pacientes1" msprop:Generator_UserParentTable="PACIENTESCONOCIO" msprop:Generator_ParentPropName="PACIENTESCONOCIORow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

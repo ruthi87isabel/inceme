@@ -72,6 +72,7 @@ Public Class frmPaciente_Editar
         Else
             pac.ACTIVO = "N"
         End If
+
         If ChequeaDatosDuplicados() = True Then
             Dim res As MsgBoxResult = MsgBox("Se han encontrado coincidencias con los pacientes mostrados anteriormente, ¿Desea seguir guardando?", MsgBoxStyle.YesNo)
             If res = MsgBoxResult.No Then Exit Function

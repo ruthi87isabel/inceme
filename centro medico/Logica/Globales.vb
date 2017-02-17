@@ -2339,9 +2339,11 @@ Public Class Globales
             Dim con As New CMLinqDataContext()
 
             Dim citassalas As List(Of CITA) = (From c In con.CITAs
-                                              Where ((c.HORA >= fInicio And c.HORA < fFinal) _
+                                              Where (((c.HORA >= fInicio And c.HORA < fFinal) _
                                               Or (c.HORAFIN > fInicio And c.HORAFIN <= fFinal)) _
-                                              And c.ID_SALA = ID_Sala And c.Eliminado = False
+                                              Or (c.HORA <= fInicio And c.HORAFIN >= fFinal)) _
+                                              And c.Eliminado = False _
+                                              And c.ID_SALA = ID_Sala _
                                               Select c).ToList()
             Return (citassalas.Count = 0)
 
@@ -2359,11 +2361,14 @@ Public Class Globales
         Dim con As New CMLinqDataContext()
 
         Dim citassalas As List(Of CITA) = (From c In con.CITAs
-                                          Where ((c.HORA >= fInicio And c.HORA < fFinal) _
+                                          Where (((c.HORA >= fInicio And c.HORA < fFinal) _
                                           Or (c.HORAFIN > fInicio And c.HORAFIN <= fFinal)) _
+                                          Or (c.HORA <= fInicio And c.HORAFIN >= fFinal)) _
+                                          And c.Eliminado = False _
                                           And c.ID_SALA = ID_Sala _
                                           And c.IDCITA <> ID_Cita_a_Excluir
                                           Select c).ToList()
+
         Return (citassalas.Count = 0)
 
 

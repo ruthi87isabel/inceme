@@ -255,6 +255,12 @@
     <Compile Include="controles\ctrlVisorDefaultApp.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="formularios\formas de paciente\form_pac_como_nos_conocio.designer.vb">
+      <DependentUpon>form_pac_como_nos_conocio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\formas de paciente\form_pac_como_nos_conocio.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="formularios\form_bonos_no_agotados.designer.vb">
       <DependentUpon>form_bonos_no_agotados.vb</DependentUpon>
     </Compile>
@@ -2638,6 +2644,9 @@
     <EmbeddedResource Include="controles\ctrlVisorDefaultApp.resx">
       <DependentUpon>ctrlVisorDefaultApp.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formularios\formas de paciente\form_pac_como_nos_conocio.resx">
+      <DependentUpon>form_pac_como_nos_conocio.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\formas reportes\form_mostrar_reporte_alarmas.resx">
       <DependentUpon>form_mostrar_reporte_alarmas.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -3005,6 +3014,9 @@
     <Content Include="RDLC\custom\vistalegre\Factura.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="RDLC\default\PacientesComoNosConocio.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="RDLC\default\PacientesBonosNoAgotados.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>

@@ -114,6 +114,7 @@ Public Class formPaciente
             _newRow.CPACIENTE() = Math.Max(_maxDS, _maxBD)
 
             _newRow.REFPAIS() = 1
+            _newRow.Eliminado = False
 
             'inicializamos del valor de la fecha de ingreso.
             _newRow.FECHAALTA = Now.Date
