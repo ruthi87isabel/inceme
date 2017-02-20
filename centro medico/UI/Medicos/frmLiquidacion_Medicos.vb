@@ -134,7 +134,7 @@ Public Class frmLiquidacion_Medicos
         If Me.IsHandleCreated Then
             Me.BeginInvoke(New InvokeDelegate(AddressOf ShowData))
         End If
-     End Sub
+    End Sub
 #End Region
 
     Private Sub ShowData()
@@ -327,7 +327,7 @@ Public Class frmLiquidacion_Medicos
                                                                 cita.REFPACIENTE, _
                                                                 cita.PACIENTE) & vbCrLf
                         End If
-                        
+
                     End If
                 End If
             Next
@@ -400,8 +400,8 @@ Public Class frmLiquidacion_Medicos
         End If
 
 
-                context.SubmitChanges()
-                CargaDatos()
+        context.SubmitChanges()
+        CargaDatos()
     End Sub
 
     Private Sub btnPagoAutomatico_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPagoAutomatico.Click

@@ -127,6 +127,8 @@
 
 End Class
 Partial Class CITA
+    Dim ldcontext As CMLinqDataContext = New CMLinqDataContext
+
     Public ReadOnly Property DrImporteConDtoSum As Double
         Get
             Dim res As Double = 0
@@ -146,7 +148,22 @@ Partial Class CITA
             Globales.AuditoriaInfo.Registra(Globales.AuditoriaInfo.Accion.Borrar, RoleManager.Items.Bonos, "Bonos/Sesiones", sesion.id, "Borrada sesión al eliminar la cita del " & cita.HORA & " del paciente " & cita.PACIENTE)
         End If
     End Sub
+
+    Public ReadOnly Property BONOCITA As String
+        Get
+            Dim sesion As Sesiones = (From a As Sesiones In ldcontext.Sesiones Where a.refcita = Me.IDCITA Select a).SingleOrDefault
+            Return ("Bono " & sesion.Bonos.Notas & " nº " & sesion.refbono).Trim()
+        End Get
+    End Property
+
+    Public ReadOnly Property DESCRIPCIONPACIENTE As String
+        Get
+            Return ("[" & Me.REFPACIENTE & "] " & Me.PACIENTE).Trim()
+        End Get
+    End Property
+
 End Class
+
 Partial Class LineasCita
     Public ReadOnly Property DtoImporte As Double
         Get
@@ -167,5 +184,5 @@ Partial Class LineasCita
         End Get
     End Property
 
- 
+
 End Class
