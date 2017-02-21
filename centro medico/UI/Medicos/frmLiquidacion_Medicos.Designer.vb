@@ -36,6 +36,7 @@ Partial Class frmLiquidacion_Medicos
         Me.rb_cobradas = New System.Windows.Forms.RadioButton()
         Me.rb_todascobrar = New System.Windows.Forms.RadioButton()
         Me.btnFiltrar = New System.Windows.Forms.Button()
+        Me.CtrlMedico1 = New centro_medico.ctrlMedico()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.lblSeleccionados = New System.Windows.Forms.Label()
         Me.lblDebe = New System.Windows.Forms.Label()
@@ -57,7 +58,6 @@ Partial Class frmLiquidacion_Medicos
         Me.pnl_Loading = New System.Windows.Forms.Panel()
         Me.lbl_Loading = New System.Windows.Forms.Label()
         Me.pb_Loading = New System.Windows.Forms.PictureBox()
-        Me.CtrlMedico1 = New centro_medico.ctrlMedico()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -77,7 +77,7 @@ Partial Class frmLiquidacion_Medicos
         Me.btnPagoAutomatico.Image = Global.centro_medico.My.Resources.Resources.euro16x16
         Me.btnPagoAutomatico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnPagoAutomatico.Location = New System.Drawing.Point(239, 169)
-        Me.btnPagoAutomatico.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnPagoAutomatico.Margin = New System.Windows.Forms.Padding(4)
         Me.btnPagoAutomatico.Name = "btnPagoAutomatico"
         Me.btnPagoAutomatico.Size = New System.Drawing.Size(153, 30)
         Me.btnPagoAutomatico.TabIndex = 26
@@ -92,7 +92,7 @@ Partial Class frmLiquidacion_Medicos
         Me.btnPagar.Image = Global.centro_medico.My.Resources.Resources.euro16x16
         Me.btnPagar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnPagar.Location = New System.Drawing.Point(5, 166)
-        Me.btnPagar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnPagar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnPagar.Name = "btnPagar"
         Me.btnPagar.Size = New System.Drawing.Size(175, 32)
         Me.btnPagar.TabIndex = 25
@@ -118,9 +118,9 @@ Partial Class frmLiquidacion_Medicos
         Me.GroupBox1.Controls.Add(Me.dtp_Final)
         Me.GroupBox1.Controls.Add(Me.dtp_Inicio)
         Me.GroupBox1.Location = New System.Drawing.Point(7, 33)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(1336, 126)
         Me.GroupBox1.TabIndex = 22
         Me.GroupBox1.TabStop = False
@@ -129,7 +129,7 @@ Partial Class frmLiquidacion_Medicos
         '
         Me.chkMostrarCitasImporteCero.AutoSize = True
         Me.chkMostrarCitasImporteCero.Location = New System.Drawing.Point(488, 92)
-        Me.chkMostrarCitasImporteCero.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chkMostrarCitasImporteCero.Margin = New System.Windows.Forms.Padding(4)
         Me.chkMostrarCitasImporteCero.Name = "chkMostrarCitasImporteCero"
         Me.chkMostrarCitasImporteCero.Size = New System.Drawing.Size(174, 21)
         Me.chkMostrarCitasImporteCero.TabIndex = 119
@@ -142,9 +142,9 @@ Partial Class frmLiquidacion_Medicos
         Me.GroupBox3.Controls.Add(Me.rb_cobradas)
         Me.GroupBox3.Controls.Add(Me.rb_todascobrar)
         Me.GroupBox3.Location = New System.Drawing.Point(688, 20)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Size = New System.Drawing.Size(129, 97)
         Me.GroupBox3.TabIndex = 118
         Me.GroupBox3.TabStop = False
@@ -154,7 +154,7 @@ Partial Class frmLiquidacion_Medicos
         '
         Me.rb_sincobrar.AutoSize = True
         Me.rb_sincobrar.Location = New System.Drawing.Point(8, 70)
-        Me.rb_sincobrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rb_sincobrar.Margin = New System.Windows.Forms.Padding(4)
         Me.rb_sincobrar.Name = "rb_sincobrar"
         Me.rb_sincobrar.Size = New System.Drawing.Size(94, 21)
         Me.rb_sincobrar.TabIndex = 8
@@ -166,7 +166,7 @@ Partial Class frmLiquidacion_Medicos
         Me.rb_cobradas.AutoSize = True
         Me.rb_cobradas.Checked = True
         Me.rb_cobradas.Location = New System.Drawing.Point(8, 46)
-        Me.rb_cobradas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rb_cobradas.Margin = New System.Windows.Forms.Padding(4)
         Me.rb_cobradas.Name = "rb_cobradas"
         Me.rb_cobradas.Size = New System.Drawing.Size(90, 21)
         Me.rb_cobradas.TabIndex = 7
@@ -178,7 +178,7 @@ Partial Class frmLiquidacion_Medicos
         '
         Me.rb_todascobrar.AutoSize = True
         Me.rb_todascobrar.Location = New System.Drawing.Point(8, 20)
-        Me.rb_todascobrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rb_todascobrar.Margin = New System.Windows.Forms.Padding(4)
         Me.rb_todascobrar.Name = "rb_todascobrar"
         Me.rb_todascobrar.Size = New System.Drawing.Size(69, 21)
         Me.rb_todascobrar.TabIndex = 6
@@ -190,12 +190,21 @@ Partial Class frmLiquidacion_Medicos
         Me.btnFiltrar.Image = Global.centro_medico.My.Resources.Resources._24_zoom
         Me.btnFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnFiltrar.Location = New System.Drawing.Point(852, 41)
-        Me.btnFiltrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnFiltrar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnFiltrar.Name = "btnFiltrar"
         Me.btnFiltrar.Size = New System.Drawing.Size(124, 63)
         Me.btnFiltrar.TabIndex = 19
         Me.btnFiltrar.Text = "Filtrar"
         Me.btnFiltrar.UseVisualStyleBackColor = True
+        '
+        'CtrlMedico1
+        '
+        Me.CtrlMedico1.ID_Medico = Nothing
+        Me.CtrlMedico1.Location = New System.Drawing.Point(23, 21)
+        Me.CtrlMedico1.Margin = New System.Windows.Forms.Padding(5)
+        Me.CtrlMedico1.Name = "CtrlMedico1"
+        Me.CtrlMedico1.Size = New System.Drawing.Size(605, 52)
+        Me.CtrlMedico1.TabIndex = 18
         '
         'Label5
         '
@@ -271,7 +280,7 @@ Partial Class frmLiquidacion_Medicos
         Me.dtp_Final.Checked = False
         Me.dtp_Final.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtp_Final.Location = New System.Drawing.Point(291, 91)
-        Me.dtp_Final.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtp_Final.Margin = New System.Windows.Forms.Padding(4)
         Me.dtp_Final.Name = "dtp_Final"
         Me.dtp_Final.Size = New System.Drawing.Size(145, 22)
         Me.dtp_Final.TabIndex = 6
@@ -281,7 +290,7 @@ Partial Class frmLiquidacion_Medicos
         Me.dtp_Inicio.Checked = False
         Me.dtp_Inicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtp_Inicio.Location = New System.Drawing.Point(73, 91)
-        Me.dtp_Inicio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtp_Inicio.Margin = New System.Windows.Forms.Padding(4)
         Me.dtp_Inicio.Name = "dtp_Inicio"
         Me.dtp_Inicio.Size = New System.Drawing.Size(135, 22)
         Me.dtp_Inicio.TabIndex = 6
@@ -341,7 +350,7 @@ Partial Class frmLiquidacion_Medicos
         Me.GridEX1.GroupByBoxVisible = False
         Me.GridEX1.Hierarchical = True
         Me.GridEX1.Location = New System.Drawing.Point(775, 206)
-        Me.GridEX1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GridEX1.Margin = New System.Windows.Forms.Padding(4)
         Me.GridEX1.Name = "GridEX1"
         Me.GridEX1.Size = New System.Drawing.Size(576, 566)
         Me.GridEX1.TabIndex = 31
@@ -352,7 +361,7 @@ Partial Class frmLiquidacion_Medicos
         Me.btImprimirMedicoDebito.Image = Global.centro_medico.My.Resources.Resources.Print1
         Me.btImprimirMedicoDebito.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btImprimirMedicoDebito.Location = New System.Drawing.Point(640, 169)
-        Me.btImprimirMedicoDebito.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btImprimirMedicoDebito.Margin = New System.Windows.Forms.Padding(4)
         Me.btImprimirMedicoDebito.Name = "btImprimirMedicoDebito"
         Me.btImprimirMedicoDebito.Size = New System.Drawing.Size(108, 30)
         Me.btImprimirMedicoDebito.TabIndex = 26
@@ -383,7 +392,7 @@ Partial Class frmLiquidacion_Medicos
         Me.GridEXDocs.HeaderFormatStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Center
         Me.GridEXDocs.Hierarchical = True
         Me.GridEXDocs.Location = New System.Drawing.Point(0, 206)
-        Me.GridEXDocs.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GridEXDocs.Margin = New System.Windows.Forms.Padding(4)
         Me.GridEXDocs.Name = "GridEXDocs"
         Me.GridEXDocs.RowCheckStateBehavior = Janus.Windows.GridEX.RowCheckStateBehavior.CheckStateDependsOnChild
         Me.GridEXDocs.RowFormatStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Center
@@ -402,7 +411,7 @@ Partial Class frmLiquidacion_Medicos
         Me.pnl_Loading.Controls.Add(Me.lbl_Loading)
         Me.pnl_Loading.Controls.Add(Me.pb_Loading)
         Me.pnl_Loading.Location = New System.Drawing.Point(251, 363)
-        Me.pnl_Loading.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnl_Loading.Margin = New System.Windows.Forms.Padding(4)
         Me.pnl_Loading.Name = "pnl_Loading"
         Me.pnl_Loading.Size = New System.Drawing.Size(177, 59)
         Me.pnl_Loading.TabIndex = 134
@@ -422,20 +431,11 @@ Partial Class frmLiquidacion_Medicos
         '
         Me.pb_Loading.Image = Global.centro_medico.My.Resources.Resources.ajax_loader
         Me.pb_Loading.Location = New System.Drawing.Point(7, 6)
-        Me.pb_Loading.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pb_Loading.Margin = New System.Windows.Forms.Padding(4)
         Me.pb_Loading.Name = "pb_Loading"
         Me.pb_Loading.Size = New System.Drawing.Size(53, 43)
         Me.pb_Loading.TabIndex = 118
         Me.pb_Loading.TabStop = False
-        '
-        'CtrlMedico1
-        '
-        Me.CtrlMedico1.ID_Medico = Nothing
-        Me.CtrlMedico1.Location = New System.Drawing.Point(23, 21)
-        Me.CtrlMedico1.Margin = New System.Windows.Forms.Padding(5)
-        Me.CtrlMedico1.Name = "CtrlMedico1"
-        Me.CtrlMedico1.Size = New System.Drawing.Size(605, 52)
-        Me.CtrlMedico1.TabIndex = 18
         '
         'frmLiquidacion_Medicos
         '
@@ -451,7 +451,7 @@ Partial Class frmLiquidacion_Medicos
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.GridEXDocs)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmLiquidacion_Medicos"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

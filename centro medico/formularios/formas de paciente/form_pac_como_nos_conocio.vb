@@ -4,8 +4,10 @@ Imports Janus.Windows.GridEX
 
 Public Class form_pac_como_nos_conocio
 
-    Dim _source As CMLinqDataContext
+    Dim context As CMLinqDataContext
     Dim dView As DataView
+    Dim ListResult As List(Of String) = New List(Of String)
+
 
 
     Sub New()
@@ -13,13 +15,15 @@ Public Class form_pac_como_nos_conocio
         ' This call is required by the Windows Form Designer.
         InitializeComponent()
 
-        _source = New CMLinqDataContext()
+        context = New CMLinqDataContext()
 
     End Sub
 
     Private Sub form_conocio_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         InicializaPacientesConocio()
-        CargarComoNosConocio()
+        CargarResultados()
+        ComoConocioBindingSource.DataSource = (From c In context.ComoConocios Select c).ToList()
+
 
     End Sub
 
@@ -36,7 +40,7 @@ Public Class form_pac_como_nos_conocio
         If Not cmbConocio.CheckedItems Is Nothing Then
             If cmbConocio.CheckedItems.Length > 0 Then
                 For Each c As ComoConocio In cmbConocio.CheckedItems
-                    For Each p As PACIENTE In _source.PACIENTEs
+                    For Each p As PACIENTE In context.PACIENTEs
                         If Not p.CONOCIO Is Nothing Then
                             If p.NOMBRE.ToLower().Contains(nombre.ToLower()) And
                                 ((p.APELLIDO1 Is Nothing) Or (Not p.APELLIDO1 Is Nothing AndAlso p.APELLIDO1.ToLower().Contains(pApellido.ToLower()))) And
@@ -49,7 +53,7 @@ Public Class form_pac_como_nos_conocio
                 Next
             End If
         Else
-            For Each p As PACIENTE In _source.PACIENTEs
+            For Each p As PACIENTE In context.PACIENTEs
                 If Not p.CONOCIO Is Nothing Then
                     If p.NOMBRE.ToLower().Contains(nombre.ToLower()) And
                         ((p.APELLIDO1 Is Nothing) Or (Not p.APELLIDO1 Is Nothing AndAlso p.APELLIDO1.ToLower().Contains(pApellido.ToLower()))) And
@@ -70,20 +74,39 @@ Public Class form_pac_como_nos_conocio
             If cmbConocio.CheckedItems.Length > 0 Then
                 For Each c As ComoConocio In cmbConocio.CheckedItems
                     dTable = Me.PacientesconocioTableAdapter.GetData(nombre, If(pApellido.Length > 0, pApellido, Nothing), If(sApellido.Length > 0, sApellido, Nothing), c.Descripcion)
+                    ListResult.Add("[" & dTable.Count & "] " & c.Descripcion)
                     dTable1.Merge(dTable, True)
                 Next
             End If
         Else
-            dTable = Me.PacientesconocioTableAdapter.GetData(nombre, If(pApellido.Length > 0, pApellido, Nothing), If(sApellido.Length > 0, sApellido, Nothing), Nothing)
+            For Each a As ComoConocio In (From c In context.ComoConocios Select c).ToList()
+                dTable = Me.PacientesconocioTableAdapter.GetData(nombre, If(pApellido.Length > 0, pApellido, Nothing), If(sApellido.Length > 0, sApellido, Nothing), a.Descripcion)
+                ListResult.Add("[" & dTable.Count & "] " & a.Descripcion)
+                dTable1.Merge(dTable, True)
+            Next
         End If
         dView = dTable1.DefaultView
-        LbResultados.Text = "Resultados: " & pacientes.Count()
+        LbResultados.Text = "Total: " & pacientes.Count()
 
     End Sub
 
-    Private Sub CargarComoNosConocio()
-        Dim context As New CMLinqDataContext()
-        ComoConocioBindingSource.DataSource = (From c In context.ComoConocios Select c).ToList()
+    Private Sub CargarResultados()
+
+        ListBox1.Items.Clear()
+        ListBox2.Items.Clear()
+        Dim list1 As Integer = 0
+        If (ListResult.Count Mod 2) = 1 Then
+            list1 = (ListResult.Count + 1) / 2
+        Else
+            list1 = ListResult.Count / 2
+        End If
+        For r As Integer = 0 To ListResult.Count - 1
+            If r <= list1 - 1 Then
+                ListBox1.Items.Add(ListResult.Item(r))
+            Else
+                ListBox2.Items.Add(ListResult.Item(r))
+            End If
+        Next
     End Sub
 
     Private Sub bt_cancelar_Click(sender As Object, e As EventArgs) Handles bt_cancelar.Click
@@ -98,7 +121,9 @@ Public Class form_pac_como_nos_conocio
     End Sub
 
     Private Sub FiltrarPacientesBonos(sender As Object, e As EventArgs) Handles bt_filtrar.Click
+        If ListResult.Count > 0 Then ListResult.Clear()
         InicializaPacientesConocio()
+        CargarResultados()
     End Sub
 
 End Class

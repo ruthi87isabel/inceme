@@ -41,12 +41,16 @@ Partial Class form_pac_como_nos_conocio
         Me.GridEX1 = New Janus.Windows.GridEX.GridEX()
         Me.ListadoPacientesTableAdapter1 = New centro_medico.CM2DataSetTableAdapters.ListadoPacientesTableAdapter()
         Me.PacientesconocioTableAdapter = New centro_medico.CM2DataSetTableAdapters.PACIENTESCONOCIOTableAdapter()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ListBox2 = New System.Windows.Forms.ListBox()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.LbResultados = New System.Windows.Forms.Label()
         CType(Me.PACIENTEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CMDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpFiltrarPorNombre.SuspendLayout()
         CType(Me.ComoConocioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridEX1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'PACIENTEBindingSource
@@ -65,7 +69,7 @@ Partial Class form_pac_como_nos_conocio
         Me.bImprimir.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bImprimir.Image = Global.centro_medico.My.Resources.Resources.Print1
         Me.bImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.bImprimir.Location = New System.Drawing.Point(736, 583)
+        Me.bImprimir.Location = New System.Drawing.Point(732, 632)
         Me.bImprimir.Margin = New System.Windows.Forms.Padding(4)
         Me.bImprimir.Name = "bImprimir"
         Me.bImprimir.Size = New System.Drawing.Size(97, 37)
@@ -79,7 +83,7 @@ Partial Class form_pac_como_nos_conocio
         Me.bt_cancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bt_cancelar.Image = Global.centro_medico.My.Resources.Resources.MISC20
         Me.bt_cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.bt_cancelar.Location = New System.Drawing.Point(841, 583)
+        Me.bt_cancelar.Location = New System.Drawing.Point(837, 632)
         Me.bt_cancelar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_cancelar.Name = "bt_cancelar"
         Me.bt_cancelar.Size = New System.Drawing.Size(100, 37)
@@ -206,13 +210,16 @@ Partial Class form_pac_como_nos_conocio
         '
         'GridEX1
         '
+        Me.GridEX1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GridEX1.DataSource = Me.PACIENTEBindingSource
         GridEX1_DesignTimeLayout.LayoutString = resources.GetString("GridEX1_DesignTimeLayout.LayoutString")
         Me.GridEX1.DesignTimeLayout = GridEX1_DesignTimeLayout
-        Me.GridEX1.Location = New System.Drawing.Point(24, 127)
+        Me.GridEX1.Location = New System.Drawing.Point(24, 107)
         Me.GridEX1.Margin = New System.Windows.Forms.Padding(4)
         Me.GridEX1.Name = "GridEX1"
-        Me.GridEX1.Size = New System.Drawing.Size(917, 449)
+        Me.GridEX1.Size = New System.Drawing.Size(917, 490)
         Me.GridEX1.TabIndex = 221
         '
         'ListadoPacientesTableAdapter1
@@ -223,29 +230,66 @@ Partial Class form_pac_como_nos_conocio
         '
         Me.PacientesconocioTableAdapter.ClearBeforeFill = True
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.ListBox2)
+        Me.GroupBox1.Controls.Add(Me.ListBox1)
+        Me.GroupBox1.Controls.Add(Me.LbResultados)
+        Me.GroupBox1.Location = New System.Drawing.Point(24, 596)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(660, 85)
+        Me.GroupBox1.TabIndex = 225
+        Me.GroupBox1.TabStop = False
+        '
+        'ListBox2
+        '
+        Me.ListBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ListBox2.BackColor = System.Drawing.Color.GhostWhite
+        Me.ListBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListBox2.FormattingEnabled = True
+        Me.ListBox2.ItemHeight = 16
+        Me.ListBox2.Location = New System.Drawing.Point(297, 12)
+        Me.ListBox2.Name = "ListBox2"
+        Me.ListBox2.Size = New System.Drawing.Size(270, 64)
+        Me.ListBox2.TabIndex = 227
+        '
+        'ListBox1
+        '
+        Me.ListBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ListBox1.BackColor = System.Drawing.Color.GhostWhite
+        Me.ListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.ItemHeight = 16
+        Me.ListBox1.Location = New System.Drawing.Point(14, 12)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(270, 64)
+        Me.ListBox1.TabIndex = 226
+        '
         'LbResultados
         '
+        Me.LbResultados.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.LbResultados.AutoSize = True
-        Me.LbResultados.Location = New System.Drawing.Point(21, 593)
+        Me.LbResultados.Location = New System.Drawing.Point(569, 62)
         Me.LbResultados.Name = "LbResultados"
-        Me.LbResultados.Size = New System.Drawing.Size(83, 17)
-        Me.LbResultados.TabIndex = 222
-        Me.LbResultados.Text = "Resultados:"
+        Me.LbResultados.Size = New System.Drawing.Size(44, 17)
+        Me.LbResultados.TabIndex = 225
+        Me.LbResultados.Text = "Total:"
         '
         'form_pac_como_nos_conocio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.GhostWhite
-        Me.ClientSize = New System.Drawing.Size(965, 638)
-        Me.Controls.Add(Me.LbResultados)
+        Me.ClientSize = New System.Drawing.Size(961, 687)
         Me.Controls.Add(Me.GridEX1)
         Me.Controls.Add(Me.grpFiltrarPorNombre)
         Me.Controls.Add(Me.bImprimir)
         Me.Controls.Add(Me.bt_cancelar)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "form_pac_como_nos_conocio"
         Me.ShowIcon = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Pacientes - Comó nos conoció"
         CType(Me.PACIENTEBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CMDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -253,8 +297,9 @@ Partial Class form_pac_como_nos_conocio
         Me.grpFiltrarPorNombre.PerformLayout()
         CType(Me.ComoConocioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridEX1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents bImprimir As System.Windows.Forms.Button
@@ -273,7 +318,10 @@ Partial Class form_pac_como_nos_conocio
     Friend WithEvents txtApellido1 As System.Windows.Forms.TextBox
     Friend WithEvents ComoConocioBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents LbResultados As System.Windows.Forms.Label
     Friend WithEvents PacientesconocioTableAdapter As centro_medico.CM2DataSetTableAdapters.PACIENTESCONOCIOTableAdapter
     Friend WithEvents cmbConocio As Janus.Windows.GridEX.EditControls.CheckedComboBox
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents ListBox2 As System.Windows.Forms.ListBox
+    Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
+    Friend WithEvents LbResultados As System.Windows.Forms.Label
 End Class
