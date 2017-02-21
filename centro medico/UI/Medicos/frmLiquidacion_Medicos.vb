@@ -9,6 +9,7 @@ Public Class frmLiquidacion_Medicos
     Dim Credito As Double = 0
     Dim Debe As Double = 0
     Dim Selected As Double = 0
+    Dim formSize As Integer = 0
 
     Public CitasPagadas As New List(Of CITA)
 
@@ -50,6 +51,7 @@ Public Class frmLiquidacion_Medicos
 
     Private Sub frmLiquidacion_Medicos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'CtrlMedico1.ID_Medico = 888
+        formSize = Me.Size.Width
         If CtrlMedico1.ID_Medico.HasValue Then
             CargaDatos()
         Else
@@ -506,6 +508,17 @@ Public Class frmLiquidacion_Medicos
         CargaDatos()
     End Sub
 
+    Private Sub frmLiquidacion_Medicos_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
+        If Not formSize = 0 Then
+            Dim Gi As Integer = GridEXDocs.Width
+            Dim Gd As Integer = GridEX1.Width
+            Gi = (61 * Me.Size.Width) / 100
+            Gd = (36 * Me.Size.Width) / 100
+            GridEX1.Location = New System.Drawing.Point((Me.Size.Width - (Gd + 22)), 167)
+            GridEXDocs.Width = Gi
+            GridEX1.Width = Gd
+        End If
+    End Sub
 End Class
 
 Partial Public Class Liquidacion_Medico

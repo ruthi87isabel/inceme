@@ -36,7 +36,6 @@ Partial Class frmLiquidacion_Medicos
         Me.rb_cobradas = New System.Windows.Forms.RadioButton()
         Me.rb_todascobrar = New System.Windows.Forms.RadioButton()
         Me.btnFiltrar = New System.Windows.Forms.Button()
-        Me.CtrlMedico1 = New centro_medico.ctrlMedico()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.lblSeleccionados = New System.Windows.Forms.Label()
         Me.lblDebe = New System.Windows.Forms.Label()
@@ -58,6 +57,7 @@ Partial Class frmLiquidacion_Medicos
         Me.pnl_Loading = New System.Windows.Forms.Panel()
         Me.lbl_Loading = New System.Windows.Forms.Label()
         Me.pb_Loading = New System.Windows.Forms.PictureBox()
+        Me.CtrlMedico1 = New centro_medico.ctrlMedico()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -196,15 +196,6 @@ Partial Class frmLiquidacion_Medicos
         Me.btnFiltrar.TabIndex = 19
         Me.btnFiltrar.Text = "Filtrar"
         Me.btnFiltrar.UseVisualStyleBackColor = True
-        '
-        'CtrlMedico1
-        '
-        Me.CtrlMedico1.ID_Medico = Nothing
-        Me.CtrlMedico1.Location = New System.Drawing.Point(23, 21)
-        Me.CtrlMedico1.Margin = New System.Windows.Forms.Padding(5)
-        Me.CtrlMedico1.Name = "CtrlMedico1"
-        Me.CtrlMedico1.Size = New System.Drawing.Size(605, 52)
-        Me.CtrlMedico1.TabIndex = 18
         '
         'Label5
         '
@@ -349,10 +340,10 @@ Partial Class frmLiquidacion_Medicos
         Me.GridEX1.DesignTimeLayout = GridEX1_DesignTimeLayout
         Me.GridEX1.GroupByBoxVisible = False
         Me.GridEX1.Hierarchical = True
-        Me.GridEX1.Location = New System.Drawing.Point(775, 206)
+        Me.GridEX1.Location = New System.Drawing.Point(848, 206)
         Me.GridEX1.Margin = New System.Windows.Forms.Padding(4)
         Me.GridEX1.Name = "GridEX1"
-        Me.GridEX1.Size = New System.Drawing.Size(576, 566)
+        Me.GridEX1.Size = New System.Drawing.Size(495, 566)
         Me.GridEX1.TabIndex = 31
         '
         'btImprimirMedicoDebito
@@ -391,12 +382,12 @@ Partial Class frmLiquidacion_Medicos
         Me.GridEXDocs.GroupTotals = Janus.Windows.GridEX.GroupTotals.Always
         Me.GridEXDocs.HeaderFormatStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Center
         Me.GridEXDocs.Hierarchical = True
-        Me.GridEXDocs.Location = New System.Drawing.Point(0, 206)
+        Me.GridEXDocs.Location = New System.Drawing.Point(5, 206)
         Me.GridEXDocs.Margin = New System.Windows.Forms.Padding(4)
         Me.GridEXDocs.Name = "GridEXDocs"
         Me.GridEXDocs.RowCheckStateBehavior = Janus.Windows.GridEX.RowCheckStateBehavior.CheckStateDependsOnChild
         Me.GridEXDocs.RowFormatStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Center
-        Me.GridEXDocs.Size = New System.Drawing.Size(767, 566)
+        Me.GridEXDocs.Size = New System.Drawing.Size(835, 566)
         Me.GridEXDocs.TabIndex = 21
         Me.GridEXDocs.TableHeaderFormatStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Near
         Me.GridEXDocs.TotalRowFormatStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
@@ -436,6 +427,15 @@ Partial Class frmLiquidacion_Medicos
         Me.pb_Loading.Size = New System.Drawing.Size(53, 43)
         Me.pb_Loading.TabIndex = 118
         Me.pb_Loading.TabStop = False
+        '
+        'CtrlMedico1
+        '
+        Me.CtrlMedico1.ID_Medico = Nothing
+        Me.CtrlMedico1.Location = New System.Drawing.Point(23, 21)
+        Me.CtrlMedico1.Margin = New System.Windows.Forms.Padding(5)
+        Me.CtrlMedico1.Name = "CtrlMedico1"
+        Me.CtrlMedico1.Size = New System.Drawing.Size(605, 52)
+        Me.CtrlMedico1.TabIndex = 18
         '
         'frmLiquidacion_Medicos
         '
