@@ -75,7 +75,11 @@ Public Class frmPaciente_Editar
 
         If ChequeaDatosDuplicados() = True Then
             Dim res As MsgBoxResult = MsgBox("Se han encontrado coincidencias con los pacientes mostrados anteriormente, ¿Desea seguir guardando?", MsgBoxStyle.YesNo)
-            If res = MsgBoxResult.No Then Exit Function
+            If res = MsgBoxResult.No Then
+                Exit Function
+            Else
+                DescartarPaciente(IDPACIENTE, )
+            End If
         End If
 
         pac.CONOCIO = Me.cb_comoconocio.SelectedItem

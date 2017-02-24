@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Siesta" Class="CMLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=Siesta;User ID=sa" SettingsObjectName="centro_medico.My.MySettings" SettingsPropertyName="CMConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="siesta" Class="CMLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=siesta;User ID=sa" SettingsObjectName="centro_medico.My.MySettings" SettingsPropertyName="CMConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.PACIENTES" Member="PACIENTEs">
     <Type Name="PACIENTE">
       <Column Name="NOMBRE" Type="System.String" DbType="VarChar(25)" CanBeNull="true" UpdateCheck="Never" />
@@ -80,6 +80,8 @@
       <Association Name="PACIENTE_IMAGENES" Member="IMAGENES" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="IMAGENES" />
       <Association Name="PACIENTE_PRESUPUESTOS" Member="PRESUPUESTOS" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="PRESUPUESTOS" />
       <Association Name="PACIENTE_CITA" Member="CITAs" ThisKey="CPACIENTE" OtherKey="REFPACIENTE" Type="CITA" />
+      <Association Name="PACIENTE_Descartar_Pacientes_Duplicado" Member="Descartar_Pacientes_Duplicados" ThisKey="CPACIENTE" OtherKey="Id_Paciente_Descartado" Type="Descartar_Pacientes_Duplicado" />
+      <Association Name="PACIENTE_Descartar_Pacientes_Duplicado1" Member="Descartar_Pacientes_Duplicados1" ThisKey="CPACIENTE" OtherKey="Id_Paciente_Origen" Type="Descartar_Pacientes_Duplicado" />
       <Association Name="EMPRESA_PACIENTE" Member="EMPRESA" ThisKey="REFEMPRESA" OtherKey="CEMPRESA" Type="EMPRESA" IsForeignKey="true" />
       <Association Name="FORMASPAGO_PACIENTE" Member="FORMASPAGO" ThisKey="REFFORMAPAGO" OtherKey="CODIGO" Type="FORMASPAGO" IsForeignKey="true" />
       <Association Name="MUTUA_PACIENTE" Member="MUTUA" ThisKey="REFMUTUA" OtherKey="CMUTUA" Type="MUTUA" IsForeignKey="true" />
@@ -1992,6 +1994,15 @@
       <Association Name="SALA_CITA" Member="SALA" ThisKey="ID_SALA" OtherKey="ID_SALA" Type="SALA" IsForeignKey="true" DeleteRule="SET NULL" />
       <Association Name="MEDICO_CITA" Member="MEDICO" ThisKey="REFMEDICO" OtherKey="CMEDICO" Type="MEDICO" IsForeignKey="true" DeleteRule="CASCADE" />
       <Association Name="MUTUA_CITA" Member="MUTUA" ThisKey="REFPROCEDENCIA" OtherKey="CMUTUA" Type="MUTUA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Descartar_Pacientes_Duplicados" Member="Descartar_Pacientes_Duplicados">
+    <Type Name="Descartar_Pacientes_Duplicado">
+      <Column Name="Id_Paciente_Origen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Paciente_Descartado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha_Descarte" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PACIENTE_Descartar_Pacientes_Duplicado" Member="PACIENTE" ThisKey="Id_Paciente_Descartado" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
+      <Association Name="PACIENTE_Descartar_Pacientes_Duplicado1" Member="PACIENTE1" ThisKey="Id_Paciente_Origen" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>
