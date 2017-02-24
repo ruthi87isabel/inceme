@@ -26,6 +26,17 @@ Public Class frmListadoCitas
         dtp_ff.Value = New Date(Date.Now.Year, Date.Now.Month, Date.Now.Day, 23, 59, 59)
         Dim di As Date = Date.Now.AddMonths(-1)
         dtp_fi.Value = New Date(di.Year, di.Month, di.Day, 0, 0, 0)
+        dtp_fcf.Value = New Date(Date.Now.Year, Date.Now.Month, Date.Now.Day, 23, 59, 59)
+        dtp_fci.Value = New Date(di.Year, di.Month, di.Day, 0, 0, 0)
+        dtp_fcf.Checked = False
+        dtp_fci.Checked = False
+
+        CtrlMedico1.txt_Nombre.Width = 153
+        CtrlConceptoFacturable1.txt_Nombre.Width = 210
+        CtrlConceptoFacturable1.txt_Especialidad.Location = New System.Drawing.Point(322, 20)
+        CtrlMedico1.txt_Especialidad.Location = New System.Drawing.Point(243, 22)
+        CtrlMedico1.Label2.Location = New System.Drawing.Point(241, 5)
+        CtrlConceptoFacturable1.Label2.Location = New System.Drawing.Point(319, 4)
 
         AplicarFormato()
 
@@ -77,6 +88,8 @@ Public Class frmListadoCitas
                   {
                       .FechaEmisionInicial = IIf(dtp_fi.Checked, dtp_fi.Value, Nothing),
                       .FechaEmisionFinal = IIf(dtp_ff.Checked, dtp_ff.Value, Nothing),
+                      .FechaPagoInicial = IIf(dtp_fci.Checked, dtp_fci.Value, Nothing),
+                      .FechaPagoFinal = IIf(dtp_fcf.Checked, dtp_fcf.Value, Nothing),
                        .IncluirConImporteCero = chb_importe.Checked,
                       .FormaPago = IIf(Not CtrlFormaPago21.ID_FORMASPAGO Is Nothing, CtrlFormaPago21.ID_FORMASPAGO, Nothing),
                       .StatusPago = IIf(rb_cobradas.Checked, StatusPago.Pagado, (IIf(rb_sincobrar.Checked, StatusPago.NoPagado, StatusPago.Todos))),
@@ -100,6 +113,7 @@ Public Class frmListadoCitas
     Private Sub CargaCitaTerminada()
         pnl_Loading.Visible = False
         SetEnabled(True)
+        rb_cobradas_CheckedChanged(rb_cobradas, Nothing)
         GridEX1.Row = rowSelected
         GridEX1.Refresh()
     End Sub
@@ -826,5 +840,23 @@ Public Class frmListadoCitas
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
 
         Me.GridEX1.Refresh()
+    End Sub
+
+    Private Sub rb_cobradas_CheckedChanged(sender As Object, e As EventArgs) Handles rb_cobradas.CheckedChanged
+        If sender.Checked Then
+            GBfecha_cobro.Enabled = True
+            GBfecha_cita.Enabled = False
+            dtp_fci.Checked = True
+            dtp_fcf.Checked = True
+            dtp_fi.Checked = False
+            dtp_ff.Checked = False
+        Else
+            GBfecha_cobro.Enabled = False
+            GBfecha_cita.Enabled = True
+            dtp_fci.Checked = False
+            dtp_fcf.Checked = False
+            dtp_fi.Checked = True
+            dtp_ff.Checked = True
+        End If
     End Sub
 End Class

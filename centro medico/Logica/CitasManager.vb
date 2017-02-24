@@ -53,7 +53,7 @@
 
         'Fecha Pago Final
         If filtros.FechaPagoFinal.HasValue Then
-            citas = citas.Where(Function(o) o.FECHA <= filtros.FechaPagoFinal)
+            citas = citas.Where(Function(o) o.FECHACOBRO <= filtros.FechaPagoFinal)
         End If
 
         If filtros.CPACIENTE.HasValue Then

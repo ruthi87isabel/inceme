@@ -564,7 +564,7 @@
                   <Width>2.78901cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.32836cm</Width>
+                  <Width>2.22221cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>2.17072cm</Width>
@@ -574,6 +574,9 @@
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.5cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.80038cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.5cm</Width>
@@ -588,7 +591,7 @@
                   <Width>1.5cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.25cm</Width>
+                  <Width>1.49515cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -604,7 +607,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!NUMEROCITA.Value</Value>
+                                  <Value>=IIf(Fields!NUMEROCITA.Value &lt; 4, Fields!NUMEROCITA.Value, "")</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                   </Style>
@@ -900,6 +903,37 @@
                           </Paragraphs>
                           <rd:DefaultName>textbox4</rd:DefaultName>
                           <ZIndex>3</ZIndex>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="FECHACOBRO">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=FormatDateTime(Fields!FECHACOBRO.Value, DateFormat.ShortDate)</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>FECHACOBRO</rd:DefaultName>
                           <Style>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -1351,6 +1385,35 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
+                        <Textbox Name="Textbox20">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox20</rd:DefaultName>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
                         <Textbox Name="textbox10">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -1559,6 +1622,7 @@
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -1583,7 +1647,7 @@
             <DataSetName>centro_medico_CITA</DataSetName>
             <Left>0.01712in</Left>
             <Height>1.63492cm</Height>
-            <Width>28.71407cm</Width>
+            <Width>30.65345cm</Width>
             <Style>
               <FontSize>9pt</FontSize>
             </Style>
@@ -1592,7 +1656,7 @@
         <Height>1.66138cm</Height>
         <Style />
       </Body>
-      <Width>28.75755cm</Width>
+      <Width>30.69694cm</Width>
       <Page>
         <PageHeader>
           <Height>1.7353in</Height>
@@ -1616,8 +1680,8 @@ Factura</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>1.34153in</Top>
-              <Left>8.51295in</Left>
+              <Top>1.34152in</Top>
+              <Left>9.18009in</Left>
               <Height>0.39376in</Height>
               <Width>0.59062in</Width>
               <Style>
@@ -1679,10 +1743,10 @@ Factura</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>1.34154in</Top>
-              <Left>10.82747in</Left>
+              <Top>1.34152in</Top>
+              <Left>11.49689in</Left>
               <Height>0.39376in</Height>
-              <Width>0.48941in</Width>
+              <Width>0.58852in</Width>
               <ZIndex>2</ZIndex>
               <Style>
                 <Border>
@@ -1712,8 +1776,8 @@ Factura</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>1.34154in</Top>
-              <Left>10.23912in</Left>
+              <Top>1.34153in</Top>
+              <Left>10.90626in</Left>
               <Height>0.39376in</Height>
               <Width>0.59063in</Width>
               <ZIndex>3</ZIndex>
@@ -1745,8 +1809,8 @@ Factura</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>1.34153in</Top>
-              <Left>9.6485in</Left>
+              <Top>1.34152in</Top>
+              <Left>10.31564in</Left>
               <Height>0.39376in</Height>
               <Width>0.59062in</Width>
               <ZIndex>4</ZIndex>
@@ -1779,7 +1843,7 @@ Factura</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>1.34153in</Top>
-              <Left>7.91764in</Left>
+              <Left>7.87597in</Left>
               <Height>0.39376in</Height>
               <Width>0.60104in</Width>
               <ZIndex>5</ZIndex>
@@ -1812,7 +1876,7 @@ Factura</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>1.34153in</Top>
-              <Left>7.52857in</Left>
+              <Left>7.4869in</Left>
               <Height>0.39376in</Height>
               <Width>0.39948in</Width>
               <ZIndex>6</ZIndex>
@@ -2103,7 +2167,7 @@ Factura</Value>
               <Top>1.34153in</Top>
               <Left>5.74925in</Left>
               <Height>0.39376in</Height>
-              <Width>0.93057in</Width>
+              <Width>0.8889in</Width>
               <ZIndex>15</ZIndex>
               <Style>
                 <Border>
@@ -2134,7 +2198,7 @@ Factura</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>1.34153in</Top>
-              <Left>6.67982in</Left>
+              <Left>6.63815in</Left>
               <Height>0.39376in</Height>
               <Width>0.84875in</Width>
               <ZIndex>16</ZIndex>
@@ -2210,11 +2274,56 @@ Factura</Value>
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <Top>1.34154in</Top>
-              <Left>9.10357in</Left>
+              <Top>1.34153in</Top>
+              <Left>9.77071in</Left>
               <Height>0.39376in</Height>
               <Width>0.54493in</Width>
               <ZIndex>18</ZIndex>
+              <Style>
+                <Border>
+                  <Style>Solid</Style>
+                </Border>
+                <BackgroundColor>Gainsboro</BackgroundColor>
+                <VerticalAlign>Middle</VerticalAlign>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="textbox96">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Fecha</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Cobro</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>textbox82</rd:DefaultName>
+              <Top>1.34154in</Top>
+              <Left>8.47714in</Left>
+              <Height>0.39376in</Height>
+              <Width>0.70295in</Width>
+              <ZIndex>19</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -2268,7 +2377,7 @@ Factura</Value>
           <Style />
         </PageFooter>
         <PageHeight>21cm</PageHeight>
-        <PageWidth>30cm</PageWidth>
+        <PageWidth>32cm</PageWidth>
         <InteractiveHeight>29.7cm</InteractiveHeight>
         <InteractiveWidth>21cm</InteractiveWidth>
         <LeftMargin>0.5cm</LeftMargin>
