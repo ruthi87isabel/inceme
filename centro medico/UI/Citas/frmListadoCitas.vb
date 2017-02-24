@@ -15,6 +15,7 @@ Public Class frmListadoCitas
 
     Dim filtros As FiltroListadoCitas
     Dim cit As Integer = 0
+    Dim HandlesDtpickerEventValueChanged As Boolean = False
 
     Private Sub frmListadoCitas_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         GC.Collect()
@@ -23,6 +24,7 @@ Public Class frmListadoCitas
 
     Private Sub frmListadoCitas_Load(ByVal sender As System.Object, ByVal ex As System.EventArgs) Handles MyBase.Load
 
+        HandlesDtpickerEventValueChanged = True
         dtp_ff.Value = New Date(Date.Now.Year, Date.Now.Month, Date.Now.Day, 23, 59, 59)
         Dim di As Date = Date.Now.AddMonths(-1)
         dtp_fi.Value = New Date(di.Year, di.Month, di.Day, 0, 0, 0)
@@ -30,6 +32,7 @@ Public Class frmListadoCitas
         dtp_fci.Value = New Date(di.Year, di.Month, di.Day, 0, 0, 0)
         dtp_fcf.Checked = False
         dtp_fci.Checked = False
+        HandlesDtpickerEventValueChanged = False
 
         CtrlMedico1.txt_Nombre.Width = 153
         CtrlConceptoFacturable1.txt_Nombre.Width = 210
@@ -845,18 +848,31 @@ Public Class frmListadoCitas
     Private Sub rb_cobradas_CheckedChanged(sender As Object, e As EventArgs) Handles rb_cobradas.CheckedChanged
         If sender.Checked Then
             GBfecha_cobro.Enabled = True
-            GBfecha_cita.Enabled = False
             dtp_fci.Checked = True
             dtp_fcf.Checked = True
             dtp_fi.Checked = False
             dtp_ff.Checked = False
         Else
             GBfecha_cobro.Enabled = False
-            GBfecha_cita.Enabled = True
             dtp_fci.Checked = False
             dtp_fcf.Checked = False
             dtp_fi.Checked = True
             dtp_ff.Checked = True
         End If
+    End Sub
+
+    Private Sub dtp_fi_ValueChanged(sender As Object, e As EventArgs) Handles dtp_fi.ValueChanged, dtp_ff.ValueChanged, dtp_fci.ValueChanged, dtp_fcf.ValueChanged
+        If Not HandlesDtpickerEventValueChanged Then
+            HandlesDtpickerEventValueChanged = True
+            If sender.name = "dtp_fi" Or sender.name = "dtp_ff" Then
+                dtp_fci.Checked = False
+                dtp_fcf.Checked = False
+            ElseIf sender.name = "dtp_fci" Or sender.name = "dtp_fcf" Then
+                dtp_fi.Checked = False
+                dtp_ff.Checked = False
+            End If
+            HandlesDtpickerEventValueChanged = False
+        End If
+
     End Sub
 End Class
