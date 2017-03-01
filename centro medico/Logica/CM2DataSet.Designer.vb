@@ -6879,7 +6879,7 @@ Partial Public Class CM2DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddPACIENTESCONOCIORow(ByVal CPACIENTE As Integer, ByVal NOMBRE As String, ByVal APELLIDO1 As String, ByVal APELLIDO2 As String, ByVal DNI As String, ByVal FechaIngreso As String, ByVal CONOCIO As String) As PACIENTESCONOCIORow
+        Public Overloads Function AddPACIENTESCONOCIORow(ByVal CPACIENTE As Integer, ByVal NOMBRE As String, ByVal APELLIDO1 As String, ByVal APELLIDO2 As String, ByVal DNI As String, ByVal FechaIngreso As Date, ByVal CONOCIO As String) As PACIENTESCONOCIORow
             Dim rowPACIENTESCONOCIORow As PACIENTESCONOCIORow = CType(Me.NewRow,PACIENTESCONOCIORow)
             Dim columnValuesArray() As Object = New Object() {CPACIENTE, NOMBRE, APELLIDO1, APELLIDO2, DNI, FechaIngreso, CONOCIO}
             rowPACIENTESCONOCIORow.ItemArray = columnValuesArray
@@ -6932,7 +6932,7 @@ Partial Public Class CM2DataSet
             MyBase.Columns.Add(Me.columnAPELLIDO2)
             Me.columnDNI = New Global.System.Data.DataColumn("DNI", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDNI)
-            Me.columnFechaIngreso = New Global.System.Data.DataColumn("FechaIngreso", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnFechaIngreso = New Global.System.Data.DataColumn("FechaIngreso", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnFechaIngreso)
             Me.columnCONOCIO = New Global.System.Data.DataColumn("CONOCIO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCONOCIO)
@@ -6943,8 +6943,6 @@ Partial Public Class CM2DataSet
             Me.columnAPELLIDO1.MaxLength = 255
             Me.columnAPELLIDO2.MaxLength = 255
             Me.columnDNI.MaxLength = 8
-            Me.columnFechaIngreso.ReadOnly = true
-            Me.columnFechaIngreso.MaxLength = 10
             Me.columnCONOCIO.MaxLength = 250
         End Sub
         
@@ -11782,10 +11780,10 @@ Partial Public Class CM2DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property FechaIngreso() As String
+        Public Property FechaIngreso() As Date
             Get
                 Try 
-                    Return CType(Me(Me.tablePACIENTESCONOCIO.FechaIngresoColumn),String)
+                    Return CType(Me(Me.tablePACIENTESCONOCIO.FechaIngresoColumn),Date)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'FechaIngreso' in table 'PACIENTESCONOCIO' is DBNull.", e)
                 End Try
@@ -15759,8 +15757,9 @@ Namespace CM2DataSetTableAdapters
                 "IsNull_APELLIDO1 = 1 AND [APELLIDO1] IS NULL) OR ([APELLIDO1] = @Original_APELLI"& _ 
                 "DO1)) AND ((@IsNull_APELLIDO2 = 1 AND [APELLIDO2] IS NULL) OR ([APELLIDO2] = @Or"& _ 
                 "iginal_APELLIDO2)) AND ((@IsNull_DNI = 1 AND [DNI] IS NULL) OR ([DNI] = @Origina"& _ 
-                "l_DNI)) AND ((@IsNull_CONOCIO = 1 AND [CONOCIO] IS NULL) OR ([CONOCIO] = @Origin"& _ 
-                "al_CONOCIO)))"
+                "l_DNI)) AND ((@IsNull_FechaIngreso = 1 AND [FECHAALTA] IS NULL) OR ([FECHAALTA] "& _ 
+                "= @Original_FechaIngreso)) AND ((@IsNull_CONOCIO = 1 AND [CONOCIO] IS NULL) OR ("& _ 
+                "[CONOCIO] = @Original_CONOCIO)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CPACIENTE", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CPACIENTE", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_NOMBRE", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NOMBRE", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
@@ -15771,27 +15770,31 @@ Namespace CM2DataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_APELLIDO2", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "APELLIDO2", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_DNI", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DNI", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_DNI", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DNI", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_FechaIngreso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FechaIngreso", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_FechaIngreso", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FechaIngreso", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_CONOCIO", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CONOCIO", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CONOCIO", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CONOCIO", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[PACIENTES] SET [CPACIENTE] = @CPACIENTE, [NOMBRE] = @NOMBRE, [APELL"& _ 
-                "IDO1] = @APELLIDO1, [APELLIDO2] = @APELLIDO2, [DNI] = @DNI, [CONOCIO] = @CONOCIO"& _ 
-                " WHERE (([CPACIENTE] = @Original_CPACIENTE) AND ((@IsNull_NOMBRE = 1 AND [NOMBRE"& _ 
-                "] IS NULL) OR ([NOMBRE] = @Original_NOMBRE)) AND ((@IsNull_APELLIDO1 = 1 AND [AP"& _ 
-                "ELLIDO1] IS NULL) OR ([APELLIDO1] = @Original_APELLIDO1)) AND ((@IsNull_APELLIDO"& _ 
-                "2 = 1 AND [APELLIDO2] IS NULL) OR ([APELLIDO2] = @Original_APELLIDO2)) AND ((@Is"& _ 
-                "Null_DNI = 1 AND [DNI] IS NULL) OR ([DNI] = @Original_DNI)) AND ((@IsNull_CONOCI"& _ 
-                "O = 1 AND [CONOCIO] IS NULL) OR ([CONOCIO] = @Original_CONOCIO)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT CPACI"& _ 
-                "ENTE, NOMBRE, APELLIDO1, APELLIDO2, DNI, CONVERT (varchar(10), CONVERT (date, FE"& _ 
-                "CHAALTA, 106), 103) AS FechaIngreso, CONOCIO FROM PACIENTES WHERE (CPACIENTE = @"& _ 
-                "CPACIENTE) ORDER BY NOMBRE, APELLIDO1, APELLIDO2"
+                "IDO1] = @APELLIDO1, [APELLIDO2] = @APELLIDO2, [DNI] = @DNI, [FECHAALTA] = @Fecha"& _ 
+                "Ingreso, [CONOCIO] = @CONOCIO WHERE (([CPACIENTE] = @Original_CPACIENTE) AND ((@"& _ 
+                "IsNull_NOMBRE = 1 AND [NOMBRE] IS NULL) OR ([NOMBRE] = @Original_NOMBRE)) AND (("& _ 
+                "@IsNull_APELLIDO1 = 1 AND [APELLIDO1] IS NULL) OR ([APELLIDO1] = @Original_APELL"& _ 
+                "IDO1)) AND ((@IsNull_APELLIDO2 = 1 AND [APELLIDO2] IS NULL) OR ([APELLIDO2] = @O"& _ 
+                "riginal_APELLIDO2)) AND ((@IsNull_DNI = 1 AND [DNI] IS NULL) OR ([DNI] = @Origin"& _ 
+                "al_DNI)) AND ((@IsNull_FechaIngreso = 1 AND [FECHAALTA] IS NULL) OR ([FECHAALTA]"& _ 
+                " = @Original_FechaIngreso)) AND ((@IsNull_CONOCIO = 1 AND [CONOCIO] IS NULL) OR "& _ 
+                "([CONOCIO] = @Original_CONOCIO)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT CPACIENTE, NOMBRE, APELLIDO1, APELLID"& _ 
+                "O2, DNI, FECHAALTA AS FechaIngreso, CONOCIO FROM PACIENTES WHERE (CPACIENTE = @C"& _ 
+                "PACIENTE) ORDER BY NOMBRE, APELLIDO1, APELLIDO2"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CPACIENTE", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CPACIENTE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NOMBRE", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NOMBRE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@APELLIDO1", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "APELLIDO1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@APELLIDO2", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "APELLIDO2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DNI", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DNI", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FechaIngreso", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FechaIngreso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CONOCIO", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CONOCIO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CPACIENTE", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CPACIENTE", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_NOMBRE", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NOMBRE", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
@@ -15802,6 +15805,8 @@ Namespace CM2DataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_APELLIDO2", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "APELLIDO2", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_DNI", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DNI", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_DNI", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DNI", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_FechaIngreso", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FechaIngreso", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_FechaIngreso", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FechaIngreso", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_CONOCIO", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CONOCIO", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CONOCIO", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CONOCIO", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
@@ -15819,79 +15824,102 @@ Namespace CM2DataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT CPACIENTE,NOMBRE,APELLIDO1,APELLIDO2,DNI,Convert(varchar(10),CONVERT(date,"& _ 
-                "FECHAALTA,106),103) AS FechaIngreso,CONOCIO FROM dbo.PACIENTES"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE  (((@nombr"& _ 
-                "e Is NULL) OR (@nombre IS NOT NULL AND nombre LIKE '%'+@nombre+'%'))  And"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"((@pA"& _ 
-                "pellido Is NULL) OR (@pApellido IS NOT NULL AND Apellido1 LIKE '%'+@pApellido+'%"& _ 
-                "')) And"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"((@sApellido Is NULL) Or (@sApellido IS NOT NULL AND Apellido2 LIKE '%'"& _ 
-                "+@sApellido+'%'))) And"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"((@conocio Is NULL) Or (@conocio IS NOT NULL AND CONOCIO"& _ 
-                " LIKE '%'+@conocio+'%')) AND CONOCIO IS NOT null"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY NOMBRE,APELLIDO1,APEL"& _ 
-                "LIDO2 "
+            Me._commandCollection(0).CommandText = "SELECT CPACIENTE,NOMBRE,APELLIDO1,APELLIDO2,DNI,FECHAALTA AS FechaIngreso,CONOCIO"& _ 
+                " FROM dbo.PACIENTES"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE  (((@nombre Is NULL) OR (@nombre IS NOT NULL AND nomb"& _ 
+                "re LIKE '%'+@nombre+'%'))  And"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"((@pApellido Is NULL) OR (@pApellido IS NOT NULL"& _ 
+                " AND Apellido1 LIKE '%'+@pApellido+'%')) And"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"((@sApellido Is NULL) Or (@sApelli"& _ 
+                "do IS NOT NULL AND Apellido2 LIKE '%'+@sApellido+'%'))) And"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"((@conocio Is NULL)"& _ 
+                " Or (@conocio IS NOT NULL AND CONOCIO LIKE '%'+@conocio+'%')) AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"((@FechaIni "& _ 
+                "Is NULL) Or (@FechaIni IS NOT NULL AND FECHAALTA >= @FechaIni)) AND "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"((@FechaFi"& _ 
+                "n Is NULL) Or (@FechaFin IS NOT NULL AND FECHAALTA <= @FechaFin)) AND CONOCIO IS"& _ 
+                " NOT null"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY NOMBRE,APELLIDO1,APELLIDO2 "
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre", Global.System.Data.SqlDbType.VarChar, 255, Global.System.Data.ParameterDirection.Input, 0, 0, "NOMBRE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@pApellido", Global.System.Data.SqlDbType.VarChar, 255, Global.System.Data.ParameterDirection.Input, 0, 0, "APELLIDO1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@sApellido", Global.System.Data.SqlDbType.VarChar, 255, Global.System.Data.ParameterDirection.Input, 0, 0, "APELLIDO2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@conocio", Global.System.Data.SqlDbType.VarChar, 250, Global.System.Data.ParameterDirection.Input, 0, 0, "CONOCIO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FechaIni", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "FechaIngreso", Global.System.Data.DataRowVersion.Current, False, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FechaFin", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "FechaIngreso", Global.System.Data.DataRowVersion.Current, False, Nothing, "", "", ""))
         End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As CM2DataSet.PACIENTESCONOCIODataTable, ByVal nombre As String, ByVal pApellido As String, ByVal sApellido As String, ByVal conocio As String) As Integer
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, True)> _
+        Public Overridable Overloads Function Fill(ByVal dataTable As CM2DataSet.PACIENTESCONOCIODataTable, ByVal nombre As String, ByVal pApellido As String, ByVal sApellido As String, ByVal conocio As String, ByVal FechaIni As String, ByVal FechaFin As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (nombre Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(nombre,String)
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(nombre, String)
             End If
             If (pApellido Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(pApellido,String)
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(pApellido, String)
             End If
             If (sApellido Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(2).Value = CType(sApellido,String)
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(sApellido, String)
             End If
             If (conocio Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(3).Value = CType(conocio,String)
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(conocio, String)
             End If
-            If (Me.ClearBeforeFill = true) Then
-                dataTable.Clear
+            If (FechaIni Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(4).Value = CType(FechaIni, String)
+            End If
+            If (FechaFin Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(5).Value = CType(FechaFin, String)
+            End If
+            If (Me.ClearBeforeFill = True) Then
+                dataTable.Clear()
             End If
             Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
             Return returnValue
         End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData(ByVal nombre As String, ByVal pApellido As String, ByVal sApellido As String, ByVal conocio As String) As CM2DataSet.PACIENTESCONOCIODataTable
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], True)> _
+        Public Overridable Overloads Function GetData(ByVal nombre As String, ByVal pApellido As String, ByVal sApellido As String, ByVal conocio As String, ByVal FechaIni As String, ByVal FechaFin As String) As CM2DataSet.PACIENTESCONOCIODataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (nombre Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(nombre,String)
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(nombre, String)
             End If
             If (pApellido Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(pApellido,String)
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(pApellido, String)
             End If
             If (sApellido Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(2).Value = CType(sApellido,String)
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(sApellido, String)
             End If
             If (conocio Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.SelectCommand.Parameters(3).Value = CType(conocio,String)
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(conocio, String)
+            End If
+            If (FechaIni Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(4).Value = CType(FechaIni, String)
+            End If
+            If (FechaFin Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(5).Value = CType(FechaFin, String)
             End If
             Dim dataTable As CM2DataSet.PACIENTESCONOCIODataTable = New CM2DataSet.PACIENTESCONOCIODataTable()
             Me.Adapter.Fill(dataTable)
@@ -15930,7 +15958,7 @@ Namespace CM2DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_CPACIENTE As Integer, ByVal Original_NOMBRE As String, ByVal Original_APELLIDO1 As String, ByVal Original_APELLIDO2 As String, ByVal Original_DNI As String, ByVal Original_CONOCIO As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_CPACIENTE As Integer, ByVal Original_NOMBRE As String, ByVal Original_APELLIDO1 As String, ByVal Original_APELLIDO2 As String, ByVal Original_DNI As String, ByVal Original_FechaIngreso As Date, ByVal Original_CONOCIO As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_CPACIENTE,Integer)
             If (Original_NOMBRE Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
@@ -15960,12 +15988,14 @@ Namespace CM2DataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_DNI,String)
             End If
+            Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_FechaIngreso,Date)
             If (Original_CONOCIO Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_CONOCIO,String)
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_CONOCIO,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -15986,7 +16016,7 @@ Namespace CM2DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal CPACIENTE As Integer, ByVal NOMBRE As String, ByVal APELLIDO1 As String, ByVal APELLIDO2 As String, ByVal DNI As String, ByVal CONOCIO As String, ByVal Original_CPACIENTE As Integer, ByVal Original_NOMBRE As String, ByVal Original_APELLIDO1 As String, ByVal Original_APELLIDO2 As String, ByVal Original_DNI As String, ByVal Original_CONOCIO As String) As Integer
+        Public Overloads Overridable Function Update(ByVal CPACIENTE As Integer, ByVal NOMBRE As String, ByVal APELLIDO1 As String, ByVal APELLIDO2 As String, ByVal DNI As String, ByVal FechaIngreso As Date, ByVal CONOCIO As String, ByVal Original_CPACIENTE As Integer, ByVal Original_NOMBRE As String, ByVal Original_APELLIDO1 As String, ByVal Original_APELLIDO2 As String, ByVal Original_DNI As String, ByVal Original_FechaIngreso As Date, ByVal Original_CONOCIO As String) As Integer
             Me.Adapter.UpdateCommand.Parameters(0).Value = CType(CPACIENTE,Integer)
             If (NOMBRE Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
@@ -16008,46 +16038,49 @@ Namespace CM2DataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(4).Value = CType(DNI,String)
             End If
+            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(FechaIngreso,Date)
             If (CONOCIO Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(CONOCIO,String)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(CONOCIO,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_CPACIENTE,Integer)
+            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_CPACIENTE,Integer)
             If (Original_NOMBRE Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_NOMBRE,String)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_NOMBRE,String)
             End If
             If (Original_APELLIDO1 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_APELLIDO1,String)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_APELLIDO1,String)
             End If
             If (Original_APELLIDO2 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_APELLIDO2,String)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_APELLIDO2,String)
             End If
             If (Original_DNI Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_DNI,String)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_DNI,String)
             End If
+            Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_FechaIngreso,Date)
             If (Original_CONOCIO Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_CONOCIO,String)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_CONOCIO,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -16068,8 +16101,8 @@ Namespace CM2DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal NOMBRE As String, ByVal APELLIDO1 As String, ByVal APELLIDO2 As String, ByVal DNI As String, ByVal CONOCIO As String, ByVal Original_CPACIENTE As Integer, ByVal Original_NOMBRE As String, ByVal Original_APELLIDO1 As String, ByVal Original_APELLIDO2 As String, ByVal Original_DNI As String, ByVal Original_CONOCIO As String) As Integer
-            Return Me.Update(Original_CPACIENTE, NOMBRE, APELLIDO1, APELLIDO2, DNI, CONOCIO, Original_CPACIENTE, Original_NOMBRE, Original_APELLIDO1, Original_APELLIDO2, Original_DNI, Original_CONOCIO)
+        Public Overloads Overridable Function Update(ByVal NOMBRE As String, ByVal APELLIDO1 As String, ByVal APELLIDO2 As String, ByVal DNI As String, ByVal FechaIngreso As Date, ByVal CONOCIO As String, ByVal Original_CPACIENTE As Integer, ByVal Original_NOMBRE As String, ByVal Original_APELLIDO1 As String, ByVal Original_APELLIDO2 As String, ByVal Original_DNI As String, ByVal Original_FechaIngreso As Date, ByVal Original_CONOCIO As String) As Integer
+            Return Me.Update(Original_CPACIENTE, NOMBRE, APELLIDO1, APELLIDO2, DNI, FechaIngreso, CONOCIO, Original_CPACIENTE, Original_NOMBRE, Original_APELLIDO1, Original_APELLIDO2, Original_DNI, Original_FechaIngreso, Original_CONOCIO)
         End Function
     End Class
 End Namespace

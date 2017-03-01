@@ -16,6 +16,7 @@ Public Class frmListadoCitas
     Dim filtros As FiltroListadoCitas
     Dim cit As Integer = 0
     Dim HandlesDtpickerEventValueChanged As Boolean = False
+    Dim fechacobEnabled As Boolean = False
 
     Private Sub frmListadoCitas_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         GC.Collect()
@@ -116,7 +117,7 @@ Public Class frmListadoCitas
     Private Sub CargaCitaTerminada()
         pnl_Loading.Visible = False
         SetEnabled(True)
-        rb_cobradas_CheckedChanged(rb_cobradas, Nothing)
+        GBfecha_cobro.Enabled = fechacobEnabled
         GridEX1.Row = rowSelected
         GridEX1.Refresh()
     End Sub
@@ -448,6 +449,7 @@ Public Class frmListadoCitas
 
 
     Private Sub bt_Filtrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bt_Filtrar.Click
+        fechacobEnabled = GBfecha_cobro.Enabled
         CargarCitas()
 
     End Sub

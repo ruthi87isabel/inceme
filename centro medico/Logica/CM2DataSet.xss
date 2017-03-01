@@ -20,7 +20,7 @@
     <Shape ID="DesignTable:PacientesAlta" ZOrder="9" X="260" Y="692" Height="229" Width="237" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
     <Shape ID="DesignTable:CitasDiarias" ZOrder="7" X="23" Y="670" Height="229" Width="210" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
     <Shape ID="DesignTable:Grafic2" ZOrder="4" X="262" Y="950" Height="134" Width="214" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
-    <Shape ID="DesignTable:PACIENTESCONOCIO" ZOrder="2" X="1135" Y="81" Height="250" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="191" />
+    <Shape ID="DesignTable:PACIENTESCONOCIO" ZOrder="2" X="1158" Y="86" Height="250" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="191" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:FK_N_Ticket_N_Pacientes" ZOrder="8" LineWidth="11">
@@ -46,20 +46,16 @@
     <Connector ID="DesignRelation:FK_N_Ticket_N_Pacientes1" ZOrder="1" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>1152</X>
-          <Y>331</Y>
+          <X>1175</X>
+          <Y>336</Y>
         </Point>
         <Point>
-          <X>1152</X>
-          <Y>351</Y>
-        </Point>
-        <Point>
-          <X>707</X>
-          <Y>351</Y>
+          <X>1175</X>
+          <Y>394</Y>
         </Point>
         <Point>
           <X>707</X>
-          <Y>377</Y>
+          <Y>394</Y>
         </Point>
       </RoutePoints>
     </Connector>

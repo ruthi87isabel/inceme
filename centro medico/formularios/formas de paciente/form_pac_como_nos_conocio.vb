@@ -20,10 +20,14 @@ Public Class form_pac_como_nos_conocio
     End Sub
 
     Private Sub form_conocio_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+        dtp_ff.Value = New Date(Date.Now.Year, Date.Now.Month, Date.Now.Day, 23, 59, 59)
+        Dim di As Date = Date.Now.AddMonths(-1)
+        dtp_fi.Value = New Date(di.Year, di.Month, di.Day, 0, 0, 0)
+
         InicializaPacientesConocio()
         CargarResultados()
         ComoConocioBindingSource.DataSource = (From c In context.ComoConocios Select c).ToList()
-
 
     End Sub
 
@@ -31,10 +35,14 @@ Public Class form_pac_como_nos_conocio
         Dim nombre As String = ""
         Dim pApellido As String = ""
         Dim sApellido As String = ""
+        Dim FechaIni As String = ""
+        Dim FechaFin As String = ""
 
         If txtNombre.Text.Length > 0 Then nombre = txtNombre.Text
         If txtApellido1.Text.Length > 0 Then pApellido = txtApellido1.Text
         If txtApellido2.Text.Length > 0 Then sApellido = txtApellido2.Text
+        If dtp_fi.Checked Then FechaIni = dtp_fi.Value.ToString("d")
+        If dtp_ff.Checked Then FechaFin = dtp_ff.Value.ToString("d")
 
         Dim pacientes As List(Of PACIENTE) = New List(Of PACIENTE)()
         If Not cmbConocio.CheckedItems Is Nothing Then
@@ -45,7 +53,9 @@ Public Class form_pac_como_nos_conocio
                             If p.NOMBRE.ToLower().Contains(nombre.ToLower()) And
                                 ((p.APELLIDO1 Is Nothing) Or (Not p.APELLIDO1 Is Nothing AndAlso p.APELLIDO1.ToLower().Contains(pApellido.ToLower()))) And
                                 ((p.APELLIDO2 Is Nothing) Or (Not p.APELLIDO2 Is Nothing AndAlso p.APELLIDO2.ToLower().Contains(sApellido.ToLower()))) And
-                                (Not p.CONOCIO Is Nothing AndAlso p.CONOCIO.ToLower().Contains(c.Descripcion.ToLower())) Then
+                                (Not p.CONOCIO Is Nothing AndAlso p.CONOCIO.ToLower().Contains(c.Descripcion.ToLower())) And
+                                ((FechaIni = "") Or (FechaIni <> "" AndAlso p.FECHAALTA >= FechaIni)) And
+                                ((FechaFin = "") Or (FechaFin <> "" AndAlso p.FECHAALTA <= FechaFin)) Then
                                 pacientes.Add(p)
                             End If
                         End If
@@ -57,7 +67,9 @@ Public Class form_pac_como_nos_conocio
                 If Not p.CONOCIO Is Nothing Then
                     If p.NOMBRE.ToLower().Contains(nombre.ToLower()) And
                         ((p.APELLIDO1 Is Nothing) Or (Not p.APELLIDO1 Is Nothing AndAlso p.APELLIDO1.ToLower().Contains(pApellido.ToLower()))) And
-                        ((p.APELLIDO2 Is Nothing) Or (Not p.APELLIDO2 Is Nothing AndAlso p.APELLIDO2.ToLower().Contains(sApellido.ToLower()))) Then
+                        ((p.APELLIDO2 Is Nothing) Or (Not p.APELLIDO2 Is Nothing AndAlso p.APELLIDO2.ToLower().Contains(sApellido.ToLower()))) And
+                        ((FechaIni = "") Or (FechaIni <> "" AndAlso p.FECHAALTA >= FechaIni)) And
+                        ((FechaFin = "") Or (FechaFin <> "" AndAlso p.FECHAALTA <= FechaFin)) Then
                         pacientes.Add(p)
                     End If
                 End If
@@ -73,20 +85,21 @@ Public Class form_pac_como_nos_conocio
         If Not cmbConocio.CheckedItems Is Nothing Then
             If cmbConocio.CheckedItems.Length > 0 Then
                 For Each c As ComoConocio In cmbConocio.CheckedItems
-                    dTable = Me.PacientesconocioTableAdapter.GetData(nombre, If(pApellido.Length > 0, pApellido, Nothing), If(sApellido.Length > 0, sApellido, Nothing), c.Descripcion)
+                    dTable = Me.PacientesconocioTableAdapter.GetData(nombre, If(pApellido <> "", pApellido, Nothing), If(sApellido <> "", sApellido, Nothing), c.Descripcion, If(dtp_fi.Checked, FechaIni, Nothing), If(dtp_ff.Checked, FechaFin, Nothing))
                     ListResult.Add("[" & dTable.Count & "] " & c.Descripcion)
                     dTable1.Merge(dTable, True)
                 Next
             End If
         Else
             For Each a As ComoConocio In (From c In context.ComoConocios Select c).ToList()
-                dTable = Me.PacientesconocioTableAdapter.GetData(nombre, If(pApellido.Length > 0, pApellido, Nothing), If(sApellido.Length > 0, sApellido, Nothing), a.Descripcion)
+                dTable = Me.PacientesconocioTableAdapter.GetData(nombre, If(pApellido <> "", pApellido, Nothing), If(sApellido <> "", sApellido, Nothing), a.Descripcion, If(dtp_fi.Checked, FechaIni, Nothing), If(dtp_ff.Checked, FechaFin, Nothing))
                 ListResult.Add("[" & dTable.Count & "] " & a.Descripcion)
                 dTable1.Merge(dTable, True)
             Next
         End If
+
         dView = dTable1.DefaultView
-        LbResultados.Text = "Total: " & pacientes.Count()
+        LbResultados.Text = "Total: " & dTable1.Count()
 
     End Sub
 
