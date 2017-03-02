@@ -6,10 +6,16 @@ Public Class frmPaciente_Editar
     Public Const JARO_WINKLER_DISTANCE As Double = 0.85
     Public IDPACIENTE As Integer
     Dim fImagen() As Byte = Nothing
+    Dim PacDataDupl As Integer = 0
+    Dim context As New CMLinqDataContext()
+    'PacDataDupl = 1->DNI
+    'PacDataDupl = 2->Pasaporte
+    'PacDataDupl = 3->NIE
+    'PacDataDupl = 4->Nombre
+
     ' Public MutuaPrincipal As Nullable(Of Integer)
     ' Public EmpresaPrincipal As Nullable(Of Integer)
 
-    Dim context As CMLinqDataContext
     Dim pac As PACIENTE
 
     Sub New(IDPACIENTE As Integer)
@@ -73,14 +79,15 @@ Public Class frmPaciente_Editar
             pac.ACTIVO = "N"
         End If
 
-        If ChequeaDatosDuplicados() = True Then
-            Dim res As MsgBoxResult = MsgBox("Se han encontrado coincidencias con los pacientes mostrados anteriormente, ¿Desea seguir guardando?", MsgBoxStyle.YesNo)
-            If res = MsgBoxResult.No Then
-                Exit Function
-            Else
-                DescartarPaciente(IDPACIENTE, )
-            End If
-        End If
+        ChequeaDatosDuplicados()
+        'If ChequeaDatosDuplicados() = True Then
+        '    Dim res As MsgBoxResult = MsgBox("Se han encontrado coincidencias con los pacientes mostrados anteriormente, ¿Desea seguir guardando?", MsgBoxStyle.YesNo)
+        '    If res = MsgBoxResult.No Then
+        '        Exit Function
+        '    Else
+        '        DescartarPaciente(IDPACIENTE, PacDataDupl)
+        '    End If
+        'End If
 
         pac.CONOCIO = Me.cb_comoconocio.SelectedItem
         Me.context.SubmitChanges()
@@ -113,13 +120,10 @@ Public Class frmPaciente_Editar
 
 
     Private Sub frmPaciente_Editar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.context = New CMLinqDataContext()
         Dim idPaciente As Integer = Me.IDPACIENTE
 
         Me.pac = (From p In Me.context.PACIENTEs Where p.CPACIENTE = idPaciente Select p).First()
         Me.PACIENTESBindingSource.DataSource = Me.pac
-
-        ' Dim context As New CMLinqDataContext()
 
         pac = Me.pac
 
@@ -236,7 +240,6 @@ Public Class frmPaciente_Editar
 
     Private Sub CargarAsociados()
         GridEXSocios.DataSource = Nothing
-        Dim context As New CMLinqDataContext()
 
         AsociadoBindingSource.DataSource = (From a In context.Asociados Where a.IDPacienteOrigen = Me.IDPACIENTE Select a).ToList()
 
@@ -245,7 +248,6 @@ Public Class frmPaciente_Editar
 
     Private Sub CargarContactos()
         GridEXContactos.DataSource = Nothing
-        Dim context As New CMLinqDataContext()
 
         Dim contactos As List(Of ContactosPaciente) = (From c In context.ContactosPacientes Where c.CPaciente = Me.IDPACIENTE Select c).ToList()
 
@@ -256,7 +258,6 @@ Public Class frmPaciente_Editar
     End Sub
 
     Private Sub CargarComoNosConocio(pac As PACIENTE)
-        Dim context As New CMLinqDataContext()
 
         Dim como As List(Of ComoConocio) = (From c In context.ComoConocios Select c).ToList()
 
@@ -291,7 +292,6 @@ Public Class frmPaciente_Editar
 
     Private Sub btn_Eliminar_Click(sender As Object, e As EventArgs) Handles btn_Eliminar.Click
         If GridEXContactos.SelectedItems.Count > 0 Then
-            Dim context As New CMLinqDataContext()
             Dim cont As ContactosPaciente = GridEXContactos.SelectedItems(0).GetRow().DataRow
             Dim contacto As ContactosPaciente = (From c In context.ContactosPacientes _
                                                 Where c.IdContacto = cont.IdContacto _
@@ -334,7 +334,6 @@ Public Class frmPaciente_Editar
 
 
             Try
-                Dim context As New CMLinqDataContext()
                 context.Asociados.InsertOnSubmit(aso)
 
 
@@ -358,7 +357,6 @@ Public Class frmPaciente_Editar
 
             Try
                 Dim socio As Asociado = GridEXSocios.SelectedItems(0).GetRow().DataRow
-                Dim context As New CMLinqDataContext()
                 Dim s As Asociado = (From k In context.Asociados _
                                  Where k.IDPacienteBeneficiario = socio.IDPacienteBeneficiario _
                                  And k.IDPacienteOrigen = socio.IDPacienteOrigen _
@@ -380,7 +378,6 @@ Public Class frmPaciente_Editar
 
     Function DameAsociacion(ByVal idPaciente As Integer) As Asociado
         'Esta funcion revisa a ver si el idPaciente ya esta en la tabla Asociados
-        Dim context As New CMLinqDataContext()
         Dim lista As List(Of Asociado) = (From a In context.Asociados _
                                               Where a.IDPacienteBeneficiario = idPaciente _
                                               Select a).ToList()
@@ -404,7 +401,6 @@ Public Class frmPaciente_Editar
         Dim ofd_imagenPaciente As New System.Windows.Forms.OpenFileDialog()
         If ofd_imagenPaciente.ShowDialog() = Windows.Forms.DialogResult.OK And ofd_imagenPaciente.FileName <> "" Then
             Try
-                Dim context As New CMLinqDataContext()
                 Dim pac As PACIENTE = (From p In context.PACIENTEs Where p.CPACIENTE = Me.IDPACIENTE Select p).First()
                 Dim _imagen As Bitmap = New Bitmap(ofd_imagenPaciente.FileName)
                 Dim _indice As Integer = ofd_imagenPaciente.FileName.LastIndexOf("\")
@@ -428,7 +424,6 @@ Public Class frmPaciente_Editar
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If Not fImagen Is Nothing Then
-            Dim context As New CMLinqDataContext()
             Dim pac As PACIENTE = (From p In context.PACIENTEs Where p.CPACIENTE = Me.IDPACIENTE Select p).First()
             pac.FOTO = Nothing
             pac.FOTOGRAFIA = Nothing
@@ -446,14 +441,12 @@ Public Class frmPaciente_Editar
     End Sub
 
     Private Sub CargarMutuas()
-        Dim context As New CMLinqDataContext()
         Dim paciente As PACIENTE = (From p In context.PACIENTEs Where p.CPACIENTE = Me.IDPACIENTE Select p).First()
 
         CargarMutuas(paciente)
     End Sub
 
     Private Sub CargarMutuas(pac As PACIENTE)
-        Dim context As New CMLinqDataContext()
         GridEXMutuas.DataSource = Nothing
         LMUTUABindingSource.DataSource = pac.LMUTUAs
         GridEXMutuas.DataSource = LMUTUABindingSource
@@ -474,13 +467,11 @@ Public Class frmPaciente_Editar
     End Sub
 
     Private Sub CargarEmpresas()
-        Dim context As New CMLinqDataContext()
         Dim pac As PACIENTE = (From p In context.PACIENTEs Where p.CPACIENTE = Me.IDPACIENTE Select p).First()
         CargarEmpresas(pac)
     End Sub
 
     Private Sub CargarEmpresas(pac As PACIENTE)
-        Dim context As New CMLinqDataContext()
 
         GridEXEmpresas.DataSource = Nothing
         LEMPRESABindingSource.DataSource = pac.LEMPRESAs.Where(Function(k) k.EMPRESA.Eliminado.HasValue And k.EMPRESA.Eliminado = False)
@@ -564,7 +555,6 @@ Public Class frmPaciente_Editar
             If _annadirMutua.FECHABAJADateTimePicker.Checked Then
                 _lmutua.FECHABAJA = _annadirMutua.FECHABAJADateTimePicker.Value
             End If
-            Dim context As New CMLinqDataContext()
 
             context.LMUTUAs.InsertOnSubmit(_lmutua)
             context.SubmitChanges()
@@ -584,7 +574,6 @@ Public Class frmPaciente_Editar
             Return
         End If
         Dim _lmutua As LMUTUA = GridEXMutuas.SelectedItems(0).GetRow.DataRow
-        Dim context As New CMLinqDataContext()
 
         _lmutua = (From l In context.LMUTUAs Where l.CODIGO = _lmutua.CODIGO Select l).First()
         Dim _annadirMutua As New frmLineaMutua_Editar(Me.IDPACIENTE)
@@ -626,7 +615,6 @@ Public Class frmPaciente_Editar
 
         If MessageBox.Show("Desea eliminar esta mutua?", "Confirmación", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
             Dim _lmutua As LMUTUA = GridEXMutuas.SelectedItems(0).GetRow.DataRow
-            Dim context As New CMLinqDataContext()
 
             _lmutua = (From l In context.LMUTUAs Where l.CODIGO = _lmutua.CODIGO Select l).First()
 
@@ -654,7 +642,6 @@ Public Class frmPaciente_Editar
     End Sub
 
     Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
-        Dim context As New CMLinqDataContext()
 
         Dim linea As New LEMPRESA()
         linea.REFPACIENTE = Me.IDPACIENTE
@@ -686,7 +673,6 @@ Public Class frmPaciente_Editar
             Return
         End If
 
-        Dim context As New CMLinqDataContext()
         Dim linea As LEMPRESA = GridEXEmpresas.SelectedItems(0).GetRow.DataRow
         Dim idlinea = linea.REFEMPRESA
         linea = (From l In context.LEMPRESAs Where l.CODIGO = linea.CODIGO Select l).First()
@@ -712,7 +698,6 @@ Public Class frmPaciente_Editar
             Return
         End If
 
-        Dim context As New CMLinqDataContext()
         Dim linea As LEMPRESA = GridEXEmpresas.SelectedItems(0).GetRow.DataRow
 
         linea = (From l In context.LEMPRESAs Where l.CODIGO = linea.CODIGO Select l).First()
@@ -738,7 +723,6 @@ Public Class frmPaciente_Editar
     End Sub
 
     Private Sub CtrlEmpresa1_EMPRESASeleccionado(IdEMPRESAS As Integer, IsReturnPressed As Boolean) Handles CtrlEmpresa1.EMPRESASeleccionado
-        Dim context As New CMLinqDataContext
         If CtrlMutua1.ID_MUTUA Is Nothing Then
             Dim empresa As EMPRESA = context.EMPRESAs.Single(Function(e) e.CEMPRESA = IdEMPRESAS)
             If Not empresa Is Nothing Then
@@ -783,77 +767,107 @@ Public Class frmPaciente_Editar
         ChequeaExisteNIE(tb_dpNie.Text)
     End Sub
 
-    Public Function ChequeaDatosDuplicados() As Boolean
-
-        If ChequeaExisteDNI(tb_dpDni.Text) = True Or ChequeaExistePasaporte(tb_dpPasaporte.Text) = True Or ChequeaExisteNIE(tb_dpNie.Text) = True Or _
-            ChequeaExisteNombre(tb_Nombre.Text, tb_Apellido1.Text, tb_Apellido2.Text) Then
-            Return True
-        Else
-            Return False
-        End If
+    Public Sub ChequeaDatosDuplicados()
+        ChequeaExisteDNI(tb_dpDni.Text)
+        ChequeaExistePasaporte(tb_dpPasaporte.Text)
+        ChequeaExisteNIE(tb_dpNie.Text)
+        ChequeaExisteNombre(tb_Nombre.Text, tb_Apellido1.Text, tb_Apellido2.Text)
+        'If ChequeaExisteDNI(tb_dpDni.Text) Or ChequeaExistePasaporte(tb_dpPasaporte.Text) Or ChequeaExisteNIE(tb_dpNie.Text) Or _
+        '    ChequeaExisteNombre(tb_Nombre.Text, tb_Apellido1.Text, tb_Apellido2.Text) Then
+        '    Return True
+        'Else
+        '    Return False
+        'End If
         'Dim nombreCompleto As String = GetNombreCompleto(tb_Nombre.Text, tb_Apellido1.Text, tb_Apellido2.Text)
 
-    End Function
+    End Sub
 
 
-    Private Function ChequeaExisteDNI(ByVal dni As String) As Boolean
-        Dim res As Boolean = False
-        If dni = String.Empty Then Return res
+    Private Sub ChequeaExisteDNI(ByVal dni As String)
+        PacDataDupl = 1
+        If Not dni = String.Empty Then
+            Dim pacienteOtro As PACIENTE = (From p In context.PACIENTEs Where p.CPACIENTE <> IDPACIENTE _
+                                           And p.DNI = dni And (p.Eliminado Is Nothing Or p.Eliminado = False)
+                                           Select p).SingleOrDefault()
+            If Not pacienteOtro Is Nothing Then
+                Dim DescPas As Descartar_Pacientes_Duplicado = (From p In context.Descartar_Pacientes_Duplicados _
+                    Where p.Id_Paciente_Origen = IDPACIENTE And p.Id_Paciente_Descartado = pacienteOtro.CPACIENTE Select p).SingleOrDefault()
 
+                If DescPas Is Nothing Or (Not DescPas Is Nothing AndAlso Not DescPas.DescDNI) Then
+                    If tb_dpDni.ForeColor <> Color.Red Then
+                        Dim res As MsgBoxResult = MsgBox("El dni: " & dni & " existe ya en el paciente: [" & pacienteOtro.CPACIENTE & "] " & pacienteOtro.NombreCompleto & ", ¿Desea seguir guardando?", MsgBoxStyle.YesNo)
 
-        Dim pacienteOtro As PACIENTE = (From p In context.PACIENTEs Where p.CPACIENTE <> IDPACIENTE _
-                                       And p.DNI = dni And (p.Eliminado Is Nothing Or p.Eliminado = False)
-                                       Select p).SingleOrDefault()
-        If Not pacienteOtro Is Nothing Then
-            If tb_dpDni.ForeColor <> Color.Red Then
-                MessageBox.Show(String.Format("El dni: {0} existe ya en el paciente: [{1}] {2}", dni, pacienteOtro.CPACIENTE, pacienteOtro.NombreCompleto))
-                res = True
+                        If res = MsgBoxResult.No Then
+                            Exit Sub
+                        Else
+                            DescartarPaciente(pacienteOtro.CPACIENTE)
+                        End If
+                    End If
+                    tb_dpDni.ForeColor = Color.Red
+                Else
+                    ActualizaDescPacientes()
+                    tb_dpDni.ForeColor = Color.Black
+                End If
             End If
-            tb_dpDni.ForeColor = Color.Red
-        Else
-            tb_dpDni.ForeColor = Color.Black
         End If
-        Return res
-    End Function
+    End Sub
 
-    Private Function ChequeaExistePasaporte(ByVal pasaporte As String) As Boolean
-        Dim res As Boolean = False
-        If pasaporte = String.Empty Then Return res
-        Dim pacienteOtro As PACIENTE = (From p In context.PACIENTEs Where p.CPACIENTE <> IDPACIENTE _
-                                       And p.PASAPORTE = pasaporte And (p.Eliminado Is Nothing Or p.Eliminado = False)
-                                       Select p).SingleOrDefault()
-        If Not pacienteOtro Is Nothing Then
-            If tb_dpPasaporte.ForeColor <> Color.Red Then
-                MessageBox.Show(String.Format("El pasaporte: {0} existe ya en el paciente: [{1}] {2}", pasaporte, pacienteOtro.CPACIENTE, pacienteOtro.NombreCompleto))
+    Private Sub ChequeaExistePasaporte(ByVal pasaporte As String)
+        PacDataDupl = 2
+        If Not pasaporte = String.Empty Then
+            Dim pacienteOtro As PACIENTE = (From p In context.PACIENTEs Where p.CPACIENTE <> IDPACIENTE _
+                                           And p.PASAPORTE = pasaporte And (p.Eliminado Is Nothing Or p.Eliminado = False)
+                                           Select p).SingleOrDefault()
+            If Not pacienteOtro Is Nothing Then
+
+                Dim DescPas As Descartar_Pacientes_Duplicado = (From p In context.Descartar_Pacientes_Duplicados _
+                    Where p.Id_Paciente_Origen = IDPACIENTE And p.Id_Paciente_Descartado = pacienteOtro.CPACIENTE Select p).SingleOrDefault()
+
+                If DescPas Is Nothing Or (Not DescPas Is Nothing AndAlso Not DescPas.DescPasaporte) Then
+                    If tb_dpPasaporte.ForeColor <> Color.Red Then
+                        Dim res As MsgBoxResult = MsgBox("El pasaporte: " & pasaporte & " existe ya en el paciente: [" & pacienteOtro.CPACIENTE & "] " & pacienteOtro.NombreCompleto & ", ¿Desea seguir guardando?", MsgBoxStyle.YesNo)
+                        If res = MsgBoxResult.No Then
+                            Exit Sub
+                        Else
+                            DescartarPaciente(pacienteOtro.CPACIENTE)
+                        End If
+                    End If
+                    tb_dpPasaporte.ForeColor = Color.Red
+                Else
+                    ActualizaDescPacientes()
+                    tb_dpPasaporte.ForeColor = Color.Black
+                End If
             End If
-
-            tb_dpPasaporte.ForeColor = Color.Red
-            res = True
-        Else
-            tb_dpPasaporte.ForeColor = Color.Black
         End If
-        Return res
-    End Function
+    End Sub
 
-    Private Function ChequeaExisteNIE(ByVal nie As String) As Boolean
-        Dim res As Boolean = False
-        If nie.Trim() = String.Empty Then Return res
+    Private Sub ChequeaExisteNIE(ByVal nie As String)
+        PacDataDupl = 3
+        If Not nie.Trim() = String.Empty Then
+            Dim pacienteOtro As PACIENTE = (From p In context.PACIENTEs Where p.CPACIENTE <> IDPACIENTE _
+                                           And p.NIE = nie And (p.Eliminado Is Nothing Or p.Eliminado = False)
+                                           Select p).SingleOrDefault()
+            If Not pacienteOtro Is Nothing Then
+                Dim DescPas As Descartar_Pacientes_Duplicado = (From p In context.Descartar_Pacientes_Duplicados _
+                   Where p.Id_Paciente_Origen = IDPACIENTE And p.Id_Paciente_Descartado = pacienteOtro.CPACIENTE Select p).SingleOrDefault()
 
-        'Dim context As New CMLinqDataContext
-        Dim pacienteOtro As PACIENTE = (From p In context.PACIENTEs Where p.CPACIENTE <> IDPACIENTE _
-                                       And p.NIE = nie And (p.Eliminado Is Nothing Or p.Eliminado = False)
-                                       Select p).SingleOrDefault()
-        If Not pacienteOtro Is Nothing Then
-            If tb_dpNie.ForeColor <> Color.Red Then
-                MessageBox.Show(String.Format("El NIE: {0} existe ya en el paciente: [{1}] {2}", nie, pacienteOtro.CPACIENTE, pacienteOtro.NombreCompleto))
+                If DescPas Is Nothing Or (Not DescPas Is Nothing AndAlso Not DescPas.DescNIE) Then
+                    If tb_dpNie.ForeColor <> Color.Red Then
+                        Dim res As MsgBoxResult = MsgBox("El NIE: " & nie & " existe ya en el paciente: [" & pacienteOtro.CPACIENTE & "] " & pacienteOtro.NombreCompleto & ", ¿Desea seguir guardando?", MsgBoxStyle.YesNo)
+                        If res = MsgBoxResult.No Then
+                            Exit Sub
+                        Else
+                            DescartarPaciente(pacienteOtro.CPACIENTE)
+                        End If
+                    End If
+                    tb_dpNie.ForeColor = Color.Red
+                Else
+                    ActualizaDescPacientes()
+                    tb_dpNie.ForeColor = Color.Black
+                End If
             End If
-            res = True
-            tb_dpNie.ForeColor = Color.Red
-        Else
-            tb_dpNie.ForeColor = Color.Black
         End If
-        Return res
-    End Function
+    End Sub
     ''' <summary>
     ''' Checkea si existe nombre parecido.
     ''' </summary>
@@ -862,99 +876,107 @@ Public Class frmPaciente_Editar
     ''' <param name="apellido2"></param>
     ''' <returns>devuelve true en caso de haber coincidencias y muestra un mensaje.</returns>
     ''' <remarks></remarks>
-    Private Function ChequeaExisteNombre(ByVal nombre As String, ByVal apellido1 As String, ByVal apellido2 As String) As Boolean
+    Private Sub ChequeaExisteNombre(ByVal nombre As String, ByVal apellido1 As String, ByVal apellido2 As String)
         Dim nombreCompleto As String = GetNombreCompleto(nombre, apellido1, apellido2)
         Dim res As Boolean = False
-        If nombreCompleto = String.Empty Then Return res
-
-
-        Dim pacienteOtros As List(Of PACIENTE) = (From p In context.PACIENTEs Where p.CPACIENTE <> IDPACIENTE _
-                   And (p.Eliminado Is Nothing Or p.Eliminado = False) Select p).ToList()
-        Dim mensaje As String = ""
-        'Dim diffMatchPatch As New diff_match_patch()
-        For Each p As PACIENTE In pacienteOtros
-
-            Dim tNombre, tApellido1, tApellido2 As String
-            If ((Not p.NOMBRE Is Nothing)) Then
-                tNombre = p.NOMBRE
-            Else
-                tNombre = ""
-            End If
-            If ((Not p.APELLIDO1 Is Nothing)) Then
-                tApellido1 = p.APELLIDO1
-            Else
-                tApellido1 = ""
-            End If
-            If ((Not p.APELLIDO2 Is Nothing)) Then
-                tApellido2 = p.APELLIDO2
-            Else
-                tApellido2 = ""
-            End If
-
-            'Comparacion de nombres segun acentos y espacios en blanco
-            Dim pNombreCompleto As String = nombre & " " & apellido1 & " " & apellido2
-            Dim dbNombreCompleto As String = tNombre & " " & tApellido1 & " " & tApellido2
-            res = CustomNameComparison.CadenasSimilares(pNombreCompleto.ToUpper(), dbNombreCompleto.ToUpper())
-            If (res) Then
-                If tb_Nombre.ForeColor <> Color.Red Then
-                    mensaje = String.Format("El nombre: {0} esta causando coincidencia con el del paciente: [{1}] {2}" & vbCrLf, _
-                                                  pNombreCompleto.ToUpper(), p.CPACIENTE, dbNombreCompleto)
-                    res = True
+        Dim idPacOtro As Integer
+        PacDataDupl = 4
+        If Not nombreCompleto = String.Empty Then
+            Dim pacienteOtros As List(Of PACIENTE) = (From p In context.PACIENTEs Where p.CPACIENTE <> IDPACIENTE _
+                       And (p.Eliminado Is Nothing Or p.Eliminado = False) Select p).ToList()
+            Dim mensaje As String = ""
+            'Dim diffMatchPatch As New diff_match_patch()
+            For Each p As PACIENTE In pacienteOtros
+                Dim tNombre, tApellido1, tApellido2 As String
+                If ((Not p.NOMBRE Is Nothing)) Then
+                    tNombre = p.NOMBRE
+                Else
+                    tNombre = ""
                 End If
-                tb_Nombre.ForeColor = Color.Red
-                tb_Apellido1.ForeColor = Color.Red
-                tb_Apellido2.ForeColor = Color.Red
-                Exit For
-            End If
-
-            'Comparacion de nombres segun otros elementos, hallando la distancia de Jaro-Winkler entre ambos
-            Dim jwd As JaroWinklerDistance = New JaroWinklerDistance()
-            Dim distancia As Double = 0
-            Dim distanciaNombre As Double = 1
-            Dim distanciaApellido1 As Double = 1
-            Dim distanciaApellido2 As Double = 1
-            If tNombre <> String.Empty Or nombre <> String.Empty Then
-                distanciaNombre = jwd.GetDistance(tNombre.ToUpper(), nombre.ToUpper())
-            End If
-            If tApellido1 <> String.Empty Or apellido1 <> String.Empty Then
-                distanciaApellido1 = jwd.GetDistance(tApellido1.ToUpper(), apellido1.ToUpper())
-            End If
-            If tApellido2 <> String.Empty Or apellido2 <> String.Empty Then
-                distanciaApellido2 = jwd.GetDistance(tApellido2.ToUpper(), apellido2.ToUpper())
-            End If
-            'Nos quedamos con la distancia Jaro-Winkler minima
-            distancia = Math.Min(distanciaApellido1, distanciaApellido2)
-            distancia = Math.Min(distancia, distanciaNombre)
-
-            If (distancia >= JARO_WINKLER_DISTANCE) Then
-                If tb_Nombre.ForeColor <> Color.Red Then
-                    mensaje = String.Format("El nombre: {0} esta causando coincidencia con el del paciente: [{1}] {2}" & vbCrLf, _
-                                                  pNombreCompleto.ToUpper(), p.CPACIENTE, dbNombreCompleto)
-                    res = True
+                If ((Not p.APELLIDO1 Is Nothing)) Then
+                    tApellido1 = p.APELLIDO1
+                Else
+                    tApellido1 = ""
                 End If
-                tb_Nombre.ForeColor = Color.Red
-                tb_Apellido1.ForeColor = Color.Red
-                tb_Apellido2.ForeColor = Color.Red
-                Exit For
+                If ((Not p.APELLIDO2 Is Nothing)) Then
+                    tApellido2 = p.APELLIDO2
+                Else
+                    tApellido2 = ""
+                End If
+
+                'Comparacion de nombres segun acentos y espacios en blanco
+                Dim pNombreCompleto As String = nombre & " " & apellido1 & " " & apellido2
+                Dim dbNombreCompleto As String = tNombre & " " & tApellido1 & " " & tApellido2
+                res = CustomNameComparison.CadenasSimilares(pNombreCompleto.ToUpper(), dbNombreCompleto.ToUpper())
+                If res Then
+                    Dim DescPas As Descartar_Pacientes_Duplicado = (From pac In context.Descartar_Pacientes_Duplicados _
+                   Where pac.Id_Paciente_Origen = IDPACIENTE And pac.Id_Paciente_Descartado = p.CPACIENTE Select pac).SingleOrDefault()
+
+                    If DescPas Is Nothing Or (Not DescPas Is Nothing AndAlso Not DescPas.DescNombre) Then
+                        If tb_Nombre.ForeColor <> Color.Red Then
+                            mensaje = "El nombre: " & pNombreCompleto.ToUpper() & " esta causando coincidencia con el del paciente: [" & p.CPACIENTE & "] " & dbNombreCompleto & ", ¿Desea seguir guardando?"
+                            idPacOtro = p.CPACIENTE
+                            res = True
+                        End If
+                        tb_Nombre.ForeColor = Color.Red
+                        tb_Apellido1.ForeColor = Color.Red
+                        tb_Apellido2.ForeColor = Color.Red
+                        Exit For
+                    End If
+                End If
+
+                'Comparacion de nombres segun otros elementos, hallando la distancia de Jaro-Winkler entre ambos
+                Dim jwd As JaroWinklerDistance = New JaroWinklerDistance()
+                Dim distancia As Double = 0
+                Dim distanciaNombre As Double = 1
+                Dim distanciaApellido1 As Double = 1
+                Dim distanciaApellido2 As Double = 1
+                If tNombre <> String.Empty Or nombre <> String.Empty Then
+                    distanciaNombre = jwd.GetDistance(tNombre.ToUpper(), nombre.ToUpper())
+                End If
+                If tApellido1 <> String.Empty Or apellido1 <> String.Empty Then
+                    distanciaApellido1 = jwd.GetDistance(tApellido1.ToUpper(), apellido1.ToUpper())
+                End If
+                If tApellido2 <> String.Empty Or apellido2 <> String.Empty Then
+                    distanciaApellido2 = jwd.GetDistance(tApellido2.ToUpper(), apellido2.ToUpper())
+                End If
+                'Nos quedamos con la distancia Jaro-Winkler minima
+                distancia = Math.Min(distanciaApellido1, distanciaApellido2)
+                distancia = Math.Min(distancia, distanciaNombre)
+
+                If (distancia >= JARO_WINKLER_DISTANCE) Then
+                    Dim DescPas As Descartar_Pacientes_Duplicado = (From pac In context.Descartar_Pacientes_Duplicados _
+                   Where pac.Id_Paciente_Origen = IDPACIENTE And pac.Id_Paciente_Descartado = p.CPACIENTE Select pac).SingleOrDefault()
+
+                    If DescPas Is Nothing Or (Not DescPas Is Nothing AndAlso Not DescPas.DescNombre) Then
+                        If tb_Nombre.ForeColor <> Color.Red Then
+                            mensaje = "El nombre: " & pNombreCompleto.ToUpper() & " esta causando coincidencia con el del paciente: [" & p.CPACIENTE & "] " & dbNombreCompleto & ", ¿Desea seguir guardando?"
+                            idPacOtro = p.CPACIENTE
+                            res = True
+                        End If
+                        tb_Nombre.ForeColor = Color.Red
+                        tb_Apellido1.ForeColor = Color.Red
+                        tb_Apellido2.ForeColor = Color.Red
+                        Exit For
+                    Else
+                        tb_Nombre.ForeColor = Color.Black
+                        tb_Apellido1.ForeColor = Color.Black
+                        tb_Apellido2.ForeColor = Color.Black
+                    End If
+                End If
+            Next
+            If res Then
+                Dim resp As MsgBoxResult = MsgBox(mensaje, MsgBoxStyle.YesNo)
+                If resp = MsgBoxResult.No Then
+                    Exit Sub
+                Else
+                    DescartarPaciente(idPacOtro)
+                End If
             Else
-                tb_Nombre.ForeColor = Color.Black
-                tb_Apellido1.ForeColor = Color.Black
-                tb_Apellido2.ForeColor = Color.Black
+                ActualizaDescPacientes()
             End If
-        Next
-        If res = True Then
-            MsgBox(mensaje)
         End If
-        Return res
-        'If Not pacienteOtro Is Nothing Then
-        '    If tb_dpDni.ForeColor <> Color.Red Then
-        '        MessageBox.Show(String.Format("El dni: {0} existe ya en el paciente: [{1}] {2}", dni, pacienteOtro.CPACIENTE, pacienteOtro.NombreCompleto))
-        '    End If
-        '    tb_dpDni.ForeColor = Color.Red
-        'Else
-        '    tb_dpDni.ForeColor = Color.Black
-        'End If
-    End Function
+    End Sub
     Private Function checkCodigoPropio()
         If Me.tb_CodigoPaciente.Text.Trim.Length = 0 Then Return False
 
@@ -1033,8 +1055,6 @@ Public Class frmPaciente_Editar
                 Me.CtrlMutua1.ID_MUTUA = _lmutua.REFMUTUA
             End If
 
-            Dim context As New CMLinqDataContext()
-
             If Globales.Mutua_Existe(_lmutua.REFMUTUA, Me.IDPACIENTE) Then
                 Dim lm As LMUTUA = pac.LMUTUAs.Where(Function(o) o.REFMUTUA = CtrlMutua1.ID_MUTUA).SingleOrDefault
                 lm.TIPO = _annadirMutua.TIPO
@@ -1067,5 +1087,79 @@ Public Class frmPaciente_Editar
             End If
             GC.Collect()
         End If
+    End Sub
+
+    Private Sub DescartarPaciente(PacienteOtro As Integer)
+        If Not PacDataDupl = 0 Then
+
+            ActualizaDescPacientes()
+
+            Dim DescPas As Descartar_Pacientes_Duplicado = (From p In context.Descartar_Pacientes_Duplicados _
+                                                            Where p.Id_Paciente_Origen = IDPACIENTE _
+                                                            And p.Id_Paciente_Descartado = PacienteOtro _
+                                                            Select p).SingleOrDefault()
+            If DescPas Is Nothing Then
+                Dim NewDescPas As New Descartar_Pacientes_Duplicado With {
+                .Id_Paciente_Origen = IDPACIENTE,
+                .Id_Paciente_Descartado = PacienteOtro,
+                .Fecha_Descarte = Date.Now,
+                .DescDNI = False,
+                .DescPasaporte = False,
+                .DescNIE = False,
+                .DescNombre = False
+                }
+                AsignarValor(NewDescPas, True)
+
+                context.Descartar_Pacientes_Duplicados.InsertOnSubmit(NewDescPas)
+                context.SubmitChanges()
+            Else
+                DescPas.Fecha_Descarte = Date.Now
+                AsignarValor(DescPas, True)
+                context.SubmitChanges()
+            End If
+        End If
+    End Sub
+
+    Private Sub ActualizaDescPacientes()
+
+        Dim RefreshDesc As Descartar_Pacientes_Duplicado = (From p In context.Descartar_Pacientes_Duplicados.AsEnumerable() _
+                                                             Where (p.Id_Paciente_Origen = IDPACIENTE Or p.Id_Paciente_Descartado = IDPACIENTE) _
+                                                             And ConcidePaciente(p) _
+                                                             Select p).SingleOrDefault()
+        If Not RefreshDesc Is Nothing Then
+            RefreshDesc.Fecha_Descarte = Date.Now
+            AsignarValor(RefreshDesc, False)
+            context.SubmitChanges()
+        End If
+
+        If Not (RefreshDesc.DescDNI Or RefreshDesc.DescPasaporte Or RefreshDesc.DescNIE Or RefreshDesc.DescNombre) Then
+            context.Descartar_Pacientes_Duplicados.DeleteOnSubmit(RefreshDesc)
+        End If
+    End Sub
+
+    Private Function ConcidePaciente(p As Descartar_Pacientes_Duplicado) As Boolean
+        Select Case PacDataDupl
+            Case 1
+                Return p.DescDNI
+            Case 2
+                Return p.DescPasaporte
+            Case 3
+                Return p.DescNIE
+            Case 4
+                Return p.DescNombre
+        End Select
+    End Function
+
+    Private Sub AsignarValor(p As Descartar_Pacientes_Duplicado, value As Boolean)
+        Select Case PacDataDupl
+            Case 1
+                p.DescDNI = value
+            Case 2
+                p.DescPasaporte = value
+            Case 3
+                p.DescNIE = value
+            Case 4
+                p.DescNombre = value
+        End Select
     End Sub
 End Class

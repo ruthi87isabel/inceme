@@ -697,6 +697,12 @@ Partial Public Class CMLinqDataContext
     End Sub
   Partial Private Sub DeleteCITA(instance As CITA)
     End Sub
+  Partial Private Sub InsertDescartar_Pacientes_Duplicado(instance As Descartar_Pacientes_Duplicado)
+    End Sub
+  Partial Private Sub UpdateDescartar_Pacientes_Duplicado(instance As Descartar_Pacientes_Duplicado)
+    End Sub
+  Partial Private Sub DeleteDescartar_Pacientes_Duplicado(instance As Descartar_Pacientes_Duplicado)
+    End Sub
   #End Region
 	
 	Public Sub New()
@@ -1571,6 +1577,10 @@ Partial Public Class PACIENTE
 	
 	Private _CITAs As EntitySet(Of CITA)
 	
+	Private _Descartar_Pacientes_Duplicados As EntitySet(Of Descartar_Pacientes_Duplicado)
+	
+	Private _Descartar_Pacientes_Duplicados1 As EntitySet(Of Descartar_Pacientes_Duplicado)
+	
 	Private _EMPRESA As EntityRef(Of EMPRESA)
 	
 	Private _FORMASPAGO As EntityRef(Of FORMASPAGO)
@@ -1807,6 +1817,8 @@ Partial Public Class PACIENTE
 		Me._IMAGENES = New EntitySet(Of IMAGENES)(AddressOf Me.attach_IMAGENES, AddressOf Me.detach_IMAGENES)
 		Me._PRESUPUESTOS = New EntitySet(Of PRESUPUESTOS)(AddressOf Me.attach_PRESUPUESTOS, AddressOf Me.detach_PRESUPUESTOS)
 		Me._CITAs = New EntitySet(Of CITA)(AddressOf Me.attach_CITAs, AddressOf Me.detach_CITAs)
+		Me._Descartar_Pacientes_Duplicados = New EntitySet(Of Descartar_Pacientes_Duplicado)(AddressOf Me.attach_Descartar_Pacientes_Duplicados, AddressOf Me.detach_Descartar_Pacientes_Duplicados)
+		Me._Descartar_Pacientes_Duplicados1 = New EntitySet(Of Descartar_Pacientes_Duplicado)(AddressOf Me.attach_Descartar_Pacientes_Duplicados1, AddressOf Me.detach_Descartar_Pacientes_Duplicados1)
 		Me._EMPRESA = CType(Nothing, EntityRef(Of EMPRESA))
 		Me._FORMASPAGO = CType(Nothing, EntityRef(Of FORMASPAGO))
 		Me._MUTUA = CType(Nothing, EntityRef(Of MUTUA))
@@ -2887,6 +2899,26 @@ Partial Public Class PACIENTE
 		End Set
 	End Property
 	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="PACIENTE_Descartar_Pacientes_Duplicado", Storage:="_Descartar_Pacientes_Duplicados", ThisKey:="CPACIENTE", OtherKey:="Id_Paciente_Descartado")>  _
+	Public Property Descartar_Pacientes_Duplicados() As EntitySet(Of Descartar_Pacientes_Duplicado)
+		Get
+			Return Me._Descartar_Pacientes_Duplicados
+		End Get
+		Set
+			Me._Descartar_Pacientes_Duplicados.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="PACIENTE_Descartar_Pacientes_Duplicado1", Storage:="_Descartar_Pacientes_Duplicados1", ThisKey:="CPACIENTE", OtherKey:="Id_Paciente_Origen")>  _
+	Public Property Descartar_Pacientes_Duplicados1() As EntitySet(Of Descartar_Pacientes_Duplicado)
+		Get
+			Return Me._Descartar_Pacientes_Duplicados1
+		End Get
+		Set
+			Me._Descartar_Pacientes_Duplicados1.Assign(value)
+		End Set
+	End Property
+	
 	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="EMPRESA_PACIENTE", Storage:="_EMPRESA", ThisKey:="REFEMPRESA", OtherKey:="CEMPRESA", IsForeignKey:=true)>  _
 	Public Property EMPRESA() As EMPRESA
 		Get
@@ -3295,6 +3327,26 @@ Partial Public Class PACIENTE
 	End Sub
 	
 	Private Sub detach_CITAs(ByVal entity As CITA)
+		Me.SendPropertyChanging
+		entity.PACIENTE1 = Nothing
+	End Sub
+	
+	Private Sub attach_Descartar_Pacientes_Duplicados(ByVal entity As Descartar_Pacientes_Duplicado)
+		Me.SendPropertyChanging
+		entity.PACIENTE = Me
+	End Sub
+	
+	Private Sub detach_Descartar_Pacientes_Duplicados(ByVal entity As Descartar_Pacientes_Duplicado)
+		Me.SendPropertyChanging
+		entity.PACIENTE = Nothing
+	End Sub
+	
+	Private Sub attach_Descartar_Pacientes_Duplicados1(ByVal entity As Descartar_Pacientes_Duplicado)
+		Me.SendPropertyChanging
+		entity.PACIENTE1 = Me
+	End Sub
+	
+	Private Sub detach_Descartar_Pacientes_Duplicados1(ByVal entity As Descartar_Pacientes_Duplicado)
 		Me.SendPropertyChanging
 		entity.PACIENTE1 = Nothing
 	End Sub
@@ -41963,18 +42015,73 @@ End Class
 
 <Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Descartar_Pacientes_Duplicados")>  _
 Partial Public Class Descartar_Pacientes_Duplicado
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
 	
 	Private _Id_Paciente_Origen As Integer
 	
 	Private _Id_Paciente_Descartado As Integer
 	
+	Private _DescNombre As Boolean
+	
+	Private _DescDNI As Boolean
+	
+	Private _DescPasaporte As Boolean
+	
+	Private _DescNIE As Boolean
+	
 	Private _Fecha_Descarte As System.Nullable(Of Date)
+	
+	Private _PACIENTE As EntityRef(Of PACIENTE)
+	
+	Private _PACIENTE1 As EntityRef(Of PACIENTE)
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnId_Paciente_OrigenChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnId_Paciente_OrigenChanged()
+    End Sub
+    Partial Private Sub OnId_Paciente_DescartadoChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnId_Paciente_DescartadoChanged()
+    End Sub
+    Partial Private Sub OnDescNombreChanging(value As Boolean)
+    End Sub
+    Partial Private Sub OnDescNombreChanged()
+    End Sub
+    Partial Private Sub OnDescDNIChanging(value As Boolean)
+    End Sub
+    Partial Private Sub OnDescDNIChanged()
+    End Sub
+    Partial Private Sub OnDescPasaporteChanging(value As Boolean)
+    End Sub
+    Partial Private Sub OnDescPasaporteChanged()
+    End Sub
+    Partial Private Sub OnDescNIEChanging(value As Boolean)
+    End Sub
+    Partial Private Sub OnDescNIEChanged()
+    End Sub
+    Partial Private Sub OnFecha_DescarteChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OnFecha_DescarteChanged()
+    End Sub
+    #End Region
 	
 	Public Sub New()
 		MyBase.New
+		Me._PACIENTE = CType(Nothing, EntityRef(Of PACIENTE))
+		Me._PACIENTE1 = CType(Nothing, EntityRef(Of PACIENTE))
+		OnCreated
 	End Sub
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Id_Paciente_Origen", DbType:="Int NOT NULL")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Id_Paciente_Origen", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
 	Public Property Id_Paciente_Origen() As Integer
 		Get
 			Return Me._Id_Paciente_Origen
@@ -41982,12 +42089,19 @@ Partial Public Class Descartar_Pacientes_Duplicado
 		Set
 			If ((Me._Id_Paciente_Origen = value)  _
 						= false) Then
+				If Me._PACIENTE1.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.OnId_Paciente_OrigenChanging(value)
+				Me.SendPropertyChanging
 				Me._Id_Paciente_Origen = value
+				Me.SendPropertyChanged("Id_Paciente_Origen")
+				Me.OnId_Paciente_OrigenChanged
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Id_Paciente_Descartado", DbType:="Int NOT NULL")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Id_Paciente_Descartado", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
 	Public Property Id_Paciente_Descartado() As Integer
 		Get
 			Return Me._Id_Paciente_Descartado
@@ -41995,7 +42109,82 @@ Partial Public Class Descartar_Pacientes_Duplicado
 		Set
 			If ((Me._Id_Paciente_Descartado = value)  _
 						= false) Then
+				If Me._PACIENTE.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.OnId_Paciente_DescartadoChanging(value)
+				Me.SendPropertyChanging
 				Me._Id_Paciente_Descartado = value
+				Me.SendPropertyChanged("Id_Paciente_Descartado")
+				Me.OnId_Paciente_DescartadoChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DescNombre", DbType:="Bit NOT NULL")>  _
+	Public Property DescNombre() As Boolean
+		Get
+			Return Me._DescNombre
+		End Get
+		Set
+			If ((Me._DescNombre = value)  _
+						= false) Then
+				Me.OnDescNombreChanging(value)
+				Me.SendPropertyChanging
+				Me._DescNombre = value
+				Me.SendPropertyChanged("DescNombre")
+				Me.OnDescNombreChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DescDNI", DbType:="Bit NOT NULL")>  _
+	Public Property DescDNI() As Boolean
+		Get
+			Return Me._DescDNI
+		End Get
+		Set
+			If ((Me._DescDNI = value)  _
+						= false) Then
+				Me.OnDescDNIChanging(value)
+				Me.SendPropertyChanging
+				Me._DescDNI = value
+				Me.SendPropertyChanged("DescDNI")
+				Me.OnDescDNIChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DescPasaporte", DbType:="Bit NOT NULL")>  _
+	Public Property DescPasaporte() As Boolean
+		Get
+			Return Me._DescPasaporte
+		End Get
+		Set
+			If ((Me._DescPasaporte = value)  _
+						= false) Then
+				Me.OnDescPasaporteChanging(value)
+				Me.SendPropertyChanging
+				Me._DescPasaporte = value
+				Me.SendPropertyChanged("DescPasaporte")
+				Me.OnDescPasaporteChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DescNIE", DbType:="Bit NOT NULL")>  _
+	Public Property DescNIE() As Boolean
+		Get
+			Return Me._DescNIE
+		End Get
+		Set
+			If ((Me._DescNIE = value)  _
+						= false) Then
+				Me.OnDescNIEChanging(value)
+				Me.SendPropertyChanging
+				Me._DescNIE = value
+				Me.SendPropertyChanged("DescNIE")
+				Me.OnDescNIEChanged
 			End If
 		End Set
 	End Property
@@ -42007,8 +42196,86 @@ Partial Public Class Descartar_Pacientes_Duplicado
 		End Get
 		Set
 			If (Me._Fecha_Descarte.Equals(value) = false) Then
+				Me.OnFecha_DescarteChanging(value)
+				Me.SendPropertyChanging
 				Me._Fecha_Descarte = value
+				Me.SendPropertyChanged("Fecha_Descarte")
+				Me.OnFecha_DescarteChanged
 			End If
 		End Set
 	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="PACIENTE_Descartar_Pacientes_Duplicado", Storage:="_PACIENTE", ThisKey:="Id_Paciente_Descartado", OtherKey:="CPACIENTE", IsForeignKey:=true)>  _
+	Public Property PACIENTE() As PACIENTE
+		Get
+			Return Me._PACIENTE.Entity
+		End Get
+		Set
+			Dim previousValue As PACIENTE = Me._PACIENTE.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._PACIENTE.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._PACIENTE.Entity = Nothing
+					previousValue.Descartar_Pacientes_Duplicados.Remove(Me)
+				End If
+				Me._PACIENTE.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.Descartar_Pacientes_Duplicados.Add(Me)
+					Me._Id_Paciente_Descartado = value.CPACIENTE
+				Else
+					Me._Id_Paciente_Descartado = CType(Nothing, Integer)
+				End If
+				Me.SendPropertyChanged("PACIENTE")
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="PACIENTE_Descartar_Pacientes_Duplicado1", Storage:="_PACIENTE1", ThisKey:="Id_Paciente_Origen", OtherKey:="CPACIENTE", IsForeignKey:=true)>  _
+	Public Property PACIENTE1() As PACIENTE
+		Get
+			Return Me._PACIENTE1.Entity
+		End Get
+		Set
+			Dim previousValue As PACIENTE = Me._PACIENTE1.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._PACIENTE1.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._PACIENTE1.Entity = Nothing
+					previousValue.Descartar_Pacientes_Duplicados1.Remove(Me)
+				End If
+				Me._PACIENTE1.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.Descartar_Pacientes_Duplicados1.Add(Me)
+					Me._Id_Paciente_Origen = value.CPACIENTE
+				Else
+					Me._Id_Paciente_Origen = CType(Nothing, Integer)
+				End If
+				Me.SendPropertyChanged("PACIENTE1")
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
 End Class
