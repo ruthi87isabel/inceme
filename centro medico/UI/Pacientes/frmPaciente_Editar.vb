@@ -791,9 +791,10 @@ Public Class frmPaciente_Editar
                                            Select p).SingleOrDefault()
             If Not pacienteOtro Is Nothing Then
                 Dim DescPas As Descartar_Pacientes_Duplicado = (From p In context.Descartar_Pacientes_Duplicados _
-                    Where p.Id_Paciente_Origen = IDPACIENTE And p.Id_Paciente_Descartado = pacienteOtro.CPACIENTE Select p).SingleOrDefault()
+                    Where p.Id_Paciente_Origen = IDPACIENTE And p.Id_Paciente_Descartado = pacienteOtro.CPACIENTE And p.DescDNI = False _
+                    Select p).SingleOrDefault()
 
-                If DescPas Is Nothing Or (Not DescPas Is Nothing AndAlso Not DescPas.DescDNI) Then
+                If DescPas Is Nothing Then
                     If tb_dpDni.ForeColor <> Color.Red Then
                         Dim res As MsgBoxResult = MsgBox("El dni: " & dni & " existe ya en el paciente: [" & pacienteOtro.CPACIENTE & "] " & pacienteOtro.NombreCompleto & ", ¿Desea seguir guardando?", MsgBoxStyle.YesNo)
 
@@ -805,9 +806,10 @@ Public Class frmPaciente_Editar
                     End If
                     tb_dpDni.ForeColor = Color.Red
                 Else
-                    ActualizaDescPacientes()
                     tb_dpDni.ForeColor = Color.Black
                 End If
+            Else
+                ActualizaDescPacientes()
             End If
         End If
     End Sub
@@ -821,9 +823,10 @@ Public Class frmPaciente_Editar
             If Not pacienteOtro Is Nothing Then
 
                 Dim DescPas As Descartar_Pacientes_Duplicado = (From p In context.Descartar_Pacientes_Duplicados _
-                    Where p.Id_Paciente_Origen = IDPACIENTE And p.Id_Paciente_Descartado = pacienteOtro.CPACIENTE Select p).SingleOrDefault()
+                    Where p.Id_Paciente_Origen = IDPACIENTE And p.Id_Paciente_Descartado = pacienteOtro.CPACIENTE And p.DescPasaporte = False _
+                    Select p).SingleOrDefault()
 
-                If DescPas Is Nothing Or (Not DescPas Is Nothing AndAlso Not DescPas.DescPasaporte) Then
+                If DescPas Is Nothing Then
                     If tb_dpPasaporte.ForeColor <> Color.Red Then
                         Dim res As MsgBoxResult = MsgBox("El pasaporte: " & pasaporte & " existe ya en el paciente: [" & pacienteOtro.CPACIENTE & "] " & pacienteOtro.NombreCompleto & ", ¿Desea seguir guardando?", MsgBoxStyle.YesNo)
                         If res = MsgBoxResult.No Then
@@ -834,9 +837,10 @@ Public Class frmPaciente_Editar
                     End If
                     tb_dpPasaporte.ForeColor = Color.Red
                 Else
-                    ActualizaDescPacientes()
                     tb_dpPasaporte.ForeColor = Color.Black
                 End If
+            Else
+                ActualizaDescPacientes()
             End If
         End If
     End Sub
@@ -849,9 +853,10 @@ Public Class frmPaciente_Editar
                                            Select p).SingleOrDefault()
             If Not pacienteOtro Is Nothing Then
                 Dim DescPas As Descartar_Pacientes_Duplicado = (From p In context.Descartar_Pacientes_Duplicados _
-                   Where p.Id_Paciente_Origen = IDPACIENTE And p.Id_Paciente_Descartado = pacienteOtro.CPACIENTE Select p).SingleOrDefault()
+                   Where p.Id_Paciente_Origen = IDPACIENTE And p.Id_Paciente_Descartado = pacienteOtro.CPACIENTE And p.DescNIE = False _
+                   Select p).SingleOrDefault()
 
-                If DescPas Is Nothing Or (Not DescPas Is Nothing AndAlso Not DescPas.DescNIE) Then
+                If DescPas Is Nothing Then
                     If tb_dpNie.ForeColor <> Color.Red Then
                         Dim res As MsgBoxResult = MsgBox("El NIE: " & nie & " existe ya en el paciente: [" & pacienteOtro.CPACIENTE & "] " & pacienteOtro.NombreCompleto & ", ¿Desea seguir guardando?", MsgBoxStyle.YesNo)
                         If res = MsgBoxResult.No Then
@@ -862,9 +867,10 @@ Public Class frmPaciente_Editar
                     End If
                     tb_dpNie.ForeColor = Color.Red
                 Else
-                    ActualizaDescPacientes()
                     tb_dpNie.ForeColor = Color.Black
                 End If
+            Else
+                ActualizaDescPacientes()
             End If
         End If
     End Sub
@@ -910,9 +916,10 @@ Public Class frmPaciente_Editar
                 res = CustomNameComparison.CadenasSimilares(pNombreCompleto.ToUpper(), dbNombreCompleto.ToUpper())
                 If res Then
                     Dim DescPas As Descartar_Pacientes_Duplicado = (From pac In context.Descartar_Pacientes_Duplicados _
-                   Where pac.Id_Paciente_Origen = IDPACIENTE And pac.Id_Paciente_Descartado = p.CPACIENTE Select pac).SingleOrDefault()
+                   Where pac.Id_Paciente_Origen = IDPACIENTE And pac.Id_Paciente_Descartado = p.CPACIENTE And pac.DescNombre = False _
+                   Select pac).SingleOrDefault()
 
-                    If DescPas Is Nothing Or (Not DescPas Is Nothing AndAlso Not DescPas.DescNombre) Then
+                    If DescPas Is Nothing Then
                         If tb_Nombre.ForeColor <> Color.Red Then
                             mensaje = "El nombre: " & pNombreCompleto.ToUpper() & " esta causando coincidencia con el del paciente: [" & p.CPACIENTE & "] " & dbNombreCompleto & ", ¿Desea seguir guardando?"
                             idPacOtro = p.CPACIENTE
@@ -946,9 +953,10 @@ Public Class frmPaciente_Editar
 
                 If (distancia >= JARO_WINKLER_DISTANCE) Then
                     Dim DescPas As Descartar_Pacientes_Duplicado = (From pac In context.Descartar_Pacientes_Duplicados _
-                   Where pac.Id_Paciente_Origen = IDPACIENTE And pac.Id_Paciente_Descartado = p.CPACIENTE Select pac).SingleOrDefault()
+                   Where pac.Id_Paciente_Origen = IDPACIENTE And pac.Id_Paciente_Descartado = p.CPACIENTE And pac.DescNombre = False _
+                   Select pac).SingleOrDefault()
 
-                    If DescPas Is Nothing Or (Not DescPas Is Nothing AndAlso Not DescPas.DescNombre) Then
+                    If DescPas Is Nothing Then
                         If tb_Nombre.ForeColor <> Color.Red Then
                             mensaje = "El nombre: " & pNombreCompleto.ToUpper() & " esta causando coincidencia con el del paciente: [" & p.CPACIENTE & "] " & dbNombreCompleto & ", ¿Desea seguir guardando?"
                             idPacOtro = p.CPACIENTE
@@ -1130,10 +1138,10 @@ Public Class frmPaciente_Editar
             RefreshDesc.Fecha_Descarte = Date.Now
             AsignarValor(RefreshDesc, False)
             context.SubmitChanges()
-        End If
 
-        If Not (RefreshDesc.DescDNI Or RefreshDesc.DescPasaporte Or RefreshDesc.DescNIE Or RefreshDesc.DescNombre) Then
-            context.Descartar_Pacientes_Duplicados.DeleteOnSubmit(RefreshDesc)
+            If Not (RefreshDesc.DescDNI Or RefreshDesc.DescPasaporte Or RefreshDesc.DescNIE Or RefreshDesc.DescNombre) Then
+                context.Descartar_Pacientes_Duplicados.DeleteOnSubmit(RefreshDesc)
+            End If
         End If
     End Sub
 
