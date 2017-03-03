@@ -791,7 +791,8 @@ Public Class frmPaciente_Editar
                                            Select p).SingleOrDefault()
             If Not pacienteOtro Is Nothing Then
                 Dim DescPas As Descartar_Pacientes_Duplicado = (From p In context.Descartar_Pacientes_Duplicados _
-                    Where p.Id_Paciente_Origen = IDPACIENTE And p.Id_Paciente_Descartado = pacienteOtro.CPACIENTE _
+                    Where (p.Id_Paciente_Origen = IDPACIENTE And p.Id_Paciente_Descartado = pacienteOtro.CPACIENTE) _
+                    Or (p.Id_Paciente_Origen = pacienteOtro.CPACIENTE And p.Id_Paciente_Descartado = IDPACIENTE) _
                     Select p).SingleOrDefault()
 
                 If DescPas Is Nothing Or (Not DescPas Is Nothing AndAlso Not DescPas.DescDNI) Then
@@ -811,6 +812,8 @@ Public Class frmPaciente_Editar
             Else
                 ActualizaDescPacientes()
             End If
+        Else
+            ActualizaDescPacientes()
         End If
     End Sub
 
@@ -824,6 +827,7 @@ Public Class frmPaciente_Editar
 
                 Dim DescPas As Descartar_Pacientes_Duplicado = (From p In context.Descartar_Pacientes_Duplicados _
                     Where p.Id_Paciente_Origen = IDPACIENTE And p.Id_Paciente_Descartado = pacienteOtro.CPACIENTE _
+                    Or (p.Id_Paciente_Origen = pacienteOtro.CPACIENTE And p.Id_Paciente_Descartado = IDPACIENTE) _
                     Select p).SingleOrDefault()
 
                 If DescPas Is Nothing Or (Not DescPas Is Nothing AndAlso Not DescPas.DescPasaporte) Then
@@ -842,6 +846,8 @@ Public Class frmPaciente_Editar
             Else
                 ActualizaDescPacientes()
             End If
+        Else
+            ActualizaDescPacientes()
         End If
     End Sub
 
@@ -854,6 +860,7 @@ Public Class frmPaciente_Editar
             If Not pacienteOtro Is Nothing Then
                 Dim DescPas As Descartar_Pacientes_Duplicado = (From p In context.Descartar_Pacientes_Duplicados _
                    Where p.Id_Paciente_Origen = IDPACIENTE And p.Id_Paciente_Descartado = pacienteOtro.CPACIENTE _
+                   Or (p.Id_Paciente_Origen = pacienteOtro.CPACIENTE And p.Id_Paciente_Descartado = IDPACIENTE) _
                    Select p).SingleOrDefault()
 
                 If DescPas Is Nothing Or (Not DescPas Is Nothing AndAlso Not DescPas.DescNIE) Then
@@ -872,6 +879,8 @@ Public Class frmPaciente_Editar
             Else
                 ActualizaDescPacientes()
             End If
+        Else
+            ActualizaDescPacientes()
         End If
     End Sub
     ''' <summary>
@@ -917,6 +926,7 @@ Public Class frmPaciente_Editar
                 If res Then
                     Dim DescPas As Descartar_Pacientes_Duplicado = (From pac In context.Descartar_Pacientes_Duplicados _
                    Where pac.Id_Paciente_Origen = IDPACIENTE And pac.Id_Paciente_Descartado = p.CPACIENTE _
+                   Or (pac.Id_Paciente_Origen = p.CPACIENTE And pac.Id_Paciente_Descartado = IDPACIENTE) _
                    Select pac).SingleOrDefault()
 
                     If DescPas Is Nothing Or (Not DescPas Is Nothing AndAlso Not DescPas.DescNombre) Then
@@ -956,6 +966,7 @@ Public Class frmPaciente_Editar
                 If (distancia >= JARO_WINKLER_DISTANCE) Then
                     Dim DescPas As Descartar_Pacientes_Duplicado = (From pac In context.Descartar_Pacientes_Duplicados _
                    Where pac.Id_Paciente_Origen = IDPACIENTE And pac.Id_Paciente_Descartado = p.CPACIENTE _
+                   Or (pac.Id_Paciente_Origen = p.CPACIENTE And pac.Id_Paciente_Descartado = IDPACIENTE) _
                    Select pac).SingleOrDefault()
 
                     If DescPas Is Nothing Or (Not DescPas Is Nothing AndAlso Not DescPas.DescNombre) Then
@@ -972,6 +983,7 @@ Public Class frmPaciente_Editar
                         tb_Nombre.ForeColor = Color.Black
                         tb_Apellido1.ForeColor = Color.Black
                         tb_Apellido2.ForeColor = Color.Black
+                        Exit Sub
                     End If
                 End If
             Next
@@ -985,6 +997,8 @@ Public Class frmPaciente_Editar
             Else
                 ActualizaDescPacientes()
             End If
+        Else
+            ActualizaDescPacientes()
         End If
     End Sub
     Private Function checkCodigoPropio()
@@ -1105,8 +1119,8 @@ Public Class frmPaciente_Editar
             ActualizaDescPacientes()
 
             Dim DescPas As Descartar_Pacientes_Duplicado = (From p In context.Descartar_Pacientes_Duplicados _
-                                                            Where p.Id_Paciente_Origen = IDPACIENTE _
-                                                            And p.Id_Paciente_Descartado = PacienteOtro _
+                                                            Where (p.Id_Paciente_Origen = IDPACIENTE And p.Id_Paciente_Descartado = PacienteOtro) _
+                                                            Or (p.Id_Paciente_Origen = PacienteOtro And p.Id_Paciente_Descartado = IDPACIENTE) _
                                                             Select p).SingleOrDefault()
             If DescPas Is Nothing Then
                 Dim NewDescPas As New Descartar_Pacientes_Duplicado With {
