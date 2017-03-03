@@ -226,6 +226,12 @@ Public Class frmPaciente_Editar
         CargarMutuas(pac)
         AplicaPermisos()
         AplicaPermisosAHistorialesLaborales()
+
+        Dim DescPac As List(Of Descartar_Pacientes_Duplicado) = (From p In context.Descartar_Pacientes_Duplicados _
+                                                             Where (p.Id_Paciente_Origen = idPaciente Or p.Id_Paciente_Descartado = idPaciente) _
+                                                             Select p).ToList
+        LbDatosDupl.Visible = DescPac.Count > 0
+        PbDatosDupl.Visible = DescPac.Count > 0
     End Sub
 
     Private Sub AplicaPermisos()

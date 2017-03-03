@@ -2363,6 +2363,7 @@
     <None Include="Resources\new\Icon_Diagnosticos Emitidos.png" />
     <None Include="Resources\new\Icon_Derivaciones.png" />
     <None Include="Resources\new\Icon_Entradas.png" />
+    <Content Include="Resources\new\Icon_DuplicPaciente.png" />
     <Content Include="Resources\new\Icon_Factura.jpg" />
     <None Include="Resources\new\Icon_Familia.png" />
     <None Include="Resources\new\Icon_Formas de pago.png" />
