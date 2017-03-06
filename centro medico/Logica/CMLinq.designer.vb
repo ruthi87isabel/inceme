@@ -42023,14 +42023,6 @@ Partial Public Class Descartar_Pacientes_Duplicado
 	
 	Private _Id_Paciente_Descartado As Integer
 	
-	Private _DescNombre As Boolean
-	
-	Private _DescDNI As Boolean
-	
-	Private _DescPasaporte As Boolean
-	
-	Private _DescNIE As Boolean
-	
 	Private _Fecha_Descarte As System.Nullable(Of Date)
 	
 	Private _PACIENTE As EntityRef(Of PACIENTE)
@@ -42051,22 +42043,6 @@ Partial Public Class Descartar_Pacientes_Duplicado
     Partial Private Sub OnId_Paciente_DescartadoChanging(value As Integer)
     End Sub
     Partial Private Sub OnId_Paciente_DescartadoChanged()
-    End Sub
-    Partial Private Sub OnDescNombreChanging(value As Boolean)
-    End Sub
-    Partial Private Sub OnDescNombreChanged()
-    End Sub
-    Partial Private Sub OnDescDNIChanging(value As Boolean)
-    End Sub
-    Partial Private Sub OnDescDNIChanged()
-    End Sub
-    Partial Private Sub OnDescPasaporteChanging(value As Boolean)
-    End Sub
-    Partial Private Sub OnDescPasaporteChanged()
-    End Sub
-    Partial Private Sub OnDescNIEChanging(value As Boolean)
-    End Sub
-    Partial Private Sub OnDescNIEChanged()
     End Sub
     Partial Private Sub OnFecha_DescarteChanging(value As System.Nullable(Of Date))
     End Sub
@@ -42117,74 +42093,6 @@ Partial Public Class Descartar_Pacientes_Duplicado
 				Me._Id_Paciente_Descartado = value
 				Me.SendPropertyChanged("Id_Paciente_Descartado")
 				Me.OnId_Paciente_DescartadoChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DescNombre", DbType:="Bit NOT NULL")>  _
-	Public Property DescNombre() As Boolean
-		Get
-			Return Me._DescNombre
-		End Get
-		Set
-			If ((Me._DescNombre = value)  _
-						= false) Then
-				Me.OnDescNombreChanging(value)
-				Me.SendPropertyChanging
-				Me._DescNombre = value
-				Me.SendPropertyChanged("DescNombre")
-				Me.OnDescNombreChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DescDNI", DbType:="Bit NOT NULL")>  _
-	Public Property DescDNI() As Boolean
-		Get
-			Return Me._DescDNI
-		End Get
-		Set
-			If ((Me._DescDNI = value)  _
-						= false) Then
-				Me.OnDescDNIChanging(value)
-				Me.SendPropertyChanging
-				Me._DescDNI = value
-				Me.SendPropertyChanged("DescDNI")
-				Me.OnDescDNIChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DescPasaporte", DbType:="Bit NOT NULL")>  _
-	Public Property DescPasaporte() As Boolean
-		Get
-			Return Me._DescPasaporte
-		End Get
-		Set
-			If ((Me._DescPasaporte = value)  _
-						= false) Then
-				Me.OnDescPasaporteChanging(value)
-				Me.SendPropertyChanging
-				Me._DescPasaporte = value
-				Me.SendPropertyChanged("DescPasaporte")
-				Me.OnDescPasaporteChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DescNIE", DbType:="Bit NOT NULL")>  _
-	Public Property DescNIE() As Boolean
-		Get
-			Return Me._DescNIE
-		End Get
-		Set
-			If ((Me._DescNIE = value)  _
-						= false) Then
-				Me.OnDescNIEChanging(value)
-				Me.SendPropertyChanging
-				Me._DescNIE = value
-				Me.SendPropertyChanged("DescNIE")
-				Me.OnDescNIEChanged
 			End If
 		End Set
 	End Property
