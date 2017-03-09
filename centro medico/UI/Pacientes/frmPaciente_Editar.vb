@@ -1026,7 +1026,7 @@ Public Class frmPaciente_Editar
             Return (nombre & " " & apellido1 & " " & apellido2).Trim()
         End If
     End Function
-    Private Function DeleteAsociadoYBeneficiarios(paciente As PACIENTE)
+    Private Sub DeleteAsociadoYBeneficiarios(paciente As PACIENTE)
         paciente.SOCIO = "N"
         Dim asociados As List(Of Asociado) = paciente.Asociados1.ToList()
 
@@ -1036,20 +1036,8 @@ Public Class frmPaciente_Editar
 
         Me.context.Asociados.DeleteAllOnSubmit(asociados)
         Me.context.SubmitChanges()
-    End Function
-
-    Private Sub CtrlEmpresa1_EMPRESANoEncontrado()
-
     End Sub
-    Private Sub CtrlEmpresa1_EMPRESAEliminado(IdEMPRESASAnterior As Integer)
 
-    End Sub
-    Private Sub CtrlMutua1_MutuasEliminada(IdMutuas As Integer)
-
-    End Sub
-    Private Sub CtrlMutua1_MutuasNoEncontrado()
-
-    End Sub
     Private Sub CtrlMutua1_MutuaSeleccionada(IdMutuas As Integer) Handles CtrlMutua1.MUTUASeleccionada
         Dim _lmutua As New LMUTUA()
         _lmutua.REFMUTUA = IdMutuas
@@ -1097,9 +1085,6 @@ Public Class frmPaciente_Editar
             CargarMutuas()
         End If
     End Sub
-    Private Sub CtrlMutua1_MutuasSeleccionado(IdMutuas As Integer)
-
-    End Sub
 
     Private Sub webcam_Click(sender As Object, e As EventArgs) Handles webcam.Click
         Dim frm As formPaciente_Captura = New formPaciente_Captura()
@@ -1130,5 +1115,17 @@ Public Class frmPaciente_Editar
                 context.SubmitChanges()
             End If
         Next
+    End Sub
+
+    Private Sub PbDatosDupl_Click(sender As Object, e As EventArgs) Handles PbDatosDupl.Click, LbDatosDupl.Click
+        Dim frm As New frmPacientes_Con_Datos_Duplicados()
+        frm.IDPaciente = Me.IDPACIENTE
+        frm.context = Me.context
+        frm.ShowDialog()
+        Dim verDesc As List(Of Descartar_Pacientes_Duplicado) = (From p In context.Descartar_Pacientes_Duplicados _
+                                                             Where (p.Id_Paciente_Origen = IDPACIENTE Or p.Id_Paciente_Descartado = IDPACIENTE) _
+                                                             Select p).ToList
+        LbDatosDupl.Visible = verDesc.Count > 0
+        PbDatosDupl.Visible = verDesc.Count > 0
     End Sub
 End Class

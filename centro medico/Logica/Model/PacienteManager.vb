@@ -427,3 +427,18 @@ Partial Class PACIENTE
 
     
 End Class
+
+Partial Class Descartar_Pacientes_Duplicado
+    Dim context As New CMLinqDataContext
+    Public ReadOnly Property Nombre_Paciente_Origen As String
+        Get
+            Return (Me.PACIENTE1.NOMBRE & " " & Me.PACIENTE1.APELLIDO1 & " " & Me.PACIENTE1.APELLIDO2).Trim()
+        End Get
+    End Property
+
+    Public ReadOnly Property Nombre_Paciente_Descartado As String
+        Get
+            Return (Me.PACIENTE.NOMBRE & " " & Me.PACIENTE.APELLIDO1 & " " & Me.PACIENTE.APELLIDO2).Trim()
+        End Get
+    End Property
+End Class

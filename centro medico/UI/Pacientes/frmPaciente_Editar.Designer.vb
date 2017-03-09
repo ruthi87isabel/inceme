@@ -1271,6 +1271,7 @@ Partial Class frmPaciente_Editar
         'PbDatosDupl
         '
         Me.PbDatosDupl.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PbDatosDupl.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PbDatosDupl.Image = Global.centro_medico.My.Resources.Resources.Icon_DuplicPaciente
         Me.PbDatosDupl.Location = New System.Drawing.Point(796, 1)
         Me.PbDatosDupl.Name = "PbDatosDupl"
@@ -1328,6 +1329,7 @@ Partial Class frmPaciente_Editar
         Me.LbDatosDupl.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LbDatosDupl.AutoSize = True
         Me.LbDatosDupl.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.LbDatosDupl.Cursor = System.Windows.Forms.Cursors.Hand
         Me.LbDatosDupl.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LbDatosDupl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.LbDatosDupl.Location = New System.Drawing.Point(843, 8)

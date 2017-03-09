@@ -682,6 +682,12 @@
     <Compile Include="UI\PacienteDebito\frmPagarDocumentos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UI\Pacientes\frmPacientes_Con_Datos_Duplicados.Designer.vb">
+      <DependentUpon>frmPacientes_Con_Datos_Duplicados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pacientes\frmPacientes_Con_Datos_Duplicados.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\Pacientes\formPaciente.Designer.vb">
       <DependentUpon>formPaciente.vb</DependentUpon>
     </Compile>
@@ -4457,6 +4463,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Pacientes\frmMigrarPacientes.resx">
       <DependentUpon>frmMigrarPacientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Pacientes\frmPacientes_Con_Datos_Duplicados.resx">
+      <DependentUpon>frmPacientes_Con_Datos_Duplicados.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Pacientes\frmPacientesListado2.resx">
       <DependentUpon>frmPacientesListado2.vb</DependentUpon>
