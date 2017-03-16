@@ -10,7 +10,7 @@ Public Class frmPaciente_Editar
     ' Public MutuaPrincipal As Nullable(Of Integer)
     ' Public EmpresaPrincipal As Nullable(Of Integer)
 
-    Dim context As CMLinqDataContext
+    Dim context As New CMLinqDataContext
     Dim pac As PACIENTE
 
     Sub New(IDPACIENTE As Integer)
@@ -114,13 +114,10 @@ Public Class frmPaciente_Editar
 
 
     Private Sub frmPaciente_Editar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.context = New CMLinqDataContext()
         Dim idPaciente As Integer = Me.IDPACIENTE
 
         Me.pac = (From p In Me.context.PACIENTEs Where p.CPACIENTE = idPaciente Select p).First()
         Me.PACIENTESBindingSource.DataSource = Me.pac
-
-        ' Dim context As New CMLinqDataContext()
 
         pac = Me.pac
 
@@ -135,6 +132,8 @@ Public Class frmPaciente_Editar
             Me.dtp_dpFechabaja.Value = pac.FECHABAJA
             Me.dtp_dpFechabaja.Checked = True
         End If
+
+        CargarComoNosConocio(pac)
 
         If Not pac.FECHAN Is Nothing Then
             CalcularEdad()
@@ -218,7 +217,6 @@ Public Class frmPaciente_Editar
 
         CargarAsociados()
         CargarContactos()
-        CargarComoNosConocio(pac)
         CargarEmpresas(pac)
         CargarMutuas(pac)
         AplicaPermisos()
@@ -244,7 +242,6 @@ Public Class frmPaciente_Editar
 
     Private Sub CargarAsociados()
         GridEXSocios.DataSource = Nothing
-        Dim context As New CMLinqDataContext()
 
         AsociadoBindingSource.DataSource = (From a In context.Asociados Where a.IDPacienteOrigen = Me.IDPACIENTE Select a).ToList()
 
@@ -253,7 +250,6 @@ Public Class frmPaciente_Editar
 
     Private Sub CargarContactos()
         GridEXContactos.DataSource = Nothing
-        Dim context As New CMLinqDataContext()
 
         Dim contactos As List(Of ContactosPaciente) = (From c In context.ContactosPacientes Where c.CPaciente = Me.IDPACIENTE Select c).ToList()
 
@@ -264,8 +260,6 @@ Public Class frmPaciente_Editar
     End Sub
 
     Private Sub CargarComoNosConocio(pac As PACIENTE)
-        Dim context As New CMLinqDataContext()
-
         Dim como As List(Of ComoConocio) = (From c In context.ComoConocios Select c).ToList()
 
         For Each c As ComoConocio In como
@@ -299,7 +293,6 @@ Public Class frmPaciente_Editar
 
     Private Sub btn_Eliminar_Click(sender As Object, e As EventArgs) Handles btn_Eliminar.Click
         If GridEXContactos.SelectedItems.Count > 0 Then
-            Dim context As New CMLinqDataContext()
             Dim cont As ContactosPaciente = GridEXContactos.SelectedItems(0).GetRow().DataRow
             Dim contacto As ContactosPaciente = (From c In context.ContactosPacientes _
                                                 Where c.IdContacto = cont.IdContacto _
@@ -342,7 +335,6 @@ Public Class frmPaciente_Editar
 
 
             Try
-                Dim context As New CMLinqDataContext()
                 context.Asociados.InsertOnSubmit(aso)
 
 
@@ -366,7 +358,6 @@ Public Class frmPaciente_Editar
 
             Try
                 Dim socio As Asociado = GridEXSocios.SelectedItems(0).GetRow().DataRow
-                Dim context As New CMLinqDataContext()
                 Dim s As Asociado = (From k In context.Asociados _
                                  Where k.IDPacienteBeneficiario = socio.IDPacienteBeneficiario _
                                  And k.IDPacienteOrigen = socio.IDPacienteOrigen _
@@ -388,7 +379,6 @@ Public Class frmPaciente_Editar
 
     Function DameAsociacion(ByVal idPaciente As Integer) As Asociado
         'Esta funcion revisa a ver si el idPaciente ya esta en la tabla Asociados
-        Dim context As New CMLinqDataContext()
         Dim lista As List(Of Asociado) = (From a In context.Asociados _
                                               Where a.IDPacienteBeneficiario = idPaciente _
                                               Select a).ToList()
@@ -412,7 +402,6 @@ Public Class frmPaciente_Editar
         Dim ofd_imagenPaciente As New System.Windows.Forms.OpenFileDialog()
         If ofd_imagenPaciente.ShowDialog() = Windows.Forms.DialogResult.OK And ofd_imagenPaciente.FileName <> "" Then
             Try
-                Dim context As New CMLinqDataContext()
                 Dim pac As PACIENTE = (From p In context.PACIENTEs Where p.CPACIENTE = Me.IDPACIENTE Select p).First()
                 Dim _imagen As Bitmap = New Bitmap(ofd_imagenPaciente.FileName)
                 Dim _indice As Integer = ofd_imagenPaciente.FileName.LastIndexOf("\")
@@ -436,7 +425,6 @@ Public Class frmPaciente_Editar
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If Not fImagen Is Nothing Then
-            Dim context As New CMLinqDataContext()
             Dim pac As PACIENTE = (From p In context.PACIENTEs Where p.CPACIENTE = Me.IDPACIENTE Select p).First()
             pac.FOTO = Nothing
             pac.FOTOGRAFIA = Nothing
@@ -454,14 +442,12 @@ Public Class frmPaciente_Editar
     End Sub
 
     Private Sub CargarMutuas()
-        Dim context As New CMLinqDataContext()
         Dim paciente As PACIENTE = (From p In context.PACIENTEs Where p.CPACIENTE = Me.IDPACIENTE Select p).First()
 
         CargarMutuas(paciente)
     End Sub
 
     Private Sub CargarMutuas(pac As PACIENTE)
-        Dim context As New CMLinqDataContext()
         GridEXMutuas.DataSource = Nothing
         LMUTUABindingSource.DataSource = pac.LMUTUAs
         GridEXMutuas.DataSource = LMUTUABindingSource
@@ -482,14 +468,11 @@ Public Class frmPaciente_Editar
     End Sub
 
     Private Sub CargarEmpresas()
-        Dim context As New CMLinqDataContext()
         Dim pac As PACIENTE = (From p In context.PACIENTEs Where p.CPACIENTE = Me.IDPACIENTE Select p).First()
         CargarEmpresas(pac)
     End Sub
 
     Private Sub CargarEmpresas(pac As PACIENTE)
-        Dim context As New CMLinqDataContext()
-
         GridEXEmpresas.DataSource = Nothing
         LEMPRESABindingSource.DataSource = pac.LEMPRESAs.Where(Function(k) k.EMPRESA.Eliminado.HasValue And k.EMPRESA.Eliminado = False)
 
@@ -572,7 +555,6 @@ Public Class frmPaciente_Editar
             If _annadirMutua.FECHABAJADateTimePicker.Checked Then
                 _lmutua.FECHABAJA = _annadirMutua.FECHABAJADateTimePicker.Value
             End If
-            Dim context As New CMLinqDataContext()
 
             context.LMUTUAs.InsertOnSubmit(_lmutua)
             context.SubmitChanges()
@@ -592,7 +574,6 @@ Public Class frmPaciente_Editar
             Return
         End If
         Dim _lmutua As LMUTUA = GridEXMutuas.SelectedItems(0).GetRow.DataRow
-        Dim context As New CMLinqDataContext()
 
         _lmutua = (From l In context.LMUTUAs Where l.CODIGO = _lmutua.CODIGO Select l).First()
         Dim _annadirMutua As New frmLineaMutua_Editar(Me.IDPACIENTE)
@@ -634,7 +615,6 @@ Public Class frmPaciente_Editar
 
         If MessageBox.Show("Desea eliminar esta mutua?", "Confirmación", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
             Dim _lmutua As LMUTUA = GridEXMutuas.SelectedItems(0).GetRow.DataRow
-            Dim context As New CMLinqDataContext()
 
             _lmutua = (From l In context.LMUTUAs Where l.CODIGO = _lmutua.CODIGO Select l).First()
 
@@ -662,7 +642,6 @@ Public Class frmPaciente_Editar
     End Sub
 
     Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
-        Dim context As New CMLinqDataContext()
 
         Dim linea As New LEMPRESA()
         linea.REFPACIENTE = Me.IDPACIENTE
@@ -694,7 +673,6 @@ Public Class frmPaciente_Editar
             Return
         End If
 
-        Dim context As New CMLinqDataContext()
         Dim linea As LEMPRESA = GridEXEmpresas.SelectedItems(0).GetRow.DataRow
         Dim idlinea = linea.REFEMPRESA
         linea = (From l In context.LEMPRESAs Where l.CODIGO = linea.CODIGO Select l).First()
@@ -720,7 +698,6 @@ Public Class frmPaciente_Editar
             Return
         End If
 
-        Dim context As New CMLinqDataContext()
         Dim linea As LEMPRESA = GridEXEmpresas.SelectedItems(0).GetRow.DataRow
 
         linea = (From l In context.LEMPRESAs Where l.CODIGO = linea.CODIGO Select l).First()
@@ -746,7 +723,6 @@ Public Class frmPaciente_Editar
     End Sub
 
     Private Sub CtrlEmpresa1_EMPRESASeleccionado(IdEMPRESAS As Integer, IsReturnPressed As Boolean) Handles CtrlEmpresa1.EMPRESASeleccionado
-        Dim context As New CMLinqDataContext
         If CtrlMutua1.ID_MUTUA Is Nothing Then
             Dim empresa As EMPRESA = context.EMPRESAs.Single(Function(e) e.CEMPRESA = IdEMPRESAS)
             If Not empresa Is Nothing Then
@@ -1066,8 +1042,6 @@ Public Class frmPaciente_Editar
             If MessageBox.Show("Desea establecer esta mutua como la actual para el paciente ", "Modificar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
                 Me.CtrlMutua1.ID_MUTUA = _lmutua.REFMUTUA
             End If
-
-            Dim context As New CMLinqDataContext()
 
             If Globales.Mutua_Existe(_lmutua.REFMUTUA, Me.IDPACIENTE) Then
                 Dim lm As LMUTUA = pac.LMUTUAs.Where(Function(o) o.REFMUTUA = CtrlMutua1.ID_MUTUA).SingleOrDefault
