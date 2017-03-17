@@ -101,17 +101,9 @@ Public Class frmPaciente_Editar
         Me.Close()
     End Sub
 
-    Private Sub CalcularEdad()
-        PACIENTESBindingSource.EndEdit()
-
-        tb_dpEdad.Text = PACIENTESBindingSource.Current.Edad
-    End Sub
-
     Private Sub frmPaciente_Editar_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         FreeMemory.FlushMemory()
     End Sub
-
-
 
     Private Sub frmPaciente_Editar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim idPaciente As Integer = Me.IDPACIENTE
@@ -133,10 +125,8 @@ Public Class frmPaciente_Editar
             Me.dtp_dpFechabaja.Checked = True
         End If
 
-        CargarComoNosConocio(pac)
-
         If Not pac.FECHAN Is Nothing Then
-            CalcularEdad()
+            tb_dpEdad.Text = PACIENTESBindingSource.Current.Edad
         End If
 
         cb_dpSexo.Items.Add("Hombre")
@@ -217,6 +207,7 @@ Public Class frmPaciente_Editar
 
         CargarAsociados()
         CargarContactos()
+        CargarComoNosConocio(pac)
         CargarEmpresas(pac)
         CargarMutuas(pac)
         AplicaPermisos()
@@ -438,7 +429,8 @@ Public Class frmPaciente_Editar
     End Sub
 
     Private Sub dtp_dpFeNac_ValueChanged(sender As Object, e As EventArgs) Handles dtp_dpFeNac.Leave
-        CalcularEdad()
+        PACIENTESBindingSource.EndEdit()
+        tb_dpEdad.Text = PACIENTESBindingSource.Current.Edad
     End Sub
 
     Private Sub CargarMutuas()
