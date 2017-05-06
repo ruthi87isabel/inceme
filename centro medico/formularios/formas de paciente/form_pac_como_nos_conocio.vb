@@ -27,7 +27,7 @@ Public Class form_pac_como_nos_conocio
 
         InicializaPacientesConocio()
         CargarResultados()
-        ComoConocioBindingSource.DataSource = (From c In context.ComoConocios Select c).ToList()
+        ComoConocioBindingSource.DataSource = (From c In context.ComoConocios Select c Order By c.Descripcion).ToList()
 
     End Sub
 
@@ -91,7 +91,7 @@ Public Class form_pac_como_nos_conocio
                 Next
             End If
         Else
-            For Each a As ComoConocio In (From c In context.ComoConocios Select c).ToList()
+            For Each a As ComoConocio In (From c In context.ComoConocios Select c Order By c.Descripcion).ToList()
                 dTable = Me.PacientesconocioTableAdapter.GetData(nombre, If(pApellido <> "", pApellido, Nothing), If(sApellido <> "", sApellido, Nothing), a.Descripcion, If(dtp_fi.Checked, FechaIni, Nothing), If(dtp_ff.Checked, FechaFin, Nothing))
                 ListResult.Add("[" & dTable.Count & "] " & a.Descripcion)
                 dTable1.Merge(dTable, True)

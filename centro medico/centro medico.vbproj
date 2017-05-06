@@ -229,6 +229,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLLS\TestNotifyWindow.dll</HintPath>
     </Reference>
+    <Reference Include="ToggleSwitch">
+      <HintPath>..\..\..\inceme\DLLS\ToggleSwitch.dll</HintPath>
+    </Reference>
     <Reference Include="ZedGraph, Version=5.0.9.41461, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLLS\ZedGraph.dll</HintPath>
@@ -271,6 +274,12 @@
       <DependentUpon>Form_DashBoard.vb</DependentUpon>
     </Compile>
     <Compile Include="formularios\Form_DashBoard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Form_Recordatorio.Designer.vb">
+      <DependentUpon>Form_Recordatorio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Form_Recordatorio.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmConnectionDB.Designer.vb">
@@ -2679,6 +2688,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\Form_DashBoard.resx">
       <DependentUpon>Form_DashBoard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Form_Recordatorio.resx">
+      <DependentUpon>Form_Recordatorio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\listado_faltas.resx">
       <DependentUpon>listado_faltas.vb</DependentUpon>

@@ -117,15 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ajax-loader" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ajax-loader.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon_Hospitales Externos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_Hospitales Externos.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PartPag1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new\PartPag1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="stack 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stack 2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -164,8 +161,11 @@ GROUP BY PACIENTES.CPACIENTE, PACIENTES.NOMBRE, CONCEPTOSFACTURABLES.IMPORTE, PA
   <data name="delete_picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete_picture.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_24_frame_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\24-frame-open.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_24_tag_hot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24-tag-hot.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new\new_delete.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon_Roles y Permisos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_Roles y Permisos.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -200,8 +200,8 @@ GROUP BY PACIENTES.CPACIENTE, PACIENTES.NOMBRE, CONCEPTOSFACTURABLES.IMPORTE, PA
   <data name="IconE_Medico" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\IconE_Medico.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Recaida" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Recaida.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Procesos_Abierto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Procesos_Abierto.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_24_tag_manager" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\24-tag-manager.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -263,8 +263,8 @@ GROUP BY PACIENTES.CPACIENTE, PACIENTES.NOMBRE, CONCEPTOSFACTURABLES.IMPORTE, PA
   <data name="Icon_Ingresos Citas-Medicos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_Ingresos Citas-Medicos.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Icon_BonosNoAgotados" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new\Icon_BonosNoAgotados.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Medico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Medico.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_24_tag_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\24-tag-add.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -331,6 +331,9 @@ GROUP BY PACIENTES.CPACIENTE, PACIENTES.NOMBRE, CONCEPTOSFACTURABLES.IMPORTE, PA
   <data name="Icon_Recibos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_Recibos.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="IconE_GenerarFactura" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new\IconE_GenerarFactura.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="_24_book_blue_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\24-book-blue-open.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -373,9 +376,6 @@ GROUP BY PACIENTES.CPACIENTE, PACIENTES.NOMBRE, CONCEPTOSFACTURABLES.IMPORTE, PA
   <data name="Icon_Gastos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_Gastos.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Medico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Medico.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="diente" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\diente.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -397,6 +397,9 @@ GROUP BY PACIENTES.CPACIENTE, PACIENTES.NOMBRE, CONCEPTOSFACTURABLES.IMPORTE, PA
   <data name="_24_book_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\24-book-green.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Recaida" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Recaida.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="IconE_Factura" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\IconE_Factura.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -405,9 +408,6 @@ GROUP BY PACIENTES.CPACIENTE, PACIENTES.NOMBRE, CONCEPTOSFACTURABLES.IMPORTE, PA
   </data>
   <data name="IconE_ImprimirRemesa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\IconE_ImprimirRemesa.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_24_book_red_check" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\24-book-red-check.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_24_tab" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\24-tab.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -448,9 +448,6 @@ GROUP BY PACIENTES.CPACIENTE, PACIENTES.NOMBRE, CONCEPTOSFACTURABLES.IMPORTE, PA
   <data name="Icon_LiquidacionMedicos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_LiquidacionMedicos.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_24_tag_hot" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\24-tag-hot.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="BINOCULR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BINOCULR.ICO;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -459,6 +456,9 @@ GROUP BY PACIENTES.CPACIENTE, PACIENTES.NOMBRE, CONCEPTOSFACTURABLES.IMPORTE, PA
   </data>
   <data name="Icon_Diagnostico" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_Diagnostico.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconE_Proveedores" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new\IconE_Proveedores.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_24_tag_check" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\24-tag-check.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -469,8 +469,8 @@ GROUP BY PACIENTES.CPACIENTE, PACIENTES.NOMBRE, CONCEPTOSFACTURABLES.IMPORTE, PA
   <data name="lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lock.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IconE_Como_nos_Conocio" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new\IconE_Como nos Conocio.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IconE_Informe_de_Ingresos_y_Gastos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\IconE_Informe de Ingresos y Gastos.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -520,6 +520,9 @@ GROUP BY PACIENTES.CPACIENTE, PACIENTES.NOMBRE, CONCEPTOSFACTURABLES.IMPORTE, PA
   <data name="Pie Chart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pie Chart.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MISC18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MISC18.ICO;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="_24_book_blue_remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\24-book-blue-remove.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -538,11 +541,11 @@ GROUP BY PACIENTES.CPACIENTE, PACIENTES.NOMBRE, CONCEPTOSFACTURABLES.IMPORTE, PA
   <data name="Icon_Pedodo a Proveedor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_Pedodo a Proveedor.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_24_book_green_mark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\24-book-green-mark.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Box50closed32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Box50closed32x321.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IconE_Roles_y_Permisos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new\IconE_Roles y Permisos.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_24_message_warn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24-message-warn.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon_Listado de Tickets" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_Listado de Tickets.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -550,17 +553,8 @@ GROUP BY PACIENTES.CPACIENTE, PACIENTES.NOMBRE, CONCEPTOSFACTURABLES.IMPORTE, PA
   <data name="Ambulancia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ambulancia.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Procesos_Abierto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Procesos_Abierto.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="MISC19" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MISC19.ICO;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_24_message_warn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\24-message-warn.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_24_security_lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\24-security-lock.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -595,6 +589,9 @@ GROUP BY PACIENTES.CPACIENTE, PACIENTES.NOMBRE, CONCEPTOSFACTURABLES.IMPORTE, PA
   <data name="Icon_PresupuestosDentales" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_PresupuestosDentales.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Icon_ParteAltas-Bajas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new\Icon_ParteAltas-Bajas.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="_24_em_plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\24-em-plus.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -604,11 +601,8 @@ GROUP BY PACIENTES.CPACIENTE, PACIENTES.NOMBRE, CONCEPTOSFACTURABLES.IMPORTE, PA
   <data name="IconE_Reviciones_Comparadas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\IconE_Reviciones Comparadas.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_24_tab_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\24-tab-open.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="male14" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\male14.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Icon_DuplicPaciente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new\Icon_DuplicPaciente.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CHECKMRK" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CHECKMRK.ICO;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -616,17 +610,14 @@ GROUP BY PACIENTES.CPACIENTE, PACIENTES.NOMBRE, CONCEPTOSFACTURABLES.IMPORTE, PA
   <data name="_24_arrow_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\24-arrow-back.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IconE_Recetas_y_Tratamientos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new\IconE_Recetas y Tratamientos.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_24_frame_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24-frame-open.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon_Medico" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_Medico.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Exit21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Exit2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MISC18" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MISC18.ICO;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IconE_Auditoria" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\IconE_Auditoria.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -702,6 +693,9 @@ GROUP BY PACIENTES.CPACIENTE, PACIENTES.NOMBRE, CONCEPTOSFACTURABLES.IMPORTE, PA
   </data>
   <data name="asistente" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\asistente.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Familia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new\Icon_Familia.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon_DashBoard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_DashBoard.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -817,14 +811,14 @@ COMMIT
   <data name="IconE_Empresa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\IconE_Empresa.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="floppy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\floppy.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Log Off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Log Off.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon_Importar Datos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_Importar Datos.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IconE_Horario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new\IconE_Horario.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_24_settings_orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\24-settings-orange.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -838,8 +832,8 @@ COMMIT
   <data name="indicaciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\indicaciones.jpeg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Line Chart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Line Chart.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_24_security_key" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\24-security-key.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -850,6 +844,9 @@ COMMIT
   <data name="IconE_Listado_de_Tickets" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\IconE_Listado de Tickets.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="IconE_Roles_y_Permisos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new\IconE_Roles y Permisos.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="_24_book_green_check" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\24-book-green-check.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -859,8 +856,8 @@ COMMIT
   <data name="Icon_Procesos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_Procesos.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IconE_Proveedores" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new\IconE_Proveedores.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_24_book_red_check" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24-book-red-check.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Dollar Sign" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dollar Sign.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -868,14 +865,11 @@ COMMIT
   <data name="_24_imageset_check" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\24-imageset-check.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Exit.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon-update" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-update.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_24_tab_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24-tab-open.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="16-em-cross" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\16-em-cross.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -889,8 +883,8 @@ COMMIT
   <data name="Icon_Alarma" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_Alarma.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search16x16.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Icon_Recordatorio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new\Icon_Recordatorio.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IconE_Mutuas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\IconE_Mutuas.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -907,9 +901,6 @@ COMMIT
   <data name="muela" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\muela.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Box50closed32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Box50closed32x321.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="_24_heart_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\24-heart-red.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -921,6 +912,9 @@ COMMIT
   </data>
   <data name="Icon_Planillas Historial" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_Planillas Historial.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_Lista_Pacientes-Conocio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new\Icon_Lista_Pacientes-Conocio.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon_Listado de Recibos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_Listado de Recibos.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -946,6 +940,9 @@ COMMIT
   <data name="_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Icon_BonosNoAgotados" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new\Icon_BonosNoAgotados.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Icon_DebitoPaciente" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_DebitoPaciente.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -954,6 +951,9 @@ COMMIT
   </data>
   <data name="PacienteDebito" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PacienteDebito.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconE_Como_nos_Conocio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new\IconE_Como nos Conocio.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IconE_DashBoard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\IconE_DashBoard.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -979,6 +979,9 @@ COMMIT
   <data name="newfolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newfolder.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon-update" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-update.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="newpag" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\newpag.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -988,8 +991,8 @@ COMMIT
   <data name="Icon_Manual de Instrucciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_Manual de Instrucciones.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Allergy Vials" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Allergy Vials.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PartPag1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new\PartPag1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IconE_AsistenteFacturacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\IconE_AsistenteFacturacion.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1021,6 +1024,9 @@ COMMIT
   <data name="Icon_Listado de Faltas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_Listado de Faltas.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pacienteSingular16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pacienteSingular16x16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="_24_book_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\24-book-blue.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -1035,6 +1041,9 @@ COMMIT
   </data>
   <data name="Icon_Analitica" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_Analitica.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Allergy Vials" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Allergy Vials.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IconE_Galeria_de_Imagenes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\IconE_Galeria de Imagenes.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1054,8 +1063,8 @@ COMMIT
   <data name="_24_arrow_forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\24-arrow-forward.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="spacer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\spacer.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="male14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\male14.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_24_imageset_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\24-imageset-open.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1083,6 +1092,9 @@ COMMIT
   </data>
   <data name="Checked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Checked.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spacer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spacer.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon_Tarifa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_Tarifa.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1123,14 +1135,17 @@ COMMIT
   <data name="IconE_BonosNoAgotados" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\IconE_BonosNoAgotados.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="IconE_Recetas_y_Tratamientos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new\IconE_Recetas y Tratamientos.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="IconE_Planillas_Historial" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\IconE_Planillas Historial.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="All-mail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\All-mail.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="floppy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\floppy.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Line Chart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Line Chart.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="doctor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\doctor.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1143,9 +1158,6 @@ COMMIT
   </data>
   <data name="_24_heart_silver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\24-heart-silver.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pacienteSingular16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pacienteSingular16x16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="strSqlPacientesPorDiagnostico" xml:space="preserve">
     <value>SELECT     PACIENTES.NOMBRE, PACIENTES.APELLIDO1, PACIENTES.APELLIDO2, AntecedentesDiagnosticos.DIAGNOSTICO, 
@@ -1205,9 +1217,6 @@ WHERE     (PACIENTES_2.FECHAALTA IS NULL OR
   <data name="yellow_cross" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\yellow_cross.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Button-Favorite-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Button-Favorite-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="1449807294_Chart_bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1449807294_Chart_bar.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -1223,14 +1232,11 @@ WHERE     (PACIENTES_2.FECHAALTA IS NULL OR
   <data name="IconE_ParteAsistencia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\IconE_ParteAsistencia.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IconE_Opciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new\IconE_Opciones.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="FONDO2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FONDO2.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_24_book_green_remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\24-book-green-remove.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IconE_Horario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new\IconE_Horario.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon_ParteAsistencia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_ParteAsistencia.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1289,14 +1295,17 @@ WHERE     (PACIENTES_2.FECHAALTA IS NULL OR
   <data name="IconE_Recibos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\IconE_Recibos.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Icon_ParteAltas-Bajas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new\Icon_ParteAltas-Bajas.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_24_book_green_mark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24-book-green-mark.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon_Horario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_Horario.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IconE_Planillas_Analiticas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\IconE_Planillas Analiticas.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_24_book_green_remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24-book-green-remove.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon_Salas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\Icon_Salas.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1307,8 +1316,8 @@ WHERE     (PACIENTES_2.FECHAALTA IS NULL OR
   <data name="mutua" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mutua.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Exit11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new\Exit1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IconE_Opciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new\IconE_Opciones.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Search1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Search1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1316,8 +1325,8 @@ WHERE     (PACIENTES_2.FECHAALTA IS NULL OR
   <data name="Next" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Next.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IconE_GenerarFactura" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new\IconE_GenerarFactura.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Button-Favorite-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Favorite-icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IconE_Procesos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\IconE_Procesos.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1361,8 +1370,11 @@ WHERE     (PACIENTES_2.FECHAALTA IS NULL OR
   <data name="IconE_Configuración_de_Usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\IconE_Configuración de Usuario.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Icon_Familia" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new\Icon_Familia.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Exit11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new\Exit1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search16x16.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="plus16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plus16x16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1397,8 +1409,16 @@ WHERE     (PACIENTES_2.FECHAALTA IS NULL OR
   <data name="IconE_Gastos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new\IconE_Gastos.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Icon_DuplicPaciente" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new\Icon_DuplicPaciente.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="new_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new\new_add.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconE_Lista_Pacientes_Conocio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new\IconE_Lista_Pacientes-Conocio.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconE_Recordatorio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new\IconE_Recordatorio.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Recordatorio_Icon_png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new\Recordatorio_Icon.png.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

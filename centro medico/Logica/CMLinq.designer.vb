@@ -703,6 +703,12 @@ Partial Public Class CMLinqDataContext
     End Sub
   Partial Private Sub DeleteDescartar_Pacientes_Duplicado(instance As Descartar_Pacientes_Duplicado)
     End Sub
+  Partial Private Sub InsertRecordatorio(instance As Recordatorio)
+    End Sub
+  Partial Private Sub UpdateRecordatorio(instance As Recordatorio)
+    End Sub
+  Partial Private Sub DeleteRecordatorio(instance As Recordatorio)
+    End Sub
   #End Region
 	
 	Public Sub New()
@@ -1411,6 +1417,12 @@ Partial Public Class CMLinqDataContext
 	Public ReadOnly Property Descartar_Pacientes_Duplicados() As System.Data.Linq.Table(Of Descartar_Pacientes_Duplicado)
 		Get
 			Return Me.GetTable(Of Descartar_Pacientes_Duplicado)
+		End Get
+	End Property
+	
+	Public ReadOnly Property Recordatorios() As System.Data.Linq.Table(Of Recordatorio)
+		Get
+			Return Me.GetTable(Of Recordatorio)
 		End Get
 	End Property
 End Class
@@ -42165,6 +42177,204 @@ Partial Public Class Descartar_Pacientes_Duplicado
 					Me._Id_Paciente_Origen = CType(Nothing, Integer)
 				End If
 				Me.SendPropertyChanged("PACIENTE1")
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.Recordatorio")>  _
+Partial Public Class Recordatorio
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _IdRecordatorio As Integer
+	
+	Private _IdUsuario As Integer
+	
+	Private _Fecha As Date
+	
+	Private _Hora As Date
+	
+	Private _Activo As Boolean
+	
+	Private _Asunto As String
+	
+	Private _Anotación As String
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnIdRecordatorioChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnIdRecordatorioChanged()
+    End Sub
+    Partial Private Sub OnIdUsuarioChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnIdUsuarioChanged()
+    End Sub
+    Partial Private Sub OnFechaChanging(value As Date)
+    End Sub
+    Partial Private Sub OnFechaChanged()
+    End Sub
+    Partial Private Sub OnHoraChanging(value As Date)
+    End Sub
+    Partial Private Sub OnHoraChanged()
+    End Sub
+    Partial Private Sub OnActivoChanging(value As Boolean)
+    End Sub
+    Partial Private Sub OnActivoChanged()
+    End Sub
+    Partial Private Sub OnAsuntoChanging(value As String)
+    End Sub
+    Partial Private Sub OnAsuntoChanged()
+    End Sub
+    Partial Private Sub OnAnotaciónChanging(value As String)
+    End Sub
+    Partial Private Sub OnAnotaciónChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IdRecordatorio", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property IdRecordatorio() As Integer
+		Get
+			Return Me._IdRecordatorio
+		End Get
+		Set
+			If ((Me._IdRecordatorio = value)  _
+						= false) Then
+				Me.OnIdRecordatorioChanging(value)
+				Me.SendPropertyChanging
+				Me._IdRecordatorio = value
+				Me.SendPropertyChanged("IdRecordatorio")
+				Me.OnIdRecordatorioChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IdUsuario", DbType:="Int NOT NULL")>  _
+	Public Property IdUsuario() As Integer
+		Get
+			Return Me._IdUsuario
+		End Get
+		Set
+			If ((Me._IdUsuario = value)  _
+						= false) Then
+				Me.OnIdUsuarioChanging(value)
+				Me.SendPropertyChanging
+				Me._IdUsuario = value
+				Me.SendPropertyChanged("IdUsuario")
+				Me.OnIdUsuarioChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Fecha", DbType:="Date NOT NULL")>  _
+	Public Property Fecha() As Date
+		Get
+			Return Me._Fecha
+		End Get
+		Set
+			If ((Me._Fecha = value)  _
+						= false) Then
+				Me.OnFechaChanging(value)
+				Me.SendPropertyChanging
+				Me._Fecha = value
+				Me.SendPropertyChanged("Fecha")
+				Me.OnFechaChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Hora", DbType:="DateTime NOT NULL")>  _
+	Public Property Hora() As Date
+		Get
+			Return Me._Hora
+		End Get
+		Set
+			If ((Me._Hora = value)  _
+						= false) Then
+				Me.OnHoraChanging(value)
+				Me.SendPropertyChanging
+				Me._Hora = value
+				Me.SendPropertyChanged("Hora")
+				Me.OnHoraChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Activo", DbType:="Bit NOT NULL")>  _
+	Public Property Activo() As Boolean
+		Get
+			Return Me._Activo
+		End Get
+		Set
+			If ((Me._Activo = value)  _
+						= false) Then
+				Me.OnActivoChanging(value)
+				Me.SendPropertyChanging
+				Me._Activo = value
+				Me.SendPropertyChanged("Activo")
+				Me.OnActivoChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Asunto", DbType:="NVarChar(50) NOT NULL", CanBeNull:=false)>  _
+	Public Property Asunto() As String
+		Get
+			Return Me._Asunto
+		End Get
+		Set
+			If (String.Equals(Me._Asunto, value) = false) Then
+				Me.OnAsuntoChanging(value)
+				Me.SendPropertyChanging
+				Me._Asunto = value
+				Me.SendPropertyChanged("Asunto")
+				Me.OnAsuntoChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Anotación", DbType:="NVarChar(500)")>  _
+	Public Property Anotación() As String
+		Get
+			Return Me._Anotación
+		End Get
+		Set
+			If (String.Equals(Me._Anotación, value) = false) Then
+				Me.OnAnotaciónChanging(value)
+				Me.SendPropertyChanging
+				Me._Anotación = value
+				Me.SendPropertyChanged("Anotación")
+				Me.OnAnotaciónChanged
 			End If
 		End Set
 	End Property

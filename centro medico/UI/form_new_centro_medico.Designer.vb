@@ -116,6 +116,7 @@ Partial Class form_new_centro_medico
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.UiGroupBox1 = New Janus.Windows.EditControls.UIGroupBox()
+        Me.Button84 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
@@ -220,6 +221,7 @@ Partial Class form_new_centro_medico
         Me.Button36 = New System.Windows.Forms.Button()
         Me.Button37 = New System.Windows.Forms.Button()
         Me.UiGroupBox5 = New Janus.Windows.EditControls.UIGroupBox()
+        Me.Button83 = New System.Windows.Forms.Button()
         Me.Button55 = New System.Windows.Forms.Button()
         Me.Button56 = New System.Windows.Forms.Button()
         Me.Button57 = New System.Windows.Forms.Button()
@@ -257,6 +259,7 @@ Partial Class form_new_centro_medico
         Me.Button87 = New System.Windows.Forms.Button()
         Me.SearchCPropio = New System.Windows.Forms.TextBox()
         Me.SearchCPaciente = New System.Windows.Forms.TextBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UiGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -305,9 +308,10 @@ Partial Class form_new_centro_medico
         '
         Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(24, 18)
+        Me.PictureBox1.Location = New System.Drawing.Point(32, 22)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(47, 43)
+        Me.PictureBox1.Size = New System.Drawing.Size(63, 53)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
@@ -318,9 +322,10 @@ Partial Class form_new_centro_medico
         Me.lb_usuario.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lb_usuario.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lb_usuario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(82, Byte), Integer))
-        Me.lb_usuario.Location = New System.Drawing.Point(79, 28)
+        Me.lb_usuario.Location = New System.Drawing.Point(105, 34)
+        Me.lb_usuario.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lb_usuario.Name = "lb_usuario"
-        Me.lb_usuario.Size = New System.Drawing.Size(74, 22)
+        Me.lb_usuario.Size = New System.Drawing.Size(94, 27)
         Me.lb_usuario.TabIndex = 1
         Me.lb_usuario.Text = "Usuario"
         '
@@ -328,9 +333,10 @@ Partial Class form_new_centro_medico
         '
         Me.SearchText.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic)
         Me.SearchText.ForeColor = System.Drawing.Color.DarkGray
-        Me.SearchText.Location = New System.Drawing.Point(720, 30)
+        Me.SearchText.Location = New System.Drawing.Point(960, 37)
+        Me.SearchText.Margin = New System.Windows.Forms.Padding(4)
         Me.SearchText.Name = "SearchText"
-        Me.SearchText.Size = New System.Drawing.Size(223, 25)
+        Me.SearchText.Size = New System.Drawing.Size(296, 29)
         Me.SearchText.TabIndex = 2
         Me.SearchText.Text = "Buscar Pacientes"
         '
@@ -338,9 +344,10 @@ Partial Class form_new_centro_medico
         '
         Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(952, 27)
+        Me.PictureBox2.Location = New System.Drawing.Point(1269, 33)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox2.Size = New System.Drawing.Size(40, 37)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 3
         Me.PictureBox2.TabStop = False
@@ -351,9 +358,10 @@ Partial Class form_new_centro_medico
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(82, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(251, 103)
+        Me.Label1.Location = New System.Drawing.Point(335, 127)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(181, 46)
+        Me.Label1.Size = New System.Drawing.Size(225, 58)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "INCEME"
         '
@@ -364,25 +372,40 @@ Partial Class form_new_centro_medico
         Me.UiGroupBox1.AutoScroll = True
         Me.UiGroupBox1.BackColor = System.Drawing.Color.Transparent
         Me.UiGroupBox1.BorderColor = System.Drawing.Color.Transparent
+        Me.UiGroupBox1.Controls.Add(Me.Button84)
         Me.UiGroupBox1.Controls.Add(Me.Button8)
         Me.UiGroupBox1.Controls.Add(Me.Button7)
         Me.UiGroupBox1.Controls.Add(Me.Button6)
         Me.UiGroupBox1.Controls.Add(Me.Button5)
         Me.UiGroupBox1.Controls.Add(Me.Button4)
         Me.UiGroupBox1.Controls.Add(Me.Button3)
-        Me.UiGroupBox1.Location = New System.Drawing.Point(258, 149)
+        Me.UiGroupBox1.Location = New System.Drawing.Point(344, 183)
+        Me.UiGroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.UiGroupBox1.Name = "UiGroupBox1"
-        Me.UiGroupBox1.Size = New System.Drawing.Size(750, 471)
+        Me.UiGroupBox1.Size = New System.Drawing.Size(1000, 580)
         Me.UiGroupBox1.TabIndex = 5
+        '
+        'Button84
+        '
+        Me.Button84.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button84.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button84.Image = Global.centro_medico.My.Resources.Resources.Icon_Recordatorio
+        Me.Button84.Location = New System.Drawing.Point(497, 212)
+        Me.Button84.Margin = New System.Windows.Forms.Padding(5)
+        Me.Button84.Name = "Button84"
+        Me.Button84.Size = New System.Drawing.Size(229, 191)
+        Me.Button84.TabIndex = 19
+        Me.Button84.UseVisualStyleBackColor = True
         '
         'Button8
         '
         Me.Button8.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button8.Image = CType(resources.GetObject("Button8.Image"), System.Drawing.Image)
-        Me.Button8.Location = New System.Drawing.Point(188, 172)
+        Me.Button8.Location = New System.Drawing.Point(251, 212)
+        Me.Button8.Margin = New System.Windows.Forms.Padding(4)
         Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(172, 155)
+        Me.Button8.Size = New System.Drawing.Size(229, 191)
         Me.Button8.TabIndex = 18
         Me.Button8.UseVisualStyleBackColor = True
         '
@@ -391,9 +414,10 @@ Partial Class form_new_centro_medico
         Me.Button7.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button7.Image = CType(resources.GetObject("Button7.Image"), System.Drawing.Image)
-        Me.Button7.Location = New System.Drawing.Point(3, 172)
+        Me.Button7.Location = New System.Drawing.Point(4, 212)
+        Me.Button7.Margin = New System.Windows.Forms.Padding(4)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(172, 155)
+        Me.Button7.Size = New System.Drawing.Size(229, 191)
         Me.Button7.TabIndex = 17
         Me.Button7.UseVisualStyleBackColor = True
         '
@@ -402,9 +426,10 @@ Partial Class form_new_centro_medico
         Me.Button6.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
-        Me.Button6.Location = New System.Drawing.Point(558, 4)
+        Me.Button6.Location = New System.Drawing.Point(744, 5)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(4)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(172, 155)
+        Me.Button6.Size = New System.Drawing.Size(229, 191)
         Me.Button6.TabIndex = 16
         Me.Button6.UseVisualStyleBackColor = True
         '
@@ -413,9 +438,10 @@ Partial Class form_new_centro_medico
         Me.Button5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
-        Me.Button5.Location = New System.Drawing.Point(373, 4)
+        Me.Button5.Location = New System.Drawing.Point(497, 5)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(4)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(172, 155)
+        Me.Button5.Size = New System.Drawing.Size(229, 191)
         Me.Button5.TabIndex = 15
         Me.Button5.UseVisualStyleBackColor = True
         '
@@ -424,9 +450,10 @@ Partial Class form_new_centro_medico
         Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
-        Me.Button4.Location = New System.Drawing.Point(188, 4)
+        Me.Button4.Location = New System.Drawing.Point(251, 5)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(172, 155)
+        Me.Button4.Size = New System.Drawing.Size(229, 191)
         Me.Button4.TabIndex = 14
         Me.Button4.UseVisualStyleBackColor = True
         '
@@ -435,9 +462,10 @@ Partial Class form_new_centro_medico
         Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(3, 4)
+        Me.Button3.Location = New System.Drawing.Point(4, 5)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(172, 155)
+        Me.Button3.Size = New System.Drawing.Size(229, 191)
         Me.Button3.TabIndex = 13
         Me.Button3.UseVisualStyleBackColor = True
         '
@@ -817,9 +845,10 @@ Partial Class form_new_centro_medico
         Me.ExplorerBar1.ItemsStateStyles.FormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.ExplorerBar1.ItemsStateStyles.FormatStyle.FontBold = Janus.Windows.ExplorerBar.TriState.[False]
         Me.ExplorerBar1.ItemsStateStyles.FormatStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(82, Byte), Integer))
-        Me.ExplorerBar1.Location = New System.Drawing.Point(0, 147)
+        Me.ExplorerBar1.Location = New System.Drawing.Point(0, 181)
+        Me.ExplorerBar1.Margin = New System.Windows.Forms.Padding(4)
         Me.ExplorerBar1.Name = "ExplorerBar1"
-        Me.ExplorerBar1.Size = New System.Drawing.Size(256, 469)
+        Me.ExplorerBar1.Size = New System.Drawing.Size(341, 577)
         Me.ExplorerBar1.TabIndex = 0
         Me.ExplorerBar1.ThemedAreas = CType(((Janus.Windows.ExplorerBar.ThemedArea.Background Or Janus.Windows.ExplorerBar.ThemedArea.Border) _
             Or Janus.Windows.ExplorerBar.ThemedArea.Items), Janus.Windows.ExplorerBar.ThemedArea)
@@ -844,9 +873,10 @@ Partial Class form_new_centro_medico
         Me.UiGroupBox2.Controls.Add(Me.Button11)
         Me.UiGroupBox2.Controls.Add(Me.Button10)
         Me.UiGroupBox2.Controls.Add(Me.Button9)
-        Me.UiGroupBox2.Location = New System.Drawing.Point(258, 149)
+        Me.UiGroupBox2.Location = New System.Drawing.Point(344, 183)
+        Me.UiGroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.UiGroupBox2.Name = "UiGroupBox2"
-        Me.UiGroupBox2.Size = New System.Drawing.Size(750, 477)
+        Me.UiGroupBox2.Size = New System.Drawing.Size(1000, 587)
         Me.UiGroupBox2.TabIndex = 9
         Me.UiGroupBox2.Visible = False
         '
@@ -855,9 +885,10 @@ Partial Class form_new_centro_medico
         Me.Button15.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button15.Image = Global.centro_medico.My.Resources.Resources.Icon_Horario
-        Me.Button15.Location = New System.Drawing.Point(373, 172)
+        Me.Button15.Location = New System.Drawing.Point(497, 212)
+        Me.Button15.Margin = New System.Windows.Forms.Padding(4)
         Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(172, 155)
+        Me.Button15.Size = New System.Drawing.Size(229, 191)
         Me.Button15.TabIndex = 25
         Me.Button15.UseVisualStyleBackColor = True
         '
@@ -866,9 +897,10 @@ Partial Class form_new_centro_medico
         Me.Button14.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button14.Image = Global.centro_medico.My.Resources.Resources.Icon_DashBoard
-        Me.Button14.Location = New System.Drawing.Point(188, 172)
+        Me.Button14.Location = New System.Drawing.Point(251, 212)
+        Me.Button14.Margin = New System.Windows.Forms.Padding(4)
         Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(172, 155)
+        Me.Button14.Size = New System.Drawing.Size(229, 191)
         Me.Button14.TabIndex = 24
         Me.Button14.UseVisualStyleBackColor = True
         '
@@ -877,9 +909,10 @@ Partial Class form_new_centro_medico
         Me.Button13.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button13.Image = Global.centro_medico.My.Resources.Resources.Icon_LiquidacionMedicos
-        Me.Button13.Location = New System.Drawing.Point(2, 172)
+        Me.Button13.Location = New System.Drawing.Point(3, 212)
+        Me.Button13.Margin = New System.Windows.Forms.Padding(4)
         Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(172, 155)
+        Me.Button13.Size = New System.Drawing.Size(229, 191)
         Me.Button13.TabIndex = 23
         Me.Button13.UseVisualStyleBackColor = True
         '
@@ -888,9 +921,10 @@ Partial Class form_new_centro_medico
         Me.Button12.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button12.Image = Global.centro_medico.My.Resources.Resources.Icon_Gastos
-        Me.Button12.Location = New System.Drawing.Point(558, 4)
+        Me.Button12.Location = New System.Drawing.Point(744, 5)
+        Me.Button12.Margin = New System.Windows.Forms.Padding(4)
         Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(172, 155)
+        Me.Button12.Size = New System.Drawing.Size(229, 191)
         Me.Button12.TabIndex = 22
         Me.Button12.UseVisualStyleBackColor = True
         '
@@ -899,9 +933,10 @@ Partial Class form_new_centro_medico
         Me.Button11.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button11.Image = Global.centro_medico.My.Resources.Resources.Icon_Banco
-        Me.Button11.Location = New System.Drawing.Point(373, 4)
+        Me.Button11.Location = New System.Drawing.Point(497, 5)
+        Me.Button11.Margin = New System.Windows.Forms.Padding(4)
         Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(172, 155)
+        Me.Button11.Size = New System.Drawing.Size(229, 191)
         Me.Button11.TabIndex = 21
         Me.Button11.UseVisualStyleBackColor = True
         '
@@ -910,9 +945,10 @@ Partial Class form_new_centro_medico
         Me.Button10.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button10.Image = CType(resources.GetObject("Button10.Image"), System.Drawing.Image)
-        Me.Button10.Location = New System.Drawing.Point(188, 4)
+        Me.Button10.Location = New System.Drawing.Point(251, 5)
+        Me.Button10.Margin = New System.Windows.Forms.Padding(4)
         Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(172, 155)
+        Me.Button10.Size = New System.Drawing.Size(229, 191)
         Me.Button10.TabIndex = 20
         Me.Button10.UseVisualStyleBackColor = True
         '
@@ -921,9 +957,10 @@ Partial Class form_new_centro_medico
         Me.Button9.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button9.Image = CType(resources.GetObject("Button9.Image"), System.Drawing.Image)
-        Me.Button9.Location = New System.Drawing.Point(3, 4)
+        Me.Button9.Location = New System.Drawing.Point(4, 5)
+        Me.Button9.Margin = New System.Windows.Forms.Padding(4)
         Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(172, 155)
+        Me.Button9.Size = New System.Drawing.Size(229, 191)
         Me.Button9.TabIndex = 19
         Me.Button9.UseVisualStyleBackColor = True
         '
@@ -952,9 +989,10 @@ Partial Class form_new_centro_medico
         Me.UiGroupBox3.Controls.Add(Me.Button16)
         Me.UiGroupBox3.Controls.Add(Me.Button2)
         Me.UiGroupBox3.Controls.Add(Me.Button1)
-        Me.UiGroupBox3.Location = New System.Drawing.Point(258, 149)
+        Me.UiGroupBox3.Location = New System.Drawing.Point(344, 183)
+        Me.UiGroupBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.UiGroupBox3.Name = "UiGroupBox3"
-        Me.UiGroupBox3.Size = New System.Drawing.Size(750, 466)
+        Me.UiGroupBox3.Size = New System.Drawing.Size(1000, 574)
         Me.UiGroupBox3.TabIndex = 10
         Me.UiGroupBox3.Visible = False
         '
@@ -963,9 +1001,10 @@ Partial Class form_new_centro_medico
         Me.Button82.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button82.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button82.Image = Global.centro_medico.My.Resources.Resources.Icon_DebitoPaciente
-        Me.Button82.Location = New System.Drawing.Point(558, 508)
+        Me.Button82.Location = New System.Drawing.Point(744, 625)
+        Me.Button82.Margin = New System.Windows.Forms.Padding(4)
         Me.Button82.Name = "Button82"
-        Me.Button82.Size = New System.Drawing.Size(172, 155)
+        Me.Button82.Size = New System.Drawing.Size(229, 191)
         Me.Button82.TabIndex = 41
         Me.Button82.UseVisualStyleBackColor = True
         '
@@ -974,9 +1013,10 @@ Partial Class form_new_centro_medico
         Me.Button30.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button30.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button30.Image = Global.centro_medico.My.Resources.Resources.Icon_Cominicaciones
-        Me.Button30.Location = New System.Drawing.Point(188, 675)
+        Me.Button30.Location = New System.Drawing.Point(251, 831)
+        Me.Button30.Margin = New System.Windows.Forms.Padding(4)
         Me.Button30.Name = "Button30"
-        Me.Button30.Size = New System.Drawing.Size(172, 155)
+        Me.Button30.Size = New System.Drawing.Size(229, 191)
         Me.Button30.TabIndex = 40
         Me.Button30.UseVisualStyleBackColor = True
         '
@@ -985,9 +1025,10 @@ Partial Class form_new_centro_medico
         Me.Button29.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button29.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button29.Image = Global.centro_medico.My.Resources.Resources.Icon_Procesos
-        Me.Button29.Location = New System.Drawing.Point(3, 675)
+        Me.Button29.Location = New System.Drawing.Point(4, 831)
+        Me.Button29.Margin = New System.Windows.Forms.Padding(4)
         Me.Button29.Name = "Button29"
-        Me.Button29.Size = New System.Drawing.Size(172, 155)
+        Me.Button29.Size = New System.Drawing.Size(229, 191)
         Me.Button29.TabIndex = 39
         Me.Button29.UseVisualStyleBackColor = True
         '
@@ -996,9 +1037,10 @@ Partial Class form_new_centro_medico
         Me.Button28.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button28.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button28.Image = Global.centro_medico.My.Resources.Resources.Icon_ParteAsistencia
-        Me.Button28.Location = New System.Drawing.Point(374, 508)
+        Me.Button28.Location = New System.Drawing.Point(499, 625)
+        Me.Button28.Margin = New System.Windows.Forms.Padding(4)
         Me.Button28.Name = "Button28"
-        Me.Button28.Size = New System.Drawing.Size(172, 155)
+        Me.Button28.Size = New System.Drawing.Size(229, 191)
         Me.Button28.TabIndex = 38
         Me.Button28.UseVisualStyleBackColor = True
         '
@@ -1007,9 +1049,10 @@ Partial Class form_new_centro_medico
         Me.Button27.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button27.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button27.Image = Global.centro_medico.My.Resources.Resources.Icon_ParteAltas_Bajas
-        Me.Button27.Location = New System.Drawing.Point(188, 508)
+        Me.Button27.Location = New System.Drawing.Point(251, 625)
+        Me.Button27.Margin = New System.Windows.Forms.Padding(4)
         Me.Button27.Name = "Button27"
-        Me.Button27.Size = New System.Drawing.Size(172, 155)
+        Me.Button27.Size = New System.Drawing.Size(229, 191)
         Me.Button27.TabIndex = 37
         Me.Button27.UseVisualStyleBackColor = True
         '
@@ -1018,9 +1061,10 @@ Partial Class form_new_centro_medico
         Me.Button26.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button26.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button26.Image = Global.centro_medico.My.Resources.Resources.icon_Citas
-        Me.Button26.Location = New System.Drawing.Point(2, 508)
+        Me.Button26.Location = New System.Drawing.Point(3, 625)
+        Me.Button26.Margin = New System.Windows.Forms.Padding(4)
         Me.Button26.Name = "Button26"
-        Me.Button26.Size = New System.Drawing.Size(172, 155)
+        Me.Button26.Size = New System.Drawing.Size(229, 191)
         Me.Button26.TabIndex = 36
         Me.Button26.UseVisualStyleBackColor = True
         '
@@ -1029,9 +1073,10 @@ Partial Class form_new_centro_medico
         Me.Button25.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button25.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button25.Image = Global.centro_medico.My.Resources.Resources.Icon_BonosNoAgotados
-        Me.Button25.Location = New System.Drawing.Point(558, 340)
+        Me.Button25.Location = New System.Drawing.Point(744, 418)
+        Me.Button25.Margin = New System.Windows.Forms.Padding(4)
         Me.Button25.Name = "Button25"
-        Me.Button25.Size = New System.Drawing.Size(172, 155)
+        Me.Button25.Size = New System.Drawing.Size(229, 191)
         Me.Button25.TabIndex = 35
         Me.Button25.UseVisualStyleBackColor = True
         '
@@ -1040,9 +1085,10 @@ Partial Class form_new_centro_medico
         Me.Button24.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button24.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button24.Image = Global.centro_medico.My.Resources.Resources.Icon_GenerarNorma19
-        Me.Button24.Location = New System.Drawing.Point(373, 340)
+        Me.Button24.Location = New System.Drawing.Point(497, 418)
+        Me.Button24.Margin = New System.Windows.Forms.Padding(4)
         Me.Button24.Name = "Button24"
-        Me.Button24.Size = New System.Drawing.Size(172, 155)
+        Me.Button24.Size = New System.Drawing.Size(229, 191)
         Me.Button24.TabIndex = 34
         Me.Button24.UseVisualStyleBackColor = True
         '
@@ -1051,9 +1097,10 @@ Partial Class form_new_centro_medico
         Me.Button23.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button23.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button23.Image = Global.centro_medico.My.Resources.Resources.Icon_ImprimirRemesa
-        Me.Button23.Location = New System.Drawing.Point(187, 340)
+        Me.Button23.Location = New System.Drawing.Point(249, 418)
+        Me.Button23.Margin = New System.Windows.Forms.Padding(4)
         Me.Button23.Name = "Button23"
-        Me.Button23.Size = New System.Drawing.Size(172, 155)
+        Me.Button23.Size = New System.Drawing.Size(229, 191)
         Me.Button23.TabIndex = 33
         Me.Button23.UseVisualStyleBackColor = True
         '
@@ -1062,9 +1109,10 @@ Partial Class form_new_centro_medico
         Me.Button22.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button22.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button22.Image = Global.centro_medico.My.Resources.Resources.Icon_Recibos
-        Me.Button22.Location = New System.Drawing.Point(2, 340)
+        Me.Button22.Location = New System.Drawing.Point(3, 418)
+        Me.Button22.Margin = New System.Windows.Forms.Padding(4)
         Me.Button22.Name = "Button22"
-        Me.Button22.Size = New System.Drawing.Size(172, 155)
+        Me.Button22.Size = New System.Drawing.Size(229, 191)
         Me.Button22.TabIndex = 32
         Me.Button22.UseVisualStyleBackColor = True
         '
@@ -1073,9 +1121,10 @@ Partial Class form_new_centro_medico
         Me.Button21.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button21.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button21.Image = Global.centro_medico.My.Resources.Resources.Icon_GenerarRecibo
-        Me.Button21.Location = New System.Drawing.Point(558, 172)
+        Me.Button21.Location = New System.Drawing.Point(744, 212)
+        Me.Button21.Margin = New System.Windows.Forms.Padding(4)
         Me.Button21.Name = "Button21"
-        Me.Button21.Size = New System.Drawing.Size(172, 155)
+        Me.Button21.Size = New System.Drawing.Size(229, 191)
         Me.Button21.TabIndex = 31
         Me.Button21.UseVisualStyleBackColor = True
         '
@@ -1084,9 +1133,10 @@ Partial Class form_new_centro_medico
         Me.Button20.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button20.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button20.Image = Global.centro_medico.My.Resources.Resources.Icon_Analitica
-        Me.Button20.Location = New System.Drawing.Point(373, 172)
+        Me.Button20.Location = New System.Drawing.Point(497, 212)
+        Me.Button20.Margin = New System.Windows.Forms.Padding(4)
         Me.Button20.Name = "Button20"
-        Me.Button20.Size = New System.Drawing.Size(172, 155)
+        Me.Button20.Size = New System.Drawing.Size(229, 191)
         Me.Button20.TabIndex = 30
         Me.Button20.UseVisualStyleBackColor = True
         '
@@ -1095,9 +1145,10 @@ Partial Class form_new_centro_medico
         Me.Button19.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button19.Image = Global.centro_medico.My.Resources.Resources.Icon_GenerarFactura
-        Me.Button19.Location = New System.Drawing.Point(2, 172)
+        Me.Button19.Location = New System.Drawing.Point(3, 212)
+        Me.Button19.Margin = New System.Windows.Forms.Padding(4)
         Me.Button19.Name = "Button19"
-        Me.Button19.Size = New System.Drawing.Size(172, 155)
+        Me.Button19.Size = New System.Drawing.Size(229, 191)
         Me.Button19.TabIndex = 29
         Me.Button19.UseVisualStyleBackColor = True
         '
@@ -1106,9 +1157,10 @@ Partial Class form_new_centro_medico
         Me.Button18.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button18.Image = Global.centro_medico.My.Resources.Resources.Icon_AsistenteFacturacion
-        Me.Button18.Location = New System.Drawing.Point(558, 4)
+        Me.Button18.Location = New System.Drawing.Point(744, 5)
+        Me.Button18.Margin = New System.Windows.Forms.Padding(4)
         Me.Button18.Name = "Button18"
-        Me.Button18.Size = New System.Drawing.Size(172, 155)
+        Me.Button18.Size = New System.Drawing.Size(229, 191)
         Me.Button18.TabIndex = 28
         Me.Button18.UseVisualStyleBackColor = True
         '
@@ -1117,9 +1169,10 @@ Partial Class form_new_centro_medico
         Me.Button17.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button17.Image = Global.centro_medico.My.Resources.Resources.Icon_Factura
-        Me.Button17.Location = New System.Drawing.Point(373, 4)
+        Me.Button17.Location = New System.Drawing.Point(497, 5)
+        Me.Button17.Margin = New System.Windows.Forms.Padding(4)
         Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(172, 155)
+        Me.Button17.Size = New System.Drawing.Size(229, 191)
         Me.Button17.TabIndex = 27
         Me.Button17.UseVisualStyleBackColor = True
         '
@@ -1128,9 +1181,10 @@ Partial Class form_new_centro_medico
         Me.Button16.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button16.Image = Global.centro_medico.My.Resources.Resources.Icon_Empresa
-        Me.Button16.Location = New System.Drawing.Point(188, 4)
+        Me.Button16.Location = New System.Drawing.Point(251, 5)
+        Me.Button16.Margin = New System.Windows.Forms.Padding(4)
         Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(172, 155)
+        Me.Button16.Size = New System.Drawing.Size(229, 191)
         Me.Button16.TabIndex = 26
         Me.Button16.UseVisualStyleBackColor = True
         '
@@ -1139,9 +1193,10 @@ Partial Class form_new_centro_medico
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(188, 172)
+        Me.Button2.Location = New System.Drawing.Point(251, 212)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(172, 155)
+        Me.Button2.Size = New System.Drawing.Size(229, 191)
         Me.Button2.TabIndex = 19
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -1149,9 +1204,10 @@ Partial Class form_new_centro_medico
         '
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(2, 4)
+        Me.Button1.Location = New System.Drawing.Point(3, 5)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(172, 155)
+        Me.Button1.Size = New System.Drawing.Size(229, 191)
         Me.Button1.TabIndex = 12
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -1171,9 +1227,10 @@ Partial Class form_new_centro_medico
         Me.UiGBoxInfo.Controls.Add(Me.Label9)
         Me.UiGBoxInfo.Controls.Add(Me.lblAppVersion)
         Me.UiGBoxInfo.Controls.Add(Me.Label7)
-        Me.UiGBoxInfo.Location = New System.Drawing.Point(19, 622)
+        Me.UiGBoxInfo.Location = New System.Drawing.Point(25, 766)
+        Me.UiGBoxInfo.Margin = New System.Windows.Forms.Padding(4)
         Me.UiGBoxInfo.Name = "UiGBoxInfo"
-        Me.UiGBoxInfo.Size = New System.Drawing.Size(464, 23)
+        Me.UiGBoxInfo.Size = New System.Drawing.Size(619, 28)
         Me.UiGBoxInfo.TabIndex = 11
         '
         'lblInfoBD
@@ -1181,9 +1238,10 @@ Partial Class form_new_centro_medico
         Me.lblInfoBD.AutoSize = True
         Me.lblInfoBD.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblInfoBD.ForeColor = System.Drawing.Color.Black
-        Me.lblInfoBD.Location = New System.Drawing.Point(247, 2)
+        Me.lblInfoBD.Location = New System.Drawing.Point(329, 2)
+        Me.lblInfoBD.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblInfoBD.Name = "lblInfoBD"
-        Me.lblInfoBD.Size = New System.Drawing.Size(64, 15)
+        Me.lblInfoBD.Size = New System.Drawing.Size(75, 18)
         Me.lblInfoBD.TabIndex = 9
         Me.lblInfoBD.Text = "Sin Definir"
         '
@@ -1192,9 +1250,10 @@ Partial Class form_new_centro_medico
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(159, 2)
+        Me.Label3.Location = New System.Drawing.Point(212, 2)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(90, 15)
+        Me.Label3.Size = New System.Drawing.Size(110, 18)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Base de Datos:"
         '
@@ -1203,9 +1262,10 @@ Partial Class form_new_centro_medico
         Me.lbl_DbVersionValue.AutoSize = True
         Me.lbl_DbVersionValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_DbVersionValue.ForeColor = System.Drawing.Color.Black
-        Me.lbl_DbVersionValue.Location = New System.Drawing.Point(414, 2)
+        Me.lbl_DbVersionValue.Location = New System.Drawing.Point(552, 2)
+        Me.lbl_DbVersionValue.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_DbVersionValue.Name = "lbl_DbVersionValue"
-        Me.lbl_DbVersionValue.Size = New System.Drawing.Size(44, 15)
+        Me.lbl_DbVersionValue.Size = New System.Drawing.Size(52, 18)
         Me.lbl_DbVersionValue.TabIndex = 7
         Me.lbl_DbVersionValue.Text = "1.1.0.0"
         '
@@ -1214,9 +1274,10 @@ Partial Class form_new_centro_medico
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(350, 2)
+        Me.Label9.Location = New System.Drawing.Point(467, 2)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(69, 15)
+        Me.Label9.Size = New System.Drawing.Size(84, 18)
         Me.Label9.TabIndex = 6
         Me.Label9.Text = "Bd Version:"
         '
@@ -1225,9 +1286,10 @@ Partial Class form_new_centro_medico
         Me.lblAppVersion.AutoSize = True
         Me.lblAppVersion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAppVersion.ForeColor = System.Drawing.Color.Black
-        Me.lblAppVersion.Location = New System.Drawing.Point(76, 2)
+        Me.lblAppVersion.Location = New System.Drawing.Point(101, 2)
+        Me.lblAppVersion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblAppVersion.Name = "lblAppVersion"
-        Me.lblAppVersion.Size = New System.Drawing.Size(44, 15)
+        Me.lblAppVersion.Size = New System.Drawing.Size(52, 18)
         Me.lblAppVersion.TabIndex = 5
         Me.lblAppVersion.Text = "1.1.0.0"
         '
@@ -1236,9 +1298,10 @@ Partial Class form_new_centro_medico
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(5, 2)
+        Me.Label7.Location = New System.Drawing.Point(7, 2)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(75, 15)
+        Me.Label7.Size = New System.Drawing.Size(91, 18)
         Me.Label7.TabIndex = 4
         Me.Label7.Text = "App Version:"
         '
@@ -1246,9 +1309,10 @@ Partial Class form_new_centro_medico
         '
         Me.PictExit1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictExit1.Image = CType(resources.GetObject("PictExit1.Image"), System.Drawing.Image)
-        Me.PictExit1.Location = New System.Drawing.Point(958, 120)
+        Me.PictExit1.Location = New System.Drawing.Point(1277, 148)
+        Me.PictExit1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictExit1.Name = "PictExit1"
-        Me.PictExit1.Size = New System.Drawing.Size(18, 25)
+        Me.PictExit1.Size = New System.Drawing.Size(24, 31)
         Me.PictExit1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictExit1.TabIndex = 12
         Me.PictExit1.TabStop = False
@@ -1257,9 +1321,10 @@ Partial Class form_new_centro_medico
         '
         Me.PictExit2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictExit2.Image = CType(resources.GetObject("PictExit2.Image"), System.Drawing.Image)
-        Me.PictExit2.Location = New System.Drawing.Point(951, 120)
+        Me.PictExit2.Location = New System.Drawing.Point(1268, 148)
+        Me.PictExit2.Margin = New System.Windows.Forms.Padding(4)
         Me.PictExit2.Name = "PictExit2"
-        Me.PictExit2.Size = New System.Drawing.Size(25, 27)
+        Me.PictExit2.Size = New System.Drawing.Size(33, 33)
         Me.PictExit2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictExit2.TabIndex = 13
         Me.PictExit2.TabStop = False
@@ -1272,9 +1337,10 @@ Partial Class form_new_centro_medico
         Me.Label2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label2.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(82, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(803, 127)
+        Me.Label2.Location = New System.Drawing.Point(1071, 156)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(96, 16)
+        Me.Label2.Size = New System.Drawing.Size(112, 19)
         Me.Label2.TabIndex = 14
         Me.Label2.Text = "Cerrar Sesión"
         '
@@ -1282,9 +1348,10 @@ Partial Class form_new_centro_medico
         '
         Me.PictureBox8.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
-        Me.PictureBox8.Location = New System.Drawing.Point(889, 122)
+        Me.PictureBox8.Location = New System.Drawing.Point(1185, 150)
+        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(23, 23)
+        Me.PictureBox8.Size = New System.Drawing.Size(31, 28)
         Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox8.TabIndex = 15
         Me.PictureBox8.TabStop = False
@@ -1296,9 +1363,10 @@ Partial Class form_new_centro_medico
         Me.Label4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label4.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(82, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(923, 127)
+        Me.Label4.Location = New System.Drawing.Point(1231, 156)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(36, 16)
+        Me.Label4.Size = New System.Drawing.Size(42, 19)
         Me.Label4.TabIndex = 16
         Me.Label4.Text = "Salir"
         '
@@ -1329,9 +1397,10 @@ Partial Class form_new_centro_medico
         Me.UiGroupBox4.Controls.Add(Me.Button35)
         Me.UiGroupBox4.Controls.Add(Me.Button36)
         Me.UiGroupBox4.Controls.Add(Me.Button37)
-        Me.UiGroupBox4.Location = New System.Drawing.Point(258, 149)
+        Me.UiGroupBox4.Location = New System.Drawing.Point(344, 183)
+        Me.UiGroupBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.UiGroupBox4.Name = "UiGroupBox4"
-        Me.UiGroupBox4.Size = New System.Drawing.Size(750, 466)
+        Me.UiGroupBox4.Size = New System.Drawing.Size(1000, 574)
         Me.UiGroupBox4.TabIndex = 26
         Me.UiGroupBox4.Visible = False
         '
@@ -1340,9 +1409,10 @@ Partial Class form_new_centro_medico
         Me.Button47.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button47.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button47.Image = Global.centro_medico.My.Resources.Resources.Icon_Galeria_de_Imagenes
-        Me.Button47.Location = New System.Drawing.Point(558, 677)
+        Me.Button47.Location = New System.Drawing.Point(744, 833)
+        Me.Button47.Margin = New System.Windows.Forms.Padding(4)
         Me.Button47.Name = "Button47"
-        Me.Button47.Size = New System.Drawing.Size(172, 155)
+        Me.Button47.Size = New System.Drawing.Size(229, 191)
         Me.Button47.TabIndex = 38
         Me.Button47.UseVisualStyleBackColor = True
         '
@@ -1351,9 +1421,10 @@ Partial Class form_new_centro_medico
         Me.Button48.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button48.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button48.Image = Global.centro_medico.My.Resources.Resources.Icon_Salas
-        Me.Button48.Location = New System.Drawing.Point(373, 677)
+        Me.Button48.Location = New System.Drawing.Point(497, 833)
+        Me.Button48.Margin = New System.Windows.Forms.Padding(4)
         Me.Button48.Name = "Button48"
-        Me.Button48.Size = New System.Drawing.Size(172, 155)
+        Me.Button48.Size = New System.Drawing.Size(229, 191)
         Me.Button48.TabIndex = 37
         Me.Button48.UseVisualStyleBackColor = True
         '
@@ -1362,9 +1433,10 @@ Partial Class form_new_centro_medico
         Me.Button49.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button49.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button49.Image = Global.centro_medico.My.Resources.Resources.Icon_Almacen
-        Me.Button49.Location = New System.Drawing.Point(188, 677)
+        Me.Button49.Location = New System.Drawing.Point(251, 833)
+        Me.Button49.Margin = New System.Windows.Forms.Padding(4)
         Me.Button49.Name = "Button49"
-        Me.Button49.Size = New System.Drawing.Size(172, 155)
+        Me.Button49.Size = New System.Drawing.Size(229, 191)
         Me.Button49.TabIndex = 36
         Me.Button49.UseVisualStyleBackColor = True
         '
@@ -1373,9 +1445,10 @@ Partial Class form_new_centro_medico
         Me.Button50.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button50.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button50.Image = Global.centro_medico.My.Resources.Resources.Icon_Hospitales_Externos
-        Me.Button50.Location = New System.Drawing.Point(2, 677)
+        Me.Button50.Location = New System.Drawing.Point(3, 833)
+        Me.Button50.Margin = New System.Windows.Forms.Padding(4)
         Me.Button50.Name = "Button50"
-        Me.Button50.Size = New System.Drawing.Size(172, 155)
+        Me.Button50.Size = New System.Drawing.Size(229, 191)
         Me.Button50.TabIndex = 35
         Me.Button50.UseVisualStyleBackColor = True
         '
@@ -1384,9 +1457,10 @@ Partial Class form_new_centro_medico
         Me.Button39.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button39.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button39.Image = Global.centro_medico.My.Resources.Resources.Icon_Formas_de_pago
-        Me.Button39.Location = New System.Drawing.Point(558, 509)
+        Me.Button39.Location = New System.Drawing.Point(744, 626)
+        Me.Button39.Margin = New System.Windows.Forms.Padding(4)
         Me.Button39.Name = "Button39"
-        Me.Button39.Size = New System.Drawing.Size(172, 155)
+        Me.Button39.Size = New System.Drawing.Size(229, 191)
         Me.Button39.TabIndex = 34
         Me.Button39.UseVisualStyleBackColor = True
         '
@@ -1395,9 +1469,10 @@ Partial Class form_new_centro_medico
         Me.Button40.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button40.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button40.Image = Global.centro_medico.My.Resources.Resources.Icon_Como_nos_Conocio
-        Me.Button40.Location = New System.Drawing.Point(373, 509)
+        Me.Button40.Location = New System.Drawing.Point(497, 626)
+        Me.Button40.Margin = New System.Windows.Forms.Padding(4)
         Me.Button40.Name = "Button40"
-        Me.Button40.Size = New System.Drawing.Size(172, 155)
+        Me.Button40.Size = New System.Drawing.Size(229, 191)
         Me.Button40.TabIndex = 33
         Me.Button40.UseVisualStyleBackColor = True
         '
@@ -1406,9 +1481,10 @@ Partial Class form_new_centro_medico
         Me.Button41.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button41.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button41.Image = Global.centro_medico.My.Resources.Resources.Icon_Paises
-        Me.Button41.Location = New System.Drawing.Point(188, 509)
+        Me.Button41.Location = New System.Drawing.Point(251, 626)
+        Me.Button41.Margin = New System.Windows.Forms.Padding(4)
         Me.Button41.Name = "Button41"
-        Me.Button41.Size = New System.Drawing.Size(172, 155)
+        Me.Button41.Size = New System.Drawing.Size(229, 191)
         Me.Button41.TabIndex = 32
         Me.Button41.UseVisualStyleBackColor = True
         '
@@ -1417,9 +1493,10 @@ Partial Class form_new_centro_medico
         Me.Button42.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button42.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button42.Image = Global.centro_medico.My.Resources.Resources.Icon_Poblacion
-        Me.Button42.Location = New System.Drawing.Point(2, 509)
+        Me.Button42.Location = New System.Drawing.Point(3, 626)
+        Me.Button42.Margin = New System.Windows.Forms.Padding(4)
         Me.Button42.Name = "Button42"
-        Me.Button42.Size = New System.Drawing.Size(172, 155)
+        Me.Button42.Size = New System.Drawing.Size(229, 191)
         Me.Button42.TabIndex = 31
         Me.Button42.UseVisualStyleBackColor = True
         '
@@ -1428,9 +1505,10 @@ Partial Class form_new_centro_medico
         Me.Button43.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button43.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button43.Image = Global.centro_medico.My.Resources.Resources.Icon_Planillas_Historial
-        Me.Button43.Location = New System.Drawing.Point(558, 341)
+        Me.Button43.Location = New System.Drawing.Point(744, 420)
+        Me.Button43.Margin = New System.Windows.Forms.Padding(4)
         Me.Button43.Name = "Button43"
-        Me.Button43.Size = New System.Drawing.Size(172, 155)
+        Me.Button43.Size = New System.Drawing.Size(229, 191)
         Me.Button43.TabIndex = 30
         Me.Button43.UseVisualStyleBackColor = True
         '
@@ -1439,9 +1517,10 @@ Partial Class form_new_centro_medico
         Me.Button44.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button44.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button44.Image = Global.centro_medico.My.Resources.Resources.Icon_Planillas_Texto
-        Me.Button44.Location = New System.Drawing.Point(373, 341)
+        Me.Button44.Location = New System.Drawing.Point(497, 420)
+        Me.Button44.Margin = New System.Windows.Forms.Padding(4)
         Me.Button44.Name = "Button44"
-        Me.Button44.Size = New System.Drawing.Size(172, 155)
+        Me.Button44.Size = New System.Drawing.Size(229, 191)
         Me.Button44.TabIndex = 29
         Me.Button44.UseVisualStyleBackColor = True
         '
@@ -1450,9 +1529,10 @@ Partial Class form_new_centro_medico
         Me.Button45.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button45.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button45.Image = Global.centro_medico.My.Resources.Resources.Icon_Reviciones_Comparadas
-        Me.Button45.Location = New System.Drawing.Point(188, 341)
+        Me.Button45.Location = New System.Drawing.Point(251, 420)
+        Me.Button45.Margin = New System.Windows.Forms.Padding(4)
         Me.Button45.Name = "Button45"
-        Me.Button45.Size = New System.Drawing.Size(172, 155)
+        Me.Button45.Size = New System.Drawing.Size(229, 191)
         Me.Button45.TabIndex = 28
         Me.Button45.UseVisualStyleBackColor = True
         '
@@ -1461,9 +1541,10 @@ Partial Class form_new_centro_medico
         Me.Button46.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button46.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button46.Image = Global.centro_medico.My.Resources.Resources.Icon_Planillas_Analiticas
-        Me.Button46.Location = New System.Drawing.Point(3, 341)
+        Me.Button46.Location = New System.Drawing.Point(4, 420)
+        Me.Button46.Margin = New System.Windows.Forms.Padding(4)
         Me.Button46.Name = "Button46"
-        Me.Button46.Size = New System.Drawing.Size(172, 155)
+        Me.Button46.Size = New System.Drawing.Size(229, 191)
         Me.Button46.TabIndex = 27
         Me.Button46.UseVisualStyleBackColor = True
         '
@@ -1472,9 +1553,10 @@ Partial Class form_new_centro_medico
         Me.Button38.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button38.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button38.Image = Global.centro_medico.My.Resources.Resources.Icon_Conceptos_Analitica
-        Me.Button38.Location = New System.Drawing.Point(558, 172)
+        Me.Button38.Location = New System.Drawing.Point(744, 212)
+        Me.Button38.Margin = New System.Windows.Forms.Padding(4)
         Me.Button38.Name = "Button38"
-        Me.Button38.Size = New System.Drawing.Size(172, 155)
+        Me.Button38.Size = New System.Drawing.Size(229, 191)
         Me.Button38.TabIndex = 26
         Me.Button38.UseVisualStyleBackColor = True
         '
@@ -1483,9 +1565,10 @@ Partial Class form_new_centro_medico
         Me.Button31.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button31.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button31.Image = Global.centro_medico.My.Resources.Resources.Icon_Tarifa
-        Me.Button31.Location = New System.Drawing.Point(373, 172)
+        Me.Button31.Location = New System.Drawing.Point(497, 212)
+        Me.Button31.Margin = New System.Windows.Forms.Padding(4)
         Me.Button31.Name = "Button31"
-        Me.Button31.Size = New System.Drawing.Size(172, 155)
+        Me.Button31.Size = New System.Drawing.Size(229, 191)
         Me.Button31.TabIndex = 25
         Me.Button31.UseVisualStyleBackColor = True
         '
@@ -1494,9 +1577,10 @@ Partial Class form_new_centro_medico
         Me.Button32.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button32.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button32.Image = Global.centro_medico.My.Resources.Resources.Icon_Familia
-        Me.Button32.Location = New System.Drawing.Point(188, 172)
+        Me.Button32.Location = New System.Drawing.Point(251, 212)
+        Me.Button32.Margin = New System.Windows.Forms.Padding(4)
         Me.Button32.Name = "Button32"
-        Me.Button32.Size = New System.Drawing.Size(172, 155)
+        Me.Button32.Size = New System.Drawing.Size(229, 191)
         Me.Button32.TabIndex = 24
         Me.Button32.UseVisualStyleBackColor = True
         '
@@ -1505,9 +1589,10 @@ Partial Class form_new_centro_medico
         Me.Button33.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button33.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button33.Image = Global.centro_medico.My.Resources.Resources.Icon_Conceptos_Facturables
-        Me.Button33.Location = New System.Drawing.Point(2, 172)
+        Me.Button33.Location = New System.Drawing.Point(3, 212)
+        Me.Button33.Margin = New System.Windows.Forms.Padding(4)
         Me.Button33.Name = "Button33"
-        Me.Button33.Size = New System.Drawing.Size(172, 155)
+        Me.Button33.Size = New System.Drawing.Size(229, 191)
         Me.Button33.TabIndex = 23
         Me.Button33.UseVisualStyleBackColor = True
         '
@@ -1516,9 +1601,10 @@ Partial Class form_new_centro_medico
         Me.Button34.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button34.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button34.Image = Global.centro_medico.My.Resources.Resources.Icon_Indicaciones
-        Me.Button34.Location = New System.Drawing.Point(558, 4)
+        Me.Button34.Location = New System.Drawing.Point(744, 5)
+        Me.Button34.Margin = New System.Windows.Forms.Padding(4)
         Me.Button34.Name = "Button34"
-        Me.Button34.Size = New System.Drawing.Size(172, 155)
+        Me.Button34.Size = New System.Drawing.Size(229, 191)
         Me.Button34.TabIndex = 22
         Me.Button34.UseVisualStyleBackColor = True
         '
@@ -1527,9 +1613,10 @@ Partial Class form_new_centro_medico
         Me.Button35.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button35.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button35.Image = Global.centro_medico.My.Resources.Resources.Icon_Medicamentos
-        Me.Button35.Location = New System.Drawing.Point(373, 4)
+        Me.Button35.Location = New System.Drawing.Point(497, 5)
+        Me.Button35.Margin = New System.Windows.Forms.Padding(4)
         Me.Button35.Name = "Button35"
-        Me.Button35.Size = New System.Drawing.Size(172, 155)
+        Me.Button35.Size = New System.Drawing.Size(229, 191)
         Me.Button35.TabIndex = 21
         Me.Button35.UseVisualStyleBackColor = True
         '
@@ -1538,9 +1625,10 @@ Partial Class form_new_centro_medico
         Me.Button36.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button36.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button36.Image = Global.centro_medico.My.Resources.Resources.Icon_Diagnostico
-        Me.Button36.Location = New System.Drawing.Point(188, 4)
+        Me.Button36.Location = New System.Drawing.Point(251, 5)
+        Me.Button36.Margin = New System.Windows.Forms.Padding(4)
         Me.Button36.Name = "Button36"
-        Me.Button36.Size = New System.Drawing.Size(172, 155)
+        Me.Button36.Size = New System.Drawing.Size(229, 191)
         Me.Button36.TabIndex = 20
         Me.Button36.UseVisualStyleBackColor = True
         '
@@ -1549,9 +1637,10 @@ Partial Class form_new_centro_medico
         Me.Button37.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button37.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button37.Image = Global.centro_medico.My.Resources.Resources.Icon_Alarma
-        Me.Button37.Location = New System.Drawing.Point(3, 4)
+        Me.Button37.Location = New System.Drawing.Point(4, 5)
+        Me.Button37.Margin = New System.Windows.Forms.Padding(4)
         Me.Button37.Name = "Button37"
-        Me.Button37.Size = New System.Drawing.Size(172, 155)
+        Me.Button37.Size = New System.Drawing.Size(229, 191)
         Me.Button37.TabIndex = 19
         Me.Button37.UseVisualStyleBackColor = True
         '
@@ -1562,6 +1651,7 @@ Partial Class form_new_centro_medico
         Me.UiGroupBox5.AutoScroll = True
         Me.UiGroupBox5.BackColor = System.Drawing.Color.Transparent
         Me.UiGroupBox5.BorderColor = System.Drawing.Color.Transparent
+        Me.UiGroupBox5.Controls.Add(Me.Button83)
         Me.UiGroupBox5.Controls.Add(Me.Button55)
         Me.UiGroupBox5.Controls.Add(Me.Button56)
         Me.UiGroupBox5.Controls.Add(Me.Button57)
@@ -1575,20 +1665,34 @@ Partial Class form_new_centro_medico
         Me.UiGroupBox5.Controls.Add(Me.Button65)
         Me.UiGroupBox5.Controls.Add(Me.Button66)
         Me.UiGroupBox5.Controls.Add(Me.Button67)
-        Me.UiGroupBox5.Location = New System.Drawing.Point(258, 149)
+        Me.UiGroupBox5.Location = New System.Drawing.Point(344, 183)
+        Me.UiGroupBox5.Margin = New System.Windows.Forms.Padding(4)
         Me.UiGroupBox5.Name = "UiGroupBox5"
-        Me.UiGroupBox5.Size = New System.Drawing.Size(750, 466)
+        Me.UiGroupBox5.Size = New System.Drawing.Size(1000, 575)
         Me.UiGroupBox5.TabIndex = 27
         Me.UiGroupBox5.Visible = False
+        '
+        'Button83
+        '
+        Me.Button83.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button83.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button83.Image = Global.centro_medico.My.Resources.Resources.Icon_Lista_Pacientes_Conocio
+        Me.Button83.Location = New System.Drawing.Point(249, 625)
+        Me.Button83.Margin = New System.Windows.Forms.Padding(5)
+        Me.Button83.Name = "Button83"
+        Me.Button83.Size = New System.Drawing.Size(229, 191)
+        Me.Button83.TabIndex = 37
+        Me.Button83.UseVisualStyleBackColor = True
         '
         'Button55
         '
         Me.Button55.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button55.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button55.Image = Global.centro_medico.My.Resources.Resources.Icon_Derivaciones
-        Me.Button55.Location = New System.Drawing.Point(2, 508)
+        Me.Button55.Location = New System.Drawing.Point(3, 625)
+        Me.Button55.Margin = New System.Windows.Forms.Padding(4)
         Me.Button55.Name = "Button55"
-        Me.Button55.Size = New System.Drawing.Size(172, 155)
+        Me.Button55.Size = New System.Drawing.Size(229, 191)
         Me.Button55.TabIndex = 36
         Me.Button55.UseVisualStyleBackColor = True
         '
@@ -1597,9 +1701,10 @@ Partial Class form_new_centro_medico
         Me.Button56.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button56.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button56.Image = Global.centro_medico.My.Resources.Resources.Icon_Pacientes_por_Diagnostico
-        Me.Button56.Location = New System.Drawing.Point(558, 340)
+        Me.Button56.Location = New System.Drawing.Point(744, 418)
+        Me.Button56.Margin = New System.Windows.Forms.Padding(4)
         Me.Button56.Name = "Button56"
-        Me.Button56.Size = New System.Drawing.Size(172, 155)
+        Me.Button56.Size = New System.Drawing.Size(229, 191)
         Me.Button56.TabIndex = 35
         Me.Button56.UseVisualStyleBackColor = True
         '
@@ -1608,9 +1713,10 @@ Partial Class form_new_centro_medico
         Me.Button57.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button57.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button57.Image = Global.centro_medico.My.Resources.Resources.Icon_Diagnosticos_Emitidos
-        Me.Button57.Location = New System.Drawing.Point(373, 340)
+        Me.Button57.Location = New System.Drawing.Point(497, 418)
+        Me.Button57.Margin = New System.Windows.Forms.Padding(4)
         Me.Button57.Name = "Button57"
-        Me.Button57.Size = New System.Drawing.Size(172, 155)
+        Me.Button57.Size = New System.Drawing.Size(229, 191)
         Me.Button57.TabIndex = 34
         Me.Button57.UseVisualStyleBackColor = True
         '
@@ -1619,9 +1725,10 @@ Partial Class form_new_centro_medico
         Me.Button58.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button58.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button58.Image = Global.centro_medico.My.Resources.Resources.Icon_Informe_de_Ingresos_y_Gastos
-        Me.Button58.Location = New System.Drawing.Point(187, 340)
+        Me.Button58.Location = New System.Drawing.Point(249, 418)
+        Me.Button58.Margin = New System.Windows.Forms.Padding(4)
         Me.Button58.Name = "Button58"
-        Me.Button58.Size = New System.Drawing.Size(172, 155)
+        Me.Button58.Size = New System.Drawing.Size(229, 191)
         Me.Button58.TabIndex = 33
         Me.Button58.UseVisualStyleBackColor = True
         '
@@ -1630,9 +1737,10 @@ Partial Class form_new_centro_medico
         Me.Button59.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button59.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button59.Image = Global.centro_medico.My.Resources.Resources.Icon_Listado_de_Recibos
-        Me.Button59.Location = New System.Drawing.Point(2, 340)
+        Me.Button59.Location = New System.Drawing.Point(3, 418)
+        Me.Button59.Margin = New System.Windows.Forms.Padding(4)
         Me.Button59.Name = "Button59"
-        Me.Button59.Size = New System.Drawing.Size(172, 155)
+        Me.Button59.Size = New System.Drawing.Size(229, 191)
         Me.Button59.TabIndex = 32
         Me.Button59.UseVisualStyleBackColor = True
         '
@@ -1641,9 +1749,10 @@ Partial Class form_new_centro_medico
         Me.Button60.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button60.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button60.Image = Global.centro_medico.My.Resources.Resources.Icon_Listado_de_Facturas
-        Me.Button60.Location = New System.Drawing.Point(558, 172)
+        Me.Button60.Location = New System.Drawing.Point(744, 212)
+        Me.Button60.Margin = New System.Windows.Forms.Padding(4)
         Me.Button60.Name = "Button60"
-        Me.Button60.Size = New System.Drawing.Size(172, 155)
+        Me.Button60.Size = New System.Drawing.Size(229, 191)
         Me.Button60.TabIndex = 31
         Me.Button60.UseVisualStyleBackColor = True
         '
@@ -1652,9 +1761,10 @@ Partial Class form_new_centro_medico
         Me.Button61.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button61.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button61.Image = Global.centro_medico.My.Resources.Resources.Icon_Ingresos_Procedencia_Citas
-        Me.Button61.Location = New System.Drawing.Point(373, 172)
+        Me.Button61.Location = New System.Drawing.Point(497, 212)
+        Me.Button61.Margin = New System.Windows.Forms.Padding(4)
         Me.Button61.Name = "Button61"
-        Me.Button61.Size = New System.Drawing.Size(172, 155)
+        Me.Button61.Size = New System.Drawing.Size(229, 191)
         Me.Button61.TabIndex = 30
         Me.Button61.UseVisualStyleBackColor = True
         '
@@ -1663,9 +1773,10 @@ Partial Class form_new_centro_medico
         Me.Button62.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button62.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button62.Image = Global.centro_medico.My.Resources.Resources.Icon_Listado_de_Citas
-        Me.Button62.Location = New System.Drawing.Point(2, 172)
+        Me.Button62.Location = New System.Drawing.Point(3, 212)
+        Me.Button62.Margin = New System.Windows.Forms.Padding(4)
         Me.Button62.Name = "Button62"
-        Me.Button62.Size = New System.Drawing.Size(172, 155)
+        Me.Button62.Size = New System.Drawing.Size(229, 191)
         Me.Button62.TabIndex = 29
         Me.Button62.UseVisualStyleBackColor = True
         '
@@ -1674,9 +1785,10 @@ Partial Class form_new_centro_medico
         Me.Button63.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button63.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button63.Image = Global.centro_medico.My.Resources.Resources.Icon_Recetas_y_Tratamientos
-        Me.Button63.Location = New System.Drawing.Point(558, 4)
+        Me.Button63.Location = New System.Drawing.Point(744, 5)
+        Me.Button63.Margin = New System.Windows.Forms.Padding(4)
         Me.Button63.Name = "Button63"
-        Me.Button63.Size = New System.Drawing.Size(172, 155)
+        Me.Button63.Size = New System.Drawing.Size(229, 191)
         Me.Button63.TabIndex = 28
         Me.Button63.UseVisualStyleBackColor = True
         '
@@ -1685,9 +1797,10 @@ Partial Class form_new_centro_medico
         Me.Button64.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button64.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button64.Image = Global.centro_medico.My.Resources.Resources.Icon_Partes
-        Me.Button64.Location = New System.Drawing.Point(373, 4)
+        Me.Button64.Location = New System.Drawing.Point(497, 5)
+        Me.Button64.Margin = New System.Windows.Forms.Padding(4)
         Me.Button64.Name = "Button64"
-        Me.Button64.Size = New System.Drawing.Size(172, 155)
+        Me.Button64.Size = New System.Drawing.Size(229, 191)
         Me.Button64.TabIndex = 27
         Me.Button64.UseVisualStyleBackColor = True
         '
@@ -1696,9 +1809,10 @@ Partial Class form_new_centro_medico
         Me.Button65.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button65.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button65.Image = Global.centro_medico.My.Resources.Resources.Icon_Listado_de_Faltas
-        Me.Button65.Location = New System.Drawing.Point(188, 4)
+        Me.Button65.Location = New System.Drawing.Point(251, 5)
+        Me.Button65.Margin = New System.Windows.Forms.Padding(4)
         Me.Button65.Name = "Button65"
-        Me.Button65.Size = New System.Drawing.Size(172, 155)
+        Me.Button65.Size = New System.Drawing.Size(229, 191)
         Me.Button65.TabIndex = 26
         Me.Button65.UseVisualStyleBackColor = True
         '
@@ -1707,9 +1821,10 @@ Partial Class form_new_centro_medico
         Me.Button66.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button66.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button66.Image = Global.centro_medico.My.Resources.Resources.Icon_Ingresos_Citas_Medicos
-        Me.Button66.Location = New System.Drawing.Point(188, 172)
+        Me.Button66.Location = New System.Drawing.Point(251, 212)
+        Me.Button66.Margin = New System.Windows.Forms.Padding(4)
         Me.Button66.Name = "Button66"
-        Me.Button66.Size = New System.Drawing.Size(172, 155)
+        Me.Button66.Size = New System.Drawing.Size(229, 191)
         Me.Button66.TabIndex = 19
         Me.Button66.UseVisualStyleBackColor = True
         '
@@ -1717,9 +1832,10 @@ Partial Class form_new_centro_medico
         '
         Me.Button67.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button67.Image = CType(resources.GetObject("Button67.Image"), System.Drawing.Image)
-        Me.Button67.Location = New System.Drawing.Point(2, 4)
+        Me.Button67.Location = New System.Drawing.Point(3, 5)
+        Me.Button67.Margin = New System.Windows.Forms.Padding(4)
         Me.Button67.Name = "Button67"
-        Me.Button67.Size = New System.Drawing.Size(172, 155)
+        Me.Button67.Size = New System.Drawing.Size(229, 191)
         Me.Button67.TabIndex = 12
         Me.Button67.UseVisualStyleBackColor = True
         '
@@ -1738,9 +1854,10 @@ Partial Class form_new_centro_medico
         Me.UiGroupBox6.Controls.Add(Me.Button68)
         Me.UiGroupBox6.Controls.Add(Me.Button69)
         Me.UiGroupBox6.Controls.Add(Me.Button70)
-        Me.UiGroupBox6.Location = New System.Drawing.Point(258, 149)
+        Me.UiGroupBox6.Location = New System.Drawing.Point(344, 183)
+        Me.UiGroupBox6.Margin = New System.Windows.Forms.Padding(4)
         Me.UiGroupBox6.Name = "UiGroupBox6"
-        Me.UiGroupBox6.Size = New System.Drawing.Size(750, 477)
+        Me.UiGroupBox6.Size = New System.Drawing.Size(1000, 587)
         Me.UiGroupBox6.TabIndex = 28
         Me.UiGroupBox6.Visible = False
         '
@@ -1749,9 +1866,10 @@ Partial Class form_new_centro_medico
         Me.Button71.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button71.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button71.Image = Global.centro_medico.My.Resources.Resources.Icon_Consolidacion_Stock
-        Me.Button71.Location = New System.Drawing.Point(558, 172)
+        Me.Button71.Location = New System.Drawing.Point(744, 212)
+        Me.Button71.Margin = New System.Windows.Forms.Padding(4)
         Me.Button71.Name = "Button71"
-        Me.Button71.Size = New System.Drawing.Size(172, 155)
+        Me.Button71.Size = New System.Drawing.Size(229, 191)
         Me.Button71.TabIndex = 26
         Me.Button71.UseVisualStyleBackColor = True
         '
@@ -1760,9 +1878,10 @@ Partial Class form_new_centro_medico
         Me.Button51.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button51.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button51.Image = Global.centro_medico.My.Resources.Resources.Icon_Listado_de_Tickets
-        Me.Button51.Location = New System.Drawing.Point(373, 172)
+        Me.Button51.Location = New System.Drawing.Point(497, 212)
+        Me.Button51.Margin = New System.Windows.Forms.Padding(4)
         Me.Button51.Name = "Button51"
-        Me.Button51.Size = New System.Drawing.Size(172, 155)
+        Me.Button51.Size = New System.Drawing.Size(229, 191)
         Me.Button51.TabIndex = 25
         Me.Button51.UseVisualStyleBackColor = True
         '
@@ -1771,9 +1890,10 @@ Partial Class form_new_centro_medico
         Me.Button52.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button52.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button52.Image = Global.centro_medico.My.Resources.Resources.Icon_Factura
-        Me.Button52.Location = New System.Drawing.Point(188, 172)
+        Me.Button52.Location = New System.Drawing.Point(251, 212)
+        Me.Button52.Margin = New System.Windows.Forms.Padding(4)
         Me.Button52.Name = "Button52"
-        Me.Button52.Size = New System.Drawing.Size(172, 155)
+        Me.Button52.Size = New System.Drawing.Size(229, 191)
         Me.Button52.TabIndex = 24
         Me.Button52.UseVisualStyleBackColor = True
         '
@@ -1782,9 +1902,10 @@ Partial Class form_new_centro_medico
         Me.Button53.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button53.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button53.Image = Global.centro_medico.My.Resources.Resources.Icon_Facturas_Proveedor
-        Me.Button53.Location = New System.Drawing.Point(2, 172)
+        Me.Button53.Location = New System.Drawing.Point(3, 212)
+        Me.Button53.Margin = New System.Windows.Forms.Padding(4)
         Me.Button53.Name = "Button53"
-        Me.Button53.Size = New System.Drawing.Size(172, 155)
+        Me.Button53.Size = New System.Drawing.Size(229, 191)
         Me.Button53.TabIndex = 23
         Me.Button53.UseVisualStyleBackColor = True
         '
@@ -1793,9 +1914,10 @@ Partial Class form_new_centro_medico
         Me.Button54.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button54.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button54.Image = Global.centro_medico.My.Resources.Resources.Icon_Pedodo_a_Proveedor
-        Me.Button54.Location = New System.Drawing.Point(558, 4)
+        Me.Button54.Location = New System.Drawing.Point(744, 5)
+        Me.Button54.Margin = New System.Windows.Forms.Padding(4)
         Me.Button54.Name = "Button54"
-        Me.Button54.Size = New System.Drawing.Size(172, 155)
+        Me.Button54.Size = New System.Drawing.Size(229, 191)
         Me.Button54.TabIndex = 22
         Me.Button54.UseVisualStyleBackColor = True
         '
@@ -1804,9 +1926,10 @@ Partial Class form_new_centro_medico
         Me.Button68.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button68.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button68.Image = Global.centro_medico.My.Resources.Resources.Icon_Entradas
-        Me.Button68.Location = New System.Drawing.Point(373, 4)
+        Me.Button68.Location = New System.Drawing.Point(497, 5)
+        Me.Button68.Margin = New System.Windows.Forms.Padding(4)
         Me.Button68.Name = "Button68"
-        Me.Button68.Size = New System.Drawing.Size(172, 155)
+        Me.Button68.Size = New System.Drawing.Size(229, 191)
         Me.Button68.TabIndex = 21
         Me.Button68.UseVisualStyleBackColor = True
         '
@@ -1815,9 +1938,10 @@ Partial Class form_new_centro_medico
         Me.Button69.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button69.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button69.Image = Global.centro_medico.My.Resources.Resources.Icon_Articulos
-        Me.Button69.Location = New System.Drawing.Point(188, 4)
+        Me.Button69.Location = New System.Drawing.Point(251, 5)
+        Me.Button69.Margin = New System.Windows.Forms.Padding(4)
         Me.Button69.Name = "Button69"
-        Me.Button69.Size = New System.Drawing.Size(172, 155)
+        Me.Button69.Size = New System.Drawing.Size(229, 191)
         Me.Button69.TabIndex = 20
         Me.Button69.UseVisualStyleBackColor = True
         '
@@ -1826,9 +1950,10 @@ Partial Class form_new_centro_medico
         Me.Button70.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button70.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button70.Image = Global.centro_medico.My.Resources.Resources.Icon_Proveedores
-        Me.Button70.Location = New System.Drawing.Point(3, 4)
+        Me.Button70.Location = New System.Drawing.Point(4, 5)
+        Me.Button70.Margin = New System.Windows.Forms.Padding(4)
         Me.Button70.Name = "Button70"
-        Me.Button70.Size = New System.Drawing.Size(172, 155)
+        Me.Button70.Size = New System.Drawing.Size(229, 191)
         Me.Button70.TabIndex = 19
         Me.Button70.UseVisualStyleBackColor = True
         '
@@ -1849,9 +1974,10 @@ Partial Class form_new_centro_medico
         Me.UiGroupBox7.Controls.Add(Me.Button77)
         Me.UiGroupBox7.Controls.Add(Me.Button78)
         Me.UiGroupBox7.Controls.Add(Me.Button79)
-        Me.UiGroupBox7.Location = New System.Drawing.Point(258, 149)
+        Me.UiGroupBox7.Location = New System.Drawing.Point(344, 183)
+        Me.UiGroupBox7.Margin = New System.Windows.Forms.Padding(4)
         Me.UiGroupBox7.Name = "UiGroupBox7"
-        Me.UiGroupBox7.Size = New System.Drawing.Size(750, 477)
+        Me.UiGroupBox7.Size = New System.Drawing.Size(1000, 575)
         Me.UiGroupBox7.TabIndex = 29
         Me.UiGroupBox7.Visible = False
         '
@@ -1860,9 +1986,10 @@ Partial Class form_new_centro_medico
         Me.Button80.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button80.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button80.Image = Global.centro_medico.My.Resources.Resources.Icon_Migrar_Pacientes
-        Me.Button80.Location = New System.Drawing.Point(188, 340)
+        Me.Button80.Location = New System.Drawing.Point(251, 418)
+        Me.Button80.Margin = New System.Windows.Forms.Padding(4)
         Me.Button80.Name = "Button80"
-        Me.Button80.Size = New System.Drawing.Size(172, 155)
+        Me.Button80.Size = New System.Drawing.Size(229, 191)
         Me.Button80.TabIndex = 28
         Me.Button80.UseVisualStyleBackColor = True
         '
@@ -1871,9 +1998,10 @@ Partial Class form_new_centro_medico
         Me.Button81.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button81.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button81.Image = Global.centro_medico.My.Resources.Resources.Icon_Auditoria
-        Me.Button81.Location = New System.Drawing.Point(2, 340)
+        Me.Button81.Location = New System.Drawing.Point(3, 418)
+        Me.Button81.Margin = New System.Windows.Forms.Padding(4)
         Me.Button81.Name = "Button81"
-        Me.Button81.Size = New System.Drawing.Size(172, 155)
+        Me.Button81.Size = New System.Drawing.Size(229, 191)
         Me.Button81.TabIndex = 27
         Me.Button81.UseVisualStyleBackColor = True
         '
@@ -1882,9 +2010,10 @@ Partial Class form_new_centro_medico
         Me.Button72.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button72.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button72.Image = Global.centro_medico.My.Resources.Resources.Icon_Bascar_Actualizaciones
-        Me.Button72.Location = New System.Drawing.Point(558, 172)
+        Me.Button72.Location = New System.Drawing.Point(744, 212)
+        Me.Button72.Margin = New System.Windows.Forms.Padding(4)
         Me.Button72.Name = "Button72"
-        Me.Button72.Size = New System.Drawing.Size(172, 155)
+        Me.Button72.Size = New System.Drawing.Size(229, 191)
         Me.Button72.TabIndex = 26
         Me.Button72.UseVisualStyleBackColor = True
         '
@@ -1893,9 +2022,10 @@ Partial Class form_new_centro_medico
         Me.Button73.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button73.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button73.Image = Global.centro_medico.My.Resources.Resources.Icon_Importar_Datos
-        Me.Button73.Location = New System.Drawing.Point(373, 172)
+        Me.Button73.Location = New System.Drawing.Point(497, 212)
+        Me.Button73.Margin = New System.Windows.Forms.Padding(4)
         Me.Button73.Name = "Button73"
-        Me.Button73.Size = New System.Drawing.Size(172, 155)
+        Me.Button73.Size = New System.Drawing.Size(229, 191)
         Me.Button73.TabIndex = 25
         Me.Button73.UseVisualStyleBackColor = True
         '
@@ -1904,9 +2034,10 @@ Partial Class form_new_centro_medico
         Me.Button74.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button74.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button74.Image = Global.centro_medico.My.Resources.Resources.Icon_Totales_en_Citas
-        Me.Button74.Location = New System.Drawing.Point(188, 172)
+        Me.Button74.Location = New System.Drawing.Point(251, 212)
+        Me.Button74.Margin = New System.Windows.Forms.Padding(4)
         Me.Button74.Name = "Button74"
-        Me.Button74.Size = New System.Drawing.Size(172, 155)
+        Me.Button74.Size = New System.Drawing.Size(229, 191)
         Me.Button74.TabIndex = 24
         Me.Button74.UseVisualStyleBackColor = True
         '
@@ -1915,9 +2046,10 @@ Partial Class form_new_centro_medico
         Me.Button75.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button75.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button75.Image = Global.centro_medico.My.Resources.Resources.Icon_Chequeo_Integridad
-        Me.Button75.Location = New System.Drawing.Point(2, 172)
+        Me.Button75.Location = New System.Drawing.Point(3, 212)
+        Me.Button75.Margin = New System.Windows.Forms.Padding(4)
         Me.Button75.Name = "Button75"
-        Me.Button75.Size = New System.Drawing.Size(172, 155)
+        Me.Button75.Size = New System.Drawing.Size(229, 191)
         Me.Button75.TabIndex = 23
         Me.Button75.UseVisualStyleBackColor = True
         '
@@ -1926,9 +2058,10 @@ Partial Class form_new_centro_medico
         Me.Button76.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button76.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button76.Image = Global.centro_medico.My.Resources.Resources.Icon_Opciones
-        Me.Button76.Location = New System.Drawing.Point(558, 4)
+        Me.Button76.Location = New System.Drawing.Point(744, 5)
+        Me.Button76.Margin = New System.Windows.Forms.Padding(4)
         Me.Button76.Name = "Button76"
-        Me.Button76.Size = New System.Drawing.Size(172, 155)
+        Me.Button76.Size = New System.Drawing.Size(229, 191)
         Me.Button76.TabIndex = 22
         Me.Button76.UseVisualStyleBackColor = True
         '
@@ -1937,9 +2070,10 @@ Partial Class form_new_centro_medico
         Me.Button77.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button77.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button77.Image = Global.centro_medico.My.Resources.Resources.Icon_Roles_y_Permisos
-        Me.Button77.Location = New System.Drawing.Point(373, 4)
+        Me.Button77.Location = New System.Drawing.Point(497, 5)
+        Me.Button77.Margin = New System.Windows.Forms.Padding(4)
         Me.Button77.Name = "Button77"
-        Me.Button77.Size = New System.Drawing.Size(172, 155)
+        Me.Button77.Size = New System.Drawing.Size(229, 191)
         Me.Button77.TabIndex = 21
         Me.Button77.UseVisualStyleBackColor = True
         '
@@ -1948,9 +2082,10 @@ Partial Class form_new_centro_medico
         Me.Button78.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button78.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button78.Image = Global.centro_medico.My.Resources.Resources.Icon_Configuración_de_Usuario
-        Me.Button78.Location = New System.Drawing.Point(188, 4)
+        Me.Button78.Location = New System.Drawing.Point(251, 5)
+        Me.Button78.Margin = New System.Windows.Forms.Padding(4)
         Me.Button78.Name = "Button78"
-        Me.Button78.Size = New System.Drawing.Size(172, 155)
+        Me.Button78.Size = New System.Drawing.Size(229, 191)
         Me.Button78.TabIndex = 20
         Me.Button78.UseVisualStyleBackColor = True
         '
@@ -1959,9 +2094,10 @@ Partial Class form_new_centro_medico
         Me.Button79.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button79.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button79.Image = Global.centro_medico.My.Resources.Resources.Icon_Usuario
-        Me.Button79.Location = New System.Drawing.Point(3, 4)
+        Me.Button79.Location = New System.Drawing.Point(4, 5)
+        Me.Button79.Margin = New System.Windows.Forms.Padding(4)
         Me.Button79.Name = "Button79"
-        Me.Button79.Size = New System.Drawing.Size(172, 155)
+        Me.Button79.Size = New System.Drawing.Size(229, 191)
         Me.Button79.TabIndex = 19
         Me.Button79.UseVisualStyleBackColor = True
         '
@@ -1973,9 +2109,10 @@ Partial Class form_new_centro_medico
         Me.UiGroupBox8.BackColor = System.Drawing.Color.Transparent
         Me.UiGroupBox8.BorderColor = System.Drawing.Color.Transparent
         Me.UiGroupBox8.Controls.Add(Me.Button87)
-        Me.UiGroupBox8.Location = New System.Drawing.Point(258, 149)
+        Me.UiGroupBox8.Location = New System.Drawing.Point(344, 183)
+        Me.UiGroupBox8.Margin = New System.Windows.Forms.Padding(4)
         Me.UiGroupBox8.Name = "UiGroupBox8"
-        Me.UiGroupBox8.Size = New System.Drawing.Size(750, 471)
+        Me.UiGroupBox8.Size = New System.Drawing.Size(1000, 580)
         Me.UiGroupBox8.TabIndex = 30
         Me.UiGroupBox8.Visible = False
         '
@@ -1984,9 +2121,10 @@ Partial Class form_new_centro_medico
         Me.Button87.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button87.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button87.Image = Global.centro_medico.My.Resources.Resources.Icon_Manual_de_Instrucciones
-        Me.Button87.Location = New System.Drawing.Point(3, 4)
+        Me.Button87.Location = New System.Drawing.Point(4, 5)
+        Me.Button87.Margin = New System.Windows.Forms.Padding(4)
         Me.Button87.Name = "Button87"
-        Me.Button87.Size = New System.Drawing.Size(172, 155)
+        Me.Button87.Size = New System.Drawing.Size(229, 191)
         Me.Button87.TabIndex = 13
         Me.Button87.UseVisualStyleBackColor = True
         '
@@ -1994,9 +2132,10 @@ Partial Class form_new_centro_medico
         '
         Me.SearchCPropio.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic)
         Me.SearchCPropio.ForeColor = System.Drawing.Color.DarkGray
-        Me.SearchCPropio.Location = New System.Drawing.Point(720, 61)
+        Me.SearchCPropio.Location = New System.Drawing.Point(960, 75)
+        Me.SearchCPropio.Margin = New System.Windows.Forms.Padding(4)
         Me.SearchCPropio.Name = "SearchCPropio"
-        Me.SearchCPropio.Size = New System.Drawing.Size(105, 25)
+        Me.SearchCPropio.Size = New System.Drawing.Size(139, 29)
         Me.SearchCPropio.TabIndex = 31
         Me.SearchCPropio.Text = "Cod. Propio"
         '
@@ -2004,29 +2143,35 @@ Partial Class form_new_centro_medico
         '
         Me.SearchCPaciente.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic)
         Me.SearchCPaciente.ForeColor = System.Drawing.Color.DarkGray
-        Me.SearchCPaciente.Location = New System.Drawing.Point(838, 61)
+        Me.SearchCPaciente.Location = New System.Drawing.Point(1117, 75)
+        Me.SearchCPaciente.Margin = New System.Windows.Forms.Padding(4)
         Me.SearchCPaciente.Name = "SearchCPaciente"
-        Me.SearchCPaciente.Size = New System.Drawing.Size(105, 25)
+        Me.SearchCPaciente.Size = New System.Drawing.Size(139, 29)
         Me.SearchCPaciente.TabIndex = 32
         Me.SearchCPaciente.Text = "Cod. Paciente"
         '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 10000
+        '
         'form_new_centro_medico
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1016, 656)
-        Me.Controls.Add(Me.UiGroupBox3)
-        Me.Controls.Add(Me.SearchCPaciente)
-        Me.Controls.Add(Me.SearchCPropio)
-        Me.Controls.Add(Me.UiGroupBox7)
-        Me.Controls.Add(Me.UiGroupBox6)
+        Me.ClientSize = New System.Drawing.Size(1323, 807)
         Me.Controls.Add(Me.UiGroupBox5)
         Me.Controls.Add(Me.UiGroupBox4)
         Me.Controls.Add(Me.UiGroupBox1)
-        Me.Controls.Add(Me.UiGroupBox2)
         Me.Controls.Add(Me.UiGroupBox8)
+        Me.Controls.Add(Me.UiGroupBox7)
+        Me.Controls.Add(Me.UiGroupBox6)
+        Me.Controls.Add(Me.UiGroupBox3)
+        Me.Controls.Add(Me.UiGroupBox2)
+        Me.Controls.Add(Me.SearchCPaciente)
+        Me.Controls.Add(Me.SearchCPropio)
         Me.Controls.Add(Me.PictureBox8)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictExit2)
@@ -2042,6 +2187,7 @@ Partial Class form_new_centro_medico
         Me.DoubleBuffered = True
         Me.ForeColor = System.Drawing.Color.Transparent
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MinimumSize = New System.Drawing.Size(1024, 683)
         Me.Name = "form_new_centro_medico"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
@@ -2241,4 +2387,7 @@ Partial Class form_new_centro_medico
     Friend WithEvents SearchCPropio As System.Windows.Forms.TextBox
     Friend WithEvents SearchCPaciente As System.Windows.Forms.TextBox
     Private WithEvents ExplorerBar1 As Janus.Windows.ExplorerBar.ExplorerBar
+    Friend WithEvents Button84 As System.Windows.Forms.Button
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents Button83 As System.Windows.Forms.Button
 End Class

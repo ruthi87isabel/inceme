@@ -2305,103 +2305,103 @@
     <value>24, 17</value>
   </metadata>
   <metadata name="CMDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>467, 18</value>
+    <value>370, 17</value>
   </metadata>
   <metadata name="PERMISOS_USUARIOBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>606, 22</value>
+    <value>499, 17</value>
   </metadata>
   <metadata name="PLANTILLASTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>850, 22</value>
+    <value>793, 17</value>
   </metadata>
   <metadata name="ALARMASTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1041, 22</value>
+    <value>1019, 17</value>
   </metadata>
   <metadata name="MEDICAMENTOSTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>121, 61</value>
+    <value>1232, 17</value>
   </metadata>
   <metadata name="MEDICAMENTOSBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>340, 61</value>
+    <value>1493, 17</value>
   </metadata>
   <metadata name="DERIVACIONES_DESTINOSBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>564, 61</value>
+    <value>17, 60</value>
   </metadata>
   <metadata name="PAISESTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>839, 61</value>
+    <value>349, 60</value>
   </metadata>
   <metadata name="ALARMASBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1001, 61</value>
+    <value>540, 60</value>
   </metadata>
   <metadata name="DERIVACIONES_DESTINOSTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>14, 100</value>
+    <value>760, 60</value>
   </metadata>
   <metadata name="FORMASPAGOBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>284, 100</value>
+    <value>1085, 60</value>
   </metadata>
   <metadata name="INDICACIONESBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>495, 100</value>
+    <value>1337, 60</value>
   </metadata>
   <metadata name="FORMASPAGOTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>708, 100</value>
+    <value>1591, 60</value>
   </metadata>
   <metadata name="BANCOSBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>914, 100</value>
+    <value>17, 103</value>
   </metadata>
   <metadata name="BANCOSTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1092, 100</value>
+    <value>228, 103</value>
   </metadata>
   <metadata name="PLANTILLASBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>14, 139</value>
+    <value>432, 103</value>
   </metadata>
   <metadata name="RECIBOSTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>210, 139</value>
+    <value>665, 103</value>
   </metadata>
   <metadata name="RECIBOSBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>382, 139</value>
+    <value>868, 103</value>
   </metadata>
   <metadata name="PAISESBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>560, 139</value>
+    <value>1079, 103</value>
   </metadata>
   <metadata name="PERMISOSTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>728, 139</value>
+    <value>1277, 103</value>
   </metadata>
   <metadata name="PERMISOSBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>910, 139</value>
+    <value>1493, 103</value>
   </metadata>
   <metadata name="PERMISOS_USUARIOTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>14, 178</value>
+    <value>17, 146</value>
   </metadata>
   <metadata name="INDICACIONESTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>253, 178</value>
+    <value>304, 146</value>
   </metadata>
   <metadata name="EstadisticasDiagnosticosTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>460, 178</value>
+    <value>551, 146</value>
   </metadata>
   <metadata name="PLANTILLA_HISTORIALESTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>717, 178</value>
+    <value>860, 146</value>
   </metadata>
   <metadata name="PLANTILLA_HISTORIALESBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>978, 178</value>
+    <value>1174, 146</value>
   </metadata>
   <metadata name="EMPRESASTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>14, 217</value>
+    <value>1495, 146</value>
   </metadata>
   <metadata name="EMPRESASBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>198, 217</value>
+    <value>17, 189</value>
   </metadata>
   <metadata name="LMUTUASEMPRESASTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>387, 217</value>
+    <value>242, 189</value>
   </metadata>
   <metadata name="LMUTUASEMPRESASBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>626, 217</value>
+    <value>528, 189</value>
   </metadata>
   <metadata name="ASISTENCIASBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>870, 217</value>
+    <value>822, 189</value>
   </metadata>
   <metadata name="ESTADISTICASDIAGNOSTICOSBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>14, 256</value>
+    <value>1063, 189</value>
   </metadata>
   <metadata name="ASISTENCIASTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>309, 256</value>
+    <value>1420, 189</value>
   </metadata>
   <data name="Button10.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3532,7 +3532,7 @@
 </value>
   </data>
   <metadata name="PROVEEDORESBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>506, 256</value>
+    <value>17, 232</value>
   </metadata>
   <data name="PictExit1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3634,7 +3634,7 @@
 </value>
   </data>
   <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>718, 256</value>
+    <value>271, 232</value>
   </metadata>
   <data name="PictureBox8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -4019,6 +4019,9 @@
         l3EW68Yoj/Zjvq8+jKlHyNj9jkCJV/27uUJXYy75F8M5RSfLefSUl4yVboSDnvXyCLgn94P/2Q==
 </value>
   </data>
+  <metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>271, 17</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>50</value>
   </metadata>

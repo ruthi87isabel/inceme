@@ -15,6 +15,8 @@ Public Class form_new_centro_medico
     Dim dirRdlc As String = ""
     Dim aviso As TestNotifyWindow.NotifyWindow
     Dim diaNoValido As Boolean = False
+    Dim listRecordatorioHoy As List(Of Recordatorio)
+    Dim context As New CMLinqDataContext
 
     Sub New()
 
@@ -42,11 +44,7 @@ Public Class form_new_centro_medico
         End If
 
         IniciaUsuario(fIduser)
-
-        'If calendar = False Then
-        '    menu_calendario.Checked = False
-        'End If
-        'CtrlPaciente1.Focus()
+        CargaListRecod()
 
         Globales.ChequeaIdentidadTarifas()
         Dim recur As Integer = Globales.VerificaEstadoRecurrencia(2)
@@ -790,7 +788,7 @@ Public Class form_new_centro_medico
             query += " ORDER BY PACIENTES.CPACIENTE DESC "
             Dim dt As DataTable = Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteDataset(My.Settings.CMConnectionString, CommandType.Text, query).Tables(0)
             If dt.Rows.Count() = 1 Then
-                Dim context As New CMLinqDataContext
+
                 Dim paciente As PACIENTE = (From p In context.PACIENTEs Where p.CPACIENTE = dt.Rows(0).Item("CPACIENTE").ToString() And (Not p.Eliminado.HasValue Or p.Eliminado = False) Select p).SingleOrDefault()
                 If Not paciente Is Nothing Then
                     Dim _nuevo_paciente As formPaciente = New formPaciente("Ficha de Paciente-Editar", Enums.Accion.Modificar, paciente.CPACIENTE)
@@ -2121,4 +2119,50 @@ Public Class form_new_centro_medico
         FreeMemory.FlushMemory()
     End Sub
 
+    Private Sub Button83_Click(sender As Object, e As EventArgs) Handles Button83.Click
+        Dim frm As New form_pac_como_nos_conocio
+        frm.ShowDialog()
+        GC.Collect()
+    End Sub
+
+    Private Sub CargaListRecod()
+        listRecordatorioHoy = (From p In context.Recordatorios _
+                            Where p.Fecha = Date.Now And p.Activo And p.IdUsuario = IDUser _
+                            Select p Order By p.Hora Descending).ToList()
+    End Sub
+
+    Private Sub Button84_Click(sender As Object, e As EventArgs) Handles Button84.Click
+        Dim frm As New Form_Recordatorio
+        frm.context = Me.context
+        frm.IdUser = IDUser
+        frm.ShowDialog()
+        CargaListRecod()
+        GC.Collect()
+    End Sub
+
+    Private Sub Timer1_Tick(sender As System.Object, e As System.EventArgs) Handles Timer1.Tick
+        Dim ListRecordatorioHora As List(Of Recordatorio) = listRecordatorioHoy.Where(Function(b) b.Hora.ToString("yyyy-MM-dd HH:mm") = DateTime.Now.ToString("yyyy-MM-dd HH:mm")).ToList()
+
+        If ListRecordatorioHora.Count = 1 Then
+            ListRecordatorioHora.Item(0).Activo = False
+            context.SubmitChanges()
+            CargaListRecod()
+            MessageBox.Show(ListRecordatorioHora.Item(0).Anotación, ListRecordatorioHora.Item(0).Hora.ToString("HH:mm") & " - " & ListRecordatorioHora.Item(0).Asunto, MessageBoxButtons.OK, MessageBoxIcon.Information)
+        ElseIf ListRecordatorioHora.Count > 1 Then
+            Dim mensaje As String = ""
+            Dim i As Integer
+            For i = 0 To ListRecordatorioHora.Count - 1
+                If i = ListRecordatorioHora.Count - 1 Then
+                    mensaje += "Notificación" & i + 1 & ": " & ListRecordatorioHora.Item(i).Asunto & vbCrLf & ListRecordatorioHora.Item(i).Anotación & vbCrLf
+                Else
+                    mensaje += "Notificación" & i + 1 & ": " & ListRecordatorioHora.Item(i).Asunto & vbCrLf & ListRecordatorioHora.Item(i).Anotación & vbCrLf
+                    mensaje += "===============================" & vbCrLf & vbCrLf
+                End If
+                ListRecordatorioHora.Item(i).Activo = False
+            Next
+            context.SubmitChanges()
+            CargaListRecod()
+            MessageBox.Show(mensaje, "Notificacion Hora: " & ListRecordatorioHora.Item(0).Hora.ToString("HH:mm"), MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+    End Sub
 End Class

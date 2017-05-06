@@ -251,7 +251,7 @@ Public Class frmPaciente_Editar
     End Sub
 
     Private Sub CargarComoNosConocio(pac As PACIENTE)
-        Dim como As List(Of ComoConocio) = (From c In context.ComoConocios Select c).ToList()
+        Dim como As List(Of ComoConocio) = (From c In context.ComoConocios Select c Order By c.Descripcion).ToList()
 
         For Each c As ComoConocio In como
             cb_comoconocio.Items.Add(c.Descripcion)
