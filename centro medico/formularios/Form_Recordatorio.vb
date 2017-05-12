@@ -186,7 +186,7 @@ Public Class Form_Recordatorio
         SetEnabled(True)
         tsbEliminar.Enabled = False
         tsbModificar.Enabled = False
-        ToggleSwitch1.Checked = False
+        ToggleSwitch1.Checked = True
         TbAsunto.Text = ""
         TbAnotacion.Text = ""
     End Sub
@@ -235,7 +235,7 @@ Public Class Form_Recordatorio
         Accion = "Insertar"
         GroupBox1.Text = "Nuevo Recordatorio"
 
-        ToggleSwitch1.Checked = False
+        ToggleSwitch1.Checked = True
         TbAsunto.Text = ""
         TbAnotacion.Text = ""
         SetReadOnly(False)

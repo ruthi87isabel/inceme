@@ -83,7 +83,7 @@ Partial Class Form_Recordatorio
         LbTexto.Name = "LbTexto"
         LbTexto.Size = New System.Drawing.Size(75, 17)
         LbTexto.TabIndex = 76
-        LbTexto.Text = "Anotacion:"
+        LbTexto.Text = "Anotación:"
         '
         'Label1
         '
@@ -137,6 +137,7 @@ Partial Class Form_Recordatorio
         '
         Me.Calendar2.AllowDrop = True
         Me.Calendar2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Calendar2.FirstMonth = New Date(2017, 3, 1, 0, 0, 0, 0)
         Me.Calendar2.Location = New System.Drawing.Point(796, 36)
         Me.Calendar2.Margin = New System.Windows.Forms.Padding(4)
         Me.Calendar2.Name = "Calendar2"
@@ -190,6 +191,7 @@ Partial Class Form_Recordatorio
         '
         'ToggleSwitch1
         '
+        Me.ToggleSwitch1.Checked = True
         Me.ToggleSwitch1.Location = New System.Drawing.Point(235, 46)
         Me.ToggleSwitch1.Margin = New System.Windows.Forms.Padding(4)
         Me.ToggleSwitch1.Name = "ToggleSwitch1"
@@ -248,7 +250,7 @@ Partial Class Form_Recordatorio
         Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbAñadir, Me.tsbModificar, Me.tsbEliminar})
         Me.ToolStrip2.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip2.Name = "ToolStrip2"
-        Me.ToolStrip2.Size = New System.Drawing.Size(292, 27)
+        Me.ToolStrip2.Size = New System.Drawing.Size(261, 27)
         Me.ToolStrip2.TabIndex = 100
         Me.ToolStrip2.Text = "ToolStrip2"
         '
