@@ -128,9 +128,9 @@ Public Class form_paises
                 'Try
                 _cod = Integer.Parse(tb_codigo.Text.Trim())
                 'Catch ex As Exception
-                MessageBox.Show("No puede utilizar ese codigo.Utilice numeros enteros mayores que 0", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Return
-                'End 'Try
+                'MessageBox.Show("No puede utilizar ese codigo.Utilice numeros enteros mayores que 0", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                'Return
+                ''End 'Try
 
                 If _cod = 0 Then
                     MessageBox.Show("No puede utilizar ese codigo.Utilice numeros enteros mayores que 0", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
