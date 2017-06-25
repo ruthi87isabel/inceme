@@ -119,10 +119,10 @@ Partial Class frmListadoCitas
         '
         'bt_cerrar
         '
-        Me.bt_cerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.bt_cerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.bt_cerrar.Image = Global.centro_medico.My.Resources.Resources.MISC20
         Me.bt_cerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.bt_cerrar.Location = New System.Drawing.Point(1169, 689)
+        Me.bt_cerrar.Location = New System.Drawing.Point(1158, 674)
         Me.bt_cerrar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_cerrar.Name = "bt_cerrar"
         Me.bt_cerrar.Size = New System.Drawing.Size(100, 46)
@@ -136,7 +136,7 @@ Partial Class frmListadoCitas
         Me.bt_ver.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.bt_ver.Image = Global.centro_medico.My.Resources.Resources._24_zoom
         Me.bt_ver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.bt_ver.Location = New System.Drawing.Point(8, 688)
+        Me.bt_ver.Location = New System.Drawing.Point(8, 673)
         Me.bt_ver.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_ver.Name = "bt_ver"
         Me.bt_ver.Size = New System.Drawing.Size(97, 46)
@@ -150,7 +150,7 @@ Partial Class frmListadoCitas
         Me.bt_modificar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.bt_modificar.Image = Global.centro_medico.My.Resources.Resources._24_tag_pencil
         Me.bt_modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.bt_modificar.Location = New System.Drawing.Point(219, 687)
+        Me.bt_modificar.Location = New System.Drawing.Point(219, 672)
         Me.bt_modificar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_modificar.Name = "bt_modificar"
         Me.bt_modificar.Size = New System.Drawing.Size(109, 46)
@@ -226,7 +226,7 @@ Partial Class frmListadoCitas
         Me.bt_imprimir.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.bt_imprimir.Image = Global.centro_medico.My.Resources.Resources.Print1
         Me.bt_imprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.bt_imprimir.Location = New System.Drawing.Point(497, 687)
+        Me.bt_imprimir.Location = New System.Drawing.Point(497, 672)
         Me.bt_imprimir.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_imprimir.Name = "bt_imprimir"
         Me.bt_imprimir.Size = New System.Drawing.Size(132, 46)
@@ -293,10 +293,9 @@ Partial Class frmListadoCitas
         '
         'bt_Filtrar
         '
-        Me.bt_Filtrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bt_Filtrar.Image = Global.centro_medico.My.Resources.Resources._24_zoom_actual
         Me.bt_Filtrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.bt_Filtrar.Location = New System.Drawing.Point(1153, 234)
+        Me.bt_Filtrar.Location = New System.Drawing.Point(1153, 235)
         Me.bt_Filtrar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_Filtrar.Name = "bt_Filtrar"
         Me.bt_Filtrar.Size = New System.Drawing.Size(107, 33)
@@ -310,7 +309,7 @@ Partial Class frmListadoCitas
         Me.bt_Borrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.bt_Borrar.Image = Global.centro_medico.My.Resources.Resources._24_em_cross
         Me.bt_Borrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.bt_Borrar.Location = New System.Drawing.Point(336, 687)
+        Me.bt_Borrar.Location = New System.Drawing.Point(336, 672)
         Me.bt_Borrar.Margin = New System.Windows.Forms.Padding(4)
         Me.bt_Borrar.Name = "bt_Borrar"
         Me.bt_Borrar.Size = New System.Drawing.Size(92, 46)
@@ -325,7 +324,7 @@ Partial Class frmListadoCitas
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 739)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(1, 0, 19, 0)
-        Me.StatusStrip1.Size = New System.Drawing.Size(1281, 25)
+        Me.StatusStrip1.Size = New System.Drawing.Size(1274, 25)
         Me.StatusStrip1.TabIndex = 127
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -471,7 +470,7 @@ Partial Class frmListadoCitas
         Me.btnAnnadirCita.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnAnnadirCita.Image = Global.centro_medico.My.Resources.Resources._24_em_plus
         Me.btnAnnadirCita.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAnnadirCita.Location = New System.Drawing.Point(113, 687)
+        Me.btnAnnadirCita.Location = New System.Drawing.Point(113, 672)
         Me.btnAnnadirCita.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAnnadirCita.Name = "btnAnnadirCita"
         Me.btnAnnadirCita.Size = New System.Drawing.Size(97, 46)
@@ -483,9 +482,8 @@ Partial Class frmListadoCitas
         'GridEX1
         '
         Me.GridEX1.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.[False]
-        Me.GridEX1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GridEX1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.GridEX1.ColumnAutoResize = True
         Me.GridEX1.DataSource = Me.CITABindingSource
         GridEX1_DesignTimeLayout_Reference_0.Instance = CType(resources.GetObject("GridEX1_DesignTimeLayout_Reference_0.Instance"), Object)
@@ -504,7 +502,7 @@ Partial Class frmListadoCitas
         Me.GridEX1.RecordNavigator = True
         Me.GridEX1.RepeatHeaders = Janus.Windows.GridEX.InheritableBoolean.[False]
         Me.GridEX1.RowCheckStateBehavior = Janus.Windows.GridEX.RowCheckStateBehavior.CheckStateDependsOnChild
-        Me.GridEX1.Size = New System.Drawing.Size(1265, 368)
+        Me.GridEX1.Size = New System.Drawing.Size(1253, 368)
         Me.GridEX1.TabIndex = 129
         Me.GridEX1.TotalRow = Janus.Windows.GridEX.InheritableBoolean.[True]
         Me.GridEX1.TotalRowPosition = Janus.Windows.GridEX.TotalRowPosition.BottomFixed
@@ -568,11 +566,11 @@ Partial Class frmListadoCitas
         '
         'btn_FacturarSeleccionadas
         '
-        Me.btn_FacturarSeleccionadas.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_FacturarSeleccionadas.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btn_FacturarSeleccionadas.Enabled = False
         Me.btn_FacturarSeleccionadas.Image = Global.centro_medico.My.Resources.Resources.Facturas
         Me.btn_FacturarSeleccionadas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_FacturarSeleccionadas.Location = New System.Drawing.Point(1028, 777)
+        Me.btn_FacturarSeleccionadas.Location = New System.Drawing.Point(1019, 675)
         Me.btn_FacturarSeleccionadas.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_FacturarSeleccionadas.Name = "btn_FacturarSeleccionadas"
         Me.btn_FacturarSeleccionadas.Size = New System.Drawing.Size(120, 43)
@@ -586,7 +584,7 @@ Partial Class frmListadoCitas
         Me.btnComunicaciones.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnComunicaciones.Image = Global.centro_medico.My.Resources.Resources.communication
         Me.btnComunicaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnComunicaciones.Location = New System.Drawing.Point(796, 687)
+        Me.btnComunicaciones.Location = New System.Drawing.Point(796, 672)
         Me.btnComunicaciones.Margin = New System.Windows.Forms.Padding(4)
         Me.btnComunicaciones.Name = "btnComunicaciones"
         Me.btnComunicaciones.Size = New System.Drawing.Size(203, 46)
@@ -721,7 +719,7 @@ Partial Class frmListadoCitas
         Me.btnImprimirJustificante.Enabled = False
         Me.btnImprimirJustificante.Image = Global.centro_medico.My.Resources.Resources.Print1
         Me.btnImprimirJustificante.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnImprimirJustificante.Location = New System.Drawing.Point(637, 687)
+        Me.btnImprimirJustificante.Location = New System.Drawing.Point(637, 672)
         Me.btnImprimirJustificante.Margin = New System.Windows.Forms.Padding(4)
         Me.btnImprimirJustificante.Name = "btnImprimirJustificante"
         Me.btnImprimirJustificante.Size = New System.Drawing.Size(131, 46)
@@ -732,7 +730,7 @@ Partial Class frmListadoCitas
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(1007, 660)
+        Me.Button1.Location = New System.Drawing.Point(1029, 682)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 28)
@@ -925,7 +923,10 @@ Partial Class frmListadoCitas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1281, 764)
+        Me.AutoSize = True
+        Me.ClientSize = New System.Drawing.Size(1274, 764)
+        Me.Controls.Add(Me.StatusStrip1)
+        Me.Controls.Add(Me.btn_FacturarSeleccionadas)
         Me.Controls.Add(Me.GBfecha_cobro)
         Me.Controls.Add(Me.GBfecha_cita)
         Me.Controls.Add(Me.Label17)
@@ -948,10 +949,8 @@ Partial Class frmListadoCitas
         Me.Controls.Add(Me.GridEX1)
         Me.Controls.Add(Me.GroupBoxFacturacion)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.CtrlPaciente1)
         Me.Controls.Add(Me.bt_Borrar)
-        Me.Controls.Add(Me.btn_FacturarSeleccionadas)
         Me.Controls.Add(Me.CtrlMedico1)
         Me.Controls.Add(Me.CtrlMutua1)
         Me.Controls.Add(Me.CtrlFormaPago21)

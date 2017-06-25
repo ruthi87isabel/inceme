@@ -2159,9 +2159,10 @@ Partial Class form_new_centro_medico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1323, 807)
+        Me.ClientSize = New System.Drawing.Size(1274, 807)
         Me.Controls.Add(Me.UiGroupBox5)
         Me.Controls.Add(Me.UiGroupBox4)
         Me.Controls.Add(Me.UiGroupBox1)

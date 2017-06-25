@@ -80,6 +80,7 @@ Public Class frmListadoCitas
                                                End Sub
 
         CargarCitas()
+
     End Sub
 
     Private Sub CargarCitas()
