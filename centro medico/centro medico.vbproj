@@ -2482,6 +2482,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Scripts\db_1.0.4.2.sql" />
+    <Content Include="Scripts\db_1.0.4.3.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="UI\Dental\Icons\confirmado.ico" />
     <Content Include="UI\Dental\Icons\confirmado.png" />
     <Content Include="UI\Dental\Icons\confirmado_urgente.ico" />
