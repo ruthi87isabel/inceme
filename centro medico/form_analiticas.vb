@@ -347,11 +347,18 @@ Public Class form_analiticas_ex
     Private Sub tlbImprimirAnalitica_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tlbImprimirAnalitica.Click
         Dim rpt As New Microsoft.Reporting.WinForms.ReportDataSource
         Dim rpt2 As New Microsoft.Reporting.WinForms.ReportDataSource
+        Dim parametros(0) As Microsoft.Reporting.WinForms.ReportParameter
         Dim _data As New CMDataSet.ANALITICASDataTable 'analiticas
         Dim _data2 As New CM2DataSet.PacienteAnaliticaDataTable 'lineasanaliticas
         Dim codigoAnalitica As Integer
         Dim i As Integer = 0
+        Dim FechaNacimiento As String = ""
         'bt_aceptar_Click(Nothing, Nothing)
+
+        Dim tadapacientes As New centro_medico.CMDataSetTableAdapters.PACIENTESTableAdapter
+        If Not tadapacientes.GetPacienteById(Me.fId).Rows(0).Item("FECHAN").GetType Is GetType(DBNull) Then
+            FechaNacimiento = tadapacientes.GetPacienteById(Me.fId).Rows(0).Item("FECHAN")
+        End If
 
         '   _analitica = Me.ANALITICASTableAdapter.GetAnaliticaById(Me.fId)
         '   _lineasanalitica = Me.LINEASANALITICASTableAdapter.GetLineasByAnaliticas(Me.fId)
@@ -364,9 +371,12 @@ Public Class form_analiticas_ex
         rpt.Value = _data
         rpt2.Name = "CM2DataSet_PacienteAnalitica"
         rpt2.Value = _data2
+        parametros(0) = New Microsoft.Reporting.WinForms.ReportParameter
+        parametros(0).Name = "FechaNacimiento"
+        parametros(0).Values.Add(FechaNacimiento)
 
 
-        ReportesManager.Imprime("AnaliticaPeticion.rdlc", {rpt, rpt2})
+        ReportesManager.Imprime("AnaliticaPeticion.rdlc", {rpt, rpt2}, parametros)
 
     End Sub
 

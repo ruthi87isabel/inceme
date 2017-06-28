@@ -253,11 +253,12 @@ Public Class form_derivaciones
     Private Sub Imprimir()
         Dim NombrePaciente As String = ""
         Dim DatosMedico As String = ""
+        Dim FechaNacimiento As String = ""
 
         Dim rdata As New Microsoft.Reporting.WinForms.ReportDataSource
         Dim tadapacientes As New centro_medico.CMDataSetTableAdapters.PACIENTESTableAdapter
         Dim tadamedicos As New centro_medico.CMDataSetTableAdapters.MEDICOSTableAdapter
-        Dim parametros(5) As Microsoft.Reporting.WinForms.ReportParameter
+        Dim parametros(6) As Microsoft.Reporting.WinForms.ReportParameter
 
         'datos del medico
         If CtrlMedico1.ID_Medico.HasValue Then
@@ -288,6 +289,9 @@ Public Class form_derivaciones
         If Not tadapacientes.GetPacienteById(Me.fPacienteId).Rows(0).Item("Apellido2").GetType Is GetType(DBNull) Then
             NombrePaciente += " " + tadapacientes.GetPacienteById(Me.fPacienteId).Rows(0).Item("Apellido2").trim
         End If
+        If Not tadapacientes.GetPacienteById(Me.fPacienteId).Rows(0).Item("FECHAN").GetType Is GetType(DBNull) Then
+            FechaNacimiento = tadapacientes.GetPacienteById(Me.fPacienteId).Rows(0).Item("FECHAN")
+        End If
 
         parametros(0) = New Microsoft.Reporting.WinForms.ReportParameter
         parametros(0).Name = "NombrePaciente"
@@ -307,6 +311,9 @@ Public Class form_derivaciones
         parametros(5) = New Microsoft.Reporting.WinForms.ReportParameter
         parametros(5).Name = "Destino"
         parametros(5).Values.Add(Me.tb_destino.Text.Trim)
+        parametros(6) = New Microsoft.Reporting.WinForms.ReportParameter
+        parametros(6).Name = "FechaNacimiento"
+        parametros(6).Values.Add(FechaNacimiento)
 
 
         ReportesManager.Imprime("Derivacion.rdlc", Nothing, parametros)
