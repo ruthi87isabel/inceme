@@ -22,7 +22,7 @@
             <Top>1.19708cm</Top>
             <Left>0.25cm</Left>
             <Height>3.37688cm</Height>
-            <Width>17.25cm</Width>
+            <Width>17.74389cm</Width>
             <Style>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
@@ -50,7 +50,7 @@
         <Top>4.17737cm</Top>
         <Left>0.1825cm</Left>
         <Height>5.94438cm</Height>
-        <Width>18cm</Width>
+        <Width>18.3cm</Width>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -77,7 +77,7 @@
         <Top>9.00132cm</Top>
         <Left>10.9325cm</Left>
         <Height>0.63492cm</Height>
-        <Width>6.75cm</Width>
+        <Width>7.24389cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <PaddingLeft>2pt</PaddingLeft>
@@ -160,7 +160,7 @@ First(Fields!APELLIDO2.Value, "dsPaciente")</Value>
         <Top>4.45382cm</Top>
         <Left>0.4325cm</Left>
         <Height>0.75cm</Height>
-        <Width>17.25cm</Width>
+        <Width>17.74389cm</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <PaddingLeft>2pt</PaddingLeft>
@@ -360,8 +360,8 @@ Torrevieja (Alicante),  03184 </Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox28</rd:DefaultName>
-        <Top>1.78528cm</Top>
-        <Left>13.72896cm</Left>
+        <Top>1.71632cm</Top>
+        <Left>14.16396cm</Left>
         <Height>1.60015cm</Height>
         <Width>4.63604cm</Width>
         <ZIndex>10</ZIndex>
@@ -380,7 +380,7 @@ Torrevieja (Alicante),  03184 </Value>
         <Value>clinicasiesta</Value>
         <MIMEType>image/bmp</MIMEType>
         <Sizing>Fit</Sizing>
-        <Left>12.115cm</Left>
+        <Left>12.55cm</Left>
         <Height>1.75cm</Height>
         <Width>6.25cm</Width>
         <ZIndex>11</ZIndex>
@@ -406,7 +406,7 @@ Torrevieja (Alicante),  03184 </Value>
             <Top>1.19708cm</Top>
             <Left>0.25cm</Left>
             <Height>3.37688cm</Height>
-            <Width>17.25cm</Width>
+            <Width>17.75272cm</Width>
             <Style>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
@@ -429,12 +429,39 @@ Torrevieja (Alicante),  03184 </Value>
               </Border>
             </Style>
           </Image>
+          <Textbox Name="DESCRIPCION2">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!DESCRIPCION.Value, "CMDataSet_rpt_Recetas")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>DESCRIPCION</rd:DefaultName>
+            <Top>0.27645cm</Top>
+            <Left>0.26766cm</Left>
+            <Height>0.75cm</Height>
+            <Width>17.73506cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
         <DataElementOutput>ContentsOnly</DataElementOutput>
         <Top>18.04313cm</Top>
         <Left>0.17367cm</Left>
         <Height>5.94438cm</Height>
-        <Width>18cm</Width>
+        <Width>18.30883cm</Width>
         <ZIndex>12</ZIndex>
         <Style>
           <Border>
@@ -462,7 +489,7 @@ Torrevieja (Alicante),  03184 </Value>
         <Top>22.86708cm</Top>
         <Left>10.92367cm</Left>
         <Height>0.63492cm</Height>
-        <Width>6.75cm</Width>
+        <Width>7.25272cm</Width>
         <ZIndex>13</ZIndex>
         <Style>
           <PaddingLeft>2pt</PaddingLeft>
@@ -525,33 +552,6 @@ Torrevieja (Alicante),  03184 </Value>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="DESCRIPCION2">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=First(Fields!DESCRIPCION.Value, "CMDataSet_rpt_Recetas")</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>DESCRIPCION</rd:DefaultName>
-        <Top>18.31958cm</Top>
-        <Left>0.42367cm</Left>
-        <Height>0.75cm</Height>
-        <Width>17.25cm</Width>
-        <ZIndex>16</ZIndex>
-        <Style>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Textbox Name="NOMBREMEDICO2">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -571,7 +571,7 @@ Torrevieja (Alicante),  03184 </Value>
         <Left>0.17367cm</Left>
         <Height>0.63492cm</Height>
         <Width>8.75cm</Width>
-        <ZIndex>17</ZIndex>
+        <ZIndex>16</ZIndex>
         <Style>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -598,7 +598,7 @@ Torrevieja (Alicante),  03184 </Value>
         <Left>2.67367cm</Left>
         <Height>0.5cm</Height>
         <Width>6cm</Width>
-        <ZIndex>18</ZIndex>
+        <ZIndex>17</ZIndex>
         <Style>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -624,7 +624,7 @@ Torrevieja (Alicante),  03184 </Value>
         <Left>0.17367cm</Left>
         <Height>0.50265cm</Height>
         <Width>2.5cm</Width>
-        <ZIndex>19</ZIndex>
+        <ZIndex>18</ZIndex>
         <Style>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -651,7 +651,7 @@ Torrevieja (Alicante),  03184 </Value>
         <Left>0.17367cm</Left>
         <Height>0.6cm</Height>
         <Width>8.5cm</Width>
-        <ZIndex>20</ZIndex>
+        <ZIndex>19</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -681,7 +681,7 @@ Torrevieja (Alicante),  03184 </Value>
         <Left>8.7795cm</Left>
         <Height>0.6cm</Height>
         <Width>7.14222cm</Width>
-        <ZIndex>21</ZIndex>
+        <ZIndex>20</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -741,11 +741,11 @@ Torrevieja (Alicante),  03184 </Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox28</rd:DefaultName>
-        <Top>15.65104cm</Top>
-        <Left>13.72013cm</Left>
+        <Top>15.61736cm</Top>
+        <Left>14.16396cm</Left>
         <Height>1.60015cm</Height>
         <Width>4.63604cm</Width>
-        <ZIndex>22</ZIndex>
+        <ZIndex>21</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -762,17 +762,17 @@ Torrevieja (Alicante),  03184 </Value>
         <MIMEType>image/bmp</MIMEType>
         <Sizing>Fit</Sizing>
         <Top>13.86576cm</Top>
-        <Left>12.10617cm</Left>
+        <Left>12.55cm</Left>
         <Height>1.75cm</Height>
         <Width>6.25cm</Width>
-        <ZIndex>23</ZIndex>
+        <ZIndex>22</ZIndex>
         <Style />
       </Image>
     </ReportItems>
     <Height>24.72834cm</Height>
     <Style />
   </Body>
-  <Width>18.365cm</Width>
+  <Width>18.8cm</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
