@@ -127,6 +127,7 @@
             Me.Label17 = New System.Windows.Forms.Label()
             Me.CBcitas = New System.Windows.Forms.ComboBox()
             Me.ListadoCitaDetalladoTableAdapter1 = New centro_medico.CM2DataSetTableAdapters.ListadoCitaDetalladoTableAdapter()
+            Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
             CType(Me.CITABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.TabControl1.SuspendLayout()
             Me.tabCalendario.SuspendLayout()
@@ -164,7 +165,7 @@
             Me.TabControl1.Controls.Add(Me.tabCalendario)
             Me.TabControl1.Controls.Add(Me.TabListado)
             Me.TabControl1.Location = New System.Drawing.Point(9, 34)
-            Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.TabControl1.Margin = New System.Windows.Forms.Padding(4)
             Me.TabControl1.Name = "TabControl1"
             Me.TabControl1.SelectedIndex = 0
             Me.TabControl1.Size = New System.Drawing.Size(937, 773)
@@ -175,9 +176,9 @@
             Me.tabCalendario.AutoScroll = True
             Me.tabCalendario.Controls.Add(Me.ScheduleCitas)
             Me.tabCalendario.Location = New System.Drawing.Point(4, 25)
-            Me.tabCalendario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.tabCalendario.Margin = New System.Windows.Forms.Padding(4)
             Me.tabCalendario.Name = "tabCalendario"
-            Me.tabCalendario.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.tabCalendario.Padding = New System.Windows.Forms.Padding(4)
             Me.tabCalendario.Size = New System.Drawing.Size(929, 744)
             Me.tabCalendario.TabIndex = 0
             Me.tabCalendario.Text = "Planning Visual"
@@ -207,7 +208,7 @@
             Me.ScheduleCitas.ImageList = Me.ImageList1
             Me.ScheduleCitas.Interval = Janus.Windows.Schedule.Interval.FifteenMinutes
             Me.ScheduleCitas.Location = New System.Drawing.Point(11, 11)
-            Me.ScheduleCitas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.ScheduleCitas.Margin = New System.Windows.Forms.Padding(4)
             Me.ScheduleCitas.Name = "ScheduleCitas"
             Me.ScheduleCitas.OwnerDrawnArea = Janus.Windows.Schedule.OwnerDrawnArea.Appointments
             Me.ScheduleCitas.OwnerMember = "REFMEDICO"
@@ -238,9 +239,9 @@
             '
             Me.TabListado.Controls.Add(Me.GridEX1)
             Me.TabListado.Location = New System.Drawing.Point(4, 25)
-            Me.TabListado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.TabListado.Margin = New System.Windows.Forms.Padding(4)
             Me.TabListado.Name = "TabListado"
-            Me.TabListado.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.TabListado.Padding = New System.Windows.Forms.Padding(4)
             Me.TabListado.Size = New System.Drawing.Size(929, 744)
             Me.TabListado.TabIndex = 1
             Me.TabListado.Text = "Listado"
@@ -265,7 +266,7 @@
             Me.GridEX1.HideSelection = Janus.Windows.GridEX.HideSelection.Highlight
             Me.GridEX1.Hierarchical = True
             Me.GridEX1.Location = New System.Drawing.Point(8, 4)
-            Me.GridEX1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.GridEX1.Margin = New System.Windows.Forms.Padding(4)
             Me.GridEX1.Name = "GridEX1"
             Me.GridEX1.RepeatHeaders = Janus.Windows.GridEX.InheritableBoolean.[False]
             Me.GridEX1.RowCheckStateBehavior = Janus.Windows.GridEX.RowCheckStateBehavior.CheckStateDependsOnChild
@@ -278,7 +279,7 @@
             '
             Me.rbPorSala.AutoSize = True
             Me.rbPorSala.Location = New System.Drawing.Point(235, 27)
-            Me.rbPorSala.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.rbPorSala.Margin = New System.Windows.Forms.Padding(4)
             Me.rbPorSala.Name = "rbPorSala"
             Me.rbPorSala.Size = New System.Drawing.Size(83, 21)
             Me.rbPorSala.TabIndex = 21
@@ -289,7 +290,7 @@
             '
             Me.rbPorMedicos.AutoSize = True
             Me.rbPorMedicos.Location = New System.Drawing.Point(121, 27)
-            Me.rbPorMedicos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.rbPorMedicos.Margin = New System.Windows.Forms.Padding(4)
             Me.rbPorMedicos.Name = "rbPorMedicos"
             Me.rbPorMedicos.Size = New System.Drawing.Size(100, 21)
             Me.rbPorMedicos.TabIndex = 21
@@ -301,7 +302,7 @@
             Me.rbTodas.AutoSize = True
             Me.rbTodas.Checked = True
             Me.rbTodas.Location = New System.Drawing.Point(40, 27)
-            Me.rbTodas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.rbTodas.Margin = New System.Windows.Forms.Padding(4)
             Me.rbTodas.Name = "rbTodas"
             Me.rbTodas.Size = New System.Drawing.Size(69, 21)
             Me.rbTodas.TabIndex = 21
@@ -313,7 +314,7 @@
             '
             Me.pbLoading.Image = Global.centro_medico.My.Resources.Resources.ajax_loader
             Me.pbLoading.Location = New System.Drawing.Point(73, 114)
-            Me.pbLoading.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.pbLoading.Margin = New System.Windows.Forms.Padding(4)
             Me.pbLoading.Name = "pbLoading"
             Me.pbLoading.Size = New System.Drawing.Size(44, 46)
             Me.pbLoading.TabIndex = 18
@@ -325,7 +326,7 @@
             Me.Calendar2.AllowDrop = True
             Me.Calendar2.FirstMonth = New Date(2010, 4, 1, 0, 0, 0, 0)
             Me.Calendar2.Location = New System.Drawing.Point(7, 7)
-            Me.Calendar2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.Calendar2.Margin = New System.Windows.Forms.Padding(4)
             Me.Calendar2.Name = "Calendar2"
             Me.Calendar2.Schedule = Me.ScheduleCitas
             Me.Calendar2.SelectionStyle = Janus.Windows.Schedule.CalendarSelectionStyle.Schedule
@@ -340,9 +341,9 @@
             Me.gb_pacientes.Controls.Add(Me.rb_atendidos)
             Me.gb_pacientes.Controls.Add(Me.rb_todos)
             Me.gb_pacientes.Location = New System.Drawing.Point(1177, 97)
-            Me.gb_pacientes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.gb_pacientes.Margin = New System.Windows.Forms.Padding(4)
             Me.gb_pacientes.Name = "gb_pacientes"
-            Me.gb_pacientes.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.gb_pacientes.Padding = New System.Windows.Forms.Padding(4)
             Me.gb_pacientes.Size = New System.Drawing.Size(156, 167)
             Me.gb_pacientes.TabIndex = 14
             Me.gb_pacientes.TabStop = False
@@ -352,7 +353,7 @@
             '
             Me.rb_pendientes.AutoSize = True
             Me.rb_pendientes.Location = New System.Drawing.Point(21, 80)
-            Me.rb_pendientes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.rb_pendientes.Margin = New System.Windows.Forms.Padding(4)
             Me.rb_pendientes.Name = "rb_pendientes"
             Me.rb_pendientes.Size = New System.Drawing.Size(100, 21)
             Me.rb_pendientes.TabIndex = 2
@@ -363,7 +364,7 @@
             '
             Me.rb_atendidos.AutoSize = True
             Me.rb_atendidos.Location = New System.Drawing.Point(21, 52)
-            Me.rb_atendidos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.rb_atendidos.Margin = New System.Windows.Forms.Padding(4)
             Me.rb_atendidos.Name = "rb_atendidos"
             Me.rb_atendidos.Size = New System.Drawing.Size(92, 21)
             Me.rb_atendidos.TabIndex = 1
@@ -375,7 +376,7 @@
             Me.rb_todos.AutoSize = True
             Me.rb_todos.Checked = True
             Me.rb_todos.Location = New System.Drawing.Point(21, 23)
-            Me.rb_todos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.rb_todos.Margin = New System.Windows.Forms.Padding(4)
             Me.rb_todos.Name = "rb_todos"
             Me.rb_todos.Size = New System.Drawing.Size(69, 21)
             Me.rb_todos.TabIndex = 0
@@ -461,10 +462,10 @@
             'ToolStrip1
             '
             Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.None
-            Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tstNuevaCitas, Me.tstModificar, Me.tstEliminar, Me.ToolStripSeparator1, Me.tstDuplicarCita, Me.tstVer, Me.tstImprimir, Me.tstImprimirJustificante})
+            Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tstNuevaCitas, Me.tstModificar, Me.tstEliminar, Me.ToolStripSeparator1, Me.tstDuplicarCita, Me.tstVer, Me.tstImprimir, Me.ToolStripButton2, Me.tstImprimirJustificante})
             Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
             Me.ToolStrip1.Name = "ToolStrip1"
-            Me.ToolStrip1.Size = New System.Drawing.Size(667, 27)
+            Me.ToolStrip1.Size = New System.Drawing.Size(854, 27)
             Me.ToolStrip1.TabIndex = 6
             Me.ToolStrip1.Text = "ToolStrip1"
             '
@@ -777,7 +778,7 @@
             Me.GridEXMedicos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
             Me.GridEXMedicos.GroupByBoxVisible = False
             Me.GridEXMedicos.Location = New System.Drawing.Point(955, 284)
-            Me.GridEXMedicos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.GridEXMedicos.Margin = New System.Windows.Forms.Padding(4)
             Me.GridEXMedicos.Name = "GridEXMedicos"
             Me.GridEXMedicos.Size = New System.Drawing.Size(379, 182)
             Me.GridEXMedicos.TabIndex = 21
@@ -792,7 +793,7 @@
             Me.GridEXMutuas.DesignTimeLayout = GridEXMutuas_DesignTimeLayout
             Me.GridEXMutuas.GroupByBoxVisible = False
             Me.GridEXMutuas.Location = New System.Drawing.Point(956, 474)
-            Me.GridEXMutuas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.GridEXMutuas.Margin = New System.Windows.Forms.Padding(4)
             Me.GridEXMutuas.Name = "GridEXMutuas"
             Me.GridEXMutuas.Size = New System.Drawing.Size(377, 128)
             Me.GridEXMutuas.TabIndex = 21
@@ -806,7 +807,7 @@
             Me.Panel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.Panel1.Controls.Add(Me.Calendar2)
             Me.Panel1.Location = New System.Drawing.Point(952, 101)
-            Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
             Me.Panel1.Name = "Panel1"
             Me.Panel1.Size = New System.Drawing.Size(220, 180)
             Me.Panel1.TabIndex = 22
@@ -819,7 +820,7 @@
             Me.PanelIntervalo.Controls.Add(Me.dtpFechaFinal)
             Me.PanelIntervalo.Controls.Add(Me.dtpFechaInicio)
             Me.PanelIntervalo.Location = New System.Drawing.Point(960, 123)
-            Me.PanelIntervalo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.PanelIntervalo.Margin = New System.Windows.Forms.Padding(4)
             Me.PanelIntervalo.Name = "PanelIntervalo"
             Me.PanelIntervalo.Size = New System.Drawing.Size(204, 75)
             Me.PanelIntervalo.TabIndex = 23
@@ -849,7 +850,7 @@
             '
             Me.dtpFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpFechaFinal.Location = New System.Drawing.Point(63, 36)
-            Me.dtpFechaFinal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.dtpFechaFinal.Margin = New System.Windows.Forms.Padding(4)
             Me.dtpFechaFinal.Name = "dtpFechaFinal"
             Me.dtpFechaFinal.Size = New System.Drawing.Size(125, 22)
             Me.dtpFechaFinal.TabIndex = 0
@@ -858,7 +859,7 @@
             '
             Me.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
             Me.dtpFechaInicio.Location = New System.Drawing.Point(63, 4)
-            Me.dtpFechaInicio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.dtpFechaInicio.Margin = New System.Windows.Forms.Padding(4)
             Me.dtpFechaInicio.Name = "dtpFechaInicio"
             Me.dtpFechaInicio.Size = New System.Drawing.Size(125, 22)
             Me.dtpFechaInicio.TabIndex = 0
@@ -873,7 +874,7 @@
             Me.GridEXSalas.DesignTimeLayout = GridEXSalas_DesignTimeLayout
             Me.GridEXSalas.GroupByBoxVisible = False
             Me.GridEXSalas.Location = New System.Drawing.Point(956, 608)
-            Me.GridEXSalas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.GridEXSalas.Margin = New System.Windows.Forms.Padding(4)
             Me.GridEXSalas.Name = "GridEXSalas"
             Me.GridEXSalas.Size = New System.Drawing.Size(377, 95)
             Me.GridEXSalas.TabIndex = 24
@@ -889,9 +890,9 @@
             Me.GroupBox1.Controls.Add(Me.rbPorSala)
             Me.GroupBox1.Controls.Add(Me.rbTodas)
             Me.GroupBox1.Location = New System.Drawing.Point(960, 34)
-            Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
             Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
             Me.GroupBox1.Size = New System.Drawing.Size(377, 63)
             Me.GroupBox1.TabIndex = 25
             Me.GroupBox1.TabStop = False
@@ -910,7 +911,7 @@
             Me.GridEXNotas.DesignTimeLayout = GridEXNotas_DesignTimeLayout
             Me.GridEXNotas.GroupByBoxVisible = False
             Me.GridEXNotas.Location = New System.Drawing.Point(4, 22)
-            Me.GridEXNotas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.GridEXNotas.Margin = New System.Windows.Forms.Padding(4)
             Me.GridEXNotas.Name = "GridEXNotas"
             Me.GridEXNotas.Size = New System.Drawing.Size(372, 71)
             Me.GridEXNotas.TabIndex = 26
@@ -942,7 +943,7 @@
             Me.PanelNotas.Controls.Add(Me.btnNota_Editar)
             Me.PanelNotas.Controls.Add(Me.btnNota_Agregar)
             Me.PanelNotas.Location = New System.Drawing.Point(952, 709)
-            Me.PanelNotas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.PanelNotas.Margin = New System.Windows.Forms.Padding(4)
             Me.PanelNotas.Name = "PanelNotas"
             Me.PanelNotas.Size = New System.Drawing.Size(381, 94)
             Me.PanelNotas.TabIndex = 3
@@ -994,7 +995,7 @@
             Me.CBcitas.FormattingEnabled = True
             Me.CBcitas.Items.AddRange(New Object() {"", "1ra Cita", "2da Cita", "3ra Cita"})
             Me.CBcitas.Location = New System.Drawing.Point(971, 224)
-            Me.CBcitas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.CBcitas.Margin = New System.Windows.Forms.Padding(4)
             Me.CBcitas.Name = "CBcitas"
             Me.CBcitas.Size = New System.Drawing.Size(160, 24)
             Me.CBcitas.TabIndex = 215
@@ -1003,6 +1004,14 @@
             'ListadoCitaDetalladoTableAdapter1
             '
             Me.ListadoCitaDetalladoTableAdapter1.ClearBeforeFill = True
+            '
+            'ToolStripButton2
+            '
+            Me.ToolStripButton2.Image = Global.centro_medico.My.Resources.Resources.Print
+            Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
+            Me.ToolStripButton2.Name = "ToolStripButton2"
+            Me.ToolStripButton2.Size = New System.Drawing.Size(156, 24)
+            Me.ToolStripButton2.Text = "&Imprimir Detallado"
             '
             'frmCalendarioCitas
             '
@@ -1023,7 +1032,7 @@
             Me.Controls.Add(Me.ToolStrip1)
             Me.Controls.Add(Me.TabControl1)
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-            Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.Margin = New System.Windows.Forms.Padding(4)
             Me.Name = "frmCalendarioCitas"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
             Me.Text = "Calendario de Citas"
@@ -1149,5 +1158,6 @@
         Friend WithEvents Label17 As System.Windows.Forms.Label
         Friend WithEvents CBcitas As System.Windows.Forms.ComboBox
         Friend WithEvents ListadoCitaDetalladoTableAdapter1 As centro_medico.CM2DataSetTableAdapters.ListadoCitaDetalladoTableAdapter
+        Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
     End Class
 End Namespace

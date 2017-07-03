@@ -1100,11 +1100,19 @@ Namespace UI.Citas
 #End Region
 
 #Region "Private Sub bt_imprimir_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tstImprimir.Click"
+
+        Dim DetailMode As Boolean = False
+
+        Private Sub ImprimirDetallado_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
+            DetailMode = True
+            bt_imprimir_Click_1(Nothing, Nothing)
+        End Sub
+
         Private Sub bt_imprimir_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tstImprimir.Click
 
             Me.Estado = EstadoCalendario.Imprimiendo
             Dim tipofiltro As String = ""
-           
+
             Dim ds As New Microsoft.Reporting.WinForms.ReportDataSource()
             If TabControl1.SelectedTab.Equals(TabListado) = True Then
                 'Preparo el filtro para mostrarlo en el report
@@ -1115,7 +1123,7 @@ Namespace UI.Citas
 
                 Dim dTable As New CM2DataSet.ListadoCitaDetalladoDataTable
                 Dim dTable1 As New CM2DataSet.ListadoCitaDetalladoDataTable
-                
+
                 If lista.Count > 0 Then
                     For Each c As WRAPPER_CITA In lista
                         dTable = Me.ListadoCitaDetalladoTableAdapter1.GetData(c.IDCITA)
@@ -1127,9 +1135,10 @@ Namespace UI.Citas
 
                 ds.Value = dTable1.DefaultView
 
-                Dim parametros(0) As Microsoft.Reporting.WinForms.ReportParameter
-                parametros(0) = New Microsoft.Reporting.WinForms.ReportParameter("Filtro", "Filtro aplicado: " & tipofiltro)
 
+                Dim parametros(1) As Microsoft.Reporting.WinForms.ReportParameter
+                parametros(0) = New Microsoft.Reporting.WinForms.ReportParameter("Filtro", "Filtro aplicado: " & tipofiltro)
+                parametros(1) = New Microsoft.Reporting.WinForms.ReportParameter("ModoDetallado", DetailMode)
                 UI.Reportes.ReportesManager.Imprime("CitasListado.rdlc", {ds}, parametros)
 
                 Globales.AuditoriaInfo.Registra(Globales.AuditoriaInfo.Accion.Imprimir, RoleManager.Items.Citas, "Imprimir Calendario Citas", "FechaIncial:" & Calendar2.DatesRange.Start.ToShortDateString() & " - " & Calendar2.DatesRange.End.ToShortDateString(), "")
@@ -1147,6 +1156,7 @@ Namespace UI.Citas
 
             End If
 
+            DetailMode = False
             Me.Estado = EstadoCalendario.Idle
             GC.Collect()
         End Sub
@@ -1695,6 +1705,8 @@ Namespace UI.Citas
                 LoadCitas()
             End If
         End Sub
+
+        
     End Class
 
 End Namespace

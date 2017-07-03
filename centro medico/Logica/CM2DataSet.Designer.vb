@@ -7456,14 +7456,9 @@ Partial Public Class CM2DataSet
             Me.columnIdLinea.AutoIncrement = true
             Me.columnIdLinea.AutoIncrementSeed = -1
             Me.columnIdLinea.AutoIncrementStep = -1
-            Me.columnIdLinea.AllowDBNull = false
             Me.columnIdLinea.ReadOnly = true
             Me.columnRefConcepto.MaxLength = 50
-            Me.columnDESCRIPCION.AllowDBNull = false
             Me.columnDESCRIPCION.MaxLength = 2147483647
-            Me.columnCantidad.AllowDBNull = false
-            Me.columnImporteClinica.AllowDBNull = false
-            Me.columnImporteDr.AllowDBNull = false
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -12587,7 +12582,11 @@ Partial Public Class CM2DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property IdLinea() As Long
             Get
-                Return CType(Me(Me.tableListadoCitaDetallado.IdLineaColumn),Long)
+                Try 
+                    Return CType(Me(Me.tableListadoCitaDetallado.IdLineaColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'IdLinea' in table 'ListadoCitaDetallado' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tableListadoCitaDetallado.IdLineaColumn) = value
@@ -12613,7 +12612,11 @@ Partial Public Class CM2DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property DESCRIPCION() As String
             Get
-                Return CType(Me(Me.tableListadoCitaDetallado.DESCRIPCIONColumn),String)
+                Try 
+                    Return CType(Me(Me.tableListadoCitaDetallado.DESCRIPCIONColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'DESCRIPCION' in table 'ListadoCitaDetallado' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tableListadoCitaDetallado.DESCRIPCIONColumn) = value
@@ -12624,7 +12627,11 @@ Partial Public Class CM2DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property Cantidad() As Double
             Get
-                Return CType(Me(Me.tableListadoCitaDetallado.CantidadColumn),Double)
+                Try 
+                    Return CType(Me(Me.tableListadoCitaDetallado.CantidadColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Cantidad' in table 'ListadoCitaDetallado' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tableListadoCitaDetallado.CantidadColumn) = value
@@ -12635,7 +12642,11 @@ Partial Public Class CM2DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property ImporteClinica() As Double
             Get
-                Return CType(Me(Me.tableListadoCitaDetallado.ImporteClinicaColumn),Double)
+                Try 
+                    Return CType(Me(Me.tableListadoCitaDetallado.ImporteClinicaColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ImporteClinica' in table 'ListadoCitaDetallado' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tableListadoCitaDetallado.ImporteClinicaColumn) = value
@@ -12646,7 +12657,11 @@ Partial Public Class CM2DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property ImporteDr() As Double
             Get
-                Return CType(Me(Me.tableListadoCitaDetallado.ImporteDrColumn),Double)
+                Try 
+                    Return CType(Me(Me.tableListadoCitaDetallado.ImporteDrColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ImporteDr' in table 'ListadoCitaDetallado' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tableListadoCitaDetallado.ImporteDrColumn) = value
@@ -12763,6 +12778,18 @@ Partial Public Class CM2DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsIdLineaNull() As Boolean
+            Return Me.IsNull(Me.tableListadoCitaDetallado.IdLineaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetIdLineaNull()
+            Me(Me.tableListadoCitaDetallado.IdLineaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsRefConceptoNull() As Boolean
             Return Me.IsNull(Me.tableListadoCitaDetallado.RefConceptoColumn)
         End Function
@@ -12771,6 +12798,54 @@ Partial Public Class CM2DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetRefConceptoNull()
             Me(Me.tableListadoCitaDetallado.RefConceptoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsDESCRIPCIONNull() As Boolean
+            Return Me.IsNull(Me.tableListadoCitaDetallado.DESCRIPCIONColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetDESCRIPCIONNull()
+            Me(Me.tableListadoCitaDetallado.DESCRIPCIONColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCantidadNull() As Boolean
+            Return Me.IsNull(Me.tableListadoCitaDetallado.CantidadColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCantidadNull()
+            Me(Me.tableListadoCitaDetallado.CantidadColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsImporteClinicaNull() As Boolean
+            Return Me.IsNull(Me.tableListadoCitaDetallado.ImporteClinicaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetImporteClinicaNull()
+            Me(Me.tableListadoCitaDetallado.ImporteClinicaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsImporteDrNull() As Boolean
+            Return Me.IsNull(Me.tableListadoCitaDetallado.ImporteDrColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetImporteDrNull()
+            Me(Me.tableListadoCitaDetallado.ImporteDrColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -17158,7 +17233,7 @@ Namespace CM2DataSetTableAdapters
             Me._commandCollection(0).CommandText = "SELECT c.IDCITA, c.NumeroCita,c.FECHA, c.HORA, c.PACIENTE, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"m.NOMBRE + ' ' + ISN"& _ 
                 "ULL(m.APELLIDO1, '') + ' ' + ISNULL(m.APELLIDO2, '') AS MEDICO,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"mu.NOMBRE AS MU"& _ 
                 "TUA, p.TLFNO AS TELEFONO, p.MOVIL, p.EMAIL, c.NOTAS, l.IdLinea,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"l.RefConcepto, "& _ 
-                "l.DESCRIPCION, l.Cantidad, l.ImporteClinica, l.ImporteDr FROM dbo.LineasCitas L"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"INNER JOIN dbo.CITAS c ON L.IdCita = c.IDCITA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"INNER JOIN dbo.MEDICOS m ON c.RE"& _ 
+                "l.DESCRIPCION, l.Cantidad, l.ImporteClinica, l.ImporteDr FROM dbo.LineasCitas L"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"RIGHT JOIN dbo.CITAS c ON L.IdCita = c.IDCITA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"INNER JOIN dbo.MEDICOS m ON c.RE"& _ 
                 "FMEDICO = m.CMEDICO"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"INNER JOIN dbo.PACIENTES p ON c.REFPACIENTE=p.CPACIENTE"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"LE"& _ 
                 "FT JOIN dbo.MUTUAS mu ON c.REFPROCEDENCIA=mu.CMUTUA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE c.IdCita=@cita"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text

@@ -958,7 +958,7 @@
                 <TablixMember />
                 <TablixMember>
                   <Visibility>
-                    <Hidden>true</Hidden>
+                    <Hidden>=IIf(Parameters!ModoDetallado.Value and Fields!RefConcepto.Value&lt;&gt;"", False, True)</Hidden>
                     <ToggleItem>NumeroCita</ToggleItem>
                   </Visibility>
                 </TablixMember>
@@ -1332,6 +1332,11 @@
       <DataType>String</DataType>
       <AllowBlank>true</AllowBlank>
       <Prompt>Report_Parameter_0</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ModoDetallado">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
   </ReportParameters>
   <Language>es</Language>
