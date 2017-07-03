@@ -1103,10 +1103,8 @@ Namespace UI.Citas
         Private Sub bt_imprimir_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tstImprimir.Click
 
             Me.Estado = EstadoCalendario.Imprimiendo
-
             Dim tipofiltro As String = ""
            
-
             Dim ds As New Microsoft.Reporting.WinForms.ReportDataSource()
             If TabControl1.SelectedTab.Equals(TabListado) = True Then
                 'Preparo el filtro para mostrarlo en el report
@@ -1115,11 +1113,23 @@ Namespace UI.Citas
 
                 Dim lista As List(Of WRAPPER_CITA) = (From row In GridEX1.GetDataRows Where row.IsVisible Select c = row.DataRow Select New WRAPPER_CITA(DirectCast(c, CITA))).ToList()
 
-                ds.Value = lista
+                Dim dTable As New CM2DataSet.ListadoCitaDetalladoDataTable
+                Dim dTable1 As New CM2DataSet.ListadoCitaDetalladoDataTable
+                
+                If lista.Count > 0 Then
+                    For Each c As WRAPPER_CITA In lista
+                        dTable = Me.ListadoCitaDetalladoTableAdapter1.GetData(c.IDCITA)
+                        dTable1.Merge(dTable, True)
+                    Next
+                Else
+                    Return
+                End If
+
+                ds.Value = dTable1.DefaultView
 
                 Dim parametros(0) As Microsoft.Reporting.WinForms.ReportParameter
                 parametros(0) = New Microsoft.Reporting.WinForms.ReportParameter("Filtro", "Filtro aplicado: " & tipofiltro)
-              
+
                 UI.Reportes.ReportesManager.Imprime("CitasListado.rdlc", {ds}, parametros)
 
                 Globales.AuditoriaInfo.Registra(Globales.AuditoriaInfo.Accion.Imprimir, RoleManager.Items.Citas, "Imprimir Calendario Citas", "FechaIncial:" & Calendar2.DatesRange.Start.ToShortDateString() & " - " & Calendar2.DatesRange.End.ToShortDateString(), "")

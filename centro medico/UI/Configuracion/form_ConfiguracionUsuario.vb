@@ -111,7 +111,7 @@ Public Class form_ConfiguracionUsuario
                      <SMTPUser><%= txtSMTP_User.Text %></SMTPUser>
                      <SMTPPassword><%= txtSMTP_Password.Text %></SMTPPassword>
                      <SMTPUseSSL><%= chk_EMAIL_SSL.Checked %></SMTPUseSSL>
-                     <SMTPVerificado><%= IIf(lblEmailVerificado.Text = "Verificado", True, False) %></SMTPVerificado>
+                     <SMTPVerificado><%= IIf(lblEmailVerificado.Text = "Verificado" Or ForzarV.Checked, True, False) %></SMTPVerificado>
                  </Email>
                  <SMS>
                      <Server><%= txtSMS_Server.Text %></Server>

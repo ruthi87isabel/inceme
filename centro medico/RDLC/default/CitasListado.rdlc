@@ -49,6 +49,7 @@
                               <Value> Cita</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -59,6 +60,10 @@
                       </Paragraphs>
                       <rd:DefaultName>Textbox13</rd:DefaultName>
                       <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
                         <BackgroundColor>Gainsboro</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -81,6 +86,7 @@
                               <Value>Fecha</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -92,6 +98,10 @@
                       <rd:DefaultName>textbox10</rd:DefaultName>
                       <ZIndex>13</ZIndex>
                       <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
                         <BackgroundColor>Gainsboro</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -114,6 +124,7 @@
                               <Value>Hora</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -124,6 +135,10 @@
                       </Paragraphs>
                       <rd:DefaultName>textbox2</rd:DefaultName>
                       <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
                         <BackgroundColor>Gainsboro</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -146,6 +161,7 @@
                               <Value>Paciente</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -157,6 +173,10 @@
                       <rd:DefaultName>textbox19</rd:DefaultName>
                       <ZIndex>12</ZIndex>
                       <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
                         <BackgroundColor>Gainsboro</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -179,6 +199,7 @@
                               <Value>Médico</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -190,6 +211,10 @@
                       <rd:DefaultName>textbox16</rd:DefaultName>
                       <ZIndex>11</ZIndex>
                       <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
                         <BackgroundColor>Gainsboro</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -212,6 +237,7 @@
                               <Value>MUTUA NOMBRE</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -222,6 +248,10 @@
                       </Paragraphs>
                       <rd:DefaultName>Textbox3</rd:DefaultName>
                       <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
                         <BackgroundColor>Gainsboro</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -244,6 +274,7 @@
                               <Value>TELF</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -254,6 +285,10 @@
                       </Paragraphs>
                       <rd:DefaultName>Textbox7</rd:DefaultName>
                       <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
                         <BackgroundColor>Gainsboro</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -276,6 +311,7 @@
                               <Value>Email</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -286,6 +322,10 @@
                       </Paragraphs>
                       <rd:DefaultName>Textbox5</rd:DefaultName>
                       <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
                         <BackgroundColor>Gainsboro</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -308,6 +348,7 @@
                               <Value>NOTAS</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -318,6 +359,10 @@
                       </Paragraphs>
                       <ZIndex>10</ZIndex>
                       <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
                         <BackgroundColor>Gainsboro</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -335,14 +380,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="NUMEROCITA">
+                    <Textbox Name="NumeroCita">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!NUMEROCITA.Value</Value>
+                              <Value>=Fields!NumeroCita.Value</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
                               </Style>
@@ -353,8 +398,18 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>NUMEROCITA</rd:DefaultName>
+                      <rd:DefaultName>NumeroCita</rd:DefaultName>
                       <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>DimGray</Color>
+                        </TopBorder>
+                        <LeftBorder>
+                          <Color>DimGray</Color>
+                        </LeftBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -388,6 +443,13 @@
                       <rd:DefaultName>FECHA</rd:DefaultName>
                       <ZIndex>4</ZIndex>
                       <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>DimGray</Color>
+                        </TopBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -421,6 +483,13 @@
                       <rd:DefaultName>HORA</rd:DefaultName>
                       <ZIndex>3</ZIndex>
                       <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>DimGray</Color>
+                        </TopBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -451,6 +520,13 @@
                       <rd:DefaultName>PACIENTE</rd:DefaultName>
                       <ZIndex>2</ZIndex>
                       <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>DimGray</Color>
+                        </TopBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -462,14 +538,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="MEDICO_NOMBRE">
+                    <Textbox Name="MEDICO">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!MEDICO_NOMBRE.Value &amp; " " &amp; Fields!MEDICO_APELLIDO1.Value &amp; " " &amp; Fields!MEDICO_APELLIDO2.Value</Value>
+                              <Value>=Fields!MEDICO.Value</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
                               </Style>
@@ -480,9 +556,16 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>MEDICO_NOMBRE</rd:DefaultName>
+                      <rd:DefaultName>MEDICO</rd:DefaultName>
                       <ZIndex>1</ZIndex>
                       <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>DimGray</Color>
+                        </TopBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -494,14 +577,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="MUTUA_NOMBRE">
+                    <Textbox Name="MUTUA">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!MUTUA_NOMBRE.Value</Value>
+                              <Value>=Fields!MUTUA.Value</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
                               </Style>
@@ -512,14 +595,15 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>MUTUA_NOMBRE</rd:DefaultName>
-                      <Visibility>
-                        <Hidden>=IsNothing(Fields!REFPROCEDENCIA.Value)</Hidden>
-                      </Visibility>
+                      <rd:DefaultName>MUTUA</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Style>None</Style>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
                         </Border>
+                        <TopBorder>
+                          <Color>DimGray</Color>
+                        </TopBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -538,7 +622,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=LTrim(fields!PACIENTE_MOVIL.Value &amp; " " &amp; Fields!PACIENTE_TLFNO.Value)</Value>
+                              <Value>=LTrim(fields!MOVIL.Value &amp; " " &amp; Fields!TELEFONO.Value)</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
                               </Style>
@@ -551,6 +635,13 @@
                       </Paragraphs>
                       <rd:DefaultName>Textbox8</rd:DefaultName>
                       <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>DimGray</Color>
+                        </TopBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -562,14 +653,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="PACIENTE_EMAIL">
+                    <Textbox Name="EMAIL">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!PACIENTE_EMAIL.Value</Value>
+                              <Value>=Fields!EMAIL.Value</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
                               </Style>
@@ -580,8 +671,15 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>PACIENTE_EMAIL</rd:DefaultName>
+                      <rd:DefaultName>EMAIL</rd:DefaultName>
                       <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>DimGray</Color>
+                        </TopBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -613,6 +711,16 @@
                       </Paragraphs>
                       <rd:DefaultName>NOTAS</rd:DefaultName>
                       <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>DimGray</Color>
+                        </TopBorder>
+                        <RightBorder>
+                          <Color>DimGray</Color>
+                        </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -625,253 +733,197 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.63492cm</Height>
+              <Height>1.25617cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox17">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox17</rd:DefaultName>
+                    <Tablix Name="Tablix2">
+                      <TablixBody>
+                        <TablixColumns>
+                          <TablixColumn>
+                            <Width>6.70078cm</Width>
+                          </TablixColumn>
+                          <TablixColumn>
+                            <Width>21.07294cm</Width>
+                          </TablixColumn>
+                        </TablixColumns>
+                        <TablixRows>
+                          <TablixRow>
+                            <Height>0.62808cm</Height>
+                            <TablixCells>
+                              <TablixCell>
+                                <CellContents>
+                                  <Textbox Name="Textbox16">
+                                    <CanGrow>true</CanGrow>
+                                    <KeepTogether>true</KeepTogether>
+                                    <Paragraphs>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>Cod. Tratamiento</Value>
+                                            <Style />
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style />
+                                      </Paragraph>
+                                    </Paragraphs>
+                                    <rd:DefaultName>Textbox15</rd:DefaultName>
+                                    <Style>
+                                      <Border>
+                                        <Color>LightGrey</Color>
+                                        <Style>Solid</Style>
+                                      </Border>
+                                      <BackgroundColor>Gainsboro</BackgroundColor>
+                                      <PaddingLeft>2pt</PaddingLeft>
+                                      <PaddingRight>2pt</PaddingRight>
+                                      <PaddingTop>2pt</PaddingTop>
+                                      <PaddingBottom>2pt</PaddingBottom>
+                                    </Style>
+                                  </Textbox>
+                                </CellContents>
+                              </TablixCell>
+                              <TablixCell>
+                                <CellContents>
+                                  <Textbox Name="Textbox23">
+                                    <CanGrow>true</CanGrow>
+                                    <KeepTogether>true</KeepTogether>
+                                    <Paragraphs>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>Descripción</Value>
+                                            <Style />
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style />
+                                      </Paragraph>
+                                    </Paragraphs>
+                                    <rd:DefaultName>Textbox22</rd:DefaultName>
+                                    <Style>
+                                      <Border>
+                                        <Color>LightGrey</Color>
+                                        <Style>Solid</Style>
+                                      </Border>
+                                      <BackgroundColor>Gainsboro</BackgroundColor>
+                                      <PaddingLeft>2pt</PaddingLeft>
+                                      <PaddingRight>2pt</PaddingRight>
+                                      <PaddingTop>2pt</PaddingTop>
+                                      <PaddingBottom>2pt</PaddingBottom>
+                                    </Style>
+                                  </Textbox>
+                                </CellContents>
+                              </TablixCell>
+                            </TablixCells>
+                          </TablixRow>
+                          <TablixRow>
+                            <Height>0.62808cm</Height>
+                            <TablixCells>
+                              <TablixCell>
+                                <CellContents>
+                                  <Textbox Name="RefConcepto2">
+                                    <CanGrow>true</CanGrow>
+                                    <KeepTogether>true</KeepTogether>
+                                    <Paragraphs>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>=Fields!RefConcepto.Value</Value>
+                                            <Style />
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style />
+                                      </Paragraph>
+                                    </Paragraphs>
+                                    <rd:DefaultName>RefConcepto</rd:DefaultName>
+                                    <Style>
+                                      <Border>
+                                        <Color>LightGrey</Color>
+                                        <Style>None</Style>
+                                      </Border>
+                                      <PaddingLeft>2pt</PaddingLeft>
+                                      <PaddingRight>2pt</PaddingRight>
+                                      <PaddingTop>2pt</PaddingTop>
+                                      <PaddingBottom>2pt</PaddingBottom>
+                                    </Style>
+                                  </Textbox>
+                                </CellContents>
+                              </TablixCell>
+                              <TablixCell>
+                                <CellContents>
+                                  <Textbox Name="DESCRIPCION2">
+                                    <CanGrow>true</CanGrow>
+                                    <KeepTogether>true</KeepTogether>
+                                    <Paragraphs>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>=Fields!DESCRIPCION.Value</Value>
+                                            <Style />
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style />
+                                      </Paragraph>
+                                    </Paragraphs>
+                                    <rd:DefaultName>DESCRIPCION</rd:DefaultName>
+                                    <Style>
+                                      <Border>
+                                        <Color>LightGrey</Color>
+                                        <Style>None</Style>
+                                      </Border>
+                                      <PaddingLeft>2pt</PaddingLeft>
+                                      <PaddingRight>2pt</PaddingRight>
+                                      <PaddingTop>2pt</PaddingTop>
+                                      <PaddingBottom>2pt</PaddingBottom>
+                                    </Style>
+                                  </Textbox>
+                                </CellContents>
+                              </TablixCell>
+                            </TablixCells>
+                          </TablixRow>
+                        </TablixRows>
+                      </TablixBody>
+                      <TablixColumnHierarchy>
+                        <TablixMembers>
+                          <TablixMember />
+                          <TablixMember />
+                        </TablixMembers>
+                      </TablixColumnHierarchy>
+                      <TablixRowHierarchy>
+                        <TablixMembers>
+                          <TablixMember>
+                            <KeepWithGroup>After</KeepWithGroup>
+                          </TablixMember>
+                          <TablixMember>
+                            <Group Name="Details2" />
+                          </TablixMember>
+                        </TablixMembers>
+                      </TablixRowHierarchy>
+                      <DataSetName>centro_medico_CITA</DataSetName>
+                      <ZIndex>1</ZIndex>
+                      <Visibility>
+                        <ToggleItem>NumeroCita</ToggleItem>
+                      </Visibility>
                       <Style>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
+                        <Border>
+                          <Color>DimGray</Color>
+                          <Style>None</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>LightGrey</Color>
+                        </TopBorder>
                       </Style>
-                    </Textbox>
+                    </Tablix>
+                    <ColSpan>9</ColSpan>
                   </CellContents>
                 </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="textbox12">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>textbox12</rd:DefaultName>
-                      <ZIndex>9</ZIndex>
-                      <Style>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="textbox24">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>textbox24</rd:DefaultName>
-                      <ZIndex>8</ZIndex>
-                      <Style>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="textbox21">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>textbox21</rd:DefaultName>
-                      <ZIndex>7</ZIndex>
-                      <Style>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="textbox18">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>textbox18</rd:DefaultName>
-                      <ZIndex>6</ZIndex>
-                      <Style>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox6">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox6</rd:DefaultName>
-                      <Style>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox11">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox11</rd:DefaultName>
-                      <Style>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox14">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox14</rd:DefaultName>
-                      <Style>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="textbox1">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>textbox1</rd:DefaultName>
-                      <ZIndex>5</ZIndex>
-                      <Style>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
               </TablixCells>
             </TablixRow>
           </TablixRows>
@@ -897,31 +949,40 @@
             </TablixMember>
             <TablixMember>
               <Group Name="table1_Details_Group">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!IDCITA.Value</GroupExpression>
+                </GroupExpressions>
                 <DataElementName>Detail</DataElementName>
               </Group>
               <TablixMembers>
                 <TablixMember />
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                    <ToggleItem>NumeroCita</ToggleItem>
+                  </Visibility>
+                </TablixMember>
               </TablixMembers>
               <DataElementName>Detail_Collection</DataElementName>
               <DataElementOutput>Output</DataElementOutput>
-              <KeepTogether>true</KeepTogether>
-            </TablixMember>
-            <TablixMember>
-              <KeepWithGroup>Before</KeepWithGroup>
               <KeepTogether>true</KeepTogether>
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>centro_medico_CITA</DataSetName>
         <Left>0.09844in</Left>
-        <Height>2.01985cm</Height>
+        <Height>2.6411cm</Height>
         <Width>27.77372cm</Width>
         <Style>
+          <Border>
+            <Color>DimGray</Color>
+            <Style>Solid</Style>
+          </Border>
           <FontSize>9pt</FontSize>
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2.25799cm</Height>
+    <Height>2.6411cm</Height>
     <Style />
   </Body>
   <Width>28.10313cm</Width>
@@ -1122,451 +1183,82 @@
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
       <Fields>
-        <Field Name="ATENDIDO">
-          <DataField>ATENDIDO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="IDCITA">
+          <DataField>IDCITA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="BANCO">
-          <DataField>BANCO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CONFIRMADA">
-          <DataField>CONFIRMADA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CONTINUA">
-          <DataField>CONTINUA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Descuento">
-          <DataField>Descuento</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="EstadoRecurrencia">
-          <DataField>EstadoRecurrencia</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="FALTA">
-          <DataField>FALTA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="NumeroCita">
+          <DataField>NumeroCita</DataField>
+          <rd:TypeName>System.Byte</rd:TypeName>
         </Field>
         <Field Name="FECHA">
           <DataField>FECHA</DataField>
-          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="FECHACOBRO">
-          <DataField>FECHACOBRO</DataField>
-          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="FechaUltimoEstadoRecurrencia">
-          <DataField>FechaUltimoEstadoRecurrencia</DataField>
-          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="FORMASPAGO">
-          <DataField>FORMASPAGO</DataField>
-          <rd:TypeName>centro_medico.FORMASPAGO</rd:TypeName>
-        </Field>
-        <Field Name="FORMASPAGO_CODIGO">
-          <DataField>FORMASPAGO_CODIGO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="FORMASPAGO_DESCRIPCION">
-          <DataField>FORMASPAGO_DESCRIPCION</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
         <Field Name="HORA">
           <DataField>HORA</DataField>
-          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="HORAFIN">
-          <DataField>HORAFIN</DataField>
-          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="ID_Proceso">
-          <DataField>ID_Proceso</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="IMPORTECL">
-          <DataField>IMPORTECL</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="IMPORTEDR">
-          <DataField>IMPORTEDR</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        <Field Name="PACIENTE">
+          <DataField>PACIENTE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="MEDICO">
           <DataField>MEDICO</DataField>
-          <rd:TypeName>centro_medico.MEDICO</rd:TypeName>
-        </Field>
-        <Field Name="MEDICO_APELLIDO1">
-          <DataField>MEDICO_APELLIDO1</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MEDICO_APELLIDO2">
-          <DataField>MEDICO_APELLIDO2</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MEDICO_CMEDICO">
-          <DataField>MEDICO_CMEDICO</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="MEDICO_COLEGIADO">
-          <DataField>MEDICO_COLEGIADO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MEDICO_CP">
-          <DataField>MEDICO_CP</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MEDICO_DNI">
-          <DataField>MEDICO_DNI</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MEDICO_DOMICILIO">
-          <DataField>MEDICO_DOMICILIO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MEDICO_ESPECIALIDAD">
-          <DataField>MEDICO_ESPECIALIDAD</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MEDICO_LOCALIDAD">
-          <DataField>MEDICO_LOCALIDAD</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MEDICO_MOVIL">
-          <DataField>MEDICO_MOVIL</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MEDICO_NOMBRE">
-          <DataField>MEDICO_NOMBRE</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MEDICO_OBSERVACIONES">
-          <DataField>MEDICO_OBSERVACIONES</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MEDICO_PROVINCIA">
-          <DataField>MEDICO_PROVINCIA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MEDICO_TLFNO">
-          <DataField>MEDICO_TLFNO</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="MUTUA">
           <DataField>MUTUA</DataField>
-          <rd:TypeName>centro_medico.MUTUA</rd:TypeName>
-        </Field>
-        <Field Name="MUTUA_CIF">
-          <DataField>MUTUA_CIF</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="MUTUA_CMUTUA">
-          <DataField>MUTUA_CMUTUA</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="MUTUA_CP">
-          <DataField>MUTUA_CP</DataField>
+        <Field Name="TELEFONO">
+          <DataField>TELEFONO</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="MUTUA_DIRECCION">
-          <DataField>MUTUA_DIRECCION</DataField>
+        <Field Name="MOVIL">
+          <DataField>MOVIL</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="MUTUA_ESPECIALIDAD">
-          <DataField>MUTUA_ESPECIALIDAD</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MUTUA_FAX">
-          <DataField>MUTUA_FAX</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MUTUA_IdTarifa">
-          <DataField>MUTUA_IdTarifa</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="MUTUA_MAIL">
-          <DataField>MUTUA_MAIL</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MUTUA_NOMBRE">
-          <DataField>MUTUA_NOMBRE</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MUTUA_NOTAS">
-          <DataField>MUTUA_NOTAS</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MUTUA_PARTELSR">
-          <DataField>MUTUA_PARTELSR</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MUTUA_PARTEMTR">
-          <DataField>MUTUA_PARTEMTR</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MUTUA_PERSONACON">
-          <DataField>MUTUA_PERSONACON</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MUTUA_POBLACION">
-          <DataField>MUTUA_POBLACION</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MUTUA_PROVINCIA">
-          <DataField>MUTUA_PROVINCIA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MUTUA_TLFNO1">
-          <DataField>MUTUA_TLFNO1</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MUTUA_TLFNO2">
-          <DataField>MUTUA_TLFNO2</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MUTUA_WEB">
-          <DataField>MUTUA_WEB</DataField>
+        <Field Name="EMAIL">
+          <DataField>EMAIL</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="NOTAS">
           <DataField>NOTAS</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="NUMEROCITA">
-          <DataField>NUMEROCITA</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Byte, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        <Field Name="IdLinea">
+          <DataField>IdLinea</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
-        <Field Name="PACIENTE">
-          <DataField>PACIENTE</DataField>
+        <Field Name="RefConcepto">
+          <DataField>RefConcepto</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="PACIENTE_ACTIVO">
-          <DataField>PACIENTE_ACTIVO</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_APELLIDO1">
-          <DataField>PACIENTE_APELLIDO1</DataField>
+        <Field Name="DESCRIPCION">
+          <DataField>DESCRIPCION</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="PACIENTE_APELLIDO2">
-          <DataField>PACIENTE_APELLIDO2</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="Cantidad">
+          <DataField>Cantidad</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="PACIENTE_BENEFICIARIOCODIGOSOCIO">
-          <DataField>PACIENTE_BENEFICIARIOCODIGOSOCIO</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="ImporteClinica">
+          <DataField>ImporteClinica</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="PACIENTE_BENEFICIARIOPARENTESCO">
-          <DataField>PACIENTE_BENEFICIARIOPARENTESCO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_CODIGOPROPIO">
-          <DataField>PACIENTE_CODIGOPROPIO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_CONOCIO">
-          <DataField>PACIENTE_CONOCIO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_CP">
-          <DataField>PACIENTE_CP</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_CPACIENTE">
-          <DataField>PACIENTE_CPACIENTE</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_CUENTA">
-          <DataField>PACIENTE_CUENTA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_DC">
-          <DataField>PACIENTE_DC</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_DEFUNCION">
-          <DataField>PACIENTE_DEFUNCION</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_DNI">
-          <DataField>PACIENTE_DNI</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_DOMICILIO">
-          <DataField>PACIENTE_DOMICILIO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_EMAIL">
-          <DataField>PACIENTE_EMAIL</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_EMPRESA">
-          <DataField>PACIENTE_EMPRESA</DataField>
-          <rd:TypeName>centro_medico.EMPRESA</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_ENTIDAD">
-          <DataField>PACIENTE_ENTIDAD</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_FECHAALTA">
-          <DataField>PACIENTE_FECHAALTA</DataField>
-          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_FECHABAJA">
-          <DataField>PACIENTE_FECHABAJA</DataField>
-          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_FECHAN">
-          <DataField>PACIENTE_FECHAN</DataField>
-          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_FOTO">
-          <DataField>PACIENTE_FOTO</DataField>
-          <rd:TypeName>System.Data.Linq.Binary</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_FOTOGRAFIA">
-          <DataField>PACIENTE_FOTOGRAFIA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_LOCALIDAD">
-          <DataField>PACIENTE_LOCALIDAD</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_MOVIL">
-          <DataField>PACIENTE_MOVIL</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_MUTUA">
-          <DataField>PACIENTE_MUTUA</DataField>
-          <rd:TypeName>centro_medico.MUTUA</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_NIE">
-          <DataField>PACIENTE_NIE</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_NOMBRE">
-          <DataField>PACIENTE_NOMBRE</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_NSS">
-          <DataField>PACIENTE_NSS</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_OBSERVACIONES">
-          <DataField>PACIENTE_OBSERVACIONES</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_OFICINA">
-          <DataField>PACIENTE_OFICINA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_PAGOBANCO">
-          <DataField>PACIENTE_PAGOBANCO</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_PASAPORTE">
-          <DataField>PACIENTE_PASAPORTE</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_PROFESION">
-          <DataField>PACIENTE_PROFESION</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_PROVINCIA">
-          <DataField>PACIENTE_PROVINCIA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_PUESTO">
-          <DataField>PACIENTE_PUESTO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_REFEMPRESA">
-          <DataField>PACIENTE_REFEMPRESA</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_REFFORMAPAGO">
-          <DataField>PACIENTE_REFFORMAPAGO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_REFMUTUA">
-          <DataField>PACIENTE_REFMUTUA</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_REFPAIS">
-          <DataField>PACIENTE_REFPAIS</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_REGIMEN">
-          <DataField>PACIENTE_REGIMEN</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_SEXO">
-          <DataField>PACIENTE_SEXO</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_SOCIO">
-          <DataField>PACIENTE_SOCIO</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Char, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_TARJETASANITARIA">
-          <DataField>PACIENTE_TARJETASANITARIA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_TITULAR">
-          <DataField>PACIENTE_TITULAR</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_TLFNO">
-          <DataField>PACIENTE_TLFNO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_TUTOR">
-          <DataField>PACIENTE_TUTOR</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE_WEB">
-          <DataField>PACIENTE_WEB</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PACIENTE1">
-          <DataField>PACIENTE1</DataField>
-          <rd:TypeName>centro_medico.PACIENTE</rd:TypeName>
-        </Field>
-        <Field Name="PAGADA">
-          <DataField>PAGADA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="REFFORMAPAGO">
-          <DataField>REFFORMAPAGO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="REFFRA">
-          <DataField>REFFRA</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="REFMEDICO">
-          <DataField>REFMEDICO</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="REFPACIENTE">
-          <DataField>REFPACIENTE</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="REFPROCEDENCIA">
-          <DataField>REFPROCEDENCIA</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
-        </Field>
-        <Field Name="REFRECIBO">
-          <DataField>REFRECIBO</DataField>
-          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        <Field Name="ImporteDr">
+          <DataField>ImporteDr</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>centro_medico</rd:DataSetName>
-        <rd:TableName>WRAPPER_CITA</rd:TableName>
-        <rd:ObjectDataSourceType>centro_medico.WRAPPER_CITA, INCEME, Version=1.3.1.6, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:DataSetName>CM2DataSet</rd:DataSetName>
+        <rd:SchemaPath>D:\Work\Inceme nueva version\inceme\centro medico\Logica\CM2DataSet.xsd</rd:SchemaPath>
+        <rd:TableName>ListadoCitaDetallado</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>ListadoCitaDetalladoTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="dsClinica">
