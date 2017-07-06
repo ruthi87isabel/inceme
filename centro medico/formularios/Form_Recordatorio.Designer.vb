@@ -58,40 +58,36 @@ Partial Class Form_Recordatorio
         'LbFecha
         '
         LbFecha.AutoSize = True
-        LbFecha.Location = New System.Drawing.Point(8, 25)
-        LbFecha.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        LbFecha.Location = New System.Drawing.Point(6, 20)
         LbFecha.Name = "LbFecha"
-        LbFecha.Size = New System.Drawing.Size(51, 17)
+        LbFecha.Size = New System.Drawing.Size(40, 13)
         LbFecha.TabIndex = 71
         LbFecha.Text = "Fecha:"
         '
         'LbHora
         '
         LbHora.AutoSize = True
-        LbHora.Location = New System.Drawing.Point(137, 26)
-        LbHora.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        LbHora.Location = New System.Drawing.Point(103, 21)
         LbHora.Name = "LbHora"
-        LbHora.Size = New System.Drawing.Size(43, 17)
+        LbHora.Size = New System.Drawing.Size(33, 13)
         LbHora.TabIndex = 73
         LbHora.Text = "Hora:"
         '
         'LbTexto
         '
         LbTexto.AutoSize = True
-        LbTexto.Location = New System.Drawing.Point(8, 123)
-        LbTexto.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        LbTexto.Location = New System.Drawing.Point(6, 100)
         LbTexto.Name = "LbTexto"
-        LbTexto.Size = New System.Drawing.Size(75, 17)
+        LbTexto.Size = New System.Drawing.Size(58, 13)
         LbTexto.TabIndex = 76
         LbTexto.Text = "Anotación:"
         '
         'Label1
         '
         Label1.AutoSize = True
-        Label1.Location = New System.Drawing.Point(8, 73)
-        Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Label1.Location = New System.Drawing.Point(6, 59)
         Label1.Name = "Label1"
-        Label1.Size = New System.Drawing.Size(56, 17)
+        Label1.Size = New System.Drawing.Size(43, 13)
         Label1.TabIndex = 100
         Label1.Text = "Asunto:"
         '
@@ -116,14 +112,13 @@ Partial Class Form_Recordatorio
         Me.ScheduleRecordatorio.DesignTimeLayout = ScheduleRecordatorio_DesignTimeLayout
         Me.ScheduleRecordatorio.FirstDayOfWeek = Janus.Windows.Schedule.ScheduleDayOfWeek.Monday
         Me.ScheduleRecordatorio.Interval = Janus.Windows.Schedule.Interval.FifteenMinutes
-        Me.ScheduleRecordatorio.Location = New System.Drawing.Point(13, 31)
-        Me.ScheduleRecordatorio.Margin = New System.Windows.Forms.Padding(4)
+        Me.ScheduleRecordatorio.Location = New System.Drawing.Point(10, 25)
         Me.ScheduleRecordatorio.Name = "ScheduleRecordatorio"
         Me.ScheduleRecordatorio.OwnerDrawnArea = Janus.Windows.Schedule.OwnerDrawnArea.Appointments
         Me.ScheduleRecordatorio.ShowAllDayArea = False
         Me.ScheduleRecordatorio.ShowMinutesInTimeNavigator = True
         Me.ScheduleRecordatorio.ShowTimeHintOnAppointments = Janus.Windows.Schedule.TimeHintOnAppointments.Never
-        Me.ScheduleRecordatorio.Size = New System.Drawing.Size(730, 615)
+        Me.ScheduleRecordatorio.Size = New System.Drawing.Size(550, 500)
         Me.ScheduleRecordatorio.StartTimeMember = "HORA"
         Me.ScheduleRecordatorio.TabIndex = 3
         Me.ScheduleRecordatorio.TimeFormat = Janus.Windows.Schedule.TimeFormat.TwentyFourHours
@@ -138,32 +133,29 @@ Partial Class Form_Recordatorio
         Me.Calendar2.AllowDrop = True
         Me.Calendar2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Calendar2.FirstMonth = New Date(2017, 3, 1, 0, 0, 0, 0)
-        Me.Calendar2.Location = New System.Drawing.Point(796, 36)
-        Me.Calendar2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Calendar2.Location = New System.Drawing.Point(611, 29)
         Me.Calendar2.Name = "Calendar2"
         Me.Calendar2.Schedule = Me.ScheduleRecordatorio
         Me.Calendar2.SelectionStyle = Janus.Windows.Schedule.CalendarSelectionStyle.Schedule
-        Me.Calendar2.Size = New System.Drawing.Size(184, 168)
+        Me.Calendar2.Size = New System.Drawing.Size(148, 136)
         Me.Calendar2.TabIndex = 18
         '
         'tb_hora
         '
         Me.tb_hora.CustomFormat = "HH:mm"
         Me.tb_hora.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.tb_hora.Location = New System.Drawing.Point(140, 46)
-        Me.tb_hora.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_hora.Location = New System.Drawing.Point(105, 37)
         Me.tb_hora.Name = "tb_hora"
         Me.tb_hora.ShowUpDown = True
-        Me.tb_hora.Size = New System.Drawing.Size(76, 22)
+        Me.tb_hora.Size = New System.Drawing.Size(58, 20)
         Me.tb_hora.TabIndex = 74
         '
         'dtp_fecha
         '
         Me.dtp_fecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtp_fecha.Location = New System.Drawing.Point(11, 46)
-        Me.dtp_fecha.Margin = New System.Windows.Forms.Padding(4)
+        Me.dtp_fecha.Location = New System.Drawing.Point(8, 37)
         Me.dtp_fecha.Name = "dtp_fecha"
-        Me.dtp_fecha.Size = New System.Drawing.Size(112, 22)
+        Me.dtp_fecha.Size = New System.Drawing.Size(85, 20)
         Me.dtp_fecha.TabIndex = 72
         '
         'GroupBox1
@@ -180,11 +172,9 @@ Partial Class Form_Recordatorio
         Me.GroupBox1.Controls.Add(LbHora)
         Me.GroupBox1.Controls.Add(LbFecha)
         Me.GroupBox1.Controls.Add(Me.dtp_fecha)
-        Me.GroupBox1.Location = New System.Drawing.Point(751, 212)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Location = New System.Drawing.Point(566, 172)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(313, 427)
+        Me.GroupBox1.Size = New System.Drawing.Size(235, 347)
         Me.GroupBox1.TabIndex = 75
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Nuevo Recordatorio"
@@ -192,30 +182,29 @@ Partial Class Form_Recordatorio
         'ToggleSwitch1
         '
         Me.ToggleSwitch1.Checked = True
-        Me.ToggleSwitch1.Location = New System.Drawing.Point(235, 46)
-        Me.ToggleSwitch1.Margin = New System.Windows.Forms.Padding(4)
+        Me.ToggleSwitch1.Location = New System.Drawing.Point(176, 37)
         Me.ToggleSwitch1.Name = "ToggleSwitch1"
         Me.ToggleSwitch1.OffFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToggleSwitch1.OnFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToggleSwitch1.Size = New System.Drawing.Size(67, 23)
+        Me.ToggleSwitch1.Size = New System.Drawing.Size(50, 19)
         Me.ToggleSwitch1.Style = JCS.ToggleSwitch.ToggleSwitchStyle.Fancy
         Me.ToggleSwitch1.TabIndex = 101
         '
         'TbAsunto
         '
-        Me.TbAsunto.Location = New System.Drawing.Point(11, 94)
+        Me.TbAsunto.Location = New System.Drawing.Point(8, 76)
+        Me.TbAsunto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TbAsunto.Name = "TbAsunto"
-        Me.TbAsunto.Size = New System.Drawing.Size(291, 22)
+        Me.TbAsunto.Size = New System.Drawing.Size(219, 20)
         Me.TbAsunto.TabIndex = 99
         '
         'BtnAceptar
         '
         Me.BtnAceptar.Image = Global.centro_medico.My.Resources.Resources.Checked
         Me.BtnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnAceptar.Location = New System.Drawing.Point(14, 392)
-        Me.BtnAceptar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnAceptar.Location = New System.Drawing.Point(10, 318)
         Me.BtnAceptar.Name = "BtnAceptar"
-        Me.BtnAceptar.Size = New System.Drawing.Size(98, 30)
+        Me.BtnAceptar.Size = New System.Drawing.Size(74, 24)
         Me.BtnAceptar.TabIndex = 98
         Me.BtnAceptar.Text = "Aceptar"
         Me.BtnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -225,10 +214,9 @@ Partial Class Form_Recordatorio
         '
         Me.BtnCancelar.Image = Global.centro_medico.My.Resources.Resources.new_delete
         Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnCancelar.Location = New System.Drawing.Point(197, 392)
-        Me.BtnCancelar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnCancelar.Location = New System.Drawing.Point(148, 318)
         Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.Size = New System.Drawing.Size(100, 30)
+        Me.BtnCancelar.Size = New System.Drawing.Size(75, 24)
         Me.BtnCancelar.TabIndex = 97
         Me.BtnCancelar.Text = "Cancelar"
         Me.BtnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -236,10 +224,11 @@ Partial Class Form_Recordatorio
         '
         'TbAnotacion
         '
-        Me.TbAnotacion.Location = New System.Drawing.Point(10, 144)
+        Me.TbAnotacion.Location = New System.Drawing.Point(8, 117)
+        Me.TbAnotacion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TbAnotacion.Multiline = True
         Me.TbAnotacion.Name = "TbAnotacion"
-        Me.TbAnotacion.Size = New System.Drawing.Size(292, 241)
+        Me.TbAnotacion.Size = New System.Drawing.Size(220, 197)
         Me.TbAnotacion.TabIndex = 75
         '
         'ToolStrip2
@@ -250,7 +239,7 @@ Partial Class Form_Recordatorio
         Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbAñadir, Me.tsbModificar, Me.tsbEliminar})
         Me.ToolStrip2.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip2.Name = "ToolStrip2"
-        Me.ToolStrip2.Size = New System.Drawing.Size(261, 27)
+        Me.ToolStrip2.Size = New System.Drawing.Size(222, 25)
         Me.ToolStrip2.TabIndex = 100
         Me.ToolStrip2.Text = "ToolStrip2"
         '
@@ -259,7 +248,7 @@ Partial Class Form_Recordatorio
         Me.tsbAñadir.Image = Global.centro_medico.My.Resources.Resources.new_add
         Me.tsbAñadir.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbAñadir.Name = "tsbAñadir"
-        Me.tsbAñadir.Size = New System.Drawing.Size(73, 24)
+        Me.tsbAñadir.Size = New System.Drawing.Size(62, 22)
         Me.tsbAñadir.Text = "Añadir"
         '
         'tsbModificar
@@ -267,7 +256,7 @@ Partial Class Form_Recordatorio
         Me.tsbModificar.Image = Global.centro_medico.My.Resources.Resources._24_tag_pencil
         Me.tsbModificar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbModificar.Name = "tsbModificar"
-        Me.tsbModificar.Size = New System.Drawing.Size(93, 24)
+        Me.tsbModificar.Size = New System.Drawing.Size(78, 22)
         Me.tsbModificar.Text = "Modificar"
         '
         'tsbEliminar
@@ -275,20 +264,21 @@ Partial Class Form_Recordatorio
         Me.tsbEliminar.Image = Global.centro_medico.My.Resources.Resources.new_delete
         Me.tsbEliminar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbEliminar.Name = "tsbEliminar"
-        Me.tsbEliminar.Size = New System.Drawing.Size(83, 24)
+        Me.tsbEliminar.Size = New System.Drawing.Size(70, 22)
         Me.tsbEliminar.Text = "Eliminar"
         '
         'Form_Recordatorio
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1076, 659)
+        Me.ClientSize = New System.Drawing.Size(808, 535)
         Me.Controls.Add(Me.ToolStrip2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Calendar2)
         Me.Controls.Add(Me.ScheduleRecordatorio)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Form_Recordatorio"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Recordatorio"

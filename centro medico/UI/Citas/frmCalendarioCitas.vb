@@ -2,6 +2,7 @@
 Imports Janus.Windows.GridEX
 Imports System.Drawing.Printing
 Imports centro_medico.UI.Reportes
+Imports System.ComponentModel
 
 Namespace UI.Citas
 
@@ -13,6 +14,8 @@ Namespace UI.Citas
         Private SalasOwners() As ScheduleAppointmentOwner
 
         Private currentNotas As List(Of NOTA)
+        Dim startDate As Date
+        Dim endDate As Date
 
         Public Sub New()
 
@@ -135,6 +138,8 @@ Namespace UI.Citas
                 Label17.Visible = True
                 CBcitas.Visible = True
                 Panel1.Visible = False
+                DateTimePicker1.Visible = False
+                DateTimePicker2.Visible = False
                 TabControl1.SelectedIndex = 1
 
 
@@ -287,9 +292,6 @@ Namespace UI.Citas
 
 #Region "Private Sub LoadCitas(ByVal startDate As Date, ByVal endDate As Date)"
         Private Sub LoadCitas()
-
-            Dim startDate As Date = FiltroGenericoDocumentos.FirstDate(ScheduleCitas.DateRange.Start)
-            Dim endDate As Date = FiltroGenericoDocumentos.LastDate(ScheduleCitas.DateRange.End)
 
             context = New CMLinqDataContext()
 
@@ -494,7 +496,7 @@ Namespace UI.Citas
                 'row.EndEdit()
 
             Next
-            
+
 
             'GridEXMedicos.Refresh()
         End Sub
@@ -929,7 +931,7 @@ Namespace UI.Citas
             _nueva_cita.dtp_fechacobro.Value = _nueva_cita.dtp_fecha.Value
             _nueva_cita.DesdeCalendario = True
 
-         
+
             If Not _nueva_cita.CtrlMedico1.ID_Medico.HasValue Then
                 'No hay medico seleccionado, ni como usuario, ni como owner, ni marcado, ni el usuario es medico
                 'Seleccionar el primero de la lista
@@ -1103,7 +1105,7 @@ Namespace UI.Citas
 
         Dim DetailMode As Boolean = False
 
-        Private Sub ImprimirDetallado_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
+        Private Sub ImprimirDetallado_Click(sender As Object, e As EventArgs) Handles tstImprimirDetallado.Click
             DetailMode = True
             bt_imprimir_Click_1(Nothing, Nothing)
         End Sub
@@ -1361,7 +1363,7 @@ Namespace UI.Citas
             If Estado = EstadoCalendario.Idle Then
                 ToolStrip1.Enabled = False
                 menu_citas.Enabled = False
-                'pbLoading.Visible = True
+
                 'Me.ScheduleCitas.Enabled = False
                 LoadCitas()
                 ToolStrip1.Enabled = True
@@ -1421,7 +1423,7 @@ Namespace UI.Citas
             'Catch ex As Exception
 
             'End Try
-           
+
             Filtrar()
         End Sub
 
@@ -1446,14 +1448,12 @@ Namespace UI.Citas
                 LoadCitas()
                 ScheduleCitas.Date = dtpFechaInicio.Value
             End If
-
         End Sub
 
         Private Sub DateTimePicker2_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtpFechaFinal.ValueChanged
             If Me.IsHandleCreated Then
                 LoadCitas()
             End If
-
         End Sub
 
 
@@ -1471,13 +1471,14 @@ Namespace UI.Citas
                 Me.ScheduleCitas.DayStartHour = centro_medico.Globales.Configuracion.DameJornadaLaboralInicio(Calendar2.SelectionRange.Start).Hours
                 Me.ScheduleCitas.DayEndHour = centro_medico.Globales.Configuracion.DameJornadaLaboralFinal(Calendar2.SelectionRange.Start).Hours + 1
 
-
+                startDate = FiltroGenericoDocumentos.FirstDate(ScheduleCitas.DateRange.Start)
+                endDate = FiltroGenericoDocumentos.LastDate(ScheduleCitas.DateRange.End)
                 'Me.ScheduleCitas.EnsureVisible(Me.ScheduleCitas.WorkStartTime)
                 LoadCitas()
                 ColoreaMedicos()
 
             End If
-           
+
 
             'Me.ScheduleCitas.Invalidate()
             'Me.ScheduleCitas.Refresh()
@@ -1657,7 +1658,7 @@ Namespace UI.Citas
             End If
         End Sub
 
-      
+
         Private Sub tstImprimirJustificante_Click(sender As Object, e As EventArgs) Handles tstImprimirJustificante.Click
             Dim cita As CITA = GetCurrentCita()
             If Not cita Is Nothing Then
@@ -1691,9 +1692,6 @@ Namespace UI.Citas
                 aviso.Notify()
             End If
 
-
-
-
         End Sub
 
         Private Sub GridEXMedicos_DoubleClick(sender As Object, e As EventArgs) Handles GridEXMedicos.DoubleClick
@@ -1706,7 +1704,13 @@ Namespace UI.Citas
             End If
         End Sub
 
-        
+        Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Rango.Click
+            ScheduleCitas.Date = DateTimePicker1.Value.Date
+            startDate = DateTimePicker1.Value.Date
+            endDate = DateTimePicker2.Value.Date
+            LoadCitas()
+        End Sub
+
     End Class
 
 End Namespace

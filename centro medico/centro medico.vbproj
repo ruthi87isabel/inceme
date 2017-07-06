@@ -230,7 +230,7 @@
       <HintPath>..\DLLS\TestNotifyWindow.dll</HintPath>
     </Reference>
     <Reference Include="ToggleSwitch">
-      <HintPath>..\..\..\inceme\DLLS\ToggleSwitch.dll</HintPath>
+      <HintPath>..\DLLS\ToggleSwitch.dll</HintPath>
     </Reference>
     <Reference Include="ZedGraph, Version=5.0.9.41461, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
