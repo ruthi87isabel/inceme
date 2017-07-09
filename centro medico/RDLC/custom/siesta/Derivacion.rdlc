@@ -103,7 +103,7 @@
         <Top>6.43528cm</Top>
         <Left>2.5119cm</Left>
         <Height>0.5cm</Height>
-        <Width>25.5531cm</Width>
+        <Width>24.25664cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -133,7 +133,7 @@
         <Top>7.94639cm</Top>
         <Left>0.75cm</Left>
         <Height>5cm</Height>
-        <Width>27.315cm</Width>
+        <Width>26.01854cm</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -397,7 +397,7 @@ Torrevieja (Alicante),  03184 </Value>
         </Paragraphs>
         <rd:DefaultName>Textbox28</rd:DefaultName>
         <Top>1.82056cm</Top>
-        <Left>23.42896cm</Left>
+        <Left>22.15896cm</Left>
         <Height>1.60015cm</Height>
         <Width>4.63604cm</Width>
         <ZIndex>12</ZIndex>
@@ -416,7 +416,7 @@ Torrevieja (Alicante),  03184 </Value>
         <Value>clinicasiesta</Value>
         <MIMEType>image/bmp</MIMEType>
         <Sizing>Fit</Sizing>
-        <Left>21.815cm</Left>
+        <Left>20.545cm</Left>
         <Height>1.75cm</Height>
         <Width>6.25cm</Width>
         <ZIndex>13</ZIndex>
@@ -483,7 +483,7 @@ Torrevieja (Alicante),  03184 </Value>
     <Height>13.98526cm</Height>
     <Style />
   </Body>
-  <Width>28.065cm</Width>
+  <Width>26.795cm</Width>
   <Page>
     <PageHeight>21cm</PageHeight>
     <PageWidth>29.7cm</PageWidth>

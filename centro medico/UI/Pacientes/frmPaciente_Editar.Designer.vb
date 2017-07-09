@@ -209,10 +209,9 @@ Partial Class frmPaciente_Editar
         '
         lb_dpComonosconocio.AutoSize = True
         lb_dpComonosconocio.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lb_dpComonosconocio.Location = New System.Drawing.Point(697, 39)
-        lb_dpComonosconocio.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        lb_dpComonosconocio.Location = New System.Drawing.Point(523, 32)
         lb_dpComonosconocio.Name = "lb_dpComonosconocio"
-        lb_dpComonosconocio.Size = New System.Drawing.Size(124, 17)
+        lb_dpComonosconocio.Size = New System.Drawing.Size(95, 13)
         lb_dpComonosconocio.TabIndex = 17
         lb_dpComonosconocio.Text = "Cómo nos conoció"
         '
@@ -220,10 +219,9 @@ Partial Class frmPaciente_Editar
         '
         Label1.AutoSize = True
         Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label1.Location = New System.Drawing.Point(439, 39)
-        Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Label1.Location = New System.Drawing.Point(329, 32)
         Label1.Name = "Label1"
-        Label1.Size = New System.Drawing.Size(95, 17)
+        Label1.Size = New System.Drawing.Size(73, 13)
         Label1.TabIndex = 5
         Label1.Text = "Fecha de Alta"
         '
@@ -231,10 +229,9 @@ Partial Class frmPaciente_Editar
         '
         lb_dpFechabaja.AutoSize = True
         lb_dpFechabaja.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lb_dpFechabaja.Location = New System.Drawing.Point(435, 74)
-        lb_dpFechabaja.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        lb_dpFechabaja.Location = New System.Drawing.Point(326, 60)
         lb_dpFechabaja.Name = "lb_dpFechabaja"
-        lb_dpFechabaja.Size = New System.Drawing.Size(99, 17)
+        lb_dpFechabaja.Size = New System.Drawing.Size(76, 13)
         lb_dpFechabaja.TabIndex = 6
         lb_dpFechabaja.Text = "Fecha de Baja"
         '
@@ -242,10 +239,9 @@ Partial Class frmPaciente_Editar
         '
         lb_dpFallecido.AutoSize = True
         lb_dpFallecido.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lb_dpFallecido.Location = New System.Drawing.Point(339, 76)
-        lb_dpFallecido.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        lb_dpFallecido.Location = New System.Drawing.Point(254, 62)
         lb_dpFallecido.Name = "lb_dpFallecido"
-        lb_dpFallecido.Size = New System.Drawing.Size(64, 17)
+        lb_dpFallecido.Size = New System.Drawing.Size(49, 13)
         lb_dpFallecido.TabIndex = 4
         lb_dpFallecido.Text = "Fallecido"
         '
@@ -253,10 +249,9 @@ Partial Class frmPaciente_Editar
         '
         lb_dpActivo.AutoSize = True
         lb_dpActivo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lb_dpActivo.Location = New System.Drawing.Point(339, 39)
-        lb_dpActivo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        lb_dpActivo.Location = New System.Drawing.Point(254, 32)
         lb_dpActivo.Name = "lb_dpActivo"
-        lb_dpActivo.Size = New System.Drawing.Size(66, 17)
+        lb_dpActivo.Size = New System.Drawing.Size(52, 13)
         lb_dpActivo.TabIndex = 3
         lb_dpActivo.Text = "En activo"
         '
@@ -264,10 +259,9 @@ Partial Class frmPaciente_Editar
         '
         lb_dpNss.AutoSize = True
         lb_dpNss.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lb_dpNss.Location = New System.Drawing.Point(61, 44)
-        lb_dpNss.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        lb_dpNss.Location = New System.Drawing.Point(46, 36)
         lb_dpNss.Name = "lb_dpNss"
-        lb_dpNss.Size = New System.Drawing.Size(52, 17)
+        lb_dpNss.Size = New System.Drawing.Size(41, 13)
         lb_dpNss.TabIndex = 2
         lb_dpNss.Text = "No. SS"
         '
@@ -275,10 +269,9 @@ Partial Class frmPaciente_Editar
         '
         Label3.AutoSize = True
         Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label3.Location = New System.Drawing.Point(528, 100)
-        Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Label3.Location = New System.Drawing.Point(358, 81)
         Label3.Name = "Label3"
-        Label3.Size = New System.Drawing.Size(41, 17)
+        Label3.Size = New System.Drawing.Size(33, 13)
         Label3.TabIndex = 35
         Label3.Text = "Web:"
         '
@@ -286,10 +279,9 @@ Partial Class frmPaciente_Editar
         '
         lbl_Email.AutoSize = True
         lbl_Email.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lbl_Email.Location = New System.Drawing.Point(316, 100)
-        lbl_Email.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        lbl_Email.Location = New System.Drawing.Point(218, 81)
         lbl_Email.Name = "lbl_Email"
-        lbl_Email.Size = New System.Drawing.Size(46, 17)
+        lbl_Email.Size = New System.Drawing.Size(35, 13)
         lbl_Email.TabIndex = 33
         lbl_Email.Text = "Email:"
         '
@@ -297,10 +289,9 @@ Partial Class frmPaciente_Editar
         '
         lb_dpTutorlegal.AutoSize = True
         lb_dpTutorlegal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lb_dpTutorlegal.Location = New System.Drawing.Point(740, 164)
-        lb_dpTutorlegal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        lb_dpTutorlegal.Location = New System.Drawing.Point(489, 133)
         lb_dpTutorlegal.Name = "lb_dpTutorlegal"
-        lb_dpTutorlegal.Size = New System.Drawing.Size(85, 17)
+        lb_dpTutorlegal.Size = New System.Drawing.Size(64, 13)
         lb_dpTutorlegal.TabIndex = 27
         lb_dpTutorlegal.Text = "Tutor Legal:"
         '
@@ -308,10 +299,9 @@ Partial Class frmPaciente_Editar
         '
         lb_dpNie.AutoSize = True
         lb_dpNie.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lb_dpNie.Location = New System.Drawing.Point(580, 162)
-        lb_dpNie.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        lb_dpNie.Location = New System.Drawing.Point(376, 132)
         lb_dpNie.Name = "lb_dpNie"
-        lb_dpNie.Size = New System.Drawing.Size(46, 17)
+        lb_dpNie.Size = New System.Drawing.Size(37, 13)
         lb_dpNie.TabIndex = 25
         lb_dpNie.Text = "N.I.E.:"
         '
@@ -319,10 +309,9 @@ Partial Class frmPaciente_Editar
         '
         lb_dpPasaporte.AutoSize = True
         lb_dpPasaporte.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lb_dpPasaporte.Location = New System.Drawing.Point(396, 164)
-        lb_dpPasaporte.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        lb_dpPasaporte.Location = New System.Drawing.Point(273, 133)
         lb_dpPasaporte.Name = "lb_dpPasaporte"
-        lb_dpPasaporte.Size = New System.Drawing.Size(77, 17)
+        lb_dpPasaporte.Size = New System.Drawing.Size(58, 13)
         lb_dpPasaporte.TabIndex = 23
         lb_dpPasaporte.Text = "Pasaporte:"
         '
@@ -330,10 +319,9 @@ Partial Class frmPaciente_Editar
         '
         lb_dpMovil.AutoSize = True
         lb_dpMovil.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lb_dpMovil.Location = New System.Drawing.Point(171, 100)
-        lb_dpMovil.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        lb_dpMovil.Location = New System.Drawing.Point(110, 81)
         lb_dpMovil.Name = "lb_dpMovil"
-        lb_dpMovil.Size = New System.Drawing.Size(44, 17)
+        lb_dpMovil.Size = New System.Drawing.Size(35, 13)
         lb_dpMovil.TabIndex = 19
         lb_dpMovil.Text = "Móvil:"
         '
@@ -341,10 +329,9 @@ Partial Class frmPaciente_Editar
         '
         lb_dpProvincia.AutoSize = True
         lb_dpProvincia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lb_dpProvincia.Location = New System.Drawing.Point(528, 37)
-        lb_dpProvincia.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        lb_dpProvincia.Location = New System.Drawing.Point(358, 30)
         lb_dpProvincia.Name = "lb_dpProvincia"
-        lb_dpProvincia.Size = New System.Drawing.Size(70, 17)
+        lb_dpProvincia.Size = New System.Drawing.Size(54, 13)
         lb_dpProvincia.TabIndex = 17
         lb_dpProvincia.Text = "Provincia:"
         '
@@ -352,10 +339,9 @@ Partial Class frmPaciente_Editar
         '
         lb_dpTlfno.AutoSize = True
         lb_dpTlfno.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lb_dpTlfno.Location = New System.Drawing.Point(23, 103)
-        lb_dpTlfno.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        lb_dpTlfno.Location = New System.Drawing.Point(7, 84)
         lb_dpTlfno.Name = "lb_dpTlfno"
-        lb_dpTlfno.Size = New System.Drawing.Size(68, 17)
+        lb_dpTlfno.Size = New System.Drawing.Size(52, 13)
         lb_dpTlfno.TabIndex = 14
         lb_dpTlfno.Text = "Teléfono:"
         '
@@ -363,10 +349,9 @@ Partial Class frmPaciente_Editar
         '
         lb_dpPoblac.AutoSize = True
         lb_dpPoblac.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lb_dpPoblac.Location = New System.Drawing.Point(340, 37)
-        lb_dpPoblac.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        lb_dpPoblac.Location = New System.Drawing.Point(227, 30)
         lb_dpPoblac.Name = "lb_dpPoblac"
-        lb_dpPoblac.Size = New System.Drawing.Size(74, 17)
+        lb_dpPoblac.Size = New System.Drawing.Size(57, 13)
         lb_dpPoblac.TabIndex = 13
         lb_dpPoblac.Text = "Población:"
         '
@@ -374,10 +359,9 @@ Partial Class frmPaciente_Editar
         '
         lb_dpCodigopostal.AutoSize = True
         lb_dpCodigopostal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lb_dpCodigopostal.Location = New System.Drawing.Point(727, 37)
-        lb_dpCodigopostal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        lb_dpCodigopostal.Location = New System.Drawing.Point(508, 30)
         lb_dpCodigopostal.Name = "lb_dpCodigopostal"
-        lb_dpCodigopostal.Size = New System.Drawing.Size(68, 17)
+        lb_dpCodigopostal.Size = New System.Drawing.Size(52, 13)
         lb_dpCodigopostal.TabIndex = 12
         lb_dpCodigopostal.Text = "C. Postal:"
         '
@@ -385,10 +369,9 @@ Partial Class frmPaciente_Editar
         '
         lb_dpSexo.AutoSize = True
         lb_dpSexo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lb_dpSexo.Location = New System.Drawing.Point(863, 37)
-        lb_dpSexo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        lb_dpSexo.Location = New System.Drawing.Point(606, 30)
         lb_dpSexo.Name = "lb_dpSexo"
-        lb_dpSexo.Size = New System.Drawing.Size(43, 17)
+        lb_dpSexo.Size = New System.Drawing.Size(34, 13)
         lb_dpSexo.TabIndex = 11
         lb_dpSexo.Text = "Sexo:"
         '
@@ -396,10 +379,9 @@ Partial Class frmPaciente_Editar
         '
         lb_dpEdad.AutoSize = True
         lb_dpEdad.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lb_dpEdad.Location = New System.Drawing.Point(171, 162)
-        lb_dpEdad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        lb_dpEdad.Location = New System.Drawing.Point(118, 132)
         lb_dpEdad.Name = "lb_dpEdad"
-        lb_dpEdad.Size = New System.Drawing.Size(45, 17)
+        lb_dpEdad.Size = New System.Drawing.Size(35, 13)
         lb_dpEdad.TabIndex = 7
         lb_dpEdad.Text = "Edad:"
         '
@@ -407,10 +389,9 @@ Partial Class frmPaciente_Editar
         '
         lb_dpFechanac.AutoSize = True
         lb_dpFechanac.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lb_dpFechanac.Location = New System.Drawing.Point(23, 162)
-        lb_dpFechanac.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        lb_dpFechanac.Location = New System.Drawing.Point(7, 132)
         lb_dpFechanac.Name = "lb_dpFechanac"
-        lb_dpFechanac.Size = New System.Drawing.Size(80, 17)
+        lb_dpFechanac.Size = New System.Drawing.Size(63, 13)
         lb_dpFechanac.TabIndex = 5
         lb_dpFechanac.Text = "Fecha Nac:"
         '
@@ -418,10 +399,9 @@ Partial Class frmPaciente_Editar
         '
         lb_dpDomicilio.AutoSize = True
         lb_dpDomicilio.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lb_dpDomicilio.Location = New System.Drawing.Point(23, 37)
-        lb_dpDomicilio.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        lb_dpDomicilio.Location = New System.Drawing.Point(7, 30)
         lb_dpDomicilio.Name = "lb_dpDomicilio"
-        lb_dpDomicilio.Size = New System.Drawing.Size(68, 17)
+        lb_dpDomicilio.Size = New System.Drawing.Size(52, 13)
         lb_dpDomicilio.TabIndex = 16
         lb_dpDomicilio.Text = "Domicilio:"
         '
@@ -429,20 +409,18 @@ Partial Class frmPaciente_Editar
         '
         lb_dpDni.AutoSize = True
         lb_dpDni.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lb_dpDni.Location = New System.Drawing.Point(252, 162)
-        lb_dpDni.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        lb_dpDni.Location = New System.Drawing.Point(170, 132)
         lb_dpDni.Name = "lb_dpDni"
-        lb_dpDni.Size = New System.Drawing.Size(35, 17)
+        lb_dpDni.Size = New System.Drawing.Size(29, 13)
         lb_dpDni.TabIndex = 2
         lb_dpDni.Text = "DNI:"
         '
         'lb_hlRegimen
         '
         lb_hlRegimen.AutoSize = True
-        lb_hlRegimen.Location = New System.Drawing.Point(811, 620)
-        lb_hlRegimen.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        lb_hlRegimen.Location = New System.Drawing.Point(608, 504)
         lb_hlRegimen.Name = "lb_hlRegimen"
-        lb_hlRegimen.Size = New System.Drawing.Size(64, 17)
+        lb_hlRegimen.Size = New System.Drawing.Size(49, 13)
         lb_hlRegimen.TabIndex = 40
         lb_hlRegimen.Text = "Régimen"
         lb_hlRegimen.Visible = False
@@ -450,10 +428,9 @@ Partial Class frmPaciente_Editar
         'lb_hlPuesto
         '
         lb_hlPuesto.AutoSize = True
-        lb_hlPuesto.Location = New System.Drawing.Point(553, 620)
-        lb_hlPuesto.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        lb_hlPuesto.Location = New System.Drawing.Point(415, 504)
         lb_hlPuesto.Name = "lb_hlPuesto"
-        lb_hlPuesto.Size = New System.Drawing.Size(52, 17)
+        lb_hlPuesto.Size = New System.Drawing.Size(40, 13)
         lb_hlPuesto.TabIndex = 38
         lb_hlPuesto.Text = "Puesto"
         lb_hlPuesto.Visible = False
@@ -461,10 +438,9 @@ Partial Class frmPaciente_Editar
         'lb_hlProfesion
         '
         lb_hlProfesion.AutoSize = True
-        lb_hlProfesion.Location = New System.Drawing.Point(263, 619)
-        lb_hlProfesion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        lb_hlProfesion.Location = New System.Drawing.Point(197, 503)
         lb_hlProfesion.Name = "lb_hlProfesion"
-        lb_hlProfesion.Size = New System.Drawing.Size(68, 17)
+        lb_hlProfesion.Size = New System.Drawing.Size(51, 13)
         lb_hlProfesion.TabIndex = 36
         lb_hlProfesion.Text = "Profesión"
         lb_hlProfesion.Visible = False
@@ -473,10 +449,9 @@ Partial Class frmPaciente_Editar
         '
         Label2.AutoSize = True
         Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label2.Location = New System.Drawing.Point(727, 100)
-        Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Label2.Location = New System.Drawing.Point(507, 81)
         Label2.Name = "Label2"
-        Label2.Size = New System.Drawing.Size(39, 17)
+        Label2.Size = New System.Drawing.Size(30, 13)
         Label2.TabIndex = 35
         Label2.Text = "Pais:"
         '
@@ -488,11 +463,10 @@ Partial Class frmPaciente_Editar
         Me.TabControl1.Controls.Add(Me.TabPageDetalles)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.HClinico)
-        Me.TabControl1.Location = New System.Drawing.Point(0, 31)
-        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4)
+        Me.TabControl1.Location = New System.Drawing.Point(0, 25)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1240, 687)
+        Me.TabControl1.Size = New System.Drawing.Size(917, 558)
         Me.TabControl1.TabIndex = 1
         '
         'TabPageDetalles
@@ -515,11 +489,10 @@ Partial Class frmPaciente_Editar
         Me.TabPageDetalles.Controls.Add(Me.tb_Apellido1)
         Me.TabPageDetalles.Controls.Add(Me.lbl_Apellido1)
         Me.TabPageDetalles.Controls.Add(Me.gb_dpDatosadmin)
-        Me.TabPageDetalles.Location = New System.Drawing.Point(4, 25)
-        Me.TabPageDetalles.Margin = New System.Windows.Forms.Padding(4)
+        Me.TabPageDetalles.Location = New System.Drawing.Point(4, 22)
         Me.TabPageDetalles.Name = "TabPageDetalles"
-        Me.TabPageDetalles.Padding = New System.Windows.Forms.Padding(4)
-        Me.TabPageDetalles.Size = New System.Drawing.Size(1232, 658)
+        Me.TabPageDetalles.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPageDetalles.Size = New System.Drawing.Size(909, 532)
         Me.TabPageDetalles.TabIndex = 0
         Me.TabPageDetalles.Text = "Detalles"
         '
@@ -530,10 +503,9 @@ Partial Class frmPaciente_Editar
         Me.webcam.FlatAppearance.BorderSize = 0
         Me.webcam.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.webcam.Image = Global.centro_medico.My.Resources.Resources.webcam
-        Me.webcam.Location = New System.Drawing.Point(1129, 174)
-        Me.webcam.Margin = New System.Windows.Forms.Padding(4)
+        Me.webcam.Location = New System.Drawing.Point(845, 141)
         Me.webcam.Name = "webcam"
-        Me.webcam.Size = New System.Drawing.Size(21, 20)
+        Me.webcam.Size = New System.Drawing.Size(16, 16)
         Me.webcam.TabIndex = 63
         Me.webcam.TabStop = False
         Me.webcam.UseVisualStyleBackColor = True
@@ -577,11 +549,9 @@ Partial Class frmPaciente_Editar
         Me.gb_dpDatPer.Controls.Add(Me.tb_domicilio)
         Me.gb_dpDatPer.Controls.Add(lb_dpDni)
         Me.gb_dpDatPer.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gb_dpDatPer.Location = New System.Drawing.Point(8, 82)
-        Me.gb_dpDatPer.Margin = New System.Windows.Forms.Padding(4)
+        Me.gb_dpDatPer.Location = New System.Drawing.Point(6, 67)
         Me.gb_dpDatPer.Name = "gb_dpDatPer"
-        Me.gb_dpDatPer.Padding = New System.Windows.Forms.Padding(4)
-        Me.gb_dpDatPer.Size = New System.Drawing.Size(1031, 231)
+        Me.gb_dpDatPer.Size = New System.Drawing.Size(770, 188)
         Me.gb_dpDatPer.TabIndex = 5
         Me.gb_dpDatPer.TabStop = False
         Me.gb_dpDatPer.Tag = ""
@@ -592,10 +562,9 @@ Partial Class frmPaciente_Editar
         Me.lb_dpLetradni.BackColor = System.Drawing.Color.Silver
         Me.lb_dpLetradni.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lb_dpLetradni.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lb_dpLetradni.Location = New System.Drawing.Point(357, 183)
-        Me.lb_dpLetradni.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lb_dpLetradni.Location = New System.Drawing.Point(245, 149)
         Me.lb_dpLetradni.Name = "lb_dpLetradni"
-        Me.lb_dpLetradni.Size = New System.Drawing.Size(29, 25)
+        Me.lb_dpLetradni.Size = New System.Drawing.Size(22, 20)
         Me.lb_dpLetradni.TabIndex = 36
         Me.lb_dpLetradni.Text = "-"
         Me.lb_dpLetradni.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -609,10 +578,9 @@ Partial Class frmPaciente_Editar
         Me.dtp_dpFeNac.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PACIENTESBindingSource, "FECHAN", True))
         Me.dtp_dpFeNac.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtp_dpFeNac.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtp_dpFeNac.Location = New System.Drawing.Point(27, 183)
-        Me.dtp_dpFeNac.Margin = New System.Windows.Forms.Padding(4)
+        Me.dtp_dpFeNac.Location = New System.Drawing.Point(10, 149)
         Me.dtp_dpFeNac.Name = "dtp_dpFeNac"
-        Me.dtp_dpFeNac.Size = New System.Drawing.Size(121, 23)
+        Me.dtp_dpFeNac.Size = New System.Drawing.Size(92, 20)
         Me.dtp_dpFeNac.TabIndex = 11
         '
         'cb_dpSexo
@@ -620,10 +588,9 @@ Partial Class frmPaciente_Editar
         Me.cb_dpSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cb_dpSexo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_dpSexo.FormattingEnabled = True
-        Me.cb_dpSexo.Location = New System.Drawing.Point(867, 58)
-        Me.cb_dpSexo.Margin = New System.Windows.Forms.Padding(4)
+        Me.cb_dpSexo.Location = New System.Drawing.Point(609, 47)
         Me.cb_dpSexo.Name = "cb_dpSexo"
-        Me.cb_dpSexo.Size = New System.Drawing.Size(125, 25)
+        Me.cb_dpSexo.Size = New System.Drawing.Size(95, 21)
         Me.cb_dpSexo.TabIndex = 5
         '
         'Button1
@@ -633,10 +600,9 @@ Partial Class frmPaciente_Editar
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(1185, 174)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Location = New System.Drawing.Point(887, 141)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(21, 20)
+        Me.Button1.Size = New System.Drawing.Size(16, 16)
         Me.Button1.TabIndex = 9
         Me.Button1.TabStop = False
         Me.Button1.UseVisualStyleBackColor = True
@@ -648,10 +614,9 @@ Partial Class frmPaciente_Editar
         Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(1159, 174)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button2.Location = New System.Drawing.Point(867, 141)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(21, 20)
+        Me.Button2.Size = New System.Drawing.Size(16, 16)
         Me.Button2.TabIndex = 8
         Me.Button2.TabStop = False
         Me.Button2.UseVisualStyleBackColor = True
@@ -664,11 +629,9 @@ Partial Class frmPaciente_Editar
         Me.gb_dpObservaciones.BackColor = System.Drawing.SystemColors.Window
         Me.gb_dpObservaciones.Controls.Add(Me.tb_dpObservaciones)
         Me.gb_dpObservaciones.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gb_dpObservaciones.Location = New System.Drawing.Point(8, 529)
-        Me.gb_dpObservaciones.Margin = New System.Windows.Forms.Padding(4)
+        Me.gb_dpObservaciones.Location = New System.Drawing.Point(6, 430)
         Me.gb_dpObservaciones.Name = "gb_dpObservaciones"
-        Me.gb_dpObservaciones.Padding = New System.Windows.Forms.Padding(4)
-        Me.gb_dpObservaciones.Size = New System.Drawing.Size(1213, 116)
+        Me.gb_dpObservaciones.Size = New System.Drawing.Size(897, 94)
         Me.gb_dpObservaciones.TabIndex = 7
         Me.gb_dpObservaciones.TabStop = False
         Me.gb_dpObservaciones.Text = "Observaciones"
@@ -676,30 +639,27 @@ Partial Class frmPaciente_Editar
         'lblCodigoPaciente
         '
         Me.lblCodigoPaciente.AutoSize = True
-        Me.lblCodigoPaciente.Location = New System.Drawing.Point(147, 18)
-        Me.lblCodigoPaciente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCodigoPaciente.Location = New System.Drawing.Point(110, 15)
         Me.lblCodigoPaciente.Name = "lblCodigoPaciente"
-        Me.lblCodigoPaciente.Size = New System.Drawing.Size(52, 17)
+        Me.lblCodigoPaciente.Size = New System.Drawing.Size(40, 13)
         Me.lblCodigoPaciente.TabIndex = 0
         Me.lblCodigoPaciente.Text = "Código"
         '
         'lbl_Apellido2
         '
         Me.lbl_Apellido2.AutoSize = True
-        Me.lbl_Apellido2.Location = New System.Drawing.Point(503, 18)
-        Me.lbl_Apellido2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbl_Apellido2.Location = New System.Drawing.Point(377, 15)
         Me.lbl_Apellido2.Name = "lbl_Apellido2"
-        Me.lbl_Apellido2.Size = New System.Drawing.Size(66, 17)
+        Me.lbl_Apellido2.Size = New System.Drawing.Size(50, 13)
         Me.lbl_Apellido2.TabIndex = 60
         Me.lbl_Apellido2.Text = "Apellido2"
         '
         'lblCodigoPropio
         '
         Me.lblCodigoPropio.AutoSize = True
-        Me.lblCodigoPropio.Location = New System.Drawing.Point(29, 18)
-        Me.lblCodigoPropio.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCodigoPropio.Location = New System.Drawing.Point(22, 15)
         Me.lblCodigoPropio.Name = "lblCodigoPropio"
-        Me.lblCodigoPropio.Size = New System.Drawing.Size(70, 17)
+        Me.lblCodigoPropio.Size = New System.Drawing.Size(53, 13)
         Me.lblCodigoPropio.TabIndex = 56
         Me.lblCodigoPropio.Text = "C. Propio:"
         '
@@ -709,10 +669,9 @@ Partial Class frmPaciente_Editar
         Me.pb_dpImagen.BackgroundImage = Global.centro_medico.My.Resources.Resources.male14
         Me.pb_dpImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.pb_dpImagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pb_dpImagen.Location = New System.Drawing.Point(1047, 18)
-        Me.pb_dpImagen.Margin = New System.Windows.Forms.Padding(4)
+        Me.pb_dpImagen.Location = New System.Drawing.Point(783, 15)
         Me.pb_dpImagen.Name = "pb_dpImagen"
-        Me.pb_dpImagen.Size = New System.Drawing.Size(159, 147)
+        Me.pb_dpImagen.Size = New System.Drawing.Size(120, 120)
         Me.pb_dpImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pb_dpImagen.TabIndex = 45
         Me.pb_dpImagen.TabStop = False
@@ -720,20 +679,18 @@ Partial Class frmPaciente_Editar
         'lbl_Nombre
         '
         Me.lbl_Nombre.AutoSize = True
-        Me.lbl_Nombre.Location = New System.Drawing.Point(721, 20)
-        Me.lbl_Nombre.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbl_Nombre.Location = New System.Drawing.Point(541, 16)
         Me.lbl_Nombre.Name = "lbl_Nombre"
-        Me.lbl_Nombre.Size = New System.Drawing.Size(58, 17)
+        Me.lbl_Nombre.Size = New System.Drawing.Size(44, 13)
         Me.lbl_Nombre.TabIndex = 62
         Me.lbl_Nombre.Text = "Nombre"
         '
         'lbl_Apellido1
         '
         Me.lbl_Apellido1.AutoSize = True
-        Me.lbl_Apellido1.Location = New System.Drawing.Point(243, 18)
-        Me.lbl_Apellido1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbl_Apellido1.Location = New System.Drawing.Point(182, 15)
         Me.lbl_Apellido1.Name = "lbl_Apellido1"
-        Me.lbl_Apellido1.Size = New System.Drawing.Size(70, 17)
+        Me.lbl_Apellido1.Size = New System.Drawing.Size(53, 13)
         Me.lbl_Apellido1.TabIndex = 16
         Me.lbl_Apellido1.Text = "Apellido1:"
         '
@@ -761,11 +718,9 @@ Partial Class frmPaciente_Editar
         Me.gb_dpDatosadmin.Controls.Add(lb_dpNss)
         Me.gb_dpDatosadmin.Controls.Add(Me.tb_dpNss)
         Me.gb_dpDatosadmin.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gb_dpDatosadmin.Location = New System.Drawing.Point(9, 321)
-        Me.gb_dpDatosadmin.Margin = New System.Windows.Forms.Padding(4)
+        Me.gb_dpDatosadmin.Location = New System.Drawing.Point(7, 261)
         Me.gb_dpDatosadmin.Name = "gb_dpDatosadmin"
-        Me.gb_dpDatosadmin.Padding = New System.Windows.Forms.Padding(4)
-        Me.gb_dpDatosadmin.Size = New System.Drawing.Size(1213, 201)
+        Me.gb_dpDatosadmin.Size = New System.Drawing.Size(896, 163)
         Me.gb_dpDatosadmin.TabIndex = 6
         Me.gb_dpDatosadmin.TabStop = False
         Me.gb_dpDatosadmin.Text = "Datos Administrativos"
@@ -775,10 +730,9 @@ Partial Class frmPaciente_Editar
         Me.dtpsociohasta.AccessibleDescription = "Define hasta que fecha es socio el paciente"
         Me.dtpsociohasta.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PACIENTESBindingSource, "SOCIOVALIDOHASTA", True))
         Me.dtpsociohasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpsociohasta.Location = New System.Drawing.Point(797, 117)
-        Me.dtpsociohasta.Margin = New System.Windows.Forms.Padding(4)
+        Me.dtpsociohasta.Location = New System.Drawing.Point(598, 95)
         Me.dtpsociohasta.Name = "dtpsociohasta"
-        Me.dtpsociohasta.Size = New System.Drawing.Size(113, 23)
+        Me.dtpsociohasta.Size = New System.Drawing.Size(86, 20)
         Me.dtpsociohasta.TabIndex = 66
         Me.dtpsociohasta.Visible = False
         '
@@ -787,10 +741,9 @@ Partial Class frmPaciente_Editar
         Me.cb_comoconocio.DataBindings.Add(New System.Windows.Forms.Binding("SelectedItem", Me.PACIENTESBindingSource, "CONOCIO", True))
         Me.cb_comoconocio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cb_comoconocio.FormattingEnabled = True
-        Me.cb_comoconocio.Location = New System.Drawing.Point(701, 63)
-        Me.cb_comoconocio.Margin = New System.Windows.Forms.Padding(4)
+        Me.cb_comoconocio.Location = New System.Drawing.Point(526, 51)
         Me.cb_comoconocio.Name = "cb_comoconocio"
-        Me.cb_comoconocio.Size = New System.Drawing.Size(209, 24)
+        Me.cb_comoconocio.Size = New System.Drawing.Size(158, 21)
         Me.cb_comoconocio.TabIndex = 7
         '
         'pnlBeneficiario
@@ -803,30 +756,27 @@ Partial Class frmPaciente_Editar
         Me.pnlBeneficiario.Controls.Add(Me.txtNomSocio)
         Me.pnlBeneficiario.Controls.Add(Me.txtParentescoSocio)
         Me.pnlBeneficiario.Controls.Add(Me.Label7)
-        Me.pnlBeneficiario.Location = New System.Drawing.Point(920, 23)
-        Me.pnlBeneficiario.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlBeneficiario.Location = New System.Drawing.Point(692, 19)
         Me.pnlBeneficiario.Name = "pnlBeneficiario"
-        Me.pnlBeneficiario.Size = New System.Drawing.Size(277, 170)
+        Me.pnlBeneficiario.Size = New System.Drawing.Size(200, 138)
         Me.pnlBeneficiario.TabIndex = 63
         Me.pnlBeneficiario.Visible = False
         '
         'lblFechaValidoBeneficiario
         '
         Me.lblFechaValidoBeneficiario.AutoSize = True
-        Me.lblFechaValidoBeneficiario.Location = New System.Drawing.Point(99, 150)
-        Me.lblFechaValidoBeneficiario.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblFechaValidoBeneficiario.Location = New System.Drawing.Point(74, 122)
         Me.lblFechaValidoBeneficiario.Name = "lblFechaValidoBeneficiario"
-        Me.lblFechaValidoBeneficiario.Size = New System.Drawing.Size(20, 17)
+        Me.lblFechaValidoBeneficiario.Size = New System.Drawing.Size(16, 13)
         Me.lblFechaValidoBeneficiario.TabIndex = 51
         Me.lblFechaValidoBeneficiario.Text = "..."
         '
         'lblValido
         '
         Me.lblValido.AutoSize = True
-        Me.lblValido.Location = New System.Drawing.Point(8, 150)
-        Me.lblValido.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblValido.Location = New System.Drawing.Point(6, 122)
         Me.lblValido.Name = "lblValido"
-        Me.lblValido.Size = New System.Drawing.Size(90, 17)
+        Me.lblValido.Size = New System.Drawing.Size(68, 13)
         Me.lblValido.TabIndex = 50
         Me.lblValido.Text = "Válido hasta:"
         '
@@ -834,29 +784,26 @@ Partial Class frmPaciente_Editar
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(4, 9)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(3, 7)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(169, 17)
+        Me.Label6.Size = New System.Drawing.Size(133, 13)
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Beneficiario del socio:"
         '
         'lblSocioBeneficiario
         '
-        Me.lblSocioBeneficiario.Location = New System.Drawing.Point(4, 34)
-        Me.lblSocioBeneficiario.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblSocioBeneficiario.Location = New System.Drawing.Point(3, 28)
         Me.lblSocioBeneficiario.Name = "lblSocioBeneficiario"
-        Me.lblSocioBeneficiario.Size = New System.Drawing.Size(261, 22)
+        Me.lblSocioBeneficiario.Size = New System.Drawing.Size(185, 18)
         Me.lblSocioBeneficiario.TabIndex = 0
         Me.lblSocioBeneficiario.Text = "0000"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(12, 87)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(9, 71)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(163, 17)
+        Me.Label7.Size = New System.Drawing.Size(124, 13)
         Me.Label7.TabIndex = 49
         Me.Label7.Text = "Parentesco con el socio:"
         '
@@ -865,11 +812,10 @@ Partial Class frmPaciente_Editar
         Me.dtp_dpFechaAlta.Checked = False
         Me.dtp_dpFechaAlta.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtp_dpFechaAlta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtp_dpFechaAlta.Location = New System.Drawing.Point(544, 37)
-        Me.dtp_dpFechaAlta.Margin = New System.Windows.Forms.Padding(4)
+        Me.dtp_dpFechaAlta.Location = New System.Drawing.Point(408, 30)
         Me.dtp_dpFechaAlta.Name = "dtp_dpFechaAlta"
         Me.dtp_dpFechaAlta.ShowCheckBox = True
-        Me.dtp_dpFechaAlta.Size = New System.Drawing.Size(128, 23)
+        Me.dtp_dpFechaAlta.Size = New System.Drawing.Size(97, 20)
         Me.dtp_dpFechaAlta.TabIndex = 5
         '
         'dtp_dpFechabaja
@@ -877,37 +823,33 @@ Partial Class frmPaciente_Editar
         Me.dtp_dpFechabaja.Checked = False
         Me.dtp_dpFechabaja.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtp_dpFechabaja.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtp_dpFechabaja.Location = New System.Drawing.Point(544, 71)
-        Me.dtp_dpFechabaja.Margin = New System.Windows.Forms.Padding(4)
+        Me.dtp_dpFechabaja.Location = New System.Drawing.Point(408, 58)
         Me.dtp_dpFechabaja.Name = "dtp_dpFechabaja"
         Me.dtp_dpFechabaja.ShowCheckBox = True
-        Me.dtp_dpFechabaja.Size = New System.Drawing.Size(128, 23)
+        Me.dtp_dpFechabaja.Size = New System.Drawing.Size(97, 20)
         Me.dtp_dpFechabaja.TabIndex = 6
         '
         'chb_dpFallecido
         '
-        Me.chb_dpFallecido.Location = New System.Drawing.Point(312, 70)
-        Me.chb_dpFallecido.Margin = New System.Windows.Forms.Padding(4)
+        Me.chb_dpFallecido.Location = New System.Drawing.Point(234, 57)
         Me.chb_dpFallecido.Name = "chb_dpFallecido"
-        Me.chb_dpFallecido.Size = New System.Drawing.Size(24, 30)
+        Me.chb_dpFallecido.Size = New System.Drawing.Size(18, 24)
         Me.chb_dpFallecido.TabIndex = 4
         '
         'chb_dpAsociado
         '
-        Me.chb_dpAsociado.Location = New System.Drawing.Point(701, 114)
-        Me.chb_dpAsociado.Margin = New System.Windows.Forms.Padding(4)
+        Me.chb_dpAsociado.Location = New System.Drawing.Point(526, 93)
         Me.chb_dpAsociado.Name = "chb_dpAsociado"
-        Me.chb_dpAsociado.Size = New System.Drawing.Size(104, 30)
+        Me.chb_dpAsociado.Size = New System.Drawing.Size(78, 24)
         Me.chb_dpAsociado.TabIndex = 10
         Me.chb_dpAsociado.Text = "Asociado"
         Me.chb_dpAsociado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'chb_dpActivo
         '
-        Me.chb_dpActivo.Location = New System.Drawing.Point(312, 33)
-        Me.chb_dpActivo.Margin = New System.Windows.Forms.Padding(4)
+        Me.chb_dpActivo.Location = New System.Drawing.Point(234, 27)
         Me.chb_dpActivo.Name = "chb_dpActivo"
-        Me.chb_dpActivo.Size = New System.Drawing.Size(23, 30)
+        Me.chb_dpActivo.Size = New System.Drawing.Size(17, 24)
         Me.chb_dpActivo.TabIndex = 3
         Me.chb_dpActivo.Text = "En activo"
         '
@@ -916,11 +858,10 @@ Partial Class frmPaciente_Editar
         Me.TabPage2.BackColor = System.Drawing.SystemColors.Window
         Me.TabPage2.Controls.Add(Me.grpAsociados)
         Me.TabPage2.Controls.Add(Me.GroupBox1)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage2.Margin = New System.Windows.Forms.Padding(4)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(4)
-        Me.TabPage2.Size = New System.Drawing.Size(1232, 658)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(909, 532)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Otros datos"
         '
@@ -931,11 +872,9 @@ Partial Class frmPaciente_Editar
         Me.grpAsociados.Controls.Add(Me.btnRemoveSocio)
         Me.grpAsociados.Controls.Add(Me.btnAddSocio)
         Me.grpAsociados.Controls.Add(Me.GridEXSocios)
-        Me.grpAsociados.Location = New System.Drawing.Point(12, 341)
-        Me.grpAsociados.Margin = New System.Windows.Forms.Padding(4)
+        Me.grpAsociados.Location = New System.Drawing.Point(9, 277)
         Me.grpAsociados.Name = "grpAsociados"
-        Me.grpAsociados.Padding = New System.Windows.Forms.Padding(4)
-        Me.grpAsociados.Size = New System.Drawing.Size(528, 234)
+        Me.grpAsociados.Size = New System.Drawing.Size(396, 190)
         Me.grpAsociados.TabIndex = 3
         Me.grpAsociados.TabStop = False
         Me.grpAsociados.Text = "Socios Beneficiarios"
@@ -947,10 +886,9 @@ Partial Class frmPaciente_Editar
         Me.btnRemoveSocio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnRemoveSocio.FlatAppearance.BorderSize = 0
         Me.btnRemoveSocio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRemoveSocio.Location = New System.Drawing.Point(52, 30)
-        Me.btnRemoveSocio.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnRemoveSocio.Location = New System.Drawing.Point(39, 24)
         Me.btnRemoveSocio.Name = "btnRemoveSocio"
-        Me.btnRemoveSocio.Size = New System.Drawing.Size(21, 20)
+        Me.btnRemoveSocio.Size = New System.Drawing.Size(16, 16)
         Me.btnRemoveSocio.TabIndex = 7
         Me.btnRemoveSocio.UseVisualStyleBackColor = True
         '
@@ -960,10 +898,9 @@ Partial Class frmPaciente_Editar
         Me.btnAddSocio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnAddSocio.FlatAppearance.BorderSize = 0
         Me.btnAddSocio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAddSocio.Location = New System.Drawing.Point(23, 30)
-        Me.btnAddSocio.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAddSocio.Location = New System.Drawing.Point(17, 24)
         Me.btnAddSocio.Name = "btnAddSocio"
-        Me.btnAddSocio.Size = New System.Drawing.Size(21, 20)
+        Me.btnAddSocio.Size = New System.Drawing.Size(16, 16)
         Me.btnAddSocio.TabIndex = 5
         Me.btnAddSocio.UseVisualStyleBackColor = True
         '
@@ -977,10 +914,9 @@ Partial Class frmPaciente_Editar
         GridEXSocios_DesignTimeLayout.LayoutString = resources.GetString("GridEXSocios_DesignTimeLayout.LayoutString")
         Me.GridEXSocios.DesignTimeLayout = GridEXSocios_DesignTimeLayout
         Me.GridEXSocios.GroupByBoxVisible = False
-        Me.GridEXSocios.Location = New System.Drawing.Point(19, 53)
-        Me.GridEXSocios.Margin = New System.Windows.Forms.Padding(4)
+        Me.GridEXSocios.Location = New System.Drawing.Point(14, 43)
         Me.GridEXSocios.Name = "GridEXSocios"
-        Me.GridEXSocios.Size = New System.Drawing.Size(501, 174)
+        Me.GridEXSocios.Size = New System.Drawing.Size(376, 141)
         Me.GridEXSocios.TabIndex = 1
         Me.GridEXSocios.TabStop = False
         '
@@ -996,11 +932,9 @@ Partial Class frmPaciente_Editar
         Me.GroupBox1.Controls.Add(Me.btn_Edit)
         Me.GroupBox1.Controls.Add(Me.btn_ADD)
         Me.GroupBox1.Controls.Add(Me.GridEXContactos)
-        Me.GroupBox1.Location = New System.Drawing.Point(8, 20)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Location = New System.Drawing.Point(6, 16)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(1215, 294)
+        Me.GroupBox1.Size = New System.Drawing.Size(894, 239)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Contactos del Paciente"
@@ -1011,10 +945,9 @@ Partial Class frmPaciente_Editar
         Me.btn_Eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btn_Eliminar.FlatAppearance.BorderSize = 0
         Me.btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Eliminar.Location = New System.Drawing.Point(81, 30)
-        Me.btn_Eliminar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_Eliminar.Location = New System.Drawing.Point(61, 24)
         Me.btn_Eliminar.Name = "btn_Eliminar"
-        Me.btn_Eliminar.Size = New System.Drawing.Size(21, 20)
+        Me.btn_Eliminar.Size = New System.Drawing.Size(16, 16)
         Me.btn_Eliminar.TabIndex = 7
         Me.btn_Eliminar.UseVisualStyleBackColor = True
         '
@@ -1024,10 +957,9 @@ Partial Class frmPaciente_Editar
         Me.btn_Edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btn_Edit.FlatAppearance.BorderSize = 0
         Me.btn_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Edit.Location = New System.Drawing.Point(52, 30)
-        Me.btn_Edit.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_Edit.Location = New System.Drawing.Point(39, 24)
         Me.btn_Edit.Name = "btn_Edit"
-        Me.btn_Edit.Size = New System.Drawing.Size(21, 20)
+        Me.btn_Edit.Size = New System.Drawing.Size(16, 16)
         Me.btn_Edit.TabIndex = 6
         Me.btn_Edit.UseVisualStyleBackColor = True
         '
@@ -1037,10 +969,9 @@ Partial Class frmPaciente_Editar
         Me.btn_ADD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btn_ADD.FlatAppearance.BorderSize = 0
         Me.btn_ADD.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_ADD.Location = New System.Drawing.Point(23, 30)
-        Me.btn_ADD.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_ADD.Location = New System.Drawing.Point(17, 24)
         Me.btn_ADD.Name = "btn_ADD"
-        Me.btn_ADD.Size = New System.Drawing.Size(21, 20)
+        Me.btn_ADD.Size = New System.Drawing.Size(16, 16)
         Me.btn_ADD.TabIndex = 5
         Me.btn_ADD.UseVisualStyleBackColor = True
         '
@@ -1054,10 +985,9 @@ Partial Class frmPaciente_Editar
         GridEXContactos_DesignTimeLayout.LayoutString = resources.GetString("GridEXContactos_DesignTimeLayout.LayoutString")
         Me.GridEXContactos.DesignTimeLayout = GridEXContactos_DesignTimeLayout
         Me.GridEXContactos.GroupByBoxVisible = False
-        Me.GridEXContactos.Location = New System.Drawing.Point(19, 53)
-        Me.GridEXContactos.Margin = New System.Windows.Forms.Padding(4)
+        Me.GridEXContactos.Location = New System.Drawing.Point(14, 43)
         Me.GridEXContactos.Name = "GridEXContactos"
-        Me.GridEXContactos.Size = New System.Drawing.Size(1172, 219)
+        Me.GridEXContactos.Size = New System.Drawing.Size(874, 178)
         Me.GridEXContactos.TabIndex = 1
         Me.GridEXContactos.TabStop = False
         '
@@ -1078,11 +1008,10 @@ Partial Class frmPaciente_Editar
         Me.HClinico.Controls.Add(Me.GridEXEmpresas)
         Me.HClinico.Controls.Add(Me.tb_hlPuesto)
         Me.HClinico.Controls.Add(Me.tb_hlProfesion)
-        Me.HClinico.Location = New System.Drawing.Point(4, 25)
-        Me.HClinico.Margin = New System.Windows.Forms.Padding(4)
+        Me.HClinico.Location = New System.Drawing.Point(4, 22)
         Me.HClinico.Name = "HClinico"
-        Me.HClinico.Padding = New System.Windows.Forms.Padding(4)
-        Me.HClinico.Size = New System.Drawing.Size(1232, 658)
+        Me.HClinico.Padding = New System.Windows.Forms.Padding(3)
+        Me.HClinico.Size = New System.Drawing.Size(909, 532)
         Me.HClinico.TabIndex = 2
         Me.HClinico.Text = "Historial Laboral"
         '
@@ -1093,29 +1022,29 @@ Partial Class frmPaciente_Editar
         Me.tsEmpresas.AutoSize = False
         Me.tsEmpresas.Dock = System.Windows.Forms.DockStyle.None
         Me.tsEmpresas.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.ToolStripSeparator2, Me.ToolStripButton2, Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripSeparator3, Me.ToolStripButton5})
-        Me.tsEmpresas.Location = New System.Drawing.Point(11, 300)
+        Me.tsEmpresas.Location = New System.Drawing.Point(8, 244)
         Me.tsEmpresas.Name = "tsEmpresas"
-        Me.tsEmpresas.Size = New System.Drawing.Size(1211, 31)
+        Me.tsEmpresas.Size = New System.Drawing.Size(897, 25)
         Me.tsEmpresas.TabIndex = 48
         Me.tsEmpresas.Text = "ToolStrip3"
         '
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(79, 28)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(63, 22)
         Me.ToolStripLabel1.Text = "Empresas :"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 31)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'ToolStripButton2
         '
         Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
         Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(73, 28)
+        Me.ToolStripButton2.Size = New System.Drawing.Size(62, 22)
         Me.ToolStripButton2.Text = "&Añadir"
         '
         'ToolStripButton3
@@ -1123,7 +1052,7 @@ Partial Class frmPaciente_Editar
         Me.ToolStripButton3.Image = Global.centro_medico.My.Resources.Resources._24_tag_pencil
         Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(93, 28)
+        Me.ToolStripButton3.Size = New System.Drawing.Size(78, 22)
         Me.ToolStripButton3.Text = "&Modificar"
         '
         'ToolStripButton4
@@ -1131,13 +1060,13 @@ Partial Class frmPaciente_Editar
         Me.ToolStripButton4.Image = CType(resources.GetObject("ToolStripButton4.Image"), System.Drawing.Image)
         Me.ToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton4.Name = "ToolStripButton4"
-        Me.ToolStripButton4.Size = New System.Drawing.Size(83, 28)
+        Me.ToolStripButton4.Size = New System.Drawing.Size(70, 22)
         Me.ToolStripButton4.Text = "&Eliminar"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 31)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
         '
         'ToolStripButton5
         '
@@ -1145,7 +1074,7 @@ Partial Class frmPaciente_Editar
         Me.ToolStripButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton5.Name = "ToolStripButton5"
-        Me.ToolStripButton5.Size = New System.Drawing.Size(86, 28)
+        Me.ToolStripButton5.Size = New System.Drawing.Size(73, 22)
         Me.ToolStripButton5.Text = "Principal"
         Me.ToolStripButton5.ToolTipText = "Marcar como principal"
         '
@@ -1156,29 +1085,29 @@ Partial Class frmPaciente_Editar
         Me.tstMutuas.AutoSize = False
         Me.tstMutuas.Dock = System.Windows.Forms.DockStyle.None
         Me.tstMutuas.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel2, Me.ToolStripSeparator4, Me.tstAnnadir_Tratamiento, Me.tst_Modificar_Tratamiento, Me.tst_Eliminar_Tratamiento, Me.ToolStripSeparator1, Me.ToolStripButton1})
-        Me.tstMutuas.Location = New System.Drawing.Point(11, 16)
+        Me.tstMutuas.Location = New System.Drawing.Point(8, 13)
         Me.tstMutuas.Name = "tstMutuas"
-        Me.tstMutuas.Size = New System.Drawing.Size(1211, 31)
+        Me.tstMutuas.Size = New System.Drawing.Size(897, 25)
         Me.tstMutuas.TabIndex = 47
         Me.tstMutuas.Text = "ToolStrip3"
         '
         'ToolStripLabel2
         '
         Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(68, 28)
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(56, 22)
         Me.ToolStripLabel2.Text = "Mutuas : "
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 31)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 25)
         '
         'tstAnnadir_Tratamiento
         '
         Me.tstAnnadir_Tratamiento.Image = CType(resources.GetObject("tstAnnadir_Tratamiento.Image"), System.Drawing.Image)
         Me.tstAnnadir_Tratamiento.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tstAnnadir_Tratamiento.Name = "tstAnnadir_Tratamiento"
-        Me.tstAnnadir_Tratamiento.Size = New System.Drawing.Size(73, 28)
+        Me.tstAnnadir_Tratamiento.Size = New System.Drawing.Size(62, 22)
         Me.tstAnnadir_Tratamiento.Text = "&Añadir"
         '
         'tst_Modificar_Tratamiento
@@ -1186,7 +1115,7 @@ Partial Class frmPaciente_Editar
         Me.tst_Modificar_Tratamiento.Image = Global.centro_medico.My.Resources.Resources._24_tag_pencil
         Me.tst_Modificar_Tratamiento.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tst_Modificar_Tratamiento.Name = "tst_Modificar_Tratamiento"
-        Me.tst_Modificar_Tratamiento.Size = New System.Drawing.Size(93, 28)
+        Me.tst_Modificar_Tratamiento.Size = New System.Drawing.Size(78, 22)
         Me.tst_Modificar_Tratamiento.Text = "&Modificar"
         '
         'tst_Eliminar_Tratamiento
@@ -1194,13 +1123,13 @@ Partial Class frmPaciente_Editar
         Me.tst_Eliminar_Tratamiento.Image = CType(resources.GetObject("tst_Eliminar_Tratamiento.Image"), System.Drawing.Image)
         Me.tst_Eliminar_Tratamiento.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tst_Eliminar_Tratamiento.Name = "tst_Eliminar_Tratamiento"
-        Me.tst_Eliminar_Tratamiento.Size = New System.Drawing.Size(83, 28)
+        Me.tst_Eliminar_Tratamiento.Size = New System.Drawing.Size(70, 22)
         Me.tst_Eliminar_Tratamiento.Text = "&Eliminar"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 31)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'ToolStripButton1
         '
@@ -1208,7 +1137,7 @@ Partial Class frmPaciente_Editar
         Me.ToolStripButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(86, 28)
+        Me.ToolStripButton1.Size = New System.Drawing.Size(73, 22)
         Me.ToolStripButton1.Text = "Principal"
         Me.ToolStripButton1.ToolTipText = "Marcar como principal"
         '
@@ -1217,10 +1146,9 @@ Partial Class frmPaciente_Editar
         Me.cb_hlRegimen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cb_hlRegimen.FormattingEnabled = True
         Me.cb_hlRegimen.Items.AddRange(New Object() {"General", "Agricultura c/ propia", "Agricultura c/ ajena", "Mar", "Minería carbón"})
-        Me.cb_hlRegimen.Location = New System.Drawing.Point(884, 612)
-        Me.cb_hlRegimen.Margin = New System.Windows.Forms.Padding(4)
+        Me.cb_hlRegimen.Location = New System.Drawing.Point(663, 497)
         Me.cb_hlRegimen.Name = "cb_hlRegimen"
-        Me.cb_hlRegimen.Size = New System.Drawing.Size(172, 24)
+        Me.cb_hlRegimen.Size = New System.Drawing.Size(130, 21)
         Me.cb_hlRegimen.TabIndex = 2
         Me.cb_hlRegimen.Visible = False
         '
@@ -1235,10 +1163,9 @@ Partial Class frmPaciente_Editar
         Me.GridEXMutuas.DesignTimeLayout = GridEXMutuas_DesignTimeLayout
         Me.GridEXMutuas.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GridEXMutuas.GroupByBoxVisible = False
-        Me.GridEXMutuas.Location = New System.Drawing.Point(11, 47)
-        Me.GridEXMutuas.Margin = New System.Windows.Forms.Padding(4)
+        Me.GridEXMutuas.Location = New System.Drawing.Point(8, 38)
         Me.GridEXMutuas.Name = "GridEXMutuas"
-        Me.GridEXMutuas.Size = New System.Drawing.Size(1211, 224)
+        Me.GridEXMutuas.Size = New System.Drawing.Size(897, 182)
         Me.GridEXMutuas.TabIndex = 13
         Me.GridEXMutuas.TabStop = False
         '
@@ -1257,10 +1184,9 @@ Partial Class frmPaciente_Editar
         GridEXEmpresas_DesignTimeLayout.LayoutString = resources.GetString("GridEXEmpresas_DesignTimeLayout.LayoutString")
         Me.GridEXEmpresas.DesignTimeLayout = GridEXEmpresas_DesignTimeLayout
         Me.GridEXEmpresas.GroupByBoxVisible = False
-        Me.GridEXEmpresas.Location = New System.Drawing.Point(11, 332)
-        Me.GridEXEmpresas.Margin = New System.Windows.Forms.Padding(4)
+        Me.GridEXEmpresas.Location = New System.Drawing.Point(8, 270)
         Me.GridEXEmpresas.Name = "GridEXEmpresas"
-        Me.GridEXEmpresas.Size = New System.Drawing.Size(1211, 271)
+        Me.GridEXEmpresas.Size = New System.Drawing.Size(897, 220)
         Me.GridEXEmpresas.TabIndex = 2
         Me.GridEXEmpresas.TabStop = False
         '
@@ -1273,9 +1199,10 @@ Partial Class frmPaciente_Editar
         Me.PbDatosDupl.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PbDatosDupl.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PbDatosDupl.Image = Global.centro_medico.My.Resources.Resources.Icon_DuplicPaciente
-        Me.PbDatosDupl.Location = New System.Drawing.Point(796, 1)
+        Me.PbDatosDupl.Location = New System.Drawing.Point(580, 1)
+        Me.PbDatosDupl.Margin = New System.Windows.Forms.Padding(2)
         Me.PbDatosDupl.Name = "PbDatosDupl"
-        Me.PbDatosDupl.Size = New System.Drawing.Size(40, 37)
+        Me.PbDatosDupl.Size = New System.Drawing.Size(30, 30)
         Me.PbDatosDupl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PbDatosDupl.TabIndex = 64
         Me.PbDatosDupl.TabStop = False
@@ -1286,7 +1213,7 @@ Partial Class frmPaciente_Editar
         Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbGuardar, Me.tsbCancelar})
         Me.ToolStrip2.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip2.Name = "ToolStrip2"
-        Me.ToolStrip2.Size = New System.Drawing.Size(1251, 27)
+        Me.ToolStrip2.Size = New System.Drawing.Size(917, 25)
         Me.ToolStrip2.TabIndex = 0
         Me.ToolStrip2.Text = "ToolStrip2"
         '
@@ -1295,7 +1222,7 @@ Partial Class frmPaciente_Editar
         Me.tsbGuardar.Image = Global.centro_medico.My.Resources.Resources._24_em_check
         Me.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbGuardar.Name = "tsbGuardar"
-        Me.tsbGuardar.Size = New System.Drawing.Size(82, 24)
+        Me.tsbGuardar.Size = New System.Drawing.Size(69, 22)
         Me.tsbGuardar.Text = "Gu&ardar"
         '
         'tsbCancelar
@@ -1303,7 +1230,7 @@ Partial Class frmPaciente_Editar
         Me.tsbCancelar.Image = CType(resources.GetObject("tsbCancelar.Image"), System.Drawing.Image)
         Me.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbCancelar.Name = "tsbCancelar"
-        Me.tsbCancelar.Size = New System.Drawing.Size(86, 24)
+        Me.tsbCancelar.Size = New System.Drawing.Size(73, 22)
         Me.tsbCancelar.Text = "Can&celar"
         '
         'ComoConocioBindingSource
@@ -1316,10 +1243,9 @@ Partial Class frmPaciente_Editar
         Me.lblEliminado.BackColor = System.Drawing.Color.Transparent
         Me.lblEliminado.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblEliminado.ForeColor = System.Drawing.Color.Red
-        Me.lblEliminado.Location = New System.Drawing.Point(541, 6)
-        Me.lblEliminado.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblEliminado.Location = New System.Drawing.Point(406, 5)
         Me.lblEliminado.Name = "lblEliminado"
-        Me.lblEliminado.Size = New System.Drawing.Size(229, 24)
+        Me.lblEliminado.Size = New System.Drawing.Size(183, 18)
         Me.lblEliminado.TabIndex = 39
         Me.lblEliminado.Text = "PACIENTE ELIMINADO"
         Me.lblEliminado.Visible = False
@@ -1332,10 +1258,9 @@ Partial Class frmPaciente_Editar
         Me.LbDatosDupl.Cursor = System.Windows.Forms.Cursors.Hand
         Me.LbDatosDupl.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LbDatosDupl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.LbDatosDupl.Location = New System.Drawing.Point(843, 8)
-        Me.LbDatosDupl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LbDatosDupl.Location = New System.Drawing.Point(615, 6)
         Me.LbDatosDupl.Name = "LbDatosDupl"
-        Me.LbDatosDupl.Size = New System.Drawing.Size(373, 24)
+        Me.LbDatosDupl.Size = New System.Drawing.Size(303, 18)
         Me.LbDatosDupl.TabIndex = 65
         Me.LbDatosDupl.Text = "PACIENTE CON DATOS DUPLICADOS"
         Me.LbDatosDupl.Visible = False
@@ -1345,11 +1270,10 @@ Partial Class frmPaciente_Editar
         Me.tb_web.AcceptsReturn = True
         Me.tb_web.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "WEB", True))
         Me.tb_web.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_web.Location = New System.Drawing.Point(532, 123)
-        Me.tb_web.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_web.Location = New System.Drawing.Point(361, 100)
         Me.tb_web.MaxLength = 200
         Me.tb_web.Name = "tb_web"
-        Me.tb_web.Size = New System.Drawing.Size(184, 23)
+        Me.tb_web.Size = New System.Drawing.Size(139, 20)
         Me.tb_web.TabIndex = 9
         '
         'tb_dpCodigopostal
@@ -1357,21 +1281,20 @@ Partial Class frmPaciente_Editar
         Me.tb_dpCodigopostal.AcceptsReturn = True
         Me.tb_dpCodigopostal.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "CP", True))
         Me.tb_dpCodigopostal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_dpCodigopostal.Location = New System.Drawing.Point(725, 59)
-        Me.tb_dpCodigopostal.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_dpCodigopostal.Location = New System.Drawing.Point(507, 48)
         Me.tb_dpCodigopostal.MaxLength = 5
         Me.tb_dpCodigopostal.Name = "tb_dpCodigopostal"
-        Me.tb_dpCodigopostal.Size = New System.Drawing.Size(123, 23)
+        Me.tb_dpCodigopostal.Size = New System.Drawing.Size(93, 20)
         Me.tb_dpCodigopostal.TabIndex = 4
         '
         'CtrlPaises1
         '
         Me.CtrlPaises1.DataBindings.Add(New System.Windows.Forms.Binding("ID_PAISES", Me.PACIENTESBindingSource, "REFPAIS", True))
         Me.CtrlPaises1.ID_PAISES = Nothing
-        Me.CtrlPaises1.Location = New System.Drawing.Point(679, 119)
-        Me.CtrlPaises1.Margin = New System.Windows.Forms.Padding(5)
+        Me.CtrlPaises1.Location = New System.Drawing.Point(471, 97)
+        Me.CtrlPaises1.Margin = New System.Windows.Forms.Padding(4)
         Me.CtrlPaises1.Name = "CtrlPaises1"
-        Me.CtrlPaises1.Size = New System.Drawing.Size(344, 31)
+        Me.CtrlPaises1.Size = New System.Drawing.Size(258, 25)
         Me.CtrlPaises1.TabIndex = 10
         '
         'tb_Email
@@ -1380,11 +1303,10 @@ Partial Class frmPaciente_Editar
         Me.tb_Email.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
         Me.tb_Email.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "EMAIL", True))
         Me.tb_Email.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_Email.Location = New System.Drawing.Point(315, 123)
-        Me.tb_Email.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_Email.Location = New System.Drawing.Point(217, 100)
         Me.tb_Email.MaxLength = 200
         Me.tb_Email.Name = "tb_Email"
-        Me.tb_Email.Size = New System.Drawing.Size(208, 23)
+        Me.tb_Email.Size = New System.Drawing.Size(138, 20)
         Me.tb_Email.TabIndex = 8
         '
         'tb_dpTutorLegal
@@ -1392,11 +1314,10 @@ Partial Class frmPaciente_Editar
         Me.tb_dpTutorLegal.AcceptsReturn = True
         Me.tb_dpTutorLegal.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "TUTOR", True))
         Me.tb_dpTutorLegal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_dpTutorLegal.Location = New System.Drawing.Point(737, 183)
-        Me.tb_dpTutorLegal.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_dpTutorLegal.Location = New System.Drawing.Point(487, 149)
         Me.tb_dpTutorLegal.MaxLength = 90
         Me.tb_dpTutorLegal.Name = "tb_dpTutorLegal"
-        Me.tb_dpTutorLegal.Size = New System.Drawing.Size(284, 23)
+        Me.tb_dpTutorLegal.Size = New System.Drawing.Size(214, 20)
         Me.tb_dpTutorLegal.TabIndex = 16
         '
         'tb_dpNie
@@ -1404,11 +1325,10 @@ Partial Class frmPaciente_Editar
         Me.tb_dpNie.AcceptsReturn = True
         Me.tb_dpNie.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "NIE", True))
         Me.tb_dpNie.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_dpNie.Location = New System.Drawing.Point(584, 182)
-        Me.tb_dpNie.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_dpNie.Location = New System.Drawing.Point(379, 148)
         Me.tb_dpNie.MaxLength = 15
         Me.tb_dpNie.Name = "tb_dpNie"
-        Me.tb_dpNie.Size = New System.Drawing.Size(128, 23)
+        Me.tb_dpNie.Size = New System.Drawing.Size(97, 20)
         Me.tb_dpNie.TabIndex = 15
         '
         'tb_dpPasaporte
@@ -1416,11 +1336,10 @@ Partial Class frmPaciente_Editar
         Me.tb_dpPasaporte.AcceptsReturn = True
         Me.tb_dpPasaporte.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "PASAPORTE", True))
         Me.tb_dpPasaporte.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_dpPasaporte.Location = New System.Drawing.Point(400, 183)
-        Me.tb_dpPasaporte.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_dpPasaporte.Location = New System.Drawing.Point(276, 149)
         Me.tb_dpPasaporte.MaxLength = 25
         Me.tb_dpPasaporte.Name = "tb_dpPasaporte"
-        Me.tb_dpPasaporte.Size = New System.Drawing.Size(164, 23)
+        Me.tb_dpPasaporte.Size = New System.Drawing.Size(91, 20)
         Me.tb_dpPasaporte.TabIndex = 14
         '
         'tb_dpMovil
@@ -1428,11 +1347,10 @@ Partial Class frmPaciente_Editar
         Me.tb_dpMovil.AcceptsReturn = True
         Me.tb_dpMovil.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "MOVIL", True))
         Me.tb_dpMovil.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_dpMovil.Location = New System.Drawing.Point(172, 123)
-        Me.tb_dpMovil.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_dpMovil.Location = New System.Drawing.Point(111, 100)
         Me.tb_dpMovil.MaxLength = 200
         Me.tb_dpMovil.Name = "tb_dpMovil"
-        Me.tb_dpMovil.Size = New System.Drawing.Size(131, 23)
+        Me.tb_dpMovil.Size = New System.Drawing.Size(99, 20)
         Me.tb_dpMovil.TabIndex = 7
         '
         'tb_dpProvincia
@@ -1440,11 +1358,10 @@ Partial Class frmPaciente_Editar
         Me.tb_dpProvincia.AcceptsReturn = True
         Me.tb_dpProvincia.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "PROVINCIA", True))
         Me.tb_dpProvincia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_dpProvincia.Location = New System.Drawing.Point(532, 59)
-        Me.tb_dpProvincia.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_dpProvincia.Location = New System.Drawing.Point(361, 48)
         Me.tb_dpProvincia.MaxLength = 300
         Me.tb_dpProvincia.Name = "tb_dpProvincia"
-        Me.tb_dpProvincia.Size = New System.Drawing.Size(184, 23)
+        Me.tb_dpProvincia.Size = New System.Drawing.Size(139, 20)
         Me.tb_dpProvincia.TabIndex = 3
         '
         'tb_dpTlfno
@@ -1452,11 +1369,10 @@ Partial Class frmPaciente_Editar
         Me.tb_dpTlfno.AcceptsReturn = True
         Me.tb_dpTlfno.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "TLFNO", True))
         Me.tb_dpTlfno.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_dpTlfno.Location = New System.Drawing.Point(27, 123)
-        Me.tb_dpTlfno.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_dpTlfno.Location = New System.Drawing.Point(10, 100)
         Me.tb_dpTlfno.MaxLength = 200
         Me.tb_dpTlfno.Name = "tb_dpTlfno"
-        Me.tb_dpTlfno.Size = New System.Drawing.Size(132, 23)
+        Me.tb_dpTlfno.Size = New System.Drawing.Size(92, 20)
         Me.tb_dpTlfno.TabIndex = 6
         '
         'tb_dpPoblacion
@@ -1464,11 +1380,10 @@ Partial Class frmPaciente_Editar
         Me.tb_dpPoblacion.AcceptsReturn = True
         Me.tb_dpPoblacion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "LOCALIDAD", True))
         Me.tb_dpPoblacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_dpPoblacion.Location = New System.Drawing.Point(337, 59)
-        Me.tb_dpPoblacion.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_dpPoblacion.Location = New System.Drawing.Point(225, 48)
         Me.tb_dpPoblacion.MaxLength = 200
         Me.tb_dpPoblacion.Name = "tb_dpPoblacion"
-        Me.tb_dpPoblacion.Size = New System.Drawing.Size(185, 23)
+        Me.tb_dpPoblacion.Size = New System.Drawing.Size(130, 20)
         Me.tb_dpPoblacion.TabIndex = 2
         '
         'tb_dpEdad
@@ -1476,11 +1391,10 @@ Partial Class frmPaciente_Editar
         Me.tb_dpEdad.AcceptsReturn = True
         Me.tb_dpEdad.BackColor = System.Drawing.SystemColors.Info
         Me.tb_dpEdad.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_dpEdad.Location = New System.Drawing.Point(172, 183)
-        Me.tb_dpEdad.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_dpEdad.Location = New System.Drawing.Point(119, 149)
         Me.tb_dpEdad.Name = "tb_dpEdad"
         Me.tb_dpEdad.ReadOnly = True
-        Me.tb_dpEdad.Size = New System.Drawing.Size(51, 23)
+        Me.tb_dpEdad.Size = New System.Drawing.Size(39, 20)
         Me.tb_dpEdad.TabIndex = 12
         '
         'tb_dpDni
@@ -1488,11 +1402,10 @@ Partial Class frmPaciente_Editar
         Me.tb_dpDni.AcceptsReturn = True
         Me.tb_dpDni.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "DNI", True))
         Me.tb_dpDni.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_dpDni.Location = New System.Drawing.Point(247, 182)
-        Me.tb_dpDni.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_dpDni.Location = New System.Drawing.Point(166, 148)
         Me.tb_dpDni.MaxLength = 8
         Me.tb_dpDni.Name = "tb_dpDni"
-        Me.tb_dpDni.Size = New System.Drawing.Size(105, 23)
+        Me.tb_dpDni.Size = New System.Drawing.Size(80, 20)
         Me.tb_dpDni.TabIndex = 13
         '
         'tb_domicilio
@@ -1501,11 +1414,10 @@ Partial Class frmPaciente_Editar
         Me.tb_domicilio.AccessibleDescription = "l"
         Me.tb_domicilio.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "DOMICILIO", True))
         Me.tb_domicilio.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_domicilio.Location = New System.Drawing.Point(25, 59)
-        Me.tb_domicilio.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_domicilio.Location = New System.Drawing.Point(9, 48)
         Me.tb_domicilio.MaxLength = 150
         Me.tb_domicilio.Name = "tb_domicilio"
-        Me.tb_domicilio.Size = New System.Drawing.Size(303, 23)
+        Me.tb_domicilio.Size = New System.Drawing.Size(209, 20)
         Me.tb_domicilio.TabIndex = 1
         '
         'tb_dpObservaciones
@@ -1515,76 +1427,70 @@ Partial Class frmPaciente_Editar
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tb_dpObservaciones.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "OBSERVACIONES", True))
-        Me.tb_dpObservaciones.Location = New System.Drawing.Point(8, 23)
-        Me.tb_dpObservaciones.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_dpObservaciones.Location = New System.Drawing.Point(6, 19)
         Me.tb_dpObservaciones.MaxLength = 2147483647
         Me.tb_dpObservaciones.Multiline = True
         Me.tb_dpObservaciones.Name = "tb_dpObservaciones"
         Me.tb_dpObservaciones.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.tb_dpObservaciones.Size = New System.Drawing.Size(1189, 84)
+        Me.tb_dpObservaciones.Size = New System.Drawing.Size(880, 69)
         Me.tb_dpObservaciones.TabIndex = 0
         '
         'tb_CodigoPaciente
         '
         Me.tb_CodigoPaciente.AcceptsReturn = True
         Me.tb_CodigoPaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "CPACIENTE", True))
-        Me.tb_CodigoPaciente.Location = New System.Drawing.Point(149, 39)
-        Me.tb_CodigoPaciente.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_CodigoPaciente.Location = New System.Drawing.Point(112, 32)
         Me.tb_CodigoPaciente.Name = "tb_CodigoPaciente"
         Me.tb_CodigoPaciente.ReadOnly = True
-        Me.tb_CodigoPaciente.Size = New System.Drawing.Size(61, 22)
+        Me.tb_CodigoPaciente.Size = New System.Drawing.Size(47, 20)
         Me.tb_CodigoPaciente.TabIndex = 1
         '
         'tb_Nombre
         '
         Me.tb_Nombre.AcceptsReturn = True
         Me.tb_Nombre.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "NOMBRE", True))
-        Me.tb_Nombre.Location = New System.Drawing.Point(725, 39)
-        Me.tb_Nombre.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_Nombre.Location = New System.Drawing.Point(544, 32)
         Me.tb_Nombre.MaxLength = 255
         Me.tb_Nombre.Name = "tb_Nombre"
-        Me.tb_Nombre.Size = New System.Drawing.Size(195, 22)
+        Me.tb_Nombre.Size = New System.Drawing.Size(147, 20)
         Me.tb_Nombre.TabIndex = 4
         '
         'tb_CodigoPropio
         '
         Me.tb_CodigoPropio.AcceptsReturn = True
         Me.tb_CodigoPropio.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "CODIGOPROPIO", True))
-        Me.tb_CodigoPropio.Location = New System.Drawing.Point(33, 39)
-        Me.tb_CodigoPropio.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_CodigoPropio.Location = New System.Drawing.Point(25, 32)
         Me.tb_CodigoPropio.Name = "tb_CodigoPropio"
-        Me.tb_CodigoPropio.Size = New System.Drawing.Size(92, 22)
+        Me.tb_CodigoPropio.Size = New System.Drawing.Size(70, 20)
         Me.tb_CodigoPropio.TabIndex = 0
         '
         'tb_Apellido2
         '
         Me.tb_Apellido2.AcceptsReturn = True
         Me.tb_Apellido2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "APELLIDO2", True))
-        Me.tb_Apellido2.Location = New System.Drawing.Point(503, 39)
-        Me.tb_Apellido2.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_Apellido2.Location = New System.Drawing.Point(377, 32)
         Me.tb_Apellido2.MaxLength = 255
         Me.tb_Apellido2.Name = "tb_Apellido2"
-        Me.tb_Apellido2.Size = New System.Drawing.Size(195, 22)
+        Me.tb_Apellido2.Size = New System.Drawing.Size(147, 20)
         Me.tb_Apellido2.TabIndex = 3
         '
         'tb_Apellido1
         '
         Me.tb_Apellido1.AcceptsReturn = True
         Me.tb_Apellido1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "APELLIDO1", True))
-        Me.tb_Apellido1.Location = New System.Drawing.Point(247, 39)
-        Me.tb_Apellido1.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_Apellido1.Location = New System.Drawing.Point(185, 32)
         Me.tb_Apellido1.MaxLength = 255
         Me.tb_Apellido1.Name = "tb_Apellido1"
-        Me.tb_Apellido1.Size = New System.Drawing.Size(233, 22)
+        Me.tb_Apellido1.Size = New System.Drawing.Size(176, 20)
         Me.tb_Apellido1.TabIndex = 2
         '
         'CtrlMutua1
         '
         Me.CtrlMutua1.ID_MUTUA = Nothing
-        Me.CtrlMutua1.Location = New System.Drawing.Point(56, 151)
-        Me.CtrlMutua1.Margin = New System.Windows.Forms.Padding(5)
+        Me.CtrlMutua1.Location = New System.Drawing.Point(42, 123)
+        Me.CtrlMutua1.Margin = New System.Windows.Forms.Padding(4)
         Me.CtrlMutua1.Name = "CtrlMutua1"
-        Me.CtrlMutua1.Size = New System.Drawing.Size(504, 36)
+        Me.CtrlMutua1.Size = New System.Drawing.Size(378, 29)
         Me.CtrlMutua1.TabIndex = 65
         '
         'CtrlEmpresa1
@@ -1594,30 +1500,28 @@ Partial Class frmPaciente_Editar
         Me.CtrlEmpresa1.EsEmpresaPorDefecto = True
         Me.CtrlEmpresa1.ID_EMPRESAS = Nothing
         Me.CtrlEmpresa1.IDPACIENTE = Nothing
-        Me.CtrlEmpresa1.Location = New System.Drawing.Point(51, 114)
-        Me.CtrlEmpresa1.Margin = New System.Windows.Forms.Padding(5)
+        Me.CtrlEmpresa1.Location = New System.Drawing.Point(38, 93)
+        Me.CtrlEmpresa1.Margin = New System.Windows.Forms.Padding(4)
         Me.CtrlEmpresa1.Name = "CtrlEmpresa1"
-        Me.CtrlEmpresa1.Size = New System.Drawing.Size(511, 31)
+        Me.CtrlEmpresa1.Size = New System.Drawing.Size(383, 25)
         Me.CtrlEmpresa1.TabIndex = 9
         '
         'txtNomSocio
         '
         Me.txtNomSocio.AcceptsReturn = True
-        Me.txtNomSocio.Location = New System.Drawing.Point(8, 59)
-        Me.txtNomSocio.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtNomSocio.Location = New System.Drawing.Point(6, 48)
         Me.txtNomSocio.Name = "txtNomSocio"
         Me.txtNomSocio.ReadOnly = True
-        Me.txtNomSocio.Size = New System.Drawing.Size(256, 23)
+        Me.txtNomSocio.Size = New System.Drawing.Size(182, 20)
         Me.txtNomSocio.TabIndex = 1
         '
         'txtParentescoSocio
         '
         Me.txtParentescoSocio.AcceptsReturn = True
-        Me.txtParentescoSocio.Location = New System.Drawing.Point(8, 107)
-        Me.txtParentescoSocio.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtParentescoSocio.Location = New System.Drawing.Point(6, 87)
         Me.txtParentescoSocio.Name = "txtParentescoSocio"
         Me.txtParentescoSocio.ReadOnly = True
-        Me.txtParentescoSocio.Size = New System.Drawing.Size(256, 23)
+        Me.txtParentescoSocio.Size = New System.Drawing.Size(182, 20)
         Me.txtParentescoSocio.TabIndex = 2
         '
         'tb_dpTarsanit
@@ -1625,11 +1529,10 @@ Partial Class frmPaciente_Editar
         Me.tb_dpTarsanit.AcceptsReturn = True
         Me.tb_dpTarsanit.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "TARJETASANITARIA", True))
         Me.tb_dpTarsanit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_dpTarsanit.Location = New System.Drawing.Point(124, 79)
-        Me.tb_dpTarsanit.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_dpTarsanit.Location = New System.Drawing.Point(93, 64)
         Me.tb_dpTarsanit.MaxLength = 50
         Me.tb_dpTarsanit.Name = "tb_dpTarsanit"
-        Me.tb_dpTarsanit.Size = New System.Drawing.Size(159, 23)
+        Me.tb_dpTarsanit.Size = New System.Drawing.Size(120, 20)
         Me.tb_dpTarsanit.TabIndex = 2
         '
         'tb_dpNss
@@ -1637,48 +1540,44 @@ Partial Class frmPaciente_Editar
         Me.tb_dpNss.AcceptsReturn = True
         Me.tb_dpNss.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PACIENTESBindingSource, "NSS", True))
         Me.tb_dpNss.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_dpNss.Location = New System.Drawing.Point(127, 41)
-        Me.tb_dpNss.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_dpNss.Location = New System.Drawing.Point(95, 33)
         Me.tb_dpNss.MaxLength = 12
         Me.tb_dpNss.Name = "tb_dpNss"
-        Me.tb_dpNss.Size = New System.Drawing.Size(161, 23)
+        Me.tb_dpNss.Size = New System.Drawing.Size(122, 20)
         Me.tb_dpNss.TabIndex = 1
         '
         'tb_hlPuesto
         '
         Me.tb_hlPuesto.AcceptsReturn = True
-        Me.tb_hlPuesto.Location = New System.Drawing.Point(615, 612)
-        Me.tb_hlPuesto.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_hlPuesto.Location = New System.Drawing.Point(461, 497)
         Me.tb_hlPuesto.MaxLength = 30
         Me.tb_hlPuesto.Name = "tb_hlPuesto"
-        Me.tb_hlPuesto.Size = New System.Drawing.Size(180, 22)
+        Me.tb_hlPuesto.Size = New System.Drawing.Size(136, 20)
         Me.tb_hlPuesto.TabIndex = 1
         Me.tb_hlPuesto.Visible = False
         '
         'tb_hlProfesion
         '
         Me.tb_hlProfesion.AcceptsReturn = True
-        Me.tb_hlProfesion.Location = New System.Drawing.Point(339, 610)
-        Me.tb_hlProfesion.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_hlProfesion.Location = New System.Drawing.Point(254, 496)
         Me.tb_hlProfesion.MaxLength = 30
         Me.tb_hlProfesion.Name = "tb_hlProfesion"
-        Me.tb_hlProfesion.Size = New System.Drawing.Size(196, 22)
+        Me.tb_hlProfesion.Size = New System.Drawing.Size(148, 20)
         Me.tb_hlProfesion.TabIndex = 0
         Me.tb_hlProfesion.Visible = False
         '
         'frmPaciente_Editar
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
-        Me.ClientSize = New System.Drawing.Size(1251, 738)
+        Me.ClientSize = New System.Drawing.Size(917, 600)
         Me.Controls.Add(Me.LbDatosDupl)
         Me.Controls.Add(Me.PbDatosDupl)
         Me.Controls.Add(Me.lblEliminado)
         Me.Controls.Add(Me.ToolStrip2)
         Me.Controls.Add(Me.TabControl1)
-        Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.MinimumSize = New System.Drawing.Size(1255, 761)
+        Me.MinimumSize = New System.Drawing.Size(770, 597)
         Me.Name = "frmPaciente_Editar"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Paciente"
