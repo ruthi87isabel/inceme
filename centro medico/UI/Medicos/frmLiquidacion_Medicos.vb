@@ -519,14 +519,6 @@ Public Class frmLiquidacion_Medicos
             GridEX1.Width = Gd
         End If
     End Sub
-
-    Private Sub CtrlMedico1_PacienteEliminado(IdMedicoAnterior As System.Nullable)
-
-    End Sub
-
-    Private Sub CtrlMedico1_PacienteSeleccionado(IdMedico As Integer, oldMedico As System.Nullable, IsReturnPressed As Boolean)
-
-    End Sub
 End Class
 
 Partial Public Class Liquidacion_Medico

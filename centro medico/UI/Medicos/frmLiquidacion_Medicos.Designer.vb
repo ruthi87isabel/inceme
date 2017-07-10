@@ -52,11 +52,11 @@ Partial Class frmLiquidacion_Medicos
         Me.LiquidacionMedicosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.btImprimirMedicoDebito = New System.Windows.Forms.Button()
         Me.CITAsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MEDICOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GridEXDocs = New Janus.Windows.GridEX.GridEX()
         Me.pnl_Loading = New System.Windows.Forms.Panel()
         Me.lbl_Loading = New System.Windows.Forms.Label()
         Me.pb_Loading = New System.Windows.Forms.PictureBox()
-        Me.MEDICOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CtrlMedico1 = New centro_medico.ctrlMedico()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -64,10 +64,10 @@ Partial Class frmLiquidacion_Medicos
         CType(Me.GridEX1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LiquidacionMedicosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CITAsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MEDICOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridEXDocs, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnl_Loading.SuspendLayout()
         CType(Me.pb_Loading, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MEDICOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnPagoAutomatico
@@ -117,7 +117,7 @@ Partial Class frmLiquidacion_Medicos
         Me.GroupBox1.Controls.Add(Me.dtp_Inicio)
         Me.GroupBox1.Location = New System.Drawing.Point(5, 27)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1002, 102)
+        Me.GroupBox1.Size = New System.Drawing.Size(999, 102)
         Me.GroupBox1.TabIndex = 22
         Me.GroupBox1.TabStop = False
         '
@@ -200,7 +200,7 @@ Partial Class frmLiquidacion_Medicos
         '
         Me.lblSeleccionados.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblSeleccionados.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSeleccionados.Location = New System.Drawing.Point(899, 54)
+        Me.lblSeleccionados.Location = New System.Drawing.Point(896, 54)
         Me.lblSeleccionados.Name = "lblSeleccionados"
         Me.lblSeleccionados.Size = New System.Drawing.Size(87, 20)
         Me.lblSeleccionados.TabIndex = 17
@@ -212,7 +212,7 @@ Partial Class frmLiquidacion_Medicos
         Me.lblDebe.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblDebe.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDebe.ForeColor = System.Drawing.Color.Red
-        Me.lblDebe.Location = New System.Drawing.Point(893, 23)
+        Me.lblDebe.Location = New System.Drawing.Point(890, 23)
         Me.lblDebe.Name = "lblDebe"
         Me.lblDebe.Size = New System.Drawing.Size(93, 20)
         Me.lblDebe.TabIndex = 8
@@ -225,7 +225,7 @@ Partial Class frmLiquidacion_Medicos
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Red
-        Me.Label3.Location = New System.Drawing.Point(768, 23)
+        Me.Label3.Location = New System.Drawing.Point(765, 23)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(125, 20)
         Me.Label3.TabIndex = 8
@@ -284,7 +284,7 @@ Partial Class frmLiquidacion_Medicos
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SalirToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(957, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1004, 24)
         Me.MenuStrip1.TabIndex = 29
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -315,9 +315,9 @@ Partial Class frmLiquidacion_Medicos
         Me.GridEX1.DesignTimeLayout = GridEX1_DesignTimeLayout
         Me.GridEX1.GroupByBoxVisible = False
         Me.GridEX1.Hierarchical = True
-        Me.GridEX1.Location = New System.Drawing.Point(636, 167)
+        Me.GridEX1.Location = New System.Drawing.Point(644, 167)
         Me.GridEX1.Name = "GridEX1"
-        Me.GridEX1.Size = New System.Drawing.Size(371, 460)
+        Me.GridEX1.Size = New System.Drawing.Size(360, 460)
         Me.GridEX1.TabIndex = 31
         '
         'btImprimirMedicoDebito
@@ -337,6 +337,10 @@ Partial Class frmLiquidacion_Medicos
         '
         Me.CITAsBindingSource.DataMember = "CITAs"
         Me.CITAsBindingSource.DataSource = Me.MEDICOBindingSource
+        '
+        'MEDICOBindingSource
+        '
+        Me.MEDICOBindingSource.DataSource = GetType(centro_medico.MEDICO)
         '
         'GridEXDocs
         '
@@ -359,7 +363,7 @@ Partial Class frmLiquidacion_Medicos
         Me.GridEXDocs.Name = "GridEXDocs"
         Me.GridEXDocs.RowCheckStateBehavior = Janus.Windows.GridEX.RowCheckStateBehavior.CheckStateDependsOnChild
         Me.GridEXDocs.RowFormatStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Center
-        Me.GridEXDocs.Size = New System.Drawing.Size(626, 460)
+        Me.GridEXDocs.Size = New System.Drawing.Size(634, 460)
         Me.GridEXDocs.TabIndex = 21
         Me.GridEXDocs.TableHeaderFormatStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Near
         Me.GridEXDocs.TotalRowFormatStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
@@ -397,10 +401,6 @@ Partial Class frmLiquidacion_Medicos
         Me.pb_Loading.TabIndex = 118
         Me.pb_Loading.TabStop = False
         '
-        'MEDICOBindingSource
-        '
-        Me.MEDICOBindingSource.DataSource = GetType(centro_medico.MEDICO)
-        '
         'CtrlMedico1
         '
         Me.CtrlMedico1.ID_Medico = Nothing
@@ -414,7 +414,7 @@ Partial Class frmLiquidacion_Medicos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(957, 677)
+        Me.ClientSize = New System.Drawing.Size(1004, 677)
         Me.Controls.Add(Me.pnl_Loading)
         Me.Controls.Add(Me.GridEX1)
         Me.Controls.Add(Me.btImprimirMedicoDebito)
@@ -437,11 +437,11 @@ Partial Class frmLiquidacion_Medicos
         CType(Me.GridEX1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LiquidacionMedicosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CITAsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MEDICOBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridEXDocs, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnl_Loading.ResumeLayout(False)
         Me.pnl_Loading.PerformLayout()
         CType(Me.pb_Loading, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MEDICOBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
