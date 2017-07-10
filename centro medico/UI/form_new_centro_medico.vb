@@ -842,7 +842,10 @@ Public Class form_new_centro_medico
         ElseIf ExplorerBar1.Groups("Group1").Items("Item9").Selected Then
             Dim frm As New frmHorarios()
             frm.ShowDialog()
+        ElseIf ExplorerBar1.Groups("Group1").Items("Item10").Selected Then
+            Button84_Click(Nothing, Nothing)
         End If
+
 
         If ExplorerBar1.Groups("Group2").Items("Item10").Selected Then
             Dim frm As New frmPacientesListado()
@@ -1531,29 +1534,13 @@ Public Class form_new_centro_medico
         PictExit1.Visible = True
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+    Private Sub PictureBox8_Click_1(sender As Object, e As EventArgs) Handles PictureBox8.Click, Label2.Click
         Me.DialogResult = Windows.Forms.DialogResult.No
         GC.Collect()
         Me.Close()
     End Sub
 
-    Private Sub PictureBox8_Click_1(sender As Object, e As EventArgs) Handles PictureBox8.Click
-        Me.DialogResult = Windows.Forms.DialogResult.No
-        GC.Collect()
-        Me.Close()
-    End Sub
-
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-        Me.DialogResult = Windows.Forms.DialogResult.OK
-        Me.Close()
-    End Sub
-
-    Private Sub PictExit2_Click(sender As Object, e As EventArgs) Handles PictExit2.Click
-        Me.DialogResult = Windows.Forms.DialogResult.OK
-        Me.Close()
-    End Sub
-
-    Private Sub PictExit1_Click(sender As Object, e As EventArgs) Handles PictExit1.Click
+    Private Sub PictExit1_Click(sender As Object, e As EventArgs) Handles PictExit1.Click, PictExit2.Click, Label4.Click
         Me.DialogResult = Windows.Forms.DialogResult.OK
         Me.Close()
     End Sub
@@ -2131,13 +2118,20 @@ Public Class form_new_centro_medico
                             Select p Order By p.Hora Descending).ToList()
     End Sub
 
-    Private Sub Button84_Click(sender As Object, e As EventArgs) Handles Button84.Click
-        Dim frm As New Form_Recordatorio
-        frm.context = Me.context
-        frm.IdUser = IDUser
-        frm.ShowDialog()
+    Private Sub Button84_Click(sender As Object, e As EventArgs) Handles Button84.Click, NotifyIcon1.MouseDoubleClick
+        Dim frmRecord As New Form_Recordatorio
+
+        For Each f As Form In Application.OpenForms
+            If f.Name = frmRecord.Name Then
+                Return
+            End If
+        Next
+        frmRecord.context = Me.context
+        frmRecord.IdUser = IDUser
+        frmRecord.ShowDialog()
         CargaListRecod()
         GC.Collect()
+
     End Sub
 
     Private Sub Timer1_Tick(sender As System.Object, e As System.EventArgs) Handles Timer1.Tick
@@ -2164,5 +2158,9 @@ Public Class form_new_centro_medico
             CargaListRecod()
             MessageBox.Show(mensaje, "Notificacion Hora: " & ListRecordatorioHora.Item(0).Hora.ToString("HH:mm"), MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+    End Sub
+
+    Private Sub form_new_centro_medico_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        Me.NotifyIcon1.Visible = False
     End Sub
 End Class

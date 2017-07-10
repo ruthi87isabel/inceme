@@ -2273,6 +2273,7 @@
     <Content Include="RDLC\img\recetaimpresavalenciano.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\1.png" />
     <Content Include="Resources\1449807294_Chart_bar.png" />
     <Content Include="Resources\1449807300_Chart_bar.ico" />
     <None Include="Resources\new\Icon_Analitica.png" />
@@ -2357,6 +2358,9 @@
     <None Include="Resources\camera.png" />
     <None Include="Resources\floppy.png" />
     <None Include="Resources\delete_picture.png" />
+    <Content Include="Resources\2.png" />
+    <Content Include="Resources\3.png" />
+    <Content Include="Resources\new\IconE_Recordatorio.png" />
     <Content Include="Resources\new\Icon_Articulos.jpg" />
     <None Include="Resources\new\Icon_AsistenteFacturacion.png" />
     <None Include="Resources\new\Icon_Auditoria.png" />
@@ -2436,10 +2440,13 @@
     <Content Include="Resources\new\newpag.png" />
     <None Include="Resources\new\PartPag.png" />
     <None Include="Resources\new\PartPag1.png" />
+    <Content Include="Resources\new\new_add.png" />
+    <Content Include="Resources\new\new_delete.png" />
     <Content Include="Resources\new\PicAdmin.jpg" />
     <Content Include="Resources\new\PicAdmin1.jpg" />
     <Content Include="Resources\new\PicDoctor.jpg" />
     <Content Include="Resources\new\PicReception.jpg" />
+    <Content Include="Resources\new\Recordatorio_Icon.png.ico" />
     <Content Include="Resources\new\Search.jpg" />
     <None Include="Resources\ok_picture.png" />
     <Content Include="Resources\permisos.png" />
