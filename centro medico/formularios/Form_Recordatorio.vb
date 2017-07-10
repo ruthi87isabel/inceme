@@ -270,4 +270,10 @@ Public Class Form_Recordatorio
         span = TimeSpan.Parse(Globales.Configuracion.JornadaLaboral.<Dias>.<Dia>(dayIndex).@Final)
         HoraFin = New Date(Date.Now.Year, Date.Now.Month, Date.Now.Day, 0, 0, 0).Add(span)
     End Sub
+
+    Private Sub Form_Recordatorio_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
+        If Me.WindowState = FormWindowState.Minimized Then
+            Me.Close()
+        End If
+    End Sub
 End Class

@@ -193,7 +193,7 @@ Partial Class Form_Recordatorio
         'TbAsunto
         '
         Me.TbAsunto.Location = New System.Drawing.Point(8, 76)
-        Me.TbAsunto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TbAsunto.Margin = New System.Windows.Forms.Padding(2)
         Me.TbAsunto.Name = "TbAsunto"
         Me.TbAsunto.Size = New System.Drawing.Size(219, 20)
         Me.TbAsunto.TabIndex = 99
@@ -225,7 +225,7 @@ Partial Class Form_Recordatorio
         'TbAnotacion
         '
         Me.TbAnotacion.Location = New System.Drawing.Point(8, 117)
-        Me.TbAnotacion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TbAnotacion.Margin = New System.Windows.Forms.Padding(2)
         Me.TbAnotacion.Multiline = True
         Me.TbAnotacion.Name = "TbAnotacion"
         Me.TbAnotacion.Size = New System.Drawing.Size(220, 197)
@@ -278,7 +278,7 @@ Partial Class Form_Recordatorio
         Me.Controls.Add(Me.Calendar2)
         Me.Controls.Add(Me.ScheduleRecordatorio)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form_Recordatorio"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Recordatorio"

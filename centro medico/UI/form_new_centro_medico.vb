@@ -2118,7 +2118,7 @@ Public Class form_new_centro_medico
                             Select p Order By p.Hora Descending).ToList()
     End Sub
 
-    Private Sub Button84_Click(sender As Object, e As EventArgs) Handles Button84.Click, NotifyIcon1.MouseDoubleClick
+    Private Sub Button84_Click(sender As Object, e As EventArgs) Handles Button84.Click, NotifyIcon1.MouseClick
         Dim frmRecord As New Form_Recordatorio
 
         For Each f As Form In Application.OpenForms
