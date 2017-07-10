@@ -15,22 +15,23 @@ Public Class Form_Recordatorio
 
     'Al cargar la Pagina
     Private Sub Form_Recordatorio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CargaHorarioLabXdia(Calendar2.CurrentDate)
+        CargaHorarioLabXdia(Date.Now)
         ScheduleRecordatorio.Date = FiltroGenericoDocumentos.FirstDate(Date.Now)
         ScheduleRecordatorio.ShowTimeAsClocks = False
         ScheduleRecordatorio.DayStartHour = HoraIni.Hour
-        ScheduleRecordatorio.DayEndHour = HoraFin.Hour
+        ScheduleRecordatorio.DayEndHour = HoraFin.Hour + 1
         Carga_Recordatorios()
         CargaHoraValida()
     End Sub
 
     'Al cambiar la fecha del calendario
     Private Sub Calendar2_SelectionChanged(sender As Object, e As EventArgs) Handles Calendar2.SelectionChanged
+
         Carga_Recordatorios()
         dtp_fecha.Value = ScheduleRecordatorio.Date
         CargaHorarioLabXdia(Calendar2.CurrentDate)
         ScheduleRecordatorio.DayStartHour = HoraIni.Hour
-        ScheduleRecordatorio.DayEndHour = HoraFin.Hour
+        ScheduleRecordatorio.DayEndHour = HoraFin.Hour + 1
     End Sub
 
     'Funcion para cargar los datos
@@ -253,22 +254,20 @@ Public Class Form_Recordatorio
     End Sub
 
     Private Sub tb_hora_ValueChanged(sender As Object, e As EventArgs) Handles tb_hora.ValueChanged, dtp_fecha.ValueChanged
-        CargaHorarioLabXdia(dtp_fecha.Value)
-        If tb_hora.Value.Hour < HoraIni.Hour Then tb_hora.Value = tb_hora.Value.AddHours(-tb_hora.Value.Hour + HoraIni.Hour)
-        If tb_hora.Value.Hour > HoraFin.Hour - 1 Then tb_hora.Value = tb_hora.Value.AddHours(-tb_hora.Value.Hour + HoraFin.Hour - 1)
         If DTROnly Then
             tb_hora.Value = DTReadOnly
             dtp_fecha.Value = DTReadOnly
+            Return
         End If
+        CargaHorarioLabXdia(dtp_fecha.Value)
+        If tb_hora.Value < HoraIni Then tb_hora.Value = HoraIni
+        If tb_hora.Value > HoraFin Then tb_hora.Value = HoraFin
     End Sub
 
     Private Sub CargaHorarioLabXdia(fecha As DateTime)
-        Dim dayIndex As Integer = fecha.DayOfWeek
-        Dim span As TimeSpan = TimeSpan.Parse(Globales.Configuracion.JornadaLaboral.<Dias>.<Dia>(dayIndex).@Inicio)
-        HoraIni = New Date(Date.Now.Year, Date.Now.Month, Date.Now.Day, 0, 0, 0).Add(span)
+        HoraIni = New Date(Date.Now.Year, Date.Now.Month, Date.Now.Day, 0, 0, 0).Add(Globales.Configuracion.DameJornadaLaboralInicio(fecha))
+        HoraFin = New Date(Date.Now.Year, Date.Now.Month, Date.Now.Day, 0, 0, 0).Add(Globales.Configuracion.DameJornadaLaboralFinal(fecha))
 
-        span = TimeSpan.Parse(Globales.Configuracion.JornadaLaboral.<Dias>.<Dia>(dayIndex).@Final)
-        HoraFin = New Date(Date.Now.Year, Date.Now.Month, Date.Now.Day, 0, 0, 0).Add(span)
     End Sub
 
     Private Sub Form_Recordatorio_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
