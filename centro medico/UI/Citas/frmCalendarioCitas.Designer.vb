@@ -980,6 +980,7 @@
             '
             'GroupBox2
             '
+            Me.GroupBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.GroupBox2.Controls.Add(Me.DateTimePicker2)
             Me.GroupBox2.Controls.Add(Me.DateTimePicker1)
             Me.GroupBox2.Controls.Add(Me.Label4)
