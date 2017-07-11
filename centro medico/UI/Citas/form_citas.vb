@@ -2881,7 +2881,15 @@ Public Class form_citas
 
     Private Sub cb_citaMultiple_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cb_citaMultiple.CheckedChanged
         gb_citaMultiple.Visible = cb_citaMultiple.Checked
-        grpFechaHora.Visible = (cb_citaMultiple.Checked = False)
+        grpFechaHora.Visible = Not cb_citaMultiple.Checked
+
+        If cb_citaMultiple.Checked Then
+            tb_horainiciocm.Value = tb_horainicio.Value
+            tb_horafincm.Value = tb_horafin.Value
+        Else
+            tb_horainicio.Value = tb_horainiciocm.Value
+            tb_horafin.Value = tb_horafincm.Value
+        End If
     End Sub
 
     Private Sub tb_horainiciocm_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tb_horainiciocm.ValueChanged

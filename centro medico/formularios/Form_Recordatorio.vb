@@ -265,9 +265,17 @@ Public Class Form_Recordatorio
     End Sub
 
     Private Sub CargaHorarioLabXdia(fecha As DateTime)
-        HoraIni = New Date(Date.Now.Year, Date.Now.Month, Date.Now.Day, 0, 0, 0).Add(Globales.Configuracion.DameJornadaLaboralInicio(fecha))
-        HoraFin = New Date(Date.Now.Year, Date.Now.Month, Date.Now.Day, 0, 0, 0).Add(Globales.Configuracion.DameJornadaLaboralFinal(fecha))
+        Try
+            HoraIni = New Date(Date.Now.Year, Date.Now.Month, Date.Now.Day, 0, 0, 0).Add(Globales.Configuracion.DameJornadaLaboralInicio(fecha))
+            HoraFin = New Date(Date.Now.Year, Date.Now.Month, Date.Now.Day, 0, 0, 0).Add(Globales.Configuracion.DameJornadaLaboralFinal(fecha))
+        Catch
+            Dim dayIndex As Integer = fecha.DayOfWeek
+            Dim span As TimeSpan = TimeSpan.Parse(Globales.Configuracion.JornadaLaboral.<Dias>.<Dia>(dayIndex).@Inicio)
+            HoraIni = New Date(Date.Now.Year, Date.Now.Month, Date.Now.Day, 0, 0, 0).Add(span)
 
+            span = TimeSpan.Parse(Globales.Configuracion.JornadaLaboral.<Dias>.<Dia>(dayIndex).@Final)
+            HoraFin = New Date(Date.Now.Year, Date.Now.Month, Date.Now.Day, 0, 0, 0).Add(span)
+        End Try
     End Sub
 
     Private Sub Form_Recordatorio_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
