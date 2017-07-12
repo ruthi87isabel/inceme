@@ -7124,6 +7124,10 @@ Partial Public Class CM2DataSet
         
         Private columnHORA As Global.System.Data.DataColumn
         
+        Private columnCPACIENTE As Global.System.Data.DataColumn
+        
+        Private columnCODIGOPROPIO As Global.System.Data.DataColumn
+        
         Private columnPACIENTE As Global.System.Data.DataColumn
         
         Private columnMEDICO As Global.System.Data.DataColumn
@@ -7214,6 +7218,22 @@ Partial Public Class CM2DataSet
         Public ReadOnly Property HORAColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnHORA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CPACIENTEColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCPACIENTE
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CODIGOPROPIOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCODIGOPROPIO
             End Get
         End Property
         
@@ -7358,9 +7378,26 @@ Partial Public Class CM2DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddListadoCitaDetalladoRow(ByVal NumeroCita As Byte, ByVal FECHA As Date, ByVal HORA As Date, ByVal PACIENTE As String, ByVal MEDICO As String, ByVal MUTUA As String, ByVal TELEFONO As String, ByVal MOVIL As String, ByVal EMAIL As String, ByVal NOTAS As String, ByVal RefConcepto As String, ByVal DESCRIPCION As String, ByVal Cantidad As Double, ByVal ImporteClinica As Double, ByVal ImporteDr As Double) As ListadoCitaDetalladoRow
+        Public Overloads Function AddListadoCitaDetalladoRow( _
+                    ByVal NumeroCita As Byte,  _
+                    ByVal FECHA As Date,  _
+                    ByVal HORA As Date,  _
+                    ByVal CPACIENTE As Integer,  _
+                    ByVal CODIGOPROPIO As String,  _
+                    ByVal PACIENTE As String,  _
+                    ByVal MEDICO As String,  _
+                    ByVal MUTUA As String,  _
+                    ByVal TELEFONO As String,  _
+                    ByVal MOVIL As String,  _
+                    ByVal EMAIL As String,  _
+                    ByVal NOTAS As String,  _
+                    ByVal RefConcepto As String,  _
+                    ByVal DESCRIPCION As String,  _
+                    ByVal Cantidad As Double,  _
+                    ByVal ImporteClinica As Double,  _
+                    ByVal ImporteDr As Double) As ListadoCitaDetalladoRow
             Dim rowListadoCitaDetalladoRow As ListadoCitaDetalladoRow = CType(Me.NewRow,ListadoCitaDetalladoRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, NumeroCita, FECHA, HORA, PACIENTE, MEDICO, MUTUA, TELEFONO, MOVIL, EMAIL, NOTAS, Nothing, RefConcepto, DESCRIPCION, Cantidad, ImporteClinica, ImporteDr}
+            Dim columnValuesArray() As Object = New Object() {Nothing, NumeroCita, FECHA, HORA, CPACIENTE, CODIGOPROPIO, PACIENTE, MEDICO, MUTUA, TELEFONO, MOVIL, EMAIL, NOTAS, Nothing, RefConcepto, DESCRIPCION, Cantidad, ImporteClinica, ImporteDr}
             rowListadoCitaDetalladoRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowListadoCitaDetalladoRow)
             Return rowListadoCitaDetalladoRow
@@ -7387,6 +7424,8 @@ Partial Public Class CM2DataSet
             Me.columnNumeroCita = MyBase.Columns("NumeroCita")
             Me.columnFECHA = MyBase.Columns("FECHA")
             Me.columnHORA = MyBase.Columns("HORA")
+            Me.columnCPACIENTE = MyBase.Columns("CPACIENTE")
+            Me.columnCODIGOPROPIO = MyBase.Columns("CODIGOPROPIO")
             Me.columnPACIENTE = MyBase.Columns("PACIENTE")
             Me.columnMEDICO = MyBase.Columns("MEDICO")
             Me.columnMUTUA = MyBase.Columns("MUTUA")
@@ -7413,6 +7452,10 @@ Partial Public Class CM2DataSet
             MyBase.Columns.Add(Me.columnFECHA)
             Me.columnHORA = New Global.System.Data.DataColumn("HORA", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnHORA)
+            Me.columnCPACIENTE = New Global.System.Data.DataColumn("CPACIENTE", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCPACIENTE)
+            Me.columnCODIGOPROPIO = New Global.System.Data.DataColumn("CODIGOPROPIO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCODIGOPROPIO)
             Me.columnPACIENTE = New Global.System.Data.DataColumn("PACIENTE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnPACIENTE)
             Me.columnMEDICO = New Global.System.Data.DataColumn("MEDICO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -7444,6 +7487,9 @@ Partial Public Class CM2DataSet
             Me.columnIDCITA.AutoIncrementStep = -1
             Me.columnIDCITA.AllowDBNull = false
             Me.columnIDCITA.ReadOnly = true
+            Me.columnCPACIENTE.AllowDBNull = false
+            Me.columnCODIGOPROPIO.AllowDBNull = false
+            Me.columnCODIGOPROPIO.MaxLength = 50
             Me.columnPACIENTE.MaxLength = 60
             Me.columnMEDICO.ReadOnly = true
             Me.columnMEDICO.MaxLength = 57
@@ -12479,6 +12525,28 @@ Partial Public Class CM2DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CPACIENTE() As Integer
+            Get
+                Return CType(Me(Me.tableListadoCitaDetallado.CPACIENTEColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableListadoCitaDetallado.CPACIENTEColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CODIGOPROPIO() As String
+            Get
+                Return CType(Me(Me.tableListadoCitaDetallado.CODIGOPROPIOColumn),String)
+            End Get
+            Set
+                Me(Me.tableListadoCitaDetallado.CODIGOPROPIOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property PACIENTE() As String
             Get
                 Try 
@@ -16833,7 +16901,7 @@ Namespace CM2DataSetTableAdapters
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@sApellido", Global.System.Data.SqlDbType.VarChar, 255, Global.System.Data.ParameterDirection.Input, 0, 0, "APELLIDO2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@conocio", Global.System.Data.SqlDbType.VarChar, 250, Global.System.Data.ParameterDirection.Input, 0, 0, "CONOCIO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FechaIni", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "FechaIngreso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FechaFin", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "FechaIngreso", Global.System.Data.DataRowVersion.Current, False, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FechaFin", Global.System.Data.SqlDbType.VarChar, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "FechaIngreso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -17201,6 +17269,8 @@ Namespace CM2DataSetTableAdapters
             tableMapping.ColumnMappings.Add("NumeroCita", "NumeroCita")
             tableMapping.ColumnMappings.Add("FECHA", "FECHA")
             tableMapping.ColumnMappings.Add("HORA", "HORA")
+            tableMapping.ColumnMappings.Add("CPACIENTE", "CPACIENTE")
+            tableMapping.ColumnMappings.Add("CODIGOPROPIO", "CODIGOPROPIO")
             tableMapping.ColumnMappings.Add("PACIENTE", "PACIENTE")
             tableMapping.ColumnMappings.Add("MEDICO", "MEDICO")
             tableMapping.ColumnMappings.Add("MUTUA", "MUTUA")
@@ -17230,12 +17300,14 @@ Namespace CM2DataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT c.IDCITA, c.NumeroCita,c.FECHA, c.HORA, c.PACIENTE, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"m.NOMBRE + ' ' + ISN"& _ 
-                "ULL(m.APELLIDO1, '') + ' ' + ISNULL(m.APELLIDO2, '') AS MEDICO,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"mu.NOMBRE AS MU"& _ 
-                "TUA, p.TLFNO AS TELEFONO, p.MOVIL, p.EMAIL, c.NOTAS, l.IdLinea,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"l.RefConcepto, "& _ 
-                "l.DESCRIPCION, l.Cantidad, l.ImporteClinica, l.ImporteDr FROM dbo.LineasCitas L"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"RIGHT JOIN dbo.CITAS c ON L.IdCita = c.IDCITA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"INNER JOIN dbo.MEDICOS m ON c.RE"& _ 
-                "FMEDICO = m.CMEDICO"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"INNER JOIN dbo.PACIENTES p ON c.REFPACIENTE=p.CPACIENTE"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"LE"& _ 
-                "FT JOIN dbo.MUTUAS mu ON c.REFPROCEDENCIA=mu.CMUTUA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE c.IdCita=@cita"
+            Me._commandCollection(0).CommandText = "SELECT c.IDCITA, c.NumeroCita,c.FECHA,c.HORA,p.CPACIENTE,p.CODIGOPROPIO,c.PACIENT"& _ 
+                "E, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"m.NOMBRE + ' ' + ISNULL(m.APELLIDO1, '') + ' ' + ISNULL(m.APELLIDO2, '') AS"& _ 
+                " MEDICO,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"mu.NOMBRE AS MUTUA, p.TLFNO AS TELEFONO, p.MOVIL, p.EMAIL, c.NOTAS, l."& _ 
+                "IdLinea,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"l.RefConcepto, l.DESCRIPCION, l.Cantidad, l.ImporteClinica, l.ImporteD"& _ 
+                "r FROM dbo.LineasCitas L"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"RIGHT JOIN dbo.CITAS c ON L.IdCita = c.IDCITA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"INNER J"& _ 
+                "OIN dbo.MEDICOS m ON c.REFMEDICO = m.CMEDICO"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"INNER JOIN dbo.PACIENTES p ON c.RE"& _ 
+                "FPACIENTE=p.CPACIENTE"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"LEFT JOIN dbo.MUTUAS mu ON c.REFPROCEDENCIA=mu.CMUTUA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WH"& _ 
+                "ERE c.IdCita=@cita"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@cita", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "IDCITA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub

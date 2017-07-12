@@ -865,10 +865,10 @@ SELECT CPACIENTE, NOMBRE, APELLIDO1, APELLIDO2, DNI, FECHAALTA AS FechaIngreso, 
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ListadoCitaDetalladoTableAdapter" GeneratorDataComponentClassName="ListadoCitaDetalladoTableAdapter" Name="ListadoCitaDetallado" UserDataComponentName="ListadoCitaDetalladoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="CMConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="CMConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT c.IDCITA, c.NumeroCita,c.FECHA, c.HORA, c.PACIENTE, 
+                    <CommandText>SELECT c.IDCITA, c.NumeroCita,c.FECHA,c.HORA,p.CPACIENTE,p.CODIGOPROPIO,c.PACIENTE, 
 m.NOMBRE + ' ' + ISNULL(m.APELLIDO1, '') + ' ' + ISNULL(m.APELLIDO2, '') AS MEDICO,
 mu.NOMBRE AS MUTUA, p.TLFNO AS TELEFONO, p.MOVIL, p.EMAIL, c.NOTAS, l.IdLinea,
 l.RefConcepto, l.DESCRIPCION, l.Cantidad, l.ImporteClinica, l.ImporteDr FROM dbo.LineasCitas L
@@ -889,6 +889,8 @@ WHERE c.IdCita=@cita</CommandText>
               <Mapping SourceColumn="NumeroCita" DataSetColumn="NumeroCita" />
               <Mapping SourceColumn="FECHA" DataSetColumn="FECHA" />
               <Mapping SourceColumn="HORA" DataSetColumn="HORA" />
+              <Mapping SourceColumn="CPACIENTE" DataSetColumn="CPACIENTE" />
+              <Mapping SourceColumn="CODIGOPROPIO" DataSetColumn="CODIGOPROPIO" />
               <Mapping SourceColumn="PACIENTE" DataSetColumn="PACIENTE" />
               <Mapping SourceColumn="MEDICO" DataSetColumn="MEDICO" />
               <Mapping SourceColumn="MUTUA" DataSetColumn="MUTUA" />
@@ -1510,7 +1512,7 @@ WHERE c.IdCita=@cita</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PacientesBonos" msprop:Generator_TableClassName="PacientesBonosDataTable" msprop:Generator_TableVarName="tablePacientesBonos" msprop:Generator_TablePropName="PacientesBonos" msprop:Generator_RowDeletingName="PacientesBonosRowDeleting" msprop:Generator_RowChangingName="PacientesBonosRowChanging" msprop:Generator_RowEvHandlerName="PacientesBonosRowChangeEventHandler" msprop:Generator_RowDeletedName="PacientesBonosRowDeleted" msprop:Generator_UserTableName="PacientesBonos" msprop:Generator_RowChangedName="PacientesBonosRowChanged" msprop:Generator_RowEvArgName="PacientesBonosRowChangeEvent" msprop:Generator_RowClassName="PacientesBonosRow">
+        <xs:element name="PacientesBonos" msprop:Generator_TableClassName="PacientesBonosDataTable" msprop:Generator_TableVarName="tablePacientesBonos" msprop:Generator_RowChangedName="PacientesBonosRowChanged" msprop:Generator_TablePropName="PacientesBonos" msprop:Generator_RowDeletingName="PacientesBonosRowDeleting" msprop:Generator_RowChangingName="PacientesBonosRowChanging" msprop:Generator_RowEvHandlerName="PacientesBonosRowChangeEventHandler" msprop:Generator_RowDeletedName="PacientesBonosRowDeleted" msprop:Generator_RowClassName="PacientesBonosRow" msprop:Generator_UserTableName="PacientesBonos" msprop:Generator_RowEvArgName="PacientesBonosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_UserColumnName="NOMBRE" minOccurs="0">
@@ -1547,7 +1549,7 @@ WHERE c.IdCita=@cita</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="EspecialidadCitas" msprop:Generator_TableClassName="EspecialidadCitasDataTable" msprop:Generator_TableVarName="tableEspecialidadCitas" msprop:Generator_RowChangedName="EspecialidadCitasRowChanged" msprop:Generator_TablePropName="EspecialidadCitas" msprop:Generator_RowDeletingName="EspecialidadCitasRowDeleting" msprop:Generator_RowChangingName="EspecialidadCitasRowChanging" msprop:Generator_RowEvHandlerName="EspecialidadCitasRowChangeEventHandler" msprop:Generator_RowDeletedName="EspecialidadCitasRowDeleted" msprop:Generator_RowClassName="EspecialidadCitasRow" msprop:Generator_UserTableName="EspecialidadCitas" msprop:Generator_RowEvArgName="EspecialidadCitasRowChangeEvent">
+        <xs:element name="EspecialidadCitas" msprop:Generator_TableClassName="EspecialidadCitasDataTable" msprop:Generator_TableVarName="tableEspecialidadCitas" msprop:Generator_TablePropName="EspecialidadCitas" msprop:Generator_RowDeletingName="EspecialidadCitasRowDeleting" msprop:Generator_RowChangingName="EspecialidadCitasRowChanging" msprop:Generator_RowEvHandlerName="EspecialidadCitasRowChangeEventHandler" msprop:Generator_RowDeletedName="EspecialidadCitasRowDeleted" msprop:Generator_UserTableName="EspecialidadCitas" msprop:Generator_RowChangedName="EspecialidadCitasRowChanged" msprop:Generator_RowEvArgName="EspecialidadCitasRowChangeEvent" msprop:Generator_RowClassName="EspecialidadCitasRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FECHA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" minOccurs="0">
@@ -1568,7 +1570,7 @@ WHERE c.IdCita=@cita</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Top10_Tratamiento" msprop:Generator_TableClassName="Top10_TratamientoDataTable" msprop:Generator_TableVarName="tableTop10_Tratamiento" msprop:Generator_RowChangedName="Top10_TratamientoRowChanged" msprop:Generator_TablePropName="Top10_Tratamiento" msprop:Generator_RowDeletingName="Top10_TratamientoRowDeleting" msprop:Generator_RowChangingName="Top10_TratamientoRowChanging" msprop:Generator_RowEvHandlerName="Top10_TratamientoRowChangeEventHandler" msprop:Generator_RowDeletedName="Top10_TratamientoRowDeleted" msprop:Generator_RowClassName="Top10_TratamientoRow" msprop:Generator_UserTableName="Top10_Tratamiento" msprop:Generator_RowEvArgName="Top10_TratamientoRowChangeEvent">
+        <xs:element name="Top10_Tratamiento" msprop:Generator_TableClassName="Top10_TratamientoDataTable" msprop:Generator_TableVarName="tableTop10_Tratamiento" msprop:Generator_TablePropName="Top10_Tratamiento" msprop:Generator_RowDeletingName="Top10_TratamientoRowDeleting" msprop:Generator_RowChangingName="Top10_TratamientoRowChanging" msprop:Generator_RowEvHandlerName="Top10_TratamientoRowChangeEventHandler" msprop:Generator_RowDeletedName="Top10_TratamientoRowDeleted" msprop:Generator_UserTableName="Top10_Tratamiento" msprop:Generator_RowChangedName="Top10_TratamientoRowChanged" msprop:Generator_RowEvArgName="Top10_TratamientoRowChangeEvent" msprop:Generator_RowClassName="Top10_TratamientoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FECHA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" minOccurs="0">
@@ -1589,7 +1591,7 @@ WHERE c.IdCita=@cita</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="EstadistDental" msprop:Generator_TableClassName="EstadistDentalDataTable" msprop:Generator_TableVarName="tableEstadistDental" msprop:Generator_TablePropName="EstadistDental" msprop:Generator_RowDeletingName="EstadistDentalRowDeleting" msprop:Generator_RowChangingName="EstadistDentalRowChanging" msprop:Generator_RowEvHandlerName="EstadistDentalRowChangeEventHandler" msprop:Generator_RowDeletedName="EstadistDentalRowDeleted" msprop:Generator_UserTableName="EstadistDental" msprop:Generator_RowChangedName="EstadistDentalRowChanged" msprop:Generator_RowEvArgName="EstadistDentalRowChangeEvent" msprop:Generator_RowClassName="EstadistDentalRow">
+        <xs:element name="EstadistDental" msprop:Generator_TableClassName="EstadistDentalDataTable" msprop:Generator_TableVarName="tableEstadistDental" msprop:Generator_RowChangedName="EstadistDentalRowChanged" msprop:Generator_TablePropName="EstadistDental" msprop:Generator_RowDeletingName="EstadistDentalRowDeleting" msprop:Generator_RowChangingName="EstadistDentalRowChanging" msprop:Generator_RowEvHandlerName="EstadistDentalRowChangeEventHandler" msprop:Generator_RowDeletedName="EstadistDentalRowDeleted" msprop:Generator_RowClassName="EstadistDentalRow" msprop:Generator_UserTableName="EstadistDental" msprop:Generator_RowEvArgName="EstadistDentalRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FECHA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" minOccurs="0">
@@ -1604,7 +1606,7 @@ WHERE c.IdCita=@cita</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PacienteAnalitica" msprop:Generator_TableClassName="PacienteAnaliticaDataTable" msprop:Generator_TableVarName="tablePacienteAnalitica" msprop:Generator_RowChangedName="PacienteAnaliticaRowChanged" msprop:Generator_TablePropName="PacienteAnalitica" msprop:Generator_RowDeletingName="PacienteAnaliticaRowDeleting" msprop:Generator_RowChangingName="PacienteAnaliticaRowChanging" msprop:Generator_RowEvHandlerName="PacienteAnaliticaRowChangeEventHandler" msprop:Generator_RowDeletedName="PacienteAnaliticaRowDeleted" msprop:Generator_RowClassName="PacienteAnaliticaRow" msprop:Generator_UserTableName="PacienteAnalitica" msprop:Generator_RowEvArgName="PacienteAnaliticaRowChangeEvent">
+        <xs:element name="PacienteAnalitica" msprop:Generator_TableClassName="PacienteAnaliticaDataTable" msprop:Generator_TableVarName="tablePacienteAnalitica" msprop:Generator_TablePropName="PacienteAnalitica" msprop:Generator_RowDeletingName="PacienteAnaliticaRowDeleting" msprop:Generator_RowChangingName="PacienteAnaliticaRowChanging" msprop:Generator_RowEvHandlerName="PacienteAnaliticaRowChangeEventHandler" msprop:Generator_RowDeletedName="PacienteAnaliticaRowDeleted" msprop:Generator_UserTableName="PacienteAnalitica" msprop:Generator_RowChangedName="PacienteAnaliticaRowChanged" msprop:Generator_RowEvArgName="PacienteAnaliticaRowChangeEvent" msprop:Generator_RowClassName="PacienteAnaliticaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -1641,7 +1643,7 @@ WHERE c.IdCita=@cita</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="MedicoCitas" msprop:Generator_TableClassName="MedicoCitasDataTable" msprop:Generator_TableVarName="tableMedicoCitas" msprop:Generator_TablePropName="MedicoCitas" msprop:Generator_RowDeletingName="MedicoCitasRowDeleting" msprop:Generator_RowChangingName="MedicoCitasRowChanging" msprop:Generator_RowEvHandlerName="MedicoCitasRowChangeEventHandler" msprop:Generator_RowDeletedName="MedicoCitasRowDeleted" msprop:Generator_UserTableName="MedicoCitas" msprop:Generator_RowChangedName="MedicoCitasRowChanged" msprop:Generator_RowEvArgName="MedicoCitasRowChangeEvent" msprop:Generator_RowClassName="MedicoCitasRow">
+        <xs:element name="MedicoCitas" msprop:Generator_TableClassName="MedicoCitasDataTable" msprop:Generator_TableVarName="tableMedicoCitas" msprop:Generator_RowChangedName="MedicoCitasRowChanged" msprop:Generator_TablePropName="MedicoCitas" msprop:Generator_RowDeletingName="MedicoCitasRowDeleting" msprop:Generator_RowChangingName="MedicoCitasRowChanging" msprop:Generator_RowEvHandlerName="MedicoCitasRowChangeEventHandler" msprop:Generator_RowDeletedName="MedicoCitasRowDeleted" msprop:Generator_RowClassName="MedicoCitasRow" msprop:Generator_UserTableName="MedicoCitas" msprop:Generator_RowEvArgName="MedicoCitasRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FECHA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" minOccurs="0">
@@ -1669,7 +1671,7 @@ WHERE c.IdCita=@cita</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Grafic1" msprop:Generator_TableClassName="Grafic1DataTable" msprop:Generator_TableVarName="tableGrafic1" msprop:Generator_RowChangedName="Grafic1RowChanged" msprop:Generator_TablePropName="Grafic1" msprop:Generator_RowDeletingName="Grafic1RowDeleting" msprop:Generator_RowChangingName="Grafic1RowChanging" msprop:Generator_RowEvHandlerName="Grafic1RowChangeEventHandler" msprop:Generator_RowDeletedName="Grafic1RowDeleted" msprop:Generator_RowClassName="Grafic1Row" msprop:Generator_UserTableName="Grafic1" msprop:Generator_RowEvArgName="Grafic1RowChangeEvent">
+        <xs:element name="Grafic1" msprop:Generator_TableClassName="Grafic1DataTable" msprop:Generator_TableVarName="tableGrafic1" msprop:Generator_TablePropName="Grafic1" msprop:Generator_RowDeletingName="Grafic1RowDeleting" msprop:Generator_RowChangingName="Grafic1RowChanging" msprop:Generator_RowEvHandlerName="Grafic1RowChangeEventHandler" msprop:Generator_RowDeletedName="Grafic1RowDeleted" msprop:Generator_UserTableName="Grafic1" msprop:Generator_RowChangedName="Grafic1RowChanged" msprop:Generator_RowEvArgName="Grafic1RowChangeEvent" msprop:Generator_RowClassName="Grafic1Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CONFIRMADA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCONFIRMADA" msprop:Generator_ColumnPropNameInRow="CONFIRMADA" msprop:Generator_ColumnPropNameInTable="CONFIRMADAColumn" msprop:Generator_UserColumnName="CONFIRMADA" type="xs:int" minOccurs="0" />
@@ -1680,7 +1682,7 @@ WHERE c.IdCita=@cita</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PacientesAlta" msprop:Generator_TableClassName="PacientesAltaDataTable" msprop:Generator_TableVarName="tablePacientesAlta" msprop:Generator_TablePropName="PacientesAlta" msprop:Generator_RowDeletingName="PacientesAltaRowDeleting" msprop:Generator_RowChangingName="PacientesAltaRowChanging" msprop:Generator_RowEvHandlerName="PacientesAltaRowChangeEventHandler" msprop:Generator_RowDeletedName="PacientesAltaRowDeleted" msprop:Generator_UserTableName="PacientesAlta" msprop:Generator_RowChangedName="PacientesAltaRowChanged" msprop:Generator_RowEvArgName="PacientesAltaRowChangeEvent" msprop:Generator_RowClassName="PacientesAltaRow">
+        <xs:element name="PacientesAlta" msprop:Generator_TableClassName="PacientesAltaDataTable" msprop:Generator_TableVarName="tablePacientesAlta" msprop:Generator_RowChangedName="PacientesAltaRowChanged" msprop:Generator_TablePropName="PacientesAlta" msprop:Generator_RowDeletingName="PacientesAltaRowDeleting" msprop:Generator_RowChangingName="PacientesAltaRowChanging" msprop:Generator_RowEvHandlerName="PacientesAltaRowChangeEventHandler" msprop:Generator_RowDeletedName="PacientesAltaRowDeleted" msprop:Generator_RowClassName="PacientesAltaRow" msprop:Generator_UserTableName="PacientesAlta" msprop:Generator_RowEvArgName="PacientesAltaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FECHA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" minOccurs="0">
@@ -1736,7 +1738,7 @@ WHERE c.IdCita=@cita</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CitasDiarias" msprop:Generator_TableClassName="CitasDiariasDataTable" msprop:Generator_TableVarName="tableCitasDiarias" msprop:Generator_RowChangedName="CitasDiariasRowChanged" msprop:Generator_TablePropName="CitasDiarias" msprop:Generator_RowDeletingName="CitasDiariasRowDeleting" msprop:Generator_RowChangingName="CitasDiariasRowChanging" msprop:Generator_RowEvHandlerName="CitasDiariasRowChangeEventHandler" msprop:Generator_RowDeletedName="CitasDiariasRowDeleted" msprop:Generator_RowClassName="CitasDiariasRow" msprop:Generator_UserTableName="CitasDiarias" msprop:Generator_RowEvArgName="CitasDiariasRowChangeEvent">
+        <xs:element name="CitasDiarias" msprop:Generator_TableClassName="CitasDiariasDataTable" msprop:Generator_TableVarName="tableCitasDiarias" msprop:Generator_TablePropName="CitasDiarias" msprop:Generator_RowDeletingName="CitasDiariasRowDeleting" msprop:Generator_RowChangingName="CitasDiariasRowChanging" msprop:Generator_RowEvHandlerName="CitasDiariasRowChangeEventHandler" msprop:Generator_RowDeletedName="CitasDiariasRowDeleted" msprop:Generator_UserTableName="CitasDiarias" msprop:Generator_RowChangedName="CitasDiariasRowChanged" msprop:Generator_RowEvArgName="CitasDiariasRowChangeEvent" msprop:Generator_RowClassName="CitasDiariasRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="HORARIO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnHORARIO" msprop:Generator_ColumnPropNameInRow="HORARIO" msprop:Generator_ColumnPropNameInTable="HORARIOColumn" msprop:Generator_UserColumnName="HORARIO" minOccurs="0">
@@ -1798,7 +1800,7 @@ WHERE c.IdCita=@cita</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Grafic2" msprop:Generator_TableClassName="Grafic2DataTable" msprop:Generator_TableVarName="tableGrafic2" msprop:Generator_TablePropName="Grafic2" msprop:Generator_RowDeletingName="Grafic2RowDeleting" msprop:Generator_RowChangingName="Grafic2RowChanging" msprop:Generator_RowEvHandlerName="Grafic2RowChangeEventHandler" msprop:Generator_RowDeletedName="Grafic2RowDeleted" msprop:Generator_UserTableName="Grafic2" msprop:Generator_RowChangedName="Grafic2RowChanged" msprop:Generator_RowEvArgName="Grafic2RowChangeEvent" msprop:Generator_RowClassName="Grafic2Row">
+        <xs:element name="Grafic2" msprop:Generator_TableClassName="Grafic2DataTable" msprop:Generator_TableVarName="tableGrafic2" msprop:Generator_RowChangedName="Grafic2RowChanged" msprop:Generator_TablePropName="Grafic2" msprop:Generator_RowDeletingName="Grafic2RowDeleting" msprop:Generator_RowChangingName="Grafic2RowChanging" msprop:Generator_RowEvHandlerName="Grafic2RowChangeEventHandler" msprop:Generator_RowDeletedName="Grafic2RowDeleted" msprop:Generator_RowClassName="Grafic2Row" msprop:Generator_UserTableName="Grafic2" msprop:Generator_RowEvArgName="Grafic2RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Meses" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMeses" msprop:Generator_ColumnPropNameInRow="Meses" msprop:Generator_ColumnPropNameInTable="MesesColumn" msprop:Generator_UserColumnName="Meses" minOccurs="0">
@@ -1819,7 +1821,7 @@ WHERE c.IdCita=@cita</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PACIENTESCONOCIO" msprop:Generator_TableClassName="PACIENTESCONOCIODataTable" msprop:Generator_TableVarName="tablePACIENTESCONOCIO" msprop:Generator_RowChangedName="PACIENTESCONOCIORowChanged" msprop:Generator_TablePropName="PACIENTESCONOCIO" msprop:Generator_RowDeletingName="PACIENTESCONOCIORowDeleting" msprop:Generator_RowChangingName="PACIENTESCONOCIORowChanging" msprop:Generator_RowEvHandlerName="PACIENTESCONOCIORowChangeEventHandler" msprop:Generator_RowDeletedName="PACIENTESCONOCIORowDeleted" msprop:Generator_RowClassName="PACIENTESCONOCIORow" msprop:Generator_UserTableName="PACIENTESCONOCIO" msprop:Generator_RowEvArgName="PACIENTESCONOCIORowChangeEvent">
+        <xs:element name="PACIENTESCONOCIO" msprop:Generator_TableClassName="PACIENTESCONOCIODataTable" msprop:Generator_TableVarName="tablePACIENTESCONOCIO" msprop:Generator_TablePropName="PACIENTESCONOCIO" msprop:Generator_RowDeletingName="PACIENTESCONOCIORowDeleting" msprop:Generator_RowChangingName="PACIENTESCONOCIORowChanging" msprop:Generator_RowEvHandlerName="PACIENTESCONOCIORowChangeEventHandler" msprop:Generator_RowDeletedName="PACIENTESCONOCIORowDeleted" msprop:Generator_UserTableName="PACIENTESCONOCIO" msprop:Generator_RowChangedName="PACIENTESCONOCIORowChanged" msprop:Generator_RowEvArgName="PACIENTESCONOCIORowChangeEvent" msprop:Generator_RowClassName="PACIENTESCONOCIORow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CPACIENTE" msprop:Generator_ColumnVarNameInTable="columnCPACIENTE" msprop:Generator_ColumnPropNameInRow="CPACIENTE" msprop:Generator_ColumnPropNameInTable="CPACIENTEColumn" msprop:Generator_UserColumnName="CPACIENTE" type="xs:int" />
@@ -1862,13 +1864,21 @@ WHERE c.IdCita=@cita</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ListadoCitaDetallado" msprop:Generator_TableClassName="ListadoCitaDetalladoDataTable" msprop:Generator_TableVarName="tableListadoCitaDetallado" msprop:Generator_RowChangedName="ListadoCitaDetalladoRowChanged" msprop:Generator_TablePropName="ListadoCitaDetallado" msprop:Generator_RowDeletingName="ListadoCitaDetalladoRowDeleting" msprop:Generator_RowChangingName="ListadoCitaDetalladoRowChanging" msprop:Generator_RowEvHandlerName="ListadoCitaDetalladoRowChangeEventHandler" msprop:Generator_RowDeletedName="ListadoCitaDetalladoRowDeleted" msprop:Generator_RowClassName="ListadoCitaDetalladoRow" msprop:Generator_UserTableName="ListadoCitaDetallado" msprop:Generator_RowEvArgName="ListadoCitaDetalladoRowChangeEvent">
+        <xs:element name="ListadoCitaDetallado" msprop:Generator_TableClassName="ListadoCitaDetalladoDataTable" msprop:Generator_TableVarName="tableListadoCitaDetallado" msprop:Generator_TablePropName="ListadoCitaDetallado" msprop:Generator_RowDeletingName="ListadoCitaDetalladoRowDeleting" msprop:Generator_RowChangingName="ListadoCitaDetalladoRowChanging" msprop:Generator_RowEvHandlerName="ListadoCitaDetalladoRowChangeEventHandler" msprop:Generator_RowDeletedName="ListadoCitaDetalladoRowDeleted" msprop:Generator_UserTableName="ListadoCitaDetallado" msprop:Generator_RowChangedName="ListadoCitaDetalladoRowChanged" msprop:Generator_RowEvArgName="ListadoCitaDetalladoRowChangeEvent" msprop:Generator_RowClassName="ListadoCitaDetalladoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IDCITA" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIDCITA" msprop:Generator_ColumnPropNameInRow="IDCITA" msprop:Generator_ColumnPropNameInTable="IDCITAColumn" msprop:Generator_UserColumnName="IDCITA" type="xs:int" />
               <xs:element name="NumeroCita" msprop:Generator_ColumnVarNameInTable="columnNumeroCita" msprop:Generator_ColumnPropNameInRow="NumeroCita" msprop:Generator_ColumnPropNameInTable="NumeroCitaColumn" msprop:Generator_UserColumnName="NumeroCita" type="xs:unsignedByte" minOccurs="0" />
               <xs:element name="FECHA" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" type="xs:dateTime" minOccurs="0" />
               <xs:element name="HORA" msprop:Generator_ColumnVarNameInTable="columnHORA" msprop:Generator_ColumnPropNameInRow="HORA" msprop:Generator_ColumnPropNameInTable="HORAColumn" msprop:Generator_UserColumnName="HORA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CPACIENTE" msprop:Generator_ColumnVarNameInTable="columnCPACIENTE" msprop:Generator_ColumnPropNameInRow="CPACIENTE" msprop:Generator_ColumnPropNameInTable="CPACIENTEColumn" msprop:Generator_UserColumnName="CPACIENTE" type="xs:int" />
+              <xs:element name="CODIGOPROPIO" msprop:Generator_ColumnVarNameInTable="columnCODIGOPROPIO" msprop:Generator_ColumnPropNameInRow="CODIGOPROPIO" msprop:Generator_ColumnPropNameInTable="CODIGOPROPIOColumn" msprop:Generator_UserColumnName="CODIGOPROPIO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="PACIENTE" msprop:Generator_ColumnVarNameInTable="columnPACIENTE" msprop:Generator_ColumnPropNameInRow="PACIENTE" msprop:Generator_ColumnPropNameInTable="PACIENTEColumn" msprop:Generator_UserColumnName="PACIENTE" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1968,8 +1978,8 @@ WHERE c.IdCita=@cita</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_N_Ticket_N_Pacientes" msdata:parent="PacientesAlta" msdata:child="N_TicketAux" msdata:parentkey="CPACIENTE" msdata:childkey="ID_Cliente" msprop:Generator_UserChildTable="N_TicketAux" msprop:Generator_ChildPropName="GetN_TicketAuxRows" msprop:Generator_UserRelationName="FK_N_Ticket_N_Pacientes" msprop:Generator_RelationVarName="relationFK_N_Ticket_N_Pacientes" msprop:Generator_UserParentTable="PacientesAlta" msprop:Generator_ParentPropName="PacientesAltaRow" />
-      <msdata:Relationship name="FK_N_Ticket_N_Pacientes1" msdata:parent="PACIENTESCONOCIO" msdata:child="N_TicketAux" msdata:parentkey="CPACIENTE" msdata:childkey="ID_Cliente" msprop:Generator_UserChildTable="N_TicketAux" msprop:Generator_ChildPropName="GetN_TicketAuxRows" msprop:Generator_UserRelationName="FK_N_Ticket_N_Pacientes1" msprop:Generator_ParentPropName="PACIENTESCONOCIORow" msprop:Generator_RelationVarName="relationFK_N_Ticket_N_Pacientes1" msprop:Generator_UserParentTable="PACIENTESCONOCIO" />
+      <msdata:Relationship name="FK_N_Ticket_N_Pacientes" msdata:parent="PacientesAlta" msdata:child="N_TicketAux" msdata:parentkey="CPACIENTE" msdata:childkey="ID_Cliente" msprop:Generator_UserChildTable="N_TicketAux" msprop:Generator_ChildPropName="GetN_TicketAuxRows" msprop:Generator_UserRelationName="FK_N_Ticket_N_Pacientes" msprop:Generator_ParentPropName="PacientesAltaRow" msprop:Generator_RelationVarName="relationFK_N_Ticket_N_Pacientes" msprop:Generator_UserParentTable="PacientesAlta" />
+      <msdata:Relationship name="FK_N_Ticket_N_Pacientes1" msdata:parent="PACIENTESCONOCIO" msdata:child="N_TicketAux" msdata:parentkey="CPACIENTE" msdata:childkey="ID_Cliente" msprop:Generator_UserChildTable="N_TicketAux" msprop:Generator_ChildPropName="GetN_TicketAuxRows" msprop:Generator_UserRelationName="FK_N_Ticket_N_Pacientes1" msprop:Generator_RelationVarName="relationFK_N_Ticket_N_Pacientes1" msprop:Generator_UserParentTable="PACIENTESCONOCIO" msprop:Generator_ParentPropName="PACIENTESCONOCIORow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
