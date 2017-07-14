@@ -588,7 +588,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!CPACIENTE.Value)</Value>
+                              <Value>=Fields!CPACIENTE.Value</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
                               </Style>
@@ -615,6 +615,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1132,7 +1133,7 @@
         <DataSetName>centro_medico_CITA</DataSetName>
         <Left>0.09844in</Left>
         <Height>2.6411cm</Height>
-        <Width>28.13723cm</Width>
+        <Width>28.13724cm</Width>
         <Style>
           <Border>
             <Color>DimGray</Color>
@@ -1145,7 +1146,7 @@
     <Height>2.6411cm</Height>
     <Style />
   </Body>
-  <Width>28.38727cm</Width>
+  <Width>28.38728cm</Width>
   <Page>
     <PageHeader>
       <Height>1.3061in</Height>

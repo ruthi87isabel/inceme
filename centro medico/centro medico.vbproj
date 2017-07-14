@@ -3044,6 +3044,9 @@
     <Content Include="RDLC\custom\vistalegre\Factura.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="RDLC\custom\siesta\CitaJustificanteAsistencia.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="RDLC\default\PacientesComoNosConocio.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
