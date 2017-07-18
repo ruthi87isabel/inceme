@@ -615,7 +615,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1119,7 +1118,7 @@
                 <TablixMember />
                 <TablixMember>
                   <Visibility>
-                    <Hidden>=IIf(Parameters!ModoDetallado.Value and Fields!RefConcepto.Value&lt;&gt;"", False, True)</Hidden>
+                    <Hidden>=IIf(Parameters!ModoDetallado.Value and (Fields!RefConcepto.Value&lt;&gt;"" or Fields!DESCRIPCION.Value&lt;&gt;""), False, True)</Hidden>
                     <ToggleItem>NumeroCita</ToggleItem>
                   </Visibility>
                 </TablixMember>

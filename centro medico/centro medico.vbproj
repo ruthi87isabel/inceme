@@ -2904,9 +2904,6 @@
     <Content Include="RDLC\custom\malaga\Receta.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="RDLC\custom\mares\CitasListado.rdlc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="RDLC\custom\mares\DentalOdontograma.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
