@@ -328,7 +328,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>4.24cm</Top>
+        <Top>4.23043cm</Top>
         <Left>2.42708cm</Left>
         <Height>0.6cm</Height>
         <Width>5.72792cm</Width>
@@ -358,7 +358,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>4.84cm</Top>
+        <Top>4.81682cm</Top>
         <Left>4.27916cm</Left>
         <Height>0.6cm</Height>
         <Width>5.72792cm</Width>
@@ -380,7 +380,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!MEDICO_NOMBRE.Value, "dsCita") + " " + First(Fields!MEDICO_APELLIDO1.Value, "dsCita") 
+                <Value>=" " + First(Fields!MEDICO_NOMBRE.Value, "dsCita") + " " + First(Fields!MEDICO_APELLIDO1.Value, "dsCita") 
 + " " + First(Fields!MEDICO_APELLIDO2.Value, "dsCita") + " / " + First(Fields!MEDICO_ESPECIALIDAD.Value, "dsCita")</Value>
                 <Style />
               </TextRun>
@@ -389,8 +389,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>6.01738cm</Top>
-        <Left>4.37cm</Left>
+        <Top>6.01682cm</Top>
+        <Left>4.27916cm</Left>
         <Height>0.6cm</Height>
         <Width>8.69125cm</Width>
         <ZIndex>14</ZIndex>
@@ -411,7 +411,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Atención visita personal en el centro</Value>
+                <Value> Atención visita personal en el centro</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -421,10 +421,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>5.41738cm</Top>
-        <Left>3.1822cm</Left>
+        <Top>5.41682cm</Top>
+        <Left>2.927cm</Left>
         <Height>0.6cm</Height>
-        <Width>5.925cm</Width>
+        <Width>7.84058cm</Width>
         <ZIndex>15</ZIndex>
         <Style>
           <Border>
@@ -591,8 +591,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>6.61682cm</Top>
-        <Left>2.14161cm</Left>
+        <Top>6.63754cm</Top>
+        <Left>2.25069cm</Left>
         <Height>0.6cm</Height>
         <Width>5.72792cm</Width>
         <ZIndex>17</ZIndex>
