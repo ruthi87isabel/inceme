@@ -300,9 +300,6 @@
         <Height>0.6cm</Height>
         <Width>1.63569cm</Width>
         <ZIndex>11</ZIndex>
-        <Visibility>
-          <Hidden>=IIf((First(Fields!MUTUA_NOMBRE.Value, "dsCita")&lt;&gt;""), False, True)</Hidden>
-        </Visibility>
         <Style>
           <Border>
             <Style>None</Style>
