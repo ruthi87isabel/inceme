@@ -580,11 +580,13 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>="Según baremo " + First(Fields!MUTUA_NOMBRE.Value, "dsCita")</Value>
+                <Value>=IIf((First(Fields!MUTUA_NOMBRE.Value, "dsCita")&lt;&gt;""), "Según baremo " + First(Fields!MUTUA_NOMBRE.Value, "dsCita"), Str(First(Fields!IMPORTECL.Value, "dsCita")) + " €")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
@@ -593,9 +595,6 @@
         <Height>0.6cm</Height>
         <Width>5.72792cm</Width>
         <ZIndex>17</ZIndex>
-        <Visibility>
-          <Hidden>=IIf((First(Fields!MUTUA_NOMBRE.Value, "dsCita")&lt;&gt;""), False, True)</Hidden>
-        </Visibility>
         <Style>
           <Border>
             <Style>None</Style>
