@@ -25,7 +25,7 @@ Partial Class frmLiquidacion_Medicos
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLiquidacion_Medicos))
         Dim GridEX1_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout()
-        Dim GridEX1_DesignTimeLayout_Reference_0 As Janus.Windows.Common.Layouts.JanusLayoutReference = New Janus.Windows.Common.Layouts.JanusLayoutReference("GridEXLayoutData.RootTable.Columns.Column10.ButtonImage")
+        Dim GridEX1_DesignTimeLayout_Reference_0 As Janus.Windows.Common.Layouts.JanusLayoutReference = New Janus.Windows.Common.Layouts.JanusLayoutReference("GridEXLayoutData.RootTable.Columns.Column1.ButtonImage")
         Dim GridEXDocs_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout()
         Me.btnPagoAutomatico = New System.Windows.Forms.Button()
         Me.btnPagar = New System.Windows.Forms.Button()
@@ -124,7 +124,7 @@ Partial Class frmLiquidacion_Medicos
         'chkMostrarCitasImporteCero
         '
         Me.chkMostrarCitasImporteCero.AutoSize = True
-        Me.chkMostrarCitasImporteCero.Location = New System.Drawing.Point(366, 75)
+        Me.chkMostrarCitasImporteCero.Location = New System.Drawing.Point(344, 71)
         Me.chkMostrarCitasImporteCero.Name = "chkMostrarCitasImporteCero"
         Me.chkMostrarCitasImporteCero.Size = New System.Drawing.Size(132, 17)
         Me.chkMostrarCitasImporteCero.TabIndex = 119
@@ -179,7 +179,7 @@ Partial Class frmLiquidacion_Medicos
         '
         Me.btnFiltrar.Image = Global.centro_medico.My.Resources.Resources._24_zoom
         Me.btnFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnFiltrar.Location = New System.Drawing.Point(639, 33)
+        Me.btnFiltrar.Location = New System.Drawing.Point(649, 33)
         Me.btnFiltrar.Name = "btnFiltrar"
         Me.btnFiltrar.Size = New System.Drawing.Size(93, 51)
         Me.btnFiltrar.TabIndex = 19
@@ -234,7 +234,7 @@ Partial Class frmLiquidacion_Medicos
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(180, 77)
+        Me.Label2.Location = New System.Drawing.Point(175, 71)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(32, 13)
         Me.Label2.TabIndex = 7
@@ -243,7 +243,7 @@ Partial Class frmLiquidacion_Medicos
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(14, 76)
+        Me.Label1.Location = New System.Drawing.Point(14, 70)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(35, 13)
         Me.Label1.TabIndex = 7
@@ -253,7 +253,7 @@ Partial Class frmLiquidacion_Medicos
         '
         Me.dtp_Final.Checked = False
         Me.dtp_Final.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtp_Final.Location = New System.Drawing.Point(218, 74)
+        Me.dtp_Final.Location = New System.Drawing.Point(213, 68)
         Me.dtp_Final.Name = "dtp_Final"
         Me.dtp_Final.Size = New System.Drawing.Size(110, 20)
         Me.dtp_Final.TabIndex = 6
@@ -262,7 +262,7 @@ Partial Class frmLiquidacion_Medicos
         '
         Me.dtp_Inicio.Checked = False
         Me.dtp_Inicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtp_Inicio.Location = New System.Drawing.Point(55, 74)
+        Me.dtp_Inicio.Location = New System.Drawing.Point(55, 68)
         Me.dtp_Inicio.Name = "dtp_Inicio"
         Me.dtp_Inicio.Size = New System.Drawing.Size(102, 20)
         Me.dtp_Inicio.TabIndex = 6
@@ -322,6 +322,7 @@ Partial Class frmLiquidacion_Medicos
         '
         'btImprimirMedicoDebito
         '
+        Me.btImprimirMedicoDebito.Enabled = False
         Me.btImprimirMedicoDebito.FlatAppearance.BorderSize = 0
         Me.btImprimirMedicoDebito.Image = Global.centro_medico.My.Resources.Resources.Print1
         Me.btImprimirMedicoDebito.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -404,7 +405,7 @@ Partial Class frmLiquidacion_Medicos
         'CtrlMedico1
         '
         Me.CtrlMedico1.ID_Medico = Nothing
-        Me.CtrlMedico1.Location = New System.Drawing.Point(17, 17)
+        Me.CtrlMedico1.Location = New System.Drawing.Point(17, 14)
         Me.CtrlMedico1.Margin = New System.Windows.Forms.Padding(4)
         Me.CtrlMedico1.Name = "CtrlMedico1"
         Me.CtrlMedico1.Size = New System.Drawing.Size(454, 42)

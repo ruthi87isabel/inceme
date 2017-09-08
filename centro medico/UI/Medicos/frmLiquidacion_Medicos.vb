@@ -119,9 +119,7 @@ Public Class frmLiquidacion_Medicos
             End If
 
             If Not chkMostrarCitasImporteCero.Checked Then
-                citas = citas.Where(Function(c) c.IMPORTEDR.HasValue And c.IMPORTEDR > 0).ToList()
-            Else
-                'citas = citas.ToList()
+                citas = citas.Where(Function(c) c.DrImporteConDtoSum > 0).ToList()
             End If
 
             liquidaciones = medico.Liquidacion_Medicos.ToList()
@@ -143,6 +141,7 @@ Public Class frmLiquidacion_Medicos
         Filtrar()
         GridEXDocs.ExpandRecords()
         SetEnabled(True)
+        btImprimirMedicoDebito.Enabled = Not citas.Count = 0
         pnl_Loading.Visible = False
     End Sub
 
@@ -519,6 +518,7 @@ Public Class frmLiquidacion_Medicos
             GridEX1.Width = Gd
         End If
     End Sub
+
 End Class
 
 Partial Public Class Liquidacion_Medico
