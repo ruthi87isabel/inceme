@@ -134,7 +134,7 @@ Partial Class CITA
             Dim res As Double = 0
             Dim lineas As List(Of LineasCita) = Me.LineasCitas.ToList
             For Each l As LineasCita In lineas
-                res += l.DrImporteConDto
+                If l.Liquidada_al_Medico Is Nothing Then res += l.DrImporteConDto
             Next
             Return res
         End Get

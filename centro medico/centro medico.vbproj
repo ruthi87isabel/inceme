@@ -4553,6 +4553,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Medicos\frmLiquidacion_Medicos.resx">
       <DependentUpon>frmLiquidacion_Medicos.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Medicos\frmMedicosListado.resx">
       <DependentUpon>frmMedicosListado.vb</DependentUpon>
