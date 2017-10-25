@@ -221,6 +221,7 @@ Public Class form_configuracion
 
         chk_AutoSugerirHoraCita.Checked = Globales.Configuracion.AutoSugerirHoraCita
 
+        ChkCincronCalendario.Checked = Globales.Configuracion.SincCalendCitaFtp
 
         LlenaSerie()
 
@@ -364,6 +365,8 @@ Public Class form_configuracion
         Globales.Configuracion.calendar = chb_mostrarcalendariopantallaprinciapal.Checked
 
         Globales.Configuracion.AutoSugerirHoraCita = chk_AutoSugerirHoraCita.Checked
+
+        Globales.Configuracion.SincCalendCitaFtp = ChkCincronCalendario.Checked
 
         If rb_solpInicialPacAntecPerson.Checked = True Then
             Globales.Configuracion.solapasinicial = "Antecedentes"

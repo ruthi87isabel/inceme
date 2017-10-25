@@ -1535,11 +1535,15 @@ Public Class form_citas
             Catch ex As Exception
             End Try
 
+            Dim USUARIO As USUARIO = (From u In context.USUARIOs Select u Where u.REFMEDICO = _idmedico).FirstOrDefault
+            If Not USUARIO Is Nothing And Globales.Configuracion.SincCalendCitaFtp Then cit.SincronizarMedicoCitas(_fecha.ToString("yyyy-MM-dd"), _idmedico)
+
         End If
         'Como es posible qeu se llame al guardar y no se cierre, lo que hacemos es qeu si se ha producido un insertar modificamos el currentaction de insertar a modificar
         If CurrentAccion = Enums.Accion.Insertar Then
             Me.CurrentAccion = Enums.Accion.Modificar
         End If
+
         Return True
         'Me.Close()
     End Function

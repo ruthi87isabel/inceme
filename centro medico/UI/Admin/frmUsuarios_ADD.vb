@@ -2,6 +2,7 @@ Public Class frmUsuarios_ADD
 
     Public CODIGO As Integer = -1
     Public Usuario As CMDataSet.USUARIOSRow
+    Dim Pass As String = ""
 
 
     Dim rolesUsuariosAdapter As CMDataSetTableAdapters.ROLESUSUARIOSTableAdapter = New CMDataSetTableAdapters.ROLESUSUARIOSTableAdapter()
@@ -39,6 +40,8 @@ Public Class frmUsuarios_ADD
             rolesUsuariosTable.AddROLESUSUARIOSRow(row)
 
         End If
+
+        Pass = CONTRASENATextBox.Text
     End Sub
 
 
@@ -47,6 +50,7 @@ Public Class frmUsuarios_ADD
     End Sub
 
     Private Sub btn_Guardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Guardar.Click
+        Dim IdMedico As Integer = Usuario.REFMEDICO
 
         If CONTRASENATextBox.Text <> RepetirContrasenna.Text Then
             MessageBox.Show("Las contrasennas deben coincidir")
@@ -69,6 +73,12 @@ Public Class frmUsuarios_ADD
         Me.Validate()
         Me.USUARIOSBindingSource.EndEdit()
         Me.USUARIOSTableAdapter.Update(Me.CMDataSet.USUARIOS)
+
+        If chkEsmedico.Checked And Pass <> CONTRASENATextBox.Text Then
+            Dim context As New CMLinqDataContext()
+            Dim Cita As CITA = (From c In context.CITAs Select c Where c.REFMEDICO = Usuario.REFMEDICO).FirstOrDefault
+            If Not Cita Is Nothing Then Cita.UpdateFileNewPassFtp(Cita.REFMEDICO, Cita.MEDICO.NOMBRECOMPLETO)
+        End If
 
         'Salvar Rol
         Me.rolesUsuariosTable(0).ID_ROLES = ROLESComboBox.SelectedValue

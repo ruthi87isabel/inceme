@@ -26,11 +26,23 @@ Partial Class form_configuracion
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(form_configuracion))
         Dim GridEXReportes_DesignTimeLayout_Reference_1 As Janus.Windows.Common.Layouts.JanusLayoutReference = New Janus.Windows.Common.Layouts.JanusLayoutReference("GridEXLayoutData.RootTable.FormatConditions.Condition1.FormatStyle.BackgroundImag" & _
         "e")
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tab_datosCentro = New System.Windows.Forms.TabPage()
+        Me.lb_volume = New System.Windows.Forms.Label()
+        Me.lb_seccion = New System.Windows.Forms.Label()
+        Me.tb_volume = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_seccion = New centro_medico.ctrlTextboxAvanzado()
+        Me.lb_folio = New System.Windows.Forms.Label()
+        Me.lb_hoja = New System.Windows.Forms.Label()
+        Me.tb_folio = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_hoja = New centro_medico.ctrlTextboxAvanzado()
+        Me.lb_regmercantil = New System.Windows.Forms.Label()
+        Me.lb_libro = New System.Windows.Forms.Label()
+        Me.tb_regmercantil = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_libro = New centro_medico.ctrlTextboxAvanzado()
         Me.pb_logotipo = New System.Windows.Forms.PictureBox()
         Me.bt_eliminarLogotipo = New System.Windows.Forms.Button()
         Me.bt_cargarLogotipo = New System.Windows.Forms.Button()
@@ -46,6 +58,18 @@ Partial Class form_configuracion
         Me.lb_domicilio = New System.Windows.Forms.Label()
         Me.lb_denominacionsocial = New System.Windows.Forms.Label()
         Me.lb_nombrecomercial = New System.Windows.Forms.Label()
+        Me.tb_paginaweb = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_email = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_cifnif = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_fax = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_tlfno2 = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_tlfno = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_provincia = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_cp = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_localidad = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_domicilio = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_denominacionsocial = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_nombrecomercial = New centro_medico.ctrlTextboxAvanzado()
         Me.tab_impresion = New System.Windows.Forms.TabPage()
         Me.gb_vistasPrevias = New System.Windows.Forms.GroupBox()
         Me.chb_vistasPreviasFacturas = New System.Windows.Forms.CheckBox()
@@ -54,17 +78,21 @@ Partial Class form_configuracion
         Me.lblReportesErrores = New System.Windows.Forms.Label()
         Me.lnkVerificarReportes = New System.Windows.Forms.LinkLabel()
         Me.GridEXReportes = New Janus.Windows.GridEX.GridEX()
+        Me.ReporteInfoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.gb_impresoras = New System.Windows.Forms.GroupBox()
         Me.cb_impresoras = New System.Windows.Forms.ComboBox()
         Me.lb_impresoras = New System.Windows.Forms.Label()
         Me.gb_carpetaficherosimpresion = New System.Windows.Forms.GroupBox()
         Me.bt_buscarcarpetaimpresion = New System.Windows.Forms.Button()
+        Me.tb_carpetaimpresion = New centro_medico.ctrlTextboxAvanzado()
         Me.tab_baseDatos = New System.Windows.Forms.TabPage()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.pn_carpetacompartidaimagenes = New System.Windows.Forms.Panel()
         Me.bt_buscarcarpetacompartidaimagenes = New System.Windows.Forms.Button()
+        Me.tb_carpetacompartidaimagenes = New centro_medico.ctrlTextboxAvanzado()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.bt_ficherogdb = New System.Windows.Forms.Button()
+        Me.tb_ficherogdb = New centro_medico.ctrlTextboxAvanzado()
         Me.lb_ficherogdb = New System.Windows.Forms.Label()
         Me.pn_medio = New System.Windows.Forms.Panel()
         Me.chb_recibos = New System.Windows.Forms.CheckBox()
@@ -106,6 +134,15 @@ Partial Class form_configuracion
         Me.tab_historiales = New System.Windows.Forms.TabPage()
         Me.gb_definicioncamposdatos = New System.Windows.Forms.GroupBox()
         Me.cb_diagnosticocopiacampo = New System.Windows.Forms.ComboBox()
+        Me.tb_histCampo9 = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_histCampo8 = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_histCampo7 = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_histCampo6 = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_histCampo5 = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_histCampo4 = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_histCampo3 = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_histCampo2 = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_histCampo1 = New centro_medico.ctrlTextboxAvanzado()
         Me.lb_diagnosticocopiacampo = New System.Windows.Forms.Label()
         Me.lb_histCampo9 = New System.Windows.Forms.Label()
         Me.lb_histCampo8 = New System.Windows.Forms.Label()
@@ -120,6 +157,7 @@ Partial Class form_configuracion
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.btn_Historial_Resume_FicheroImpresion = New System.Windows.Forms.Button()
+        Me.txtHistorialesResumenFichero = New centro_medico.ctrlTextboxAvanzado()
         Me.tab_recibosYfacturas = New System.Windows.Forms.TabPage()
         Me.grpLibroIngresosGastos = New System.Windows.Forms.GroupBox()
         Me.chkActivar_control_Libro_Ingresos_gastos = New System.Windows.Forms.CheckBox()
@@ -141,11 +179,16 @@ Partial Class form_configuracion
         Me.lb_nifcifpresentador = New System.Windows.Forms.Label()
         Me.lb_sufijopresentador = New System.Windows.Forms.Label()
         Me.lb_nombrepresentador = New System.Windows.Forms.Label()
+        Me.tb_nifcifpresentador = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_nombrepresentador = New centro_medico.ctrlTextboxAvanzado()
         Me.gb_domiciliacionordenante = New System.Windows.Forms.GroupBox()
+        Me.CtrlCuentaBancariaOrdenante = New centro_medico.ctrlCuentaBancaria()
         Me.lb_sufijoordenante = New System.Windows.Forms.Label()
         Me.tb_sufijoordenante = New System.Windows.Forms.MaskedTextBox()
         Me.lb_nifcifordenante = New System.Windows.Forms.Label()
         Me.lb_nombreordenante = New System.Windows.Forms.Label()
+        Me.tb_nifcifordenante = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_nombreordenante = New centro_medico.ctrlTextboxAvanzado()
         Me.tab_citas = New System.Windows.Forms.TabPage()
         Me.groupMedicos = New System.Windows.Forms.GroupBox()
         Me.chk_ModuloLiquidacionMedicos_Activo = New System.Windows.Forms.CheckBox()
@@ -212,9 +255,12 @@ Partial Class form_configuracion
         Me.chkUsarPacienteDebitoPagar = New System.Windows.Forms.CheckBox()
         Me.groupCuentaAccesoCarpeta = New System.Windows.Forms.GroupBox()
         Me.btnVerificarCuenta = New System.Windows.Forms.Button()
+        Me.txtUser = New centro_medico.ctrlTextboxAvanzado()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtDominio = New centro_medico.ctrlTextboxAvanzado()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtPassword = New centro_medico.ctrlTextboxAvanzado()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.chkIvaIncluido = New System.Windows.Forms.CheckBox()
         Me.bt_buscarcarpetacompartidaficheros = New System.Windows.Forms.Button()
@@ -233,11 +279,19 @@ Partial Class form_configuracion
         Me.chb_mostrarcalendariopantallaprinciapal = New System.Windows.Forms.CheckBox()
         Me.lb_carpetacompartidaficheros = New System.Windows.Forms.Label()
         Me.lb_otrosdatos = New System.Windows.Forms.Label()
+        Me.tb_carpetacompartidaficheros = New centro_medico.ctrlTextboxAvanzado()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.chkFiltroCumpleannos = New System.Windows.Forms.CheckBox()
         Me.TabDental = New System.Windows.Forms.TabPage()
         Me.chkDental_Activar = New System.Windows.Forms.CheckBox()
+        Me.TabFacturaE = New System.Windows.Forms.TabPage()
+        Me.btnBuscar2 = New System.Windows.Forms.Button()
+        Me.btnBuscar1 = New System.Windows.Forms.Button()
+        Me.lb_facturaEexe = New System.Windows.Forms.Label()
+        Me.lb_urlParamFiles = New System.Windows.Forms.Label()
+        Me.tb_urlFacturaEexe = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_urlParamFiles = New centro_medico.ctrlTextboxAvanzado()
         Me.imgList = New System.Windows.Forms.ImageList(Me.components)
         Me.bt_aceptar = New System.Windows.Forms.Button()
         Me.bt_cancelar = New System.Windows.Forms.Button()
@@ -247,63 +301,12 @@ Partial Class form_configuracion
         Me.ofd_imagenfondo = New System.Windows.Forms.OpenFileDialog()
         Me.fbd_carpetacompartidaficheros = New System.Windows.Forms.FolderBrowserDialog()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
-        Me.CMDataSet = New centro_medico.CMDataSet()
-        Me.SERIESBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SERIESTableAdapter = New centro_medico.CMDataSetTableAdapters.SERIESTableAdapter()
-        Me.ofd_CarpetaReportes = New System.Windows.Forms.OpenFileDialog()
-        Me.lb_regmercantil = New System.Windows.Forms.Label()
-        Me.lb_libro = New System.Windows.Forms.Label()
-        Me.lb_folio = New System.Windows.Forms.Label()
-        Me.lb_hoja = New System.Windows.Forms.Label()
-        Me.lb_volume = New System.Windows.Forms.Label()
-        Me.lb_seccion = New System.Windows.Forms.Label()
-        Me.tb_volume = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_seccion = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_folio = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_hoja = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_regmercantil = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_libro = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_paginaweb = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_email = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_cifnif = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_fax = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_tlfno2 = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_tlfno = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_provincia = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_cp = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_localidad = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_domicilio = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_denominacionsocial = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_nombrecomercial = New centro_medico.ctrlTextboxAvanzado()
-        Me.ReporteInfoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.tb_carpetaimpresion = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_carpetacompartidaimagenes = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_ficherogdb = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_histCampo9 = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_histCampo8 = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_histCampo7 = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_histCampo6 = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_histCampo5 = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_histCampo4 = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_histCampo3 = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_histCampo2 = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_histCampo1 = New centro_medico.ctrlTextboxAvanzado()
-        Me.txtHistorialesResumenFichero = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_nifcifpresentador = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_nombrepresentador = New centro_medico.ctrlTextboxAvanzado()
-        Me.CtrlCuentaBancariaOrdenante = New centro_medico.ctrlCuentaBancaria()
-        Me.tb_nifcifordenante = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_nombreordenante = New centro_medico.ctrlTextboxAvanzado()
-        Me.txtUser = New centro_medico.ctrlTextboxAvanzado()
-        Me.txtDominio = New centro_medico.ctrlTextboxAvanzado()
-        Me.txtPassword = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_carpetacompartidaficheros = New centro_medico.ctrlTextboxAvanzado()
         Me.TextBox9 = New centro_medico.ctrlTextboxAvanzado()
         Me.TextBox14 = New centro_medico.ctrlTextboxAvanzado()
         Me.TextBox15 = New centro_medico.ctrlTextboxAvanzado()
         Me.TextBox16 = New centro_medico.ctrlTextboxAvanzado()
         Me.TextBox17 = New centro_medico.ctrlTextboxAvanzado()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.TextBox18 = New centro_medico.ctrlTextboxAvanzado()
         Me.TextBox19 = New centro_medico.ctrlTextboxAvanzado()
         Me.TextBox20 = New centro_medico.ctrlTextboxAvanzado()
@@ -311,21 +314,20 @@ Partial Class form_configuracion
         Me.TextBox22 = New centro_medico.ctrlTextboxAvanzado()
         Me.TextBox23 = New centro_medico.ctrlTextboxAvanzado()
         Me.TextBox24 = New centro_medico.ctrlTextboxAvanzado()
-        Me.TabFacturaE = New System.Windows.Forms.TabPage()
-        Me.lb_facturaEexe = New System.Windows.Forms.Label()
-        Me.lb_urlParamFiles = New System.Windows.Forms.Label()
-        Me.tb_urlFacturaEexe = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_urlParamFiles = New centro_medico.ctrlTextboxAvanzado()
-        Me.btnBuscar1 = New System.Windows.Forms.Button()
-        Me.btnBuscar2 = New System.Windows.Forms.Button()
+        Me.CMDataSet = New centro_medico.CMDataSet()
+        Me.SERIESBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SERIESTableAdapter = New centro_medico.CMDataSetTableAdapters.SERIESTableAdapter()
+        Me.ofd_CarpetaReportes = New System.Windows.Forms.OpenFileDialog()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.ChkCincronCalendario = New System.Windows.Forms.CheckBox()
         Me.TabControl1.SuspendLayout()
         Me.tab_datosCentro.SuspendLayout()
         CType(Me.pb_logotipo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tab_impresion.SuspendLayout()
         Me.gb_vistasPrevias.SuspendLayout()
         CType(Me.GridEXReportes, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ReporteInfoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gb_impresoras.SuspendLayout()
         Me.gb_carpetaficherosimpresion.SuspendLayout()
         Me.tab_baseDatos.SuspendLayout()
@@ -376,12 +378,11 @@ Partial Class form_configuracion
         Me.TabPage1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.TabDental.SuspendLayout()
+        Me.TabFacturaE.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         CType(Me.CMDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SERIESBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ReporteInfoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabFacturaE.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -455,6 +456,114 @@ Partial Class form_configuracion
         Me.tab_datosCentro.TabIndex = 0
         Me.tab_datosCentro.Text = "Datos del centro"
         Me.tab_datosCentro.UseVisualStyleBackColor = True
+        '
+        'lb_volume
+        '
+        Me.lb_volume.AutoSize = True
+        Me.lb_volume.Location = New System.Drawing.Point(690, 292)
+        Me.lb_volume.Name = "lb_volume"
+        Me.lb_volume.Size = New System.Drawing.Size(48, 13)
+        Me.lb_volume.TabIndex = 53
+        Me.lb_volume.Text = "Volumen"
+        '
+        'lb_seccion
+        '
+        Me.lb_seccion.AutoSize = True
+        Me.lb_seccion.Location = New System.Drawing.Point(555, 292)
+        Me.lb_seccion.Name = "lb_seccion"
+        Me.lb_seccion.Size = New System.Drawing.Size(46, 13)
+        Me.lb_seccion.TabIndex = 52
+        Me.lb_seccion.Text = "Seccion"
+        '
+        'tb_volume
+        '
+        Me.tb_volume.AcceptsReturn = True
+        Me.tb_volume.Location = New System.Drawing.Point(693, 308)
+        Me.tb_volume.MaxLength = 20
+        Me.tb_volume.Name = "tb_volume"
+        Me.tb_volume.Size = New System.Drawing.Size(121, 20)
+        Me.tb_volume.TabIndex = 51
+        '
+        'tb_seccion
+        '
+        Me.tb_seccion.AcceptsReturn = True
+        Me.tb_seccion.Location = New System.Drawing.Point(558, 308)
+        Me.tb_seccion.MaxLength = 20
+        Me.tb_seccion.Name = "tb_seccion"
+        Me.tb_seccion.Size = New System.Drawing.Size(121, 20)
+        Me.tb_seccion.TabIndex = 50
+        '
+        'lb_folio
+        '
+        Me.lb_folio.AutoSize = True
+        Me.lb_folio.Location = New System.Drawing.Point(419, 292)
+        Me.lb_folio.Name = "lb_folio"
+        Me.lb_folio.Size = New System.Drawing.Size(29, 13)
+        Me.lb_folio.TabIndex = 49
+        Me.lb_folio.Text = "Folio"
+        '
+        'lb_hoja
+        '
+        Me.lb_hoja.AutoSize = True
+        Me.lb_hoja.Location = New System.Drawing.Point(284, 292)
+        Me.lb_hoja.Name = "lb_hoja"
+        Me.lb_hoja.Size = New System.Drawing.Size(29, 13)
+        Me.lb_hoja.TabIndex = 48
+        Me.lb_hoja.Text = "Hoja"
+        '
+        'tb_folio
+        '
+        Me.tb_folio.AcceptsReturn = True
+        Me.tb_folio.Location = New System.Drawing.Point(422, 308)
+        Me.tb_folio.MaxLength = 20
+        Me.tb_folio.Name = "tb_folio"
+        Me.tb_folio.Size = New System.Drawing.Size(121, 20)
+        Me.tb_folio.TabIndex = 47
+        '
+        'tb_hoja
+        '
+        Me.tb_hoja.AcceptsReturn = True
+        Me.tb_hoja.Location = New System.Drawing.Point(287, 308)
+        Me.tb_hoja.MaxLength = 20
+        Me.tb_hoja.Name = "tb_hoja"
+        Me.tb_hoja.Size = New System.Drawing.Size(121, 20)
+        Me.tb_hoja.TabIndex = 46
+        '
+        'lb_regmercantil
+        '
+        Me.lb_regmercantil.AutoSize = True
+        Me.lb_regmercantil.Location = New System.Drawing.Point(147, 292)
+        Me.lb_regmercantil.Name = "lb_regmercantil"
+        Me.lb_regmercantil.Size = New System.Drawing.Size(89, 13)
+        Me.lb_regmercantil.TabIndex = 45
+        Me.lb_regmercantil.Text = "RegistroMercantil"
+        '
+        'lb_libro
+        '
+        Me.lb_libro.AutoSize = True
+        Me.lb_libro.Location = New System.Drawing.Point(12, 292)
+        Me.lb_libro.Name = "lb_libro"
+        Me.lb_libro.Size = New System.Drawing.Size(30, 13)
+        Me.lb_libro.TabIndex = 44
+        Me.lb_libro.Text = "Libro"
+        '
+        'tb_regmercantil
+        '
+        Me.tb_regmercantil.AcceptsReturn = True
+        Me.tb_regmercantil.Location = New System.Drawing.Point(150, 308)
+        Me.tb_regmercantil.MaxLength = 20
+        Me.tb_regmercantil.Name = "tb_regmercantil"
+        Me.tb_regmercantil.Size = New System.Drawing.Size(121, 20)
+        Me.tb_regmercantil.TabIndex = 43
+        '
+        'tb_libro
+        '
+        Me.tb_libro.AcceptsReturn = True
+        Me.tb_libro.Location = New System.Drawing.Point(15, 308)
+        Me.tb_libro.MaxLength = 20
+        Me.tb_libro.Name = "tb_libro"
+        Me.tb_libro.Size = New System.Drawing.Size(121, 20)
+        Me.tb_libro.TabIndex = 42
         '
         'pb_logotipo
         '
@@ -595,6 +704,103 @@ Partial Class form_configuracion
         Me.lb_nombrecomercial.TabIndex = 12
         Me.lb_nombrecomercial.Text = "Nombre comercial"
         '
+        'tb_paginaweb
+        '
+        Me.tb_paginaweb.AcceptsReturn = True
+        Me.tb_paginaweb.Location = New System.Drawing.Point(253, 261)
+        Me.tb_paginaweb.Name = "tb_paginaweb"
+        Me.tb_paginaweb.Size = New System.Drawing.Size(349, 20)
+        Me.tb_paginaweb.TabIndex = 11
+        '
+        'tb_email
+        '
+        Me.tb_email.AcceptsReturn = True
+        Me.tb_email.Location = New System.Drawing.Point(15, 261)
+        Me.tb_email.Name = "tb_email"
+        Me.tb_email.Size = New System.Drawing.Size(206, 20)
+        Me.tb_email.TabIndex = 10
+        '
+        'tb_cifnif
+        '
+        Me.tb_cifnif.AcceptsReturn = True
+        Me.tb_cifnif.Location = New System.Drawing.Point(136, 215)
+        Me.tb_cifnif.MaxLength = 9
+        Me.tb_cifnif.Name = "tb_cifnif"
+        Me.tb_cifnif.Size = New System.Drawing.Size(278, 20)
+        Me.tb_cifnif.TabIndex = 9
+        '
+        'tb_fax
+        '
+        Me.tb_fax.AcceptsReturn = True
+        Me.tb_fax.Location = New System.Drawing.Point(15, 215)
+        Me.tb_fax.Name = "tb_fax"
+        Me.tb_fax.Size = New System.Drawing.Size(100, 20)
+        Me.tb_fax.TabIndex = 8
+        '
+        'tb_tlfno2
+        '
+        Me.tb_tlfno2.AcceptsReturn = True
+        Me.tb_tlfno2.Location = New System.Drawing.Point(464, 165)
+        Me.tb_tlfno2.Name = "tb_tlfno2"
+        Me.tb_tlfno2.Size = New System.Drawing.Size(121, 20)
+        Me.tb_tlfno2.TabIndex = 7
+        '
+        'tb_tlfno
+        '
+        Me.tb_tlfno.AcceptsReturn = True
+        Me.tb_tlfno.Location = New System.Drawing.Point(329, 165)
+        Me.tb_tlfno.Name = "tb_tlfno"
+        Me.tb_tlfno.Size = New System.Drawing.Size(121, 20)
+        Me.tb_tlfno.TabIndex = 6
+        '
+        'tb_provincia
+        '
+        Me.tb_provincia.AcceptsReturn = True
+        Me.tb_provincia.Location = New System.Drawing.Point(79, 165)
+        Me.tb_provincia.Name = "tb_provincia"
+        Me.tb_provincia.Size = New System.Drawing.Size(234, 20)
+        Me.tb_provincia.TabIndex = 5
+        '
+        'tb_cp
+        '
+        Me.tb_cp.AcceptsReturn = True
+        Me.tb_cp.Location = New System.Drawing.Point(15, 165)
+        Me.tb_cp.Name = "tb_cp"
+        Me.tb_cp.Size = New System.Drawing.Size(51, 20)
+        Me.tb_cp.TabIndex = 4
+        '
+        'tb_localidad
+        '
+        Me.tb_localidad.AcceptsReturn = True
+        Me.tb_localidad.Location = New System.Drawing.Point(333, 120)
+        Me.tb_localidad.Name = "tb_localidad"
+        Me.tb_localidad.Size = New System.Drawing.Size(252, 20)
+        Me.tb_localidad.TabIndex = 3
+        '
+        'tb_domicilio
+        '
+        Me.tb_domicilio.AcceptsReturn = True
+        Me.tb_domicilio.Location = New System.Drawing.Point(15, 120)
+        Me.tb_domicilio.Name = "tb_domicilio"
+        Me.tb_domicilio.Size = New System.Drawing.Size(291, 20)
+        Me.tb_domicilio.TabIndex = 2
+        '
+        'tb_denominacionsocial
+        '
+        Me.tb_denominacionsocial.AcceptsReturn = True
+        Me.tb_denominacionsocial.Location = New System.Drawing.Point(15, 78)
+        Me.tb_denominacionsocial.Name = "tb_denominacionsocial"
+        Me.tb_denominacionsocial.Size = New System.Drawing.Size(570, 20)
+        Me.tb_denominacionsocial.TabIndex = 1
+        '
+        'tb_nombrecomercial
+        '
+        Me.tb_nombrecomercial.AcceptsReturn = True
+        Me.tb_nombrecomercial.Location = New System.Drawing.Point(15, 31)
+        Me.tb_nombrecomercial.Name = "tb_nombrecomercial"
+        Me.tb_nombrecomercial.Size = New System.Drawing.Size(570, 20)
+        Me.tb_nombrecomercial.TabIndex = 0
+        '
         'tab_impresion
         '
         Me.tab_impresion.BackColor = System.Drawing.Color.GhostWhite
@@ -699,6 +905,10 @@ Partial Class form_configuracion
         Me.GridEXReportes.TotalRow = Janus.Windows.GridEX.InheritableBoolean.[True]
         Me.GridEXReportes.TotalRowPosition = Janus.Windows.GridEX.TotalRowPosition.BottomFixed
         '
+        'ReporteInfoBindingSource
+        '
+        Me.ReporteInfoBindingSource.DataSource = GetType(centro_medico.UI.Reportes.ReporteInfo)
+        '
         'gb_impresoras
         '
         Me.gb_impresoras.Controls.Add(Me.cb_impresoras)
@@ -748,6 +958,14 @@ Partial Class form_configuracion
         Me.bt_buscarcarpetaimpresion.TabIndex = 1
         Me.bt_buscarcarpetaimpresion.UseVisualStyleBackColor = True
         '
+        'tb_carpetaimpresion
+        '
+        Me.tb_carpetaimpresion.AcceptsReturn = True
+        Me.tb_carpetaimpresion.Location = New System.Drawing.Point(6, 31)
+        Me.tb_carpetaimpresion.Name = "tb_carpetaimpresion"
+        Me.tb_carpetaimpresion.Size = New System.Drawing.Size(620, 20)
+        Me.tb_carpetaimpresion.TabIndex = 0
+        '
         'tab_baseDatos
         '
         Me.tab_baseDatos.BackColor = System.Drawing.Color.GhostWhite
@@ -791,6 +1009,14 @@ Partial Class form_configuracion
         Me.bt_buscarcarpetacompartidaimagenes.TabIndex = 1
         Me.bt_buscarcarpetacompartidaimagenes.UseVisualStyleBackColor = True
         '
+        'tb_carpetacompartidaimagenes
+        '
+        Me.tb_carpetacompartidaimagenes.AcceptsReturn = True
+        Me.tb_carpetacompartidaimagenes.Location = New System.Drawing.Point(3, 2)
+        Me.tb_carpetacompartidaimagenes.Name = "tb_carpetacompartidaimagenes"
+        Me.tb_carpetacompartidaimagenes.Size = New System.Drawing.Size(536, 20)
+        Me.tb_carpetacompartidaimagenes.TabIndex = 0
+        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.bt_ficherogdb)
@@ -813,6 +1039,14 @@ Partial Class form_configuracion
         Me.bt_ficherogdb.TabIndex = 1
         Me.bt_ficherogdb.Text = "Configurar Conección"
         Me.bt_ficherogdb.UseVisualStyleBackColor = True
+        '
+        'tb_ficherogdb
+        '
+        Me.tb_ficherogdb.AcceptsReturn = True
+        Me.tb_ficherogdb.Location = New System.Drawing.Point(96, 35)
+        Me.tb_ficherogdb.Name = "tb_ficherogdb"
+        Me.tb_ficherogdb.Size = New System.Drawing.Size(486, 20)
+        Me.tb_ficherogdb.TabIndex = 0
         '
         'lb_ficherogdb
         '
@@ -1245,6 +1479,78 @@ Partial Class form_configuracion
         Me.cb_diagnosticocopiacampo.Size = New System.Drawing.Size(165, 21)
         Me.cb_diagnosticocopiacampo.TabIndex = 9
         '
+        'tb_histCampo9
+        '
+        Me.tb_histCampo9.AcceptsReturn = True
+        Me.tb_histCampo9.Location = New System.Drawing.Point(408, 151)
+        Me.tb_histCampo9.Name = "tb_histCampo9"
+        Me.tb_histCampo9.Size = New System.Drawing.Size(165, 20)
+        Me.tb_histCampo9.TabIndex = 8
+        '
+        'tb_histCampo8
+        '
+        Me.tb_histCampo8.AcceptsReturn = True
+        Me.tb_histCampo8.Location = New System.Drawing.Point(209, 151)
+        Me.tb_histCampo8.Name = "tb_histCampo8"
+        Me.tb_histCampo8.Size = New System.Drawing.Size(165, 20)
+        Me.tb_histCampo8.TabIndex = 7
+        '
+        'tb_histCampo7
+        '
+        Me.tb_histCampo7.AcceptsReturn = True
+        Me.tb_histCampo7.Location = New System.Drawing.Point(10, 151)
+        Me.tb_histCampo7.Name = "tb_histCampo7"
+        Me.tb_histCampo7.Size = New System.Drawing.Size(165, 20)
+        Me.tb_histCampo7.TabIndex = 6
+        '
+        'tb_histCampo6
+        '
+        Me.tb_histCampo6.AcceptsReturn = True
+        Me.tb_histCampo6.Location = New System.Drawing.Point(408, 99)
+        Me.tb_histCampo6.Name = "tb_histCampo6"
+        Me.tb_histCampo6.Size = New System.Drawing.Size(165, 20)
+        Me.tb_histCampo6.TabIndex = 5
+        '
+        'tb_histCampo5
+        '
+        Me.tb_histCampo5.AcceptsReturn = True
+        Me.tb_histCampo5.Location = New System.Drawing.Point(209, 99)
+        Me.tb_histCampo5.Name = "tb_histCampo5"
+        Me.tb_histCampo5.Size = New System.Drawing.Size(165, 20)
+        Me.tb_histCampo5.TabIndex = 4
+        '
+        'tb_histCampo4
+        '
+        Me.tb_histCampo4.AcceptsReturn = True
+        Me.tb_histCampo4.Location = New System.Drawing.Point(10, 99)
+        Me.tb_histCampo4.Name = "tb_histCampo4"
+        Me.tb_histCampo4.Size = New System.Drawing.Size(165, 20)
+        Me.tb_histCampo4.TabIndex = 3
+        '
+        'tb_histCampo3
+        '
+        Me.tb_histCampo3.AcceptsReturn = True
+        Me.tb_histCampo3.Location = New System.Drawing.Point(408, 43)
+        Me.tb_histCampo3.Name = "tb_histCampo3"
+        Me.tb_histCampo3.Size = New System.Drawing.Size(165, 20)
+        Me.tb_histCampo3.TabIndex = 2
+        '
+        'tb_histCampo2
+        '
+        Me.tb_histCampo2.AcceptsReturn = True
+        Me.tb_histCampo2.Location = New System.Drawing.Point(209, 43)
+        Me.tb_histCampo2.Name = "tb_histCampo2"
+        Me.tb_histCampo2.Size = New System.Drawing.Size(165, 20)
+        Me.tb_histCampo2.TabIndex = 1
+        '
+        'tb_histCampo1
+        '
+        Me.tb_histCampo1.AcceptsReturn = True
+        Me.tb_histCampo1.Location = New System.Drawing.Point(10, 43)
+        Me.tb_histCampo1.Name = "tb_histCampo1"
+        Me.tb_histCampo1.Size = New System.Drawing.Size(165, 20)
+        Me.tb_histCampo1.TabIndex = 0
+        '
         'lb_diagnosticocopiacampo
         '
         Me.lb_diagnosticocopiacampo.AutoSize = True
@@ -1374,6 +1680,14 @@ Partial Class form_configuracion
         Me.btn_Historial_Resume_FicheroImpresion.TabIndex = 1
         Me.btn_Historial_Resume_FicheroImpresion.UseVisualStyleBackColor = True
         '
+        'txtHistorialesResumenFichero
+        '
+        Me.txtHistorialesResumenFichero.AcceptsReturn = True
+        Me.txtHistorialesResumenFichero.Location = New System.Drawing.Point(2, 2)
+        Me.txtHistorialesResumenFichero.Name = "txtHistorialesResumenFichero"
+        Me.txtHistorialesResumenFichero.Size = New System.Drawing.Size(212, 20)
+        Me.txtHistorialesResumenFichero.TabIndex = 0
+        '
         'tab_recibosYfacturas
         '
         Me.tab_recibosYfacturas.BackColor = System.Drawing.Color.GhostWhite
@@ -1475,34 +1789,34 @@ Partial Class form_configuracion
         Me.dtg_series.AllowUserToAddRows = False
         Me.dtg_series.AllowUserToDeleteRows = False
         Me.dtg_series.BackgroundColor = System.Drawing.Color.White
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dtg_series.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dtg_series.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dtg_series.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dtg_series.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dtg_series.DefaultCellStyle = DataGridViewCellStyle2
         Me.dtg_series.Location = New System.Drawing.Point(18, 130)
         Me.dtg_series.Name = "dtg_series"
         Me.dtg_series.ReadOnly = True
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dtg_series.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dtg_series.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dtg_series.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dtg_series.Size = New System.Drawing.Size(204, 176)
         Me.dtg_series.TabIndex = 2
@@ -1618,6 +1932,24 @@ Partial Class form_configuracion
         Me.lb_nombrepresentador.TabIndex = 14
         Me.lb_nombrepresentador.Text = "Nombre del presentador"
         '
+        'tb_nifcifpresentador
+        '
+        Me.tb_nifcifpresentador.AcceptsReturn = True
+        Me.tb_nifcifpresentador.Location = New System.Drawing.Point(6, 77)
+        Me.tb_nifcifpresentador.MaxLength = 9
+        Me.tb_nifcifpresentador.Name = "tb_nifcifpresentador"
+        Me.tb_nifcifpresentador.Size = New System.Drawing.Size(176, 20)
+        Me.tb_nifcifpresentador.TabIndex = 3
+        '
+        'tb_nombrepresentador
+        '
+        Me.tb_nombrepresentador.AcceptsReturn = True
+        Me.tb_nombrepresentador.Location = New System.Drawing.Point(6, 35)
+        Me.tb_nombrepresentador.MaxLength = 40
+        Me.tb_nombrepresentador.Name = "tb_nombrepresentador"
+        Me.tb_nombrepresentador.Size = New System.Drawing.Size(240, 20)
+        Me.tb_nombrepresentador.TabIndex = 0
+        '
         'gb_domiciliacionordenante
         '
         Me.gb_domiciliacionordenante.Controls.Add(Me.CtrlCuentaBancariaOrdenante)
@@ -1633,6 +1965,18 @@ Partial Class form_configuracion
         Me.gb_domiciliacionordenante.TabIndex = 0
         Me.gb_domiciliacionordenante.TabStop = False
         Me.gb_domiciliacionordenante.Text = "Domiciliación: datos del ordenante"
+        '
+        'CtrlCuentaBancariaOrdenante
+        '
+        Me.CtrlCuentaBancariaOrdenante.Cuenta = "0000000000"
+        Me.CtrlCuentaBancariaOrdenante.CUENTABANCO = "000000000000000000"
+        Me.CtrlCuentaBancariaOrdenante.DC = ""
+        Me.CtrlCuentaBancariaOrdenante.Entidad = "0000"
+        Me.CtrlCuentaBancariaOrdenante.Location = New System.Drawing.Point(6, 110)
+        Me.CtrlCuentaBancariaOrdenante.Name = "CtrlCuentaBancariaOrdenante"
+        Me.CtrlCuentaBancariaOrdenante.Oficina = "0000"
+        Me.CtrlCuentaBancariaOrdenante.Size = New System.Drawing.Size(231, 39)
+        Me.CtrlCuentaBancariaOrdenante.TabIndex = 10
         '
         'lb_sufijoordenante
         '
@@ -1671,9 +2015,28 @@ Partial Class form_configuracion
         Me.lb_nombreordenante.TabIndex = 7
         Me.lb_nombreordenante.Text = "Nombre del ordenante"
         '
+        'tb_nifcifordenante
+        '
+        Me.tb_nifcifordenante.AcceptsReturn = True
+        Me.tb_nifcifordenante.Location = New System.Drawing.Point(6, 77)
+        Me.tb_nifcifordenante.MaxLength = 9
+        Me.tb_nifcifordenante.Name = "tb_nifcifordenante"
+        Me.tb_nifcifordenante.Size = New System.Drawing.Size(157, 20)
+        Me.tb_nifcifordenante.TabIndex = 1
+        '
+        'tb_nombreordenante
+        '
+        Me.tb_nombreordenante.AcceptsReturn = True
+        Me.tb_nombreordenante.Location = New System.Drawing.Point(6, 36)
+        Me.tb_nombreordenante.MaxLength = 40
+        Me.tb_nombreordenante.Name = "tb_nombreordenante"
+        Me.tb_nombreordenante.Size = New System.Drawing.Size(324, 20)
+        Me.tb_nombreordenante.TabIndex = 0
+        '
         'tab_citas
         '
         Me.tab_citas.BackColor = System.Drawing.Color.GhostWhite
+        Me.tab_citas.Controls.Add(Me.ChkCincronCalendario)
         Me.tab_citas.Controls.Add(Me.groupMedicos)
         Me.tab_citas.Controls.Add(Me.grpSalas)
         Me.tab_citas.Controls.Add(Me.chkSiUsuarioMedicoMostrar)
@@ -1725,7 +2088,7 @@ Partial Class form_configuracion
         Me.txtMedico_PorcientoGlobal.Name = "txtMedico_PorcientoGlobal"
         Me.txtMedico_PorcientoGlobal.Size = New System.Drawing.Size(58, 20)
         Me.txtMedico_PorcientoGlobal.TabIndex = 43
-        Me.txtMedico_PorcientoGlobal.Text = "0.00 %"
+        Me.txtMedico_PorcientoGlobal.Text = "0,00 %"
         Me.txtMedico_PorcientoGlobal.Value = New Decimal(New Integer() {0, 0, 0, 0})
         '
         'Label10
@@ -1758,9 +2121,9 @@ Partial Class form_configuracion
         'grpSalas
         '
         Me.grpSalas.Controls.Add(Me.chkSalas)
-        Me.grpSalas.Location = New System.Drawing.Point(6, 366)
+        Me.grpSalas.Location = New System.Drawing.Point(6, 409)
         Me.grpSalas.Name = "grpSalas"
-        Me.grpSalas.Size = New System.Drawing.Size(324, 97)
+        Me.grpSalas.Size = New System.Drawing.Size(324, 54)
         Me.grpSalas.TabIndex = 37
         Me.grpSalas.TabStop = False
         Me.grpSalas.Text = "Salas / Consultas"
@@ -1768,7 +2131,7 @@ Partial Class form_configuracion
         'chkSalas
         '
         Me.chkSalas.AutoSize = True
-        Me.chkSalas.Location = New System.Drawing.Point(17, 50)
+        Me.chkSalas.Location = New System.Drawing.Point(17, 23)
         Me.chkSalas.Name = "chkSalas"
         Me.chkSalas.Size = New System.Drawing.Size(182, 17)
         Me.chkSalas.TabIndex = 38
@@ -2408,6 +2771,14 @@ Partial Class form_configuracion
         Me.btnVerificarCuenta.Text = "Verificar"
         Me.btnVerificarCuenta.UseVisualStyleBackColor = True
         '
+        'txtUser
+        '
+        Me.txtUser.AcceptsReturn = True
+        Me.txtUser.Location = New System.Drawing.Point(66, 30)
+        Me.txtUser.Name = "txtUser"
+        Me.txtUser.Size = New System.Drawing.Size(94, 20)
+        Me.txtUser.TabIndex = 5
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -2426,6 +2797,14 @@ Partial Class form_configuracion
         Me.Label6.TabIndex = 4
         Me.Label6.Text = "Password:"
         '
+        'txtDominio
+        '
+        Me.txtDominio.AcceptsReturn = True
+        Me.txtDominio.Location = New System.Drawing.Point(407, 30)
+        Me.txtDominio.Name = "txtDominio"
+        Me.txtDominio.Size = New System.Drawing.Size(92, 20)
+        Me.txtDominio.TabIndex = 7
+        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -2434,6 +2813,15 @@ Partial Class form_configuracion
         Me.Label7.Size = New System.Drawing.Size(48, 13)
         Me.Label7.TabIndex = 4
         Me.Label7.Text = "Dominio:"
+        '
+        'txtPassword
+        '
+        Me.txtPassword.AcceptsReturn = True
+        Me.txtPassword.Location = New System.Drawing.Point(237, 30)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPassword.Size = New System.Drawing.Size(98, 20)
+        Me.txtPassword.TabIndex = 6
         '
         'GroupBox3
         '
@@ -2627,6 +3015,14 @@ Partial Class form_configuracion
         Me.lb_otrosdatos.Text = "Otros datos"
         Me.lb_otrosdatos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'tb_carpetacompartidaficheros
+        '
+        Me.tb_carpetacompartidaficheros.AcceptsReturn = True
+        Me.tb_carpetacompartidaficheros.Location = New System.Drawing.Point(7, 57)
+        Me.tb_carpetacompartidaficheros.Name = "tb_carpetacompartidaficheros"
+        Me.tb_carpetacompartidaficheros.Size = New System.Drawing.Size(555, 20)
+        Me.tb_carpetacompartidaficheros.TabIndex = 0
+        '
         'TabPage1
         '
         Me.TabPage1.Controls.Add(Me.GroupBox4)
@@ -2679,6 +3075,74 @@ Partial Class form_configuracion
         Me.chkDental_Activar.TabIndex = 0
         Me.chkDental_Activar.Text = "Activar módulo dental"
         Me.chkDental_Activar.UseVisualStyleBackColor = True
+        '
+        'TabFacturaE
+        '
+        Me.TabFacturaE.Controls.Add(Me.btnBuscar2)
+        Me.TabFacturaE.Controls.Add(Me.btnBuscar1)
+        Me.TabFacturaE.Controls.Add(Me.lb_facturaEexe)
+        Me.TabFacturaE.Controls.Add(Me.lb_urlParamFiles)
+        Me.TabFacturaE.Controls.Add(Me.tb_urlFacturaEexe)
+        Me.TabFacturaE.Controls.Add(Me.tb_urlParamFiles)
+        Me.TabFacturaE.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.TabFacturaE.Location = New System.Drawing.Point(4, 23)
+        Me.TabFacturaE.Name = "TabFacturaE"
+        Me.TabFacturaE.Size = New System.Drawing.Size(853, 479)
+        Me.TabFacturaE.TabIndex = 10
+        Me.TabFacturaE.Text = "FacturaE"
+        Me.TabFacturaE.UseVisualStyleBackColor = True
+        '
+        'btnBuscar2
+        '
+        Me.btnBuscar2.Location = New System.Drawing.Point(594, 79)
+        Me.btnBuscar2.Name = "btnBuscar2"
+        Me.btnBuscar2.Size = New System.Drawing.Size(75, 23)
+        Me.btnBuscar2.TabIndex = 19
+        Me.btnBuscar2.Text = "Buscar..."
+        Me.btnBuscar2.UseVisualStyleBackColor = True
+        '
+        'btnBuscar1
+        '
+        Me.btnBuscar1.Location = New System.Drawing.Point(594, 32)
+        Me.btnBuscar1.Name = "btnBuscar1"
+        Me.btnBuscar1.Size = New System.Drawing.Size(75, 23)
+        Me.btnBuscar1.TabIndex = 18
+        Me.btnBuscar1.Text = "Buscar..."
+        Me.btnBuscar1.UseVisualStyleBackColor = True
+        '
+        'lb_facturaEexe
+        '
+        Me.lb_facturaEexe.AutoSize = True
+        Me.lb_facturaEexe.Location = New System.Drawing.Point(15, 63)
+        Me.lb_facturaEexe.Name = "lb_facturaEexe"
+        Me.lb_facturaEexe.Size = New System.Drawing.Size(128, 13)
+        Me.lb_facturaEexe.TabIndex = 17
+        Me.lb_facturaEexe.Text = "URL Ejecutable FacturaE"
+        '
+        'lb_urlParamFiles
+        '
+        Me.lb_urlParamFiles.AutoSize = True
+        Me.lb_urlParamFiles.Location = New System.Drawing.Point(15, 18)
+        Me.lb_urlParamFiles.Name = "lb_urlParamFiles"
+        Me.lb_urlParamFiles.Size = New System.Drawing.Size(143, 13)
+        Me.lb_urlParamFiles.TabIndex = 16
+        Me.lb_urlParamFiles.Text = "URL Ficheros de Parametros"
+        '
+        'tb_urlFacturaEexe
+        '
+        Me.tb_urlFacturaEexe.AcceptsReturn = True
+        Me.tb_urlFacturaEexe.Location = New System.Drawing.Point(18, 81)
+        Me.tb_urlFacturaEexe.Name = "tb_urlFacturaEexe"
+        Me.tb_urlFacturaEexe.Size = New System.Drawing.Size(570, 20)
+        Me.tb_urlFacturaEexe.TabIndex = 15
+        '
+        'tb_urlParamFiles
+        '
+        Me.tb_urlParamFiles.AcceptsReturn = True
+        Me.tb_urlParamFiles.Location = New System.Drawing.Point(18, 34)
+        Me.tb_urlParamFiles.Name = "tb_urlParamFiles"
+        Me.tb_urlParamFiles.Size = New System.Drawing.Size(570, 20)
+        Me.tb_urlParamFiles.TabIndex = 14
         '
         'imgList
         '
@@ -2741,432 +3205,6 @@ Partial Class form_configuracion
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "GroupBox4"
         '
-        'GroupBox6
-        '
-        Me.GroupBox6.Controls.Add(Me.TextBox18)
-        Me.GroupBox6.Controls.Add(Me.TextBox19)
-        Me.GroupBox6.Controls.Add(Me.TextBox20)
-        Me.GroupBox6.Controls.Add(Me.TextBox21)
-        Me.GroupBox6.Controls.Add(Me.TextBox22)
-        Me.GroupBox6.Controls.Add(Me.TextBox23)
-        Me.GroupBox6.Controls.Add(Me.TextBox24)
-        Me.GroupBox6.Location = New System.Drawing.Point(14, 12)
-        Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(336, 164)
-        Me.GroupBox6.TabIndex = 0
-        Me.GroupBox6.TabStop = False
-        Me.GroupBox6.Text = "GroupBox3"
-        '
-        'CMDataSet
-        '
-        Me.CMDataSet.DataSetName = "CMDataSet"
-        Me.CMDataSet.EnforceConstraints = False
-        Me.CMDataSet.Locale = New System.Globalization.CultureInfo("en-US")
-        Me.CMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'SERIESBindingSource
-        '
-        Me.SERIESBindingSource.DataMember = "SERIES"
-        Me.SERIESBindingSource.DataSource = Me.CMDataSet
-        '
-        'SERIESTableAdapter
-        '
-        Me.SERIESTableAdapter.ClearBeforeFill = True
-        '
-        'lb_regmercantil
-        '
-        Me.lb_regmercantil.AutoSize = True
-        Me.lb_regmercantil.Location = New System.Drawing.Point(147, 292)
-        Me.lb_regmercantil.Name = "lb_regmercantil"
-        Me.lb_regmercantil.Size = New System.Drawing.Size(89, 13)
-        Me.lb_regmercantil.TabIndex = 45
-        Me.lb_regmercantil.Text = "RegistroMercantil"
-        '
-        'lb_libro
-        '
-        Me.lb_libro.AutoSize = True
-        Me.lb_libro.Location = New System.Drawing.Point(12, 292)
-        Me.lb_libro.Name = "lb_libro"
-        Me.lb_libro.Size = New System.Drawing.Size(30, 13)
-        Me.lb_libro.TabIndex = 44
-        Me.lb_libro.Text = "Libro"
-        '
-        'lb_folio
-        '
-        Me.lb_folio.AutoSize = True
-        Me.lb_folio.Location = New System.Drawing.Point(419, 292)
-        Me.lb_folio.Name = "lb_folio"
-        Me.lb_folio.Size = New System.Drawing.Size(29, 13)
-        Me.lb_folio.TabIndex = 49
-        Me.lb_folio.Text = "Folio"
-        '
-        'lb_hoja
-        '
-        Me.lb_hoja.AutoSize = True
-        Me.lb_hoja.Location = New System.Drawing.Point(284, 292)
-        Me.lb_hoja.Name = "lb_hoja"
-        Me.lb_hoja.Size = New System.Drawing.Size(29, 13)
-        Me.lb_hoja.TabIndex = 48
-        Me.lb_hoja.Text = "Hoja"
-        '
-        'lb_volume
-        '
-        Me.lb_volume.AutoSize = True
-        Me.lb_volume.Location = New System.Drawing.Point(690, 292)
-        Me.lb_volume.Name = "lb_volume"
-        Me.lb_volume.Size = New System.Drawing.Size(48, 13)
-        Me.lb_volume.TabIndex = 53
-        Me.lb_volume.Text = "Volumen"
-        '
-        'lb_seccion
-        '
-        Me.lb_seccion.AutoSize = True
-        Me.lb_seccion.Location = New System.Drawing.Point(555, 292)
-        Me.lb_seccion.Name = "lb_seccion"
-        Me.lb_seccion.Size = New System.Drawing.Size(46, 13)
-        Me.lb_seccion.TabIndex = 52
-        Me.lb_seccion.Text = "Seccion"
-        '
-        'tb_volume
-        '
-        Me.tb_volume.AcceptsReturn = True
-        Me.tb_volume.Location = New System.Drawing.Point(693, 308)
-        Me.tb_volume.MaxLength = 20
-        Me.tb_volume.Name = "tb_volume"
-        Me.tb_volume.Size = New System.Drawing.Size(121, 20)
-        Me.tb_volume.TabIndex = 51
-        '
-        'tb_seccion
-        '
-        Me.tb_seccion.AcceptsReturn = True
-        Me.tb_seccion.Location = New System.Drawing.Point(558, 308)
-        Me.tb_seccion.MaxLength = 20
-        Me.tb_seccion.Name = "tb_seccion"
-        Me.tb_seccion.Size = New System.Drawing.Size(121, 20)
-        Me.tb_seccion.TabIndex = 50
-        '
-        'tb_folio
-        '
-        Me.tb_folio.AcceptsReturn = True
-        Me.tb_folio.Location = New System.Drawing.Point(422, 308)
-        Me.tb_folio.MaxLength = 20
-        Me.tb_folio.Name = "tb_folio"
-        Me.tb_folio.Size = New System.Drawing.Size(121, 20)
-        Me.tb_folio.TabIndex = 47
-        '
-        'tb_hoja
-        '
-        Me.tb_hoja.AcceptsReturn = True
-        Me.tb_hoja.Location = New System.Drawing.Point(287, 308)
-        Me.tb_hoja.MaxLength = 20
-        Me.tb_hoja.Name = "tb_hoja"
-        Me.tb_hoja.Size = New System.Drawing.Size(121, 20)
-        Me.tb_hoja.TabIndex = 46
-        '
-        'tb_regmercantil
-        '
-        Me.tb_regmercantil.AcceptsReturn = True
-        Me.tb_regmercantil.Location = New System.Drawing.Point(150, 308)
-        Me.tb_regmercantil.MaxLength = 20
-        Me.tb_regmercantil.Name = "tb_regmercantil"
-        Me.tb_regmercantil.Size = New System.Drawing.Size(121, 20)
-        Me.tb_regmercantil.TabIndex = 43
-        '
-        'tb_libro
-        '
-        Me.tb_libro.AcceptsReturn = True
-        Me.tb_libro.Location = New System.Drawing.Point(15, 308)
-        Me.tb_libro.MaxLength = 20
-        Me.tb_libro.Name = "tb_libro"
-        Me.tb_libro.Size = New System.Drawing.Size(121, 20)
-        Me.tb_libro.TabIndex = 42
-        '
-        'tb_paginaweb
-        '
-        Me.tb_paginaweb.AcceptsReturn = True
-        Me.tb_paginaweb.Location = New System.Drawing.Point(253, 261)
-        Me.tb_paginaweb.Name = "tb_paginaweb"
-        Me.tb_paginaweb.Size = New System.Drawing.Size(349, 20)
-        Me.tb_paginaweb.TabIndex = 11
-        '
-        'tb_email
-        '
-        Me.tb_email.AcceptsReturn = True
-        Me.tb_email.Location = New System.Drawing.Point(15, 261)
-        Me.tb_email.Name = "tb_email"
-        Me.tb_email.Size = New System.Drawing.Size(206, 20)
-        Me.tb_email.TabIndex = 10
-        '
-        'tb_cifnif
-        '
-        Me.tb_cifnif.AcceptsReturn = True
-        Me.tb_cifnif.Location = New System.Drawing.Point(136, 215)
-        Me.tb_cifnif.MaxLength = 9
-        Me.tb_cifnif.Name = "tb_cifnif"
-        Me.tb_cifnif.Size = New System.Drawing.Size(278, 20)
-        Me.tb_cifnif.TabIndex = 9
-        '
-        'tb_fax
-        '
-        Me.tb_fax.AcceptsReturn = True
-        Me.tb_fax.Location = New System.Drawing.Point(15, 215)
-        Me.tb_fax.Name = "tb_fax"
-        Me.tb_fax.Size = New System.Drawing.Size(100, 20)
-        Me.tb_fax.TabIndex = 8
-        '
-        'tb_tlfno2
-        '
-        Me.tb_tlfno2.AcceptsReturn = True
-        Me.tb_tlfno2.Location = New System.Drawing.Point(464, 165)
-        Me.tb_tlfno2.Name = "tb_tlfno2"
-        Me.tb_tlfno2.Size = New System.Drawing.Size(121, 20)
-        Me.tb_tlfno2.TabIndex = 7
-        '
-        'tb_tlfno
-        '
-        Me.tb_tlfno.AcceptsReturn = True
-        Me.tb_tlfno.Location = New System.Drawing.Point(329, 165)
-        Me.tb_tlfno.Name = "tb_tlfno"
-        Me.tb_tlfno.Size = New System.Drawing.Size(121, 20)
-        Me.tb_tlfno.TabIndex = 6
-        '
-        'tb_provincia
-        '
-        Me.tb_provincia.AcceptsReturn = True
-        Me.tb_provincia.Location = New System.Drawing.Point(79, 165)
-        Me.tb_provincia.Name = "tb_provincia"
-        Me.tb_provincia.Size = New System.Drawing.Size(234, 20)
-        Me.tb_provincia.TabIndex = 5
-        '
-        'tb_cp
-        '
-        Me.tb_cp.AcceptsReturn = True
-        Me.tb_cp.Location = New System.Drawing.Point(15, 165)
-        Me.tb_cp.Name = "tb_cp"
-        Me.tb_cp.Size = New System.Drawing.Size(51, 20)
-        Me.tb_cp.TabIndex = 4
-        '
-        'tb_localidad
-        '
-        Me.tb_localidad.AcceptsReturn = True
-        Me.tb_localidad.Location = New System.Drawing.Point(333, 120)
-        Me.tb_localidad.Name = "tb_localidad"
-        Me.tb_localidad.Size = New System.Drawing.Size(252, 20)
-        Me.tb_localidad.TabIndex = 3
-        '
-        'tb_domicilio
-        '
-        Me.tb_domicilio.AcceptsReturn = True
-        Me.tb_domicilio.Location = New System.Drawing.Point(15, 120)
-        Me.tb_domicilio.Name = "tb_domicilio"
-        Me.tb_domicilio.Size = New System.Drawing.Size(291, 20)
-        Me.tb_domicilio.TabIndex = 2
-        '
-        'tb_denominacionsocial
-        '
-        Me.tb_denominacionsocial.AcceptsReturn = True
-        Me.tb_denominacionsocial.Location = New System.Drawing.Point(15, 78)
-        Me.tb_denominacionsocial.Name = "tb_denominacionsocial"
-        Me.tb_denominacionsocial.Size = New System.Drawing.Size(570, 20)
-        Me.tb_denominacionsocial.TabIndex = 1
-        '
-        'tb_nombrecomercial
-        '
-        Me.tb_nombrecomercial.AcceptsReturn = True
-        Me.tb_nombrecomercial.Location = New System.Drawing.Point(15, 31)
-        Me.tb_nombrecomercial.Name = "tb_nombrecomercial"
-        Me.tb_nombrecomercial.Size = New System.Drawing.Size(570, 20)
-        Me.tb_nombrecomercial.TabIndex = 0
-        '
-        'ReporteInfoBindingSource
-        '
-        Me.ReporteInfoBindingSource.DataSource = GetType(centro_medico.UI.Reportes.ReporteInfo)
-        '
-        'tb_carpetaimpresion
-        '
-        Me.tb_carpetaimpresion.AcceptsReturn = True
-        Me.tb_carpetaimpresion.Location = New System.Drawing.Point(6, 31)
-        Me.tb_carpetaimpresion.Name = "tb_carpetaimpresion"
-        Me.tb_carpetaimpresion.Size = New System.Drawing.Size(620, 20)
-        Me.tb_carpetaimpresion.TabIndex = 0
-        '
-        'tb_carpetacompartidaimagenes
-        '
-        Me.tb_carpetacompartidaimagenes.AcceptsReturn = True
-        Me.tb_carpetacompartidaimagenes.Location = New System.Drawing.Point(3, 2)
-        Me.tb_carpetacompartidaimagenes.Name = "tb_carpetacompartidaimagenes"
-        Me.tb_carpetacompartidaimagenes.Size = New System.Drawing.Size(536, 20)
-        Me.tb_carpetacompartidaimagenes.TabIndex = 0
-        '
-        'tb_ficherogdb
-        '
-        Me.tb_ficherogdb.AcceptsReturn = True
-        Me.tb_ficherogdb.Location = New System.Drawing.Point(96, 35)
-        Me.tb_ficherogdb.Name = "tb_ficherogdb"
-        Me.tb_ficherogdb.Size = New System.Drawing.Size(486, 20)
-        Me.tb_ficherogdb.TabIndex = 0
-        '
-        'tb_histCampo9
-        '
-        Me.tb_histCampo9.AcceptsReturn = True
-        Me.tb_histCampo9.Location = New System.Drawing.Point(408, 151)
-        Me.tb_histCampo9.Name = "tb_histCampo9"
-        Me.tb_histCampo9.Size = New System.Drawing.Size(165, 20)
-        Me.tb_histCampo9.TabIndex = 8
-        '
-        'tb_histCampo8
-        '
-        Me.tb_histCampo8.AcceptsReturn = True
-        Me.tb_histCampo8.Location = New System.Drawing.Point(209, 151)
-        Me.tb_histCampo8.Name = "tb_histCampo8"
-        Me.tb_histCampo8.Size = New System.Drawing.Size(165, 20)
-        Me.tb_histCampo8.TabIndex = 7
-        '
-        'tb_histCampo7
-        '
-        Me.tb_histCampo7.AcceptsReturn = True
-        Me.tb_histCampo7.Location = New System.Drawing.Point(10, 151)
-        Me.tb_histCampo7.Name = "tb_histCampo7"
-        Me.tb_histCampo7.Size = New System.Drawing.Size(165, 20)
-        Me.tb_histCampo7.TabIndex = 6
-        '
-        'tb_histCampo6
-        '
-        Me.tb_histCampo6.AcceptsReturn = True
-        Me.tb_histCampo6.Location = New System.Drawing.Point(408, 99)
-        Me.tb_histCampo6.Name = "tb_histCampo6"
-        Me.tb_histCampo6.Size = New System.Drawing.Size(165, 20)
-        Me.tb_histCampo6.TabIndex = 5
-        '
-        'tb_histCampo5
-        '
-        Me.tb_histCampo5.AcceptsReturn = True
-        Me.tb_histCampo5.Location = New System.Drawing.Point(209, 99)
-        Me.tb_histCampo5.Name = "tb_histCampo5"
-        Me.tb_histCampo5.Size = New System.Drawing.Size(165, 20)
-        Me.tb_histCampo5.TabIndex = 4
-        '
-        'tb_histCampo4
-        '
-        Me.tb_histCampo4.AcceptsReturn = True
-        Me.tb_histCampo4.Location = New System.Drawing.Point(10, 99)
-        Me.tb_histCampo4.Name = "tb_histCampo4"
-        Me.tb_histCampo4.Size = New System.Drawing.Size(165, 20)
-        Me.tb_histCampo4.TabIndex = 3
-        '
-        'tb_histCampo3
-        '
-        Me.tb_histCampo3.AcceptsReturn = True
-        Me.tb_histCampo3.Location = New System.Drawing.Point(408, 43)
-        Me.tb_histCampo3.Name = "tb_histCampo3"
-        Me.tb_histCampo3.Size = New System.Drawing.Size(165, 20)
-        Me.tb_histCampo3.TabIndex = 2
-        '
-        'tb_histCampo2
-        '
-        Me.tb_histCampo2.AcceptsReturn = True
-        Me.tb_histCampo2.Location = New System.Drawing.Point(209, 43)
-        Me.tb_histCampo2.Name = "tb_histCampo2"
-        Me.tb_histCampo2.Size = New System.Drawing.Size(165, 20)
-        Me.tb_histCampo2.TabIndex = 1
-        '
-        'tb_histCampo1
-        '
-        Me.tb_histCampo1.AcceptsReturn = True
-        Me.tb_histCampo1.Location = New System.Drawing.Point(10, 43)
-        Me.tb_histCampo1.Name = "tb_histCampo1"
-        Me.tb_histCampo1.Size = New System.Drawing.Size(165, 20)
-        Me.tb_histCampo1.TabIndex = 0
-        '
-        'txtHistorialesResumenFichero
-        '
-        Me.txtHistorialesResumenFichero.AcceptsReturn = True
-        Me.txtHistorialesResumenFichero.Location = New System.Drawing.Point(2, 2)
-        Me.txtHistorialesResumenFichero.Name = "txtHistorialesResumenFichero"
-        Me.txtHistorialesResumenFichero.Size = New System.Drawing.Size(212, 20)
-        Me.txtHistorialesResumenFichero.TabIndex = 0
-        '
-        'tb_nifcifpresentador
-        '
-        Me.tb_nifcifpresentador.AcceptsReturn = True
-        Me.tb_nifcifpresentador.Location = New System.Drawing.Point(6, 77)
-        Me.tb_nifcifpresentador.MaxLength = 9
-        Me.tb_nifcifpresentador.Name = "tb_nifcifpresentador"
-        Me.tb_nifcifpresentador.Size = New System.Drawing.Size(176, 20)
-        Me.tb_nifcifpresentador.TabIndex = 3
-        '
-        'tb_nombrepresentador
-        '
-        Me.tb_nombrepresentador.AcceptsReturn = True
-        Me.tb_nombrepresentador.Location = New System.Drawing.Point(6, 35)
-        Me.tb_nombrepresentador.MaxLength = 40
-        Me.tb_nombrepresentador.Name = "tb_nombrepresentador"
-        Me.tb_nombrepresentador.Size = New System.Drawing.Size(240, 20)
-        Me.tb_nombrepresentador.TabIndex = 0
-        '
-        'CtrlCuentaBancariaOrdenante
-        '
-        Me.CtrlCuentaBancariaOrdenante.Cuenta = "0000000000"
-        Me.CtrlCuentaBancariaOrdenante.CUENTABANCO = "000000000000000000"
-        Me.CtrlCuentaBancariaOrdenante.DC = ""
-        Me.CtrlCuentaBancariaOrdenante.Entidad = "0000"
-        Me.CtrlCuentaBancariaOrdenante.Location = New System.Drawing.Point(6, 110)
-        Me.CtrlCuentaBancariaOrdenante.Name = "CtrlCuentaBancariaOrdenante"
-        Me.CtrlCuentaBancariaOrdenante.Oficina = "0000"
-        Me.CtrlCuentaBancariaOrdenante.Size = New System.Drawing.Size(231, 39)
-        Me.CtrlCuentaBancariaOrdenante.TabIndex = 10
-        '
-        'tb_nifcifordenante
-        '
-        Me.tb_nifcifordenante.AcceptsReturn = True
-        Me.tb_nifcifordenante.Location = New System.Drawing.Point(6, 77)
-        Me.tb_nifcifordenante.MaxLength = 9
-        Me.tb_nifcifordenante.Name = "tb_nifcifordenante"
-        Me.tb_nifcifordenante.Size = New System.Drawing.Size(157, 20)
-        Me.tb_nifcifordenante.TabIndex = 1
-        '
-        'tb_nombreordenante
-        '
-        Me.tb_nombreordenante.AcceptsReturn = True
-        Me.tb_nombreordenante.Location = New System.Drawing.Point(6, 36)
-        Me.tb_nombreordenante.MaxLength = 40
-        Me.tb_nombreordenante.Name = "tb_nombreordenante"
-        Me.tb_nombreordenante.Size = New System.Drawing.Size(324, 20)
-        Me.tb_nombreordenante.TabIndex = 0
-        '
-        'txtUser
-        '
-        Me.txtUser.AcceptsReturn = True
-        Me.txtUser.Location = New System.Drawing.Point(66, 30)
-        Me.txtUser.Name = "txtUser"
-        Me.txtUser.Size = New System.Drawing.Size(94, 20)
-        Me.txtUser.TabIndex = 5
-        '
-        'txtDominio
-        '
-        Me.txtDominio.AcceptsReturn = True
-        Me.txtDominio.Location = New System.Drawing.Point(407, 30)
-        Me.txtDominio.Name = "txtDominio"
-        Me.txtDominio.Size = New System.Drawing.Size(92, 20)
-        Me.txtDominio.TabIndex = 7
-        '
-        'txtPassword
-        '
-        Me.txtPassword.AcceptsReturn = True
-        Me.txtPassword.Location = New System.Drawing.Point(237, 30)
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassword.Size = New System.Drawing.Size(98, 20)
-        Me.txtPassword.TabIndex = 6
-        '
-        'tb_carpetacompartidaficheros
-        '
-        Me.tb_carpetacompartidaficheros.AcceptsReturn = True
-        Me.tb_carpetacompartidaficheros.Location = New System.Drawing.Point(7, 57)
-        Me.tb_carpetacompartidaficheros.Name = "tb_carpetacompartidaficheros"
-        Me.tb_carpetacompartidaficheros.Size = New System.Drawing.Size(555, 20)
-        Me.tb_carpetacompartidaficheros.TabIndex = 0
-        '
         'TextBox9
         '
         Me.TextBox9.AcceptsReturn = True
@@ -3206,6 +3244,22 @@ Partial Class form_configuracion
         Me.TextBox17.Name = "TextBox17"
         Me.TextBox17.Size = New System.Drawing.Size(240, 20)
         Me.TextBox17.TabIndex = 1
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.TextBox18)
+        Me.GroupBox6.Controls.Add(Me.TextBox19)
+        Me.GroupBox6.Controls.Add(Me.TextBox20)
+        Me.GroupBox6.Controls.Add(Me.TextBox21)
+        Me.GroupBox6.Controls.Add(Me.TextBox22)
+        Me.GroupBox6.Controls.Add(Me.TextBox23)
+        Me.GroupBox6.Controls.Add(Me.TextBox24)
+        Me.GroupBox6.Location = New System.Drawing.Point(14, 12)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(336, 164)
+        Me.GroupBox6.TabIndex = 0
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "GroupBox3"
         '
         'TextBox18
         '
@@ -3263,77 +3317,35 @@ Partial Class form_configuracion
         Me.TextBox24.Size = New System.Drawing.Size(324, 20)
         Me.TextBox24.TabIndex = 0
         '
-        'TabFacturaE
+        'CMDataSet
         '
-        Me.TabFacturaE.Controls.Add(Me.btnBuscar2)
-        Me.TabFacturaE.Controls.Add(Me.btnBuscar1)
-        Me.TabFacturaE.Controls.Add(Me.lb_facturaEexe)
-        Me.TabFacturaE.Controls.Add(Me.lb_urlParamFiles)
-        Me.TabFacturaE.Controls.Add(Me.tb_urlFacturaEexe)
-        Me.TabFacturaE.Controls.Add(Me.tb_urlParamFiles)
-        Me.TabFacturaE.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.TabFacturaE.Location = New System.Drawing.Point(4, 23)
-        Me.TabFacturaE.Name = "TabFacturaE"
-        Me.TabFacturaE.Size = New System.Drawing.Size(853, 479)
-        Me.TabFacturaE.TabIndex = 10
-        Me.TabFacturaE.Text = "FacturaE"
-        Me.TabFacturaE.UseVisualStyleBackColor = True
+        Me.CMDataSet.DataSetName = "CMDataSet"
+        Me.CMDataSet.EnforceConstraints = False
+        Me.CMDataSet.Locale = New System.Globalization.CultureInfo("en-US")
+        Me.CMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'lb_facturaEexe
+        'SERIESBindingSource
         '
-        Me.lb_facturaEexe.AutoSize = True
-        Me.lb_facturaEexe.Location = New System.Drawing.Point(15, 63)
-        Me.lb_facturaEexe.Name = "lb_facturaEexe"
-        Me.lb_facturaEexe.Size = New System.Drawing.Size(128, 13)
-        Me.lb_facturaEexe.TabIndex = 17
-        Me.lb_facturaEexe.Text = "URL Ejecutable FacturaE"
+        Me.SERIESBindingSource.DataMember = "SERIES"
+        Me.SERIESBindingSource.DataSource = Me.CMDataSet
         '
-        'lb_urlParamFiles
+        'SERIESTableAdapter
         '
-        Me.lb_urlParamFiles.AutoSize = True
-        Me.lb_urlParamFiles.Location = New System.Drawing.Point(15, 18)
-        Me.lb_urlParamFiles.Name = "lb_urlParamFiles"
-        Me.lb_urlParamFiles.Size = New System.Drawing.Size(143, 13)
-        Me.lb_urlParamFiles.TabIndex = 16
-        Me.lb_urlParamFiles.Text = "URL Ficheros de Parametros"
-        '
-        'tb_urlFacturaEexe
-        '
-        Me.tb_urlFacturaEexe.AcceptsReturn = True
-        Me.tb_urlFacturaEexe.Location = New System.Drawing.Point(18, 81)
-        Me.tb_urlFacturaEexe.Name = "tb_urlFacturaEexe"
-        Me.tb_urlFacturaEexe.Size = New System.Drawing.Size(570, 20)
-        Me.tb_urlFacturaEexe.TabIndex = 15
-        '
-        'tb_urlParamFiles
-        '
-        Me.tb_urlParamFiles.AcceptsReturn = True
-        Me.tb_urlParamFiles.Location = New System.Drawing.Point(18, 34)
-        Me.tb_urlParamFiles.Name = "tb_urlParamFiles"
-        Me.tb_urlParamFiles.Size = New System.Drawing.Size(570, 20)
-        Me.tb_urlParamFiles.TabIndex = 14
-        '
-        'btnBuscar1
-        '
-        Me.btnBuscar1.Location = New System.Drawing.Point(594, 32)
-        Me.btnBuscar1.Name = "btnBuscar1"
-        Me.btnBuscar1.Size = New System.Drawing.Size(75, 23)
-        Me.btnBuscar1.TabIndex = 18
-        Me.btnBuscar1.Text = "Buscar..."
-        Me.btnBuscar1.UseVisualStyleBackColor = True
-        '
-        'btnBuscar2
-        '
-        Me.btnBuscar2.Location = New System.Drawing.Point(594, 79)
-        Me.btnBuscar2.Name = "btnBuscar2"
-        Me.btnBuscar2.Size = New System.Drawing.Size(75, 23)
-        Me.btnBuscar2.TabIndex = 19
-        Me.btnBuscar2.Text = "Buscar..."
-        Me.btnBuscar2.UseVisualStyleBackColor = True
+        Me.SERIESTableAdapter.ClearBeforeFill = True
         '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'ChkCincronCalendario
+        '
+        Me.ChkCincronCalendario.AutoSize = True
+        Me.ChkCincronCalendario.Location = New System.Drawing.Point(12, 368)
+        Me.ChkCincronCalendario.Name = "ChkCincronCalendario"
+        Me.ChkCincronCalendario.Size = New System.Drawing.Size(203, 17)
+        Me.ChkCincronCalendario.TabIndex = 40
+        Me.ChkCincronCalendario.Text = "Activar Sincronozación de Calendario"
+        Me.ChkCincronCalendario.UseVisualStyleBackColor = True
         '
         'form_configuracion
         '
@@ -3357,6 +3369,7 @@ Partial Class form_configuracion
         Me.gb_vistasPrevias.ResumeLayout(False)
         Me.gb_vistasPrevias.PerformLayout()
         CType(Me.GridEXReportes, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ReporteInfoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gb_impresoras.ResumeLayout(False)
         Me.gb_impresoras.PerformLayout()
         Me.gb_carpetaficherosimpresion.ResumeLayout(False)
@@ -3434,15 +3447,14 @@ Partial Class form_configuracion
         Me.GroupBox4.PerformLayout()
         Me.TabDental.ResumeLayout(False)
         Me.TabDental.PerformLayout()
+        Me.TabFacturaE.ResumeLayout(False)
+        Me.TabFacturaE.PerformLayout()
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()
         CType(Me.CMDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SERIESBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ReporteInfoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabFacturaE.ResumeLayout(False)
-        Me.TabFacturaE.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -3737,4 +3749,5 @@ Partial Class form_configuracion
     Friend WithEvents tb_urlParamFiles As centro_medico.ctrlTextboxAvanzado
     Friend WithEvents FolderBrowserDialog1 As System.Windows.Forms.FolderBrowserDialog
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents ChkCincronCalendario As System.Windows.Forms.CheckBox
 End Class

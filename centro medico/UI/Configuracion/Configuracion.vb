@@ -191,6 +191,8 @@ Public Class Configuracion
 
     Public AutoSugerirHoraCita As Boolean = True
 
+    Public SincCalendCitaFtp As Boolean = True
+
     Public Calendario_SiUsuarioMedicoMostrarSoloSusCitas As Boolean = False
 
 
@@ -327,6 +329,13 @@ Public Class Configuracion
             Me.AutoSugerirHoraCita = True
         Else
             Me.AutoSugerirHoraCita = False
+        End If
+
+        Dim s As String = Me.LeeConfiguracionDesdeBd("SincCalendCitaFtp").ToString()
+        If s = "" Or s = "True" Then
+            Me.SincCalendCitaFtp = True
+        Else
+            Me.SincCalendCitaFtp = False
         End If
 
 
@@ -491,26 +500,26 @@ Public Class Configuracion
         'Else
         '    histficheroimpresion = Me.LeeConfiguracionDesdeBd("FRFHistorial")
         'End If
-     
-       
+
+
         logotipo = Me.LeeConfiguracionDesdeBd("Logotipo")
-        medaprox = Me.LeeConfiguracionDesdeBd("MedicosAproximada")
-        bancoaprox = Me.LeeConfiguracionDesdeBd("BancosAproximada")
+        Medaprox = Me.LeeConfiguracionDesdeBd("MedicosAproximada")
+        Bancoaprox = Me.LeeConfiguracionDesdeBd("BancosAproximada")
         empaprox = Me.LeeConfiguracionDesdeBd("EmpresasAproximada")
-        gastosaprox = Me.LeeConfiguracionDesdeBd("GastosAproximada")
+        Gastosaprox = Me.LeeConfiguracionDesdeBd("GastosAproximada")
         diagnosticoaprox = Me.LeeConfiguracionDesdeBd("DiagnosticosAproximada")
-        formaaprox = Me.LeeConfiguracionDesdeBd("FormasPagoAproximada")
+        Formaaprox = Me.LeeConfiguracionDesdeBd("FormasPagoAproximada")
         facturasaprox = Me.LeeConfiguracionDesdeBd("FacturasAproximada")
         pacaprox = Me.LeeConfiguracionDesdeBd("PacientesAproximada")
         analaprox = Me.LeeConfiguracionDesdeBd("AnaliticasProximada")
-        proveedoraprox = Me.LeeConfiguracionDesdeBd("Proveedoraproximada")
-        conceptoaprox = Me.LeeConfiguracionDesdeBd("ConceptosFraAproximada")
-        paisesaprox = Me.LeeConfiguracionDesdeBd("PaisesAproximada")
-        conceptanalaprox = Me.LeeConfiguracionDesdeBd("ConceptosAnaliticasAproximada")
-        derivacionesaprox = Me.LeeConfiguracionDesdeBd("DerivacionesAproximada")
-        alarmaaprox = Me.LeeConfiguracionDesdeBd("AlarmasAproximada")
-        articuloaprox = Me.LeeConfiguracionDesdeBd("ArticulosAproximada")
-        medicamentoaprox = Me.LeeConfiguracionDesdeBd("MedicamentosAproximada")
+        Proveedoraprox = Me.LeeConfiguracionDesdeBd("Proveedoraproximada")
+        Conceptoaprox = Me.LeeConfiguracionDesdeBd("ConceptosFraAproximada")
+        Paisesaprox = Me.LeeConfiguracionDesdeBd("PaisesAproximada")
+        Conceptanalaprox = Me.LeeConfiguracionDesdeBd("ConceptosAnaliticasAproximada")
+        Derivacionesaprox = Me.LeeConfiguracionDesdeBd("DerivacionesAproximada")
+        Alarmaaprox = Me.LeeConfiguracionDesdeBd("AlarmasAproximada")
+        Articuloaprox = Me.LeeConfiguracionDesdeBd("ArticulosAproximada")
+        Medicamentoaprox = Me.LeeConfiguracionDesdeBd("MedicamentosAproximada")
         platillatextoaprox = Me.LeeConfiguracionDesdeBd("PlantillaTextoAproximada")
         indicacionesaprox = Me.LeeConfiguracionDesdeBd("IndicacionesAproximada")
         historialaprox = Me.LeeConfiguracionDesdeBd("HistorialAproximada")
@@ -573,7 +582,7 @@ Public Class Configuracion
         Globales.Configuracion.CarpetaCompartidaPassword = Me.LeeConfiguracionDesdeBd("CarpetaCompartidaPassword")
         Globales.Configuracion.CarpetaCompartidaDominio = Me.LeeConfiguracionDesdeBd("CarpetaCompartidaDominio")
 
-      
+
 
         'If Me.LeeConfiguracionDesdeBd("Dental_Presupuesto_TenerEnCuentaCantidadPiezas") = "" Then
         '    Dental_Presupuesto_TenerEnCuentaCantidadPiezas = False
@@ -626,7 +635,7 @@ Public Class Configuracion
 
 
 
-       
+
     End Sub
 
 #End Region
@@ -635,6 +644,8 @@ Public Class Configuracion
     Public Sub GuardarConfBd()
 
         LeeConfiguracionDesdeBd("AutoSugerirHoraCita", AutoSugerirHoraCita, False)
+        LeeConfiguracionDesdeBd("SincCalendCitaFtp", SincCalendCitaFtp, False)
+
 
         LeeConfiguracionDesdeBd("SerieDefecto", serie, False)
         LeeConfiguracionDesdeBd("IRPFDefecto", IRPF.ToString, False)

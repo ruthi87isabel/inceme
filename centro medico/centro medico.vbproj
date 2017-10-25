@@ -635,6 +635,7 @@
     <Compile Include="Logica\PacienteDebitoManager.vb" />
     <Compile Include="Logica\RecibosManager.vb" />
     <Compile Include="Logica\ReportWrappers\WRAPPER_ANALITICA.vb" />
+    <Compile Include="Logica\Roles\Seguridad.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
