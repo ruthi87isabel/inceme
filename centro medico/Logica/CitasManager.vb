@@ -170,7 +170,10 @@ Partial Class CITA
 #Region "funciones para sincronizar las citas con el FTP"
 
     Public Sub UpdateFileNewPassFtp(idMedico As Integer, NombDoc As String)
-        Dim request As FtpWebRequest = FtpWebRequest.Create("ftp://home466817636.1and1-data.host/SincronizacionCitasXMedico/" + Globales.Configuracion.nombrecomercial + "/" + NombDoc)
+        Dim Path As String = "ftp://home466817636.1and1-data.host/SincronizacionCitasXMedico/" + Globales.Configuracion.nombrecomercial + "/" + NombDoc
+        If Not GetDirectoryExists(Path) Then Return
+
+        Dim request As FtpWebRequest = FtpWebRequest.Create(Path)
         request.Credentials = New NetworkCredential("u73075875", "4815Inceme1623$")
         request.Method = WebRequestMethods.Ftp.ListDirectory
         Dim response As FtpWebResponse = DirectCast(request.GetResponse(), FtpWebResponse)
