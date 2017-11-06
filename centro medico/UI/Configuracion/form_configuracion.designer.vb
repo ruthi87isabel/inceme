@@ -190,6 +190,10 @@ Partial Class form_configuracion
         Me.tb_nifcifordenante = New centro_medico.ctrlTextboxAvanzado()
         Me.tb_nombreordenante = New centro_medico.ctrlTextboxAvanzado()
         Me.tab_citas = New System.Windows.Forms.TabPage()
+        Me.GroupBox8 = New System.Windows.Forms.GroupBox()
+        Me.TbIdClinica = New System.Windows.Forms.TextBox()
+        Me.ChkCincronCalendario = New System.Windows.Forms.CheckBox()
+        Me.LbIdClinica = New System.Windows.Forms.Label()
         Me.groupMedicos = New System.Windows.Forms.GroupBox()
         Me.chk_ModuloLiquidacionMedicos_Activo = New System.Windows.Forms.CheckBox()
         Me.txtMedico_PorcientoGlobal = New Janus.Windows.GridEX.EditControls.NumericEditBox()
@@ -320,7 +324,6 @@ Partial Class form_configuracion
         Me.ofd_CarpetaReportes = New System.Windows.Forms.OpenFileDialog()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.ChkCincronCalendario = New System.Windows.Forms.CheckBox()
         Me.TabControl1.SuspendLayout()
         Me.tab_datosCentro.SuspendLayout()
         CType(Me.pb_logotipo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -358,6 +361,7 @@ Partial Class form_configuracion
         Me.gb_domiciliacionpresentador.SuspendLayout()
         Me.gb_domiciliacionordenante.SuspendLayout()
         Me.tab_citas.SuspendLayout()
+        Me.GroupBox8.SuspendLayout()
         Me.groupMedicos.SuspendLayout()
         Me.grpSalas.SuspendLayout()
         Me.gb_datoscitavisual.SuspendLayout()
@@ -2036,7 +2040,7 @@ Partial Class form_configuracion
         'tab_citas
         '
         Me.tab_citas.BackColor = System.Drawing.Color.GhostWhite
-        Me.tab_citas.Controls.Add(Me.ChkCincronCalendario)
+        Me.tab_citas.Controls.Add(Me.GroupBox8)
         Me.tab_citas.Controls.Add(Me.groupMedicos)
         Me.tab_citas.Controls.Add(Me.grpSalas)
         Me.tab_citas.Controls.Add(Me.chkSiUsuarioMedicoMostrar)
@@ -2054,6 +2058,44 @@ Partial Class form_configuracion
         Me.tab_citas.Size = New System.Drawing.Size(853, 479)
         Me.tab_citas.TabIndex = 5
         Me.tab_citas.Text = "Citas"
+        '
+        'GroupBox8
+        '
+        Me.GroupBox8.Controls.Add(Me.TbIdClinica)
+        Me.GroupBox8.Controls.Add(Me.ChkCincronCalendario)
+        Me.GroupBox8.Controls.Add(Me.LbIdClinica)
+        Me.GroupBox8.Location = New System.Drawing.Point(6, 339)
+        Me.GroupBox8.Name = "GroupBox8"
+        Me.GroupBox8.Size = New System.Drawing.Size(324, 70)
+        Me.GroupBox8.TabIndex = 43
+        Me.GroupBox8.TabStop = False
+        '
+        'TbIdClinica
+        '
+        Me.TbIdClinica.Location = New System.Drawing.Point(142, 44)
+        Me.TbIdClinica.MaxLength = 10
+        Me.TbIdClinica.Name = "TbIdClinica"
+        Me.TbIdClinica.Size = New System.Drawing.Size(141, 20)
+        Me.TbIdClinica.TabIndex = 42
+        '
+        'ChkCincronCalendario
+        '
+        Me.ChkCincronCalendario.AutoSize = True
+        Me.ChkCincronCalendario.Location = New System.Drawing.Point(6, 14)
+        Me.ChkCincronCalendario.Name = "ChkCincronCalendario"
+        Me.ChkCincronCalendario.Size = New System.Drawing.Size(203, 17)
+        Me.ChkCincronCalendario.TabIndex = 40
+        Me.ChkCincronCalendario.Text = "Activar Sincronozación de Calendario"
+        Me.ChkCincronCalendario.UseVisualStyleBackColor = True
+        '
+        'LbIdClinica
+        '
+        Me.LbIdClinica.AutoSize = True
+        Me.LbIdClinica.Location = New System.Drawing.Point(21, 46)
+        Me.LbIdClinica.Name = "LbIdClinica"
+        Me.LbIdClinica.Size = New System.Drawing.Size(116, 13)
+        Me.LbIdClinica.TabIndex = 41
+        Me.LbIdClinica.Text = "Identificador de Clínica"
         '
         'groupMedicos
         '
@@ -2121,9 +2163,9 @@ Partial Class form_configuracion
         'grpSalas
         '
         Me.grpSalas.Controls.Add(Me.chkSalas)
-        Me.grpSalas.Location = New System.Drawing.Point(6, 409)
+        Me.grpSalas.Location = New System.Drawing.Point(6, 418)
         Me.grpSalas.Name = "grpSalas"
-        Me.grpSalas.Size = New System.Drawing.Size(324, 54)
+        Me.grpSalas.Size = New System.Drawing.Size(324, 45)
         Me.grpSalas.TabIndex = 37
         Me.grpSalas.TabStop = False
         Me.grpSalas.Text = "Salas / Consultas"
@@ -2131,7 +2173,7 @@ Partial Class form_configuracion
         'chkSalas
         '
         Me.chkSalas.AutoSize = True
-        Me.chkSalas.Location = New System.Drawing.Point(17, 23)
+        Me.chkSalas.Location = New System.Drawing.Point(88, 18)
         Me.chkSalas.Name = "chkSalas"
         Me.chkSalas.Size = New System.Drawing.Size(182, 17)
         Me.chkSalas.TabIndex = 38
@@ -2141,7 +2183,7 @@ Partial Class form_configuracion
         'chkSiUsuarioMedicoMostrar
         '
         Me.chkSiUsuarioMedicoMostrar.AutoSize = True
-        Me.chkSiUsuarioMedicoMostrar.Location = New System.Drawing.Point(12, 330)
+        Me.chkSiUsuarioMedicoMostrar.Location = New System.Drawing.Point(12, 322)
         Me.chkSiUsuarioMedicoMostrar.Name = "chkSiUsuarioMedicoMostrar"
         Me.chkSiUsuarioMedicoMostrar.Size = New System.Drawing.Size(329, 17)
         Me.chkSiUsuarioMedicoMostrar.TabIndex = 36
@@ -2152,7 +2194,7 @@ Partial Class form_configuracion
         '
         Me.chk_AutoSugerirHoraCita.Checked = True
         Me.chk_AutoSugerirHoraCita.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chk_AutoSugerirHoraCita.Location = New System.Drawing.Point(12, 216)
+        Me.chk_AutoSugerirHoraCita.Location = New System.Drawing.Point(12, 211)
         Me.chk_AutoSugerirHoraCita.Name = "chk_AutoSugerirHoraCita"
         Me.chk_AutoSugerirHoraCita.Size = New System.Drawing.Size(288, 39)
         Me.chk_AutoSugerirHoraCita.TabIndex = 36
@@ -2227,7 +2269,7 @@ Partial Class form_configuracion
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(127, 296)
+        Me.Label4.Location = New System.Drawing.Point(127, 291)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(43, 13)
         Me.Label4.TabIndex = 2
@@ -2579,7 +2621,7 @@ Partial Class form_configuracion
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(28, 258)
+        Me.Label3.Location = New System.Drawing.Point(28, 253)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(220, 32)
         Me.Label3.TabIndex = 2
@@ -2658,7 +2700,7 @@ Partial Class form_configuracion
         '
         'Cita_AutoRefreshInterval
         '
-        Me.Cita_AutoRefreshInterval.Location = New System.Drawing.Point(61, 294)
+        Me.Cita_AutoRefreshInterval.Location = New System.Drawing.Point(61, 289)
         Me.Cita_AutoRefreshInterval.Maximum = New Decimal(New Integer() {60, 0, 0, 0})
         Me.Cita_AutoRefreshInterval.Name = "Cita_AutoRefreshInterval"
         Me.Cita_AutoRefreshInterval.Size = New System.Drawing.Size(56, 20)
@@ -3337,16 +3379,6 @@ Partial Class form_configuracion
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'ChkCincronCalendario
-        '
-        Me.ChkCincronCalendario.AutoSize = True
-        Me.ChkCincronCalendario.Location = New System.Drawing.Point(12, 368)
-        Me.ChkCincronCalendario.Name = "ChkCincronCalendario"
-        Me.ChkCincronCalendario.Size = New System.Drawing.Size(203, 17)
-        Me.ChkCincronCalendario.TabIndex = 40
-        Me.ChkCincronCalendario.Text = "Activar Sincronozación de Calendario"
-        Me.ChkCincronCalendario.UseVisualStyleBackColor = True
-        '
         'form_configuracion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3412,6 +3444,8 @@ Partial Class form_configuracion
         Me.gb_domiciliacionordenante.PerformLayout()
         Me.tab_citas.ResumeLayout(False)
         Me.tab_citas.PerformLayout()
+        Me.GroupBox8.ResumeLayout(False)
+        Me.GroupBox8.PerformLayout()
         Me.groupMedicos.ResumeLayout(False)
         Me.groupMedicos.PerformLayout()
         Me.grpSalas.ResumeLayout(False)
@@ -3750,4 +3784,7 @@ Partial Class form_configuracion
     Friend WithEvents FolderBrowserDialog1 As System.Windows.Forms.FolderBrowserDialog
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
     Friend WithEvents ChkCincronCalendario As System.Windows.Forms.CheckBox
+    Friend WithEvents TbIdClinica As System.Windows.Forms.TextBox
+    Friend WithEvents LbIdClinica As System.Windows.Forms.Label
+    Friend WithEvents GroupBox8 As System.Windows.Forms.GroupBox
 End Class

@@ -299,6 +299,7 @@
     <Compile Include="Logica\conexion.vb" />
     <Compile Include="Logica\FiltroLibroIngresosGastos.vb" />
     <Compile Include="Logica\Firmar.vb" />
+    <Compile Include="Logica\FtpManager.vb" />
     <Compile Include="Logica\IFormDocumentosPendientes.vb" />
     <Compile Include="Logica\Model\Balance.vb" />
     <Compile Include="Logica\CM2DataSet.Designer.vb">
@@ -2498,6 +2499,7 @@
     <Content Include="Scripts\db_1.0.4.3.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\db_1.0.4.4.sql" />
     <Content Include="UI\Dental\Icons\confirmado.ico" />
     <Content Include="UI\Dental\Icons\confirmado.png" />
     <Content Include="UI\Dental\Icons\confirmado_urgente.ico" />

@@ -76,8 +76,9 @@ Public Class frmUsuarios_ADD
 
         If chkEsmedico.Checked And Pass <> CONTRASENATextBox.Text Then
             Dim context As New CMLinqDataContext()
-            Dim Cita As CITA = (From c In context.CITAs Select c Where c.REFMEDICO = Usuario.REFMEDICO).FirstOrDefault
-            If Not Cita Is Nothing Then Cita.UpdateFileNewPassFtp(Cita.REFMEDICO, Cita.MEDICO.NOMBRECOMPLETO)
+            'Dim Cita As CITA = (From c In context.CITAs Select c Where c.REFMEDICO = Usuario.REFMEDICO).FirstOrDefault
+            Dim Ftp As New FtpManager
+            Ftp.UpdateFileNewPassFtp(Usuario.REFMEDICO, Usuario.USUARIO)
         End If
 
         'Salvar Rol

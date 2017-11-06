@@ -169,34 +169,8 @@ Partial Class CITA
 
 #Region "funciones para sincronizar las citas con el FTP"
 
-    Public Sub UpdateFileNewPassFtp(idMedico As Integer, NombDoc As String)
-        Dim Path As String = "ftp://home466817636.1and1-data.host/SincronizacionCitasXMedico/" + Globales.Configuracion.nombrecomercial + "/" + NombDoc
-        If Not GetDirectoryExists(Path) Then Return
-
-        Dim request As FtpWebRequest = FtpWebRequest.Create(Path)
-        request.Credentials = New NetworkCredential("u73075875", "4815Inceme1623$")
-        request.Method = WebRequestMethods.Ftp.ListDirectory
-        Dim response As FtpWebResponse = DirectCast(request.GetResponse(), FtpWebResponse)
-        Dim responseStream As Stream = response.GetResponseStream()
-        Dim reader As New StreamReader(responseStream)
-
-        Dim Lf As Char = Convert.ToChar(CByte(10))
-        Dim Cr As Char = Convert.ToChar(CByte(13))
-        Dim CrLf As Char() = {Cr, Lf}
-        Dim lines() As String = reader.ReadToEnd().Split(CrLf, StringSplitOptions.RemoveEmptyEntries)
-        reader.Close()
-        response.Close()
-
-        For Each line As String In lines
-            Dim fecha As String = line.Remove(line.Length - 5)
-            SincronizarMedicoCitas(fecha, idMedico)
-        Next
-
-    End Sub
-
     Public Sub SincronizarMedicoCitas(fecha As String, idmedico As Integer)
         Dim datos As String = ""
-        Dim NombDoc As String = ""
         Dim medic As Integer = 0
 
         Dim seguridad As Seguridad = New Seguridad
@@ -213,7 +187,6 @@ Partial Class CITA
 
                 If medic <> citas.Item(i).REFMEDICO Then
                     medic = citas.Item(i).REFMEDICO
-                    NombDoc = citas.Item(i).MEDICO.NOMBRECOMPLETO
                     usuario = (From u In ldcontext.USUARIOs Select u Where u.REFMEDICO = medic).FirstOrDefault
 
                     datos = "{""Medico_" + medic.ToString + """: { ""IdMedico"": " + medic.ToString + ",""Usuario"": """ + usuario.USUARIO + """, ""Contraseña"": """ +
@@ -244,15 +217,16 @@ Partial Class CITA
 
             If datos <> "" Then
                 Dim datosenc As String = seguridad.EncryptData(datos, usuario.CONTRASENA)
-                'CreaJson(datosenc, fecha, NombDoc)
-                SaveFileFtp(datosenc, fecha, NombDoc)
+                'CreaJson(datosenc, fecha, usuario.USUARIO)
+                Dim Ftp As New FtpManager
+                Ftp.SaveFileFtp(datosenc, fecha, usuario.USUARIO)
+                Ftp.DeleteOldFileFtp(usuario.USUARIO)
             End If
         End If
     End Sub
 
     Public Sub SincronizarMedicoCitasXFecha(fecha As String)
         Dim datos As String = ""
-        Dim NombDoc As String = ""
         Dim medic As Integer = 0
         Dim MedIdError As Integer = 0
         Dim seguridad As Seguridad = New Seguridad
@@ -270,7 +244,6 @@ Partial Class CITA
 
                 If medic <> citas.Item(i).REFMEDICO Then
                     medic = citas.Item(i).REFMEDICO
-                    NombDoc = citas.Item(i).MEDICO.NOMBRECOMPLETO
                     usuario = (From u In ldcontext.USUARIOs Select u Where u.REFMEDICO = medic).FirstOrDefault
                     If usuario Is Nothing Then
                         MedIdError = medic
@@ -298,102 +271,28 @@ Partial Class CITA
                     datos += ","
                 Else
                     datos += "]}"
-                    CreaJson(datos, fecha, NombDoc)
                     Dim datosenc As String = seguridad.EncryptData(datos, usuario.CONTRASENA)
-                    CreaJson(datosenc, "encritado", NombDoc)
-                    Dim datosdecenc As String = seguridad.DecryptString(datosenc, usuario.CONTRASENA)
-                    CreaJson(datosdecenc, "decencritado", NombDoc)
+                    'CreaJson(datosenc, fecha, usuario.USUARIO)
+                    Dim Ftp As New FtpManager
+                    Ftp.SaveFileFtp(datosenc, fecha, usuario.USUARIO)
+                    Ftp.DeleteOldFileFtp(usuario.USUARIO)
                     datos = ""
                 End If
             Next
         End If
     End Sub
 
-    Private Sub CreaJson(datos As String, fecha As String, NombDoc As String)
-        Dim Path As String = "c:\SincronizacionCitasXMedico\" + Globales.Configuracion.nombrecomercial + "\" + NombDoc
+    Private Sub CreaJson(datos As String, fecha As String, usuario As String)
+        usuario = usuario.Replace(" ", "_")
+        Dim Path As String = "c:\SincronizacionCitasXMedico\" + Globales.Configuracion.IdentificadorClinica + "\" + usuario
         Directory.CreateDirectory(Path)
-        Dim ruta As String = Path + "\" + fecha + ".json"
+        Dim ruta As String = Path + "\" + fecha + ".txt"
         Dim escritor As StreamWriter
         escritor = New StreamWriter(ruta)
         escritor.Write(datos)
         escritor.Flush()
         escritor.Close()
     End Sub
-
-
-
-    Private Sub SaveFileFtp(datos As String, fecha As String, NombDoc As String)
-        Dim fullpath As String = CreateFolderFtp(NombDoc)
-        Dim request As FtpWebRequest = DirectCast(WebRequest.Create(fullpath + "/" + fecha + ".json"), FtpWebRequest)
-        request.Credentials = New NetworkCredential("u73075875", "4815Inceme1623$")
-        request.EnableSsl = True
-        request.Method = WebRequestMethods.Ftp.UploadFile
-
-
-        'Comment next line to activate secure certificate validation
-        'https://stackoverflow.com/questions/20510316/ssl-certificate-issue-the-remote-certificate-is-invalid-according-to-the-valid
-        'https://stackoverflow.com/questions/19327840/certificate-validation-installation-for-ftps-ssl
-        ServicePointManager.ServerCertificateValidationCallback = AddressOf AcceptAllCertifications
-
-        'Dim file() As Byte = System.IO.File.ReadAllBytes("c:\SincronizacionCitasXMedico\" + Globales.Configuracion.nombrecomercial + "\" + NombDoc + "\" + fecha + ".json")
-
-        Dim encoding As System.Text.ASCIIEncoding = New System.Text.ASCIIEncoding()
-        Dim bytes() As Byte = encoding.GetBytes(datos)
-
-        Dim strz As System.IO.Stream = request.GetRequestStream()
-        strz.Write(bytes, 0, bytes.Length)
-        strz.Close()
-        strz.Dispose()
-    End Sub
-
-    Private Function CreateFolderFtp(NombDoc As String) As String
-        Dim fullpath As String = "ftp://home466817636.1and1-data.host"
-        Dim folderNames(2) As String
-        folderNames = New String(2) {"SincronizacionCitasXMedico", Globales.Configuracion.nombrecomercial, NombDoc}
-
-        For Each folderName As String In folderNames
-            fullpath += "/" + folderName
-
-            If GetDirectoryExists(fullpath) Then Continue For
-
-            Dim request As FtpWebRequest = FtpWebRequest.Create(fullpath)
-            request.Credentials = New NetworkCredential("u73075875", "4815Inceme1623$")
-            request.UsePassive = True
-            request.UseBinary = True
-
-            request.KeepAlive = False
-            request.Method = WebRequestMethods.Ftp.MakeDirectory
-            Try
-                Using response As FtpWebResponse = request.GetResponse()
-                    ' Folder created
-                End Using
-            Catch ex As WebException
-                Dim response As FtpWebResponse = DirectCast(ex.Response, FtpWebResponse)
-                ' an error occurred
-            End Try
-        Next
-        Return fullpath
-    End Function
-
-    Private Function GetDirectoryExists(directoryName As String) As Boolean
-        Dim directoryExists As Boolean
-        Dim request As FtpWebRequest = FtpWebRequest.Create(directoryName)
-        request.Credentials = New NetworkCredential("u73075875", "4815Inceme1623$")
-        request.Method = WebRequestMethods.Ftp.ListDirectory
-        Try
-            Using response As FtpWebResponse = request.GetResponse()
-                directoryExists = True
-            End Using
-        Catch ex As WebException
-            directoryExists = False
-            ' an error occurred
-        End Try
-        Return directoryExists
-    End Function
-
-    Public Function AcceptAllCertifications(ByVal sender As Object, ByVal certification As System.Security.Cryptography.X509Certificates.X509Certificate, ByVal chain As System.Security.Cryptography.X509Certificates.X509Chain, ByVal sslPolicyErrors As System.Net.Security.SslPolicyErrors) As Boolean
-        Return True
-    End Function
 
 #End Region
 

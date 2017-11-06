@@ -192,6 +192,7 @@ Public Class Configuracion
     Public AutoSugerirHoraCita As Boolean = True
 
     Public SincCalendCitaFtp As Boolean = True
+    Public IdentificadorClinica As String = ""
 
     Public Calendario_SiUsuarioMedicoMostrarSoloSusCitas As Boolean = False
 
@@ -338,6 +339,7 @@ Public Class Configuracion
             Me.SincCalendCitaFtp = False
         End If
 
+        Me.IdentificadorClinica = Me.LeeConfiguracionDesdeBd("IdentificadorClinica").ToString()
 
         serie = Me.LeeConfiguracionDesdeBd("SerieDefecto")
         If Me.LeeConfiguracionDesdeBd("IRPFDefecto").ToString.Trim.Length = 0 Then
@@ -645,6 +647,7 @@ Public Class Configuracion
 
         LeeConfiguracionDesdeBd("AutoSugerirHoraCita", AutoSugerirHoraCita, False)
         LeeConfiguracionDesdeBd("SincCalendCitaFtp", SincCalendCitaFtp, False)
+        LeeConfiguracionDesdeBd("IdentificadorClinica", IdentificadorClinica, False)
 
 
         LeeConfiguracionDesdeBd("SerieDefecto", serie, False)

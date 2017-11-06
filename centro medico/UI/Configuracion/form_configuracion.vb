@@ -222,6 +222,9 @@ Public Class form_configuracion
         chk_AutoSugerirHoraCita.Checked = Globales.Configuracion.AutoSugerirHoraCita
 
         ChkCincronCalendario.Checked = Globales.Configuracion.SincCalendCitaFtp
+        TbIdClinica.Enabled = ChkCincronCalendario.Checked
+        LbIdClinica.Enabled = ChkCincronCalendario.Checked
+        TbIdClinica.Text = Globales.Configuracion.IdentificadorClinica
 
         LlenaSerie()
 
@@ -254,10 +257,6 @@ Public Class form_configuracion
         'txt_Reporte_Factura_Multiple.Text = Globales.Configuracion.ReporteFacturaMultiple
 
         chkActivar_control_Libro_Ingresos_gastos.Checked = Globales.Configuracion.chkActivar_control_Libro_Ingresos_gastos
-
-
-      
-       
 
         ProcesaJornadaLaboral()
 
@@ -367,6 +366,19 @@ Public Class form_configuracion
         Globales.Configuracion.AutoSugerirHoraCita = chk_AutoSugerirHoraCita.Checked
 
         Globales.Configuracion.SincCalendCitaFtp = ChkCincronCalendario.Checked
+        If ChkCincronCalendario.Checked Then
+            If TbIdClinica.Text = "" Then
+                TbIdClinica.Focus()
+                MessageBox.Show("Debe especificar un identificador de Clínica")
+                Return
+            ElseIf ComprobarIdClinica(TbIdClinica.Text) Then
+                TbIdClinica.Focus()
+                MessageBox.Show("El identificador de Clínica especificado ya existe")
+                Return
+            Else
+                Globales.Configuracion.IdentificadorClinica = TbIdClinica.Text
+            End If
+        End If
 
         If rb_solpInicialPacAntecPerson.Checked = True Then
             Globales.Configuracion.solapasinicial = "Antecedentes"
@@ -414,14 +426,14 @@ Public Class form_configuracion
         Globales.Configuracion.CarpetaCompartidaUsuario = txtUser.Text
         Globales.Configuracion.CarpetaCompartidaPassword = txtPassword.Text
         Globales.Configuracion.CarpetaCompartidaDominio = txtDominio.Text
-       
+
         Globales.Configuracion.UsarPacienteDebitoAlPagar = chkUsarPacienteDebitoPagar.Checked
 
         Globales.Configuracion.FiltroEspecial_Cumplennos = chkFiltroCumpleannos.Checked
         Globales.Configuracion.Dental_ModuloActivo = chkDental_Activar.Checked
         Globales.Configuracion.ModuloLiquidacionMedicos_Activo = chk_ModuloLiquidacionMedicos_Activo.Checked
 
-      
+
         Globales.Configuracion.chkActivar_control_Libro_Ingresos_gastos = chkActivar_control_Libro_Ingresos_gastos.Checked
 
 
@@ -438,7 +450,7 @@ Public Class form_configuracion
                                                     </Dias>
                                                 </JornadaLaboral>
 
-       
+
         Globales.Configuracion.GuardarConfBd()
         Globales.Configuracion.Save(Globales.Configuracion.Login)
 
@@ -725,6 +737,23 @@ Public Class form_configuracion
         OpenFileDialog1.FileName = ""
         If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
             tb_urlFacturaEexe.Text = OpenFileDialog1.FileName
+        End If
+    End Sub
+
+    Private Sub ChkCincronCalendario_CheckedChanged(sender As Object, e As EventArgs) Handles ChkCincronCalendario.CheckedChanged
+        TbIdClinica.Enabled = ChkCincronCalendario.Checked
+        LbIdClinica.Enabled = ChkCincronCalendario.Checked
+    End Sub
+
+    Private Function ComprobarIdClinica(idClin As String) As Boolean
+        Dim Path As String = "ftp://home466817636.1and1-data.host/SincronizacionCitasXMedico/" + idClin
+        Dim Ftp As FtpManager = New FtpManager
+        Return Ftp.GetDirectoryExists(Path)
+    End Function
+
+    Private Sub TbIdClinica_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TbIdClinica.KeyPress
+        If e.KeyChar = " " Then
+            e.Handled = True
         End If
     End Sub
 End Class
