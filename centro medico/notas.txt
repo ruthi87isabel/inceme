@@ -3,3 +3,6 @@ My Proyect (lo abrimos). -> En Application pulsamos "Assembly Information"-> en 
 
 Para definir la versión mínima de base de datos:
 En form_centro_medico.vb -> funcion "ChequeaVersionBD" -> cambiar el valor a la variable "minDatabaseVersion"
+
+El modulo que sube las citas encriptadas por ftp, el algoritmo utilizado para cifrar es  TDESAlgorithm
+en inceme\centro medico\Logica\Roles está la clase Seguridad donde esta la funcion de cifrado y descifrado de datos
