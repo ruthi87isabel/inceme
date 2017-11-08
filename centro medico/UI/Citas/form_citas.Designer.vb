@@ -102,16 +102,6 @@ Partial Class form_citas
         Me.bt_ActualizaNumeracion = New System.Windows.Forms.Button()
         Me.bt_actualiza_cbMutuas = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.CBcitas = New System.Windows.Forms.ComboBox()
-        Me.grp_SalaDisponible = New System.Windows.Forms.GroupBox()
-        Me.lnkSugerirHorario = New System.Windows.Forms.LinkLabel()
-        Me.lblDispo = New System.Windows.Forms.Label()
-        Me.CtrlSalasvb1 = New centro_medico.ctrlSalasvb()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.btnDental = New System.Windows.Forms.Button()
-        Me.CtrlMedico1 = New centro_medico.ctrlMedico()
-        Me.cb_citaMultiple = New System.Windows.Forms.CheckBox()
         Me.gb_citaMultiple = New System.Windows.Forms.GroupBox()
         Me.tb_horafincm = New System.Windows.Forms.DateTimePicker()
         Me.tb_horainiciocm = New System.Windows.Forms.DateTimePicker()
@@ -124,6 +114,16 @@ Partial Class form_citas
         Me.chb_lun = New System.Windows.Forms.CheckBox()
         Me.dtp_final = New System.Windows.Forms.DateTimePicker()
         Me.dtp_fechacm = New System.Windows.Forms.DateTimePicker()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.CBcitas = New System.Windows.Forms.ComboBox()
+        Me.grp_SalaDisponible = New System.Windows.Forms.GroupBox()
+        Me.lnkSugerirHorario = New System.Windows.Forms.LinkLabel()
+        Me.lblDispo = New System.Windows.Forms.Label()
+        Me.CtrlSalasvb1 = New centro_medico.ctrlSalasvb()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.btnDental = New System.Windows.Forms.Button()
+        Me.CtrlMedico1 = New centro_medico.ctrlMedico()
+        Me.cb_citaMultiple = New System.Windows.Forms.CheckBox()
         Me.lblEdicionDesactivada = New System.Windows.Forms.Label()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripButton()
@@ -194,6 +194,7 @@ Partial Class form_citas
         Me.CtrlPaciente1 = New centro_medico.ctrlPaciente()
         Me.CtrlStatusPaciente1 = New centro_medico.ctrlStatusPaciente()
         Me.tb_notas = New centro_medico.ctrlTextboxAvanzado()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         FECHALabel = New System.Windows.Forms.Label()
         HORALabel = New System.Windows.Forms.Label()
         IMPORTEDRLabel = New System.Windows.Forms.Label()
@@ -228,8 +229,8 @@ Partial Class form_citas
         CType(Me.pb_citas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpFechaHora.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        Me.grp_SalaDisponible.SuspendLayout()
         Me.gb_citaMultiple.SuspendLayout()
+        Me.grp_SalaDisponible.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.dg_LineasCitas, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -953,104 +954,6 @@ Partial Class form_citas
         Me.Panel1.Size = New System.Drawing.Size(1000, 211)
         Me.Panel1.TabIndex = 91
         '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(586, 6)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(64, 13)
-        Me.Label17.TabIndex = 101
-        Me.Label17.Text = "Tipo de Cita"
-        '
-        'CBcitas
-        '
-        Me.CBcitas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CBcitas.FormattingEnabled = True
-        Me.CBcitas.Items.AddRange(New Object() {"1ra Cita", "2da Cita", "3ra Cita", "Cita Sucesiva"})
-        Me.CBcitas.Location = New System.Drawing.Point(586, 23)
-        Me.CBcitas.Name = "CBcitas"
-        Me.CBcitas.Size = New System.Drawing.Size(121, 21)
-        Me.CBcitas.TabIndex = 0
-        '
-        'grp_SalaDisponible
-        '
-        Me.grp_SalaDisponible.Controls.Add(Me.lnkSugerirHorario)
-        Me.grp_SalaDisponible.Controls.Add(Me.lblDispo)
-        Me.grp_SalaDisponible.Location = New System.Drawing.Point(724, 71)
-        Me.grp_SalaDisponible.Name = "grp_SalaDisponible"
-        Me.grp_SalaDisponible.Size = New System.Drawing.Size(191, 68)
-        Me.grp_SalaDisponible.TabIndex = 99
-        Me.grp_SalaDisponible.TabStop = False
-        Me.grp_SalaDisponible.Visible = False
-        '
-        'lnkSugerirHorario
-        '
-        Me.lnkSugerirHorario.AutoSize = True
-        Me.lnkSugerirHorario.Location = New System.Drawing.Point(6, 44)
-        Me.lnkSugerirHorario.Name = "lnkSugerirHorario"
-        Me.lnkSugerirHorario.Size = New System.Drawing.Size(75, 13)
-        Me.lnkSugerirHorario.TabIndex = 1
-        Me.lnkSugerirHorario.TabStop = True
-        Me.lnkSugerirHorario.Text = "Sugerir horario"
-        '
-        'lblDispo
-        '
-        Me.lblDispo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDispo.ForeColor = System.Drawing.Color.Red
-        Me.lblDispo.Location = New System.Drawing.Point(6, 13)
-        Me.lblDispo.Name = "lblDispo"
-        Me.lblDispo.Size = New System.Drawing.Size(183, 31)
-        Me.lblDispo.TabIndex = 0
-        Me.lblDispo.Text = "Sala No disponible en este horario"
-        '
-        'CtrlSalasvb1
-        '
-        Me.CtrlSalasvb1.ID_SALA = Nothing
-        Me.CtrlSalasvb1.Location = New System.Drawing.Point(436, 77)
-        Me.CtrlSalasvb1.Name = "CtrlSalasvb1"
-        Me.CtrlSalasvb1.Size = New System.Drawing.Size(285, 26)
-        Me.CtrlSalasvb1.TabIndex = 98
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(433, 61)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(80, 13)
-        Me.Label15.TabIndex = 97
-        Me.Label15.Text = "Sala / Consulta"
-        '
-        'btnDental
-        '
-        Me.btnDental.Image = CType(resources.GetObject("btnDental.Image"), System.Drawing.Image)
-        Me.btnDental.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnDental.Location = New System.Drawing.Point(499, 22)
-        Me.btnDental.Name = "btnDental"
-        Me.btnDental.Size = New System.Drawing.Size(63, 24)
-        Me.btnDental.TabIndex = 96
-        Me.btnDental.Text = "Dental"
-        Me.btnDental.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnDental.UseVisualStyleBackColor = True
-        '
-        'CtrlMedico1
-        '
-        Me.CtrlMedico1.DataBindings.Add(New System.Windows.Forms.Binding("ID_Medico", Me.CITASBindingSource, "REFMEDICO", True))
-        Me.CtrlMedico1.ID_Medico = Nothing
-        Me.CtrlMedico1.Location = New System.Drawing.Point(17, 56)
-        Me.CtrlMedico1.Name = "CtrlMedico1"
-        Me.CtrlMedico1.Size = New System.Drawing.Size(403, 42)
-        Me.CtrlMedico1.TabIndex = 95
-        '
-        'cb_citaMultiple
-        '
-        Me.cb_citaMultiple.AutoSize = True
-        Me.cb_citaMultiple.Location = New System.Drawing.Point(286, 139)
-        Me.cb_citaMultiple.Name = "cb_citaMultiple"
-        Me.cb_citaMultiple.Size = New System.Drawing.Size(83, 17)
-        Me.cb_citaMultiple.TabIndex = 93
-        Me.cb_citaMultiple.Text = "Cita Múltiple"
-        Me.cb_citaMultiple.UseVisualStyleBackColor = True
-        '
         'gb_citaMultiple
         '
         Me.gb_citaMultiple.Controls.Add(Me.tb_horafincm)
@@ -1167,6 +1070,104 @@ Partial Class form_citas
         Me.dtp_fechacm.Name = "dtp_fechacm"
         Me.dtp_fechacm.Size = New System.Drawing.Size(104, 20)
         Me.dtp_fechacm.TabIndex = 0
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(586, 6)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(64, 13)
+        Me.Label17.TabIndex = 101
+        Me.Label17.Text = "Tipo de Cita"
+        '
+        'CBcitas
+        '
+        Me.CBcitas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CBcitas.FormattingEnabled = True
+        Me.CBcitas.Items.AddRange(New Object() {"1ra Cita", "2da Cita", "3ra Cita", "Cita Sucesiva"})
+        Me.CBcitas.Location = New System.Drawing.Point(586, 23)
+        Me.CBcitas.Name = "CBcitas"
+        Me.CBcitas.Size = New System.Drawing.Size(121, 21)
+        Me.CBcitas.TabIndex = 0
+        '
+        'grp_SalaDisponible
+        '
+        Me.grp_SalaDisponible.Controls.Add(Me.lnkSugerirHorario)
+        Me.grp_SalaDisponible.Controls.Add(Me.lblDispo)
+        Me.grp_SalaDisponible.Location = New System.Drawing.Point(724, 71)
+        Me.grp_SalaDisponible.Name = "grp_SalaDisponible"
+        Me.grp_SalaDisponible.Size = New System.Drawing.Size(191, 68)
+        Me.grp_SalaDisponible.TabIndex = 99
+        Me.grp_SalaDisponible.TabStop = False
+        Me.grp_SalaDisponible.Visible = False
+        '
+        'lnkSugerirHorario
+        '
+        Me.lnkSugerirHorario.AutoSize = True
+        Me.lnkSugerirHorario.Location = New System.Drawing.Point(6, 44)
+        Me.lnkSugerirHorario.Name = "lnkSugerirHorario"
+        Me.lnkSugerirHorario.Size = New System.Drawing.Size(75, 13)
+        Me.lnkSugerirHorario.TabIndex = 1
+        Me.lnkSugerirHorario.TabStop = True
+        Me.lnkSugerirHorario.Text = "Sugerir horario"
+        '
+        'lblDispo
+        '
+        Me.lblDispo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDispo.ForeColor = System.Drawing.Color.Red
+        Me.lblDispo.Location = New System.Drawing.Point(6, 13)
+        Me.lblDispo.Name = "lblDispo"
+        Me.lblDispo.Size = New System.Drawing.Size(183, 31)
+        Me.lblDispo.TabIndex = 0
+        Me.lblDispo.Text = "Sala No disponible en este horario"
+        '
+        'CtrlSalasvb1
+        '
+        Me.CtrlSalasvb1.ID_SALA = Nothing
+        Me.CtrlSalasvb1.Location = New System.Drawing.Point(436, 77)
+        Me.CtrlSalasvb1.Name = "CtrlSalasvb1"
+        Me.CtrlSalasvb1.Size = New System.Drawing.Size(285, 26)
+        Me.CtrlSalasvb1.TabIndex = 98
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(433, 61)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(80, 13)
+        Me.Label15.TabIndex = 97
+        Me.Label15.Text = "Sala / Consulta"
+        '
+        'btnDental
+        '
+        Me.btnDental.Image = CType(resources.GetObject("btnDental.Image"), System.Drawing.Image)
+        Me.btnDental.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnDental.Location = New System.Drawing.Point(499, 22)
+        Me.btnDental.Name = "btnDental"
+        Me.btnDental.Size = New System.Drawing.Size(63, 24)
+        Me.btnDental.TabIndex = 96
+        Me.btnDental.Text = "Dental"
+        Me.btnDental.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnDental.UseVisualStyleBackColor = True
+        '
+        'CtrlMedico1
+        '
+        Me.CtrlMedico1.DataBindings.Add(New System.Windows.Forms.Binding("ID_Medico", Me.CITASBindingSource, "REFMEDICO", True))
+        Me.CtrlMedico1.ID_Medico = Nothing
+        Me.CtrlMedico1.Location = New System.Drawing.Point(17, 56)
+        Me.CtrlMedico1.Name = "CtrlMedico1"
+        Me.CtrlMedico1.Size = New System.Drawing.Size(403, 42)
+        Me.CtrlMedico1.TabIndex = 95
+        '
+        'cb_citaMultiple
+        '
+        Me.cb_citaMultiple.AutoSize = True
+        Me.cb_citaMultiple.Location = New System.Drawing.Point(286, 139)
+        Me.cb_citaMultiple.Name = "cb_citaMultiple"
+        Me.cb_citaMultiple.Size = New System.Drawing.Size(83, 17)
+        Me.cb_citaMultiple.TabIndex = 93
+        Me.cb_citaMultiple.Text = "Cita Múltiple"
+        Me.cb_citaMultiple.UseVisualStyleBackColor = True
         '
         'lblEdicionDesactivada
         '
@@ -1788,10 +1789,10 @@ Partial Class form_citas
         Me.grpFechaHora.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.grp_SalaDisponible.ResumeLayout(False)
-        Me.grp_SalaDisponible.PerformLayout()
         Me.gb_citaMultiple.ResumeLayout(False)
         Me.gb_citaMultiple.PerformLayout()
+        Me.grp_SalaDisponible.ResumeLayout(False)
+        Me.grp_SalaDisponible.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
@@ -1951,4 +1952,5 @@ Partial Class form_citas
     Friend WithEvents DescuentoPercent As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Total As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Duracion As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
 End Class
