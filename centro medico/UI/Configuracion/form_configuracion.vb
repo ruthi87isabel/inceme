@@ -378,6 +378,8 @@ Public Class form_configuracion
             Else
                 Globales.Configuracion.IdentificadorClinica = TbIdClinica.Text
             End If
+        Else
+            Globales.Configuracion.IdentificadorClinica = TbIdClinica.Text
         End If
 
         If rb_solpInicialPacAntecPerson.Checked = True Then

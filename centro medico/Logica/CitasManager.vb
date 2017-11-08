@@ -195,7 +195,7 @@ Partial Class CITA
 
                 datos += "{""IdCita"": " + citas.Item(i).IDCITA.ToString + ", ""Fecha"": """ + citas.Item(i).FECHA.ToString + """, ""Hora"": """ + citas.Item(i).HORA.ToString +
                 """, ""Nota"": """ + citas.Item(i).NOTAS + """, ""Paciente"": """ + citas.Item(i).PACIENTE1.NombreCompleto + """, ""Anulada"": """ + citas.Item(i).FALTA +
-                """, ""Confirmada"": """ + citas.Item(i).CONFIRMADA + """, ""Atendida"", """ + citas.Item(i).ATENDIDO + """, ""Pagada"": """ + citas.Item(i).PAGADA + """"
+                """, ""Confirmada"": """ + citas.Item(i).CONFIRMADA + """, ""Atendida"":, """ + citas.Item(i).ATENDIDO + """, ""Pagada"": """ + citas.Item(i).PAGADA + """"
                 If lineas.Count > 0 Then
                     datos += ", ""Lineas"": ["
                     For j As Integer = 0 To lineas.Count - 1
@@ -254,7 +254,7 @@ Partial Class CITA
                 End If
                 datos += "{""IdCita"": " + citas.Item(i).IDCITA.ToString + ", ""Fecha"": """ + citas.Item(i).FECHA.ToString + """, ""Hora"": """ + citas.Item(i).HORA.ToString +
                     """, ""Nota"": """ + citas.Item(i).NOTAS + """, ""Paciente"": """ + citas.Item(i).PACIENTE1.NombreCompleto + """, ""Anulada"": """ + citas.Item(i).FALTA +
-                    """, ""Confirmada"": """ + citas.Item(i).CONFIRMADA + """, ""Atendida"", """ + citas.Item(i).ATENDIDO + """, ""Pagada"": """ + citas.Item(i).PAGADA + """"
+                    """, ""Confirmada"": """ + citas.Item(i).CONFIRMADA + """, ""Atendida"":, """ + citas.Item(i).ATENDIDO + """, ""Pagada"": """ + citas.Item(i).PAGADA + """"
                 If lineas.Count > 0 Then
                     datos += ", ""Lineas"": ["
                     For j As Integer = 0 To lineas.Count - 1
