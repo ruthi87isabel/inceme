@@ -219,7 +219,7 @@ Partial Class CITA
 
             If datos <> "" Then
                 Dim datosenc As String = seguridad.EncryptString(datos, usuario.CONTRASENA)
-                CreaJson(datos, fecha, usuario.USUARIO)
+                'CreaJson(datos, fecha, usuario.USUARIO)
                 Dim Ftp As New FtpManager
                 Ftp.SaveFileFtp(datosenc, fecha, usuario.USUARIO)
                 Ftp.DeleteOldFileFtp(usuario.USUARIO)
