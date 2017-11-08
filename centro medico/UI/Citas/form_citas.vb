@@ -1548,7 +1548,6 @@ Public Class form_citas
                         BackgroundWorker1.RunWorkerAsync()
                     End If
                 End If
-
             End If
 
         End If

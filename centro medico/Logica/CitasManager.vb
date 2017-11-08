@@ -177,7 +177,7 @@ Partial Class CITA
         Dim usuario As USUARIO = New USUARIO
 
         Dim citas As List(Of CITA) = (From c In ldcontext.CITAs Select c _
-                        Where c.FECHA = fecha And c.REFMEDICO = idmedico And c.FALTA = "N" _
+                        Where c.FECHA = fecha And c.REFMEDICO = idmedico And c.FALTA = "N" And c.Eliminado = False _
                         Order By c.HORA Ascending).ToList()
 
         If citas.Count > 0 Then
@@ -200,7 +200,7 @@ Partial Class CITA
                     datos += "["
                     For j As Integer = 0 To lineas.Count - 1
                         datos += "{ ""Idlinea"": " + lineas.Item(j).IdLinea.ToString + ", ""Descripcion"": """ + lineas.Item(j).DESCRIPCION + """, ""Cantidad"": " +
-                        lineas.Item(j).Cantidad.ToString + ", ""ImporteClinica"": " + lineas.Item(j).ImporteClinica.ToString + ", ""ImporteDoctor"": " + lineas.Item(j).ImporteDr.ToString + "}"
+                        lineas.Item(j).Cantidad.ToString + ", ""ImporteClinica"": " + lineas.Item(j).ImporteClinica.ToString.Replace(",", ".") + ", ""ImporteDoctor"": " + lineas.Item(j).ImporteDr.ToString.Replace(",", ".") + "}"
                         If j <> lineas.Count - 1 Then
                             datos += ","
                         Else
@@ -235,7 +235,7 @@ Partial Class CITA
         Dim usuario As USUARIO = New USUARIO
 
         Dim citas As List(Of CITA) = (From c In ldcontext.CITAs Select c _
-                        Where c.FECHA = fecha And c.FALTA = "N" _
+                        Where c.FECHA = fecha And c.FALTA = "N" And c.Eliminado = False _
                         Order By c.REFMEDICO, c.HORA Ascending).ToList()
         If citas.Count > 0 Then
 
@@ -261,7 +261,7 @@ Partial Class CITA
                     datos += "["
                     For j As Integer = 0 To lineas.Count - 1
                         datos += "{ ""Idlinea"": " + lineas.Item(j).IdLinea.ToString + ", ""Descripcion"": """ + lineas.Item(j).DESCRIPCION + """, ""Cantidad"": " +
-                        lineas.Item(j).Cantidad.ToString + ", ""ImporteClinica"": " + lineas.Item(j).ImporteClinica.ToString + ", ""ImporteDoctor"": " + lineas.Item(j).ImporteDr.ToString + "}"
+                        lineas.Item(j).Cantidad.ToString + ", ""ImporteClinica"": " + lineas.Item(j).ImporteClinica.ToString.Replace(",", ".") + ", ""ImporteDoctor"": " + lineas.Item(j).ImporteDr.ToString.Replace(",", ".") + "}"
                         If j <> lineas.Count - 1 Then
                             datos += ","
                         Else
