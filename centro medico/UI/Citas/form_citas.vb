@@ -3,6 +3,7 @@ Imports Microsoft.ApplicationBlocks.Data
 Imports System.Linq
 Imports Microsoft.Reporting.WinForms
 Imports centro_medico.UI.Reportes
+Imports System.ComponentModel
 
 Public Class form_citas
     Dim cambioCT As Integer
@@ -54,6 +55,9 @@ Public Class form_citas
 
     Public ID_Sala As Nullable(Of Integer) = Nothing
     Dim horas As IList(Of HORARIOS_MEDICOS)
+
+    Dim Sincfecha As Date
+    Dim Sincmedico As Integer
 
 
     Sub New(ByVal aName As String, ByVal aCurrentAccion As Enums.Accion, ByVal afecha As Date, ID_SalaP As Nullable(Of Integer))
@@ -1536,9 +1540,15 @@ Public Class form_citas
             End Try
 
             If _fecha > Date.Now.AddDays(-7) Then
-                Dim Cita As New CITA
                 Dim USUARIO As USUARIO = (From u In context.USUARIOs Select u Where u.REFMEDICO = _idmedico).FirstOrDefault
-                If Not USUARIO Is Nothing And Globales.Configuracion.SincCalendCitaFtp Then Cita.SincronizarMedicoCitas(_fecha.ToString("yyyy-MM-dd"), _idmedico)
+                If Not USUARIO Is Nothing And Globales.Configuracion.SincCalendCitaFtp Then
+                    Sincfecha = _fecha
+                    Sincmedico = _idmedico
+                    If Not BackgroundWorker1.IsBusy Then
+                        BackgroundWorker1.RunWorkerAsync()
+                    End If
+                End If
+
             End If
 
         End If
@@ -1550,6 +1560,11 @@ Public Class form_citas
         Return True
         'Me.Close()
     End Function
+
+    Private Sub BackgroundWorker1_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+        Dim Cita As New CITA
+        Cita.SincronizarMedicoCitas(Sincfecha.ToString("yyyy-MM-dd"), Sincmedico)
+    End Sub
 
     Private Function Is_CitaDay(ByVal aday As Date) As Boolean
         Dim day As Integer = DateAndTime.Weekday(aday, FirstDayOfWeek.Sunday)

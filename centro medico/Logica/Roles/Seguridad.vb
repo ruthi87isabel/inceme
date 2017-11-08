@@ -1,7 +1,7 @@
 ﻿Imports System.Security.Cryptography
 
 Public Class Seguridad
-    Public Function EncryptData(Message As String, key As String) As String
+    Public Function EncryptString(Message As String, key As String) As String
 
         Dim Results() As Byte
         Dim UTF8 As System.Text.UTF8Encoding = New System.Text.UTF8Encoding()

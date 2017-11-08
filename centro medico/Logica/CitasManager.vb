@@ -195,9 +195,9 @@ Partial Class CITA
 
                 datos += "{""IdCita"": " + citas.Item(i).IDCITA.ToString + ", ""Fecha"": """ + citas.Item(i).FECHA.ToString + """, ""Hora"": """ + citas.Item(i).HORA.ToString +
                 """, ""Nota"": """ + citas.Item(i).NOTAS + """, ""Paciente"": """ + citas.Item(i).PACIENTE1.NombreCompleto + """, ""Anulada"": """ + citas.Item(i).FALTA +
-                """, ""Confirmada"": """ + citas.Item(i).CONFIRMADA + """, ""Atendida"": """ + citas.Item(i).ATENDIDO + """, ""Pagada"": """ + citas.Item(i).PAGADA + """"
+                """, ""Confirmada"": """ + citas.Item(i).CONFIRMADA + """, ""Atendida"": """ + citas.Item(i).ATENDIDO + """, ""Pagada"": """ + citas.Item(i).PAGADA + """, ""Lineas"": "
                 If lineas.Count > 0 Then
-                    datos += ", ""Lineas"": ["
+                    datos += "["
                     For j As Integer = 0 To lineas.Count - 1
                         datos += "{ ""Idlinea"": " + lineas.Item(j).IdLinea.ToString + ", ""Descripcion"": """ + lineas.Item(j).DESCRIPCION + """, ""Cantidad"": " +
                         lineas.Item(j).Cantidad.ToString + ", ""ImporteClinica"": " + lineas.Item(j).ImporteClinica.ToString + ", ""ImporteDoctor"": " + lineas.Item(j).ImporteDr.ToString + "}"
@@ -207,6 +207,8 @@ Partial Class CITA
                             datos += "]}"
                         End If
                     Next
+                Else
+                    datos += """""}"
                 End If
                 If i < citas.Count - 1 Then
                     datos += ","
@@ -216,8 +218,8 @@ Partial Class CITA
             Next
 
             If datos <> "" Then
-                Dim datosenc As String = seguridad.EncryptData(datos, usuario.CONTRASENA)
-                'CreaJson(datos, fecha, usuario.USUARIO)
+                Dim datosenc As String = seguridad.EncryptString(datos, usuario.CONTRASENA)
+                CreaJson(datos, fecha, usuario.USUARIO)
                 Dim Ftp As New FtpManager
                 Ftp.SaveFileFtp(datosenc, fecha, usuario.USUARIO)
                 Ftp.DeleteOldFileFtp(usuario.USUARIO)
@@ -254,9 +256,9 @@ Partial Class CITA
                 End If
                 datos += "{""IdCita"": " + citas.Item(i).IDCITA.ToString + ", ""Fecha"": """ + citas.Item(i).FECHA.ToString + """, ""Hora"": """ + citas.Item(i).HORA.ToString +
                     """, ""Nota"": """ + citas.Item(i).NOTAS + """, ""Paciente"": """ + citas.Item(i).PACIENTE1.NombreCompleto + """, ""Anulada"": """ + citas.Item(i).FALTA +
-                    """, ""Confirmada"": """ + citas.Item(i).CONFIRMADA + """, ""Atendida"": """ + citas.Item(i).ATENDIDO + """, ""Pagada"": """ + citas.Item(i).PAGADA + """"
+                    """, ""Confirmada"": """ + citas.Item(i).CONFIRMADA + """, ""Atendida"": """ + citas.Item(i).ATENDIDO + """, ""Pagada"": """ + citas.Item(i).PAGADA + """, ""Lineas"": "
                 If lineas.Count > 0 Then
-                    datos += ", ""Lineas"": ["
+                    datos += "["
                     For j As Integer = 0 To lineas.Count - 1
                         datos += "{ ""Idlinea"": " + lineas.Item(j).IdLinea.ToString + ", ""Descripcion"": """ + lineas.Item(j).DESCRIPCION + """, ""Cantidad"": " +
                         lineas.Item(j).Cantidad.ToString + ", ""ImporteClinica"": " + lineas.Item(j).ImporteClinica.ToString + ", ""ImporteDoctor"": " + lineas.Item(j).ImporteDr.ToString + "}"
@@ -266,12 +268,14 @@ Partial Class CITA
                             datos += "]}"
                         End If
                     Next
+                Else
+                    datos += """""}"
                 End If
                 If i < citas.Count - 1 And medic = citas.Item(i + 1).REFMEDICO Then
                     datos += ","
                 Else
                     datos += "]}"
-                    Dim datosenc As String = seguridad.EncryptData(datos, usuario.CONTRASENA)
+                    Dim datosenc As String = seguridad.EncryptString(datos, usuario.CONTRASENA)
                     'CreaJson(datosenc, fecha, usuario.USUARIO)
                     Dim Ftp As New FtpManager
                     Ftp.SaveFileFtp(datosenc, fecha, usuario.USUARIO)
@@ -286,7 +290,7 @@ Partial Class CITA
         usuario = usuario.Replace(" ", "_")
         Dim Path As String = "c:\SincronizacionCitasXMedico\" + Globales.Configuracion.IdentificadorClinica + "\" + usuario
         Directory.CreateDirectory(Path)
-        Dim ruta As String = Path + "\" + fecha + ".txt"
+        Dim ruta As String = Path + "\" + fecha + ".json"
         Dim escritor As StreamWriter
         escritor = New StreamWriter(ruta)
         escritor.Write(datos)
