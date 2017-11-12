@@ -189,7 +189,7 @@ Partial Class CITA
                     medic = citas.Item(i).REFMEDICO
                     usuario = (From u In ldcontext.USUARIOs Select u Where u.REFMEDICO = medic).FirstOrDefault
 
-                    datos = "{""Medico_" + medic.ToString + """: { ""IdMedico"": " + medic.ToString + ",""Usuario"": """ + usuario.USUARIO + """, ""Contraseña"": """ +
+                    datos = "{""Medico"": { ""IdMedico"": " + medic.ToString + ",""Usuario"": """ + usuario.USUARIO + """, ""Contraseña"": """ +
                         usuario.CONTRASENA + """, ""Nombre"": """ + citas.Item(i).MEDICO.NOMBRECOMPLETO + """}, ""Citas"": ["
                 End If
 
@@ -251,7 +251,7 @@ Partial Class CITA
                         MedIdError = medic
                         Continue For
                     End If
-                    datos = "{""Medico_" + medic.ToString + """: { ""IdMedico"": " + medic.ToString + ",""Usuario"": """ + usuario.USUARIO + """, ""Contraseña"": """ +
+                    datos = "{""Medico"": { ""IdMedico"": " + medic.ToString + ",""Usuario"": """ + usuario.USUARIO + """, ""Contraseña"": """ +
                         usuario.CONTRASENA + """, ""Nombre"": """ + citas.Item(i).MEDICO.NOMBRECOMPLETO + """}, ""Citas"": ["
                 End If
                 datos += "{""IdCita"": " + citas.Item(i).IDCITA.ToString + ", ""Fecha"": """ + citas.Item(i).FECHA.ToString + """, ""Hora"": """ + citas.Item(i).HORA.ToString +
