@@ -1038,17 +1038,28 @@ Namespace UI.Citas
 #End Region
 
 #Region "Private Sub tstEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tstEliminar.Click"
+        Dim cita As New CITA
         Private Sub tstEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tstEliminar.Click
 
             Me.Estado = EstadoCalendario.Borrando
 
-            Dim cita As CITA = GetCurrentCita()
+            cita = GetCurrentCita()
 
             Globales.EliminarCitaCorrectamente(cita, False)
 
             LoadCitas()
+           
+            If Not BackgroundWorker1.IsBusy Then
+                BackgroundWorker1.RunWorkerAsync()
+            End If
+
             Me.Estado = EstadoCalendario.Idle
             GC.Collect()
+        End Sub
+
+        Private Sub BackgroundWorker1_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+            Dim fecha As Date = cita.FECHA
+            cita.SincronizarMedicoCitas(fecha.ToString("yyyy-MM-dd"), cita.REFMEDICO)
         End Sub
 #End Region
 

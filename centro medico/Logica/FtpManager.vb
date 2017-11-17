@@ -48,6 +48,25 @@ Public Class FtpManager
         Return True
     End Function
 
+    'Elimina el fichero que tiene una sola cita y esta es eliminada
+    Public Function DeleteFileFtp(usuario As String, fecha As String) As Boolean
+        usuario = usuario.Replace(" ", "_")
+        Dim cita As New CITA
+        Dim Path As String = "ftp://home466817636.1and1-data.host/SincronizacionCitasXMedico/" + Globales.Configuracion.IdentificadorClinica + "/" + usuario
+        If Not GetDirectoryExists(Path) Then Return False
+
+        Try
+            Dim request As FtpWebRequest = DirectCast(WebRequest.Create(Path + "/" + fecha + ".txt"), FtpWebRequest)
+            request.Credentials = New NetworkCredential(User, Password)
+            request.Method = WebRequestMethods.Ftp.DeleteFile
+            Dim response As FtpWebResponse = request.GetResponse
+            response.Close()
+        Catch ex As Exception
+            Return False
+        End Try
+        Return True
+    End Function
+
     Public Sub SaveFileFtp(datos As String, fecha As String, usuario As String)
         usuario = usuario.Replace(" ", "_")
         Dim fullpath As String = CreateFolderFtp(usuario)

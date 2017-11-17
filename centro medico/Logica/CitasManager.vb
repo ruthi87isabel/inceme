@@ -174,10 +174,11 @@ Partial Class CITA
         Dim medic As Integer = 0
 
         Dim seguridad As Seguridad = New Seguridad
-        Dim usuario As USUARIO = New USUARIO
+        Dim usuario As USUARIO = (From u In ldcontext.USUARIOs Select u Where u.REFMEDICO = idmedico).FirstOrDefault
+        Dim Ftp As New FtpManager
 
         Dim citas As List(Of CITA) = (From c In ldcontext.CITAs Select c _
-                        Where c.FECHA = fecha And c.REFMEDICO = idmedico And c.FALTA = "N" And c.Eliminado = False _
+                        Where c.FECHA = fecha And c.REFMEDICO = idmedico And c.Eliminado = False _
                         Order By c.HORA Ascending).ToList()
 
         If citas.Count > 0 Then
@@ -187,7 +188,6 @@ Partial Class CITA
 
                 If medic <> citas.Item(i).REFMEDICO Then
                     medic = citas.Item(i).REFMEDICO
-                    usuario = (From u In ldcontext.USUARIOs Select u Where u.REFMEDICO = medic).FirstOrDefault
 
                     datos = "{""Medico"": { ""IdMedico"": " + medic.ToString + ",""Usuario"": """ + usuario.USUARIO + """, ""Contraseña"": """ +
                         usuario.CONTRASENA + """, ""Nombre"": """ + citas.Item(i).MEDICO.NOMBRECOMPLETO + """}, ""Citas"": ["
@@ -220,10 +220,11 @@ Partial Class CITA
             If datos <> "" Then
                 Dim datosenc As String = seguridad.EncryptString(datos, usuario.CONTRASENA)
                 'CreaJson(datos, fecha, usuario.USUARIO)
-                Dim Ftp As New FtpManager
                 Ftp.SaveFileFtp(datosenc, fecha, usuario.USUARIO)
                 Ftp.DeleteOldFileFtp(usuario.USUARIO)
             End If
+        Else
+            Ftp.DeleteFileFtp(usuario.USUARIO, fecha)
         End If
     End Sub
 
@@ -233,9 +234,10 @@ Partial Class CITA
         Dim MedIdError As Integer = 0
         Dim seguridad As Seguridad = New Seguridad
         Dim usuario As USUARIO = New USUARIO
+        Dim Ftp As New FtpManager
 
         Dim citas As List(Of CITA) = (From c In ldcontext.CITAs Select c _
-                        Where c.FECHA = fecha And c.FALTA = "N" And c.Eliminado = False _
+                        Where c.FECHA = fecha And c.Eliminado = False _
                         Order By c.REFMEDICO, c.HORA Ascending).ToList()
         If citas.Count > 0 Then
 
@@ -277,12 +279,14 @@ Partial Class CITA
                     datos += "]}"
                     Dim datosenc As String = seguridad.EncryptString(datos, usuario.CONTRASENA)
                     'CreaJson(datosenc, fecha, usuario.USUARIO)
-                    Dim Ftp As New FtpManager
+
                     Ftp.SaveFileFtp(datosenc, fecha, usuario.USUARIO)
                     Ftp.DeleteOldFileFtp(usuario.USUARIO)
                     datos = ""
                 End If
             Next
+        Else
+            Ftp.DeleteFileFtp(usuario.USUARIO, fecha)
         End If
     End Sub
 

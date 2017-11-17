@@ -134,6 +134,7 @@
             Me.Label3 = New System.Windows.Forms.Label()
             Me.pbLoading = New System.Windows.Forms.PictureBox()
             Me.Rango = New System.Windows.Forms.Button()
+            Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
             CType(Me.CITABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.TabControl1.SuspendLayout()
             Me.tabCalendario.SuspendLayout()
@@ -1047,6 +1048,11 @@
             Me.Rango.Text = "Rango"
             Me.Rango.UseVisualStyleBackColor = True
             '
+            'BackgroundWorker1
+            '
+            Me.BackgroundWorker1.WorkerReportsProgress = True
+            Me.BackgroundWorker1.WorkerSupportsCancellation = True
+            '
             'frmCalendarioCitas
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1201,5 +1207,6 @@
         Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
         Friend WithEvents Label4 As System.Windows.Forms.Label
         Friend WithEvents Label3 As System.Windows.Forms.Label
+        Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     End Class
 End Namespace

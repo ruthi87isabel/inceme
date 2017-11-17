@@ -1565,6 +1565,10 @@ Public Class form_citas
         Cita.SincronizarMedicoCitas(Sincfecha.ToString("yyyy-MM-dd"), Sincmedico)
     End Sub
 
+    Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
+        BackgroundWorker1.CancelAsync()
+    End Sub
+
     Private Function Is_CitaDay(ByVal aday As Date) As Boolean
         Dim day As Integer = DateAndTime.Weekday(aday, FirstDayOfWeek.Sunday)
         If day = 1 And chb_dom.Checked = True Then
