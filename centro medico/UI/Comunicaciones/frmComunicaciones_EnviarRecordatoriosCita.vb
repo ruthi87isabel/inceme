@@ -22,7 +22,6 @@ Public Class frmComunicaciones_EnviarRecordatoriosCita
     Public CitasRecordarSMS As Dictionary(Of Integer, CITA) = New Dictionary(Of Integer, CITA)
 
 
-
     Private Sub dtp_fi_ValueChanged(sender As System.Object, e As System.EventArgs) Handles dtp_fi.ValueChanged
         CargaDatos()
     End Sub
@@ -185,7 +184,13 @@ Public Class frmComunicaciones_EnviarRecordatoriosCita
             End Try
 
             'mailer.SendMailAsync(Message, Message)
-            mailer.SendMailAsync(emailQueue)
+
+            If Not mailer.SendMailAsync(emailQueue) Then
+                lbl_Loading.Text = "Error..."
+                pnl_Loading.Enabled = False
+                pnl_Loading.Visible = False
+                SetEnabled(True)
+            End If
 
         Else
             If CitasRecordarSMS.Count = 0 Then

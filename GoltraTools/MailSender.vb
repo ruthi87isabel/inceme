@@ -53,10 +53,10 @@ Namespace Mail
 
         End Sub
         
-        Public Sub SendMailAsync(ByVal emailQueue As List(Of MessageWrapper))
+        Public Function SendMailAsync(ByVal emailQueue As List(Of MessageWrapper)) As Boolean
             If emailQueue.Count = 0 Then
                 MessageBox.Show("Lista de Mensajes Vacia")
-                Return
+                Return False
             End If
 
             Me.emailQueue = emailQueue
@@ -67,17 +67,20 @@ Namespace Mail
                 Cliente.SendAsync(emailQueue(currentEmail).Message, emailQueue(currentEmail))
 
             Catch ex As Exception
-
+                log.Log("*** " & Now.ToString & " - Enviado email de recordatorio de cita")
+                log.Log(vbTab & ex.Message)
+                log.Log(vbTab & "envio cancelado")
                 MessageBox.Show("ERROR Enviando correos")
                 Try
                     Cliente.SendAsyncCancel()
                 Catch ex2 As Exception
                     MsgBox(ex2.ToString)
                 End Try
-
+                Return False
             End Try
 
-        End Sub
+            Return True
+        End Function
 
         Public Sub SendMailReportAsync(ByVal message As MailMessage, ByVal report As LocalReport, ByRef UserToken As Object)
 
@@ -138,6 +141,7 @@ Namespace Mail
         Private Sub SendingPartialCompleted(sender As Object, e As System.ComponentModel.AsyncCompletedEventArgs)
             'Cliente.SendAsync(emailQueue(currentEmail), Me)
             log.FileName = Application.StartupPath & "\log.txt"
+
             log.Log("*** " & Now.ToString & " - enviado email a " & e.UserState.message.To.ToString)
 
             If Not e.Cancelled Then
