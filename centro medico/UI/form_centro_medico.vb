@@ -1495,7 +1495,7 @@ Public Class form_centro_medico
 
     Public Sub ChequeaVersionBD()
         '22-01-2016 texto que define la versión mínima de bd para funcionar con la versión de aplicación actual
-        Dim minDatabaseVersion As String = "1.0.4.0"
+        Dim minDatabaseVersion As String = "1.0.4.4"
 
         'Obtiene la version almacenada en la BD y deberia compararse con la version del ensamblado
         Dim strSql As String = "Select Valor from VariablesGlobales WHERE Clave = 'DB_Version'"
