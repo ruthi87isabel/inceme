@@ -878,4 +878,22 @@ Public Class frmListadoCitas
         End If
 
     End Sub
+
+    Dim CountEnt As Integer = 0
+    Dim TimeEnt As Date
+    Private Sub vbKeyReturnNC(sender As Object, e As KeyEventArgs) Handles txtNombre.KeyUp, txtApellido1.KeyUp, txtApellido2.KeyUp, txtDni.KeyUp
+        If e.KeyData = Keys.Enter Then
+            CountEnt += 1
+            If CountEnt = 1 Then
+                TimeEnt = Date.Now.AddSeconds(1.5)
+            ElseIf Date.Now < TimeEnt Then
+                CountEnt = 0
+                fechacobEnabled = GBfecha_cobro.Enabled
+                CargarCitas()
+            Else
+                CountEnt = 0
+            End If
+        End If
+    End Sub
+
 End Class

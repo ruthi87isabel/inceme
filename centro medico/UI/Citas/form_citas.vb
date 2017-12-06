@@ -1534,6 +1534,7 @@ Public Class form_citas
 
                     End If
                 Next
+                fIdCITA = idCitaTrasInsertar
                 context.SubmitChanges()
 
             Catch ex As Exception

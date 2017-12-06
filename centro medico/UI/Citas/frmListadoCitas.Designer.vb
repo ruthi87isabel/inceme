@@ -103,6 +103,7 @@ Partial Class frmListadoCitas
         Me.CtrlMedico1 = New centro_medico.ctrlMedico()
         Me.CtrlMutua1 = New centro_medico.ctrlMutua()
         Me.CtrlFormaPago21 = New centro_medico.ctrlFormaPago2()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox3.SuspendLayout()
         Me.GBfecha_cita.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -861,6 +862,10 @@ Partial Class frmListadoCitas
         Me.CtrlFormaPago21.Size = New System.Drawing.Size(279, 23)
         Me.CtrlFormaPago21.TabIndex = 121
         '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1500
+        '
         'frmListadoCitas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1007,4 +1012,5 @@ Partial Class frmListadoCitas
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents dtp_fcf As System.Windows.Forms.DateTimePicker
     Friend WithEvents dtp_fci As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
 End Class

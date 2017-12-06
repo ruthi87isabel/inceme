@@ -760,6 +760,8 @@ Public Class frmPacientesListado
         If txtNombre.Text = String.Empty And _
             txtCodigoPropio.Text = String.Empty And _
             txtDni.Text = String.Empty And _
+            txtMovil.Text = String.Empty And _
+            txtTelefono.Text = String.Empty And _
             txtApellido1.Text = String.Empty And _
             txtApellido2.Text = String.Empty Then
 
@@ -989,6 +991,21 @@ Public Class frmPacientesListado
         End If
     End Sub
 
+    Dim CountEnt As Integer = 0
+    Dim TimeEnt As Date
+    Private Sub vbKeyReturnNC(sender As Object, e As KeyEventArgs) Handles txtCodigoPropio.KeyUp, txtNombre.KeyUp, txtApellido1.KeyUp, txtApellido2.KeyUp, txtDni.KeyUp, txtDireccion.KeyUp, txtTelefono.KeyUp, txtMovil.KeyUp, CtrlTMail.KeyUp
+        If e.KeyData = Keys.Enter Then
+            CountEnt += 1
+            If CountEnt = 1 Then
+                TimeEnt = Date.Now.AddSeconds(1.5)
+            ElseIf Date.Now < TimeEnt Then
+                CountEnt = 0
+                PopulateGrid()
+            Else
+                CountEnt = 0
+            End If
+        End If
+    End Sub
 
 End Class
 
