@@ -3,7 +3,7 @@ GO
 
 /****** Object:  Database [siesta]    Script Date: 11/04/2016 12:20:44 ******/
 CREATE DATABASE [siesta] ON  PRIMARY 
-( NAME = N'siesta', FILENAME = N'Direction\siesta.mdf' , SIZE = 3072KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
+( NAME = N'siesta', FILENAME = N'Direction\siesta.mdf' , SIZE = 5120KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
  LOG ON 
 ( NAME = N'siesta_log', FILENAME = N'Direction\siesta_log.ldf' , SIZE = 1024KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
 GO
