@@ -48,16 +48,16 @@ Partial Class form_citas
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim GridEX1_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout()
         Dim GridEX1_DesignTimeLayout_Reference_0 As Janus.Windows.Common.Layouts.JanusLayoutReference = New Janus.Windows.Common.Layouts.JanusLayoutReference("GridEXLayoutData.RootTable.Columns.Column19.ButtonImage")
         Dim GridEX1_DesignTimeLayout_Reference_1 As Janus.Windows.Common.Layouts.JanusLayoutReference = New Janus.Windows.Common.Layouts.JanusLayoutReference("GridEXLayoutData.RootTable.Columns.Column20.ButtonImage")
         Dim GridEX1_DesignTimeLayout_Reference_2 As Janus.Windows.Common.Layouts.JanusLayoutReference = New Janus.Windows.Common.Layouts.JanusLayoutReference("GridEXLayoutData.RootTable.ChildTables.Table0.Columns.Column4.ButtonImage")
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dtp_fecha = New System.Windows.Forms.DateTimePicker()
         Me.CITASBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CMDataSet = New centro_medico.CMDataSet()
@@ -72,6 +72,7 @@ Partial Class form_citas
         Me.pnl_Facturar = New System.Windows.Forms.Panel()
         Me.bt_factura = New System.Windows.Forms.Button()
         Me.btn_DesasociarFactura = New System.Windows.Forms.Button()
+        Me.txtDescuentoTotal = New centro_medico.ctrlTextboxAvanzado()
         Me.lb_ftexto = New System.Windows.Forms.Label()
         Me.lb_factura = New System.Windows.Forms.Label()
         Me.pb_facturas = New System.Windows.Forms.PictureBox()
@@ -84,6 +85,9 @@ Partial Class form_citas
         Me.lb_recibo = New System.Windows.Forms.Label()
         Me.bt_forma = New System.Windows.Forms.Button()
         Me.chb_recibo = New System.Windows.Forms.CheckBox()
+        Me.tb_clinica = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_dr = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_idforma = New centro_medico.ctrlTextboxAvanzado()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.bntAsistenteFacturacion = New System.Windows.Forms.Button()
         Me.grpFechaHora = New System.Windows.Forms.GroupBox()
@@ -115,8 +119,10 @@ Partial Class form_citas
         Me.grp_SalaDisponible = New System.Windows.Forms.GroupBox()
         Me.lnkSugerirHorario = New System.Windows.Forms.LinkLabel()
         Me.lblDispo = New System.Windows.Forms.Label()
+        Me.CtrlSalasvb1 = New centro_medico.ctrlSalasvb()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.btnDental = New System.Windows.Forms.Button()
+        Me.CtrlMedico1 = New centro_medico.ctrlMedico()
         Me.cb_citaMultiple = New System.Windows.Forms.CheckBox()
         Me.lblEdicionDesactivada = New System.Windows.Forms.Label()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
@@ -139,17 +145,6 @@ Partial Class form_citas
         Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.tstrip_Info = New System.Windows.Forms.ToolStripStatusLabel()
         Me.dg_LineasCitas = New System.Windows.Forms.DataGridView()
-        Me.colIdCita = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colRefConcepto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colBuscar = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.colDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colCantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colImporteClinica = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colImporteDoctor = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnDtoImp = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DescuentoPercent = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Duracion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LineasCitasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.bt_AddLinea = New System.Windows.Forms.Button()
         Me.bt_DelLinea = New System.Windows.Forms.Button()
@@ -189,12 +184,17 @@ Partial Class form_citas
         Me.CtrlPaciente1 = New centro_medico.ctrlPaciente()
         Me.CtrlStatusPaciente1 = New centro_medico.ctrlStatusPaciente()
         Me.tb_notas = New centro_medico.ctrlTextboxAvanzado()
-        Me.CtrlSalasvb1 = New centro_medico.ctrlSalasvb()
-        Me.CtrlMedico1 = New centro_medico.ctrlMedico()
-        Me.txtDescuentoTotal = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_clinica = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_dr = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_idforma = New centro_medico.ctrlTextboxAvanzado()
+        Me.colIdCita = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colBuscar = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.colRefConcepto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colCantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colImporteClinica = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colImporteDoctor = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescuentoPercent = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Duracion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnDtoImp = New System.Windows.Forms.DataGridViewTextBoxColumn()
         FECHALabel = New System.Windows.Forms.Label()
         HORALabel = New System.Windows.Forms.Label()
         IMPORTEDRLabel = New System.Windows.Forms.Label()
@@ -630,6 +630,17 @@ Partial Class form_citas
         Me.btn_DesasociarFactura.UseVisualStyleBackColor = True
         Me.btn_DesasociarFactura.Visible = False
         '
+        'txtDescuentoTotal
+        '
+        Me.txtDescuentoTotal.AcceptsReturn = True
+        Me.txtDescuentoTotal.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CITASBindingSource, "Descuento", True))
+        Me.txtDescuentoTotal.Location = New System.Drawing.Point(122, 34)
+        Me.txtDescuentoTotal.Name = "txtDescuentoTotal"
+        Me.txtDescuentoTotal.ReadOnly = True
+        Me.txtDescuentoTotal.Size = New System.Drawing.Size(50, 20)
+        Me.txtDescuentoTotal.TabIndex = 90
+        Me.txtDescuentoTotal.Text = "0,00"
+        '
         'lb_ftexto
         '
         Me.lb_ftexto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
@@ -744,6 +755,38 @@ Partial Class form_citas
         Me.chb_recibo.Name = "chb_recibo"
         Me.chb_recibo.Size = New System.Drawing.Size(25, 24)
         Me.chb_recibo.TabIndex = 65
+        '
+        'tb_clinica
+        '
+        Me.tb_clinica.AcceptsReturn = True
+        Me.tb_clinica.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CITASBindingSource, "IMPORTECL", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
+        Me.tb_clinica.Location = New System.Drawing.Point(6, 34)
+        Me.tb_clinica.Name = "tb_clinica"
+        Me.tb_clinica.ReadOnly = True
+        Me.tb_clinica.Size = New System.Drawing.Size(53, 20)
+        Me.tb_clinica.TabIndex = 0
+        Me.tb_clinica.Text = "0,00"
+        '
+        'tb_dr
+        '
+        Me.tb_dr.AcceptsReturn = True
+        Me.tb_dr.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CITASBindingSource, "IMPORTEDR", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
+        Me.tb_dr.Location = New System.Drawing.Point(63, 34)
+        Me.tb_dr.Name = "tb_dr"
+        Me.tb_dr.ReadOnly = True
+        Me.tb_dr.Size = New System.Drawing.Size(55, 20)
+        Me.tb_dr.TabIndex = 1
+        Me.tb_dr.Text = "0,00"
+        '
+        'tb_idforma
+        '
+        Me.tb_idforma.AcceptsReturn = True
+        Me.tb_idforma.BackColor = System.Drawing.Color.White
+        Me.tb_idforma.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CITASBindingSource, "REFFORMAPAGO", True))
+        Me.tb_idforma.Location = New System.Drawing.Point(312, 34)
+        Me.tb_idforma.Name = "tb_idforma"
+        Me.tb_idforma.Size = New System.Drawing.Size(75, 20)
+        Me.tb_idforma.TabIndex = 3
         '
         'ImageList1
         '
@@ -1078,6 +1121,14 @@ Partial Class form_citas
         Me.lblDispo.TabIndex = 0
         Me.lblDispo.Text = "Sala No disponible en este horario"
         '
+        'CtrlSalasvb1
+        '
+        Me.CtrlSalasvb1.ID_SALA = Nothing
+        Me.CtrlSalasvb1.Location = New System.Drawing.Point(436, 77)
+        Me.CtrlSalasvb1.Name = "CtrlSalasvb1"
+        Me.CtrlSalasvb1.Size = New System.Drawing.Size(285, 26)
+        Me.CtrlSalasvb1.TabIndex = 98
+        '
         'Label15
         '
         Me.Label15.AutoSize = True
@@ -1098,6 +1149,15 @@ Partial Class form_citas
         Me.btnDental.Text = "Dental"
         Me.btnDental.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnDental.UseVisualStyleBackColor = True
+        '
+        'CtrlMedico1
+        '
+        Me.CtrlMedico1.DataBindings.Add(New System.Windows.Forms.Binding("ID_Medico", Me.CITASBindingSource, "REFMEDICO", True))
+        Me.CtrlMedico1.ID_Medico = Nothing
+        Me.CtrlMedico1.Location = New System.Drawing.Point(17, 56)
+        Me.CtrlMedico1.Name = "CtrlMedico1"
+        Me.CtrlMedico1.Size = New System.Drawing.Size(403, 42)
+        Me.CtrlMedico1.TabIndex = 95
         '
         'cb_citaMultiple
         '
@@ -1274,7 +1334,7 @@ Partial Class form_citas
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dg_LineasCitas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dg_LineasCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg_LineasCitas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colIdCita, Me.colRefConcepto, Me.colDescripcion, Me.colCantidad, Me.colImporteClinica, Me.colImporteDoctor, Me.DescuentoPercent, Me.Total, Me.Duracion, Me.colBuscar, Me.ColumnDtoImp})
+        Me.dg_LineasCitas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colIdCita, Me.colBuscar, Me.colRefConcepto, Me.colDescripcion, Me.colCantidad, Me.colImporteClinica, Me.colImporteDoctor, Me.DescuentoPercent, Me.Total, Me.Duracion, Me.ColumnDtoImp})
         Me.dg_LineasCitas.DataSource = Me.LineasCitasBindingSource
         DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
@@ -1298,108 +1358,6 @@ Partial Class form_citas
         Me.dg_LineasCitas.RowHeadersVisible = False
         Me.dg_LineasCitas.Size = New System.Drawing.Size(685, 107)
         Me.dg_LineasCitas.TabIndex = 95
-        '
-        'colIdCita
-        '
-        Me.colIdCita.DataPropertyName = "IdCita"
-        Me.colIdCita.HeaderText = "IdCita"
-        Me.colIdCita.Name = "colIdCita"
-        Me.colIdCita.Visible = False
-        '
-        'colRefConcepto
-        '
-        Me.colRefConcepto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.colRefConcepto.DataPropertyName = "RefConcepto"
-        Me.colRefConcepto.HeaderText = "Cod"
-        Me.colRefConcepto.MinimumWidth = 61
-        Me.colRefConcepto.Name = "colRefConcepto"
-        Me.colRefConcepto.Width = 61
-        '
-        'colBuscar
-        '
-        Me.colBuscar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.colBuscar.HeaderText = "..."
-        Me.colBuscar.Image = CType(resources.GetObject("colBuscar.Image"), System.Drawing.Image)
-        Me.colBuscar.Name = "colBuscar"
-        Me.colBuscar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.colBuscar.Width = 22
-        '
-        'colDescripcion
-        '
-        Me.colDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.colDescripcion.DataPropertyName = "DESCRIPCION"
-        Me.colDescripcion.HeaderText = "DESCRIPCION"
-        Me.colDescripcion.Name = "colDescripcion"
-        '
-        'colCantidad
-        '
-        Me.colCantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.colCantidad.DataPropertyName = "Cantidad"
-        Me.colCantidad.HeaderText = "Uds"
-        Me.colCantidad.Name = "colCantidad"
-        Me.colCantidad.Width = 51
-        '
-        'colImporteClinica
-        '
-        Me.colImporteClinica.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.colImporteClinica.DataPropertyName = "ImporteClinica"
-        DataGridViewCellStyle2.Format = "C2"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.colImporteClinica.DefaultCellStyle = DataGridViewCellStyle2
-        Me.colImporteClinica.HeaderText = "Clínica"
-        Me.colImporteClinica.Name = "colImporteClinica"
-        Me.colImporteClinica.Width = 65
-        '
-        'colImporteDoctor
-        '
-        Me.colImporteDoctor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.colImporteDoctor.DataPropertyName = "ImporteDr"
-        DataGridViewCellStyle3.Format = "C2"
-        Me.colImporteDoctor.DefaultCellStyle = DataGridViewCellStyle3
-        Me.colImporteDoctor.HeaderText = "Doctor"
-        Me.colImporteDoctor.Name = "colImporteDoctor"
-        Me.colImporteDoctor.Width = 64
-        '
-        'ColumnDtoImp
-        '
-        Me.ColumnDtoImp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        DataGridViewCellStyle7.Format = "C2"
-        Me.ColumnDtoImp.DefaultCellStyle = DataGridViewCellStyle7
-        Me.ColumnDtoImp.HeaderText = "Dto Imp"
-        Me.ColumnDtoImp.Name = "ColumnDtoImp"
-        Me.ColumnDtoImp.Width = 69
-        '
-        'DescuentoPercent
-        '
-        Me.DescuentoPercent.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.DescuentoPercent.DataPropertyName = "DescuentoPercent"
-        DataGridViewCellStyle4.Format = "N2"
-        Me.DescuentoPercent.DefaultCellStyle = DataGridViewCellStyle4
-        Me.DescuentoPercent.HeaderText = "Dto %"
-        Me.DescuentoPercent.Name = "DescuentoPercent"
-        Me.DescuentoPercent.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DescuentoPercent.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.DescuentoPercent.Width = 41
-        '
-        'Total
-        '
-        Me.Total.DataPropertyName = "Total"
-        DataGridViewCellStyle5.Format = "C2"
-        Me.Total.DefaultCellStyle = DataGridViewCellStyle5
-        Me.Total.HeaderText = "Total"
-        Me.Total.Name = "Total"
-        Me.Total.Width = 70
-        '
-        'Duracion
-        '
-        Me.Duracion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.Duracion.DataPropertyName = "Duracion"
-        DataGridViewCellStyle6.Format = "HH:mm"
-        DataGridViewCellStyle6.NullValue = "00:00"
-        Me.Duracion.DefaultCellStyle = DataGridViewCellStyle6
-        Me.Duracion.HeaderText = "Duración"
-        Me.Duracion.Name = "Duracion"
-        Me.Duracion.Width = 75
         '
         'LineasCitasBindingSource
         '
@@ -1687,65 +1645,107 @@ Partial Class form_citas
         Me.tb_notas.Size = New System.Drawing.Size(512, 76)
         Me.tb_notas.TabIndex = 1
         '
-        'CtrlSalasvb1
+        'colIdCita
         '
-        Me.CtrlSalasvb1.ID_SALA = Nothing
-        Me.CtrlSalasvb1.Location = New System.Drawing.Point(436, 77)
-        Me.CtrlSalasvb1.Name = "CtrlSalasvb1"
-        Me.CtrlSalasvb1.Size = New System.Drawing.Size(285, 26)
-        Me.CtrlSalasvb1.TabIndex = 98
+        Me.colIdCita.DataPropertyName = "IdCita"
+        Me.colIdCita.HeaderText = "IdCita"
+        Me.colIdCita.Name = "colIdCita"
+        Me.colIdCita.Visible = False
         '
-        'CtrlMedico1
+        'colBuscar
         '
-        Me.CtrlMedico1.DataBindings.Add(New System.Windows.Forms.Binding("ID_Medico", Me.CITASBindingSource, "REFMEDICO", True))
-        Me.CtrlMedico1.ID_Medico = Nothing
-        Me.CtrlMedico1.Location = New System.Drawing.Point(17, 56)
-        Me.CtrlMedico1.Name = "CtrlMedico1"
-        Me.CtrlMedico1.Size = New System.Drawing.Size(403, 42)
-        Me.CtrlMedico1.TabIndex = 95
+        Me.colBuscar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.colBuscar.HeaderText = "..."
+        Me.colBuscar.Image = CType(resources.GetObject("colBuscar.Image"), System.Drawing.Image)
+        Me.colBuscar.Name = "colBuscar"
+        Me.colBuscar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.colBuscar.Width = 22
         '
-        'txtDescuentoTotal
+        'colRefConcepto
         '
-        Me.txtDescuentoTotal.AcceptsReturn = True
-        Me.txtDescuentoTotal.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CITASBindingSource, "Descuento", True))
-        Me.txtDescuentoTotal.Location = New System.Drawing.Point(122, 34)
-        Me.txtDescuentoTotal.Name = "txtDescuentoTotal"
-        Me.txtDescuentoTotal.ReadOnly = True
-        Me.txtDescuentoTotal.Size = New System.Drawing.Size(50, 20)
-        Me.txtDescuentoTotal.TabIndex = 90
-        Me.txtDescuentoTotal.Text = "0,00"
+        Me.colRefConcepto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.colRefConcepto.DataPropertyName = "RefConcepto"
+        Me.colRefConcepto.HeaderText = "Cod"
+        Me.colRefConcepto.MinimumWidth = 61
+        Me.colRefConcepto.Name = "colRefConcepto"
+        Me.colRefConcepto.Width = 61
         '
-        'tb_clinica
+        'colDescripcion
         '
-        Me.tb_clinica.AcceptsReturn = True
-        Me.tb_clinica.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CITASBindingSource, "IMPORTECL", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
-        Me.tb_clinica.Location = New System.Drawing.Point(6, 34)
-        Me.tb_clinica.Name = "tb_clinica"
-        Me.tb_clinica.ReadOnly = True
-        Me.tb_clinica.Size = New System.Drawing.Size(53, 20)
-        Me.tb_clinica.TabIndex = 0
-        Me.tb_clinica.Text = "0,00"
+        Me.colDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.colDescripcion.DataPropertyName = "DESCRIPCION"
+        Me.colDescripcion.HeaderText = "DESCRIPCION"
+        Me.colDescripcion.Name = "colDescripcion"
         '
-        'tb_dr
+        'colCantidad
         '
-        Me.tb_dr.AcceptsReturn = True
-        Me.tb_dr.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CITASBindingSource, "IMPORTEDR", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
-        Me.tb_dr.Location = New System.Drawing.Point(63, 34)
-        Me.tb_dr.Name = "tb_dr"
-        Me.tb_dr.ReadOnly = True
-        Me.tb_dr.Size = New System.Drawing.Size(55, 20)
-        Me.tb_dr.TabIndex = 1
-        Me.tb_dr.Text = "0,00"
+        Me.colCantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.colCantidad.DataPropertyName = "Cantidad"
+        Me.colCantidad.HeaderText = "Uds"
+        Me.colCantidad.Name = "colCantidad"
+        Me.colCantidad.Width = 51
         '
-        'tb_idforma
+        'colImporteClinica
         '
-        Me.tb_idforma.AcceptsReturn = True
-        Me.tb_idforma.BackColor = System.Drawing.Color.White
-        Me.tb_idforma.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CITASBindingSource, "REFFORMAPAGO", True))
-        Me.tb_idforma.Location = New System.Drawing.Point(312, 34)
-        Me.tb_idforma.Name = "tb_idforma"
-        Me.tb_idforma.Size = New System.Drawing.Size(75, 20)
-        Me.tb_idforma.TabIndex = 3
+        Me.colImporteClinica.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.colImporteClinica.DataPropertyName = "ImporteClinica"
+        DataGridViewCellStyle2.Format = "C2"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.colImporteClinica.DefaultCellStyle = DataGridViewCellStyle2
+        Me.colImporteClinica.HeaderText = "Clínica"
+        Me.colImporteClinica.Name = "colImporteClinica"
+        Me.colImporteClinica.Width = 65
+        '
+        'colImporteDoctor
+        '
+        Me.colImporteDoctor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.colImporteDoctor.DataPropertyName = "ImporteDr"
+        DataGridViewCellStyle3.Format = "C2"
+        Me.colImporteDoctor.DefaultCellStyle = DataGridViewCellStyle3
+        Me.colImporteDoctor.HeaderText = "Doctor"
+        Me.colImporteDoctor.Name = "colImporteDoctor"
+        Me.colImporteDoctor.Width = 64
+        '
+        'DescuentoPercent
+        '
+        Me.DescuentoPercent.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.DescuentoPercent.DataPropertyName = "DescuentoPercent"
+        DataGridViewCellStyle4.Format = "N2"
+        Me.DescuentoPercent.DefaultCellStyle = DataGridViewCellStyle4
+        Me.DescuentoPercent.HeaderText = "Dto %"
+        Me.DescuentoPercent.Name = "DescuentoPercent"
+        Me.DescuentoPercent.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DescuentoPercent.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DescuentoPercent.Width = 41
+        '
+        'Total
+        '
+        Me.Total.DataPropertyName = "Total"
+        DataGridViewCellStyle5.Format = "C2"
+        Me.Total.DefaultCellStyle = DataGridViewCellStyle5
+        Me.Total.HeaderText = "Total"
+        Me.Total.Name = "Total"
+        Me.Total.Width = 70
+        '
+        'Duracion
+        '
+        Me.Duracion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.Duracion.DataPropertyName = "Duracion"
+        DataGridViewCellStyle6.Format = "HH:mm"
+        DataGridViewCellStyle6.NullValue = "00:00"
+        Me.Duracion.DefaultCellStyle = DataGridViewCellStyle6
+        Me.Duracion.HeaderText = "Duración"
+        Me.Duracion.Name = "Duracion"
+        Me.Duracion.Width = 75
+        '
+        'ColumnDtoImp
+        '
+        Me.ColumnDtoImp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        DataGridViewCellStyle7.Format = "C2"
+        Me.ColumnDtoImp.DefaultCellStyle = DataGridViewCellStyle7
+        Me.ColumnDtoImp.HeaderText = "Dto Imp"
+        Me.ColumnDtoImp.Name = "ColumnDtoImp"
+        Me.ColumnDtoImp.Width = 69
         '
         'form_citas
         '
@@ -1946,16 +1946,16 @@ Partial Class form_citas
     Friend WithEvents CBcitas As System.Windows.Forms.ComboBox
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents bt_ActualizaNumeracion As System.Windows.Forms.Button
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents colIdCita As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colRefConcepto As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents colBuscar As System.Windows.Forms.DataGridViewImageColumn
+    Friend WithEvents colRefConcepto As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents colDescripcion As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents colCantidad As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents colImporteClinica As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents colImporteDoctor As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnDtoImp As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DescuentoPercent As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Total As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Duracion As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents ColumnDtoImp As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
