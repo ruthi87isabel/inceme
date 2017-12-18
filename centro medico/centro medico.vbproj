@@ -3060,6 +3060,7 @@
     <Content Include="RDLC\custom\siesta\CitaJustificanteAsistencia.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="RDLC\custom\regos\DentalPresupuesto.rdlc" />
     <EmbeddedResource Include="RDLC\default\PacientesComoNosConocio.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>

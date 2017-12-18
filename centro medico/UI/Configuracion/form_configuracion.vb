@@ -5,6 +5,8 @@ Imports Janus.Windows.GridEX
 
 Public Class form_configuracion
 
+    Dim Identificador As String = ""
+
     Sub New()
         ' This call is required by the Windows Form Designer.
         InitializeComponent()
@@ -57,6 +59,8 @@ Public Class form_configuracion
 
         ofd_ficherogdb.InitialDirectory = Globales.Configuracion.impresionfilesdirectory
         ofd_CarpetaReportes.InitialDirectory = Globales.Configuracion.impresionfilesdirectory
+
+        Identificador = TbIdClinica.Text
     End Sub
 
     Private Sub bt_annadirseries_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bt_annadirseries.Click
@@ -371,7 +375,7 @@ Public Class form_configuracion
                 TbIdClinica.Focus()
                 MessageBox.Show("Debe especificar un identificador de Clínica")
                 Return
-            ElseIf ComprobarIdClinica(TbIdClinica.Text) Then
+            ElseIf Identificador <> TbIdClinica.Text And ComprobarIdClinica(TbIdClinica.Text) Then
                 TbIdClinica.Focus()
                 MessageBox.Show("El identificador de Clínica especificado ya existe")
                 Return
