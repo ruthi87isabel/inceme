@@ -219,7 +219,7 @@ Partial Class CITA
 
             If datos <> "" Then
                 Dim datosenc As String = seguridad.EncryptString(datos, usuario.CONTRASENA)
-                'CreaJson(datos, fecha, usuario.USUARIO)
+                CreaJson(datos, fecha, usuario.USUARIO)
                 Ftp.SaveFileFtp(datosenc, fecha, usuario.USUARIO)
                 Ftp.DeleteOldFileFtp(usuario.USUARIO)
             End If
@@ -294,7 +294,7 @@ Partial Class CITA
         usuario = usuario.Replace(" ", "_")
         Dim Path As String = "c:\SincronizacionCitasXMedico\" + Globales.Configuracion.IdentificadorClinica + "\" + usuario
         Directory.CreateDirectory(Path)
-        Dim ruta As String = Path + "\" + fecha + ".json"
+        Dim ruta As String = Path + "\" + fecha + ".txt"
         Dim escritor As StreamWriter
         escritor = New StreamWriter(ruta)
         escritor.Write(datos)
