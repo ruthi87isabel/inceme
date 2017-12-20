@@ -56,6 +56,7 @@ Public Class form_citas
     Public ID_Sala As Nullable(Of Integer) = Nothing
     Dim horas As IList(Of HORARIOS_MEDICOS)
 
+    Dim CitasModificadas As List(Of CitaKey)
     Dim Sincfecha As Date
     Dim Sincmedico As Integer
 
@@ -279,11 +280,13 @@ Public Class form_citas
         fimporteclinicao = _data.Rows(0).Item("IMPORTECL")
         fimportedro = _data.Rows(0).Item("IMPORTEDR")
 
-
+        Sincmedico = fidmedicoo
         'tb_paciente.Text = fpacienteo
         CtrlMedico1.ID_Medico = fidmedicoo
         'lb_medico.Text = GetMedico(fidmedicoo)
         'lb_especialidad.Text = GetEspecialidad(fidmedicoo)
+
+        Sincfecha = ffechao
 
         tb_notas.Text = fnotaso
         dtp_fecha.Value = ffechao
@@ -1540,17 +1543,18 @@ Public Class form_citas
             Catch ex As Exception
             End Try
 
-            If _fecha > Date.Now.AddDays(-7) Then
-                Dim USUARIO As USUARIO = (From u In context.USUARIOs Select u Where u.REFMEDICO = _idmedico).FirstOrDefault
-                If Not USUARIO Is Nothing And Globales.Configuracion.SincCalendCitaFtp Then
-                    Sincfecha = _fecha
-                    Sincmedico = _idmedico
-                    If Not BackgroundWorker1.IsBusy Then
-                        BackgroundWorker1.RunWorkerAsync()
-                    End If
-                End If
+            CitasModificadas = New List(Of CitaKey)
+
+            If (Sincfecha <> _fecha Or Sincmedico <> _idmedico) And Not CurrentAccion = Enums.Accion.Insertar Then
+                AddCitasModificadas(Sincfecha, Sincmedico)
             End If
 
+            AddCitasModificadas(_fecha, _idmedico)
+            If CitasModificadas.Count > 0 Then
+                If Not BackgroundWorker1.IsBusy Then
+                    BackgroundWorker1.RunWorkerAsync()
+                End If
+            End If
         End If
         'Como es posible qeu se llame al guardar y no se cierre, lo que hacemos es qeu si se ha producido un insertar modificamos el currentaction de insertar a modificar
         If CurrentAccion = Enums.Accion.Insertar Then
@@ -1561,9 +1565,22 @@ Public Class form_citas
         'Me.Close()
     End Function
 
+    Private Sub AddCitasModificadas(_fecha As Date, _idmedico As Integer)
+
+        If _fecha > Date.Now.AddDays(-7) Then
+            Dim USUARIO As USUARIO = (From u In context.USUARIOs Select u Where u.REFMEDICO = _idmedico).FirstOrDefault
+            If Not USUARIO Is Nothing And Globales.Configuracion.SincCalendCitaFtp Then
+                Dim newcita As New CitaKey(_fecha.ToString("yyyy-MM-dd"), _idmedico)
+                CitasModificadas.Add(newcita)
+            End If
+        End If
+    End Sub
+
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         Dim Cita As New CITA
-        Cita.SincronizarMedicoCitas(Sincfecha.ToString("yyyy-MM-dd"), Sincmedico)
+        For Each ModCitas As CitaKey In CitasModificadas
+            Cita.SincronizarMedicoCitas(ModCitas.CitaFecha, ModCitas.CitaMedico)
+        Next
     End Sub
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
