@@ -622,6 +622,7 @@
     <Compile Include="Logica\FacturasManager.vb" />
     <Compile Include="Logica\LibroIngresosGastosManager.vb" />
     <Compile Include="Logica\Model\BonosManager.vb" />
+    <Compile Include="Logica\Model\CitaKey.vb" />
     <Compile Include="Logica\Model\estadisticas.vb" />
     <Compile Include="Logica\Model\HorasMedicosManager.vb" />
     <Compile Include="Logica\Model\IDocumentoPagable.vb" />

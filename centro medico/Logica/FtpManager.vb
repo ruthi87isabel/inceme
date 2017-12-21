@@ -1,12 +1,16 @@
 ﻿Imports System
 Imports System.IO
 Imports System.Net
+Imports GoltraTools.clsLog
+Imports GoltraTools
 
 Public Class FtpManager
 
+    Dim log As New clsLog
     Dim User As String = "u73075875"
     Dim Password As String = "4815Inceme1623$"
 
+    'Actualiza el codigo de cifrado de las citas del medico cuando cambia de contraseña
     Public Sub UpdateFileNewPassFtp(idMedico As Integer, usuario As String)
         usuario = usuario.Replace(" ", "_")
         Dim cita As New CITA
@@ -22,11 +26,10 @@ Public Class FtpManager
         End If
     End Sub
 
+    'Elimina las citas anteriores a una semana
     Public Function DeleteOldFileFtp(usuario As String) As Boolean
         usuario = usuario.Replace(" ", "_")
-        Dim cita As New CITA
         Dim Path As String = "ftp://home466817636.1and1-data.host/SincronizacionCitasXMedico/" + Globales.Configuracion.IdentificadorClinica + "/" + usuario
-        If Not GetDirectoryExists(Path) Then Return False
 
         Try
             Dim lines() As String = GetFileList(Path)
@@ -42,6 +45,7 @@ Public Class FtpManager
                     End If
                 Next
             End If
+            log.Log("Eliminar las citas anteriores a una semana para el doctor " & usuario)
         Catch ex As Exception
             Return False
         End Try
@@ -51,7 +55,6 @@ Public Class FtpManager
     'Elimina el fichero que tiene una sola cita y esta es eliminada
     Public Function DeleteFileFtp(usuario As String, fecha As String) As Boolean
         usuario = usuario.Replace(" ", "_")
-        Dim cita As New CITA
         Dim Path As String = "ftp://home466817636.1and1-data.host/SincronizacionCitasXMedico/" + Globales.Configuracion.IdentificadorClinica + "/" + usuario
         If Not GetDirectoryExists(Path) Then Return False
 
@@ -61,15 +64,28 @@ Public Class FtpManager
             request.Method = WebRequestMethods.Ftp.DeleteFile
             Dim response As FtpWebResponse = request.GetResponse
             response.Close()
+            log.Log("Eliminar fichero del día " & fecha & " para el doctor " & usuario & " por falta de contenido")
         Catch ex As Exception
             Return False
         End Try
         Return True
     End Function
 
+    'Sube el fichero de citas txt al medico que corresponda en el FTP
     Public Sub SaveFileFtp(datos As String, fecha As String, usuario As String)
+
+        log.FileName = Application.StartupPath & "\Log_SincronizacionCitasXMedico.txt"
+        log.Log("*** " & Now.ToString & " - Subir citas del día " & fecha & " para el doctor " & usuario)
+
         usuario = usuario.Replace(" ", "_")
-        Dim fullpath As String = CreateFolderFtp(usuario)
+
+        Dim fullpath As String = ""
+        If Not GetDirectoryExists("ftp://home466817636.1and1-data.host/SincronizacionCitasXMedico/" & Globales.Configuracion.IdentificadorClinica & "/" & usuario) Then
+            fullpath = CreateFolderFtp(usuario)
+        Else
+            fullpath = "ftp://home466817636.1and1-data.host/SincronizacionCitasXMedico/" & Globales.Configuracion.IdentificadorClinica & "/" & usuario
+        End If
+
         Dim request As FtpWebRequest = DirectCast(WebRequest.Create(fullpath + "/" + fecha + ".txt"), FtpWebRequest)
         request.Credentials = New NetworkCredential(User, Password)
         request.EnableSsl = True
@@ -81,13 +97,16 @@ Public Class FtpManager
 
         Dim encoding As System.Text.ASCIIEncoding = New System.Text.ASCIIEncoding()
         Dim bytes() As Byte = encoding.GetBytes(datos)
+        log.Log(vbTab & "Cargar datos a subir al ftp")
 
         Dim strz As System.IO.Stream = request.GetRequestStream()
         strz.Write(bytes, 0, bytes.Length)
         strz.Close()
         strz.Dispose()
+        log.Log("*** Datos subidos al ftp correctamente")
     End Sub
 
+    'Crea la escructura de directorios donde se guardan las citas
     Private Function CreateFolderFtp(usuario As String) As String
         usuario = usuario.Replace(" ", "_")
         Dim fullpath As String = "ftp://home466817636.1and1-data.host"
@@ -113,9 +132,13 @@ Public Class FtpManager
                 Dim response As FtpWebResponse = DirectCast(ex.Response, FtpWebResponse)
             End Try
         Next
+
+        log.Log(vbTab & "Crear estructura de directorio: " & fullpath)
+
         Return fullpath
     End Function
 
+    'Verifica la existencia del directorio
     Public Function GetDirectoryExists(directoryName As String) As Boolean
         Dim directoryExists As Boolean
         Dim request As FtpWebRequest = FtpWebRequest.Create(directoryName)
@@ -128,9 +151,12 @@ Public Class FtpManager
         Catch ex As WebException
             directoryExists = False
         End Try
+
+        log.Log(vbTab & "Existencia del directorio: " & directoryName & " = " & directoryExists.ToString)
         Return directoryExists
     End Function
 
+    'Obtiene una lista de citas para un medico determinado
     Public Function GetFileList(Path As String) As String()
         'If Not GetDirectoryExists(Path) Then Return Nothing
 
