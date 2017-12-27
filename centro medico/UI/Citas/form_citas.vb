@@ -1537,7 +1537,7 @@ Public Class form_citas
 
                     End If
                 Next
-                fIdCITA = idCitaTrasInsertar
+                If idCitaTrasInsertar <> 0 Then fIdCITA = idCitaTrasInsertar
                 context.SubmitChanges()
 
             Catch ex As Exception
@@ -4267,7 +4267,6 @@ Public Class form_citas
             cambioCT = citas
         End If
     End Sub
-
 
 End Class
 
