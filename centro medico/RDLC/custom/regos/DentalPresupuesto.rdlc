@@ -507,7 +507,7 @@ FROM d_Presupuesto D
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>OdontTrat_LineasPresupuesto</DataSetName>
-            <Top>4.99883cm</Top>
+            <Top>4.99882cm</Top>
             <Left>0.23285cm</Left>
             <Height>0.51525in</Height>
             <Width>7.52178in</Width>
@@ -528,7 +528,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox20</rd:DefaultName>
-            <Top>0.38497cm</Top>
+            <Top>0.38496cm</Top>
             <Left>9.77442cm</Left>
             <Height>0.6cm</Height>
             <Width>2.12958cm</Width>
@@ -560,7 +560,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox21</rd:DefaultName>
-            <Top>0.38497cm</Top>
+            <Top>0.38496cm</Top>
             <Left>12.08039cm</Left>
             <Height>0.6cm</Height>
             <Width>6.92008cm</Width>
@@ -590,7 +590,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox22</rd:DefaultName>
-            <Top>2.60775cm</Top>
+            <Top>2.60774cm</Top>
             <Left>0.52898cm</Left>
             <Height>0.6cm</Height>
             <Width>4.1616cm</Width>
@@ -622,7 +622,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox23</rd:DefaultName>
-            <Top>2.60775cm</Top>
+            <Top>2.60774cm</Top>
             <Left>4.77523cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
@@ -638,7 +638,7 @@ FROM d_Presupuesto D
             </Style>
           </Textbox>
           <Line Name="Line1">
-            <Top>0.03525cm</Top>
+            <Top>0.03524cm</Top>
             <Height>0cm</Height>
             <Width>19.33817cm</Width>
             <ZIndex>5</ZIndex>
@@ -661,6 +661,7 @@ FROM d_Presupuesto D
                       <FontFamily>Tahoma</FontFamily>
                       <FontSize>18pt</FontSize>
                       <FontWeight>Bold</FontWeight>
+                      <Color>DarkBlue</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -676,6 +677,9 @@ FROM d_Presupuesto D
             <Width>5.06187cm</Width>
             <ZIndex>6</ZIndex>
             <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -697,7 +701,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Top>2.60775cm</Top>
+            <Top>2.60774cm</Top>
             <Left>9.76094cm</Left>
             <Height>0.6cm</Height>
             <Width>3.10854cm</Width>
@@ -727,7 +731,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox22</rd:DefaultName>
-            <Top>3.24303cm</Top>
+            <Top>3.24302cm</Top>
             <Left>0.52898cm</Left>
             <Height>0.6cm</Height>
             <Width>3.63771cm</Width>
@@ -757,7 +761,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox22</rd:DefaultName>
-            <Top>3.87831cm</Top>
+            <Top>3.8783cm</Top>
             <Left>0.52898cm</Left>
             <Height>0.6cm</Height>
             <Width>3.63771cm</Width>
@@ -792,7 +796,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox23</rd:DefaultName>
-            <Top>2.60775cm</Top>
+            <Top>2.60774cm</Top>
             <Left>12.86948cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
@@ -824,7 +828,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox23</rd:DefaultName>
-            <Top>3.31359cm</Top>
+            <Top>3.31358cm</Top>
             <Left>4.77523cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
@@ -856,7 +860,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox10</rd:DefaultName>
-            <Top>8.09167cm</Top>
+            <Top>8.09166cm</Top>
             <Left>0.23285cm</Left>
             <Height>0.6cm</Height>
             <Width>4.1616cm</Width>
@@ -890,7 +894,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox11</rd:DefaultName>
-            <Top>7.3332cm</Top>
+            <Top>7.33319cm</Top>
             <Left>15.6479cm</Left>
             <Height>0.6cm</Height>
             <Width>1.45675cm</Width>
@@ -924,7 +928,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox12</rd:DefaultName>
-            <Top>7.3332cm</Top>
+            <Top>7.33319cm</Top>
             <Left>17.45435cm</Left>
             <Height>0.6cm</Height>
             <Width>1.56104cm</Width>
@@ -958,7 +962,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox11</rd:DefaultName>
-            <Top>6.66265cm</Top>
+            <Top>6.66264cm</Top>
             <Left>13.44078cm</Left>
             <Height>0.6cm</Height>
             <Width>3.66387cm</Width>
@@ -996,7 +1000,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox12</rd:DefaultName>
-            <Top>6.66265cm</Top>
+            <Top>6.66264cm</Top>
             <Left>17.45435cm</Left>
             <Height>0.6cm</Height>
             <Width>1.56104cm</Width>
