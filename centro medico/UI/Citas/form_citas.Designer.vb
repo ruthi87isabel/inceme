@@ -45,13 +45,13 @@ Partial Class form_citas
         Dim Label13 As System.Windows.Forms.Label
         Dim Label7 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(form_citas))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim GridEX1_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout()
         Dim GridEX1_DesignTimeLayout_Reference_0 As Janus.Windows.Common.Layouts.JanusLayoutReference = New Janus.Windows.Common.Layouts.JanusLayoutReference("GridEXLayoutData.RootTable.Columns.Column19.ButtonImage")
         Dim GridEX1_DesignTimeLayout_Reference_1 As Janus.Windows.Common.Layouts.JanusLayoutReference = New Janus.Windows.Common.Layouts.JanusLayoutReference("GridEXLayoutData.RootTable.Columns.Column20.ButtonImage")
         Dim GridEX1_DesignTimeLayout_Reference_2 As Janus.Windows.Common.Layouts.JanusLayoutReference = New Janus.Windows.Common.Layouts.JanusLayoutReference("GridEXLayoutData.RootTable.ChildTables.Table0.Columns.Column4.ButtonImage")
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -72,7 +72,6 @@ Partial Class form_citas
         Me.pnl_Facturar = New System.Windows.Forms.Panel()
         Me.bt_factura = New System.Windows.Forms.Button()
         Me.btn_DesasociarFactura = New System.Windows.Forms.Button()
-        Me.txtDescuentoTotal = New centro_medico.ctrlTextboxAvanzado()
         Me.lb_ftexto = New System.Windows.Forms.Label()
         Me.lb_factura = New System.Windows.Forms.Label()
         Me.pb_facturas = New System.Windows.Forms.PictureBox()
@@ -85,9 +84,6 @@ Partial Class form_citas
         Me.lb_recibo = New System.Windows.Forms.Label()
         Me.bt_forma = New System.Windows.Forms.Button()
         Me.chb_recibo = New System.Windows.Forms.CheckBox()
-        Me.tb_clinica = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_dr = New centro_medico.ctrlTextboxAvanzado()
-        Me.tb_idforma = New centro_medico.ctrlTextboxAvanzado()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.bntAsistenteFacturacion = New System.Windows.Forms.Button()
         Me.grpFechaHora = New System.Windows.Forms.GroupBox()
@@ -119,10 +115,8 @@ Partial Class form_citas
         Me.grp_SalaDisponible = New System.Windows.Forms.GroupBox()
         Me.lnkSugerirHorario = New System.Windows.Forms.LinkLabel()
         Me.lblDispo = New System.Windows.Forms.Label()
-        Me.CtrlSalasvb1 = New centro_medico.ctrlSalasvb()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.btnDental = New System.Windows.Forms.Button()
-        Me.CtrlMedico1 = New centro_medico.ctrlMedico()
         Me.cb_citaMultiple = New System.Windows.Forms.CheckBox()
         Me.lblEdicionDesactivada = New System.Windows.Forms.Label()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
@@ -144,7 +138,6 @@ Partial Class form_citas
         Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.tstrip_Info = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.dg_LineasCitas = New System.Windows.Forms.DataGridView()
         Me.LineasCitasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.bt_AddLinea = New System.Windows.Forms.Button()
         Me.bt_DelLinea = New System.Windows.Forms.Button()
@@ -180,13 +173,20 @@ Partial Class form_citas
         Me.btnAddLineasGenericas = New System.Windows.Forms.Button()
         Me.lblCitaEliminada = New System.Windows.Forms.Label()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.dg_LineasCitas = New System.Windows.Forms.DataGridView()
         Me.ContadorBono1 = New centro_medico.contadorBono()
         Me.CtrlPaciente1 = New centro_medico.ctrlPaciente()
         Me.CtrlStatusPaciente1 = New centro_medico.ctrlStatusPaciente()
         Me.tb_notas = New centro_medico.ctrlTextboxAvanzado()
+        Me.CtrlSalasvb1 = New centro_medico.ctrlSalasvb()
+        Me.CtrlMedico1 = New centro_medico.ctrlMedico()
+        Me.txtDescuentoTotal = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_clinica = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_dr = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_idforma = New centro_medico.ctrlTextboxAvanzado()
         Me.colIdCita = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colBuscar = New System.Windows.Forms.DataGridViewImageColumn()
         Me.colRefConcepto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colBuscar = New System.Windows.Forms.DataGridViewImageColumn()
         Me.colDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colCantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colImporteClinica = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -233,7 +233,6 @@ Partial Class form_citas
         Me.grp_SalaDisponible.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
-        CType(Me.dg_LineasCitas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LineasCitasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.group_Proceso.SuspendLayout()
         CType(Me.FORMASPAGOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -248,6 +247,7 @@ Partial Class form_citas
         CType(Me.MEDICOSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridEX1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.HISTORIALEBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dg_LineasCitas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'FECHALabel
@@ -630,17 +630,6 @@ Partial Class form_citas
         Me.btn_DesasociarFactura.UseVisualStyleBackColor = True
         Me.btn_DesasociarFactura.Visible = False
         '
-        'txtDescuentoTotal
-        '
-        Me.txtDescuentoTotal.AcceptsReturn = True
-        Me.txtDescuentoTotal.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CITASBindingSource, "Descuento", True))
-        Me.txtDescuentoTotal.Location = New System.Drawing.Point(122, 34)
-        Me.txtDescuentoTotal.Name = "txtDescuentoTotal"
-        Me.txtDescuentoTotal.ReadOnly = True
-        Me.txtDescuentoTotal.Size = New System.Drawing.Size(50, 20)
-        Me.txtDescuentoTotal.TabIndex = 90
-        Me.txtDescuentoTotal.Text = "0,00"
-        '
         'lb_ftexto
         '
         Me.lb_ftexto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
@@ -755,38 +744,6 @@ Partial Class form_citas
         Me.chb_recibo.Name = "chb_recibo"
         Me.chb_recibo.Size = New System.Drawing.Size(25, 24)
         Me.chb_recibo.TabIndex = 65
-        '
-        'tb_clinica
-        '
-        Me.tb_clinica.AcceptsReturn = True
-        Me.tb_clinica.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CITASBindingSource, "IMPORTECL", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
-        Me.tb_clinica.Location = New System.Drawing.Point(6, 34)
-        Me.tb_clinica.Name = "tb_clinica"
-        Me.tb_clinica.ReadOnly = True
-        Me.tb_clinica.Size = New System.Drawing.Size(53, 20)
-        Me.tb_clinica.TabIndex = 0
-        Me.tb_clinica.Text = "0,00"
-        '
-        'tb_dr
-        '
-        Me.tb_dr.AcceptsReturn = True
-        Me.tb_dr.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CITASBindingSource, "IMPORTEDR", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
-        Me.tb_dr.Location = New System.Drawing.Point(63, 34)
-        Me.tb_dr.Name = "tb_dr"
-        Me.tb_dr.ReadOnly = True
-        Me.tb_dr.Size = New System.Drawing.Size(55, 20)
-        Me.tb_dr.TabIndex = 1
-        Me.tb_dr.Text = "0,00"
-        '
-        'tb_idforma
-        '
-        Me.tb_idforma.AcceptsReturn = True
-        Me.tb_idforma.BackColor = System.Drawing.Color.White
-        Me.tb_idforma.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CITASBindingSource, "REFFORMAPAGO", True))
-        Me.tb_idforma.Location = New System.Drawing.Point(312, 34)
-        Me.tb_idforma.Name = "tb_idforma"
-        Me.tb_idforma.Size = New System.Drawing.Size(75, 20)
-        Me.tb_idforma.TabIndex = 3
         '
         'ImageList1
         '
@@ -1121,14 +1078,6 @@ Partial Class form_citas
         Me.lblDispo.TabIndex = 0
         Me.lblDispo.Text = "Sala No disponible en este horario"
         '
-        'CtrlSalasvb1
-        '
-        Me.CtrlSalasvb1.ID_SALA = Nothing
-        Me.CtrlSalasvb1.Location = New System.Drawing.Point(436, 77)
-        Me.CtrlSalasvb1.Name = "CtrlSalasvb1"
-        Me.CtrlSalasvb1.Size = New System.Drawing.Size(285, 26)
-        Me.CtrlSalasvb1.TabIndex = 98
-        '
         'Label15
         '
         Me.Label15.AutoSize = True
@@ -1149,15 +1098,6 @@ Partial Class form_citas
         Me.btnDental.Text = "Dental"
         Me.btnDental.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnDental.UseVisualStyleBackColor = True
-        '
-        'CtrlMedico1
-        '
-        Me.CtrlMedico1.DataBindings.Add(New System.Windows.Forms.Binding("ID_Medico", Me.CITASBindingSource, "REFMEDICO", True))
-        Me.CtrlMedico1.ID_Medico = Nothing
-        Me.CtrlMedico1.Location = New System.Drawing.Point(17, 56)
-        Me.CtrlMedico1.Name = "CtrlMedico1"
-        Me.CtrlMedico1.Size = New System.Drawing.Size(403, 42)
-        Me.CtrlMedico1.TabIndex = 95
         '
         'cb_citaMultiple
         '
@@ -1315,49 +1255,6 @@ Partial Class form_citas
         Me.tstrip_Info.Name = "tstrip_Info"
         Me.tstrip_Info.Size = New System.Drawing.Size(13, 17)
         Me.tstrip_Info.Text = ".."
-        '
-        'dg_LineasCitas
-        '
-        Me.dg_LineasCitas.AllowUserToAddRows = False
-        Me.dg_LineasCitas.AllowUserToDeleteRows = False
-        Me.dg_LineasCitas.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dg_LineasCitas.AutoGenerateColumns = False
-        Me.dg_LineasCitas.BackgroundColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_LineasCitas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.dg_LineasCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg_LineasCitas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colIdCita, Me.colBuscar, Me.colRefConcepto, Me.colDescripcion, Me.colCantidad, Me.colImporteClinica, Me.colImporteDoctor, Me.DescuentoPercent, Me.Total, Me.Duracion, Me.ColumnDtoImp})
-        Me.dg_LineasCitas.DataSource = Me.LineasCitasBindingSource
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dg_LineasCitas.DefaultCellStyle = DataGridViewCellStyle8
-        Me.dg_LineasCitas.GridColor = System.Drawing.Color.DimGray
-        Me.dg_LineasCitas.Location = New System.Drawing.Point(231, 403)
-        Me.dg_LineasCitas.Name = "dg_LineasCitas"
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dg_LineasCitas.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
-        Me.dg_LineasCitas.RowHeadersVisible = False
-        Me.dg_LineasCitas.Size = New System.Drawing.Size(685, 107)
-        Me.dg_LineasCitas.TabIndex = 95
         '
         'LineasCitasBindingSource
         '
@@ -1601,6 +1498,49 @@ Partial Class form_citas
         Me.BackgroundWorker1.WorkerReportsProgress = True
         Me.BackgroundWorker1.WorkerSupportsCancellation = True
         '
+        'dg_LineasCitas
+        '
+        Me.dg_LineasCitas.AllowUserToAddRows = False
+        Me.dg_LineasCitas.AllowUserToDeleteRows = False
+        Me.dg_LineasCitas.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dg_LineasCitas.AutoGenerateColumns = False
+        Me.dg_LineasCitas.BackgroundColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_LineasCitas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dg_LineasCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dg_LineasCitas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colIdCita, Me.colRefConcepto, Me.colBuscar, Me.colDescripcion, Me.colCantidad, Me.colImporteClinica, Me.colImporteDoctor, Me.DescuentoPercent, Me.Total, Me.Duracion, Me.ColumnDtoImp})
+        Me.dg_LineasCitas.DataSource = Me.LineasCitasBindingSource
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dg_LineasCitas.DefaultCellStyle = DataGridViewCellStyle8
+        Me.dg_LineasCitas.GridColor = System.Drawing.Color.DimGray
+        Me.dg_LineasCitas.Location = New System.Drawing.Point(231, 405)
+        Me.dg_LineasCitas.Name = "dg_LineasCitas"
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dg_LineasCitas.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
+        Me.dg_LineasCitas.RowHeadersVisible = False
+        Me.dg_LineasCitas.Size = New System.Drawing.Size(685, 107)
+        Me.dg_LineasCitas.TabIndex = 225
+        '
         'ContadorBono1
         '
         Me.ContadorBono1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -1645,21 +1585,72 @@ Partial Class form_citas
         Me.tb_notas.Size = New System.Drawing.Size(512, 76)
         Me.tb_notas.TabIndex = 1
         '
+        'CtrlSalasvb1
+        '
+        Me.CtrlSalasvb1.ID_SALA = Nothing
+        Me.CtrlSalasvb1.Location = New System.Drawing.Point(436, 77)
+        Me.CtrlSalasvb1.Name = "CtrlSalasvb1"
+        Me.CtrlSalasvb1.Size = New System.Drawing.Size(285, 26)
+        Me.CtrlSalasvb1.TabIndex = 98
+        '
+        'CtrlMedico1
+        '
+        Me.CtrlMedico1.DataBindings.Add(New System.Windows.Forms.Binding("ID_Medico", Me.CITASBindingSource, "REFMEDICO", True))
+        Me.CtrlMedico1.ID_Medico = Nothing
+        Me.CtrlMedico1.Location = New System.Drawing.Point(17, 56)
+        Me.CtrlMedico1.Name = "CtrlMedico1"
+        Me.CtrlMedico1.Size = New System.Drawing.Size(403, 42)
+        Me.CtrlMedico1.TabIndex = 95
+        '
+        'txtDescuentoTotal
+        '
+        Me.txtDescuentoTotal.AcceptsReturn = True
+        Me.txtDescuentoTotal.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CITASBindingSource, "Descuento", True))
+        Me.txtDescuentoTotal.Location = New System.Drawing.Point(122, 34)
+        Me.txtDescuentoTotal.Name = "txtDescuentoTotal"
+        Me.txtDescuentoTotal.ReadOnly = True
+        Me.txtDescuentoTotal.Size = New System.Drawing.Size(50, 20)
+        Me.txtDescuentoTotal.TabIndex = 90
+        Me.txtDescuentoTotal.Text = "0,00"
+        '
+        'tb_clinica
+        '
+        Me.tb_clinica.AcceptsReturn = True
+        Me.tb_clinica.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CITASBindingSource, "IMPORTECL", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
+        Me.tb_clinica.Location = New System.Drawing.Point(6, 34)
+        Me.tb_clinica.Name = "tb_clinica"
+        Me.tb_clinica.ReadOnly = True
+        Me.tb_clinica.Size = New System.Drawing.Size(53, 20)
+        Me.tb_clinica.TabIndex = 0
+        Me.tb_clinica.Text = "0,00"
+        '
+        'tb_dr
+        '
+        Me.tb_dr.AcceptsReturn = True
+        Me.tb_dr.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CITASBindingSource, "IMPORTEDR", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
+        Me.tb_dr.Location = New System.Drawing.Point(63, 34)
+        Me.tb_dr.Name = "tb_dr"
+        Me.tb_dr.ReadOnly = True
+        Me.tb_dr.Size = New System.Drawing.Size(55, 20)
+        Me.tb_dr.TabIndex = 1
+        Me.tb_dr.Text = "0,00"
+        '
+        'tb_idforma
+        '
+        Me.tb_idforma.AcceptsReturn = True
+        Me.tb_idforma.BackColor = System.Drawing.Color.White
+        Me.tb_idforma.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CITASBindingSource, "REFFORMAPAGO", True))
+        Me.tb_idforma.Location = New System.Drawing.Point(312, 34)
+        Me.tb_idforma.Name = "tb_idforma"
+        Me.tb_idforma.Size = New System.Drawing.Size(75, 20)
+        Me.tb_idforma.TabIndex = 3
+        '
         'colIdCita
         '
         Me.colIdCita.DataPropertyName = "IdCita"
         Me.colIdCita.HeaderText = "IdCita"
         Me.colIdCita.Name = "colIdCita"
         Me.colIdCita.Visible = False
-        '
-        'colBuscar
-        '
-        Me.colBuscar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.colBuscar.HeaderText = "..."
-        Me.colBuscar.Image = CType(resources.GetObject("colBuscar.Image"), System.Drawing.Image)
-        Me.colBuscar.Name = "colBuscar"
-        Me.colBuscar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.colBuscar.Width = 22
         '
         'colRefConcepto
         '
@@ -1669,6 +1660,15 @@ Partial Class form_citas
         Me.colRefConcepto.MinimumWidth = 61
         Me.colRefConcepto.Name = "colRefConcepto"
         Me.colRefConcepto.Width = 61
+        '
+        'colBuscar
+        '
+        Me.colBuscar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.colBuscar.HeaderText = "..."
+        Me.colBuscar.Image = CType(resources.GetObject("colBuscar.Image"), System.Drawing.Image)
+        Me.colBuscar.Name = "colBuscar"
+        Me.colBuscar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.colBuscar.Width = 22
         '
         'colDescripcion
         '
@@ -1753,6 +1753,7 @@ Partial Class form_citas
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.GhostWhite
         Me.ClientSize = New System.Drawing.Size(1008, 621)
+        Me.Controls.Add(Me.dg_LineasCitas)
         Me.Controls.Add(Me.ContadorBono1)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.GridEX1)
@@ -1763,7 +1764,6 @@ Partial Class form_citas
         Me.Controls.Add(Me.bt_DelLinea)
         Me.Controls.Add(Me.btnAddLineasGenericas)
         Me.Controls.Add(Me.bt_AddLinea)
-        Me.Controls.Add(Me.dg_LineasCitas)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.GroupBox1)
@@ -1802,7 +1802,6 @@ Partial Class form_citas
         Me.ToolStrip1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
-        CType(Me.dg_LineasCitas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LineasCitasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.group_Proceso.ResumeLayout(False)
         CType(Me.FORMASPAGOBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1817,6 +1816,7 @@ Partial Class form_citas
         CType(Me.MEDICOSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridEX1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.HISTORIALEBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dg_LineasCitas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1879,7 +1879,6 @@ Partial Class form_citas
     Friend WithEvents ToolStripStatusLabel2 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel3 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents tstrip_Info As System.Windows.Forms.ToolStripStatusLabel
-    Friend WithEvents dg_LineasCitas As System.Windows.Forms.DataGridView
     Friend WithEvents bt_AddLinea As System.Windows.Forms.Button
     Friend WithEvents bt_DelLinea As System.Windows.Forms.Button
     Friend WithEvents LineasCitasBindingSource As System.Windows.Forms.BindingSource
@@ -1947,9 +1946,10 @@ Partial Class form_citas
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents bt_ActualizaNumeracion As System.Windows.Forms.Button
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents dg_LineasCitas As System.Windows.Forms.DataGridView
     Friend WithEvents colIdCita As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colBuscar As System.Windows.Forms.DataGridViewImageColumn
     Friend WithEvents colRefConcepto As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colBuscar As System.Windows.Forms.DataGridViewImageColumn
     Friend WithEvents colDescripcion As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents colCantidad As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents colImporteClinica As System.Windows.Forms.DataGridViewTextBoxColumn

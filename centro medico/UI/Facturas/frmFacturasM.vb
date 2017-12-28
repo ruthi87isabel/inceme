@@ -301,6 +301,7 @@ Public Class frmFacturasM
                                                                     Select en).ToList()
 
                     Dim listacitas As List(Of CITA) = (From c In cont.CITAs Where c.REFFRA = fact.IDFACTURA Select c).ToList
+                    Dim resContinuar As MsgBoxResult = MsgBoxResult.Yes
                     Dim txtaviso As String = ""
 
                     If entregascuenta.Count > 0 Then
@@ -313,9 +314,9 @@ Public Class frmFacturasM
 
                     If txtaviso.Length > 0 Then
                         txtaviso = txtaviso & " ¿Desea continuar?"
+                        resContinuar = MsgBox(txtaviso, MsgBoxStyle.YesNo)
                     End If
 
-                    Dim resContinuar As MsgBoxResult = MsgBox(txtaviso, MsgBoxStyle.YesNo)
                     If resContinuar = MsgBoxResult.Yes Then
                         'desvincular citas.
                         For Each l As CITA In listacitas
