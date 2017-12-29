@@ -507,7 +507,7 @@ FROM d_Presupuesto D
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>OdontTrat_LineasPresupuesto</DataSetName>
-            <Top>4.99882cm</Top>
+            <Top>4.99881cm</Top>
             <Left>0.23285cm</Left>
             <Height>0.51525in</Height>
             <Width>7.52178in</Width>
@@ -528,7 +528,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox20</rd:DefaultName>
-            <Top>0.38496cm</Top>
+            <Top>0.38495cm</Top>
             <Left>9.77442cm</Left>
             <Height>0.6cm</Height>
             <Width>2.12958cm</Width>
@@ -560,7 +560,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox21</rd:DefaultName>
-            <Top>0.38496cm</Top>
+            <Top>0.38495cm</Top>
             <Left>12.08039cm</Left>
             <Height>0.6cm</Height>
             <Width>6.92008cm</Width>
@@ -590,7 +590,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox22</rd:DefaultName>
-            <Top>2.60774cm</Top>
+            <Top>2.60773cm</Top>
             <Left>0.52898cm</Left>
             <Height>0.6cm</Height>
             <Width>4.1616cm</Width>
@@ -622,7 +622,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox23</rd:DefaultName>
-            <Top>2.60774cm</Top>
+            <Top>2.60773cm</Top>
             <Left>4.77523cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
@@ -638,7 +638,7 @@ FROM d_Presupuesto D
             </Style>
           </Textbox>
           <Line Name="Line1">
-            <Top>0.03524cm</Top>
+            <Top>0.03523cm</Top>
             <Height>0cm</Height>
             <Width>19.33817cm</Width>
             <ZIndex>5</ZIndex>
@@ -701,7 +701,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Top>2.60774cm</Top>
+            <Top>2.60773cm</Top>
             <Left>9.76094cm</Left>
             <Height>0.6cm</Height>
             <Width>3.10854cm</Width>
@@ -731,7 +731,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox22</rd:DefaultName>
-            <Top>3.24302cm</Top>
+            <Top>3.24301cm</Top>
             <Left>0.52898cm</Left>
             <Height>0.6cm</Height>
             <Width>3.63771cm</Width>
@@ -761,7 +761,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox22</rd:DefaultName>
-            <Top>3.8783cm</Top>
+            <Top>3.87829cm</Top>
             <Left>0.52898cm</Left>
             <Height>0.6cm</Height>
             <Width>3.63771cm</Width>
@@ -796,7 +796,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox23</rd:DefaultName>
-            <Top>2.60774cm</Top>
+            <Top>2.60773cm</Top>
             <Left>12.86948cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
@@ -828,7 +828,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox23</rd:DefaultName>
-            <Top>3.31358cm</Top>
+            <Top>3.31357cm</Top>
             <Left>4.77523cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
@@ -860,7 +860,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox10</rd:DefaultName>
-            <Top>8.09166cm</Top>
+            <Top>8.09165cm</Top>
             <Left>0.23285cm</Left>
             <Height>0.6cm</Height>
             <Width>4.1616cm</Width>
@@ -894,7 +894,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox11</rd:DefaultName>
-            <Top>7.33319cm</Top>
+            <Top>7.33318cm</Top>
             <Left>15.6479cm</Left>
             <Height>0.6cm</Height>
             <Width>1.45675cm</Width>
@@ -928,7 +928,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox12</rd:DefaultName>
-            <Top>7.33319cm</Top>
+            <Top>7.33318cm</Top>
             <Left>17.45435cm</Left>
             <Height>0.6cm</Height>
             <Width>1.56104cm</Width>
@@ -962,7 +962,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox11</rd:DefaultName>
-            <Top>6.66264cm</Top>
+            <Top>6.66263cm</Top>
             <Left>13.44078cm</Left>
             <Height>0.6cm</Height>
             <Width>3.66387cm</Width>
@@ -1000,7 +1000,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox12</rd:DefaultName>
-            <Top>6.66264cm</Top>
+            <Top>6.66263cm</Top>
             <Left>17.45435cm</Left>
             <Height>0.6cm</Height>
             <Width>1.56104cm</Width>
@@ -1020,10 +1020,10 @@ FROM d_Presupuesto D
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>8.76224cm</Height>
+        <Height>12.09627cm</Height>
         <Style />
       </Body>
-      <Width>19.33817cm</Width>
+      <Width>20.0259cm</Width>
       <Page>
         <PageHeader>
           <Height>1.1811in</Height>
@@ -1084,9 +1084,149 @@ FROM d_Presupuesto D
           <Style />
         </PageHeader>
         <PageFooter>
-          <Height>0.01042in</Height>
+          <Height>1.11491in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="Textbox16">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>En virtud de la Ley 15/199 de 13 de Diciembre, sobre la protección de datos de carácter personal, le informamos que sus datos personales, están incorporados en un fichero</Value>
+                      <Style>
+                        <FontStyle>Normal</FontStyle>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>Normal</FontWeight>
+                        <TextDecoration>None</TextDecoration>
+                        <Color>#000000</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>este fichero es la de gestionar la relación profesional entre usted y esta consulta dental. Usted puede ejercer sus derechos de acceso, modificación, cancelación y oposición.</Value>
+                      <Style>
+                        <FontStyle>Normal</FontStyle>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>Normal</FontWeight>
+                        <TextDecoration>None</TextDecoration>
+                        <Color>#000000</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <LeftIndent>0cm</LeftIndent>
+                  <RightIndent>0cm</RightIndent>
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                    <LineHeight>13pt</LineHeight>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox8</rd:DefaultName>
+              <Top>1.12944cm</Top>
+              <Left>0.23285cm</Left>
+              <Height>1.52604cm</Height>
+              <Width>19.7615cm</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox15">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>El presupuesto podría sufrir modificaciones a lo largo del tratamiento.</Value>
+                      <Style>
+                        <FontStyle>Normal</FontStyle>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontWeight>Bold</FontWeight>
+                        <TextDecoration>None</TextDecoration>
+                        <Color>#000000</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox8</rd:DefaultName>
+              <Top>0.67056cm</Top>
+              <Left>0.23285cm</Left>
+              <Height>0.45889cm</Height>
+              <Width>11.67115cm</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Line Name="Line2">
+              <Top>0.6cm</Top>
+              <Left>0cm</Left>
+              <Height>0cm</Height>
+              <Width>19.99435cm</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>Solid</Style>
+                  <Width>1.5pt</Width>
+                </Border>
+              </Style>
+            </Line>
+            <Textbox Name="Textbox9">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Observaciones:</Value>
+                      <Style>
+                        <FontWeight>Bold</FontWeight>
+                        <TextDecoration>Underline</TextDecoration>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox8</rd:DefaultName>
+              <Left>0.23285cm</Left>
+              <Height>0.6cm</Height>
+              <Width>3.10854cm</Width>
+              <ZIndex>3</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
           <Style />
         </PageFooter>
         <PageHeight>27.94cm</PageHeight>
