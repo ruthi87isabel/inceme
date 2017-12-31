@@ -3387,15 +3387,14 @@ Public Class form_citas
     End Sub
 
     Private Sub btnAddLineasGenericas_Click(sender As System.Object, e As System.EventArgs) Handles btnAddLineasGenericas.Click
-        Dim guardarOk As Boolean
         If CurrentAccion = Enums.Accion.Insertar Then
             If MessageBox.Show("Debe guardar la cita antes de importar lineas." & vbCrLf & "¿Desea guardar y continuar la importación?", "Atención", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-                guardarOk = Guardar()
+                If Not Guardar() Then Return
             Else
                 Return
             End If
         End If
-        If guardarOk And CtrlPaciente1.ID_PACIENTE.HasValue Then
+        If CtrlPaciente1.ID_PACIENTE.HasValue Then
             Dim frm As New frmCita_ImportarLineas()
             frm.ID_PACIENTE = CtrlPaciente1.ID_PACIENTE
             If frm.ShowDialog() = Windows.Forms.DialogResult.OK Then
@@ -3405,8 +3404,8 @@ Public Class form_citas
                 For Each lineaPresupuesto As d_PresupuestoLinea In frm.ListaLineasPresupuesto
                     addLineaDental(lineaPresupuesto)
                 Next
+                Guardar2()
             End If
-            Guardar2()
         End If
     End Sub
 
