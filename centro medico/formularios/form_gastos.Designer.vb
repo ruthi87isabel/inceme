@@ -19,29 +19,32 @@ Partial Class form_gastos
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim CONCEPTOLabel As System.Windows.Forms.Label
         Dim REFFORMAPAGOLabel As System.Windows.Forms.Label
         Dim FECHALabel As System.Windows.Forms.Label
         Dim IMPORTELabel As System.Windows.Forms.Label
-        Me.CMDataSet = New centro_medico.CMDataSet
+        Dim LbHora As System.Windows.Forms.Label
+        Me.CMDataSet = New centro_medico.CMDataSet()
         Me.GASTOSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.GASTOSTableAdapter = New centro_medico.CMDataSetTableAdapters.GASTOSTableAdapter
-        Me.tb_concepto = New ctrlTextboxAvanzado
-        Me.tb_idforma = New ctrlTextboxAvanzado
-        Me.dtp_fecha = New System.Windows.Forms.DateTimePicker
-        Me.tb_importe = New ctrlTextboxAvanzado
-        Me.tb_forma = New ctrlTextboxAvanzado
-        Me.bt_forma = New System.Windows.Forms.Button
-        Me.bt_cancel = New System.Windows.Forms.Button
-        Me.bt_aceptar = New System.Windows.Forms.Button
-        Me.lb_datos = New System.Windows.Forms.Label
-        Me.FORMASPAGOTableAdapter = New centro_medico.CMDataSetTableAdapters.FORMASPAGOTableAdapter
+        Me.GASTOSTableAdapter = New centro_medico.CMDataSetTableAdapters.GASTOSTableAdapter()
+        Me.tb_concepto = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_idforma = New centro_medico.ctrlTextboxAvanzado()
+        Me.dtp_fecha = New System.Windows.Forms.DateTimePicker()
+        Me.tb_importe = New centro_medico.ctrlTextboxAvanzado()
+        Me.tb_forma = New centro_medico.ctrlTextboxAvanzado()
+        Me.bt_forma = New System.Windows.Forms.Button()
+        Me.bt_cancel = New System.Windows.Forms.Button()
+        Me.bt_aceptar = New System.Windows.Forms.Button()
+        Me.lb_datos = New System.Windows.Forms.Label()
+        Me.FORMASPAGOTableAdapter = New centro_medico.CMDataSetTableAdapters.FORMASPAGOTableAdapter()
         Me.FORMASPAGOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        CONCEPTOLabel = New System.Windows.Forms.Label
-        REFFORMAPAGOLabel = New System.Windows.Forms.Label
-        FECHALabel = New System.Windows.Forms.Label
-        IMPORTELabel = New System.Windows.Forms.Label
+        Me.dtp_hora = New System.Windows.Forms.DateTimePicker()
+        CONCEPTOLabel = New System.Windows.Forms.Label()
+        REFFORMAPAGOLabel = New System.Windows.Forms.Label()
+        FECHALabel = New System.Windows.Forms.Label()
+        IMPORTELabel = New System.Windows.Forms.Label()
+        LbHora = New System.Windows.Forms.Label()
         CType(Me.CMDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GASTOSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FORMASPAGOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -77,7 +80,7 @@ Partial Class form_gastos
         'IMPORTELabel
         '
         IMPORTELabel.AutoSize = True
-        IMPORTELabel.Location = New System.Drawing.Point(162, 30)
+        IMPORTELabel.Location = New System.Drawing.Point(187, 30)
         IMPORTELabel.Name = "IMPORTELabel"
         IMPORTELabel.Size = New System.Drawing.Size(45, 13)
         IMPORTELabel.TabIndex = 11
@@ -86,6 +89,7 @@ Partial Class form_gastos
         'CMDataSet
         '
         Me.CMDataSet.DataSetName = "CMDataSet"
+        Me.CMDataSet.EnforceConstraints = False
         Me.CMDataSet.Locale = New System.Globalization.CultureInfo("en-US")
         Me.CMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
@@ -100,6 +104,7 @@ Partial Class form_gastos
         '
         'tb_concepto
         '
+        Me.tb_concepto.AcceptsReturn = True
         Me.tb_concepto.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.GASTOSBindingSource, "CONCEPTO", True))
         Me.tb_concepto.Location = New System.Drawing.Point(7, 85)
         Me.tb_concepto.MaxLength = 250
@@ -109,6 +114,7 @@ Partial Class form_gastos
         '
         'tb_idforma
         '
+        Me.tb_idforma.AcceptsReturn = True
         Me.tb_idforma.BackColor = System.Drawing.Color.White
         Me.tb_idforma.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.GASTOSBindingSource, "REFFORMAPAGO", True))
         Me.tb_idforma.Location = New System.Drawing.Point(7, 124)
@@ -123,19 +129,21 @@ Partial Class form_gastos
         Me.dtp_fecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtp_fecha.Location = New System.Drawing.Point(7, 46)
         Me.dtp_fecha.Name = "dtp_fecha"
-        Me.dtp_fecha.Size = New System.Drawing.Size(120, 20)
+        Me.dtp_fecha.Size = New System.Drawing.Size(100, 20)
         Me.dtp_fecha.TabIndex = 0
         '
         'tb_importe
         '
+        Me.tb_importe.AcceptsReturn = True
         Me.tb_importe.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.GASTOSBindingSource, "IMPORTE", True))
-        Me.tb_importe.Location = New System.Drawing.Point(165, 47)
+        Me.tb_importe.Location = New System.Drawing.Point(190, 46)
         Me.tb_importe.Name = "tb_importe"
-        Me.tb_importe.Size = New System.Drawing.Size(100, 20)
+        Me.tb_importe.Size = New System.Drawing.Size(75, 20)
         Me.tb_importe.TabIndex = 1
         '
         'tb_forma
         '
+        Me.tb_forma.AcceptsReturn = True
         Me.tb_forma.BackColor = System.Drawing.Color.White
         Me.tb_forma.Location = New System.Drawing.Point(124, 124)
         Me.tb_forma.MaxLength = 90
@@ -201,6 +209,25 @@ Partial Class form_gastos
         Me.FORMASPAGOBindingSource.DataMember = "FORMASPAGO"
         Me.FORMASPAGOBindingSource.DataSource = Me.CMDataSet
         '
+        'dtp_hora
+        '
+        Me.dtp_hora.CustomFormat = "HH:mm"
+        Me.dtp_hora.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtp_hora.Location = New System.Drawing.Point(119, 46)
+        Me.dtp_hora.Name = "dtp_hora"
+        Me.dtp_hora.ShowUpDown = True
+        Me.dtp_hora.Size = New System.Drawing.Size(58, 20)
+        Me.dtp_hora.TabIndex = 76
+        '
+        'LbHora
+        '
+        LbHora.AutoSize = True
+        LbHora.Location = New System.Drawing.Point(117, 30)
+        LbHora.Name = "LbHora"
+        LbHora.Size = New System.Drawing.Size(33, 13)
+        LbHora.TabIndex = 75
+        LbHora.Text = "Hora:"
+        '
         'form_gastos
         '
         Me.AcceptButton = Me.bt_aceptar
@@ -208,6 +235,8 @@ Partial Class form_gastos
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.bt_cancel
         Me.ClientSize = New System.Drawing.Size(273, 192)
+        Me.Controls.Add(Me.dtp_hora)
+        Me.Controls.Add(LbHora)
         Me.Controls.Add(Me.lb_datos)
         Me.Controls.Add(Me.tb_forma)
         Me.Controls.Add(Me.bt_forma)
@@ -247,4 +276,5 @@ Partial Class form_gastos
     Friend WithEvents lb_datos As System.Windows.Forms.Label
     Friend WithEvents FORMASPAGOTableAdapter As centro_medico.CMDataSetTableAdapters.FORMASPAGOTableAdapter
     Friend WithEvents FORMASPAGOBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents dtp_hora As System.Windows.Forms.DateTimePicker
 End Class

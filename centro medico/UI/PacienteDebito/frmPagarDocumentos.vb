@@ -8,6 +8,7 @@
 
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
         dtp_Fecha.Value = FechaPago
+        dtp_hora.Value = Date.Now
 
     End Sub
 
@@ -63,7 +64,8 @@
 
     Public ReadOnly Property FechaPago As Date Implements IFormDocumentosPendientes.FechaPago
         Get
-            Return Me.dtp_Fecha.Value
+            Dim fecha As New Date(dtp_Fecha.Value.Year, dtp_Fecha.Value.Month, dtp_Fecha.Value.Day, dtp_hora.Value.Hour, dtp_hora.Value.Minute, dtp_hora.Value.Second)
+            Return fecha
         End Get
     End Property
 

@@ -23,6 +23,7 @@ Partial Class frmPagarCantidad
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim LbHora As System.Windows.Forms.Label
         Me.lblTextoTotalAPagar = New System.Windows.Forms.Label()
         Me.ButtonOk = New System.Windows.Forms.Button()
         Me.txtImporteOriginal = New Janus.Windows.GridEX.EditControls.NumericEditBox()
@@ -39,6 +40,8 @@ Partial Class frmPagarCantidad
         Me.txtCredito = New Janus.Windows.GridEX.EditControls.NumericEditBox()
         Me.CtrlFormaPago21 = New centro_medico.ctrlFormaPago2()
         Me.txtNotas = New centro_medico.ctrlTextboxAvanzado()
+        Me.dtp_hora = New System.Windows.Forms.DateTimePicker()
+        LbHora = New System.Windows.Forms.Label()
         Me.grpAbonar.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -74,8 +77,8 @@ Partial Class frmPagarCantidad
         Me.txtImporteOriginal.ReadOnly = True
         Me.txtImporteOriginal.Size = New System.Drawing.Size(101, 20)
         Me.txtImporteOriginal.TabIndex = 1
-        Me.txtImporteOriginal.Text = "$0.00"
-        Me.txtImporteOriginal.Value = New Decimal(New Integer() {0, 0, 0, 131072})
+        Me.txtImporteOriginal.Text = "0,00 €"
+        Me.txtImporteOriginal.Value = New Decimal(New Integer() {0, 0, 0, 0})
         '
         'Label1
         '
@@ -91,7 +94,7 @@ Partial Class frmPagarCantidad
         '
         Me.dtp_Fecha.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dtp_Fecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtp_Fecha.Location = New System.Drawing.Point(529, 193)
+        Me.dtp_Fecha.Location = New System.Drawing.Point(470, 196)
         Me.dtp_Fecha.Name = "dtp_Fecha"
         Me.dtp_Fecha.Size = New System.Drawing.Size(101, 20)
         Me.dtp_Fecha.TabIndex = 6
@@ -100,7 +103,7 @@ Partial Class frmPagarCantidad
         '
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(482, 199)
+        Me.Label2.Location = New System.Drawing.Point(431, 199)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(40, 13)
         Me.Label2.TabIndex = 0
@@ -172,8 +175,8 @@ Partial Class frmPagarCantidad
         Me.txtMontoAbonar.Name = "txtMontoAbonar"
         Me.txtMontoAbonar.Size = New System.Drawing.Size(101, 20)
         Me.txtMontoAbonar.TabIndex = 5
-        Me.txtMontoAbonar.Text = "$0.00"
-        Me.txtMontoAbonar.Value = New Decimal(New Integer() {0, 0, 0, 131072})
+        Me.txtMontoAbonar.Text = "0,00 €"
+        Me.txtMontoAbonar.Value = New Decimal(New Integer() {0, 0, 0, 0})
         '
         'Label5
         '
@@ -198,8 +201,8 @@ Partial Class frmPagarCantidad
         Me.txtCredito.ReadOnly = True
         Me.txtCredito.Size = New System.Drawing.Size(101, 20)
         Me.txtCredito.TabIndex = 2
-        Me.txtCredito.Text = "$0.00"
-        Me.txtCredito.Value = New Decimal(New Integer() {0, 0, 0, 131072})
+        Me.txtCredito.Text = "0,00 €"
+        Me.txtCredito.Value = New Decimal(New Integer() {0, 0, 0, 0})
         '
         'CtrlFormaPago21
         '
@@ -220,11 +223,32 @@ Partial Class frmPagarCantidad
         Me.txtNotas.Size = New System.Drawing.Size(323, 146)
         Me.txtNotas.TabIndex = 7
         '
+        'dtp_hora
+        '
+        Me.dtp_hora.CustomFormat = "HH:mm"
+        Me.dtp_hora.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtp_hora.Location = New System.Drawing.Point(618, 196)
+        Me.dtp_hora.Name = "dtp_hora"
+        Me.dtp_hora.ShowUpDown = True
+        Me.dtp_hora.Size = New System.Drawing.Size(58, 20)
+        Me.dtp_hora.TabIndex = 78
+        '
+        'LbHora
+        '
+        LbHora.AutoSize = True
+        LbHora.Location = New System.Drawing.Point(586, 199)
+        LbHora.Name = "LbHora"
+        LbHora.Size = New System.Drawing.Size(33, 13)
+        LbHora.TabIndex = 77
+        LbHora.Text = "Hora:"
+        '
         'frmPagarCantidad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(703, 423)
+        Me.Controls.Add(Me.dtp_hora)
+        Me.Controls.Add(LbHora)
         Me.Controls.Add(Me.CtrlFormaPago21)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtCredito)
@@ -264,4 +288,5 @@ Partial Class frmPagarCantidad
     Public WithEvents txtMontoAbonar As Janus.Windows.GridEX.EditControls.NumericEditBox
     Public WithEvents CtrlFormaPago21 As centro_medico.ctrlFormaPago2
     Public WithEvents txtNotas As centro_medico.ctrlTextboxAvanzado
+    Friend WithEvents dtp_hora As System.Windows.Forms.DateTimePicker
 End Class

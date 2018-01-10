@@ -75,7 +75,7 @@ Public Class form_gastos
         tb_concepto.Text = fconceptoo.ToString()
         tb_importe.Text = String.Format("{0:N}", (fimporteo))
         dtp_fecha.Value = ffechao
-
+        dtp_hora.Value = Date.Now
 
     End Sub
     Private Sub GASTOSBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -98,6 +98,7 @@ Public Class form_gastos
             bt_forma.Enabled = False
             tb_forma.ReadOnly = True
             dtp_fecha.Enabled = False
+            dtp_hora.Enabled = False
             bt_aceptar.Hide()
             bt_cancel.Text = "Cerrar"
 
@@ -140,7 +141,8 @@ Public Class form_gastos
             End If
             Dim _concepto As String = tb_concepto.Text.Trim()
             Dim _fcod As String = tb_idforma.Text.Trim()
-            Dim _fecha As Date = dtp_fecha.Value.Date
+            Dim _fecha As New Date(dtp_fecha.Value.Year, dtp_fecha.Value.Month, dtp_fecha.Value.Day, dtp_hora.Value.Hour, dtp_hora.Value.Minute, dtp_hora.Value.Second)
+
             If Me.CurrentAccion = Enums.Accion.Modificar Then
                 If MessageBox.Show("Esta seguro que desea modificar los datos ", "Modificar", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = Windows.Forms.DialogResult.OK Then
                     If _fcod <> "" Then
@@ -172,7 +174,7 @@ Public Class form_gastos
             End If
             Dim _concepto As String = tb_concepto.Text.Trim()
             Dim _fcod As String = tb_idforma.Text.Trim()
-            Dim _fecha As Date = dtp_fecha.Value.Date
+            Dim _fecha As New Date(dtp_fecha.Value.Year, dtp_fecha.Value.Month, dtp_fecha.Value.Day, dtp_hora.Value.Hour, dtp_hora.Value.Minute, dtp_hora.Value.Second)
             If Me.CurrentAccion = Enums.Accion.Modificar Then
                 If _fcod <> "" Then
                     Me.GASTOSTableAdapter.UpdateValores(_concepto, _importe, _fecha, _fcod, fId)

@@ -460,6 +460,14 @@
                 gastos = gastos.Where(Function(o) o.FECHA <= filtro.FechaEmisionFinal)
             End If
 
+            If (filtro.HoraEmisionInicial.HasValue) Then
+                gastos = gastos.Where(Function(o) o.FECHA.Value.Hour > filtro.HoraEmisionInicial.Value.Hour Or (o.FECHA.Value.Hour = filtro.HoraEmisionInicial.Value.Hour And o.FECHA.Value.Minute >= filtro.HoraEmisionInicial.Value.Minute))
+            End If
+
+            If (filtro.HoraEmisionFinal.HasValue) Then
+                gastos = gastos.Where(Function(o) o.FECHA.Value.Hour < filtro.HoraEmisionFinal.Value.Hour Or (o.FECHA.Value.Hour = filtro.HoraEmisionFinal.Value.Hour And o.FECHA.Value.Minute <= filtro.HoraEmisionFinal.Value.Minute))
+            End If
+
 
             If (Not filtro.FormaPago Is Nothing) Then
                 gastos = gastos.Where(Function(o) o.REFFORMAPAGO = filtro.FormaPago)
@@ -492,6 +500,13 @@
                 comisiones = comisiones.Where(Function(o) o.Fecha <= filtro.FechaEmisionFinal)
             End If
 
+            If (filtro.HoraEmisionInicial.HasValue) Then
+                comisiones = comisiones.Where(Function(o) o.Fecha.Value.Hour > filtro.HoraEmisionInicial.Value.Hour Or (o.Fecha.Value.Hour = filtro.HoraEmisionInicial.Value.Hour And o.Fecha.Value.Minute >= filtro.HoraEmisionInicial.Value.Minute))
+            End If
+
+            If (filtro.HoraEmisionFinal.HasValue) Then
+                comisiones = comisiones.Where(Function(o) o.Fecha.Value.Hour < filtro.HoraEmisionFinal.Value.Hour Or (o.Fecha.Value.Hour = filtro.HoraEmisionFinal.Value.Hour And o.Fecha.Value.Minute <= filtro.HoraEmisionFinal.Value.Minute))
+            End If
 
             If (Not filtro.FormaPago Is Nothing) Then
                 comisiones = comisiones.Where(Function(o) o.ID_FormaPago = filtro.FormaPago)
@@ -514,8 +529,6 @@
         Items = lista
         Return lista
     End Function
-
-
 
     Public ReadOnly Property EntregasDocumento As Object
         Get

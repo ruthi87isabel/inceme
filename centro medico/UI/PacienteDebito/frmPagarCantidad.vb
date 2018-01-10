@@ -54,6 +54,7 @@ Public Class frmPagarCantidad
                 End If
             End If
         End If
+        dtp_hora.Value = Date.Now
 
     End Sub
 

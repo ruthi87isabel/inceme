@@ -148,7 +148,7 @@ Public Class PacienteDebitoManager
             For Each doc As IDocumentoPagable In documentos
                 res = PagarDocumento(doc,
                                formDocumentos.IdFormaPagoSeleccionada,
-                               New Date(formDocumentos.FechaPago.Year, formDocumentos.FechaPago.Month, formDocumentos.FechaPago.Day, Now.Hour, Now.Minute, Now.Second),
+                               New Date(formDocumentos.FechaPago.Year, formDocumentos.FechaPago.Month, formDocumentos.FechaPago.Day, formDocumentos.FechaPago.Hour, formDocumentos.FechaPago.Minute, formDocumentos.FechaPago.Second),
                                idUsuarioEfectua,
                                formDocumentos.UsarCredito,
                                context)

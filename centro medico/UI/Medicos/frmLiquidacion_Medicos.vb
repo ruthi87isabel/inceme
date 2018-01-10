@@ -344,7 +344,8 @@ Public Class frmLiquidacion_Medicos
                 Dim liquidacion As New Liquidacion_Medico()
 
                 'liquidacion.Descripcion = 
-                liquidacion.Fecha = frm.dtp_Fecha.Value
+                Dim _fecha As New Date(frm.dtp_Fecha.Value.Year, frm.dtp_Fecha.Value.Month, frm.dtp_Fecha.Value.Day, frm.dtp_hora.Value.Hour, frm.dtp_hora.Value.Minute, frm.dtp_hora.Value.Second)
+                liquidacion.Fecha = _fecha
                 Try
                     liquidacion.ID_FormaPago = frm.CtrlFormaPago21.ID_FORMASPAGO
 

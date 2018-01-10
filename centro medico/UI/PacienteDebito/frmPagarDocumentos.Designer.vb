@@ -25,6 +25,7 @@ Partial Class frmPagarDocumentos
         Me.components = New System.ComponentModel.Container()
         Dim GridEXDocs_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPagarDocumentos))
+        Dim lb_Hora As System.Windows.Forms.Label
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtCredito = New Janus.Windows.GridEX.EditControls.NumericEditBox()
         Me.txtImporte = New Janus.Windows.GridEX.EditControls.NumericEditBox()
@@ -37,6 +38,8 @@ Partial Class frmPagarDocumentos
         Me.GridEXDocs = New Janus.Windows.GridEX.GridEX()
         Me.IDocumentoPagableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CtrlFormaPago21 = New centro_medico.ctrlFormaPago2()
+        Me.dtp_hora = New System.Windows.Forms.DateTimePicker()
+        lb_Hora = New System.Windows.Forms.Label()
         CType(Me.GridEXDocs, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IDocumentoPagableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -45,7 +48,7 @@ Partial Class frmPagarDocumentos
         '
         Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.ForeColor = System.Drawing.Color.Green
-        Me.Label5.Location = New System.Drawing.Point(438, 14)
+        Me.Label5.Location = New System.Drawing.Point(450, 14)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(47, 15)
         Me.Label5.TabIndex = 37
@@ -59,13 +62,13 @@ Partial Class frmPagarDocumentos
         Me.txtCredito.Enabled = False
         Me.txtCredito.FormatMask = Janus.Windows.GridEX.NumericEditFormatMask.Currency
         Me.txtCredito.FormatString = "C2"
-        Me.txtCredito.Location = New System.Drawing.Point(491, 11)
+        Me.txtCredito.Location = New System.Drawing.Point(503, 11)
         Me.txtCredito.Name = "txtCredito"
         Me.txtCredito.ReadOnly = True
         Me.txtCredito.Size = New System.Drawing.Size(75, 20)
         Me.txtCredito.TabIndex = 28
         Me.txtCredito.Text = "0,00 €"
-        Me.txtCredito.Value = New Decimal(New Integer() {0, 0, 0, 131072})
+        Me.txtCredito.Value = New Decimal(New Integer() {0, 0, 0, 0})
         '
         'txtImporte
         '
@@ -79,7 +82,7 @@ Partial Class frmPagarDocumentos
         Me.txtImporte.Size = New System.Drawing.Size(101, 20)
         Me.txtImporte.TabIndex = 27
         Me.txtImporte.Text = "0,00 €"
-        Me.txtImporte.Value = New Decimal(New Integer() {0, 0, 0, 131072})
+        Me.txtImporte.Value = New Decimal(New Integer() {0, 0, 0, 0})
         '
         'lblTextoTotalAPagar
         '
@@ -94,7 +97,7 @@ Partial Class frmPagarDocumentos
         '
         Me.chkUtilizarCredito.AutoSize = True
         Me.chkUtilizarCredito.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.chkUtilizarCredito.Location = New System.Drawing.Point(203, 14)
+        Me.chkUtilizarCredito.Location = New System.Drawing.Point(215, 14)
         Me.chkUtilizarCredito.Name = "chkUtilizarCredito"
         Me.chkUtilizarCredito.Size = New System.Drawing.Size(207, 17)
         Me.chkUtilizarCredito.TabIndex = 30
@@ -112,7 +115,7 @@ Partial Class frmPagarDocumentos
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(9, 75)
+        Me.Label4.Location = New System.Drawing.Point(9, 76)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(123, 13)
         Me.Label4.TabIndex = 33
@@ -155,11 +158,11 @@ Partial Class frmPagarDocumentos
         Me.GridEXDocs.GroupTotals = Janus.Windows.GridEX.GroupTotals.Always
         Me.GridEXDocs.HeaderFormatStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Center
         Me.GridEXDocs.Hierarchical = True
-        Me.GridEXDocs.Location = New System.Drawing.Point(12, 91)
+        Me.GridEXDocs.Location = New System.Drawing.Point(8, 92)
         Me.GridEXDocs.Name = "GridEXDocs"
         Me.GridEXDocs.RowCheckStateBehavior = Janus.Windows.GridEX.RowCheckStateBehavior.CheckStateDependsOnChild
         Me.GridEXDocs.RowFormatStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Center
-        Me.GridEXDocs.Size = New System.Drawing.Size(684, 330)
+        Me.GridEXDocs.Size = New System.Drawing.Size(695, 347)
         Me.GridEXDocs.TabIndex = 38
         Me.GridEXDocs.TableHeaderFormatStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Near
         Me.GridEXDocs.TotalRowFormatStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
@@ -175,16 +178,37 @@ Partial Class frmPagarDocumentos
         'CtrlFormaPago21
         '
         Me.CtrlFormaPago21.ID_FORMASPAGO = Nothing
-        Me.CtrlFormaPago21.Location = New System.Drawing.Point(203, 40)
+        Me.CtrlFormaPago21.Location = New System.Drawing.Point(281, 40)
         Me.CtrlFormaPago21.Name = "CtrlFormaPago21"
-        Me.CtrlFormaPago21.Size = New System.Drawing.Size(363, 23)
+        Me.CtrlFormaPago21.Size = New System.Drawing.Size(298, 23)
         Me.CtrlFormaPago21.TabIndex = 29
+        '
+        'dtp_hora
+        '
+        Me.dtp_hora.CustomFormat = "HH:mm"
+        Me.dtp_hora.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtp_hora.Location = New System.Drawing.Point(198, 43)
+        Me.dtp_hora.Name = "dtp_hora"
+        Me.dtp_hora.ShowUpDown = True
+        Me.dtp_hora.Size = New System.Drawing.Size(58, 20)
+        Me.dtp_hora.TabIndex = 76
+        '
+        'lb_Hora
+        '
+        lb_Hora.AutoSize = True
+        lb_Hora.Location = New System.Drawing.Point(164, 46)
+        lb_Hora.Name = "lb_Hora"
+        lb_Hora.Size = New System.Drawing.Size(33, 13)
+        lb_Hora.TabIndex = 75
+        lb_Hora.Text = "Hora:"
         '
         'frmPagarDocumentos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(708, 446)
+        Me.Controls.Add(Me.dtp_hora)
+        Me.Controls.Add(lb_Hora)
         Me.Controls.Add(Me.GridEXDocs)
         Me.Controls.Add(Me.CtrlFormaPago21)
         Me.Controls.Add(Me.Label5)
@@ -218,4 +242,5 @@ Partial Class frmPagarDocumentos
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents GridEXDocs As Janus.Windows.GridEX.GridEX
     Friend WithEvents IDocumentoPagableBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents dtp_hora As System.Windows.Forms.DateTimePicker
 End Class
