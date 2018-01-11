@@ -397,8 +397,13 @@ Public Class frmOdontograma
         Dim classOdontograma As New ClasesOdontogramaDataContext
         Dim presupuestos As IEnumerable(Of md_d_Presupuesto) = classOdontograma.GetPresupuestosByOdontograma(ID)
         Dim tnode As TreeNode
+
         For Each presupuesto As md_d_Presupuesto In presupuestos
-            tnode = tvwPresupuestos.Nodes.Add(Format(presupuesto.FechaConcepcion, "dd/MM/yyyy"))
+            Dim NumPre As Integer = 0
+            For Each nodo As TreeNode In tvwPresupuestos.Nodes
+                If nodo.Text.Contains(Format(presupuesto.FechaConcepcion, "dd/MM/yyyy")) Then NumPre += 1
+            Next
+            tnode = tvwPresupuestos.Nodes.Add("P" & NumPre + 1 & " - " & Format(presupuesto.FechaConcepcion, "dd/MM/yyyy"))
             tnode.Tag = presupuesto
         Next
         If tvwPresupuestos.Nodes.Count > 0 Then
@@ -1121,7 +1126,12 @@ Public Class frmOdontograma
             Next
         End If
         Presupuesto = AddPresupuestoOnDB(Fecha)
-        Dim tnode As TreeNode = tvwPresupuestos.Nodes.Add(Format(Presupuesto.FechaConcepcion, "dd/MM/yyyy"))
+
+        Dim NumPre As Integer = 0
+        For Each nodo As TreeNode In tvwPresupuestos.Nodes
+            If nodo.Text.Contains(Format(Presupuesto.FechaConcepcion, "dd/MM/yyyy")) Then NumPre += 1
+        Next
+        Dim tnode As TreeNode = tvwPresupuestos.Nodes.Add("P" & NumPre + 1 & " - " & Format(Presupuesto.FechaConcepcion, "dd/MM/yyyy"))
         tnode.Tag = Presupuesto
         tvwPresupuestos.SelectedNode = tvwPresupuestos.Nodes.Item(tvwPresupuestos.Nodes.Count - 1)
         Return Presupuesto.IDPresupuesto
@@ -1927,10 +1937,10 @@ Public Class frmOdontograma
         Dim Presupuesto As md_d_Presupuesto
         If tvwPresupuestos.Nodes.Count > 0 Then
             Presupuesto = TryCast(tvwPresupuestos.Nodes.Item(tvwPresupuestos.Nodes.Count - 1).Tag, md_d_Presupuesto)
-            If dtpFecha.Value <= Presupuesto.FechaConcepcion Then
-                MsgBox("La fecha seleccionada es menor o igual que la del último presupuesto", MsgBoxStyle.Information)
-                Exit Sub
-            End If
+            'If dtpFecha.Value <= Presupuesto.FechaConcepcion Then
+            '    MsgBox("La fecha seleccionada es menor o igual que la del último presupuesto", MsgBoxStyle.Information)
+            '    Exit Sub
+            'End If
 
             Dim classOdontograma As New ClasesOdontogramaDataContext
             Dim IDPresupuesto As Integer = TryCast(tvwPresupuestos.SelectedNode.Tag, md_d_Presupuesto).IDPresupuesto
@@ -1942,7 +1952,12 @@ Public Class frmOdontograma
         End If
 
         Presupuesto = AddPresupuestoOnDB(dtpFecha.Value)
-        Dim tnode As TreeNode = tvwPresupuestos.Nodes.Add(Format(Presupuesto.FechaConcepcion, "dd/MM/yyyy"))
+
+        Dim NumPre As Integer = 0
+        For Each nodo As TreeNode In tvwPresupuestos.Nodes
+            If nodo.Text.Contains(Format(Presupuesto.FechaConcepcion, "dd/MM/yyyy")) Then NumPre += 1
+        Next
+        Dim tnode As TreeNode = tvwPresupuestos.Nodes.Add("P" & NumPre + 1 & " - " & Format(Presupuesto.FechaConcepcion, "dd/MM/yyyy"))
         tnode.Tag = Presupuesto
         tvwPresupuestos.SelectedNode = tvwPresupuestos.Nodes.Item(tvwPresupuestos.Nodes.Count - 1)
     End Sub
@@ -2135,15 +2150,12 @@ Public Class frmOdontograma
     Private Sub tstRptOdontograma_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tstRptOdontograma.Click
 
         Try
-
-
             'Salvar la imagen
             Dim tmpFileName As String = System.IO.Path.GetTempFileName()
             Dim FileName As String = tmpFileName.Substring(0, tmpFileName.Length - 4) + ".png"
             Kill(tmpFileName)
             Dim img As Image = Odontograma1.getImage(rbnTemporal.Checked)
             img.Save(FileName)
-
 
             Dim IDOdontograma As Integer
             If rbnTemporal.Checked = True Then
@@ -2164,7 +2176,6 @@ Public Class frmOdontograma
 
             Dim imgPath As Uri = New Uri(FileName)
             Dim PathParam As ReportParameter = New ReportParameter("Path", imgPath.AbsoluteUri)
-          
 
             UI.Reportes.ReportesManager.Imprime("DentalOdontograma.rdlc", {ds}, {PathParam})
 
@@ -2178,6 +2189,8 @@ Public Class frmOdontograma
     Private Sub mitVerReporte_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mitVerReporte.Click, tstRptPresupuesto.Click, btnPReporte.Click, ToolStripButton5.Click
 
         Dim idPresupuesto = TryCast(tvwPresupuestos.SelectedNode.Tag, md_d_Presupuesto).IDPresupuesto
+        Dim numpre As String = (tvwPresupuestos.SelectedNode.Text).Substring(1, 1)
+        Dim NumParam As ReportParameter = New ReportParameter("Num", numpre)
 
         Dim dataset As New OdontTrat.LineasPresupuestoDataTable()
         Dim adapter As New OdontTratTableAdapters.LineasPresupuestoTableAdapter()
@@ -2188,7 +2201,7 @@ Public Class frmOdontograma
         ds.Name = "OdontTrat_LineasPresupuesto"
         ds.Value = dataset
 
-        UI.Reportes.ReportesManager.Imprime("DentalPresupuesto.rdlc", {ds})
+        UI.Reportes.ReportesManager.Imprime("DentalPresupuesto.rdlc", {ds}, {NumParam})
 
     End Sub
 
