@@ -408,6 +408,9 @@ Public Class frmOdontograma
         Next
         If tvwPresupuestos.Nodes.Count > 0 Then
             tvwPresupuestos.SelectedNode = tvwPresupuestos.Nodes.Item(tvwPresupuestos.Nodes.Count - 1)
+        Else
+            LineasPresupuestoTableAdapter.Fill(OdontTrat.LineasPresupuesto, 0)
+            Grid3.Refetch()
         End If
     End Sub
 
@@ -427,7 +430,7 @@ Public Class frmOdontograma
     'CARGAR LA LISTA DE LINEAS DE PRESUPUESTOS CONFIRMADOS
     Private Sub CargarListaPendiente()
         Dim ID As Integer
-        If rbnTemporal.Checked = True Then
+        If rbnTemporal.Checked Then
             ID = OdontogramaID(0)
         Else
             ID = OdontogramaID(1)

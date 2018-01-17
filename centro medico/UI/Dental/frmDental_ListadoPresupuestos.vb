@@ -29,10 +29,6 @@ Public Class frmDental_ListadoPresupuestos
         Try
             context = New CMLinqDataContext()
 
-
-
-
-
             Filtrar()
 
         Catch ex As Exception

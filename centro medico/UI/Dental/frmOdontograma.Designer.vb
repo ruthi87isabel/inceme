@@ -120,20 +120,20 @@ Partial Class frmOdontograma
         Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.pbxFamilia = New System.Windows.Forms.PictureBox()
         Me.tbc = New Janus.Windows.UI.Tab.UITab()
-        Me.Odontograma1 = New Odontograma()
-        Me.Odontograma2 = New Odontograma()
-        Me.Odontograma3 = New Odontograma()
         Me.Grid3 = New Janus.Windows.GridEX.GridEX()
         Me.OdontTratBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.OdontTrat = New centro_medico.OdontTrat()
-        Me.Odontograma4 = New Odontograma()
         Me.LineasPresupuestoTableAdapter = New centro_medico.OdontTratTableAdapters.LineasPresupuestoTableAdapter()
         Me.CtrlAlarmaPaciente1 = New centro_medico.ctrlAlarmaPaciente()
         Me.tbpRealizado = New Janus.Windows.UI.Tab.UITabPage()
+        Me.Odontograma1 = New centro_medico.Odontograma()
         Me.tbpPendiente = New Janus.Windows.UI.Tab.UITabPage()
+        Me.Odontograma2 = New centro_medico.Odontograma()
         Me.tbpPresupuestos = New Janus.Windows.UI.Tab.UITabPage()
         Me.CtrlMutua1 = New centro_medico.ctrlMutua()
+        Me.Odontograma3 = New centro_medico.Odontograma()
         Me.tbpPrimeraVisita = New Janus.Windows.UI.Tab.UITabPage()
+        Me.Odontograma4 = New centro_medico.Odontograma()
         Me.tbxTrat = New centro_medico.ctrlTextboxAvanzado()
         Me.rtb3 = New centro_medico.ctrlRichTextboxAvanzado()
         Me.rtb2 = New centro_medico.ctrlRichTextboxAvanzado()
@@ -223,7 +223,7 @@ Partial Class frmOdontograma
         '
         Me.label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.label1.AutoSize = True
-        Me.label1.Location = New System.Drawing.Point(518, 34)
+        Me.label1.Location = New System.Drawing.Point(521, 34)
         Me.label1.Name = "label1"
         Me.label1.Size = New System.Drawing.Size(39, 13)
         Me.label1.TabIndex = 7
@@ -234,9 +234,9 @@ Partial Class frmOdontograma
         Me.CBx_Doct.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.CBx_Doct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CBx_Doct.FormattingEnabled = True
-        Me.CBx_Doct.Location = New System.Drawing.Point(563, 30)
+        Me.CBx_Doct.Location = New System.Drawing.Point(565, 30)
         Me.CBx_Doct.Name = "CBx_Doct"
-        Me.CBx_Doct.Size = New System.Drawing.Size(230, 21)
+        Me.CBx_Doct.Size = New System.Drawing.Size(169, 21)
         Me.CBx_Doct.TabIndex = 6
         '
         'oMenu
@@ -511,7 +511,7 @@ Partial Class frmOdontograma
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Location = New System.Drawing.Point(4, 353)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(103, 19)
+        Me.Panel1.Size = New System.Drawing.Size(110, 19)
         Me.Panel1.TabIndex = 23
         '
         'Label4
@@ -537,7 +537,7 @@ Partial Class frmOdontograma
         Me.tvwPresupuestos.SelectedImageIndex = 2
         Me.tvwPresupuestos.ShowPlusMinus = False
         Me.tvwPresupuestos.ShowRootLines = False
-        Me.tvwPresupuestos.Size = New System.Drawing.Size(102, 253)
+        Me.tvwPresupuestos.Size = New System.Drawing.Size(110, 253)
         Me.tvwPresupuestos.TabIndex = 22
         '
         'pMenu
@@ -662,9 +662,9 @@ Partial Class frmOdontograma
         Me.GroupBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.Controls.Add(Me.rbnDefinitiva)
         Me.GroupBox1.Controls.Add(Me.rbnTemporal)
-        Me.GroupBox1.Location = New System.Drawing.Point(526, 79)
+        Me.GroupBox1.Location = New System.Drawing.Point(523, 79)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(190, 43)
+        Me.GroupBox1.Size = New System.Drawing.Size(211, 43)
         Me.GroupBox1.TabIndex = 44
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = " Tipo de dentición "
@@ -696,9 +696,9 @@ Partial Class frmOdontograma
         Me.dtpFecha.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dtpFecha.CustomFormat = ""
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecha.Location = New System.Drawing.Point(564, 54)
+        Me.dtpFecha.Location = New System.Drawing.Point(566, 54)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(152, 20)
+        Me.dtpFecha.Size = New System.Drawing.Size(168, 20)
         Me.dtpFecha.TabIndex = 45
         '
         'Label3
@@ -1006,9 +1006,9 @@ Partial Class frmOdontograma
         'pbxFamilia
         '
         Me.pbxFamilia.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pbxFamilia.Location = New System.Drawing.Point(725, 79)
+        Me.pbxFamilia.Location = New System.Drawing.Point(745, 28)
         Me.pbxFamilia.Name = "pbxFamilia"
-        Me.pbxFamilia.Size = New System.Drawing.Size(50, 50)
+        Me.pbxFamilia.Size = New System.Drawing.Size(55, 55)
         Me.pbxFamilia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbxFamilia.TabIndex = 52
         Me.pbxFamilia.TabStop = False
@@ -1018,6 +1018,7 @@ Partial Class frmOdontograma
         Me.tbc.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tbc.FirstTabOffset = 3
         Me.tbc.ImageList = Me.imgListtbC
         Me.tbc.ImageSize = New System.Drawing.Size(12, 12)
         Me.tbc.Location = New System.Drawing.Point(2, 30)
@@ -1025,48 +1026,6 @@ Partial Class frmOdontograma
         Me.tbc.Size = New System.Drawing.Size(510, 674)
         Me.tbc.TabIndex = 65
         Me.tbc.TabPages.AddRange(New Janus.Windows.UI.Tab.UITabPage() {Me.tbpRealizado, Me.tbpPendiente, Me.tbpPresupuestos, Me.tbpPrimeraVisita})
-        '
-        'Odontograma1
-        '
-        Me.Odontograma1.BackColor = System.Drawing.SystemColors.Window
-        Me.Odontograma1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Odontograma1.ContextMenuStrip = Me.oMenu
-        Me.Odontograma1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Odontograma1.Location = New System.Drawing.Point(3, 4)
-        Me.Odontograma1.Margin = New System.Windows.Forms.Padding(0)
-        Me.Odontograma1.Name = "Odontograma1"
-        Me.Odontograma1.Size = New System.Drawing.Size(500, 346)
-        Me.Odontograma1.TabIndex = 12
-        Me.Odontograma1.Tag = "1"
-        Me.Odontograma1.temporal_dentition = False
-        '
-        'Odontograma2
-        '
-        Me.Odontograma2.BackColor = System.Drawing.SystemColors.Window
-        Me.Odontograma2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Odontograma2.ContextMenuStrip = Me.oMenu
-        Me.Odontograma2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Odontograma2.Location = New System.Drawing.Point(3, 4)
-        Me.Odontograma2.Margin = New System.Windows.Forms.Padding(0)
-        Me.Odontograma2.Name = "Odontograma2"
-        Me.Odontograma2.Size = New System.Drawing.Size(500, 346)
-        Me.Odontograma2.TabIndex = 17
-        Me.Odontograma2.Tag = "2"
-        Me.Odontograma2.temporal_dentition = False
-        '
-        'Odontograma3
-        '
-        Me.Odontograma3.BackColor = System.Drawing.SystemColors.Window
-        Me.Odontograma3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Odontograma3.ContextMenuStrip = Me.oMenu
-        Me.Odontograma3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Odontograma3.Location = New System.Drawing.Point(3, 4)
-        Me.Odontograma3.Margin = New System.Windows.Forms.Padding(0)
-        Me.Odontograma3.Name = "Odontograma3"
-        Me.Odontograma3.Size = New System.Drawing.Size(500, 346)
-        Me.Odontograma3.TabIndex = 17
-        Me.Odontograma3.Tag = "3"
-        Me.Odontograma3.temporal_dentition = False
         '
         'Grid3
         '
@@ -1090,10 +1049,10 @@ Partial Class frmOdontograma
         Me.Grid3.GroupByBoxVisible = False
         Me.Grid3.HideSelection = Janus.Windows.GridEX.HideSelection.HighlightInactive
         Me.Grid3.ImageList = Me.imgList
-        Me.Grid3.Location = New System.Drawing.Point(110, 384)
+        Me.Grid3.Location = New System.Drawing.Point(120, 384)
         Me.Grid3.Name = "Grid3"
         Me.Grid3.SelectionMode = Janus.Windows.GridEX.SelectionMode.MultipleSelectionSameTable
-        Me.Grid3.Size = New System.Drawing.Size(393, 241)
+        Me.Grid3.Size = New System.Drawing.Size(383, 241)
         Me.Grid3.TabIndex = 130
         '
         'OdontTratBindingSource
@@ -1105,20 +1064,6 @@ Partial Class frmOdontograma
         '
         Me.OdontTrat.DataSetName = "OdontTrat"
         Me.OdontTrat.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Odontograma4
-        '
-        Me.Odontograma4.BackColor = System.Drawing.SystemColors.Window
-        Me.Odontograma4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Odontograma4.ContextMenuStrip = Me.oMenu
-        Me.Odontograma4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Odontograma4.Location = New System.Drawing.Point(3, 4)
-        Me.Odontograma4.Margin = New System.Windows.Forms.Padding(0)
-        Me.Odontograma4.Name = "Odontograma4"
-        Me.Odontograma4.Size = New System.Drawing.Size(500, 346)
-        Me.Odontograma4.TabIndex = 17
-        Me.Odontograma4.Tag = "4"
-        Me.Odontograma4.temporal_dentition = False
         '
         'LineasPresupuestoTableAdapter
         '
@@ -1145,6 +1090,20 @@ Partial Class frmOdontograma
         Me.tbpRealizado.TabStop = True
         Me.tbpRealizado.Text = "Odontograma"
         '
+        'Odontograma1
+        '
+        Me.Odontograma1.BackColor = System.Drawing.SystemColors.Window
+        Me.Odontograma1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Odontograma1.ContextMenuStrip = Me.oMenu
+        Me.Odontograma1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Odontograma1.Location = New System.Drawing.Point(3, 4)
+        Me.Odontograma1.Margin = New System.Windows.Forms.Padding(0)
+        Me.Odontograma1.Name = "Odontograma1"
+        Me.Odontograma1.Size = New System.Drawing.Size(500, 346)
+        Me.Odontograma1.TabIndex = 12
+        Me.Odontograma1.Tag = "1"
+        Me.Odontograma1.temporal_dentition = False
+        '
         'tbpPendiente
         '
         Me.tbpPendiente.Controls.Add(Me.pbx_urg1)
@@ -1157,6 +1116,20 @@ Partial Class frmOdontograma
         Me.tbpPendiente.Size = New System.Drawing.Size(506, 650)
         Me.tbpPendiente.TabStop = True
         Me.tbpPendiente.Text = "Trabajo pendiente"
+        '
+        'Odontograma2
+        '
+        Me.Odontograma2.BackColor = System.Drawing.SystemColors.Window
+        Me.Odontograma2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Odontograma2.ContextMenuStrip = Me.oMenu
+        Me.Odontograma2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Odontograma2.Location = New System.Drawing.Point(3, 4)
+        Me.Odontograma2.Margin = New System.Windows.Forms.Padding(0)
+        Me.Odontograma2.Name = "Odontograma2"
+        Me.Odontograma2.Size = New System.Drawing.Size(500, 346)
+        Me.Odontograma2.TabIndex = 17
+        Me.Odontograma2.Tag = "2"
+        Me.Odontograma2.temporal_dentition = False
         '
         'tbpPresupuestos
         '
@@ -1187,6 +1160,20 @@ Partial Class frmOdontograma
         Me.CtrlMutua1.Size = New System.Drawing.Size(373, 21)
         Me.CtrlMutua1.TabIndex = 131
         '
+        'Odontograma3
+        '
+        Me.Odontograma3.BackColor = System.Drawing.SystemColors.Window
+        Me.Odontograma3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Odontograma3.ContextMenuStrip = Me.oMenu
+        Me.Odontograma3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Odontograma3.Location = New System.Drawing.Point(3, 4)
+        Me.Odontograma3.Margin = New System.Windows.Forms.Padding(0)
+        Me.Odontograma3.Name = "Odontograma3"
+        Me.Odontograma3.Size = New System.Drawing.Size(500, 346)
+        Me.Odontograma3.TabIndex = 17
+        Me.Odontograma3.Tag = "3"
+        Me.Odontograma3.temporal_dentition = False
+        '
         'tbpPrimeraVisita
         '
         Me.tbpPrimeraVisita.Controls.Add(Me.lvw4)
@@ -1197,6 +1184,20 @@ Partial Class frmOdontograma
         Me.tbpPrimeraVisita.Size = New System.Drawing.Size(506, 650)
         Me.tbpPrimeraVisita.TabStop = True
         Me.tbpPrimeraVisita.Text = "Primera visita"
+        '
+        'Odontograma4
+        '
+        Me.Odontograma4.BackColor = System.Drawing.SystemColors.Window
+        Me.Odontograma4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Odontograma4.ContextMenuStrip = Me.oMenu
+        Me.Odontograma4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Odontograma4.Location = New System.Drawing.Point(3, 4)
+        Me.Odontograma4.Margin = New System.Windows.Forms.Padding(0)
+        Me.Odontograma4.Name = "Odontograma4"
+        Me.Odontograma4.Size = New System.Drawing.Size(500, 346)
+        Me.Odontograma4.TabIndex = 17
+        Me.Odontograma4.Tag = "4"
+        Me.Odontograma4.temporal_dentition = False
         '
         'tbxTrat
         '
