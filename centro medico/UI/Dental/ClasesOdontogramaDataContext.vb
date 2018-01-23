@@ -126,9 +126,17 @@ Partial Public Class ClasesOdontogramaDataContext
     Public Function GetAccionesByOdontograma(ByVal Odontograma As Integer) As IEnumerable(Of md_d_Accion)
         Return From a In Me.md_d_Accions Where a.IDOdontograma = Odontograma Order By a.IDGabinete, a.FechaEjecucion Ascending Select a
     End Function
+    'OBTENER TODAS LAS ACCIONES ASOCIADAS A UN ODONTOGRAMA SIN IMPORTAR LA DENTICION
+    Public Function GetAllAccionesByOdontograma(ByVal Odontograma1 As Integer, ByVal Odontograma2 As Integer) As IEnumerable(Of md_d_Accion)
+        Return From a In Me.md_d_Accions Where a.IDOdontograma = Odontograma1 Or a.IDOdontograma = Odontograma2 Order By a.IDGabinete, a.FechaEjecucion Ascending Select a
+    End Function
     'OBTENER LOS PRESUPUESTOS ASOCIADOS A UN ODONTOGRAMA
     Public Function GetPresupuestosByOdontograma(ByVal Odontograma As Integer) As IEnumerable(Of md_d_Presupuesto)
         Return From p In Me.md_d_Presupuestos Where p.IDOdontograma = Odontograma Order By p.IDPresupuesto Ascending Select p
+    End Function
+    'OBTENER TODOS LOS PRESUPUESTOS SIN IMPORTAR LA DENTICION
+    Public Function GetAllPresupuestos(ByVal Odontograma1 As Integer, ByVal Odontograma2 As Integer) As IEnumerable(Of md_d_Presupuesto)
+        Return From p In Me.md_d_Presupuestos Where p.IDOdontograma = Odontograma1 Or p.IDOdontograma = Odontograma2 Order By p.IDPresupuesto Ascending Select p
     End Function
     'OBTENER LAS LINEAS DE PRESUPUESTOS ASOCIADAS A UN PRESUPUESTO
     Public Function GetLineasByPresupuesto(ByVal Presupuesto As Integer) As IEnumerable(Of md_d_PresupuestoLinea)
@@ -137,6 +145,10 @@ Partial Public Class ClasesOdontogramaDataContext
     'OBTENER LAS LINEAS DE PRESUPUESTOS QUE ESTAN CONFIRMADAS PERO NO REALIZADAS ASOCIADOS A UN ODONTOGRAMA
     Public Function GetLineasPendientes(ByVal Odontograma As Integer) As IEnumerable(Of md_d_PresupuestoLinea)
         Return From p In Me.md_d_PresupuestoLineas Join r In Me.md_d_Presupuestos On p.IDPresupuesto Equals r.IDPresupuesto Where r.IDOdontograma = Odontograma And p.Confirmado = True And p.Realizado = False Order By p.FechaConfirmado, p.IDPresupuestoLinea Select p
+    End Function
+    'OBTENER TODAS LAS LINEAS DE PRESUPUESTOS PENDIENTES SIN IMPORTAR LA DENTICION
+    Public Function GetAllLineasPendientes(ByVal Odontograma1 As Integer, ByVal Odontograma2 As Integer) As IEnumerable(Of md_d_PresupuestoLinea)
+        Return From p In Me.md_d_PresupuestoLineas Join r In Me.md_d_Presupuestos On p.IDPresupuesto Equals r.IDPresupuesto Where r.IDOdontograma = Odontograma1 Or r.IDOdontograma = Odontograma2 And p.Confirmado = True And p.Realizado = False Order By p.FechaConfirmado, p.IDPresupuestoLinea Select p
     End Function
     'OBTENER LAS LINEAS DE PRESUPUESTOS QUE AUN NO HAN SIDO CONFIRMADAS
     Public Function GetLineasSinConfirmar(ByVal Odontograma As Integer) As IEnumerable(Of md_d_PresupuestoLinea)
@@ -153,5 +165,14 @@ Partial Public Class ClasesOdontogramaDataContext
     'OBTENER LINEA DE PRESUPUESTO SEGUN ID
     Public Function GetLineaPresupuestoByID(ByVal ID As Integer) As md_d_PresupuestoLinea
         Return Me.md_d_PresupuestoLineas.Single(Function(p) p.IDPresupuestoLinea = ID)
+    End Function
+    'OBTENER EL TIPO DE DENTICION DE UNA LINEA DE PRESUPUESTO SEGUN ID
+    Public Function GetTipoDenticioLineaPresupuestoByID(ByVal ID As Integer) As Integer?
+        Return (From p In Me.md_d_PresupuestoLineas Where p.IDPresupuestoLinea = ID Select p.TipoDenticion).FirstOrDefault()
+    End Function
+    'OBTENER LINEAS DE PRESUPUESTO SEGUN ID DE UNA DE LAS LINEAS
+    Public Function GetLineaPresupuestoByIDLinea(ByVal ID As Integer) As IEnumerable(Of md_d_PresupuestoLinea)
+        Dim IdPres As Integer = (From p In Me.md_d_PresupuestoLineas Where p.IDPresupuestoLinea = ID Select p.IDPresupuesto).FirstOrDefault()
+        Return GetLineasByPresupuesto(IdPres)
     End Function
 End Class

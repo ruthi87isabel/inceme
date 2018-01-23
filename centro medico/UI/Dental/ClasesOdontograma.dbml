@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CMTORREVIEJA" Class="ClasesOdontogramaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=CMTORREVIEJA;Integrated Security=True" SettingsObjectName="centro_medico.My.MySettings" SettingsPropertyName="CMConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=siesta1;User ID=sa" SettingsObjectName="centro_medico.My.MySettings" SettingsPropertyName="CMConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CONCEPTOSFRA" Member="md_ConceptoFras">
     <Type Name="md_ConceptoFra">
       <Column Name="CODIGO" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -78,7 +78,7 @@
       <Column Name="IDMutua" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="md_d_Presupuesto_md_d_PresupuestoLinea" Member="md_d_PresupuestoLineas" ThisKey="IDPresupuesto" OtherKey="IDPresupuesto" Type="md_d_PresupuestoLinea" />
       <Association Name="md_d_Odontograma_md_d_Presupuesto" Member="md_d_Odontograma" Storage="_d_Odontograma" ThisKey="IDOdontograma" OtherKey="IDOdontograma" Type="md_d_Odontograma" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
-      <Association Name="MUTUA_md_d_Presupuesto" Member="md_MUTUA" ThisKey="IDMutua" OtherKey="CMUTUA" Type="md_MUTUA" IsForeignKey="true" />
+      <Association Name="md_MUTUA_md_d_Presupuesto" Member="md_MUTUA" ThisKey="IDMutua" OtherKey="CMUTUA" Type="md_MUTUA" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.CONCEPTOSFAMILIAS" Member="md_ConceptoFamilias">
@@ -117,6 +117,7 @@
       <Column Name="IDCITA" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="DescuentoPercent" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="IDAccionOrigen" Type="System.Int32" DbType="BigInt" CanBeNull="true" />
+      <Column Name="TipoDenticion" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="md_ConceptoFra_md_d_PresupuestoLinea" Member="md_ConceptoFra" ThisKey="IDTratamiento" OtherKey="CODIGO" Type="md_ConceptoFra" IsForeignKey="true" />
       <Association Name="md_d_Presupuesto_md_d_PresupuestoLinea" Member="md_d_Presupuesto" ThisKey="IDPresupuesto" OtherKey="IDPresupuesto" Type="md_d_Presupuesto" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
@@ -143,7 +144,7 @@
       <Column Name="IdTarifa" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="NoContrato" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Logo" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
-      <Association Name="MUTUA_md_d_Presupuesto" Member="md_d_Presupuestos" ThisKey="CMUTUA" OtherKey="IDMutua" Type="md_d_Presupuesto" />
+      <Association Name="md_MUTUA_md_d_Presupuesto" Member="md_d_Presupuestos" ThisKey="CMUTUA" OtherKey="IDMutua" Type="md_d_Presupuesto" />
     </Type>
   </Table>
 </Database>

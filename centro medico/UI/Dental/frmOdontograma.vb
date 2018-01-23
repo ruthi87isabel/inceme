@@ -388,14 +388,14 @@ Public Class frmOdontograma
     Private Sub CargarPresupuestos()
         tvwPresupuestos.Nodes.Clear()
 
-        Dim ID As Integer
-        If rbnTemporal.Checked = True Then
-            ID = OdontogramaID(0)
-        Else
-            ID = OdontogramaID(1)
-        End If
+        'Dim ID As Integer
+        'If rbnTemporal.Checked = True Then
+        '    ID = OdontogramaID(0)
+        'Else
+        '    ID = OdontogramaID(1)
+        'End If
         Dim classOdontograma As New ClasesOdontogramaDataContext
-        Dim presupuestos As IEnumerable(Of md_d_Presupuesto) = classOdontograma.GetPresupuestosByOdontograma(ID)
+        Dim presupuestos As IEnumerable(Of md_d_Presupuesto) = classOdontograma.GetAllPresupuestos(OdontogramaID(0), OdontogramaID(1))
         Dim tnode As TreeNode
 
         For Each presupuesto As md_d_Presupuesto In presupuestos
@@ -429,18 +429,21 @@ Public Class frmOdontograma
 
     'CARGAR LA LISTA DE LINEAS DE PRESUPUESTOS CONFIRMADOS
     Private Sub CargarListaPendiente()
-        Dim ID As Integer
-        If rbnTemporal.Checked Then
-            ID = OdontogramaID(0)
-        Else
-            ID = OdontogramaID(1)
-        End If
+        'Dim ID As Integer
+        'If rbnTemporal.Checked Then
+        '    ID = OdontogramaID(0)
+        'Else
+        '    ID = OdontogramaID(1)
+        'End If
         Dim classOdontograma As New ClasesOdontogramaDataContext
-        Dim pendientes As IEnumerable(Of md_d_PresupuestoLinea) = classOdontograma.GetLineasPendientes(ID)
+        Dim pendientes As IEnumerable(Of md_d_PresupuestoLinea) = classOdontograma.GetAllLineasPendientes(OdontogramaID(0), OdontogramaID(1))
+        Dim TipoDenticio = If(rbnTemporal.Checked, 0, 1)
         lvw2.Items.Clear()
         Odontograma2.Reset()
         Dim aColor As Color
+
         For Each pendiente As md_d_PresupuestoLinea In pendientes
+            If pendiente.TipoDenticion <> TipoDenticio Then Continue For
             If pendiente.Urgencia = 1 Then
                 aColor = oColores(4)
             Else
@@ -495,47 +498,43 @@ Public Class frmOdontograma
             Exit Sub
         End If
 
-        Dim classOdontograma As New ClasesOdontogramaDataContext
-
-        Dim lineas As IEnumerable(Of md_d_PresupuestoLinea) = classOdontograma.GetLineasByPresupuesto(TryCast(node.Tag, md_d_Presupuesto).IDPresupuesto)
-        Dim aColor As Color
+        'Dim classOdontograma As New ClasesOdontogramaDataContext
+        'Dim lineas As IEnumerable(Of md_d_PresupuestoLinea) = classOdontograma.GetLineasByPresupuesto(TryCast(node.Tag, md_d_Presupuesto).IDPresupuesto)
 
         Dim IDPresupuesto = TryCast(node.Tag, md_d_Presupuesto).IDPresupuesto
         LineasPresupuestoTableAdapter.Fill(OdontTrat.LineasPresupuesto, IDPresupuesto)
 
-        Odontograma3.Reset()
-        ImporteTotal = 0
-        For Each linea As md_d_PresupuestoLinea In lineas
-            If linea.Realizado Then
-                aColor = oColores(0)
-            ElseIf linea.Confirmado And (linea.Urgencia = 0) Then
-                aColor = oColores(1)
-            ElseIf linea.Urgencia = 1 Then
-                aColor = oColores(4)
-            Else
-                aColor = oColores(2)
-            End If
-            ImporteTotal = ImporteTotal + linea.Importe
-            If linea.Cuadrantes <> "" Then
-                For i As Integer = 0 To linea.Cuadrantes.Length - 1
-                    RepresentAction(Odontograma3, linea.IDTratamiento, linea.Cuadrantes(i), linea.PiezasInvolucradas, aColor)
-                Next
-            Else
-                RepresentAction(Odontograma3, linea.IDTratamiento, "C", linea.PiezasInvolucradas, aColor)
-            End If
-        Next
+        If accion = "insertar" Then
+            accion = "ver"
+            Grid3.Row = Grid3.RowCount - 1
+        End If
+
+
     End Sub
+
+    Dim CargarOdontograma As Boolean = True
     'CAMBIAR DENTICION (TEMPORAL | DEFINITIVA)
     Private Sub rbnTemporal_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbnTemporal.CheckedChanged, rbnDefinitiva.CheckedChanged
+        Dim TipoDenticion As Integer = If(rbnTemporal.Checked, 0, 1)
+        Dim denticion As RadioButton = DirectCast(sender, RadioButton)
+        If denticion.Checked = False Then
+            CargarOdontograma = True
+            Exit Sub
+        End If
+
         chbVerPendientes.Checked = False
         chbVerPresupuesto.Checked = False
         Odontograma1.temporal_dentition = rbnTemporal.Checked
         Odontograma2.temporal_dentition = rbnTemporal.Checked
         Odontograma3.temporal_dentition = rbnTemporal.Checked
         Odontograma4.temporal_dentition = rbnTemporal.Checked
+
         CargarListaAcciones()
-        CargarPresupuestos()
+        'CargarPresupuestos()
+        If Grid3.SelectedItems.Count > 0 And CargarOdontograma Then CargarLineaPresupuesto(TipoDenticion)
         CargarListaPendiente()
+
+        CargarOdontograma = True
     End Sub
     'CUANDO CAMBIA LA SELECCION DEL LISTADO DE OPERACIONES ACTUALIZAR LISTA DE TRATAMIENTOS ASOCIADOS
     Private Sub LVw_Oper_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LVw_Oper.SelectedIndexChanged
@@ -790,9 +789,10 @@ Public Class frmOdontograma
                         'Mostrar un form de confirmacion
                         If GetAccionData(currentTratID, currentTratDesc, currentTratImport, 1, currentDescuentoPorciento, True) = Windows.Forms.DialogResult.OK Then
                             AddAction(odont, dtpFecha.Value, currentTratID, currentTratDesc, currentTratImport, odont_concepto, 0)
-                            CargarPresupuestos()
+                            'CargarPresupuestos()
+                            accion = "insertar"
+                            MostrarLineasPresupuesto(tvwPresupuestos.SelectedNode)
                         End If
-
 
                         'SE MARCO UNA PIEZA DISPONIBLE
                     ElseIf (odont.ClickedPiece > 0) And (ctpiezas(odont.ClickedPiece) = True) Then
@@ -806,7 +806,9 @@ Public Class frmOdontograma
 
                                 If GetAccionData(currentTratID, currentTratDesc, currentTratImport, CantidadPiezas(getPiezas(primeraPieza, odont.ClickedPiece)), currentDescuentoPorciento, True) = Windows.Forms.DialogResult.OK Then
                                     AddAction(odont, dtpFecha.Value, currentTratID, currentTratDesc, currentTratImport, odont_concepto, primeraPieza, odont.ClickedPiece)
-                                    CargarPresupuestos()
+                                    'CargarPresupuestos()
+                                    accion = "insertar"
+                                    MostrarLineasPresupuesto(tvwPresupuestos.SelectedNode)
                                 End If
                                 lblInfo.Text = ""
                                 primeraPieza = 0
@@ -815,7 +817,9 @@ Public Class frmOdontograma
 
                             If GetAccionData(currentTratID, currentTratDesc, currentTratImport, CantidadPiezas(getPiezas(primeraPieza, odont.ClickedPiece)), currentDescuentoPorciento, True) = Windows.Forms.DialogResult.OK Then
                                 AddAction(odont, dtpFecha.Value, currentTratID, currentTratDesc, currentTratImport, odont_concepto, odont.ClickedPiece)
-                                CargarPresupuestos()
+                                'CargarPresupuestos()
+                                accion = "insertar"
+                                MostrarLineasPresupuesto(tvwPresupuestos.SelectedNode)
                             End If
 
                         End If
@@ -1210,7 +1214,7 @@ Public Class frmOdontograma
             PresupuestoLinea.FechaConfirmado = Fecha
             PresupuestoLinea.FechaRealizado = Fecha
         End If
-
+        PresupuestoLinea.TipoDenticion = If(rbnTemporal.Checked, 0, 1)
        
 
         'Hay que ver si el presupuesto tiene ImportePorPiezas
@@ -1716,8 +1720,11 @@ Public Class frmOdontograma
             rtb2.Clear()
         End If
     End Sub
+
+    Dim accion As String = "ver"
     'CUANDO CAMBIA LA SELECCION DE LA LINEA DE PRESUPUESTO SELECCIONADA, MOSTRAR SU DESCRIPCION
     Private Sub Grid3_SelectionChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Grid3.SelectionChanged
+        If Not Grid3.SelectedItems.Count > 0 Or accion = "insertar" Then Exit Sub
         rtb3.Enabled = Grid3.SelectedItems.Count > 0
         chbUrgente3.Enabled = (Grid3.SelectedItems.Count = 0) Or ((Grid3.SelectedItems.Count > 0) AndAlso ((Grid3.SelectedItems(0).GetRow().Cells("icon").ImageIndex = imgIndex.LineaPresupuesto) Or (Grid3.SelectedItems(0).GetRow().Cells("icon").ImageIndex = imgIndex.LineaPresupuestoUrgente)))
         If Grid3.SelectedItems.Count > 0 Then
@@ -1733,7 +1740,52 @@ Public Class frmOdontograma
         End If
         chbUrgente3.Enabled = (Globales.Usuario.Permisos(RoleManager.Items.Dental) > RoleManager.TipoPermisos.Lectura)
 
+        Dim classOdontograma As New ClasesOdontogramaDataContext
+        Dim TipoDenticionLinea As Integer? = classOdontograma.GetTipoDenticioLineaPresupuestoByID(CType(Grid3.SelectedItems(0).GetRow().Cells("IDPresupuestoLinea").Value, Integer))
+
+        CargarLineaPresupuesto(TipoDenticionLinea)
+
     End Sub
+
+    Private Sub CargarLineaPresupuesto(TipoDenticionLinea As Integer)
+        Dim classOdontograma As New ClasesOdontogramaDataContext
+        Dim IdSeleccionado As Integer = CType(Grid3.SelectedItems(0).GetRow().Cells("IDPresupuestoLinea").Value, Integer)
+        Dim Lineas As IEnumerable(Of md_d_PresupuestoLinea) = classOdontograma.GetLineaPresupuestoByIDLinea(IdSeleccionado)
+        Dim aColor As Color
+
+        Odontograma1.temporal_dentition = (TipoDenticionLinea = 0)
+        Odontograma2.temporal_dentition = (TipoDenticionLinea = 0)
+        Odontograma3.temporal_dentition = (TipoDenticionLinea = 0)
+        Odontograma4.temporal_dentition = (TipoDenticionLinea = 0)
+
+        CargarOdontograma = False
+        rbnTemporal.Checked = (TipoDenticionLinea = 0)
+        rbnDefinitiva.Checked = (TipoDenticionLinea = 1)
+
+        Odontograma3.Reset()
+        For Each linea As md_d_PresupuestoLinea In Lineas
+            ImporteTotal = ImporteTotal + linea.Importe
+            If linea.TipoDenticion <> TipoDenticionLinea Then Continue For
+            If linea.Realizado Then
+                aColor = oColores(0)
+            ElseIf linea.Confirmado And (linea.Urgencia = 0) Then
+                aColor = oColores(1)
+            ElseIf linea.Urgencia = 1 Then
+                aColor = oColores(4)
+            Else
+                aColor = oColores(2)
+            End If
+
+            If linea.Cuadrantes <> "" Then
+                For i As Integer = 0 To linea.Cuadrantes.Length - 1
+                    RepresentAction(Odontograma3, linea.IDTratamiento, linea.Cuadrantes(i), linea.PiezasInvolucradas, aColor)
+                Next
+            Else
+                RepresentAction(Odontograma3, linea.IDTratamiento, "C", linea.PiezasInvolucradas, aColor)
+            End If
+        Next
+    End Sub
+
     'CUANDO CAMBIA LA SELECCION DE LA ACCION DE LA PRIMERA VISITA SELECCIONADA, MOSTRAR SU DESCRIPCION
     Private Sub lvw4_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lvw4.SelectedIndexChanged
         rtb4.Enabled = lvw4.SelectedItems.Count > 0
@@ -2136,6 +2188,7 @@ Public Class frmOdontograma
         ntrat.oform = Me
         ntrat.dcbx = Me.CBx_Doct
         ntrat.tlvw = Me.LVw_TTrat
+        ntrat.dtemporal = rbnTemporal.Checked
         Select Case tbc.SelectedIndex
             Case 0 : rtb1.Visible = True
                 ntrat.odont = Me.Odontograma1
@@ -2192,8 +2245,6 @@ Public Class frmOdontograma
     Private Sub mitVerReporte_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mitVerReporte.Click, tstRptPresupuesto.Click, btnPReporte.Click, ToolStripButton5.Click
 
         Dim idPresupuesto = TryCast(tvwPresupuestos.SelectedNode.Tag, md_d_Presupuesto).IDPresupuesto
-        Dim numpre As String = (tvwPresupuestos.SelectedNode.Text).Substring(1, 1)
-        Dim NumParam As ReportParameter = New ReportParameter("Num", numpre)
 
         Dim dataset As New OdontTrat.LineasPresupuestoDataTable()
         Dim adapter As New OdontTratTableAdapters.LineasPresupuestoTableAdapter()
@@ -2204,7 +2255,7 @@ Public Class frmOdontograma
         ds.Name = "OdontTrat_LineasPresupuesto"
         ds.Value = dataset
 
-        UI.Reportes.ReportesManager.Imprime("DentalPresupuesto.rdlc", {ds}, {NumParam})
+        UI.Reportes.ReportesManager.Imprime("DentalPresupuesto.rdlc", {ds})
 
     End Sub
 

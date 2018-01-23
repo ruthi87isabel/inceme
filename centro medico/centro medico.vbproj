@@ -2458,6 +2458,9 @@
     <Content Include="Resources\permisos.png" />
     <None Include="Resources\webcam.png" />
     <None Include="Resources\wc.png" />
+    <Content Include="Scripts\db_1.0.4.5.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Scripts\db_0.0.0.1.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

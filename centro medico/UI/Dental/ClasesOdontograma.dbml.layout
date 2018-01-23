@@ -56,7 +56,7 @@
         <elementListCompartment Id="e632aecf-14af-4684-b19e-9dbfa52a681d" absoluteBounds="0.515, 1.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(11.75 : 3.51044840494792); (11 : 3.51044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(11.75 : 3.51044840494792); (11 : 3.51044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ClasesOdontogramaDataContext/md_ConceptoFamilia/md_ConceptoFamilia_md_ConceptoFra" />
       <nodes>
         <classShapeMoniker Id="da2c73e6-3b13-4c56-8469-ffa3ef6ac5ec" />
@@ -70,14 +70,14 @@
         <classShapeMoniker Id="1ac16536-17e5-4695-a88d-c167bb552ef7" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 4.85179768880208); (4.125 : 4.85179768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 4.85179768880208); (4.125 : 4.85179768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ClasesOdontogramaDataContext/md_d_Odontograma/md_d_Odontograma_md_d_Accion" />
       <nodes>
         <classShapeMoniker Id="eb137ada-5003-4efd-9568-8f50c2a1ec13" />
         <classShapeMoniker Id="1ac16536-17e5-4695-a88d-c167bb552ef7" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(0.59375 : 3.07859537760417); (0.59375 : 6.10179768880208); (4.125 : 6.10179768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(0.59375 : 3.07859537760417); (0.59375 : 6.10179768880208); (4.125 : 6.10179768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ClasesOdontogramaDataContext/md_MEDICO/md_MEDICO_md_d_Accion" />
       <nodes>
         <classShapeMoniker Id="35851526-7c96-430b-8a60-469dfb345508" />
@@ -98,17 +98,17 @@
         <classShapeMoniker Id="c168383a-b0a4-4b84-b22e-7d26c904f621" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.65625 : 3.875); (2.65625 : 1.09375); (3.375 : 1.09375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.65625 : 3.875); (2.65625 : 1.09375); (3.375 : 1.09375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ClasesOdontogramaDataContext/md_d_Odontograma/md_d_Odontograma_md_d_Presupuesto" />
       <nodes>
         <classShapeMoniker Id="eb137ada-5003-4efd-9568-8f50c2a1ec13" />
         <classShapeMoniker Id="b7b6fdaa-7d10-44fc-9c51-11de90d5ee6c" />
       </nodes>
     </associationConnector>
-    <classShape Id="76f5f293-f5a4-4562-a1b8-42a1f5e653be" absoluteBounds="6.5, 2.625, 2, 3.6939111328124996">
+    <classShape Id="76f5f293-f5a4-4562-a1b8-42a1f5e653be" absoluteBounds="6.5, 2.625, 2, 3.8862125651041666">
       <DataClassMoniker Name="/ClasesOdontogramaDataContext/md_d_PresupuestoLinea" />
       <nestedChildShapes>
-        <elementListCompartment Id="524850d2-d87d-4263-b41f-826b1614d0df" absoluteBounds="6.515, 3.085, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="524850d2-d87d-4263-b41f-826b1614d0df" absoluteBounds="6.515, 3.085, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <associationConnector edgePoints="[(9 : 3.60659912109375); (8.5 : 3.60659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
@@ -118,7 +118,7 @@
         <classShapeMoniker Id="76f5f293-f5a4-4562-a1b8-42a1f5e653be" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.375 : 1.53929768880208); (7.5 : 1.53929768880208); (7.5 : 2.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.375 : 1.7366246110026); (7.5 : 1.7366246110026); (7.5 : 2.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ClasesOdontogramaDataContext/md_d_Presupuesto/md_d_Presupuesto_md_d_PresupuestoLinea" />
       <nodes>
         <classShapeMoniker Id="b7b6fdaa-7d10-44fc-9c51-11de90d5ee6c" />
@@ -132,7 +132,7 @@
       </nestedChildShapes>
     </classShape>
     <associationConnector edgePoints="[(14.75 : 1.08214884440104); (5.375 : 1.08214884440104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/ClasesOdontogramaDataContext/md_MUTUA/MUTUA_md_d_Presupuesto" />
+      <AssociationMoniker Name="/ClasesOdontogramaDataContext/md_MUTUA/md_MUTUA_md_d_Presupuesto" />
       <nodes>
         <classShapeMoniker Id="47e06972-4445-4c41-947c-3b677e7a6a93" />
         <classShapeMoniker Id="b7b6fdaa-7d10-44fc-9c51-11de90d5ee6c" />

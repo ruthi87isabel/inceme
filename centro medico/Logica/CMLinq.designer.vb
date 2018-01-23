@@ -22,7 +22,7 @@ Imports System.Linq.Expressions
 Imports System.Reflection
 
 
-<Global.System.Data.Linq.Mapping.DatabaseAttribute(Name:="siesta")>  _
+<Global.System.Data.Linq.Mapping.DatabaseAttribute(Name:="siesta1")>  _
 Partial Public Class CMLinqDataContext
 	Inherits System.Data.Linq.DataContext
 	
@@ -234,12 +234,6 @@ Partial Public Class CMLinqDataContext
   Partial Private Sub UpdateN_Factura_Linea(instance As N_Factura_Linea)
     End Sub
   Partial Private Sub DeleteN_Factura_Linea(instance As N_Factura_Linea)
-    End Sub
-  Partial Private Sub Insertd_PresupuestoLinea(instance As d_PresupuestoLinea)
-    End Sub
-  Partial Private Sub Updated_PresupuestoLinea(instance As d_PresupuestoLinea)
-    End Sub
-  Partial Private Sub Deleted_PresupuestoLinea(instance As d_PresupuestoLinea)
     End Sub
   Partial Private Sub InsertCONCEPTOSFACTURABLE(instance As CONCEPTOSFACTURABLE)
     End Sub
@@ -709,6 +703,12 @@ Partial Public Class CMLinqDataContext
     End Sub
   Partial Private Sub DeleteRecordatorio(instance As Recordatorio)
     End Sub
+  Partial Private Sub Insertd_PresupuestoLinea(instance As d_PresupuestoLinea)
+    End Sub
+  Partial Private Sub Updated_PresupuestoLinea(instance As d_PresupuestoLinea)
+    End Sub
+  Partial Private Sub Deleted_PresupuestoLinea(instance As d_PresupuestoLinea)
+    End Sub
   #End Region
 	
 	Public Sub New()
@@ -949,12 +949,6 @@ Partial Public Class CMLinqDataContext
 	Public ReadOnly Property N_Factura_Lineas() As System.Data.Linq.Table(Of N_Factura_Linea)
 		Get
 			Return Me.GetTable(Of N_Factura_Linea)
-		End Get
-	End Property
-	
-	Public ReadOnly Property d_PresupuestoLineas() As System.Data.Linq.Table(Of d_PresupuestoLinea)
-		Get
-			Return Me.GetTable(Of d_PresupuestoLinea)
 		End Get
 	End Property
 	
@@ -1423,6 +1417,12 @@ Partial Public Class CMLinqDataContext
 	Public ReadOnly Property Recordatorios() As System.Data.Linq.Table(Of Recordatorio)
 		Get
 			Return Me.GetTable(Of Recordatorio)
+		End Get
+	End Property
+	
+	Public ReadOnly Property d_PresupuestoLineas() As System.Data.Linq.Table(Of d_PresupuestoLinea)
+		Get
+			Return Me.GetTable(Of d_PresupuestoLinea)
 		End Get
 	End Property
 End Class
@@ -11855,8 +11855,6 @@ Partial Public Class CONCEPTOSFRA
 	
 	Private _d_ConceptosFra_Imagenes As EntitySet(Of d_ConceptosFra_Imagene)
 	
-	Private _d_PresupuestoLineas As EntitySet(Of d_PresupuestoLinea)
-	
 	Private _Tarifas As EntitySet(Of Tarifa)
 	
 	Private _PLANTILLAANALITICAs As EntitySet(Of PLANTILLAANALITICA)
@@ -11868,6 +11866,8 @@ Partial Public Class CONCEPTOSFRA
 	Private _ANALITICAS As EntitySet(Of ANALITICAS)
 	
 	Private _PLANTILLAANALITICAS1 As EntitySet(Of PLANTILLAANALITICAS)
+	
+	Private _d_PresupuestoLineas As EntitySet(Of d_PresupuestoLinea)
 	
 	Private _CONCEPTOSFAMILIA As EntityRef(Of CONCEPTOSFAMILIA)
 	
@@ -11908,13 +11908,13 @@ Partial Public Class CONCEPTOSFRA
 		MyBase.New
 		Me._d_Acciones = New EntitySet(Of d_Accione)(AddressOf Me.attach_d_Acciones, AddressOf Me.detach_d_Acciones)
 		Me._d_ConceptosFra_Imagenes = New EntitySet(Of d_ConceptosFra_Imagene)(AddressOf Me.attach_d_ConceptosFra_Imagenes, AddressOf Me.detach_d_ConceptosFra_Imagenes)
-		Me._d_PresupuestoLineas = New EntitySet(Of d_PresupuestoLinea)(AddressOf Me.attach_d_PresupuestoLineas, AddressOf Me.detach_d_PresupuestoLineas)
 		Me._Tarifas = New EntitySet(Of Tarifa)(AddressOf Me.attach_Tarifas, AddressOf Me.detach_Tarifas)
 		Me._PLANTILLAANALITICAs = New EntitySet(Of PLANTILLAANALITICA)(AddressOf Me.attach_PLANTILLAANALITICAs, AddressOf Me.detach_PLANTILLAANALITICAs)
 		Me._LINEASFACTURAs = New EntitySet(Of LINEASFACTURA)(AddressOf Me.attach_LINEASFACTURAs, AddressOf Me.detach_LINEASFACTURAs)
 		Me._MEDICOS_CONCEPTOFRAs = New EntitySet(Of MEDICOS_CONCEPTOFRA)(AddressOf Me.attach_MEDICOS_CONCEPTOFRAs, AddressOf Me.detach_MEDICOS_CONCEPTOFRAs)
 		Me._ANALITICAS = New EntitySet(Of ANALITICAS)(AddressOf Me.attach_ANALITICAS, AddressOf Me.detach_ANALITICAS)
 		Me._PLANTILLAANALITICAS1 = New EntitySet(Of PLANTILLAANALITICAS)(AddressOf Me.attach_PLANTILLAANALITICAS1, AddressOf Me.detach_PLANTILLAANALITICAS1)
+		Me._d_PresupuestoLineas = New EntitySet(Of d_PresupuestoLinea)(AddressOf Me.attach_d_PresupuestoLineas, AddressOf Me.detach_d_PresupuestoLineas)
 		Me._CONCEPTOSFAMILIA = CType(Nothing, EntityRef(Of CONCEPTOSFAMILIA))
 		OnCreated
 	End Sub
@@ -12039,16 +12039,6 @@ Partial Public Class CONCEPTOSFRA
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CONCEPTOSFRA_d_PresupuestoLinea", Storage:="_d_PresupuestoLineas", ThisKey:="CODIGO", OtherKey:="IDTratamiento")>  _
-	Public Property d_PresupuestoLineas() As EntitySet(Of d_PresupuestoLinea)
-		Get
-			Return Me._d_PresupuestoLineas
-		End Get
-		Set
-			Me._d_PresupuestoLineas.Assign(value)
-		End Set
-	End Property
-	
 	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CONCEPTOSFRA_Tarifa", Storage:="_Tarifas", ThisKey:="CODIGO", OtherKey:="IdConceptoFra")>  _
 	Public Property Tarifas() As EntitySet(Of Tarifa)
 		Get
@@ -12106,6 +12096,16 @@ Partial Public Class CONCEPTOSFRA
 		End Get
 		Set
 			Me._PLANTILLAANALITICAS1.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CONCEPTOSFRA_d_PresupuestoLinea", Storage:="_d_PresupuestoLineas", ThisKey:="CODIGO", OtherKey:="IDTratamiento")>  _
+	Public Property d_PresupuestoLineas() As EntitySet(Of d_PresupuestoLinea)
+		Get
+			Return Me._d_PresupuestoLineas
+		End Get
+		Set
+			Me._d_PresupuestoLineas.Assign(value)
 		End Set
 	End Property
 	
@@ -12175,16 +12175,6 @@ Partial Public Class CONCEPTOSFRA
 		entity.CONCEPTOSFRA = Nothing
 	End Sub
 	
-	Private Sub attach_d_PresupuestoLineas(ByVal entity As d_PresupuestoLinea)
-		Me.SendPropertyChanging
-		entity.CONCEPTOSFRA = Me
-	End Sub
-	
-	Private Sub detach_d_PresupuestoLineas(ByVal entity As d_PresupuestoLinea)
-		Me.SendPropertyChanging
-		entity.CONCEPTOSFRA = Nothing
-	End Sub
-	
 	Private Sub attach_Tarifas(ByVal entity As Tarifa)
 		Me.SendPropertyChanging
 		entity.CONCEPTOSFRA = Me
@@ -12241,6 +12231,16 @@ Partial Public Class CONCEPTOSFRA
 	End Sub
 	
 	Private Sub detach_PLANTILLAANALITICAS1(ByVal entity As PLANTILLAANALITICAS)
+		Me.SendPropertyChanging
+		entity.CONCEPTOSFRA = Nothing
+	End Sub
+	
+	Private Sub attach_d_PresupuestoLineas(ByVal entity As d_PresupuestoLinea)
+		Me.SendPropertyChanging
+		entity.CONCEPTOSFRA = Me
+	End Sub
+	
+	Private Sub detach_d_PresupuestoLineas(ByVal entity As d_PresupuestoLinea)
 		Me.SendPropertyChanging
 		entity.CONCEPTOSFRA = Nothing
 	End Sub
@@ -14431,540 +14431,6 @@ Partial Public Class N_Factura_Linea
 					= false) Then
 			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
 		End If
-	End Sub
-End Class
-
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.d_PresupuestoLineas")>  _
-Partial Public Class d_PresupuestoLinea
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _IDPresupuestoLinea As Long
-	
-	Private _IDPresupuesto As Integer
-	
-	Private _DescripcionGenerada As String
-	
-	Private _IDTratamiento As String
-	
-	Private _Cuadrantes As String
-	
-	Private _PiezasInvolucradas As String
-	
-	Private _Confirmado As Boolean
-	
-	Private _Realizado As Boolean
-	
-	Private _Urgencia As Integer
-	
-	Private _FechaConfirmado As System.Nullable(Of Date)
-	
-	Private _FechaRealizado As System.Nullable(Of Date)
-	
-	Private _Importe As Decimal
-	
-	Private _IDCITA As System.Nullable(Of Integer)
-	
-	Private _DescuentoPercent As System.Nullable(Of Double)
-	
-	Private _IDAccionOrigen As System.Nullable(Of Long)
-	
-	Private _LineasCitas As EntitySet(Of LineasCita)
-	
-	Private _CONCEPTOSFRA As EntityRef(Of CONCEPTOSFRA)
-	
-	Private _d_Accione As EntityRef(Of d_Accione)
-	
-	Private _d_Presupuesto As EntityRef(Of d_Presupuesto)
-	
-	Private _CITA As EntityRef(Of CITA)
-	
-    #Region "Extensibility Method Definitions"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub OnIDPresupuestoLineaChanging(value As Long)
-    End Sub
-    Partial Private Sub OnIDPresupuestoLineaChanged()
-    End Sub
-    Partial Private Sub OnIDPresupuestoChanging(value As Integer)
-    End Sub
-    Partial Private Sub OnIDPresupuestoChanged()
-    End Sub
-    Partial Private Sub OnDescripcionGeneradaChanging(value As String)
-    End Sub
-    Partial Private Sub OnDescripcionGeneradaChanged()
-    End Sub
-    Partial Private Sub OnIDTratamientoChanging(value As String)
-    End Sub
-    Partial Private Sub OnIDTratamientoChanged()
-    End Sub
-    Partial Private Sub OnCuadrantesChanging(value As String)
-    End Sub
-    Partial Private Sub OnCuadrantesChanged()
-    End Sub
-    Partial Private Sub OnPiezasInvolucradasChanging(value As String)
-    End Sub
-    Partial Private Sub OnPiezasInvolucradasChanged()
-    End Sub
-    Partial Private Sub OnConfirmadoChanging(value As Boolean)
-    End Sub
-    Partial Private Sub OnConfirmadoChanged()
-    End Sub
-    Partial Private Sub OnRealizadoChanging(value As Boolean)
-    End Sub
-    Partial Private Sub OnRealizadoChanged()
-    End Sub
-    Partial Private Sub OnUrgenciaChanging(value As Integer)
-    End Sub
-    Partial Private Sub OnUrgenciaChanged()
-    End Sub
-    Partial Private Sub OnFechaConfirmadoChanging(value As System.Nullable(Of Date))
-    End Sub
-    Partial Private Sub OnFechaConfirmadoChanged()
-    End Sub
-    Partial Private Sub OnFechaRealizadoChanging(value As System.Nullable(Of Date))
-    End Sub
-    Partial Private Sub OnFechaRealizadoChanged()
-    End Sub
-    Partial Private Sub OnImporteChanging(value As Decimal)
-    End Sub
-    Partial Private Sub OnImporteChanged()
-    End Sub
-    Partial Private Sub OnIDCITAChanging(value As System.Nullable(Of Integer))
-    End Sub
-    Partial Private Sub OnIDCITAChanged()
-    End Sub
-    Partial Private Sub OnDescuentoPercentChanging(value As System.Nullable(Of Double))
-    End Sub
-    Partial Private Sub OnDescuentoPercentChanged()
-    End Sub
-    Partial Private Sub OnIDAccionOrigenChanging(value As System.Nullable(Of Long))
-    End Sub
-    Partial Private Sub OnIDAccionOrigenChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		Me._LineasCitas = New EntitySet(Of LineasCita)(AddressOf Me.attach_LineasCitas, AddressOf Me.detach_LineasCitas)
-		Me._CONCEPTOSFRA = CType(Nothing, EntityRef(Of CONCEPTOSFRA))
-		Me._d_Accione = CType(Nothing, EntityRef(Of d_Accione))
-		Me._d_Presupuesto = CType(Nothing, EntityRef(Of d_Presupuesto))
-		Me._CITA = CType(Nothing, EntityRef(Of CITA))
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IDPresupuestoLinea", AutoSync:=AutoSync.OnInsert, DbType:="BigInt NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
-	Public Property IDPresupuestoLinea() As Long
-		Get
-			Return Me._IDPresupuestoLinea
-		End Get
-		Set
-			If ((Me._IDPresupuestoLinea = value)  _
-						= false) Then
-				Me.OnIDPresupuestoLineaChanging(value)
-				Me.SendPropertyChanging
-				Me._IDPresupuestoLinea = value
-				Me.SendPropertyChanged("IDPresupuestoLinea")
-				Me.OnIDPresupuestoLineaChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IDPresupuesto", DbType:="Int NOT NULL", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property IDPresupuesto() As Integer
-		Get
-			Return Me._IDPresupuesto
-		End Get
-		Set
-			If ((Me._IDPresupuesto = value)  _
-						= false) Then
-				If Me._d_Presupuesto.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
-				Me.OnIDPresupuestoChanging(value)
-				Me.SendPropertyChanging
-				Me._IDPresupuesto = value
-				Me.SendPropertyChanged("IDPresupuesto")
-				Me.OnIDPresupuestoChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DescripcionGenerada", DbType:="NVarChar(250)", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property DescripcionGenerada() As String
-		Get
-			Return Me._DescripcionGenerada
-		End Get
-		Set
-			If (String.Equals(Me._DescripcionGenerada, value) = false) Then
-				Me.OnDescripcionGeneradaChanging(value)
-				Me.SendPropertyChanging
-				Me._DescripcionGenerada = value
-				Me.SendPropertyChanged("DescripcionGenerada")
-				Me.OnDescripcionGeneradaChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IDTratamiento", DbType:="VarChar(10)", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property IDTratamiento() As String
-		Get
-			Return Me._IDTratamiento
-		End Get
-		Set
-			If (String.Equals(Me._IDTratamiento, value) = false) Then
-				If Me._CONCEPTOSFRA.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
-				Me.OnIDTratamientoChanging(value)
-				Me.SendPropertyChanging
-				Me._IDTratamiento = value
-				Me.SendPropertyChanged("IDTratamiento")
-				Me.OnIDTratamientoChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Cuadrantes", DbType:="NVarChar(50)", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property Cuadrantes() As String
-		Get
-			Return Me._Cuadrantes
-		End Get
-		Set
-			If (String.Equals(Me._Cuadrantes, value) = false) Then
-				Me.OnCuadrantesChanging(value)
-				Me.SendPropertyChanging
-				Me._Cuadrantes = value
-				Me.SendPropertyChanged("Cuadrantes")
-				Me.OnCuadrantesChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PiezasInvolucradas", DbType:="NVarChar(50)", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property PiezasInvolucradas() As String
-		Get
-			Return Me._PiezasInvolucradas
-		End Get
-		Set
-			If (String.Equals(Me._PiezasInvolucradas, value) = false) Then
-				Me.OnPiezasInvolucradasChanging(value)
-				Me.SendPropertyChanging
-				Me._PiezasInvolucradas = value
-				Me.SendPropertyChanged("PiezasInvolucradas")
-				Me.OnPiezasInvolucradasChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Confirmado", DbType:="Bit NOT NULL", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property Confirmado() As Boolean
-		Get
-			Return Me._Confirmado
-		End Get
-		Set
-			If ((Me._Confirmado = value)  _
-						= false) Then
-				Me.OnConfirmadoChanging(value)
-				Me.SendPropertyChanging
-				Me._Confirmado = value
-				Me.SendPropertyChanged("Confirmado")
-				Me.OnConfirmadoChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Realizado", DbType:="Bit NOT NULL", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property Realizado() As Boolean
-		Get
-			Return Me._Realizado
-		End Get
-		Set
-			If ((Me._Realizado = value)  _
-						= false) Then
-				Me.OnRealizadoChanging(value)
-				Me.SendPropertyChanging
-				Me._Realizado = value
-				Me.SendPropertyChanged("Realizado")
-				Me.OnRealizadoChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Urgencia", DbType:="Int NOT NULL", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property Urgencia() As Integer
-		Get
-			Return Me._Urgencia
-		End Get
-		Set
-			If ((Me._Urgencia = value)  _
-						= false) Then
-				Me.OnUrgenciaChanging(value)
-				Me.SendPropertyChanging
-				Me._Urgencia = value
-				Me.SendPropertyChanged("Urgencia")
-				Me.OnUrgenciaChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_FechaConfirmado", DbType:="DateTime", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property FechaConfirmado() As System.Nullable(Of Date)
-		Get
-			Return Me._FechaConfirmado
-		End Get
-		Set
-			If (Me._FechaConfirmado.Equals(value) = false) Then
-				Me.OnFechaConfirmadoChanging(value)
-				Me.SendPropertyChanging
-				Me._FechaConfirmado = value
-				Me.SendPropertyChanged("FechaConfirmado")
-				Me.OnFechaConfirmadoChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_FechaRealizado", DbType:="DateTime", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property FechaRealizado() As System.Nullable(Of Date)
-		Get
-			Return Me._FechaRealizado
-		End Get
-		Set
-			If (Me._FechaRealizado.Equals(value) = false) Then
-				Me.OnFechaRealizadoChanging(value)
-				Me.SendPropertyChanging
-				Me._FechaRealizado = value
-				Me.SendPropertyChanged("FechaRealizado")
-				Me.OnFechaRealizadoChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Importe", DbType:="Decimal(10,2) NOT NULL", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property Importe() As Decimal
-		Get
-			Return Me._Importe
-		End Get
-		Set
-			If ((Me._Importe = value)  _
-						= false) Then
-				Me.OnImporteChanging(value)
-				Me.SendPropertyChanging
-				Me._Importe = value
-				Me.SendPropertyChanged("Importe")
-				Me.OnImporteChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IDCITA", DbType:="Int", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property IDCITA() As System.Nullable(Of Integer)
-		Get
-			Return Me._IDCITA
-		End Get
-		Set
-			If (Me._IDCITA.Equals(value) = false) Then
-				If Me._CITA.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
-				Me.OnIDCITAChanging(value)
-				Me.SendPropertyChanging
-				Me._IDCITA = value
-				Me.SendPropertyChanged("IDCITA")
-				Me.OnIDCITAChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DescuentoPercent", DbType:="Float", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property DescuentoPercent() As System.Nullable(Of Double)
-		Get
-			Return Me._DescuentoPercent
-		End Get
-		Set
-			If (Me._DescuentoPercent.Equals(value) = false) Then
-				Me.OnDescuentoPercentChanging(value)
-				Me.SendPropertyChanging
-				Me._DescuentoPercent = value
-				Me.SendPropertyChanged("DescuentoPercent")
-				Me.OnDescuentoPercentChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IDAccionOrigen", DbType:="BigInt", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property IDAccionOrigen() As System.Nullable(Of Long)
-		Get
-			Return Me._IDAccionOrigen
-		End Get
-		Set
-			If (Me._IDAccionOrigen.Equals(value) = false) Then
-				If Me._d_Accione.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
-				Me.OnIDAccionOrigenChanging(value)
-				Me.SendPropertyChanging
-				Me._IDAccionOrigen = value
-				Me.SendPropertyChanged("IDAccionOrigen")
-				Me.OnIDAccionOrigenChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="d_PresupuestoLinea_LineasCita", Storage:="_LineasCitas", ThisKey:="IDPresupuestoLinea", OtherKey:="RefLineaPresupuestoDental")>  _
-	Public Property LineasCitas() As EntitySet(Of LineasCita)
-		Get
-			Return Me._LineasCitas
-		End Get
-		Set
-			Me._LineasCitas.Assign(value)
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CONCEPTOSFRA_d_PresupuestoLinea", Storage:="_CONCEPTOSFRA", ThisKey:="IDTratamiento", OtherKey:="CODIGO", IsForeignKey:=true)>  _
-	Public Property CONCEPTOSFRA() As CONCEPTOSFRA
-		Get
-			Return Me._CONCEPTOSFRA.Entity
-		End Get
-		Set
-			Dim previousValue As CONCEPTOSFRA = Me._CONCEPTOSFRA.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._CONCEPTOSFRA.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._CONCEPTOSFRA.Entity = Nothing
-					previousValue.d_PresupuestoLineas.Remove(Me)
-				End If
-				Me._CONCEPTOSFRA.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.d_PresupuestoLineas.Add(Me)
-					Me._IDTratamiento = value.CODIGO
-				Else
-					Me._IDTratamiento = CType(Nothing, String)
-				End If
-				Me.SendPropertyChanged("CONCEPTOSFRA")
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="d_Accione_d_PresupuestoLinea", Storage:="_d_Accione", ThisKey:="IDAccionOrigen", OtherKey:="IDAccion", IsForeignKey:=true)>  _
-	Public Property d_Accione() As d_Accione
-		Get
-			Return Me._d_Accione.Entity
-		End Get
-		Set
-			Dim previousValue As d_Accione = Me._d_Accione.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._d_Accione.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._d_Accione.Entity = Nothing
-					previousValue.d_PresupuestoLineas.Remove(Me)
-				End If
-				Me._d_Accione.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.d_PresupuestoLineas.Add(Me)
-					Me._IDAccionOrigen = value.IDAccion
-				Else
-					Me._IDAccionOrigen = CType(Nothing, Nullable(Of Long))
-				End If
-				Me.SendPropertyChanged("d_Accione")
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="d_Presupuesto_d_PresupuestoLinea", Storage:="_d_Presupuesto", ThisKey:="IDPresupuesto", OtherKey:="IDPresupuesto", IsForeignKey:=true, DeleteOnNull:=true, DeleteRule:="CASCADE")>  _
-	Public Property d_Presupuesto() As d_Presupuesto
-		Get
-			Return Me._d_Presupuesto.Entity
-		End Get
-		Set
-			Dim previousValue As d_Presupuesto = Me._d_Presupuesto.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._d_Presupuesto.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._d_Presupuesto.Entity = Nothing
-					previousValue.d_PresupuestoLineas.Remove(Me)
-				End If
-				Me._d_Presupuesto.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.d_PresupuestoLineas.Add(Me)
-					Me._IDPresupuesto = value.IDPresupuesto
-				Else
-					Me._IDPresupuesto = CType(Nothing, Integer)
-				End If
-				Me.SendPropertyChanged("d_Presupuesto")
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CITA_d_PresupuestoLinea", Storage:="_CITA", ThisKey:="IDCITA", OtherKey:="IDCITA", IsForeignKey:=true, DeleteRule:="SET NULL")>  _
-	Public Property CITA() As CITA
-		Get
-			Return Me._CITA.Entity
-		End Get
-		Set
-			Dim previousValue As CITA = Me._CITA.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._CITA.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._CITA.Entity = Nothing
-					previousValue.d_PresupuestoLineas.Remove(Me)
-				End If
-				Me._CITA.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.d_PresupuestoLineas.Add(Me)
-					Me._IDCITA = value.IDCITA
-				Else
-					Me._IDCITA = CType(Nothing, Nullable(Of Integer))
-				End If
-				Me.SendPropertyChanged("CITA")
-			End If
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
-	
-	Private Sub attach_LineasCitas(ByVal entity As LineasCita)
-		Me.SendPropertyChanging
-		entity.d_PresupuestoLinea = Me
-	End Sub
-	
-	Private Sub detach_LineasCitas(ByVal entity As LineasCita)
-		Me.SendPropertyChanging
-		entity.d_PresupuestoLinea = Nothing
 	End Sub
 End Class
 
@@ -27672,11 +27138,11 @@ Partial Public Class LineasCita
 	
 	Private _LINEASFACTURAs As EntitySet(Of LINEASFACTURA)
 	
-	Private _d_PresupuestoLinea As EntityRef(Of d_PresupuestoLinea)
-	
 	Private _LCOMPARATIVAS_TRATAMIENTO As EntityRef(Of LCOMPARATIVAS_TRATAMIENTO)
 	
 	Private _CITA As EntityRef(Of CITA)
+	
+	Private _d_PresupuestoLinea As EntityRef(Of d_PresupuestoLinea)
 	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
@@ -27742,9 +27208,9 @@ Partial Public Class LineasCita
 	Public Sub New()
 		MyBase.New
 		Me._LINEASFACTURAs = New EntitySet(Of LINEASFACTURA)(AddressOf Me.attach_LINEASFACTURAs, AddressOf Me.detach_LINEASFACTURAs)
-		Me._d_PresupuestoLinea = CType(Nothing, EntityRef(Of d_PresupuestoLinea))
 		Me._LCOMPARATIVAS_TRATAMIENTO = CType(Nothing, EntityRef(Of LCOMPARATIVAS_TRATAMIENTO))
 		Me._CITA = CType(Nothing, EntityRef(Of CITA))
+		Me._d_PresupuestoLinea = CType(Nothing, EntityRef(Of d_PresupuestoLinea))
 		OnCreated
 	End Sub
 	
@@ -27980,34 +27446,6 @@ Partial Public Class LineasCita
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="d_PresupuestoLinea_LineasCita", Storage:="_d_PresupuestoLinea", ThisKey:="RefLineaPresupuestoDental", OtherKey:="IDPresupuestoLinea", IsForeignKey:=true, DeleteRule:="SET NULL")>  _
-	Public Property d_PresupuestoLinea() As d_PresupuestoLinea
-		Get
-			Return Me._d_PresupuestoLinea.Entity
-		End Get
-		Set
-			Dim previousValue As d_PresupuestoLinea = Me._d_PresupuestoLinea.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._d_PresupuestoLinea.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._d_PresupuestoLinea.Entity = Nothing
-					previousValue.LineasCitas.Remove(Me)
-				End If
-				Me._d_PresupuestoLinea.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.LineasCitas.Add(Me)
-					Me._RefLineaPresupuestoDental = value.IDPresupuestoLinea
-				Else
-					Me._RefLineaPresupuestoDental = CType(Nothing, Nullable(Of Long))
-				End If
-				Me.SendPropertyChanged("d_PresupuestoLinea")
-			End If
-		End Set
-	End Property
-	
 	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="LCOMPARATIVAS_TRATAMIENTO_LineasCita", Storage:="_LCOMPARATIVAS_TRATAMIENTO", ThisKey:="RefLineaTratamiento", OtherKey:="ID", IsForeignKey:=true)>  _
 	Public Property LCOMPARATIVAS_TRATAMIENTO() As LCOMPARATIVAS_TRATAMIENTO
 		Get
@@ -28060,6 +27498,34 @@ Partial Public Class LineasCita
 					Me._IdCita = CType(Nothing, Integer)
 				End If
 				Me.SendPropertyChanged("CITA")
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="d_PresupuestoLinea_LineasCita", Storage:="_d_PresupuestoLinea", ThisKey:="RefLineaPresupuestoDental", OtherKey:="IDPresupuestoLinea", IsForeignKey:=true, DeleteRule:="SET NULL")>  _
+	Public Property d_PresupuestoLinea() As d_PresupuestoLinea
+		Get
+			Return Me._d_PresupuestoLinea.Entity
+		End Get
+		Set
+			Dim previousValue As d_PresupuestoLinea = Me._d_PresupuestoLinea.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._d_PresupuestoLinea.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._d_PresupuestoLinea.Entity = Nothing
+					previousValue.LineasCitas.Remove(Me)
+				End If
+				Me._d_PresupuestoLinea.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.LineasCitas.Add(Me)
+					Me._RefLineaPresupuestoDental = value.IDPresupuestoLinea
+				Else
+					Me._RefLineaPresupuestoDental = CType(Nothing, Nullable(Of Long))
+				End If
+				Me.SendPropertyChanged("d_PresupuestoLinea")
 			End If
 		End Set
 	End Property
@@ -40978,8 +40444,6 @@ Partial Public Class CITA
 	
 	Private _NumeroCita As System.Nullable(Of Byte)
 	
-	Private _d_PresupuestoLineas As EntitySet(Of d_PresupuestoLinea)
-	
 	Private _LINEASFACTURAs As EntitySet(Of LINEASFACTURA)
 	
 	Private _LCOMPARATIVAS_TRATAMIENTOs As EntitySet(Of LCOMPARATIVAS_TRATAMIENTO)
@@ -40987,6 +40451,8 @@ Partial Public Class CITA
 	Private _LineasCitas As EntitySet(Of LineasCita)
 	
 	Private _Sesiones As EntitySet(Of Sesiones)
+	
+	Private _d_PresupuestoLineas As EntitySet(Of d_PresupuestoLinea)
 	
 	Private _FORMASPAGO As EntityRef(Of FORMASPAGO)
 	
@@ -41145,11 +40611,11 @@ Partial Public Class CITA
 	
 	Public Sub New()
 		MyBase.New
-		Me._d_PresupuestoLineas = New EntitySet(Of d_PresupuestoLinea)(AddressOf Me.attach_d_PresupuestoLineas, AddressOf Me.detach_d_PresupuestoLineas)
 		Me._LINEASFACTURAs = New EntitySet(Of LINEASFACTURA)(AddressOf Me.attach_LINEASFACTURAs, AddressOf Me.detach_LINEASFACTURAs)
 		Me._LCOMPARATIVAS_TRATAMIENTOs = New EntitySet(Of LCOMPARATIVAS_TRATAMIENTO)(AddressOf Me.attach_LCOMPARATIVAS_TRATAMIENTOs, AddressOf Me.detach_LCOMPARATIVAS_TRATAMIENTOs)
 		Me._LineasCitas = New EntitySet(Of LineasCita)(AddressOf Me.attach_LineasCitas, AddressOf Me.detach_LineasCitas)
 		Me._Sesiones = New EntitySet(Of Sesiones)(AddressOf Me.attach_Sesiones, AddressOf Me.detach_Sesiones)
+		Me._d_PresupuestoLineas = New EntitySet(Of d_PresupuestoLinea)(AddressOf Me.attach_d_PresupuestoLineas, AddressOf Me.detach_d_PresupuestoLineas)
 		Me._FORMASPAGO = CType(Nothing, EntityRef(Of FORMASPAGO))
 		Me._EntregasCuenta = CType(Nothing, EntityRef(Of EntregasCuenta))
 		Me._N_Proceso = CType(Nothing, EntityRef(Of N_Proceso))
@@ -41710,16 +41176,6 @@ Partial Public Class CITA
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CITA_d_PresupuestoLinea", Storage:="_d_PresupuestoLineas", ThisKey:="IDCITA", OtherKey:="IDCITA")>  _
-	Public Property d_PresupuestoLineas() As EntitySet(Of d_PresupuestoLinea)
-		Get
-			Return Me._d_PresupuestoLineas
-		End Get
-		Set
-			Me._d_PresupuestoLineas.Assign(value)
-		End Set
-	End Property
-	
 	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CITA_LINEASFACTURA", Storage:="_LINEASFACTURAs", ThisKey:="IDCITA", OtherKey:="ID_Cita")>  _
 	Public Property LINEASFACTURAs() As EntitySet(Of LINEASFACTURA)
 		Get
@@ -41757,6 +41213,16 @@ Partial Public Class CITA
 		End Get
 		Set
 			Me._Sesiones.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CITA_d_PresupuestoLinea", Storage:="_d_PresupuestoLineas", ThisKey:="IDCITA", OtherKey:="IDCITA")>  _
+	Public Property d_PresupuestoLineas() As EntitySet(Of d_PresupuestoLinea)
+		Get
+			Return Me._d_PresupuestoLineas
+		End Get
+		Set
+			Me._d_PresupuestoLineas.Assign(value)
 		End Set
 	End Property
 	
@@ -41974,16 +41440,6 @@ Partial Public Class CITA
 		End If
 	End Sub
 	
-	Private Sub attach_d_PresupuestoLineas(ByVal entity As d_PresupuestoLinea)
-		Me.SendPropertyChanging
-		entity.CITA = Me
-	End Sub
-	
-	Private Sub detach_d_PresupuestoLineas(ByVal entity As d_PresupuestoLinea)
-		Me.SendPropertyChanging
-		entity.CITA = Nothing
-	End Sub
-	
 	Private Sub attach_LINEASFACTURAs(ByVal entity As LINEASFACTURA)
 		Me.SendPropertyChanging
 		entity.CITA = Me
@@ -42020,6 +41476,16 @@ Partial Public Class CITA
 	End Sub
 	
 	Private Sub detach_Sesiones(ByVal entity As Sesiones)
+		Me.SendPropertyChanging
+		entity.CITA = Nothing
+	End Sub
+	
+	Private Sub attach_d_PresupuestoLineas(ByVal entity As d_PresupuestoLinea)
+		Me.SendPropertyChanging
+		entity.CITA = Me
+	End Sub
+	
+	Private Sub detach_d_PresupuestoLineas(ByVal entity As d_PresupuestoLinea)
 		Me.SendPropertyChanging
 		entity.CITA = Nothing
 	End Sub
@@ -42395,5 +41861,561 @@ Partial Public Class Recordatorio
 					= false) Then
 			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
 		End If
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.d_PresupuestoLineas")>  _
+Partial Public Class d_PresupuestoLinea
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _IDPresupuestoLinea As Long
+	
+	Private _IDPresupuesto As Integer
+	
+	Private _DescripcionGenerada As String
+	
+	Private _IDTratamiento As String
+	
+	Private _Cuadrantes As String
+	
+	Private _PiezasInvolucradas As String
+	
+	Private _Confirmado As Boolean
+	
+	Private _Realizado As Boolean
+	
+	Private _Urgencia As Integer
+	
+	Private _FechaConfirmado As System.Nullable(Of Date)
+	
+	Private _FechaRealizado As System.Nullable(Of Date)
+	
+	Private _Importe As Decimal
+	
+	Private _IDCITA As System.Nullable(Of Integer)
+	
+	Private _DescuentoPercent As System.Nullable(Of Double)
+	
+	Private _IDAccionOrigen As System.Nullable(Of Long)
+	
+	Private _TipoDenticion As System.Nullable(Of Integer)
+	
+	Private _LineasCitas As EntitySet(Of LineasCita)
+	
+	Private _CITA As EntityRef(Of CITA)
+	
+	Private _CONCEPTOSFRA As EntityRef(Of CONCEPTOSFRA)
+	
+	Private _d_Accione As EntityRef(Of d_Accione)
+	
+	Private _d_Presupuesto As EntityRef(Of d_Presupuesto)
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnIDPresupuestoLineaChanging(value As Long)
+    End Sub
+    Partial Private Sub OnIDPresupuestoLineaChanged()
+    End Sub
+    Partial Private Sub OnIDPresupuestoChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnIDPresupuestoChanged()
+    End Sub
+    Partial Private Sub OnDescripcionGeneradaChanging(value As String)
+    End Sub
+    Partial Private Sub OnDescripcionGeneradaChanged()
+    End Sub
+    Partial Private Sub OnIDTratamientoChanging(value As String)
+    End Sub
+    Partial Private Sub OnIDTratamientoChanged()
+    End Sub
+    Partial Private Sub OnCuadrantesChanging(value As String)
+    End Sub
+    Partial Private Sub OnCuadrantesChanged()
+    End Sub
+    Partial Private Sub OnPiezasInvolucradasChanging(value As String)
+    End Sub
+    Partial Private Sub OnPiezasInvolucradasChanged()
+    End Sub
+    Partial Private Sub OnConfirmadoChanging(value As Boolean)
+    End Sub
+    Partial Private Sub OnConfirmadoChanged()
+    End Sub
+    Partial Private Sub OnRealizadoChanging(value As Boolean)
+    End Sub
+    Partial Private Sub OnRealizadoChanged()
+    End Sub
+    Partial Private Sub OnUrgenciaChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnUrgenciaChanged()
+    End Sub
+    Partial Private Sub OnFechaConfirmadoChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OnFechaConfirmadoChanged()
+    End Sub
+    Partial Private Sub OnFechaRealizadoChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OnFechaRealizadoChanged()
+    End Sub
+    Partial Private Sub OnImporteChanging(value As Decimal)
+    End Sub
+    Partial Private Sub OnImporteChanged()
+    End Sub
+    Partial Private Sub OnIDCITAChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnIDCITAChanged()
+    End Sub
+    Partial Private Sub OnDescuentoPercentChanging(value As System.Nullable(Of Double))
+    End Sub
+    Partial Private Sub OnDescuentoPercentChanged()
+    End Sub
+    Partial Private Sub OnIDAccionOrigenChanging(value As System.Nullable(Of Long))
+    End Sub
+    Partial Private Sub OnIDAccionOrigenChanged()
+    End Sub
+    Partial Private Sub OnTipoDenticionChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnTipoDenticionChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		Me._LineasCitas = New EntitySet(Of LineasCita)(AddressOf Me.attach_LineasCitas, AddressOf Me.detach_LineasCitas)
+		Me._CITA = CType(Nothing, EntityRef(Of CITA))
+		Me._CONCEPTOSFRA = CType(Nothing, EntityRef(Of CONCEPTOSFRA))
+		Me._d_Accione = CType(Nothing, EntityRef(Of d_Accione))
+		Me._d_Presupuesto = CType(Nothing, EntityRef(Of d_Presupuesto))
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IDPresupuestoLinea", AutoSync:=AutoSync.OnInsert, DbType:="BigInt NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property IDPresupuestoLinea() As Long
+		Get
+			Return Me._IDPresupuestoLinea
+		End Get
+		Set
+			If ((Me._IDPresupuestoLinea = value)  _
+						= false) Then
+				Me.OnIDPresupuestoLineaChanging(value)
+				Me.SendPropertyChanging
+				Me._IDPresupuestoLinea = value
+				Me.SendPropertyChanged("IDPresupuestoLinea")
+				Me.OnIDPresupuestoLineaChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IDPresupuesto", DbType:="Int NOT NULL")>  _
+	Public Property IDPresupuesto() As Integer
+		Get
+			Return Me._IDPresupuesto
+		End Get
+		Set
+			If ((Me._IDPresupuesto = value)  _
+						= false) Then
+				If Me._d_Presupuesto.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.OnIDPresupuestoChanging(value)
+				Me.SendPropertyChanging
+				Me._IDPresupuesto = value
+				Me.SendPropertyChanged("IDPresupuesto")
+				Me.OnIDPresupuestoChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DescripcionGenerada", DbType:="NVarChar(250)")>  _
+	Public Property DescripcionGenerada() As String
+		Get
+			Return Me._DescripcionGenerada
+		End Get
+		Set
+			If (String.Equals(Me._DescripcionGenerada, value) = false) Then
+				Me.OnDescripcionGeneradaChanging(value)
+				Me.SendPropertyChanging
+				Me._DescripcionGenerada = value
+				Me.SendPropertyChanged("DescripcionGenerada")
+				Me.OnDescripcionGeneradaChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IDTratamiento", DbType:="VarChar(10)")>  _
+	Public Property IDTratamiento() As String
+		Get
+			Return Me._IDTratamiento
+		End Get
+		Set
+			If (String.Equals(Me._IDTratamiento, value) = false) Then
+				If Me._CONCEPTOSFRA.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.OnIDTratamientoChanging(value)
+				Me.SendPropertyChanging
+				Me._IDTratamiento = value
+				Me.SendPropertyChanged("IDTratamiento")
+				Me.OnIDTratamientoChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Cuadrantes", DbType:="NVarChar(50)")>  _
+	Public Property Cuadrantes() As String
+		Get
+			Return Me._Cuadrantes
+		End Get
+		Set
+			If (String.Equals(Me._Cuadrantes, value) = false) Then
+				Me.OnCuadrantesChanging(value)
+				Me.SendPropertyChanging
+				Me._Cuadrantes = value
+				Me.SendPropertyChanged("Cuadrantes")
+				Me.OnCuadrantesChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PiezasInvolucradas", DbType:="NVarChar(50)")>  _
+	Public Property PiezasInvolucradas() As String
+		Get
+			Return Me._PiezasInvolucradas
+		End Get
+		Set
+			If (String.Equals(Me._PiezasInvolucradas, value) = false) Then
+				Me.OnPiezasInvolucradasChanging(value)
+				Me.SendPropertyChanging
+				Me._PiezasInvolucradas = value
+				Me.SendPropertyChanged("PiezasInvolucradas")
+				Me.OnPiezasInvolucradasChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Confirmado", DbType:="Bit NOT NULL")>  _
+	Public Property Confirmado() As Boolean
+		Get
+			Return Me._Confirmado
+		End Get
+		Set
+			If ((Me._Confirmado = value)  _
+						= false) Then
+				Me.OnConfirmadoChanging(value)
+				Me.SendPropertyChanging
+				Me._Confirmado = value
+				Me.SendPropertyChanged("Confirmado")
+				Me.OnConfirmadoChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Realizado", DbType:="Bit NOT NULL")>  _
+	Public Property Realizado() As Boolean
+		Get
+			Return Me._Realizado
+		End Get
+		Set
+			If ((Me._Realizado = value)  _
+						= false) Then
+				Me.OnRealizadoChanging(value)
+				Me.SendPropertyChanging
+				Me._Realizado = value
+				Me.SendPropertyChanged("Realizado")
+				Me.OnRealizadoChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Urgencia", DbType:="Int NOT NULL")>  _
+	Public Property Urgencia() As Integer
+		Get
+			Return Me._Urgencia
+		End Get
+		Set
+			If ((Me._Urgencia = value)  _
+						= false) Then
+				Me.OnUrgenciaChanging(value)
+				Me.SendPropertyChanging
+				Me._Urgencia = value
+				Me.SendPropertyChanged("Urgencia")
+				Me.OnUrgenciaChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_FechaConfirmado", DbType:="DateTime")>  _
+	Public Property FechaConfirmado() As System.Nullable(Of Date)
+		Get
+			Return Me._FechaConfirmado
+		End Get
+		Set
+			If (Me._FechaConfirmado.Equals(value) = false) Then
+				Me.OnFechaConfirmadoChanging(value)
+				Me.SendPropertyChanging
+				Me._FechaConfirmado = value
+				Me.SendPropertyChanged("FechaConfirmado")
+				Me.OnFechaConfirmadoChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_FechaRealizado", DbType:="DateTime")>  _
+	Public Property FechaRealizado() As System.Nullable(Of Date)
+		Get
+			Return Me._FechaRealizado
+		End Get
+		Set
+			If (Me._FechaRealizado.Equals(value) = false) Then
+				Me.OnFechaRealizadoChanging(value)
+				Me.SendPropertyChanging
+				Me._FechaRealizado = value
+				Me.SendPropertyChanged("FechaRealizado")
+				Me.OnFechaRealizadoChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Importe", DbType:="Decimal(10,2) NOT NULL")>  _
+	Public Property Importe() As Decimal
+		Get
+			Return Me._Importe
+		End Get
+		Set
+			If ((Me._Importe = value)  _
+						= false) Then
+				Me.OnImporteChanging(value)
+				Me.SendPropertyChanging
+				Me._Importe = value
+				Me.SendPropertyChanged("Importe")
+				Me.OnImporteChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IDCITA", DbType:="Int")>  _
+	Public Property IDCITA() As System.Nullable(Of Integer)
+		Get
+			Return Me._IDCITA
+		End Get
+		Set
+			If (Me._IDCITA.Equals(value) = false) Then
+				If Me._CITA.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.OnIDCITAChanging(value)
+				Me.SendPropertyChanging
+				Me._IDCITA = value
+				Me.SendPropertyChanged("IDCITA")
+				Me.OnIDCITAChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DescuentoPercent", DbType:="Float")>  _
+	Public Property DescuentoPercent() As System.Nullable(Of Double)
+		Get
+			Return Me._DescuentoPercent
+		End Get
+		Set
+			If (Me._DescuentoPercent.Equals(value) = false) Then
+				Me.OnDescuentoPercentChanging(value)
+				Me.SendPropertyChanging
+				Me._DescuentoPercent = value
+				Me.SendPropertyChanged("DescuentoPercent")
+				Me.OnDescuentoPercentChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_IDAccionOrigen", DbType:="BigInt")>  _
+	Public Property IDAccionOrigen() As System.Nullable(Of Long)
+		Get
+			Return Me._IDAccionOrigen
+		End Get
+		Set
+			If (Me._IDAccionOrigen.Equals(value) = false) Then
+				If Me._d_Accione.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.OnIDAccionOrigenChanging(value)
+				Me.SendPropertyChanging
+				Me._IDAccionOrigen = value
+				Me.SendPropertyChanged("IDAccionOrigen")
+				Me.OnIDAccionOrigenChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_TipoDenticion", DbType:="Int")>  _
+	Public Property TipoDenticion() As System.Nullable(Of Integer)
+		Get
+			Return Me._TipoDenticion
+		End Get
+		Set
+			If (Me._TipoDenticion.Equals(value) = false) Then
+				Me.OnTipoDenticionChanging(value)
+				Me.SendPropertyChanging
+				Me._TipoDenticion = value
+				Me.SendPropertyChanged("TipoDenticion")
+				Me.OnTipoDenticionChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="d_PresupuestoLinea_LineasCita", Storage:="_LineasCitas", ThisKey:="IDPresupuestoLinea", OtherKey:="RefLineaPresupuestoDental")>  _
+	Public Property LineasCitas() As EntitySet(Of LineasCita)
+		Get
+			Return Me._LineasCitas
+		End Get
+		Set
+			Me._LineasCitas.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CITA_d_PresupuestoLinea", Storage:="_CITA", ThisKey:="IDCITA", OtherKey:="IDCITA", IsForeignKey:=true, DeleteRule:="SET NULL")>  _
+	Public Property CITA() As CITA
+		Get
+			Return Me._CITA.Entity
+		End Get
+		Set
+			Dim previousValue As CITA = Me._CITA.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._CITA.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._CITA.Entity = Nothing
+					previousValue.d_PresupuestoLineas.Remove(Me)
+				End If
+				Me._CITA.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.d_PresupuestoLineas.Add(Me)
+					Me._IDCITA = value.IDCITA
+				Else
+					Me._IDCITA = CType(Nothing, Nullable(Of Integer))
+				End If
+				Me.SendPropertyChanged("CITA")
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="CONCEPTOSFRA_d_PresupuestoLinea", Storage:="_CONCEPTOSFRA", ThisKey:="IDTratamiento", OtherKey:="CODIGO", IsForeignKey:=true)>  _
+	Public Property CONCEPTOSFRA() As CONCEPTOSFRA
+		Get
+			Return Me._CONCEPTOSFRA.Entity
+		End Get
+		Set
+			Dim previousValue As CONCEPTOSFRA = Me._CONCEPTOSFRA.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._CONCEPTOSFRA.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._CONCEPTOSFRA.Entity = Nothing
+					previousValue.d_PresupuestoLineas.Remove(Me)
+				End If
+				Me._CONCEPTOSFRA.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.d_PresupuestoLineas.Add(Me)
+					Me._IDTratamiento = value.CODIGO
+				Else
+					Me._IDTratamiento = CType(Nothing, String)
+				End If
+				Me.SendPropertyChanged("CONCEPTOSFRA")
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="d_Accione_d_PresupuestoLinea", Storage:="_d_Accione", ThisKey:="IDAccionOrigen", OtherKey:="IDAccion", IsForeignKey:=true)>  _
+	Public Property d_Accione() As d_Accione
+		Get
+			Return Me._d_Accione.Entity
+		End Get
+		Set
+			Dim previousValue As d_Accione = Me._d_Accione.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._d_Accione.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._d_Accione.Entity = Nothing
+					previousValue.d_PresupuestoLineas.Remove(Me)
+				End If
+				Me._d_Accione.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.d_PresupuestoLineas.Add(Me)
+					Me._IDAccionOrigen = value.IDAccion
+				Else
+					Me._IDAccionOrigen = CType(Nothing, Nullable(Of Long))
+				End If
+				Me.SendPropertyChanged("d_Accione")
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="d_Presupuesto_d_PresupuestoLinea", Storage:="_d_Presupuesto", ThisKey:="IDPresupuesto", OtherKey:="IDPresupuesto", IsForeignKey:=true, DeleteOnNull:=true, DeleteRule:="CASCADE")>  _
+	Public Property d_Presupuesto() As d_Presupuesto
+		Get
+			Return Me._d_Presupuesto.Entity
+		End Get
+		Set
+			Dim previousValue As d_Presupuesto = Me._d_Presupuesto.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._d_Presupuesto.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._d_Presupuesto.Entity = Nothing
+					previousValue.d_PresupuestoLineas.Remove(Me)
+				End If
+				Me._d_Presupuesto.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.d_PresupuestoLineas.Add(Me)
+					Me._IDPresupuesto = value.IDPresupuesto
+				Else
+					Me._IDPresupuesto = CType(Nothing, Integer)
+				End If
+				Me.SendPropertyChanged("d_Presupuesto")
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+	
+	Private Sub attach_LineasCitas(ByVal entity As LineasCita)
+		Me.SendPropertyChanging
+		entity.d_PresupuestoLinea = Me
+	End Sub
+	
+	Private Sub detach_LineasCitas(ByVal entity As LineasCita)
+		Me.SendPropertyChanging
+		entity.d_PresupuestoLinea = Nothing
 	End Sub
 End Class

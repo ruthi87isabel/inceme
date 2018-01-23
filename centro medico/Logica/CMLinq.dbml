@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="siesta" Class="CMLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=siesta;User ID=sa" SettingsObjectName="centro_medico.My.MySettings" SettingsPropertyName="CMConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="siesta1" Class="CMLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=siesta1;User ID=sa" SettingsObjectName="centro_medico.My.MySettings" SettingsPropertyName="CMConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.PACIENTES" Member="PACIENTEs">
     <Type Name="PACIENTE">
       <Column Name="NOMBRE" Type="System.String" DbType="VarChar(25)" CanBeNull="true" UpdateCheck="Never" />
@@ -522,13 +522,13 @@
       <Column Name="XMLCont" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" UpdateCheck="Never" />
       <Association Name="CONCEPTOSFRA_d_Accione" Member="d_Acciones" ThisKey="CODIGO" OtherKey="IDTratamiento" Type="d_Accione" />
       <Association Name="CONCEPTOSFRA_d_ConceptosFra_Imagene" Member="d_ConceptosFra_Imagenes" ThisKey="CODIGO" OtherKey="CodigoCfra" Type="d_ConceptosFra_Imagene" />
-      <Association Name="CONCEPTOSFRA_d_PresupuestoLinea" Member="d_PresupuestoLineas" ThisKey="CODIGO" OtherKey="IDTratamiento" Type="d_PresupuestoLinea" />
       <Association Name="CONCEPTOSFRA_Tarifa" Member="Tarifas" ThisKey="CODIGO" OtherKey="IdConceptoFra" Type="Tarifa" />
       <Association Name="CONCEPTOSFRA_PLANTILLAANALITICA" Member="PLANTILLAANALITICAs" ThisKey="CODIGO" OtherKey="REFCONCEPTO" Type="PLANTILLAANALITICA" />
       <Association Name="CONCEPTOSFRA_LINEASFACTURA" Member="LINEASFACTURAs" ThisKey="CODIGO" OtherKey="REFCONCEPTO" Type="LINEASFACTURA" />
       <Association Name="CONCEPTOSFRA_MEDICOS_CONCEPTOFRA" Member="MEDICOS_CONCEPTOFRAs" ThisKey="CODIGO" OtherKey="CODIGO" Type="MEDICOS_CONCEPTOFRA" />
       <Association Name="CONCEPTOSFRA_ANALITICAS" Member="ANALITICAS" ThisKey="CODIGO" OtherKey="REFCONCEPTO" Type="ANALITICAS" />
       <Association Name="CONCEPTOSFRA_PLANTILLAANALITICAS" Member="PLANTILLAANALITICAS1" ThisKey="CODIGO" OtherKey="REFCONCEPTO" Type="PLANTILLAANALITICAS" />
+      <Association Name="CONCEPTOSFRA_d_PresupuestoLinea" Member="d_PresupuestoLineas" ThisKey="CODIGO" OtherKey="IDTratamiento" Type="d_PresupuestoLinea" />
       <Association Name="CONCEPTOSFAMILIA_CONCEPTOSFRA" Member="CONCEPTOSFAMILIA" ThisKey="IDFAMILIA" OtherKey="IDFamilia" Type="CONCEPTOSFAMILIA" IsForeignKey="true" />
     </Type>
   </Table>
@@ -648,30 +648,6 @@
       <Association Name="N_Factura_N_Factura_Linea" Member="N_Factura" ThisKey="ID_Factura" OtherKey="ID_Factura" Type="N_Factura" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="N_TipoIVA_N_Factura_Linea" Member="N_TipoIVA" ThisKey="ID_TipoIVA" OtherKey="ID_TipoIVA" Type="N_TipoIVA" IsForeignKey="true" DeleteRule="CASCADE" />
       <Association Name="N_Almacen_N_Factura_Linea" Member="N_Almacen" ThisKey="ID_Almacen" OtherKey="ID_Almacen" Type="N_Almacen" IsForeignKey="true" DeleteRule="CASCADE" />
-    </Type>
-  </Table>
-  <Table Name="dbo.d_PresupuestoLineas" Member="d_PresupuestoLineas">
-    <Type Name="d_PresupuestoLinea">
-      <Column Name="IDPresupuestoLinea" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="IDPresupuesto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="DescripcionGenerada" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="IDTratamiento" Type="System.String" DbType="VarChar(10)" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="Cuadrantes" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="PiezasInvolucradas" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="Confirmado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="Realizado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="Urgencia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="FechaConfirmado" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="FechaRealizado" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="Importe" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="IDCITA" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="DescuentoPercent" Type="System.Double" DbType="Float" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="IDAccionOrigen" Type="System.Int64" DbType="BigInt" CanBeNull="true" UpdateCheck="Never" />
-      <Association Name="d_PresupuestoLinea_LineasCita" Member="LineasCitas" ThisKey="IDPresupuestoLinea" OtherKey="RefLineaPresupuestoDental" Type="LineasCita" />
-      <Association Name="CONCEPTOSFRA_d_PresupuestoLinea" Member="CONCEPTOSFRA" ThisKey="IDTratamiento" OtherKey="CODIGO" Type="CONCEPTOSFRA" IsForeignKey="true" />
-      <Association Name="d_Accione_d_PresupuestoLinea" Member="d_Accione" ThisKey="IDAccionOrigen" OtherKey="IDAccion" Type="d_Accione" IsForeignKey="true" />
-      <Association Name="d_Presupuesto_d_PresupuestoLinea" Member="d_Presupuesto" ThisKey="IDPresupuesto" OtherKey="IDPresupuesto" Type="d_Presupuesto" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
-      <Association Name="CITA_d_PresupuestoLinea" Member="CITA" ThisKey="IDCITA" OtherKey="IDCITA" Type="CITA" IsForeignKey="true" DeleteRule="SET NULL" />
     </Type>
   </Table>
   <Table Name="dbo.CONCEPTOSFACTURABLES" Member="CONCEPTOSFACTURABLEs">
@@ -1319,9 +1295,9 @@
       <Column Name="Liquidada_al_Medico" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="RefLineaTratamiento" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="LineasCita_LINEASFACTURA" Member="LINEASFACTURAs" ThisKey="IdLinea,IdCita" OtherKey="RefLineaCita,ID_Cita" Type="LINEASFACTURA" />
-      <Association Name="d_PresupuestoLinea_LineasCita" Member="d_PresupuestoLinea" ThisKey="RefLineaPresupuestoDental" OtherKey="IDPresupuestoLinea" Type="d_PresupuestoLinea" IsForeignKey="true" DeleteRule="SET NULL" />
       <Association Name="LCOMPARATIVAS_TRATAMIENTO_LineasCita" Member="LCOMPARATIVAS_TRATAMIENTO" ThisKey="RefLineaTratamiento" OtherKey="ID" Type="LCOMPARATIVAS_TRATAMIENTO" IsForeignKey="true" />
       <Association Name="CITA_LineasCita" Member="CITA" ThisKey="IdCita" OtherKey="IDCITA" Type="CITA" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="d_PresupuestoLinea_LineasCita" Member="d_PresupuestoLinea" ThisKey="RefLineaPresupuestoDental" OtherKey="IDPresupuestoLinea" Type="d_PresupuestoLinea" IsForeignKey="true" DeleteRule="SET NULL" />
     </Type>
   </Table>
   <Table Name="dbo.LINEASALARMA" Member="LINEASALARMAs">
@@ -1982,11 +1958,11 @@
       <Column Name="PagadoConCredito" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="PagadoDesdeFactura" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="NumeroCita" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
-      <Association Name="CITA_d_PresupuestoLinea" Member="d_PresupuestoLineas" ThisKey="IDCITA" OtherKey="IDCITA" Type="d_PresupuestoLinea" />
       <Association Name="CITA_LINEASFACTURA" Member="LINEASFACTURAs" ThisKey="IDCITA" OtherKey="ID_Cita" Type="LINEASFACTURA" />
       <Association Name="CITA_LCOMPARATIVAS_TRATAMIENTO" Member="LCOMPARATIVAS_TRATAMIENTOs" ThisKey="IDCITA" OtherKey="ID_Cita" Type="LCOMPARATIVAS_TRATAMIENTO" />
       <Association Name="CITA_LineasCita" Member="LineasCitas" ThisKey="IDCITA" OtherKey="IdCita" Type="LineasCita" />
       <Association Name="CITA_Sesiones" Member="Sesiones" ThisKey="IDCITA" OtherKey="refcita" Type="Sesiones" />
+      <Association Name="CITA_d_PresupuestoLinea" Member="d_PresupuestoLineas" ThisKey="IDCITA" OtherKey="IDCITA" Type="d_PresupuestoLinea" />
       <Association Name="FORMASPAGO_CITA" Member="FORMASPAGO" ThisKey="REFFORMAPAGO" OtherKey="CODIGO" Type="FORMASPAGO" IsForeignKey="true" DeleteRule="CASCADE" />
       <Association Name="EntregasCuenta_CITA" Member="EntregasCuenta" ThisKey="IDEntregaCuenta" OtherKey="IDEntregaCuenta" Type="EntregasCuenta" IsForeignKey="true" />
       <Association Name="N_Proceso_CITA" Member="N_Proceso" ThisKey="ID_Proceso" OtherKey="ID_Proceso" Type="N_Proceso" IsForeignKey="true" DeleteRule="SET NULL" />
@@ -2014,6 +1990,31 @@
       <Column Name="Activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="Asunto" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Anotación" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.d_PresupuestoLineas" Member="d_PresupuestoLineas">
+    <Type Name="d_PresupuestoLinea">
+      <Column Name="IDPresupuestoLinea" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDPresupuesto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DescripcionGenerada" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="IDTratamiento" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Cuadrantes" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PiezasInvolucradas" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Confirmado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Realizado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Urgencia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaConfirmado" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaRealizado" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Importe" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="IDCITA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DescuentoPercent" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="IDAccionOrigen" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="TipoDenticion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="d_PresupuestoLinea_LineasCita" Member="LineasCitas" ThisKey="IDPresupuestoLinea" OtherKey="RefLineaPresupuestoDental" Type="LineasCita" />
+      <Association Name="CITA_d_PresupuestoLinea" Member="CITA" ThisKey="IDCITA" OtherKey="IDCITA" Type="CITA" IsForeignKey="true" DeleteRule="SET NULL" />
+      <Association Name="CONCEPTOSFRA_d_PresupuestoLinea" Member="CONCEPTOSFRA" ThisKey="IDTratamiento" OtherKey="CODIGO" Type="CONCEPTOSFRA" IsForeignKey="true" />
+      <Association Name="d_Accione_d_PresupuestoLinea" Member="d_Accione" ThisKey="IDAccionOrigen" OtherKey="IDAccion" Type="d_Accione" IsForeignKey="true" />
+      <Association Name="d_Presupuesto_d_PresupuestoLinea" Member="d_Presupuesto" ThisKey="IDPresupuesto" OtherKey="IDPresupuesto" Type="d_Presupuesto" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
 </Database>

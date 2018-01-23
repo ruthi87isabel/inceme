@@ -104,6 +104,7 @@ Partial Class frmOdontograma
         Me.lblPieza = New System.Windows.Forms.Label()
         Me.tbcTrat = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.tbxTrat = New centro_medico.ctrlTextboxAvanzado()
         Me.LVw_TTrat = New System.Windows.Forms.ListView()
         Me.ColumnHeader12 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.TabPage2 = New System.Windows.Forms.TabPage()
@@ -120,11 +121,6 @@ Partial Class frmOdontograma
         Me.ToolStripStatusLabel4 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.pbxFamilia = New System.Windows.Forms.PictureBox()
         Me.tbc = New Janus.Windows.UI.Tab.UITab()
-        Me.Grid3 = New Janus.Windows.GridEX.GridEX()
-        Me.OdontTratBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.OdontTrat = New centro_medico.OdontTrat()
-        Me.LineasPresupuestoTableAdapter = New centro_medico.OdontTratTableAdapters.LineasPresupuestoTableAdapter()
-        Me.CtrlAlarmaPaciente1 = New centro_medico.ctrlAlarmaPaciente()
         Me.tbpRealizado = New Janus.Windows.UI.Tab.UITabPage()
         Me.Odontograma1 = New centro_medico.Odontograma()
         Me.tbpPendiente = New Janus.Windows.UI.Tab.UITabPage()
@@ -132,9 +128,13 @@ Partial Class frmOdontograma
         Me.tbpPresupuestos = New Janus.Windows.UI.Tab.UITabPage()
         Me.CtrlMutua1 = New centro_medico.ctrlMutua()
         Me.Odontograma3 = New centro_medico.Odontograma()
+        Me.Grid3 = New Janus.Windows.GridEX.GridEX()
+        Me.OdontTratBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.OdontTrat = New centro_medico.OdontTrat()
         Me.tbpPrimeraVisita = New Janus.Windows.UI.Tab.UITabPage()
         Me.Odontograma4 = New centro_medico.Odontograma()
-        Me.tbxTrat = New centro_medico.ctrlTextboxAvanzado()
+        Me.LineasPresupuestoTableAdapter = New centro_medico.OdontTratTableAdapters.LineasPresupuestoTableAdapter()
+        Me.CtrlAlarmaPaciente1 = New centro_medico.ctrlAlarmaPaciente()
         Me.rtb3 = New centro_medico.ctrlRichTextboxAvanzado()
         Me.rtb2 = New centro_medico.ctrlRichTextboxAvanzado()
         Me.rtb1 = New centro_medico.ctrlRichTextboxAvanzado()
@@ -155,12 +155,12 @@ Partial Class frmOdontograma
         CType(Me.pbxFamilia, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbc, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tbc.SuspendLayout()
-        CType(Me.Grid3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.OdontTratBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.OdontTrat, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tbpRealizado.SuspendLayout()
         Me.tbpPendiente.SuspendLayout()
         Me.tbpPresupuestos.SuspendLayout()
+        CType(Me.Grid3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OdontTratBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OdontTrat, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tbpPrimeraVisita.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -871,6 +871,14 @@ Partial Class frmOdontograma
         Me.TabPage1.Text = "Todos los tratamientos"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'tbxTrat
+        '
+        Me.tbxTrat.AcceptsReturn = True
+        Me.tbxTrat.Location = New System.Drawing.Point(3, 7)
+        Me.tbxTrat.Name = "tbxTrat"
+        Me.tbxTrat.Size = New System.Drawing.Size(279, 20)
+        Me.tbxTrat.TabIndex = 19
+        '
         'LVw_TTrat
         '
         Me.LVw_TTrat.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -1006,7 +1014,7 @@ Partial Class frmOdontograma
         'pbxFamilia
         '
         Me.pbxFamilia.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pbxFamilia.Location = New System.Drawing.Point(745, 28)
+        Me.pbxFamilia.Location = New System.Drawing.Point(744, 28)
         Me.pbxFamilia.Name = "pbxFamilia"
         Me.pbxFamilia.Size = New System.Drawing.Size(55, 55)
         Me.pbxFamilia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1026,58 +1034,6 @@ Partial Class frmOdontograma
         Me.tbc.Size = New System.Drawing.Size(510, 674)
         Me.tbc.TabIndex = 65
         Me.tbc.TabPages.AddRange(New Janus.Windows.UI.Tab.UITabPage() {Me.tbpRealizado, Me.tbpPendiente, Me.tbpPresupuestos, Me.tbpPrimeraVisita})
-        '
-        'Grid3
-        '
-        Me.Grid3.AllowColumnDrag = False
-        Me.Grid3.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.[False]
-        Me.Grid3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Grid3.AutomaticSort = False
-        Me.Grid3.CellToolTip = Janus.Windows.GridEX.CellToolTip.TruncatedText
-        Me.Grid3.ColumnAutoResize = True
-        Me.Grid3.ColumnAutoSizeMode = Janus.Windows.GridEX.ColumnAutoSizeMode.ColumnHeader
-        Me.Grid3.ContextMenuStrip = Me.cMenu
-        Me.Grid3.DataMember = "LineasPresupuesto"
-        Me.Grid3.DataSource = Me.OdontTratBindingSource
-        Grid3_DesignTimeLayout.LayoutString = resources.GetString("Grid3_DesignTimeLayout.LayoutString")
-        Me.Grid3.DesignTimeLayout = Grid3_DesignTimeLayout
-        Me.Grid3.FocusCellFormatStyle.BackColor = System.Drawing.SystemColors.Highlight
-        Me.Grid3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Grid3.GridLines = Janus.Windows.GridEX.GridLines.None
-        Me.Grid3.GroupByBoxVisible = False
-        Me.Grid3.HideSelection = Janus.Windows.GridEX.HideSelection.HighlightInactive
-        Me.Grid3.ImageList = Me.imgList
-        Me.Grid3.Location = New System.Drawing.Point(120, 384)
-        Me.Grid3.Name = "Grid3"
-        Me.Grid3.SelectionMode = Janus.Windows.GridEX.SelectionMode.MultipleSelectionSameTable
-        Me.Grid3.Size = New System.Drawing.Size(383, 241)
-        Me.Grid3.TabIndex = 130
-        '
-        'OdontTratBindingSource
-        '
-        Me.OdontTratBindingSource.DataSource = Me.OdontTrat
-        Me.OdontTratBindingSource.Position = 0
-        '
-        'OdontTrat
-        '
-        Me.OdontTrat.DataSetName = "OdontTrat"
-        Me.OdontTrat.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'LineasPresupuestoTableAdapter
-        '
-        Me.LineasPresupuestoTableAdapter.ClearBeforeFill = True
-        '
-        'CtrlAlarmaPaciente1
-        '
-        Me.CtrlAlarmaPaciente1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CtrlAlarmaPaciente1.BackColor = System.Drawing.Color.Transparent
-        Me.CtrlAlarmaPaciente1.ID_Paciente = Nothing
-        Me.CtrlAlarmaPaciente1.Location = New System.Drawing.Point(598, 0)
-        Me.CtrlAlarmaPaciente1.Name = "CtrlAlarmaPaciente1"
-        Me.CtrlAlarmaPaciente1.Size = New System.Drawing.Size(216, 25)
-        Me.CtrlAlarmaPaciente1.TabIndex = 66
         '
         'tbpRealizado
         '
@@ -1174,6 +1130,44 @@ Partial Class frmOdontograma
         Me.Odontograma3.Tag = "3"
         Me.Odontograma3.temporal_dentition = False
         '
+        'Grid3
+        '
+        Me.Grid3.AllowColumnDrag = False
+        Me.Grid3.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.[False]
+        Me.Grid3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Grid3.AutomaticSort = False
+        Me.Grid3.CellToolTip = Janus.Windows.GridEX.CellToolTip.TruncatedText
+        Me.Grid3.ColumnAutoResize = True
+        Me.Grid3.ColumnAutoSizeMode = Janus.Windows.GridEX.ColumnAutoSizeMode.ColumnHeader
+        Me.Grid3.ContextMenuStrip = Me.cMenu
+        Me.Grid3.DataMember = "LineasPresupuesto"
+        Me.Grid3.DataSource = Me.OdontTratBindingSource
+        Grid3_DesignTimeLayout.LayoutString = resources.GetString("Grid3_DesignTimeLayout.LayoutString")
+        Me.Grid3.DesignTimeLayout = Grid3_DesignTimeLayout
+        Me.Grid3.FocusCellFormatStyle.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Grid3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Grid3.GridLines = Janus.Windows.GridEX.GridLines.None
+        Me.Grid3.GroupByBoxVisible = False
+        Me.Grid3.HideSelection = Janus.Windows.GridEX.HideSelection.HighlightInactive
+        Me.Grid3.ImageList = Me.imgList
+        Me.Grid3.Location = New System.Drawing.Point(117, 384)
+        Me.Grid3.Name = "Grid3"
+        Me.Grid3.SelectionMode = Janus.Windows.GridEX.SelectionMode.MultipleSelectionSameTable
+        Me.Grid3.Size = New System.Drawing.Size(385, 241)
+        Me.Grid3.TabIndex = 130
+        '
+        'OdontTratBindingSource
+        '
+        Me.OdontTratBindingSource.DataSource = Me.OdontTrat
+        Me.OdontTratBindingSource.Position = 0
+        '
+        'OdontTrat
+        '
+        Me.OdontTrat.DataSetName = "OdontTrat"
+        Me.OdontTrat.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'tbpPrimeraVisita
         '
         Me.tbpPrimeraVisita.Controls.Add(Me.lvw4)
@@ -1199,13 +1193,19 @@ Partial Class frmOdontograma
         Me.Odontograma4.Tag = "4"
         Me.Odontograma4.temporal_dentition = False
         '
-        'tbxTrat
+        'LineasPresupuestoTableAdapter
         '
-        Me.tbxTrat.AcceptsReturn = True
-        Me.tbxTrat.Location = New System.Drawing.Point(3, 7)
-        Me.tbxTrat.Name = "tbxTrat"
-        Me.tbxTrat.Size = New System.Drawing.Size(279, 20)
-        Me.tbxTrat.TabIndex = 19
+        Me.LineasPresupuestoTableAdapter.ClearBeforeFill = True
+        '
+        'CtrlAlarmaPaciente1
+        '
+        Me.CtrlAlarmaPaciente1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CtrlAlarmaPaciente1.BackColor = System.Drawing.Color.Transparent
+        Me.CtrlAlarmaPaciente1.ID_Paciente = Nothing
+        Me.CtrlAlarmaPaciente1.Location = New System.Drawing.Point(598, 0)
+        Me.CtrlAlarmaPaciente1.Name = "CtrlAlarmaPaciente1"
+        Me.CtrlAlarmaPaciente1.Size = New System.Drawing.Size(216, 25)
+        Me.CtrlAlarmaPaciente1.TabIndex = 66
         '
         'rtb3
         '
@@ -1310,14 +1310,14 @@ Partial Class frmOdontograma
         CType(Me.pbxFamilia, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tbc, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tbc.ResumeLayout(False)
-        CType(Me.Grid3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.OdontTratBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.OdontTrat, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tbpRealizado.ResumeLayout(False)
         Me.tbpPendiente.ResumeLayout(False)
         Me.tbpPendiente.PerformLayout()
         Me.tbpPresupuestos.ResumeLayout(False)
         Me.tbpPresupuestos.PerformLayout()
+        CType(Me.Grid3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OdontTratBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OdontTrat, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tbpPrimeraVisita.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
