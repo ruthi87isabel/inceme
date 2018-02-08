@@ -506,7 +506,7 @@ Public Class frmOdontograma
 
         If accion = "insertar" Then
             accion = "ver"
-            Grid3.Row = Grid3.RowCount - 1
+            If Grid3.RowCount > 0 Then Grid3.Row = Grid3.RowCount - 1
         End If
 
 
