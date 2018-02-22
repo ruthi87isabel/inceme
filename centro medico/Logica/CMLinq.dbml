@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="siesta1" Class="CMLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=siesta1;User ID=sa" SettingsObjectName="centro_medico.My.MySettings" SettingsPropertyName="CMConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="siesta" Class="CMLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=siesta;User ID=sa" SettingsObjectName="centro_medico.My.MySettings" SettingsPropertyName="CMConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.PACIENTES" Member="PACIENTEs">
     <Type Name="PACIENTE">
       <Column Name="NOMBRE" Type="System.String" DbType="VarChar(25)" CanBeNull="true" UpdateCheck="Never" />
@@ -196,27 +196,6 @@
       <Association Name="EntregasCuenta_FACTURA" Member="EntregasCuenta" ThisKey="IDEntregaCuenta" OtherKey="IDEntregaCuenta" Type="EntregasCuenta" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.USUARIOS" Member="USUARIOs">
-    <Type Name="USUARIO">
-      <Column Name="CODIGO" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="USUARIO" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="CONTRASENA" Type="System.String" DbType="VarChar(15)" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="NIVEL" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="ADMINISTRADOR" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="NOMBRECOMPLETO" Type="System.String" DbType="VarChar(90)" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="REFMEDICO" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="FECHACLAVE" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="CONFIGURACIONXML" Type="System.Xml.Linq.XElement" DbType="Xml" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="CERTIFICADOPATH" Type="System.String" DbType="NTEXT" CanBeNull="true" UpdateCheck="Never" />
-      <Association Name="USUARIO_PagosPaciente" Member="PagosPacientes" ThisKey="CODIGO" OtherKey="IDUsuario" Type="PagosPaciente" />
-      <Association Name="USUARIO_ROLESUSUARIO" Member="ROLESUSUARIOs" ThisKey="CODIGO" OtherKey="ID_USUARIO" Type="ROLESUSUARIO" />
-      <Association Name="USUARIO_Comunicacion" Member="Comunicacions" ThisKey="CODIGO" OtherKey="ID_UsuarioEmisor" Type="Comunicacion" />
-      <Association Name="USUARIO_CALENDARIO_USUARIO" Member="CALENDARIO_USUARIOs" ThisKey="CODIGO" OtherKey="ID_Usuario" Type="CALENDARIO_USUARIO" />
-      <Association Name="USUARIO_NOTA" Member="NOTAs" ThisKey="CODIGO" OtherKey="ID_Usuario" Type="NOTA" />
-      <Association Name="USUARIO_Auditoria" Member="Auditorias" ThisKey="CODIGO" OtherKey="idUsuario" Type="Auditoria" />
-      <Association Name="USUARIO_EntregasCuenta" Member="EntregasCuentas" ThisKey="CODIGO" OtherKey="IDUsuarioEfectua" Type="EntregasCuenta" />
-    </Type>
-  </Table>
   <Table Name="dbo.ContactosPacientes" Member="ContactosPacientes">
     <Type Name="ContactosPaciente">
       <Column Name="IdContacto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -334,8 +313,8 @@
       <Column Name="IDUsuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Automatico" Type="System.Boolean" CanBeNull="false" />
       <Association Name="PACIENTE_PagosPaciente" Member="PACIENTE" ThisKey="IDPaciente" OtherKey="CPACIENTE" Type="PACIENTE" IsForeignKey="true" />
-      <Association Name="USUARIO_PagosPaciente" Member="USUARIO" ThisKey="IDUsuario" OtherKey="CODIGO" Type="USUARIO" IsForeignKey="true" />
       <Association Name="FORMASPAGO_PagosPaciente" Member="FORMASPAGO" ThisKey="IDFormaPago" OtherKey="CODIGO" Type="FORMASPAGO" IsForeignKey="true" />
+      <Association Name="USUARIO_PagosPaciente" Member="USUARIO" ThisKey="IDUsuario" OtherKey="CODIGO" Type="USUARIO" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.ROLES" Member="ROLEs">
@@ -1380,7 +1359,6 @@
       <Column Name="eAccion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="eLocacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="loginUsuario" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Association Name="USUARIO_Auditoria" Member="USUARIO" ThisKey="idUsuario" OtherKey="CODIGO" Type="USUARIO" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.N_Almacen" Member="N_Almacens">
@@ -2015,6 +1993,26 @@
       <Association Name="CONCEPTOSFRA_d_PresupuestoLinea" Member="CONCEPTOSFRA" ThisKey="IDTratamiento" OtherKey="CODIGO" Type="CONCEPTOSFRA" IsForeignKey="true" />
       <Association Name="d_Accione_d_PresupuestoLinea" Member="d_Accione" ThisKey="IDAccionOrigen" OtherKey="IDAccion" Type="d_Accione" IsForeignKey="true" />
       <Association Name="d_Presupuesto_d_PresupuestoLinea" Member="d_Presupuesto" ThisKey="IDPresupuesto" OtherKey="IDPresupuesto" Type="d_Presupuesto" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.USUARIOS" Member="USUARIOs">
+    <Type Name="USUARIO">
+      <Column Name="CODIGO" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="USUARIO" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CONTRASENA" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="NIVEL" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="ADMINISTRADOR" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="NOMBRECOMPLETO" Type="System.String" DbType="VarChar(90)" CanBeNull="true" />
+      <Column Name="REFMEDICO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FECHACLAVE" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CONFIGURACIONXML" Type="System.Xml.Linq.XElement" DbType="Xml" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CERTIFICADOPATH" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="USUARIO_PagosPaciente" Member="PagosPacientes" ThisKey="CODIGO" OtherKey="IDUsuario" Type="PagosPaciente" />
+      <Association Name="USUARIO_ROLESUSUARIO" Member="ROLESUSUARIOs" ThisKey="CODIGO" OtherKey="ID_USUARIO" Type="ROLESUSUARIO" />
+      <Association Name="USUARIO_Comunicacion" Member="Comunicacions" ThisKey="CODIGO" OtherKey="ID_UsuarioEmisor" Type="Comunicacion" />
+      <Association Name="USUARIO_CALENDARIO_USUARIO" Member="CALENDARIO_USUARIOs" ThisKey="CODIGO" OtherKey="ID_Usuario" Type="CALENDARIO_USUARIO" />
+      <Association Name="USUARIO_NOTA" Member="NOTAs" ThisKey="CODIGO" OtherKey="ID_Usuario" Type="NOTA" />
+      <Association Name="USUARIO_EntregasCuenta" Member="EntregasCuentas" ThisKey="CODIGO" OtherKey="IDUsuarioEfectua" Type="EntregasCuenta" />
     </Type>
   </Table>
 </Database>

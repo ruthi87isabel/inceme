@@ -897,13 +897,7 @@
                   <Width>4.60453in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.43243in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>0.71015in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>0.66849in</Width>
+                  <Width>1.32474in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -919,82 +913,16 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIf(First(Fields!REFSERIE.Value, "dsFactura")=Code.serie,"Fecha - Apellidos y Nombre - Dni", "Concepto")</Value>
-                                  <Style />
+                                  <Value>Descripción</Value>
+                                  <Style>
+                                    <FontWeight>SemiBold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox7</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>LightGrey</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox9">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Cant.</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox9</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>LightGrey</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox11">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Importe</Value>
-                                  <Style>
-                                    <Format>C2</Format>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox11</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1018,8 +946,9 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Total</Value>
+                                  <Value>Importe</Value>
                                   <Style>
+                                    <FontWeight>SemiBold</FontWeight>
                                     <Format>C2</Format>
                                   </Style>
                                 </TextRun>
@@ -1081,72 +1010,6 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="CANTIDAD">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!CANTIDAD.Value</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>CANTIDAD</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="ImporteOriginal">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!ImporteOriginal.Value</Value>
-                                  <Style>
-                                    <Format>C2</Format>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>ImporteOriginal</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
                         <Textbox Name="IMPORTE">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -1154,14 +1017,12 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!IMPORTE.Value</Value>
-                                  <Style>
-                                    <Format>C2</Format>
-                                  </Style>
+                                  <Value>=Fields!IMPORTE.Value &amp; "€"</Value>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Right</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -1187,8 +1048,6 @@
               <TablixMembers>
                 <TablixMember />
                 <TablixMember />
-                <TablixMember />
-                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -1202,34 +1061,32 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>dsLineas</DataSetName>
-            <Top>1.96958in</Top>
-            <Left>0.5175in</Left>
+            <Top>3.42791in</Top>
+            <Left>0.54528in</Left>
             <Height>0.5in</Height>
-            <Width>6.4156in</Width>
+            <Width>5.92927in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
             </Style>
           </Tablix>
-          <Textbox Name="Textbox21">
+          <Textbox Name="FEMISION3">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>No. Factura</Value>
-                    <Style>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
+                    <Value>Fecha Factura</Value>
+                    <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <rd:DefaultName>Textbox21</rd:DefaultName>
-            <Top>0.13208in</Top>
+            <rd:DefaultName>FEMISION</rd:DefaultName>
+            <Top>0.23918in</Top>
             <Left>0.5175in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
@@ -1238,30 +1095,29 @@
               <Border>
                 <Style>None</Style>
               </Border>
-              <BackgroundColor>LightGrey</BackgroundColor>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="Textbox22">
+          <Textbox Name="FEMISION4">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!NUMERO.Value, "dsFactura")</Value>
+                    <Value>=Microsoft.VisualBasic.Strings.Format(First(Fields!FEMISION.Value, "dsFactura"), "dd/MM/yy")</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <rd:DefaultName>Textbox21</rd:DefaultName>
-            <Top>0.38903in</Top>
-            <Left>0.5175in</Left>
+            <rd:DefaultName>FEMISION</rd:DefaultName>
+            <Top>0.23918in</Top>
+            <Left>1.53139in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
             <ZIndex>2</ZIndex>
@@ -1275,24 +1131,37 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="Textbox23">
+          <Textbox Name="FEMISION5">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>F. Emisión</Value>
+                    <Value>N</Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value>º </Value>
                     <Style>
-                      <FontWeight>Bold</FontWeight>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontSize>11pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#000000</Color>
                     </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>Factura</Value>
+                    <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <rd:DefaultName>Textbox21</rd:DefaultName>
-            <Top>0.71528in</Top>
+            <rd:DefaultName>FEMISION</rd:DefaultName>
+            <Top>0.45in</Top>
             <Left>0.5175in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
@@ -1301,65 +1170,65 @@
               <Border>
                 <Style>None</Style>
               </Border>
-              <BackgroundColor>LightGrey</BackgroundColor>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="Textbox27">
+          <Textbox Name="Textbox24">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Datos de Empresa</Value>
+                    <Value>=First(Fields!NUMERO.Value, "dsFactura")</Value>
                     <Style>
-                      <FontWeight>Bold</FontWeight>
+                      <FontWeight>SemiBold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <rd:DefaultName>Textbox27</rd:DefaultName>
-            <Top>0.13208in</Top>
-            <Left>1.75708in</Left>
+            <rd:DefaultName>Textbox21</rd:DefaultName>
+            <Top>0.45in</Top>
+            <Left>1.53139in</Left>
             <Height>0.25in</Height>
-            <Width>5.17602in</Width>
+            <Width>1in</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <BackgroundColor>LightGrey</BackgroundColor>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="Textbox32">
+          <Textbox Name="PACIENTE2">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>="DNI / NIE /Pasaporte:" &amp; First(Fields!DNI.Value, "dsFactura") &amp; " " &amp; First(Fields!NIE.Value, "dsPacientes") &amp; " " &amp; First(Fields!PASAPORTE.Value, "dsPacientes")</Value>
-                    <Style />
+                    <Value>=First(Fields!PACIENTE.Value, "dsFactura")</Value>
+                    <Style>
+                      <FontWeight>SemiBold</FontWeight>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <rd:DefaultName>Textbox32</rd:DefaultName>
-            <Top>1.17167in</Top>
-            <Left>1.75708in</Left>
+            <rd:DefaultName>PACIENTE</rd:DefaultName>
+            <Top>0.23918in</Top>
+            <Left>4.12513in</Left>
             <Height>0.25in</Height>
-            <Width>5.17602in</Width>
+            <Width>2.86238in</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -1371,25 +1240,27 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="FEMISION">
+          <Textbox Name="DIRECCION2">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Format(First(Fields!FEMISION.Value, "dsFactura"),"dd/MM/yy")</Value>
-                    <Style />
+                    <Value>=First(Fields!DOMICILIO.Value, "dsPacientes")</Value>
+                    <Style>
+                      <FontWeight>SemiBold</FontWeight>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <rd:DefaultName>FEMISION</rd:DefaultName>
-            <Top>0.98833in</Top>
-            <Left>0.5175in</Left>
+            <rd:DefaultName>DIRECCION</rd:DefaultName>
+            <Top>0.45in</Top>
+            <Left>4.12513in</Left>
             <Height>0.25in</Height>
-            <Width>1in</Width>
+            <Width>2.86238in</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
@@ -1401,25 +1272,27 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="PACIENTE">
+          <Textbox Name="CP2">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!PACIENTE.Value, "dsFactura")</Value>
-                    <Style />
+                    <Value>=First(Fields!CP.Value, "dsPacientes") + " - " + First(Fields!LOCALIDAD.Value, "dsPacientes")</Value>
+                    <Style>
+                      <FontWeight>SemiBold</FontWeight>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <rd:DefaultName>PACIENTE</rd:DefaultName>
-            <Top>0.37722in</Top>
-            <Left>1.75708in</Left>
+            <rd:DefaultName>CP</rd:DefaultName>
+            <Top>0.66in</Top>
+            <Left>4.12513in</Left>
             <Height>0.25in</Height>
-            <Width>5.17602in</Width>
+            <Width>2.86238in</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
@@ -1431,25 +1304,27 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="DIRECCION">
+          <Textbox Name="CP3">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!DIRECCION.Value, "dsFactura")</Value>
-                    <Style />
+                    <Value>=First(Fields!PROVINCIA.Value, "dsPacientes")</Value>
+                    <Style>
+                      <FontWeight>SemiBold</FontWeight>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <rd:DefaultName>DIRECCION</rd:DefaultName>
-            <Top>0.64204in</Top>
-            <Left>1.75708in</Left>
+            <rd:DefaultName>CP</rd:DefaultName>
+            <Top>0.87in</Top>
+            <Left>4.12513in</Left>
             <Height>0.25in</Height>
-            <Width>5.17602in</Width>
+            <Width>2.86238in</Width>
             <ZIndex>8</ZIndex>
             <Style>
               <Border>
@@ -1461,25 +1336,27 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="CP">
+          <Textbox Name="CP4">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!CP.Value, "dsFactura")</Value>
-                    <Style />
+                    <Value>=IIf(Left(First(Fields!NUMERO.Value, "dsFactura"),2)="GC","NIF: " + First(Fields!EMPRESA_CIF.Value, "dsFactura"),"DNI:" &amp; First(Fields!DNI.Value, "dsPacientes"))</Value>
+                    <Style>
+                      <FontWeight>SemiBold</FontWeight>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>CP</rd:DefaultName>
-            <Top>0.90685in</Top>
-            <Left>1.75708in</Left>
+            <Top>1.071in</Top>
+            <Left>4.12513in</Left>
             <Height>0.25in</Height>
-            <Width>5.17602in</Width>
+            <Width>2.86238in</Width>
             <ZIndex>9</ZIndex>
             <Style>
               <Border>
@@ -1491,427 +1368,131 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Tablix Name="Tablix1">
-            <TablixBody>
-              <TablixColumns>
-                <TablixColumn>
-                  <Width>1in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>1in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>1in</Width>
-                </TablixColumn>
-              </TablixColumns>
-              <TablixRows>
-                <TablixRow>
-                  <Height>0.25in</Height>
-                  <TablixCells>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox1">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>TIPOIVA</Value>
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox1</rd:DefaultName>
-                          <Visibility>
-                            <Hidden>true</Hidden>
-                          </Visibility>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>LightGrey</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox3">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>BASE</Value>
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                    <Format>C2</Format>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox3</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>LightGrey</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox5">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>IMPORTE</Value>
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                    <Format>C2</Format>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox5</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>LightGrey</BackgroundColor>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                  </TablixCells>
-                </TablixRow>
-                <TablixRow>
-                  <Height>0.25in</Height>
-                  <TablixCells>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="TIPOIVA1">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=FormatPercent(Fields!TIPOIVA.Value / 100,0)</Value>
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>TIPOIVA1</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="BASE">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!BASE.Value</Value>
-                                  <Style>
-                                    <Format>C2</Format>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>BASE</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="IMPORTE1">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!IMPORTE.Value</Value>
-                                  <Style>
-                                    <Format>C2</Format>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>IMPORTE1</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                  </TablixCells>
-                </TablixRow>
-                <TablixRow>
-                  <Height>0.25in</Height>
-                  <TablixCells>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox8">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox8</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox10">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                    <Format>C2</Format>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox10</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="IMPORTE2">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!IMPORTE.Value)</Value>
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                    <Format>C2</Format>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>IMPORTE2</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                  </TablixCells>
-                </TablixRow>
-              </TablixRows>
-            </TablixBody>
-            <TablixColumnHierarchy>
-              <TablixMembers>
-                <TablixMember />
-                <TablixMember />
-                <TablixMember />
-              </TablixMembers>
-            </TablixColumnHierarchy>
-            <TablixRowHierarchy>
-              <TablixMembers>
-                <TablixMember>
-                  <KeepWithGroup>After</KeepWithGroup>
-                </TablixMember>
-                <TablixMember>
-                  <Group Name="Details1" />
-                </TablixMember>
-                <TablixMember>
-                  <KeepWithGroup>Before</KeepWithGroup>
-                </TablixMember>
-              </TablixMembers>
-            </TablixRowHierarchy>
-            <DataSetName>dsDesglose</DataSetName>
-            <Top>2.64503in</Top>
-            <Left>0.51913in</Left>
-            <Height>0.75in</Height>
-            <Width>3in</Width>
-            <ZIndex>10</ZIndex>
-            <Visibility>
-              <Hidden>true</Hidden>
-            </Visibility>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-            </Style>
-          </Tablix>
-          <Textbox Name="Textbox28">
+          <Textbox Name="FEMISION6">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>F. Pago</Value>
+                    <Value>CODIGO CUENTA BANCARIA IBAN ES17 2108 3273 0300 3657 2982 </Value>
                     <Style>
-                      <FontWeight>Bold</FontWeight>
+                      <FontWeight>SemiBold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <rd:DefaultName>Textbox21</rd:DefaultName>
-            <Top>1.28in</Top>
-            <Left>0.53208in</Left>
-            <Height>0.25in</Height>
-            <Width>1in</Width>
-            <ZIndex>11</ZIndex>
+            <rd:DefaultName>FEMISION</rd:DefaultName>
+            <Top>2.61418in</Top>
+            <Left>0.54528in</Left>
+            <Height>0.19792in</Height>
+            <Width>6.38782in</Width>
+            <ZIndex>10</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <BackgroundColor>LightGrey</BackgroundColor>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="FEMISION2">
+          <Textbox Name="FEMISION7">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!FORMASPAGO_DESCRIPCION.Value, "dsFactura")</Value>
+                    <Value>Órgano gestor E03133104 Zona de Comandancia de Murcia.</Value>
+                    <Style>
+                      <FontWeight>SemiBold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Unidad tramitadora E03133104 Zona de Comandancia de Murcia</Value>
+                    <Style>
+                      <FontWeight>SemiBold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Oficina de contabilidad E03078104</Value>
+                    <Style>
+                      <FontWeight>SemiBold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Delegación de economía y hacienda de Murcia</Value>
+                    <Style>
+                      <FontWeight>SemiBold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Intervención Regional </Value>
+                    <Style>
+                      <FontWeight>SemiBold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>FEMISION</rd:DefaultName>
+            <Top>1.57486in</Top>
+            <Left>0.54528in</Left>
+            <Height>0.875in</Height>
+            <Width>6.38782in</Width>
+            <ZIndex>11</ZIndex>
+            <Visibility>
+              <Hidden>=IIf(Left(First(Fields!NUMERO.Value, "dsFactura"),2)="GC",false, true)</Hidden>
+            </Visibility>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="FEMISION9">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>CONCEPTO:</Value>
+                    <Style>
+                      <FontWeight>SemiBold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value> Reconocimiento médico, para renovación de su permiso de conducción de la Guerdia Civil.</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -1919,11 +1500,14 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>FEMISION</rd:DefaultName>
-            <Top>1.55305in</Top>
-            <Left>0.53208in</Left>
-            <Height>0.25in</Height>
-            <Width>1in</Width>
+            <Top>2.81in</Top>
+            <Left>0.54528in</Left>
+            <Height>0.41667in</Height>
+            <Width>5.38782in</Width>
             <ZIndex>12</ZIndex>
+            <Visibility>
+              <Hidden>=IIf(Left(First(Fields!NUMERO.Value, "dsFactura"),2)="GC",false, true)</Hidden>
+            </Visibility>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1934,29 +1518,30 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="Textbox16">
+          <Textbox Name="FEMISION10">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=IIf(Left(First(Fields!REFSERIE.Value, "dsFactura"),1)=Code.serie,Code.textoEncabezado,"")</Value>
-                    <Style />
-                  </TextRun>
-                  <TextRun>
-                    <Value xml:space="preserve"> </Value>
-                    <Style />
+                    <Value>="Importe Total: " &amp; Sum(Fields!IMPORTE.Value, "dsLineas") &amp; "€"</Value>
+                    <Style>
+                      <FontSize>10.5pt</FontSize>
+                      <FontWeight>SemiBold</FontWeight>
+                    </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
-            <rd:DefaultName>Textbox16</rd:DefaultName>
-            <Top>3.97975cm</Top>
-            <Left>4.46298cm</Left>
-            <Height>0.6cm</Height>
-            <Width>13.14712cm</Width>
+            <rd:DefaultName>FEMISION</rd:DefaultName>
+            <Top>3.96835in</Top>
+            <Left>4.64981in</Left>
+            <Height>0.25in</Height>
+            <Width>1.82474in</Width>
             <ZIndex>13</ZIndex>
             <Style>
               <Border>
@@ -1969,7 +1554,7 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>8.62338cm</Height>
+        <Height>13.38588cm</Height>
         <Style />
       </Body>
       <Width>18.48592cm</Width>
@@ -2001,63 +1586,27 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>= UCase(First(Fields!NOMBRE.Value, "dsClinica")) + vbCrLF + vbCrLF+
+                      <Value>= UCase(First(Fields!NOMBRE.Value, "dsClinica")) + vbCrLF +
   First(Fields!DIRECCION.Value, "dsClinica")  + vbCrLF +
-  First(Fields!CIUDAD.Value, "dsClinica") + "  ("+ First(Fields!PROVINCIA.Value, "dsClinica") + ")  CP: " + First(Fields!CPClinica.Value, "dsClinica") + vbCrLF +
-  "Email: " + First(Fields!Email.Value, "dsClinica") + vbCrLf + 
-  "Telef: " + First(Fields!Telefono1.Value, "dsClinica") + "   "  + First(Fields!Telefono2.Value, "dsClinica") + vbCrLF +
-  "CIF: " + First(Fields!CIF.Value, "dsClinica")+
-  First(Fields!Web.Value, "dsClinica")</Value>
+  First(Fields!CPClinica.Value, "dsClinica") + " - " + First(Fields!CIUDAD.Value, "dsClinica") + "  ("+ First(Fields!PROVINCIA.Value, "dsClinica") + ")" + vbCrLF +
+  "Tlf: " + First(Fields!Telefono1.Value, "dsClinica") + "   "  + First(Fields!Telefono2.Value, "dsClinica") + vbCrLF +
+  "CIF: " + First(Fields!CIF.Value, "dsClinica")</Value>
                       <Style>
                         <FontSize>9pt</FontSize>
-                        <Color>DimGray</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
                   <Style>
-                    <TextAlign>Right</TextAlign>
+                    <TextAlign>Left</TextAlign>
                   </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>0.08892cm</Top>
-              <Left>7.2275cm</Left>
+              <Top>0.10583cm</Top>
+              <Left>1.31445cm</Left>
               <Height>2.88431cm</Height>
               <Width>7.40789cm</Width>
               <ZIndex>1</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox12">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>FACTURA</Value>
-                      <Style>
-                        <FontSize>16pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox12</rd:DefaultName>
-              <Top>0.97578cm</Top>
-              <Left>1.31445cm</Left>
-              <Height>0.78521cm</Height>
-              <Width>4.74642cm</Width>
-              <ZIndex>2</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -2110,422 +1659,51 @@
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Textbox Name="Textbox43">
+            <Textbox Name="FEMISION11">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>DTO Total</Value>
+                      <Value>Operación Exenta de I.V.A según artículo 20, apartado 1, 3</Value>
                       <Style>
-                        <FontWeight>Bold</FontWeight>
+                        <FontWeight>SemiBold</FontWeight>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value>º de la LEY 37/1992</Value>
+                      <Style>
+                        <FontStyle>Normal</FontStyle>
+                        <FontWeight>SemiBold</FontWeight>
+                        <TextDecoration>None</TextDecoration>
+                        <Color>#000000</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value> Email: centromedicovistalegre@gmail                                             Web: www.centromedicovistalegre.com</Value>
+                      <Style>
+                        <FontStyle>Normal</FontStyle>
+                        <FontSize>8pt</FontSize>
+                        <TextDecoration>None</TextDecoration>
+                        <Color>#000000</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox42</rd:DefaultName>
-              <Top>0.30556in</Top>
-              <Left>4.93153in</Left>
-              <Height>0.23622in</Height>
-              <Width>0.9847in</Width>
+              <rd:DefaultName>FEMISION</rd:DefaultName>
+              <Top>0.77123in</Top>
+              <Left>0.8513in</Left>
+              <Height>0.36459in</Height>
+              <Width>5.38782in</Width>
               <ZIndex>1</ZIndex>
-              <Visibility>
-                <Hidden>true</Hidden>
-              </Visibility>
-              <Style>
-                <Border>
-                  <Color>LightGrey</Color>
-                  <Style>Solid</Style>
-                </Border>
-                <BackgroundColor>LightGrey</BackgroundColor>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Descuento2">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=First(Fields!Descuento.Value, "dsFactura")</Value>
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontWeight>Normal</FontWeight>
-                        <Format>C2</Format>
-                        <TextDecoration>None</TextDecoration>
-                        <Color>#000000</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Descuento1</rd:DefaultName>
-              <Top>0.30556in</Top>
-              <Left>5.91623in</Left>
-              <Height>0.23622in</Height>
-              <Width>0.98909in</Width>
-              <ZIndex>2</ZIndex>
-              <Visibility>
-                <Hidden>true</Hidden>
-              </Visibility>
-              <Style>
-                <Border>
-                  <Color>LightGrey</Color>
-                  <Style>Solid</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox6">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>TOTAL</Value>
-                      <Style>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox4</rd:DefaultName>
-              <Top>0.54178in</Top>
-              <Left>4.93153in</Left>
-              <Height>0.23622in</Height>
-              <Width>0.9847in</Width>
-              <ZIndex>3</ZIndex>
-              <Style>
-                <Border>
-                  <Color>LightGrey</Color>
-                  <Style>Solid</Style>
-                </Border>
-                <BackgroundColor>LightGrey</BackgroundColor>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="TOTAL2">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=SUM(Fields!IMPORTE.Value, "dsLineas")</Value>
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontWeight>Normal</FontWeight>
-                        <Format>C2</Format>
-                        <TextDecoration>None</TextDecoration>
-                        <Color>#000000</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>TOTAL1</rd:DefaultName>
-              <Top>0.54178in</Top>
-              <Left>5.91623in</Left>
-              <Height>0.23622in</Height>
-              <Width>0.98909in</Width>
-              <ZIndex>4</ZIndex>
-              <Style>
-                <Border>
-                  <Color>LightGrey</Color>
-                  <Style>Solid</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox47">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>IRPF %</Value>
-                      <Style>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox46</rd:DefaultName>
-              <Top>0.778in</Top>
-              <Left>4.93153in</Left>
-              <Height>0.23622in</Height>
-              <Width>0.9847in</Width>
-              <ZIndex>5</ZIndex>
-              <Visibility>
-                <Hidden>true</Hidden>
-              </Visibility>
-              <Style>
-                <Border>
-                  <Color>LightGrey</Color>
-                  <Style>Solid</Style>
-                </Border>
-                <BackgroundColor>LightGrey</BackgroundColor>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="IRPF2">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=FormatPercent(First(Fields!PORCENTAJEIRPF.Value, "dsFactura"))</Value>
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontWeight>Normal</FontWeight>
-                        <TextDecoration>None</TextDecoration>
-                        <Color>#000000</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>IRPF1</rd:DefaultName>
-              <Top>0.778in</Top>
-              <Left>5.91623in</Left>
-              <Height>0.23622in</Height>
-              <Width>0.98909in</Width>
-              <ZIndex>6</ZIndex>
-              <Visibility>
-                <Hidden>true</Hidden>
-              </Visibility>
-              <Style>
-                <Border>
-                  <Color>LightGrey</Color>
-                  <Style>Solid</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox45">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>IRPF IMP</Value>
-                      <Style>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox44</rd:DefaultName>
-              <Top>1.01422in</Top>
-              <Left>4.93153in</Left>
-              <Height>0.23622in</Height>
-              <Width>0.9847in</Width>
-              <ZIndex>7</ZIndex>
-              <Visibility>
-                <Hidden>true</Hidden>
-              </Visibility>
-              <Style>
-                <Border>
-                  <Color>LightGrey</Color>
-                  <Style>Solid</Style>
-                </Border>
-                <BackgroundColor>LightGrey</BackgroundColor>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="IRPF3">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=First(Fields!IRPF.Value, "dsFactura")</Value>
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontWeight>Normal</FontWeight>
-                        <Format>C2</Format>
-                        <TextDecoration>None</TextDecoration>
-                        <Color>#000000</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>IRPF</rd:DefaultName>
-              <Top>1.01422in</Top>
-              <Left>5.91623in</Left>
-              <Height>0.23622in</Height>
-              <Width>0.98909in</Width>
-              <ZIndex>8</ZIndex>
-              <Visibility>
-                <Hidden>true</Hidden>
-              </Visibility>
-              <Style>
-                <Border>
-                  <Color>LightGrey</Color>
-                  <Style>Solid</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox14">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>A PERCIBIR</Value>
-                      <Style>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>1.25044in</Top>
-              <Left>4.93153in</Left>
-              <Height>0.23622in</Height>
-              <Width>0.9847in</Width>
-              <ZIndex>9</ZIndex>
-              <Visibility>
-                <Hidden>true</Hidden>
-              </Visibility>
-              <Style>
-                <Border>
-                  <Color>LightGrey</Color>
-                  <Style>Solid</Style>
-                </Border>
-                <TopBorder>
-                  <Style>Solid</Style>
-                </TopBorder>
-                <BackgroundColor>LightGrey</BackgroundColor>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="TOTAL3">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=First(Fields!TOTAL.Value, "dsFactura")</Value>
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontWeight>Bold</FontWeight>
-                        <Format>C2</Format>
-                        <TextDecoration>None</TextDecoration>
-                        <Color>#000000</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>TOTAL</rd:DefaultName>
-              <Top>1.25044in</Top>
-              <Left>5.91623in</Left>
-              <Height>0.23622in</Height>
-              <Width>0.98909in</Width>
-              <ZIndex>10</ZIndex>
-              <Visibility>
-                <Hidden>true</Hidden>
-              </Visibility>
-              <Style>
-                <Border>
-                  <Color>LightGrey</Color>
-                  <Style>Solid</Style>
-                </Border>
-                <TopBorder>
-                  <Style>Solid</Style>
-                </TopBorder>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox4">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Operación exenta de I.V.A. según artículo 20 apartado 1, 3º de la ley 37/1992</Value>
-                      <Style />
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox4</rd:DefaultName>
-              <Top>0.17639cm</Top>
-              <Left>1.31445cm</Left>
-              <Height>0.6cm</Height>
-              <Width>16.29565cm</Width>
-              <ZIndex>11</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>

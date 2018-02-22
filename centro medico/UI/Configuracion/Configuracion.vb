@@ -188,6 +188,7 @@ Public Class Configuracion
     Public logotipo As String
     Public carpetacompartidaficheros As String
 
+    Public VincularCitaMutua As Boolean = True
 
     Public AutoSugerirHoraCita As Boolean = True
 
@@ -556,6 +557,12 @@ Public Class Configuracion
             Cita_IncluirPrecioDelMedicoEnLasLineas = Boolean.Parse(Me.LeeConfiguracionDesdeBd("Cita_IncluirPrecioDelMedicoEnLasLineas").ToString())
         End If
 
+        If Me.LeeConfiguracionDesdeBd("VincularCitaMutua") = "" Then
+            VincularCitaMutua = True
+        Else
+            VincularCitaMutua = Boolean.Parse(Me.LeeConfiguracionDesdeBd("VincularCitaMutua").ToString())
+        End If
+
         'If Me.LeeConfiguracionDesdeBd("Citas_Medico_OcultarColumna") = "" Then
         '    Citas_Medico_OcultarColumna = False
         'Else
@@ -647,6 +654,7 @@ Public Class Configuracion
 
         LeeConfiguracionDesdeBd("AutoSugerirHoraCita", AutoSugerirHoraCita, False)
         LeeConfiguracionDesdeBd("SincCalendCitaFtp", SincCalendCitaFtp, False)
+        LeeConfiguracionDesdeBd("VincularCitaMutua", VincularCitaMutua, False)
         LeeConfiguracionDesdeBd("IdentificadorClinica", IdentificadorClinica, False)
 
 

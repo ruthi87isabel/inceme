@@ -36,7 +36,6 @@ Public Class form_new_centro_medico
     Private Sub form_new_centro_medico_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Me.panel_area_foto.Visible = False
 
-
         'Verificar si esta en modo demo
         If My.Settings.Demo = True Then
             'Si es asi, mostrar un cartel de advertencia

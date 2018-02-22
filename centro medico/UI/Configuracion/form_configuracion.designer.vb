@@ -324,6 +324,8 @@ Partial Class form_configuracion
         Me.ofd_CarpetaReportes = New System.Windows.Forms.OpenFileDialog()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.GbMutuas = New System.Windows.Forms.GroupBox()
+        Me.ChkVincularCitaMutua = New System.Windows.Forms.CheckBox()
         Me.TabControl1.SuspendLayout()
         Me.tab_datosCentro.SuspendLayout()
         CType(Me.pb_logotipo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -387,6 +389,7 @@ Partial Class form_configuracion
         Me.GroupBox6.SuspendLayout()
         CType(Me.CMDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SERIESBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GbMutuas.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -394,12 +397,12 @@ Partial Class form_configuracion
         Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TabControl1.Controls.Add(Me.tab_citas)
         Me.TabControl1.Controls.Add(Me.tab_datosCentro)
         Me.TabControl1.Controls.Add(Me.tab_impresion)
         Me.TabControl1.Controls.Add(Me.tab_baseDatos)
         Me.TabControl1.Controls.Add(Me.tab_historiales)
         Me.TabControl1.Controls.Add(Me.tab_recibosYfacturas)
-        Me.TabControl1.Controls.Add(Me.tab_citas)
         Me.TabControl1.Controls.Add(Me.tab_otrosDatos)
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabDental)
@@ -2040,6 +2043,7 @@ Partial Class form_configuracion
         'tab_citas
         '
         Me.tab_citas.BackColor = System.Drawing.Color.GhostWhite
+        Me.tab_citas.Controls.Add(Me.GbMutuas)
         Me.tab_citas.Controls.Add(Me.GroupBox8)
         Me.tab_citas.Controls.Add(Me.groupMedicos)
         Me.tab_citas.Controls.Add(Me.grpSalas)
@@ -2281,7 +2285,7 @@ Partial Class form_configuracion
         Me.GroupBox7.Controls.Add(Me.gb_jornadalaboral)
         Me.GroupBox7.Location = New System.Drawing.Point(604, 31)
         Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Size = New System.Drawing.Size(237, 432)
+        Me.GroupBox7.Size = New System.Drawing.Size(237, 378)
         Me.GroupBox7.TabIndex = 1
         Me.GroupBox7.TabStop = False
         Me.GroupBox7.Text = "Jornada Laboral General"
@@ -2312,9 +2316,9 @@ Partial Class form_configuracion
         Me.grpJornadaPersonalizada.Controls.Add(Me.dtpLunesIni)
         Me.grpJornadaPersonalizada.Controls.Add(Me.Label18)
         Me.grpJornadaPersonalizada.Enabled = False
-        Me.grpJornadaPersonalizada.Location = New System.Drawing.Point(8, 113)
+        Me.grpJornadaPersonalizada.Location = New System.Drawing.Point(8, 105)
         Me.grpJornadaPersonalizada.Name = "grpJornadaPersonalizada"
-        Me.grpJornadaPersonalizada.Size = New System.Drawing.Size(223, 302)
+        Me.grpJornadaPersonalizada.Size = New System.Drawing.Size(223, 259)
         Me.grpJornadaPersonalizada.TabIndex = 22
         Me.grpJornadaPersonalizada.TabStop = False
         Me.grpJornadaPersonalizada.Text = "Personalizado"
@@ -3379,6 +3383,26 @@ Partial Class form_configuracion
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'GbMutuas
+        '
+        Me.GbMutuas.Controls.Add(Me.ChkVincularCitaMutua)
+        Me.GbMutuas.Location = New System.Drawing.Point(604, 415)
+        Me.GbMutuas.Name = "GbMutuas"
+        Me.GbMutuas.Size = New System.Drawing.Size(237, 48)
+        Me.GbMutuas.TabIndex = 44
+        Me.GbMutuas.TabStop = False
+        Me.GbMutuas.Text = "Mutuas"
+        '
+        'ChkVincularCitaMutua
+        '
+        Me.ChkVincularCitaMutua.AutoSize = True
+        Me.ChkVincularCitaMutua.Location = New System.Drawing.Point(58, 18)
+        Me.ChkVincularCitaMutua.Name = "ChkVincularCitaMutua"
+        Me.ChkVincularCitaMutua.Size = New System.Drawing.Size(137, 17)
+        Me.ChkVincularCitaMutua.TabIndex = 0
+        Me.ChkVincularCitaMutua.Text = "Activar mutua asociada"
+        Me.ChkVincularCitaMutua.UseVisualStyleBackColor = True
+        '
         'form_configuracion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3489,6 +3513,8 @@ Partial Class form_configuracion
         Me.GroupBox6.PerformLayout()
         CType(Me.CMDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SERIESBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GbMutuas.ResumeLayout(False)
+        Me.GbMutuas.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -3787,4 +3813,6 @@ Partial Class form_configuracion
     Friend WithEvents TbIdClinica As System.Windows.Forms.TextBox
     Friend WithEvents LbIdClinica As System.Windows.Forms.Label
     Friend WithEvents GroupBox8 As System.Windows.Forms.GroupBox
+    Friend WithEvents GbMutuas As System.Windows.Forms.GroupBox
+    Friend WithEvents ChkVincularCitaMutua As System.Windows.Forms.CheckBox
 End Class

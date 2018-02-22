@@ -59,6 +59,7 @@ Public Class form_citas
     Dim CitasModificadas As List(Of CitaKey)
     Dim Sincfecha As Date
     Dim Sincmedico As Integer
+    Dim CheckMutua As Boolean = Globales.Configuracion.VincularCitaMutua
 
 
     Sub New(ByVal aName As String, ByVal aCurrentAccion As Enums.Accion, ByVal afecha As Date, ID_SalaP As Nullable(Of Integer))
@@ -267,9 +268,8 @@ Public Class form_citas
             fhorafino = DateTime.Now
         End If
 
-        If faseguradorao > -1 Then
+        If CheckMutua And faseguradorao > -1 Then
             chb_aseguradora.Checked = True
-            cb_aseguradora.SelectedIndex = BuscaMutua(faseguradorao)
         Else
             chb_aseguradora.Checked = False
         End If
@@ -3231,7 +3231,7 @@ Public Class form_citas
         LLenaCombo(IdPaciente)
         Me.CargaFormadePagoPredeterminada(IdPaciente)
         tsb_DebitoPaciente.Enabled = True
-        chb_aseguradora.Enabled = True
+        If CheckMutua Then chb_aseguradora.Enabled = True
         If cb_aseguradora.SelectedIndex > -1 And chb_aseguradora.Checked = True Then
             recalcularConceptos = True
         End If

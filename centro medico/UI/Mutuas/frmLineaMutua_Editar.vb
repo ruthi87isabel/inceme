@@ -44,9 +44,9 @@
         CtrlMutua1.IDPACIENTE = Me.IDPACIENTE
 
         Dim _lmutua As LMUTUA = LMUTUASBindingSource.DataSource
-        If _lmutua.FECHABAJA Is Nothing Then
-            FECHABAJADateTimePicker.Enabled = False
-        Else
+        If Not _lmutua.FECHABAJA Is Nothing Then
+            '    FECHABAJADateTimePicker.Enabled = False
+            'Else
             FECHABAJADateTimePicker.Enabled = True
             FECHABAJADateTimePicker.Value = _lmutua.FECHABAJA
             FECHABAJADateTimePicker.Checked = True

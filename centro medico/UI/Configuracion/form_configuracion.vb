@@ -230,6 +230,8 @@ Public Class form_configuracion
         LbIdClinica.Enabled = ChkCincronCalendario.Checked
         TbIdClinica.Text = Globales.Configuracion.IdentificadorClinica
 
+        ChkVincularCitaMutua.Checked = Globales.Configuracion.VincularCitaMutua
+
         LlenaSerie()
 
         Cita_AutoRefreshInterval.Minimum = 0
@@ -368,6 +370,8 @@ Public Class form_configuracion
         Globales.Configuracion.calendar = chb_mostrarcalendariopantallaprinciapal.Checked
 
         Globales.Configuracion.AutoSugerirHoraCita = chk_AutoSugerirHoraCita.Checked
+
+        Globales.Configuracion.VincularCitaMutua = ChkVincularCitaMutua.Checked
 
         Globales.Configuracion.SincCalendCitaFtp = ChkCincronCalendario.Checked
         If ChkCincronCalendario.Checked Then

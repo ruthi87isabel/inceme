@@ -22,7 +22,7 @@ Imports System.Linq.Expressions
 Imports System.Reflection
 
 
-<Global.System.Data.Linq.Mapping.DatabaseAttribute(Name:="siesta1")>  _
+<Global.System.Data.Linq.Mapping.DatabaseAttribute(Name:="siesta")>  _
 Partial Public Class CMLinqDataContext
 	Inherits System.Data.Linq.DataContext
 	
@@ -54,12 +54,6 @@ Partial Public Class CMLinqDataContext
   Partial Private Sub UpdateFACTURA(instance As FACTURA)
     End Sub
   Partial Private Sub DeleteFACTURA(instance As FACTURA)
-    End Sub
-  Partial Private Sub InsertUSUARIO(instance As USUARIO)
-    End Sub
-  Partial Private Sub UpdateUSUARIO(instance As USUARIO)
-    End Sub
-  Partial Private Sub DeleteUSUARIO(instance As USUARIO)
     End Sub
   Partial Private Sub InsertContactosPaciente(instance As ContactosPaciente)
     End Sub
@@ -709,6 +703,12 @@ Partial Public Class CMLinqDataContext
     End Sub
   Partial Private Sub Deleted_PresupuestoLinea(instance As d_PresupuestoLinea)
     End Sub
+  Partial Private Sub InsertUSUARIO(instance As USUARIO)
+    End Sub
+  Partial Private Sub UpdateUSUARIO(instance As USUARIO)
+    End Sub
+  Partial Private Sub DeleteUSUARIO(instance As USUARIO)
+    End Sub
   #End Region
 	
 	Public Sub New()
@@ -757,12 +757,6 @@ Partial Public Class CMLinqDataContext
 	Public ReadOnly Property FACTURAs() As System.Data.Linq.Table(Of FACTURA)
 		Get
 			Return Me.GetTable(Of FACTURA)
-		End Get
-	End Property
-	
-	Public ReadOnly Property USUARIOs() As System.Data.Linq.Table(Of USUARIO)
-		Get
-			Return Me.GetTable(Of USUARIO)
 		End Get
 	End Property
 	
@@ -1423,6 +1417,12 @@ Partial Public Class CMLinqDataContext
 	Public ReadOnly Property d_PresupuestoLineas() As System.Data.Linq.Table(Of d_PresupuestoLinea)
 		Get
 			Return Me.GetTable(Of d_PresupuestoLinea)
+		End Get
+	End Property
+	
+	Public ReadOnly Property USUARIOs() As System.Data.Linq.Table(Of USUARIO)
+		Get
+			Return Me.GetTable(Of USUARIO)
 		End Get
 	End Property
 End Class
@@ -5725,428 +5725,6 @@ Partial Public Class FACTURA
 	End Sub
 End Class
 
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.USUARIOS")>  _
-Partial Public Class USUARIO
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _CODIGO As Integer
-	
-	Private _USUARIO As String
-	
-	Private _CONTRASENA As String
-	
-	Private _NIVEL As String
-	
-	Private _ADMINISTRADOR As String
-	
-	Private _NOMBRECOMPLETO As String
-	
-	Private _REFMEDICO As System.Nullable(Of Integer)
-	
-	Private _FECHACLAVE As Date
-	
-	Private _CONFIGURACIONXML As System.Xml.Linq.XElement
-	
-	Private _CERTIFICADOPATH As String
-	
-	Private _PagosPacientes As EntitySet(Of PagosPaciente)
-	
-	Private _ROLESUSUARIOs As EntitySet(Of ROLESUSUARIO)
-	
-	Private _Comunicacions As EntitySet(Of Comunicacion)
-	
-	Private _CALENDARIO_USUARIOs As EntitySet(Of CALENDARIO_USUARIO)
-	
-	Private _NOTAs As EntitySet(Of NOTA)
-	
-	Private _Auditorias As EntitySet(Of Auditoria)
-	
-	Private _EntregasCuentas As EntitySet(Of EntregasCuenta)
-	
-    #Region "Extensibility Method Definitions"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub OnCODIGOChanging(value As Integer)
-    End Sub
-    Partial Private Sub OnCODIGOChanged()
-    End Sub
-    Partial Private Sub OnUSUARIOChanging(value As String)
-    End Sub
-    Partial Private Sub OnUSUARIOChanged()
-    End Sub
-    Partial Private Sub OnCONTRASENAChanging(value As String)
-    End Sub
-    Partial Private Sub OnCONTRASENAChanged()
-    End Sub
-    Partial Private Sub OnNIVELChanging(value As String)
-    End Sub
-    Partial Private Sub OnNIVELChanged()
-    End Sub
-    Partial Private Sub OnADMINISTRADORChanging(value As String)
-    End Sub
-    Partial Private Sub OnADMINISTRADORChanged()
-    End Sub
-    Partial Private Sub OnNOMBRECOMPLETOChanging(value As String)
-    End Sub
-    Partial Private Sub OnNOMBRECOMPLETOChanged()
-    End Sub
-    Partial Private Sub OnREFMEDICOChanging(value As System.Nullable(Of Integer))
-    End Sub
-    Partial Private Sub OnREFMEDICOChanged()
-    End Sub
-    Partial Private Sub OnFECHACLAVEChanging(value As Date)
-    End Sub
-    Partial Private Sub OnFECHACLAVEChanged()
-    End Sub
-    Partial Private Sub OnCONFIGURACIONXMLChanging(value As System.Xml.Linq.XElement)
-    End Sub
-    Partial Private Sub OnCONFIGURACIONXMLChanged()
-    End Sub
-    Partial Private Sub OnCERTIFICADOPATHChanging(value As String)
-    End Sub
-    Partial Private Sub OnCERTIFICADOPATHChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		Me._PagosPacientes = New EntitySet(Of PagosPaciente)(AddressOf Me.attach_PagosPacientes, AddressOf Me.detach_PagosPacientes)
-		Me._ROLESUSUARIOs = New EntitySet(Of ROLESUSUARIO)(AddressOf Me.attach_ROLESUSUARIOs, AddressOf Me.detach_ROLESUSUARIOs)
-		Me._Comunicacions = New EntitySet(Of Comunicacion)(AddressOf Me.attach_Comunicacions, AddressOf Me.detach_Comunicacions)
-		Me._CALENDARIO_USUARIOs = New EntitySet(Of CALENDARIO_USUARIO)(AddressOf Me.attach_CALENDARIO_USUARIOs, AddressOf Me.detach_CALENDARIO_USUARIOs)
-		Me._NOTAs = New EntitySet(Of NOTA)(AddressOf Me.attach_NOTAs, AddressOf Me.detach_NOTAs)
-		Me._Auditorias = New EntitySet(Of Auditoria)(AddressOf Me.attach_Auditorias, AddressOf Me.detach_Auditorias)
-		Me._EntregasCuentas = New EntitySet(Of EntregasCuenta)(AddressOf Me.attach_EntregasCuentas, AddressOf Me.detach_EntregasCuentas)
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CODIGO", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
-	Public Property CODIGO() As Integer
-		Get
-			Return Me._CODIGO
-		End Get
-		Set
-			If ((Me._CODIGO = value)  _
-						= false) Then
-				Me.OnCODIGOChanging(value)
-				Me.SendPropertyChanging
-				Me._CODIGO = value
-				Me.SendPropertyChanged("CODIGO")
-				Me.OnCODIGOChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_USUARIO", DbType:="VarChar(15) NOT NULL", CanBeNull:=false, UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property USUARIO() As String
-		Get
-			Return Me._USUARIO
-		End Get
-		Set
-			If (String.Equals(Me._USUARIO, value) = false) Then
-				Me.OnUSUARIOChanging(value)
-				Me.SendPropertyChanging
-				Me._USUARIO = value
-				Me.SendPropertyChanged("USUARIO")
-				Me.OnUSUARIOChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CONTRASENA", DbType:="VarChar(15)", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property CONTRASENA() As String
-		Get
-			Return Me._CONTRASENA
-		End Get
-		Set
-			If (String.Equals(Me._CONTRASENA, value) = false) Then
-				Me.OnCONTRASENAChanging(value)
-				Me.SendPropertyChanging
-				Me._CONTRASENA = value
-				Me.SendPropertyChanged("CONTRASENA")
-				Me.OnCONTRASENAChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_NIVEL", DbType:="VarChar(60) NOT NULL", CanBeNull:=false, UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property NIVEL() As String
-		Get
-			Return Me._NIVEL
-		End Get
-		Set
-			If (String.Equals(Me._NIVEL, value) = false) Then
-				Me.OnNIVELChanging(value)
-				Me.SendPropertyChanging
-				Me._NIVEL = value
-				Me.SendPropertyChanged("NIVEL")
-				Me.OnNIVELChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ADMINISTRADOR", DbType:="VarChar(1) NOT NULL", CanBeNull:=false, UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property ADMINISTRADOR() As String
-		Get
-			Return Me._ADMINISTRADOR
-		End Get
-		Set
-			If (String.Equals(Me._ADMINISTRADOR, value) = false) Then
-				Me.OnADMINISTRADORChanging(value)
-				Me.SendPropertyChanging
-				Me._ADMINISTRADOR = value
-				Me.SendPropertyChanged("ADMINISTRADOR")
-				Me.OnADMINISTRADORChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_NOMBRECOMPLETO", DbType:="VarChar(90)", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property NOMBRECOMPLETO() As String
-		Get
-			Return Me._NOMBRECOMPLETO
-		End Get
-		Set
-			If (String.Equals(Me._NOMBRECOMPLETO, value) = false) Then
-				Me.OnNOMBRECOMPLETOChanging(value)
-				Me.SendPropertyChanging
-				Me._NOMBRECOMPLETO = value
-				Me.SendPropertyChanged("NOMBRECOMPLETO")
-				Me.OnNOMBRECOMPLETOChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_REFMEDICO", DbType:="Int", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property REFMEDICO() As System.Nullable(Of Integer)
-		Get
-			Return Me._REFMEDICO
-		End Get
-		Set
-			If (Me._REFMEDICO.Equals(value) = false) Then
-				Me.OnREFMEDICOChanging(value)
-				Me.SendPropertyChanging
-				Me._REFMEDICO = value
-				Me.SendPropertyChanged("REFMEDICO")
-				Me.OnREFMEDICOChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_FECHACLAVE", DbType:="DateTime NOT NULL", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property FECHACLAVE() As Date
-		Get
-			Return Me._FECHACLAVE
-		End Get
-		Set
-			If ((Me._FECHACLAVE = value)  _
-						= false) Then
-				Me.OnFECHACLAVEChanging(value)
-				Me.SendPropertyChanging
-				Me._FECHACLAVE = value
-				Me.SendPropertyChanged("FECHACLAVE")
-				Me.OnFECHACLAVEChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CONFIGURACIONXML", DbType:="Xml", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property CONFIGURACIONXML() As System.Xml.Linq.XElement
-		Get
-			Return Me._CONFIGURACIONXML
-		End Get
-		Set
-			If (Object.Equals(Me._CONFIGURACIONXML, value) = false) Then
-				Me.OnCONFIGURACIONXMLChanging(value)
-				Me.SendPropertyChanging
-				Me._CONFIGURACIONXML = value
-				Me.SendPropertyChanged("CONFIGURACIONXML")
-				Me.OnCONFIGURACIONXMLChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CERTIFICADOPATH", DbType:="NTEXT", UpdateCheck:=UpdateCheck.Never)>  _
-	Public Property CERTIFICADOPATH() As String
-		Get
-			Return Me._CERTIFICADOPATH
-		End Get
-		Set
-			If (String.Equals(Me._CERTIFICADOPATH, value) = false) Then
-				Me.OnCERTIFICADOPATHChanging(value)
-				Me.SendPropertyChanging
-				Me._CERTIFICADOPATH = value
-				Me.SendPropertyChanged("CERTIFICADOPATH")
-				Me.OnCERTIFICADOPATHChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="USUARIO_PagosPaciente", Storage:="_PagosPacientes", ThisKey:="CODIGO", OtherKey:="IDUsuario")>  _
-	Public Property PagosPacientes() As EntitySet(Of PagosPaciente)
-		Get
-			Return Me._PagosPacientes
-		End Get
-		Set
-			Me._PagosPacientes.Assign(value)
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="USUARIO_ROLESUSUARIO", Storage:="_ROLESUSUARIOs", ThisKey:="CODIGO", OtherKey:="ID_USUARIO")>  _
-	Public Property ROLESUSUARIOs() As EntitySet(Of ROLESUSUARIO)
-		Get
-			Return Me._ROLESUSUARIOs
-		End Get
-		Set
-			Me._ROLESUSUARIOs.Assign(value)
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="USUARIO_Comunicacion", Storage:="_Comunicacions", ThisKey:="CODIGO", OtherKey:="ID_UsuarioEmisor")>  _
-	Public Property Comunicacions() As EntitySet(Of Comunicacion)
-		Get
-			Return Me._Comunicacions
-		End Get
-		Set
-			Me._Comunicacions.Assign(value)
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="USUARIO_CALENDARIO_USUARIO", Storage:="_CALENDARIO_USUARIOs", ThisKey:="CODIGO", OtherKey:="ID_Usuario")>  _
-	Public Property CALENDARIO_USUARIOs() As EntitySet(Of CALENDARIO_USUARIO)
-		Get
-			Return Me._CALENDARIO_USUARIOs
-		End Get
-		Set
-			Me._CALENDARIO_USUARIOs.Assign(value)
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="USUARIO_NOTA", Storage:="_NOTAs", ThisKey:="CODIGO", OtherKey:="ID_Usuario")>  _
-	Public Property NOTAs() As EntitySet(Of NOTA)
-		Get
-			Return Me._NOTAs
-		End Get
-		Set
-			Me._NOTAs.Assign(value)
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="USUARIO_Auditoria", Storage:="_Auditorias", ThisKey:="CODIGO", OtherKey:="idUsuario")>  _
-	Public Property Auditorias() As EntitySet(Of Auditoria)
-		Get
-			Return Me._Auditorias
-		End Get
-		Set
-			Me._Auditorias.Assign(value)
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="USUARIO_EntregasCuenta", Storage:="_EntregasCuentas", ThisKey:="CODIGO", OtherKey:="IDUsuarioEfectua")>  _
-	Public Property EntregasCuentas() As EntitySet(Of EntregasCuenta)
-		Get
-			Return Me._EntregasCuentas
-		End Get
-		Set
-			Me._EntregasCuentas.Assign(value)
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
-	
-	Private Sub attach_PagosPacientes(ByVal entity As PagosPaciente)
-		Me.SendPropertyChanging
-		entity.USUARIO = Me
-	End Sub
-	
-	Private Sub detach_PagosPacientes(ByVal entity As PagosPaciente)
-		Me.SendPropertyChanging
-		entity.USUARIO = Nothing
-	End Sub
-	
-	Private Sub attach_ROLESUSUARIOs(ByVal entity As ROLESUSUARIO)
-		Me.SendPropertyChanging
-		entity.USUARIO = Me
-	End Sub
-	
-	Private Sub detach_ROLESUSUARIOs(ByVal entity As ROLESUSUARIO)
-		Me.SendPropertyChanging
-		entity.USUARIO = Nothing
-	End Sub
-	
-	Private Sub attach_Comunicacions(ByVal entity As Comunicacion)
-		Me.SendPropertyChanging
-		entity.USUARIO = Me
-	End Sub
-	
-	Private Sub detach_Comunicacions(ByVal entity As Comunicacion)
-		Me.SendPropertyChanging
-		entity.USUARIO = Nothing
-	End Sub
-	
-	Private Sub attach_CALENDARIO_USUARIOs(ByVal entity As CALENDARIO_USUARIO)
-		Me.SendPropertyChanging
-		entity.USUARIO = Me
-	End Sub
-	
-	Private Sub detach_CALENDARIO_USUARIOs(ByVal entity As CALENDARIO_USUARIO)
-		Me.SendPropertyChanging
-		entity.USUARIO = Nothing
-	End Sub
-	
-	Private Sub attach_NOTAs(ByVal entity As NOTA)
-		Me.SendPropertyChanging
-		entity.USUARIO = Me
-	End Sub
-	
-	Private Sub detach_NOTAs(ByVal entity As NOTA)
-		Me.SendPropertyChanging
-		entity.USUARIO = Nothing
-	End Sub
-	
-	Private Sub attach_Auditorias(ByVal entity As Auditoria)
-		Me.SendPropertyChanging
-		entity.USUARIO = Me
-	End Sub
-	
-	Private Sub detach_Auditorias(ByVal entity As Auditoria)
-		Me.SendPropertyChanging
-		entity.USUARIO = Nothing
-	End Sub
-	
-	Private Sub attach_EntregasCuentas(ByVal entity As EntregasCuenta)
-		Me.SendPropertyChanging
-		entity.USUARIO = Me
-	End Sub
-	
-	Private Sub detach_EntregasCuentas(ByVal entity As EntregasCuenta)
-		Me.SendPropertyChanging
-		entity.USUARIO = Nothing
-	End Sub
-End Class
-
 <Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.ContactosPacientes")>  _
 Partial Public Class ContactosPaciente
 	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
@@ -8342,9 +7920,9 @@ Partial Public Class PagosPaciente
 	
 	Private _PACIENTE As EntityRef(Of PACIENTE)
 	
-	Private _USUARIO As EntityRef(Of USUARIO)
-	
 	Private _FORMASPAGO As EntityRef(Of FORMASPAGO)
+	
+	Private _USUARIO As EntityRef(Of USUARIO)
 	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
@@ -8390,8 +7968,8 @@ Partial Public Class PagosPaciente
 	Public Sub New()
 		MyBase.New
 		Me._PACIENTE = CType(Nothing, EntityRef(Of PACIENTE))
-		Me._USUARIO = CType(Nothing, EntityRef(Of USUARIO))
 		Me._FORMASPAGO = CType(Nothing, EntityRef(Of FORMASPAGO))
+		Me._USUARIO = CType(Nothing, EntityRef(Of USUARIO))
 		OnCreated
 	End Sub
 	
@@ -8562,34 +8140,6 @@ Partial Public Class PagosPaciente
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="USUARIO_PagosPaciente", Storage:="_USUARIO", ThisKey:="IDUsuario", OtherKey:="CODIGO", IsForeignKey:=true)>  _
-	Public Property USUARIO() As USUARIO
-		Get
-			Return Me._USUARIO.Entity
-		End Get
-		Set
-			Dim previousValue As USUARIO = Me._USUARIO.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._USUARIO.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._USUARIO.Entity = Nothing
-					previousValue.PagosPacientes.Remove(Me)
-				End If
-				Me._USUARIO.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.PagosPacientes.Add(Me)
-					Me._IDUsuario = value.CODIGO
-				Else
-					Me._IDUsuario = CType(Nothing, Nullable(Of Integer))
-				End If
-				Me.SendPropertyChanged("USUARIO")
-			End If
-		End Set
-	End Property
-	
 	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="FORMASPAGO_PagosPaciente", Storage:="_FORMASPAGO", ThisKey:="IDFormaPago", OtherKey:="CODIGO", IsForeignKey:=true)>  _
 	Public Property FORMASPAGO() As FORMASPAGO
 		Get
@@ -8614,6 +8164,34 @@ Partial Public Class PagosPaciente
 					Me._IDFormaPago = CType(Nothing, String)
 				End If
 				Me.SendPropertyChanged("FORMASPAGO")
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="USUARIO_PagosPaciente", Storage:="_USUARIO", ThisKey:="IDUsuario", OtherKey:="CODIGO", IsForeignKey:=true)>  _
+	Public Property USUARIO() As USUARIO
+		Get
+			Return Me._USUARIO.Entity
+		End Get
+		Set
+			Dim previousValue As USUARIO = Me._USUARIO.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._USUARIO.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._USUARIO.Entity = Nothing
+					previousValue.PagosPacientes.Remove(Me)
+				End If
+				Me._USUARIO.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.PagosPacientes.Add(Me)
+					Me._IDUsuario = value.CODIGO
+				Else
+					Me._IDUsuario = CType(Nothing, Nullable(Of Integer))
+				End If
+				Me.SendPropertyChanged("USUARIO")
 			End If
 		End Set
 	End Property
@@ -28832,8 +28410,6 @@ Partial Public Class Auditoria
 	
 	Private _loginUsuario As String
 	
-	Private _USUARIO As EntityRef(Of USUARIO)
-	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
     End Sub
@@ -28885,7 +28461,6 @@ Partial Public Class Auditoria
 	
 	Public Sub New()
 		MyBase.New
-		Me._USUARIO = CType(Nothing, EntityRef(Of USUARIO))
 		OnCreated
 	End Sub
 	
@@ -28930,9 +28505,6 @@ Partial Public Class Auditoria
 		End Get
 		Set
 			If (Me._idUsuario.Equals(value) = false) Then
-				If Me._USUARIO.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
 				Me.OnidUsuarioChanging(value)
 				Me.SendPropertyChanging
 				Me._idUsuario = value
@@ -29052,34 +28624,6 @@ Partial Public Class Auditoria
 				Me._loginUsuario = value
 				Me.SendPropertyChanged("loginUsuario")
 				Me.OnloginUsuarioChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="USUARIO_Auditoria", Storage:="_USUARIO", ThisKey:="idUsuario", OtherKey:="CODIGO", IsForeignKey:=true)>  _
-	Public Property USUARIO() As USUARIO
-		Get
-			Return Me._USUARIO.Entity
-		End Get
-		Set
-			Dim previousValue As USUARIO = Me._USUARIO.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._USUARIO.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._USUARIO.Entity = Nothing
-					previousValue.Auditorias.Remove(Me)
-				End If
-				Me._USUARIO.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.Auditorias.Add(Me)
-					Me._idUsuario = value.CODIGO
-				Else
-					Me._idUsuario = CType(Nothing, Nullable(Of Integer))
-				End If
-				Me.SendPropertyChanged("USUARIO")
 			End If
 		End Set
 	End Property
@@ -42417,5 +41961,404 @@ Partial Public Class d_PresupuestoLinea
 	Private Sub detach_LineasCitas(ByVal entity As LineasCita)
 		Me.SendPropertyChanging
 		entity.d_PresupuestoLinea = Nothing
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.USUARIOS")>  _
+Partial Public Class USUARIO
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _CODIGO As Integer
+	
+	Private _USUARIO As String
+	
+	Private _CONTRASENA As String
+	
+	Private _NIVEL As String
+	
+	Private _ADMINISTRADOR As String
+	
+	Private _NOMBRECOMPLETO As String
+	
+	Private _REFMEDICO As System.Nullable(Of Integer)
+	
+	Private _FECHACLAVE As Date
+	
+	Private _CONFIGURACIONXML As System.Xml.Linq.XElement
+	
+	Private _CERTIFICADOPATH As String
+	
+	Private _PagosPacientes As EntitySet(Of PagosPaciente)
+	
+	Private _ROLESUSUARIOs As EntitySet(Of ROLESUSUARIO)
+	
+	Private _Comunicacions As EntitySet(Of Comunicacion)
+	
+	Private _CALENDARIO_USUARIOs As EntitySet(Of CALENDARIO_USUARIO)
+	
+	Private _NOTAs As EntitySet(Of NOTA)
+	
+	Private _EntregasCuentas As EntitySet(Of EntregasCuenta)
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnCODIGOChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnCODIGOChanged()
+    End Sub
+    Partial Private Sub OnUSUARIOChanging(value As String)
+    End Sub
+    Partial Private Sub OnUSUARIOChanged()
+    End Sub
+    Partial Private Sub OnCONTRASENAChanging(value As String)
+    End Sub
+    Partial Private Sub OnCONTRASENAChanged()
+    End Sub
+    Partial Private Sub OnNIVELChanging(value As String)
+    End Sub
+    Partial Private Sub OnNIVELChanged()
+    End Sub
+    Partial Private Sub OnADMINISTRADORChanging(value As String)
+    End Sub
+    Partial Private Sub OnADMINISTRADORChanged()
+    End Sub
+    Partial Private Sub OnNOMBRECOMPLETOChanging(value As String)
+    End Sub
+    Partial Private Sub OnNOMBRECOMPLETOChanged()
+    End Sub
+    Partial Private Sub OnREFMEDICOChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnREFMEDICOChanged()
+    End Sub
+    Partial Private Sub OnFECHACLAVEChanging(value As Date)
+    End Sub
+    Partial Private Sub OnFECHACLAVEChanged()
+    End Sub
+    Partial Private Sub OnCONFIGURACIONXMLChanging(value As System.Xml.Linq.XElement)
+    End Sub
+    Partial Private Sub OnCONFIGURACIONXMLChanged()
+    End Sub
+    Partial Private Sub OnCERTIFICADOPATHChanging(value As String)
+    End Sub
+    Partial Private Sub OnCERTIFICADOPATHChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		Me._PagosPacientes = New EntitySet(Of PagosPaciente)(AddressOf Me.attach_PagosPacientes, AddressOf Me.detach_PagosPacientes)
+		Me._ROLESUSUARIOs = New EntitySet(Of ROLESUSUARIO)(AddressOf Me.attach_ROLESUSUARIOs, AddressOf Me.detach_ROLESUSUARIOs)
+		Me._Comunicacions = New EntitySet(Of Comunicacion)(AddressOf Me.attach_Comunicacions, AddressOf Me.detach_Comunicacions)
+		Me._CALENDARIO_USUARIOs = New EntitySet(Of CALENDARIO_USUARIO)(AddressOf Me.attach_CALENDARIO_USUARIOs, AddressOf Me.detach_CALENDARIO_USUARIOs)
+		Me._NOTAs = New EntitySet(Of NOTA)(AddressOf Me.attach_NOTAs, AddressOf Me.detach_NOTAs)
+		Me._EntregasCuentas = New EntitySet(Of EntregasCuenta)(AddressOf Me.attach_EntregasCuentas, AddressOf Me.detach_EntregasCuentas)
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CODIGO", DbType:="Int NOT NULL", IsPrimaryKey:=true)>  _
+	Public Property CODIGO() As Integer
+		Get
+			Return Me._CODIGO
+		End Get
+		Set
+			If ((Me._CODIGO = value)  _
+						= false) Then
+				Me.OnCODIGOChanging(value)
+				Me.SendPropertyChanging
+				Me._CODIGO = value
+				Me.SendPropertyChanged("CODIGO")
+				Me.OnCODIGOChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_USUARIO", DbType:="VarChar(15) NOT NULL", CanBeNull:=false)>  _
+	Public Property USUARIO() As String
+		Get
+			Return Me._USUARIO
+		End Get
+		Set
+			If (String.Equals(Me._USUARIO, value) = false) Then
+				Me.OnUSUARIOChanging(value)
+				Me.SendPropertyChanging
+				Me._USUARIO = value
+				Me.SendPropertyChanged("USUARIO")
+				Me.OnUSUARIOChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CONTRASENA", DbType:="VarChar(15)")>  _
+	Public Property CONTRASENA() As String
+		Get
+			Return Me._CONTRASENA
+		End Get
+		Set
+			If (String.Equals(Me._CONTRASENA, value) = false) Then
+				Me.OnCONTRASENAChanging(value)
+				Me.SendPropertyChanging
+				Me._CONTRASENA = value
+				Me.SendPropertyChanged("CONTRASENA")
+				Me.OnCONTRASENAChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_NIVEL", DbType:="VarChar(60) NOT NULL", CanBeNull:=false)>  _
+	Public Property NIVEL() As String
+		Get
+			Return Me._NIVEL
+		End Get
+		Set
+			If (String.Equals(Me._NIVEL, value) = false) Then
+				Me.OnNIVELChanging(value)
+				Me.SendPropertyChanging
+				Me._NIVEL = value
+				Me.SendPropertyChanged("NIVEL")
+				Me.OnNIVELChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ADMINISTRADOR", DbType:="VarChar(1) NOT NULL", CanBeNull:=false)>  _
+	Public Property ADMINISTRADOR() As String
+		Get
+			Return Me._ADMINISTRADOR
+		End Get
+		Set
+			If (String.Equals(Me._ADMINISTRADOR, value) = false) Then
+				Me.OnADMINISTRADORChanging(value)
+				Me.SendPropertyChanging
+				Me._ADMINISTRADOR = value
+				Me.SendPropertyChanged("ADMINISTRADOR")
+				Me.OnADMINISTRADORChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_NOMBRECOMPLETO", DbType:="VarChar(90)")>  _
+	Public Property NOMBRECOMPLETO() As String
+		Get
+			Return Me._NOMBRECOMPLETO
+		End Get
+		Set
+			If (String.Equals(Me._NOMBRECOMPLETO, value) = false) Then
+				Me.OnNOMBRECOMPLETOChanging(value)
+				Me.SendPropertyChanging
+				Me._NOMBRECOMPLETO = value
+				Me.SendPropertyChanged("NOMBRECOMPLETO")
+				Me.OnNOMBRECOMPLETOChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_REFMEDICO", DbType:="Int")>  _
+	Public Property REFMEDICO() As System.Nullable(Of Integer)
+		Get
+			Return Me._REFMEDICO
+		End Get
+		Set
+			If (Me._REFMEDICO.Equals(value) = false) Then
+				Me.OnREFMEDICOChanging(value)
+				Me.SendPropertyChanging
+				Me._REFMEDICO = value
+				Me.SendPropertyChanged("REFMEDICO")
+				Me.OnREFMEDICOChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_FECHACLAVE", DbType:="DateTime NOT NULL")>  _
+	Public Property FECHACLAVE() As Date
+		Get
+			Return Me._FECHACLAVE
+		End Get
+		Set
+			If ((Me._FECHACLAVE = value)  _
+						= false) Then
+				Me.OnFECHACLAVEChanging(value)
+				Me.SendPropertyChanging
+				Me._FECHACLAVE = value
+				Me.SendPropertyChanged("FECHACLAVE")
+				Me.OnFECHACLAVEChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CONFIGURACIONXML", DbType:="Xml", UpdateCheck:=UpdateCheck.Never)>  _
+	Public Property CONFIGURACIONXML() As System.Xml.Linq.XElement
+		Get
+			Return Me._CONFIGURACIONXML
+		End Get
+		Set
+			If (Object.Equals(Me._CONFIGURACIONXML, value) = false) Then
+				Me.OnCONFIGURACIONXMLChanging(value)
+				Me.SendPropertyChanging
+				Me._CONFIGURACIONXML = value
+				Me.SendPropertyChanged("CONFIGURACIONXML")
+				Me.OnCONFIGURACIONXMLChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CERTIFICADOPATH", DbType:="NText", UpdateCheck:=UpdateCheck.Never)>  _
+	Public Property CERTIFICADOPATH() As String
+		Get
+			Return Me._CERTIFICADOPATH
+		End Get
+		Set
+			If (String.Equals(Me._CERTIFICADOPATH, value) = false) Then
+				Me.OnCERTIFICADOPATHChanging(value)
+				Me.SendPropertyChanging
+				Me._CERTIFICADOPATH = value
+				Me.SendPropertyChanged("CERTIFICADOPATH")
+				Me.OnCERTIFICADOPATHChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="USUARIO_PagosPaciente", Storage:="_PagosPacientes", ThisKey:="CODIGO", OtherKey:="IDUsuario")>  _
+	Public Property PagosPacientes() As EntitySet(Of PagosPaciente)
+		Get
+			Return Me._PagosPacientes
+		End Get
+		Set
+			Me._PagosPacientes.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="USUARIO_ROLESUSUARIO", Storage:="_ROLESUSUARIOs", ThisKey:="CODIGO", OtherKey:="ID_USUARIO")>  _
+	Public Property ROLESUSUARIOs() As EntitySet(Of ROLESUSUARIO)
+		Get
+			Return Me._ROLESUSUARIOs
+		End Get
+		Set
+			Me._ROLESUSUARIOs.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="USUARIO_Comunicacion", Storage:="_Comunicacions", ThisKey:="CODIGO", OtherKey:="ID_UsuarioEmisor")>  _
+	Public Property Comunicacions() As EntitySet(Of Comunicacion)
+		Get
+			Return Me._Comunicacions
+		End Get
+		Set
+			Me._Comunicacions.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="USUARIO_CALENDARIO_USUARIO", Storage:="_CALENDARIO_USUARIOs", ThisKey:="CODIGO", OtherKey:="ID_Usuario")>  _
+	Public Property CALENDARIO_USUARIOs() As EntitySet(Of CALENDARIO_USUARIO)
+		Get
+			Return Me._CALENDARIO_USUARIOs
+		End Get
+		Set
+			Me._CALENDARIO_USUARIOs.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="USUARIO_NOTA", Storage:="_NOTAs", ThisKey:="CODIGO", OtherKey:="ID_Usuario")>  _
+	Public Property NOTAs() As EntitySet(Of NOTA)
+		Get
+			Return Me._NOTAs
+		End Get
+		Set
+			Me._NOTAs.Assign(value)
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="USUARIO_EntregasCuenta", Storage:="_EntregasCuentas", ThisKey:="CODIGO", OtherKey:="IDUsuarioEfectua")>  _
+	Public Property EntregasCuentas() As EntitySet(Of EntregasCuenta)
+		Get
+			Return Me._EntregasCuentas
+		End Get
+		Set
+			Me._EntregasCuentas.Assign(value)
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+	
+	Private Sub attach_PagosPacientes(ByVal entity As PagosPaciente)
+		Me.SendPropertyChanging
+		entity.USUARIO = Me
+	End Sub
+	
+	Private Sub detach_PagosPacientes(ByVal entity As PagosPaciente)
+		Me.SendPropertyChanging
+		entity.USUARIO = Nothing
+	End Sub
+	
+	Private Sub attach_ROLESUSUARIOs(ByVal entity As ROLESUSUARIO)
+		Me.SendPropertyChanging
+		entity.USUARIO = Me
+	End Sub
+	
+	Private Sub detach_ROLESUSUARIOs(ByVal entity As ROLESUSUARIO)
+		Me.SendPropertyChanging
+		entity.USUARIO = Nothing
+	End Sub
+	
+	Private Sub attach_Comunicacions(ByVal entity As Comunicacion)
+		Me.SendPropertyChanging
+		entity.USUARIO = Me
+	End Sub
+	
+	Private Sub detach_Comunicacions(ByVal entity As Comunicacion)
+		Me.SendPropertyChanging
+		entity.USUARIO = Nothing
+	End Sub
+	
+	Private Sub attach_CALENDARIO_USUARIOs(ByVal entity As CALENDARIO_USUARIO)
+		Me.SendPropertyChanging
+		entity.USUARIO = Me
+	End Sub
+	
+	Private Sub detach_CALENDARIO_USUARIOs(ByVal entity As CALENDARIO_USUARIO)
+		Me.SendPropertyChanging
+		entity.USUARIO = Nothing
+	End Sub
+	
+	Private Sub attach_NOTAs(ByVal entity As NOTA)
+		Me.SendPropertyChanging
+		entity.USUARIO = Me
+	End Sub
+	
+	Private Sub detach_NOTAs(ByVal entity As NOTA)
+		Me.SendPropertyChanging
+		entity.USUARIO = Nothing
+	End Sub
+	
+	Private Sub attach_EntregasCuentas(ByVal entity As EntregasCuenta)
+		Me.SendPropertyChanging
+		entity.USUARIO = Me
+	End Sub
+	
+	Private Sub detach_EntregasCuentas(ByVal entity As EntregasCuenta)
+		Me.SendPropertyChanging
+		entity.USUARIO = Nothing
 	End Sub
 End Class

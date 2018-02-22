@@ -12,6 +12,13 @@ Public Class form_password
         cant = 0
         lbl_Version.Text = Application.ProductVersion
         Dim a As New CMLinqDataContext
+
+        lbl_Version.Parent = PictureBox1
+        Label1.Parent = PictureBox1
+        LbUsuario.Parent = PictureBox1
+        LbContraseña.Parent = PictureBox1
+        Label2.Parent = PictureBox1
+
         Try
             a.Connection.Open()
             a.Connection.Close()

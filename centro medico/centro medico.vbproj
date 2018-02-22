@@ -2366,6 +2366,7 @@
     <None Include="Resources\delete_picture.png" />
     <Content Include="Resources\2.png" />
     <Content Include="Resources\3.png" />
+    <Content Include="Resources\new\FrontPage.png" />
     <Content Include="Resources\new\IconE_Recordatorio.png" />
     <Content Include="Resources\new\Icon_Articulos.jpg" />
     <None Include="Resources\new\Icon_AsistenteFacturacion.png" />
@@ -3065,9 +3066,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="RDLC\custom\regos\DentalPresupuesto.rdlc" />
-    <Content Include="RDLC\custom\siesta\Consentimiento.rdlc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <EmbeddedResource Include="RDLC\custom\siesta\TalonesSocioPrime.rdlc" />
     <EmbeddedResource Include="RDLC\default\PacientesComoNosConocio.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>

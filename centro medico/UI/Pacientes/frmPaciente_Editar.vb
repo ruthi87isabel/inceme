@@ -588,9 +588,13 @@ Public Class frmPaciente_Editar
             _lmutua.TIPO = _annadirMutua.TIPO
             If _annadirMutua.FECHAALTADateTimePicker.Checked Then
                 _lmutua.FECHAALTA = _annadirMutua.FECHAALTADateTimePicker.Value
+            Else
+                _lmutua.FECHAALTA = Nothing
             End If
             If _annadirMutua.FECHABAJADateTimePicker.Checked Then
                 _lmutua.FECHABAJA = _annadirMutua.FECHABAJADateTimePicker.Value
+            Else
+                _lmutua.FECHABAJA = Nothing
             End If
             context.SubmitChanges()
             Globales.AuditoriaInfo.Registra(Globales.AuditoriaInfo.Accion.Modificar, RoleManager.Items.Mutuas, "Mutua asociada a un paciente", _lmutua.CODIGO.ToString(), "mutua :" & _lmutua.REFMUTUA & " paciente : " & Me.IDPACIENTE)
