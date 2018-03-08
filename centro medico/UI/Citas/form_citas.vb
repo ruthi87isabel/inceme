@@ -268,7 +268,7 @@ Public Class form_citas
             fhorafino = DateTime.Now
         End If
 
-        If CheckMutua And faseguradorao > -1 Then
+        If CheckMutua And (faseguradorao > -1 Or cb_aseguradora.Items.Count > 0) Then
             chb_aseguradora.Checked = True
         Else
             chb_aseguradora.Checked = False
@@ -3231,7 +3231,9 @@ Public Class form_citas
         LLenaCombo(IdPaciente)
         Me.CargaFormadePagoPredeterminada(IdPaciente)
         tsb_DebitoPaciente.Enabled = True
-        If CheckMutua Then chb_aseguradora.Enabled = True
+        chb_aseguradora.Enabled = True
+        If cb_aseguradora.SelectedIndex > -1 And CheckMutua Then chb_aseguradora.Checked = True
+
         If cb_aseguradora.SelectedIndex > -1 And chb_aseguradora.Checked = True Then
             recalcularConceptos = True
         End If

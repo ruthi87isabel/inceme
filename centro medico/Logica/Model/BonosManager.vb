@@ -1,7 +1,11 @@
-﻿Partial Public Class Bonos
+﻿Imports GoltraTools.clsLog
+Imports GoltraTools
+
+Partial Public Class Bonos
     'Uso estas dos propiedades para filtrar
     Public CodigoPaciente As Integer = -1
     Public CodigoFactura As Integer = -1
+    Dim log As New clsLog
 
     'necesitaremos setear el contexto para operar con la bd.
     Public context As CMLinqDataContext
@@ -39,12 +43,20 @@
     End Property
 
     Public Sub AsociaCitaSesion(ByRef cita As CITA)
-        Dim sesion As New Sesiones
-        sesion.CITA = cita
-        sesion.fecha = cita.FECHA
-        sesion.descripcion = "Sesión creada desde la cita del " & cita.FECHA & " para " & cita.PACIENTE
-        Me.Sesiones.Add(sesion)
-        context.SubmitChanges()
+        Try
+            Dim sesion As New Sesiones
+            sesion.CITA = cita
+            sesion.fecha = cita.FECHA
+            sesion.descripcion = "Sesión creada desde la cita del " & cita.FECHA & " para " & cita.PACIENTE
+            Me.Sesiones.Add(sesion)
+            context.SubmitChanges()
+        Catch ex As Exception
+            log.FileName = Application.StartupPath & "\log.txt"
+            log.Log("*** " & Now.ToString & " - Error al guardar sesión asociada a la cita" & cita.IDCITA & " con fecha " & cita.FECHA & " ***")
+            log.Log("********** Texto de la excepción ************ ")
+            log.Log(ex.Message)
+            MessageBox.Show("Ha ocurrido un error al tratar de asociar el bono con la cita." & vbLf & "Por favor vuelva a intentarlo.")
+        End Try
     End Sub
 
 
