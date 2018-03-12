@@ -1,0 +1,18 @@
+<excludeList>
+	<!-- Los ficheros utilizaran path relativos, 
+	Ejemplos: 
+				Config							===> Esto es una carpeta
+				Config\configuraciones.xml		===> Esto es un fichero
+				<file>UpdaterClient.exe</file>
+				<file>UpdaterClient.pdb</file>	
+				<file>UpdaterClient.vshost.exe</file>
+				<file>UpdaterClient.vshost.exe.config</file>
+				
+	-->
+	<file>Config</file>
+	<file>UpdaterClient.exe.config</file>
+	<file>UpdaterClient.pdb</file>
+	<file>INCEME.pdb</file>
+	<file>INCEME.vshost.exe</file>
+	<file>INCEME.vshost.exe.config</file>
+</excludeList>
