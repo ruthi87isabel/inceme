@@ -1760,6 +1760,11 @@ Public Class form_citas
         If Not MutuaPreseleccionada Is Nothing Then
             cb_aseguradora.SelectedIndex = BuscaMutua(MutuaPreseleccionada.CMUTUA)
         End If
+        If CheckMutua And (faseguradorao > -1 Or cb_aseguradora.Items.Count > 0) Then
+            chb_aseguradora.Checked = True
+        Else
+            chb_aseguradora.Checked = False
+        End If
 
 
     End Sub
