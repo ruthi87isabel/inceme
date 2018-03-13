@@ -1763,6 +1763,7 @@ Public Class frmOdontograma
         rbnDefinitiva.Checked = (TipoDenticionLinea = 1)
 
         Odontograma3.Reset()
+        ImporteTotal = 0
         For Each linea As md_d_PresupuestoLinea In Lineas
             ImporteTotal = ImporteTotal + linea.Importe
             If linea.TipoDenticion <> TipoDenticionLinea Then Continue For
