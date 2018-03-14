@@ -35,6 +35,7 @@ Public Class frmOdontograma
     Private ImporteTotal As Double 'IMPORTE ASOCIADO AL PRESUPUESTO SELECCIONADO
     Private lastkeypressed As Char
 
+    Dim NodeP As Integer = 0
     Public MostrarSoloPresupuesto As Boolean = False
 
     'VARIABLES RELACIONADAS CON EL TRATAMIENTO SELECCIONADO
@@ -407,7 +408,11 @@ Public Class frmOdontograma
             tnode.Tag = presupuesto
         Next
         If tvwPresupuestos.Nodes.Count > 0 Then
-            tvwPresupuestos.SelectedNode = tvwPresupuestos.Nodes.Item(tvwPresupuestos.Nodes.Count - 1)
+            If Not tvwPresupuestos.Nodes.Item(NodeP) Is Nothing Then
+                tvwPresupuestos.SelectedNode = tvwPresupuestos.Nodes.Item(NodeP)
+            Else
+                tvwPresupuestos.SelectedNode = tvwPresupuestos.Nodes.Item(tvwPresupuestos.Nodes.Count - 1)
+            End If
         Else
             LineasPresupuestoTableAdapter.Fill(OdontTrat.LineasPresupuesto, 0)
             Grid3.Refetch()
@@ -460,6 +465,8 @@ Public Class frmOdontograma
             End If
         Next
     End Sub
+
+
     'CARGAR EL LISTADO DE LINEAS ASOCIADAS AL PRESUPUESTO SELECCIONADO EN EL LISTADO DE PRESUPUESTOS
     Private Sub tvwPresupuestos_AfterSelect(ByVal sender As System.Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles tvwPresupuestos.AfterSelect
         If e.Node Is Nothing Then
@@ -469,6 +476,7 @@ Public Class frmOdontograma
             CtrlMutua1.Enabled = True
         End If
 
+        NodeP = e.Node.Index
         MostrarLineasPresupuesto(e.Node)
 
         btnPMPendiente.Enabled = Not (e.Node Is Nothing)
@@ -508,7 +516,7 @@ Public Class frmOdontograma
             accion = "ver"
             If Grid3.RowCount > 0 Then Grid3.Row = Grid3.RowCount - 1
         End If
-
+        If Grid3.RowCount = 0 Then ImporteTotal = 0
 
     End Sub
 
