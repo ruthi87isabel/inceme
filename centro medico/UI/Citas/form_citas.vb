@@ -1666,7 +1666,7 @@ Public Class form_citas
             Dim _idmutua As Nullable(Of Integer) = Nothing
             If chb_aseguradora.Checked = True Then
                 If cb_aseguradora.SelectedIndex > -1 Then
-                    _idmutua = cb_aseguradora.SelectedItem.Row.CMUTUA
+                    _idmutua = cb_aseguradora.SelectedItem.CMUTUA
                 Else
                     MessageBox.Show("Debe entrar una mutua válida", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Return
