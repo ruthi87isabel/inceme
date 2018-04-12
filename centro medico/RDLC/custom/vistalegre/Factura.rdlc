@@ -1226,9 +1226,9 @@
             </Paragraphs>
             <rd:DefaultName>PACIENTE</rd:DefaultName>
             <Top>0.23918in</Top>
-            <Left>4.12513in</Left>
+            <Left>3.89596in</Left>
             <Height>0.25in</Height>
-            <Width>2.86238in</Width>
+            <Width>3.09155in</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -1258,9 +1258,9 @@
             </Paragraphs>
             <rd:DefaultName>DIRECCION</rd:DefaultName>
             <Top>0.45in</Top>
-            <Left>4.12513in</Left>
+            <Left>3.89596in</Left>
             <Height>0.25in</Height>
-            <Width>2.86238in</Width>
+            <Width>3.09155in</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
@@ -1290,9 +1290,9 @@
             </Paragraphs>
             <rd:DefaultName>CP</rd:DefaultName>
             <Top>0.66in</Top>
-            <Left>4.12513in</Left>
+            <Left>3.89596in</Left>
             <Height>0.25in</Height>
-            <Width>2.86238in</Width>
+            <Width>3.09155in</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
@@ -1322,9 +1322,9 @@
             </Paragraphs>
             <rd:DefaultName>CP</rd:DefaultName>
             <Top>0.87in</Top>
-            <Left>4.12513in</Left>
+            <Left>3.89596in</Left>
             <Height>0.25in</Height>
-            <Width>2.86238in</Width>
+            <Width>3.09155in</Width>
             <ZIndex>8</ZIndex>
             <Style>
               <Border>
@@ -1343,7 +1343,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=IIf(Left(First(Fields!NUMERO.Value, "dsFactura"),2)="GC","NIF: " &amp; First(Fields!EMPRESA_CIF.Value, "dsFactura"),IIf(First(Fields!DNI.Value, "dsPacientes") &lt;&gt; "","DNI: " &amp; First(Fields!DNI.Value, "dsPacientes"),"NIE: " &amp; First(Fields!NIE.Value, "dsPacientes")))</Value>
+                    <Value>=IIf(Left(First(Fields!NUMERO.Value, "dsFactura"),2)="GC","CIF: " &amp; First(Fields!EMPRESA_CIF.Value, "dsFactura"),IIf(First(Fields!DNI.Value, "dsPacientes") &lt;&gt; "","DNI: " &amp; First(Fields!DNI.Value, "dsPacientes"),IIf(First(Fields!NIE.Value, "dsPacientes") &lt;&gt; "","NIE: " &amp; First(Fields!NIE.Value, "dsPacientes"),"")))</Value>
                     <Style>
                       <FontWeight>SemiBold</FontWeight>
                     </Style>
@@ -1354,9 +1354,9 @@
             </Paragraphs>
             <rd:DefaultName>CP</rd:DefaultName>
             <Top>1.071in</Top>
-            <Left>4.12513in</Left>
+            <Left>3.89596in</Left>
             <Height>0.25in</Height>
-            <Width>2.86238in</Width>
+            <Width>3.09155in</Width>
             <ZIndex>9</ZIndex>
             <Style>
               <Border>
