@@ -1343,7 +1343,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=IIf(Left(First(Fields!REFSERIE.Value, "dsFactura"),2)="GC","NIF: " &amp; First(Fields!EMPRESA_CIF.Value, "dsFactura"),IIf(First(Fields!DNI.Value, "dsPacientes") &lt;&gt; "","DNI: " &amp; First(Fields!DNI.Value, "dsPacientes"),IIf(First(Fields!NIE.Value, "dsPacientes") &lt;&gt; "","NIE: " &amp; First(Fields!NIE.Value, "dsPacientes"),"")))</Value>
+                    <Value>=IIf(Left(First(Fields!REFSERIE.Value, "dsFactura"),2)="GC",IIf(First(Fields!DNI.Value, "dsPacientes") &lt;&gt; "","DNI: " &amp; First(Fields!DNI.Value, "dsPacientes"),IIf(First(Fields!NIE.Value, "dsPacientes") &lt;&gt; "","CIF: " &amp; First(Fields!NIE.Value, "dsPacientes"),"")),IIf(First(Fields!DNI.Value, "dsPacientes") &lt;&gt; "","DNI: " &amp; First(Fields!DNI.Value, "dsPacientes"),IIf(First(Fields!NIE.Value, "dsPacientes") &lt;&gt; "","DNI: " &amp; First(Fields!NIE.Value, "dsPacientes"),"")))</Value>
                     <Style>
                       <FontWeight>SemiBold</FontWeight>
                     </Style>
