@@ -1086,7 +1086,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>FEMISION</rd:DefaultName>
-            <Top>0.23918in</Top>
+            <Top>0.06944in</Top>
             <Left>0.5175in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
@@ -1116,7 +1116,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>FEMISION</rd:DefaultName>
-            <Top>0.23918in</Top>
+            <Top>0.06944in</Top>
             <Left>1.53139in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
@@ -1161,7 +1161,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>FEMISION</rd:DefaultName>
-            <Top>0.45in</Top>
+            <Top>0.26944in</Top>
             <Left>0.5175in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
@@ -1193,7 +1193,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox21</rd:DefaultName>
-            <Top>0.45in</Top>
+            <Top>0.26944in</Top>
             <Left>1.53139in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
@@ -1225,7 +1225,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>PACIENTE</rd:DefaultName>
-            <Top>0.23918in</Top>
+            <Top>0.06944in</Top>
             <Left>3.89596in</Left>
             <Height>0.25in</Height>
             <Width>3.09155in</Width>
@@ -1257,7 +1257,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>DIRECCION</rd:DefaultName>
-            <Top>0.45in</Top>
+            <Top>0.62219in</Top>
             <Left>3.89596in</Left>
             <Height>0.25in</Height>
             <Width>3.09155in</Width>
@@ -1289,7 +1289,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>CP</rd:DefaultName>
-            <Top>0.66in</Top>
+            <Top>0.87219in</Top>
             <Left>3.89596in</Left>
             <Height>0.25in</Height>
             <Width>3.09155in</Width>
@@ -1321,7 +1321,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>CP</rd:DefaultName>
-            <Top>0.87in</Top>
+            <Top>1.10029in</Top>
             <Left>3.89596in</Left>
             <Height>0.25in</Height>
             <Width>3.09155in</Width>
@@ -1353,7 +1353,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>CP</rd:DefaultName>
-            <Top>1.071in</Top>
+            <Top>1.35029in</Top>
             <Left>3.89596in</Left>
             <Height>0.25in</Height>
             <Width>3.09155in</Width>
@@ -1461,7 +1461,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>FEMISION</rd:DefaultName>
-            <Top>1.57486in</Top>
+            <Top>1.66974in</Top>
             <Left>0.54528in</Left>
             <Height>0.875in</Height>
             <Width>6.38782in</Width>
