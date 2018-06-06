@@ -64,6 +64,9 @@ Public Class form_ConfiguracionUsuario
             rbAp1Ap1No.Checked = (Globales.Usuario.CONFIGURACIONXML.<Citas>.<CitaFormatoNombre>.Value = "1")
             rbNomApe1Ape2.Checked = (Globales.Usuario.CONFIGURACIONXML.<Citas>.<CitaFormatoNombre>.Value = "2")
 
+            NumMedicos.Value = Globales.Configuracion.NumeroColumnaMedico
+            NumMedicos.Maximum = (From m In Globales.Context.MEDICOs Where (Not m.Eliminado.HasValue Or m.Eliminado = False)).ToList().Count()
+
         End If
 
     End Sub
@@ -80,6 +83,7 @@ Public Class form_ConfiguracionUsuario
         Globales.Configuracion.citaesp = chb_datosCitaVisualEspecialidad.Checked
         Globales.Configuracion.citaCodPropioPac = Me.chb_CodigoPropioPaciente.Checked
         Globales.Configuracion.TamanoFuente = CInt(Me.nudTamanoTexto.Value)
+        Globales.Configuracion.NumeroColumnaMedico = Integer.Parse(NumMedicos.Value.ToString())
 
         Globales.Configuracion.CalendarioMostrarListaMedicosPorDefecto = chkMostrarListaMedicos.Checked
 

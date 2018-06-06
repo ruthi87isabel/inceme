@@ -58,7 +58,7 @@ Namespace UI.Citas
             CargarMedicosOwners()
             CargarSalasOwners()
 
-
+            ScheduleCitas.DayColumns = Globales.Configuracion.NumeroColumnaMedico
 
             'ScheduleCitas.MultiOwner = Globales.Configuracion.Calendario_MostrarListaMedicosPorDefecto
             rbPorMedicos.Checked = Globales.Configuracion.CalendarioMostrarListaMedicosPorDefecto

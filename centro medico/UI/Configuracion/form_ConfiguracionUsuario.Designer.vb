@@ -66,6 +66,7 @@ Partial Class form_ConfiguracionUsuario
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.grpEMAIL = New System.Windows.Forms.GroupBox()
+        Me.ForzarV = New System.Windows.Forms.CheckBox()
         Me.lblEmailVerificado = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.chk_EMAIL_SSL = New System.Windows.Forms.CheckBox()
@@ -80,7 +81,8 @@ Partial Class form_ConfiguracionUsuario
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ForzarV = New System.Windows.Forms.CheckBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.NumMedicos = New System.Windows.Forms.NumericUpDown()
         Me.gb_datoscitavisual.SuspendLayout()
         Me.gb_estilopordefecto.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -95,19 +97,22 @@ Partial Class form_ConfiguracionUsuario
         Me.tabComunicaciones.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.grpEMAIL.SuspendLayout()
+        CType(Me.NumMedicos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'gb_datoscitavisual
         '
+        Me.gb_datoscitavisual.Controls.Add(Me.Label11)
         Me.gb_datoscitavisual.Controls.Add(Me.chb_CodigoPropioPaciente)
+        Me.gb_datoscitavisual.Controls.Add(Me.NumMedicos)
         Me.gb_datoscitavisual.Controls.Add(Me.chb_datosCitaVisualEspecialidad)
         Me.gb_datoscitavisual.Controls.Add(Me.chb_datosCitaVisualNotas)
         Me.gb_datoscitavisual.Controls.Add(Me.chb_datosCitaVisualMedico)
         Me.gb_datoscitavisual.Controls.Add(Me.chb_datosCitaVisualNombrePaciente)
         Me.gb_datoscitavisual.Location = New System.Drawing.Point(249, 162)
-        Me.gb_datoscitavisual.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gb_datoscitavisual.Margin = New System.Windows.Forms.Padding(4)
         Me.gb_datoscitavisual.Name = "gb_datoscitavisual"
-        Me.gb_datoscitavisual.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gb_datoscitavisual.Padding = New System.Windows.Forms.Padding(4)
         Me.gb_datoscitavisual.Size = New System.Drawing.Size(273, 191)
         Me.gb_datoscitavisual.TabIndex = 35
         Me.gb_datoscitavisual.TabStop = False
@@ -116,8 +121,8 @@ Partial Class form_ConfiguracionUsuario
         'chb_CodigoPropioPaciente
         '
         Me.chb_CodigoPropioPaciente.AutoSize = True
-        Me.chb_CodigoPropioPaciente.Location = New System.Drawing.Point(23, 73)
-        Me.chb_CodigoPropioPaciente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chb_CodigoPropioPaciente.Location = New System.Drawing.Point(11, 102)
+        Me.chb_CodigoPropioPaciente.Margin = New System.Windows.Forms.Padding(4)
         Me.chb_CodigoPropioPaciente.Name = "chb_CodigoPropioPaciente"
         Me.chb_CodigoPropioPaciente.Size = New System.Drawing.Size(178, 21)
         Me.chb_CodigoPropioPaciente.TabIndex = 9
@@ -127,8 +132,8 @@ Partial Class form_ConfiguracionUsuario
         'chb_datosCitaVisualEspecialidad
         '
         Me.chb_datosCitaVisualEspecialidad.AutoSize = True
-        Me.chb_datosCitaVisualEspecialidad.Location = New System.Drawing.Point(23, 113)
-        Me.chb_datosCitaVisualEspecialidad.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chb_datosCitaVisualEspecialidad.Location = New System.Drawing.Point(11, 63)
+        Me.chb_datosCitaVisualEspecialidad.Margin = New System.Windows.Forms.Padding(4)
         Me.chb_datosCitaVisualEspecialidad.Name = "chb_datosCitaVisualEspecialidad"
         Me.chb_datosCitaVisualEspecialidad.Size = New System.Drawing.Size(110, 21)
         Me.chb_datosCitaVisualEspecialidad.TabIndex = 8
@@ -138,8 +143,8 @@ Partial Class form_ConfiguracionUsuario
         'chb_datosCitaVisualNotas
         '
         Me.chb_datosCitaVisualNotas.AutoSize = True
-        Me.chb_datosCitaVisualNotas.Location = New System.Drawing.Point(23, 154)
-        Me.chb_datosCitaVisualNotas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chb_datosCitaVisualNotas.Location = New System.Drawing.Point(146, 63)
+        Me.chb_datosCitaVisualNotas.Margin = New System.Windows.Forms.Padding(4)
         Me.chb_datosCitaVisualNotas.Name = "chb_datosCitaVisualNotas"
         Me.chb_datosCitaVisualNotas.Size = New System.Drawing.Size(120, 21)
         Me.chb_datosCitaVisualNotas.TabIndex = 10
@@ -149,8 +154,8 @@ Partial Class form_ConfiguracionUsuario
         'chb_datosCitaVisualMedico
         '
         Me.chb_datosCitaVisualMedico.AutoSize = True
-        Me.chb_datosCitaVisualMedico.Location = New System.Drawing.Point(153, 33)
-        Me.chb_datosCitaVisualMedico.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chb_datosCitaVisualMedico.Location = New System.Drawing.Point(11, 25)
+        Me.chb_datosCitaVisualMedico.Margin = New System.Windows.Forms.Padding(4)
         Me.chb_datosCitaVisualMedico.Name = "chb_datosCitaVisualMedico"
         Me.chb_datosCitaVisualMedico.Size = New System.Drawing.Size(75, 21)
         Me.chb_datosCitaVisualMedico.TabIndex = 7
@@ -160,8 +165,8 @@ Partial Class form_ConfiguracionUsuario
         'chb_datosCitaVisualNombrePaciente
         '
         Me.chb_datosCitaVisualNombrePaciente.AutoSize = True
-        Me.chb_datosCitaVisualNombrePaciente.Location = New System.Drawing.Point(23, 33)
-        Me.chb_datosCitaVisualNombrePaciente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chb_datosCitaVisualNombrePaciente.Location = New System.Drawing.Point(145, 25)
+        Me.chb_datosCitaVisualNombrePaciente.Margin = New System.Windows.Forms.Padding(4)
         Me.chb_datosCitaVisualNombrePaciente.Name = "chb_datosCitaVisualNombrePaciente"
         Me.chb_datosCitaVisualNombrePaciente.Size = New System.Drawing.Size(85, 21)
         Me.chb_datosCitaVisualNombrePaciente.TabIndex = 6
@@ -174,9 +179,9 @@ Partial Class form_ConfiguracionUsuario
         Me.gb_estilopordefecto.Controls.Add(Me.rb_vistagrafica)
         Me.gb_estilopordefecto.Controls.Add(Me.chkMostrarListaMedicos)
         Me.gb_estilopordefecto.Location = New System.Drawing.Point(8, 23)
-        Me.gb_estilopordefecto.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gb_estilopordefecto.Margin = New System.Windows.Forms.Padding(4)
         Me.gb_estilopordefecto.Name = "gb_estilopordefecto"
-        Me.gb_estilopordefecto.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gb_estilopordefecto.Padding = New System.Windows.Forms.Padding(4)
         Me.gb_estilopordefecto.Size = New System.Drawing.Size(233, 191)
         Me.gb_estilopordefecto.TabIndex = 36
         Me.gb_estilopordefecto.TabStop = False
@@ -186,7 +191,7 @@ Partial Class form_ConfiguracionUsuario
         '
         Me.rb_vistaclasica.AutoSize = True
         Me.rb_vistaclasica.Location = New System.Drawing.Point(29, 71)
-        Me.rb_vistaclasica.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rb_vistaclasica.Margin = New System.Windows.Forms.Padding(4)
         Me.rb_vistaclasica.Name = "rb_vistaclasica"
         Me.rb_vistaclasica.Size = New System.Drawing.Size(109, 21)
         Me.rb_vistaclasica.TabIndex = 1
@@ -198,7 +203,7 @@ Partial Class form_ConfiguracionUsuario
         '
         Me.rb_vistagrafica.AutoSize = True
         Me.rb_vistagrafica.Location = New System.Drawing.Point(29, 32)
-        Me.rb_vistagrafica.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rb_vistagrafica.Margin = New System.Windows.Forms.Padding(4)
         Me.rb_vistagrafica.Name = "rb_vistagrafica"
         Me.rb_vistagrafica.Size = New System.Drawing.Size(107, 21)
         Me.rb_vistagrafica.TabIndex = 0
@@ -209,7 +214,7 @@ Partial Class form_ConfiguracionUsuario
         'chkMostrarListaMedicos
         '
         Me.chkMostrarListaMedicos.Location = New System.Drawing.Point(12, 114)
-        Me.chkMostrarListaMedicos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chkMostrarListaMedicos.Margin = New System.Windows.Forms.Padding(4)
         Me.chkMostrarListaMedicos.Name = "chkMostrarListaMedicos"
         Me.chkMostrarListaMedicos.Size = New System.Drawing.Size(213, 47)
         Me.chkMostrarListaMedicos.TabIndex = 2
@@ -222,9 +227,9 @@ Partial Class form_ConfiguracionUsuario
         Me.GroupBox2.Controls.Add(Me.chb_FiltrarMisCitas)
         Me.GroupBox2.Controls.Add(Me.chbNoFiltrar)
         Me.GroupBox2.Location = New System.Drawing.Point(1001, 23)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Size = New System.Drawing.Size(304, 191)
         Me.GroupBox2.TabIndex = 40
         Me.GroupBox2.TabStop = False
@@ -235,7 +240,7 @@ Partial Class form_ConfiguracionUsuario
         '
         Me.chbFiltrarElPrimerFacultativo.AutoSize = True
         Me.chbFiltrarElPrimerFacultativo.Location = New System.Drawing.Point(36, 114)
-        Me.chbFiltrarElPrimerFacultativo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chbFiltrarElPrimerFacultativo.Margin = New System.Windows.Forms.Padding(4)
         Me.chbFiltrarElPrimerFacultativo.Name = "chbFiltrarElPrimerFacultativo"
         Me.chbFiltrarElPrimerFacultativo.Size = New System.Drawing.Size(198, 21)
         Me.chbFiltrarElPrimerFacultativo.TabIndex = 6
@@ -246,7 +251,7 @@ Partial Class form_ConfiguracionUsuario
         '
         Me.chb_FiltrarMisCitas.AutoSize = True
         Me.chb_FiltrarMisCitas.Location = New System.Drawing.Point(36, 73)
-        Me.chb_FiltrarMisCitas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chb_FiltrarMisCitas.Margin = New System.Windows.Forms.Padding(4)
         Me.chb_FiltrarMisCitas.Name = "chb_FiltrarMisCitas"
         Me.chb_FiltrarMisCitas.Size = New System.Drawing.Size(237, 21)
         Me.chb_FiltrarMisCitas.TabIndex = 6
@@ -258,7 +263,7 @@ Partial Class form_ConfiguracionUsuario
         Me.chbNoFiltrar.AutoSize = True
         Me.chbNoFiltrar.Checked = True
         Me.chbNoFiltrar.Location = New System.Drawing.Point(36, 32)
-        Me.chbNoFiltrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chbNoFiltrar.Margin = New System.Windows.Forms.Padding(4)
         Me.chbNoFiltrar.Name = "chbNoFiltrar"
         Me.chbNoFiltrar.Size = New System.Drawing.Size(87, 21)
         Me.chbNoFiltrar.TabIndex = 6
@@ -271,9 +276,9 @@ Partial Class form_ConfiguracionUsuario
         Me.grpPacienteFocus.Controls.Add(Me.rb_Pacientes_CodigoPropio)
         Me.grpPacienteFocus.Controls.Add(Me.rb_Paciente_CodPaciente)
         Me.grpPacienteFocus.Location = New System.Drawing.Point(249, 23)
-        Me.grpPacienteFocus.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpPacienteFocus.Margin = New System.Windows.Forms.Padding(4)
         Me.grpPacienteFocus.Name = "grpPacienteFocus"
-        Me.grpPacienteFocus.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpPacienteFocus.Padding = New System.Windows.Forms.Padding(4)
         Me.grpPacienteFocus.Size = New System.Drawing.Size(273, 132)
         Me.grpPacienteFocus.TabIndex = 39
         Me.grpPacienteFocus.TabStop = False
@@ -284,7 +289,7 @@ Partial Class form_ConfiguracionUsuario
         Me.rb_Pacientes_CodigoPropio.AutoSize = True
         Me.rb_Pacientes_CodigoPropio.Checked = True
         Me.rb_Pacientes_CodigoPropio.Location = New System.Drawing.Point(37, 23)
-        Me.rb_Pacientes_CodigoPropio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rb_Pacientes_CodigoPropio.Margin = New System.Windows.Forms.Padding(4)
         Me.rb_Pacientes_CodigoPropio.Name = "rb_Pacientes_CodigoPropio"
         Me.rb_Pacientes_CodigoPropio.Size = New System.Drawing.Size(118, 21)
         Me.rb_Pacientes_CodigoPropio.TabIndex = 4
@@ -296,7 +301,7 @@ Partial Class form_ConfiguracionUsuario
         '
         Me.rb_Paciente_CodPaciente.AutoSize = True
         Me.rb_Paciente_CodPaciente.Location = New System.Drawing.Point(37, 52)
-        Me.rb_Paciente_CodPaciente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rb_Paciente_CodPaciente.Margin = New System.Windows.Forms.Padding(4)
         Me.rb_Paciente_CodPaciente.Name = "rb_Paciente_CodPaciente"
         Me.rb_Paciente_CodPaciente.Size = New System.Drawing.Size(132, 21)
         Me.rb_Paciente_CodPaciente.TabIndex = 5
@@ -308,9 +313,9 @@ Partial Class form_ConfiguracionUsuario
         Me.GroupBox1.Controls.Add(Me.lblTamanoTexto)
         Me.GroupBox1.Controls.Add(Me.nudTamanoTexto)
         Me.GroupBox1.Location = New System.Drawing.Point(8, 222)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(233, 132)
         Me.GroupBox1.TabIndex = 37
         Me.GroupBox1.TabStop = False
@@ -329,7 +334,7 @@ Partial Class form_ConfiguracionUsuario
         'nudTamanoTexto
         '
         Me.nudTamanoTexto.Location = New System.Drawing.Point(131, 52)
-        Me.nudTamanoTexto.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.nudTamanoTexto.Margin = New System.Windows.Forms.Padding(4)
         Me.nudTamanoTexto.Name = "nudTamanoTexto"
         Me.nudTamanoTexto.Size = New System.Drawing.Size(56, 22)
         Me.nudTamanoTexto.TabIndex = 3
@@ -367,7 +372,7 @@ Partial Class form_ConfiguracionUsuario
         Me.TabControl1.Controls.Add(Me.tabCitas)
         Me.TabControl1.Controls.Add(Me.tabComunicaciones)
         Me.TabControl1.Location = New System.Drawing.Point(4, 37)
-        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(863, 425)
@@ -383,9 +388,9 @@ Partial Class form_ConfiguracionUsuario
         Me.tabCitas.Controls.Add(Me.GroupBox1)
         Me.tabCitas.Controls.Add(Me.gb_datoscitavisual)
         Me.tabCitas.Location = New System.Drawing.Point(4, 25)
-        Me.tabCitas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tabCitas.Margin = New System.Windows.Forms.Padding(4)
         Me.tabCitas.Name = "tabCitas"
-        Me.tabCitas.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tabCitas.Padding = New System.Windows.Forms.Padding(4)
         Me.tabCitas.Size = New System.Drawing.Size(855, 396)
         Me.tabCitas.TabIndex = 0
         Me.tabCitas.Text = "Citas"
@@ -396,9 +401,9 @@ Partial Class form_ConfiguracionUsuario
         Me.GroupBox4.Controls.Add(Me.rbAp1Ap1No)
         Me.GroupBox4.Controls.Add(Me.rbNomApe1Ape2)
         Me.GroupBox4.Location = New System.Drawing.Point(531, 23)
-        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox4.Size = New System.Drawing.Size(311, 135)
         Me.GroupBox4.TabIndex = 42
         Me.GroupBox4.TabStop = False
@@ -409,7 +414,7 @@ Partial Class form_ConfiguracionUsuario
         Me.rbAp1Ap1No.AutoSize = True
         Me.rbAp1Ap1No.Checked = True
         Me.rbAp1Ap1No.Location = New System.Drawing.Point(24, 32)
-        Me.rbAp1Ap1No.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rbAp1Ap1No.Margin = New System.Windows.Forms.Padding(4)
         Me.rbAp1Ap1No.Name = "rbAp1Ap1No"
         Me.rbAp1Ap1No.Size = New System.Drawing.Size(235, 21)
         Me.rbAp1Ap1No.TabIndex = 11
@@ -421,7 +426,7 @@ Partial Class form_ConfiguracionUsuario
         '
         Me.rbNomApe1Ape2.AutoSize = True
         Me.rbNomApe1Ape2.Location = New System.Drawing.Point(24, 73)
-        Me.rbNomApe1Ape2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rbNomApe1Ape2.Margin = New System.Windows.Forms.Padding(4)
         Me.rbNomApe1Ape2.Name = "rbNomApe1Ape2"
         Me.rbNomApe1Ape2.Size = New System.Drawing.Size(235, 21)
         Me.rbNomApe1Ape2.TabIndex = 11
@@ -432,9 +437,9 @@ Partial Class form_ConfiguracionUsuario
         '
         Me.grpMedicos.Controls.Add(Me.chkSiUsuarioMedicoUsarPorDefecto)
         Me.grpMedicos.Location = New System.Drawing.Point(531, 166)
-        Me.grpMedicos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpMedicos.Margin = New System.Windows.Forms.Padding(4)
         Me.grpMedicos.Name = "grpMedicos"
-        Me.grpMedicos.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpMedicos.Padding = New System.Windows.Forms.Padding(4)
         Me.grpMedicos.Size = New System.Drawing.Size(311, 187)
         Me.grpMedicos.TabIndex = 41
         Me.grpMedicos.TabStop = False
@@ -443,7 +448,7 @@ Partial Class form_ConfiguracionUsuario
         'chkSiUsuarioMedicoUsarPorDefecto
         '
         Me.chkSiUsuarioMedicoUsarPorDefecto.Location = New System.Drawing.Point(12, 23)
-        Me.chkSiUsuarioMedicoUsarPorDefecto.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chkSiUsuarioMedicoUsarPorDefecto.Margin = New System.Windows.Forms.Padding(4)
         Me.chkSiUsuarioMedicoUsarPorDefecto.Name = "chkSiUsuarioMedicoUsarPorDefecto"
         Me.chkSiUsuarioMedicoUsarPorDefecto.Size = New System.Drawing.Size(283, 50)
         Me.chkSiUsuarioMedicoUsarPorDefecto.TabIndex = 9
@@ -455,9 +460,9 @@ Partial Class form_ConfiguracionUsuario
         Me.tabComunicaciones.Controls.Add(Me.GroupBox3)
         Me.tabComunicaciones.Controls.Add(Me.grpEMAIL)
         Me.tabComunicaciones.Location = New System.Drawing.Point(4, 25)
-        Me.tabComunicaciones.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tabComunicaciones.Margin = New System.Windows.Forms.Padding(4)
         Me.tabComunicaciones.Name = "tabComunicaciones"
-        Me.tabComunicaciones.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tabComunicaciones.Padding = New System.Windows.Forms.Padding(4)
         Me.tabComunicaciones.Size = New System.Drawing.Size(855, 396)
         Me.tabComunicaciones.TabIndex = 1
         Me.tabComunicaciones.Text = "Comunicaciones"
@@ -477,9 +482,9 @@ Partial Class form_ConfiguracionUsuario
         Me.GroupBox3.Controls.Add(Me.Label7)
         Me.GroupBox3.Controls.Add(Me.Label8)
         Me.GroupBox3.Location = New System.Drawing.Point(434, 7)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Size = New System.Drawing.Size(413, 381)
         Me.GroupBox3.TabIndex = 1
         Me.GroupBox3.TabStop = False
@@ -512,7 +517,7 @@ Partial Class form_ConfiguracionUsuario
         '
         Me.btnCheckSMS.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnCheckSMS.Location = New System.Drawing.Point(264, 340)
-        Me.btnCheckSMS.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCheckSMS.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCheckSMS.Name = "btnCheckSMS"
         Me.btnCheckSMS.Size = New System.Drawing.Size(141, 28)
         Me.btnCheckSMS.TabIndex = 8
@@ -522,7 +527,7 @@ Partial Class form_ConfiguracionUsuario
         'txtSMS_Password
         '
         Me.txtSMS_Password.Location = New System.Drawing.Point(227, 141)
-        Me.txtSMS_Password.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtSMS_Password.Margin = New System.Windows.Forms.Padding(4)
         Me.txtSMS_Password.Name = "txtSMS_Password"
         Me.txtSMS_Password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtSMS_Password.Size = New System.Drawing.Size(148, 22)
@@ -531,7 +536,7 @@ Partial Class form_ConfiguracionUsuario
         'txtSMS_user
         '
         Me.txtSMS_user.Location = New System.Drawing.Point(32, 141)
-        Me.txtSMS_user.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtSMS_user.Margin = New System.Windows.Forms.Padding(4)
         Me.txtSMS_user.Name = "txtSMS_user"
         Me.txtSMS_user.Size = New System.Drawing.Size(187, 22)
         Me.txtSMS_user.TabIndex = 5
@@ -539,7 +544,7 @@ Partial Class form_ConfiguracionUsuario
         'txtSMS_Server
         '
         Me.txtSMS_Server.Location = New System.Drawing.Point(27, 224)
-        Me.txtSMS_Server.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtSMS_Server.Margin = New System.Windows.Forms.Padding(4)
         Me.txtSMS_Server.Name = "txtSMS_Server"
         Me.txtSMS_Server.Size = New System.Drawing.Size(229, 22)
         Me.txtSMS_Server.TabIndex = 3
@@ -548,7 +553,7 @@ Partial Class form_ConfiguracionUsuario
         'txtSMS_Remitente
         '
         Me.txtSMS_Remitente.Location = New System.Drawing.Point(27, 54)
-        Me.txtSMS_Remitente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtSMS_Remitente.Margin = New System.Windows.Forms.Padding(4)
         Me.txtSMS_Remitente.Name = "txtSMS_Remitente"
         Me.txtSMS_Remitente.Size = New System.Drawing.Size(229, 22)
         Me.txtSMS_Remitente.TabIndex = 1
@@ -612,13 +617,23 @@ Partial Class form_ConfiguracionUsuario
         Me.grpEMAIL.Controls.Add(Me.Label2)
         Me.grpEMAIL.Controls.Add(Me.Label1)
         Me.grpEMAIL.Location = New System.Drawing.Point(9, 7)
-        Me.grpEMAIL.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpEMAIL.Margin = New System.Windows.Forms.Padding(4)
         Me.grpEMAIL.Name = "grpEMAIL"
-        Me.grpEMAIL.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpEMAIL.Padding = New System.Windows.Forms.Padding(4)
         Me.grpEMAIL.Size = New System.Drawing.Size(417, 381)
         Me.grpEMAIL.TabIndex = 0
         Me.grpEMAIL.TabStop = False
         Me.grpEMAIL.Text = "Email"
+        '
+        'ForzarV
+        '
+        Me.ForzarV.AutoSize = True
+        Me.ForzarV.Location = New System.Drawing.Point(27, 353)
+        Me.ForzarV.Name = "ForzarV"
+        Me.ForzarV.Size = New System.Drawing.Size(138, 21)
+        Me.ForzarV.TabIndex = 11
+        Me.ForzarV.Text = "Forzar validación"
+        Me.ForzarV.UseVisualStyleBackColor = True
         '
         'lblEmailVerificado
         '
@@ -647,7 +662,7 @@ Partial Class form_ConfiguracionUsuario
         Me.chk_EMAIL_SSL.Checked = True
         Me.chk_EMAIL_SSL.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chk_EMAIL_SSL.Location = New System.Drawing.Point(27, 256)
-        Me.chk_EMAIL_SSL.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chk_EMAIL_SSL.Margin = New System.Windows.Forms.Padding(4)
         Me.chk_EMAIL_SSL.Name = "chk_EMAIL_SSL"
         Me.chk_EMAIL_SSL.Size = New System.Drawing.Size(90, 21)
         Me.chk_EMAIL_SSL.TabIndex = 9
@@ -658,7 +673,7 @@ Partial Class form_ConfiguracionUsuario
         '
         Me.txtSMTP_Port.DecimalDigits = 0
         Me.txtSMTP_Port.Location = New System.Drawing.Point(301, 141)
-        Me.txtSMTP_Port.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtSMTP_Port.Margin = New System.Windows.Forms.Padding(4)
         Me.txtSMTP_Port.Name = "txtSMTP_Port"
         Me.txtSMTP_Port.Size = New System.Drawing.Size(61, 22)
         Me.txtSMTP_Port.TabIndex = 2
@@ -668,7 +683,7 @@ Partial Class form_ConfiguracionUsuario
         'btnComprobarEMAIL
         '
         Me.btnComprobarEMAIL.Location = New System.Drawing.Point(309, 323)
-        Me.btnComprobarEMAIL.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnComprobarEMAIL.Margin = New System.Windows.Forms.Padding(4)
         Me.btnComprobarEMAIL.Name = "btnComprobarEMAIL"
         Me.btnComprobarEMAIL.Size = New System.Drawing.Size(100, 28)
         Me.btnComprobarEMAIL.TabIndex = 8
@@ -678,7 +693,7 @@ Partial Class form_ConfiguracionUsuario
         'txtSMTP_Password
         '
         Me.txtSMTP_Password.Location = New System.Drawing.Point(205, 224)
-        Me.txtSMTP_Password.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtSMTP_Password.Margin = New System.Windows.Forms.Padding(4)
         Me.txtSMTP_Password.Name = "txtSMTP_Password"
         Me.txtSMTP_Password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtSMTP_Password.Size = New System.Drawing.Size(157, 22)
@@ -687,7 +702,7 @@ Partial Class form_ConfiguracionUsuario
         'txtSMTP_User
         '
         Me.txtSMTP_User.Location = New System.Drawing.Point(27, 224)
-        Me.txtSMTP_User.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtSMTP_User.Margin = New System.Windows.Forms.Padding(4)
         Me.txtSMTP_User.Name = "txtSMTP_User"
         Me.txtSMTP_User.Size = New System.Drawing.Size(157, 22)
         Me.txtSMTP_User.TabIndex = 5
@@ -695,7 +710,7 @@ Partial Class form_ConfiguracionUsuario
         'txtSMTP_Server
         '
         Me.txtSMTP_Server.Location = New System.Drawing.Point(27, 141)
-        Me.txtSMTP_Server.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtSMTP_Server.Margin = New System.Windows.Forms.Padding(4)
         Me.txtSMTP_Server.Name = "txtSMTP_Server"
         Me.txtSMTP_Server.Size = New System.Drawing.Size(267, 22)
         Me.txtSMTP_Server.TabIndex = 3
@@ -703,7 +718,7 @@ Partial Class form_ConfiguracionUsuario
         'txtEmail
         '
         Me.txtEmail.Location = New System.Drawing.Point(27, 54)
-        Me.txtEmail.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(339, 22)
         Me.txtEmail.TabIndex = 1
@@ -758,15 +773,25 @@ Partial Class form_ConfiguracionUsuario
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Dirección de correo:"
         '
-        'ForzarV
+        'Label11
         '
-        Me.ForzarV.AutoSize = True
-        Me.ForzarV.Location = New System.Drawing.Point(27, 353)
-        Me.ForzarV.Name = "ForzarV"
-        Me.ForzarV.Size = New System.Drawing.Size(138, 21)
-        Me.ForzarV.TabIndex = 11
-        Me.ForzarV.Text = "Forzar validación"
-        Me.ForzarV.UseVisualStyleBackColor = True
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(16, 154)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(173, 17)
+        Me.Label11.TabIndex = 4
+        Me.Label11.Text = "Número Columnas Médico"
+        '
+        'NumMedicos
+        '
+        Me.NumMedicos.Location = New System.Drawing.Point(197, 152)
+        Me.NumMedicos.Margin = New System.Windows.Forms.Padding(4)
+        Me.NumMedicos.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.NumMedicos.Name = "NumMedicos"
+        Me.NumMedicos.Size = New System.Drawing.Size(56, 22)
+        Me.NumMedicos.TabIndex = 5
+        Me.NumMedicos.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'form_ConfiguracionUsuario
         '
@@ -777,10 +802,10 @@ Partial Class form_ConfiguracionUsuario
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "form_ConfiguracionUsuario"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "form_ConfiguracionUsuario"
+        Me.Text = "ConfiguracionUsuario"
         Me.gb_datoscitavisual.ResumeLayout(False)
         Me.gb_datoscitavisual.PerformLayout()
         Me.gb_estilopordefecto.ResumeLayout(False)
@@ -804,6 +829,7 @@ Partial Class form_ConfiguracionUsuario
         Me.GroupBox3.PerformLayout()
         Me.grpEMAIL.ResumeLayout(False)
         Me.grpEMAIL.PerformLayout()
+        CType(Me.NumMedicos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -867,4 +893,6 @@ Partial Class form_ConfiguracionUsuario
     Friend WithEvents rbAp1Ap1No As System.Windows.Forms.RadioButton
     Friend WithEvents rbNomApe1Ape2 As System.Windows.Forms.RadioButton
     Friend WithEvents ForzarV As System.Windows.Forms.CheckBox
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents NumMedicos As System.Windows.Forms.NumericUpDown
 End Class
