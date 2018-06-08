@@ -189,6 +189,7 @@ Public Class Configuracion
     Public carpetacompartidaficheros As String
 
     Public VincularCitaMutua As Boolean = True
+    Public NumeroColumnaMedico As Integer = 1
 
     Public AutoSugerirHoraCita As Boolean = True
 
@@ -563,6 +564,12 @@ Public Class Configuracion
             VincularCitaMutua = Boolean.Parse(Me.LeeConfiguracionDesdeBd("VincularCitaMutua").ToString())
         End If
 
+        If Me.LeeConfiguracionDesdeBd("NumeroColumnaMedico") = "" Then
+            NumeroColumnaMedico = 5
+        Else
+            NumeroColumnaMedico = Integer.Parse(Me.LeeConfiguracionDesdeBd("NumeroColumnaMedico").ToString())
+        End If
+
         'If Me.LeeConfiguracionDesdeBd("Citas_Medico_OcultarColumna") = "" Then
         '    Citas_Medico_OcultarColumna = False
         'Else
@@ -655,6 +662,7 @@ Public Class Configuracion
         LeeConfiguracionDesdeBd("AutoSugerirHoraCita", AutoSugerirHoraCita, False)
         LeeConfiguracionDesdeBd("SincCalendCitaFtp", SincCalendCitaFtp, False)
         LeeConfiguracionDesdeBd("VincularCitaMutua", VincularCitaMutua, False)
+        LeeConfiguracionDesdeBd("NumeroColumnaMedico", NumeroColumnaMedico, False)
         LeeConfiguracionDesdeBd("IdentificadorClinica", IdentificadorClinica, False)
 
 

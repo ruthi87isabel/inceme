@@ -50,7 +50,6 @@ Public Class frmUsuarios_ADD
     End Sub
 
     Private Sub btn_Guardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Guardar.Click
-        Dim IdMedico As Integer = Usuario.REFMEDICO
 
         If CONTRASENATextBox.Text <> RepetirContrasenna.Text Then
             MessageBox.Show("Las contrasennas deben coincidir")

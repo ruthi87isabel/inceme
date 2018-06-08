@@ -172,20 +172,22 @@
                 Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.TabControl1.Controls.Add(Me.tabCalendario)
             Me.TabControl1.Controls.Add(Me.TabListado)
-            Me.TabControl1.Location = New System.Drawing.Point(7, 28)
+            Me.TabControl1.Location = New System.Drawing.Point(9, 34)
+            Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.TabControl1.Name = "TabControl1"
             Me.TabControl1.SelectedIndex = 0
-            Me.TabControl1.Size = New System.Drawing.Size(703, 628)
+            Me.TabControl1.Size = New System.Drawing.Size(937, 773)
             Me.TabControl1.TabIndex = 5
             '
             'tabCalendario
             '
             Me.tabCalendario.AutoScroll = True
             Me.tabCalendario.Controls.Add(Me.ScheduleCitas)
-            Me.tabCalendario.Location = New System.Drawing.Point(4, 22)
+            Me.tabCalendario.Location = New System.Drawing.Point(4, 25)
+            Me.tabCalendario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.tabCalendario.Name = "tabCalendario"
-            Me.tabCalendario.Padding = New System.Windows.Forms.Padding(3)
-            Me.tabCalendario.Size = New System.Drawing.Size(695, 602)
+            Me.tabCalendario.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.tabCalendario.Size = New System.Drawing.Size(929, 744)
             Me.tabCalendario.TabIndex = 0
             Me.tabCalendario.Text = "Planning Visual"
             Me.tabCalendario.UseVisualStyleBackColor = True
@@ -202,7 +204,7 @@
                 Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.ScheduleCitas.DataSource = Me.CITABindingSource
             Me.ScheduleCitas.Date = New Date(2010, 4, 19, 0, 0, 0, 0)
-            Me.ScheduleCitas.DayColumns = 5
+            Me.ScheduleCitas.DayColumns = 4
             Me.ScheduleCitas.DayEndHour = 17
             Me.ScheduleCitas.DayNavigationButtons = True
             Me.ScheduleCitas.DayStartHour = 8
@@ -210,16 +212,16 @@
             ScheduleCitas_DesignTimeLayout.LayoutString = resources.GetString("ScheduleCitas_DesignTimeLayout.LayoutString")
             Me.ScheduleCitas.DesignTimeLayout = ScheduleCitas_DesignTimeLayout
             Me.ScheduleCitas.EndTimeMember = "HORAFIN"
-            Me.ScheduleCitas.FirstDayOfWeek = Janus.Windows.Schedule.ScheduleDayOfWeek.Monday
             Me.ScheduleCitas.ImageList = Me.ImageList1
             Me.ScheduleCitas.Interval = Janus.Windows.Schedule.Interval.FifteenMinutes
-            Me.ScheduleCitas.Location = New System.Drawing.Point(8, 9)
+            Me.ScheduleCitas.Location = New System.Drawing.Point(11, 11)
+            Me.ScheduleCitas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.ScheduleCitas.Name = "ScheduleCitas"
             Me.ScheduleCitas.OwnerDrawnArea = Janus.Windows.Schedule.OwnerDrawnArea.Appointments
             Me.ScheduleCitas.OwnerMember = "REFMEDICO"
             Me.ScheduleCitas.ShowAllDayArea = False
             Me.ScheduleCitas.ShowMinutesInTimeNavigator = True
-            Me.ScheduleCitas.Size = New System.Drawing.Size(681, 587)
+            Me.ScheduleCitas.Size = New System.Drawing.Size(908, 722)
             Me.ScheduleCitas.StartTimeMember = "HORA"
             Me.ScheduleCitas.TabIndex = 2
             Me.ScheduleCitas.TimeFormat = Janus.Windows.Schedule.TimeFormat.TwentyFourHours
@@ -243,10 +245,11 @@
             'TabListado
             '
             Me.TabListado.Controls.Add(Me.GridEX1)
-            Me.TabListado.Location = New System.Drawing.Point(4, 22)
+            Me.TabListado.Location = New System.Drawing.Point(4, 25)
+            Me.TabListado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.TabListado.Name = "TabListado"
-            Me.TabListado.Padding = New System.Windows.Forms.Padding(3)
-            Me.TabListado.Size = New System.Drawing.Size(695, 602)
+            Me.TabListado.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.TabListado.Size = New System.Drawing.Size(929, 744)
             Me.TabListado.TabIndex = 1
             Me.TabListado.Text = "Listado"
             Me.TabListado.UseVisualStyleBackColor = True
@@ -269,11 +272,12 @@
             Me.GridEX1.GroupByBoxVisible = False
             Me.GridEX1.HideSelection = Janus.Windows.GridEX.HideSelection.Highlight
             Me.GridEX1.Hierarchical = True
-            Me.GridEX1.Location = New System.Drawing.Point(6, 3)
+            Me.GridEX1.Location = New System.Drawing.Point(8, 4)
+            Me.GridEX1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.GridEX1.Name = "GridEX1"
             Me.GridEX1.RepeatHeaders = Janus.Windows.GridEX.InheritableBoolean.[False]
             Me.GridEX1.RowCheckStateBehavior = Janus.Windows.GridEX.RowCheckStateBehavior.CheckStateDependsOnChild
-            Me.GridEX1.Size = New System.Drawing.Size(683, 593)
+            Me.GridEX1.Size = New System.Drawing.Size(911, 730)
             Me.GridEX1.TabIndex = 130
             Me.GridEX1.TotalRow = Janus.Windows.GridEX.InheritableBoolean.[True]
             Me.GridEX1.TotalRowPosition = Janus.Windows.GridEX.TotalRowPosition.BottomFixed
@@ -281,9 +285,10 @@
             'rbPorSala
             '
             Me.rbPorSala.AutoSize = True
-            Me.rbPorSala.Location = New System.Drawing.Point(206, 16)
+            Me.rbPorSala.Location = New System.Drawing.Point(275, 20)
+            Me.rbPorSala.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.rbPorSala.Name = "rbPorSala"
-            Me.rbPorSala.Size = New System.Drawing.Size(65, 17)
+            Me.rbPorSala.Size = New System.Drawing.Size(83, 21)
             Me.rbPorSala.TabIndex = 21
             Me.rbPorSala.Text = "Por Sala"
             Me.rbPorSala.UseVisualStyleBackColor = True
@@ -291,9 +296,10 @@
             'rbPorMedicos
             '
             Me.rbPorMedicos.AutoSize = True
-            Me.rbPorMedicos.Location = New System.Drawing.Point(122, 16)
+            Me.rbPorMedicos.Location = New System.Drawing.Point(163, 20)
+            Me.rbPorMedicos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.rbPorMedicos.Name = "rbPorMedicos"
-            Me.rbPorMedicos.Size = New System.Drawing.Size(79, 17)
+            Me.rbPorMedicos.Size = New System.Drawing.Size(100, 21)
             Me.rbPorMedicos.TabIndex = 21
             Me.rbPorMedicos.Text = "Por Médico"
             Me.rbPorMedicos.UseVisualStyleBackColor = True
@@ -302,9 +308,10 @@
             '
             Me.rbTodas.AutoSize = True
             Me.rbTodas.Checked = True
-            Me.rbTodas.Location = New System.Drawing.Point(59, 16)
+            Me.rbTodas.Location = New System.Drawing.Point(79, 20)
+            Me.rbTodas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.rbTodas.Name = "rbTodas"
-            Me.rbTodas.Size = New System.Drawing.Size(55, 17)
+            Me.rbTodas.Size = New System.Drawing.Size(69, 21)
             Me.rbTodas.TabIndex = 21
             Me.rbTodas.TabStop = True
             Me.rbTodas.Text = "Todas"
@@ -314,11 +321,12 @@
             '
             Me.Calendar2.AllowDrop = True
             Me.Calendar2.FirstMonth = New Date(2010, 4, 1, 0, 0, 0, 0)
-            Me.Calendar2.Location = New System.Drawing.Point(5, 6)
+            Me.Calendar2.Location = New System.Drawing.Point(7, 7)
+            Me.Calendar2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.Calendar2.Name = "Calendar2"
             Me.Calendar2.Schedule = Me.ScheduleCitas
             Me.Calendar2.SelectionStyle = Janus.Windows.Schedule.CalendarSelectionStyle.Schedule
-            Me.Calendar2.Size = New System.Drawing.Size(148, 136)
+            Me.Calendar2.Size = New System.Drawing.Size(184, 168)
             Me.Calendar2.TabIndex = 17
             '
             'gb_pacientes
@@ -327,9 +335,11 @@
             Me.gb_pacientes.Controls.Add(Me.rb_pendientes)
             Me.gb_pacientes.Controls.Add(Me.rb_atendidos)
             Me.gb_pacientes.Controls.Add(Me.rb_todos)
-            Me.gb_pacientes.Location = New System.Drawing.Point(718, 49)
+            Me.gb_pacientes.Location = New System.Drawing.Point(957, 60)
+            Me.gb_pacientes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.gb_pacientes.Name = "gb_pacientes"
-            Me.gb_pacientes.Size = New System.Drawing.Size(285, 39)
+            Me.gb_pacientes.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.gb_pacientes.Size = New System.Drawing.Size(380, 48)
             Me.gb_pacientes.TabIndex = 14
             Me.gb_pacientes.TabStop = False
             Me.gb_pacientes.Text = "Mostrar pacientes"
@@ -337,9 +347,10 @@
             'rb_pendientes
             '
             Me.rb_pendientes.AutoSize = True
-            Me.rb_pendientes.Location = New System.Drawing.Point(202, 16)
+            Me.rb_pendientes.Location = New System.Drawing.Point(269, 20)
+            Me.rb_pendientes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.rb_pendientes.Name = "rb_pendientes"
-            Me.rb_pendientes.Size = New System.Drawing.Size(78, 17)
+            Me.rb_pendientes.Size = New System.Drawing.Size(100, 21)
             Me.rb_pendientes.TabIndex = 2
             Me.rb_pendientes.Text = "Pendientes"
             Me.rb_pendientes.UseVisualStyleBackColor = True
@@ -347,9 +358,10 @@
             'rb_atendidos
             '
             Me.rb_atendidos.AutoSize = True
-            Me.rb_atendidos.Location = New System.Drawing.Point(122, 16)
+            Me.rb_atendidos.Location = New System.Drawing.Point(163, 20)
+            Me.rb_atendidos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.rb_atendidos.Name = "rb_atendidos"
-            Me.rb_atendidos.Size = New System.Drawing.Size(72, 17)
+            Me.rb_atendidos.Size = New System.Drawing.Size(92, 21)
             Me.rb_atendidos.TabIndex = 1
             Me.rb_atendidos.Text = "Atendidos"
             Me.rb_atendidos.UseVisualStyleBackColor = True
@@ -358,9 +370,10 @@
             '
             Me.rb_todos.AutoSize = True
             Me.rb_todos.Checked = True
-            Me.rb_todos.Location = New System.Drawing.Point(59, 16)
+            Me.rb_todos.Location = New System.Drawing.Point(79, 20)
+            Me.rb_todos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.rb_todos.Name = "rb_todos"
-            Me.rb_todos.Size = New System.Drawing.Size(55, 17)
+            Me.rb_todos.Size = New System.Drawing.Size(69, 21)
             Me.rb_todos.TabIndex = 0
             Me.rb_todos.TabStop = True
             Me.rb_todos.Text = "Todos"
@@ -370,75 +383,75 @@
             '
             Me.menu_citas.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VerCitaToolStripMenuItem, Me.ModificarCitaToolStripMenuItem, Me.BorrarCitaToolStripMenuItem, Me.DuplicarCitaToolStripMenuItem, Me.ToolStripSeparator2, Me.mi_cambiar})
             Me.menu_citas.Name = "ContextMenuStrip1"
-            Me.menu_citas.Size = New System.Drawing.Size(158, 120)
+            Me.menu_citas.Size = New System.Drawing.Size(184, 130)
             '
             'VerCitaToolStripMenuItem
             '
             Me.VerCitaToolStripMenuItem.Image = Global.centro_medico.My.Resources.Resources._24_zoom
             Me.VerCitaToolStripMenuItem.Name = "VerCitaToolStripMenuItem"
-            Me.VerCitaToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
+            Me.VerCitaToolStripMenuItem.Size = New System.Drawing.Size(183, 24)
             Me.VerCitaToolStripMenuItem.Text = "Ver Cita"
             '
             'ModificarCitaToolStripMenuItem
             '
             Me.ModificarCitaToolStripMenuItem.Image = Global.centro_medico.My.Resources.Resources._24_tag_pencil
             Me.ModificarCitaToolStripMenuItem.Name = "ModificarCitaToolStripMenuItem"
-            Me.ModificarCitaToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
+            Me.ModificarCitaToolStripMenuItem.Size = New System.Drawing.Size(183, 24)
             Me.ModificarCitaToolStripMenuItem.Text = "Modificar Cita"
             '
             'BorrarCitaToolStripMenuItem
             '
             Me.BorrarCitaToolStripMenuItem.Image = Global.centro_medico.My.Resources.Resources._24_em_cross
             Me.BorrarCitaToolStripMenuItem.Name = "BorrarCitaToolStripMenuItem"
-            Me.BorrarCitaToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
+            Me.BorrarCitaToolStripMenuItem.Size = New System.Drawing.Size(183, 24)
             Me.BorrarCitaToolStripMenuItem.Text = "Borrar Cita"
             '
             'DuplicarCitaToolStripMenuItem
             '
             Me.DuplicarCitaToolStripMenuItem.Image = Global.centro_medico.My.Resources.Resources._24_imageset
             Me.DuplicarCitaToolStripMenuItem.Name = "DuplicarCitaToolStripMenuItem"
-            Me.DuplicarCitaToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
+            Me.DuplicarCitaToolStripMenuItem.Size = New System.Drawing.Size(183, 24)
             Me.DuplicarCitaToolStripMenuItem.Text = "Duplicar Cita"
             '
             'ToolStripSeparator2
             '
             Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-            Me.ToolStripSeparator2.Size = New System.Drawing.Size(154, 6)
+            Me.ToolStripSeparator2.Size = New System.Drawing.Size(180, 6)
             '
             'mi_cambiar
             '
             Me.mi_cambiar.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mi_atendida, Me.mi_confirmada, Me.mi_falta, Me.mi_cobrada})
             Me.mi_cambiar.Name = "mi_cambiar"
             Me.mi_cambiar.RightToLeftAutoMirrorImage = True
-            Me.mi_cambiar.Size = New System.Drawing.Size(157, 22)
+            Me.mi_cambiar.Size = New System.Drawing.Size(183, 24)
             Me.mi_cambiar.Text = "Cambiar estado"
             '
             'mi_atendida
             '
             Me.mi_atendida.CheckOnClick = True
             Me.mi_atendida.Name = "mi_atendida"
-            Me.mi_atendida.Size = New System.Drawing.Size(137, 22)
+            Me.mi_atendida.Size = New System.Drawing.Size(156, 24)
             Me.mi_atendida.Text = "Atendida"
             '
             'mi_confirmada
             '
             Me.mi_confirmada.CheckOnClick = True
             Me.mi_confirmada.Name = "mi_confirmada"
-            Me.mi_confirmada.Size = New System.Drawing.Size(137, 22)
+            Me.mi_confirmada.Size = New System.Drawing.Size(156, 24)
             Me.mi_confirmada.Text = "Confirmada"
             '
             'mi_falta
             '
             Me.mi_falta.CheckOnClick = True
             Me.mi_falta.Name = "mi_falta"
-            Me.mi_falta.Size = New System.Drawing.Size(137, 22)
+            Me.mi_falta.Size = New System.Drawing.Size(156, 24)
             Me.mi_falta.Text = "Falta"
             '
             'mi_cobrada
             '
             Me.mi_cobrada.CheckOnClick = True
             Me.mi_cobrada.Name = "mi_cobrada"
-            Me.mi_cobrada.Size = New System.Drawing.Size(137, 22)
+            Me.mi_cobrada.Size = New System.Drawing.Size(156, 24)
             Me.mi_cobrada.Text = "Cobrada"
             '
             'ToolStrip1
@@ -447,7 +460,7 @@
             Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tstNuevaCitas, Me.tstModificar, Me.tstEliminar, Me.ToolStripSeparator1, Me.tstDuplicarCita, Me.tstVer, Me.tstImprimir, Me.tstImprimirDetallado, Me.tstImprimirJustificante})
             Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
             Me.ToolStrip1.Name = "ToolStrip1"
-            Me.ToolStrip1.Size = New System.Drawing.Size(691, 25)
+            Me.ToolStrip1.Size = New System.Drawing.Size(824, 27)
             Me.ToolStrip1.TabIndex = 6
             Me.ToolStrip1.Text = "ToolStrip1"
             '
@@ -456,7 +469,7 @@
             Me.tstNuevaCitas.Image = Global.centro_medico.My.Resources.Resources._24_em_plus
             Me.tstNuevaCitas.ImageTransparentColor = System.Drawing.Color.Magenta
             Me.tstNuevaCitas.Name = "tstNuevaCitas"
-            Me.tstNuevaCitas.Size = New System.Drawing.Size(85, 22)
+            Me.tstNuevaCitas.Size = New System.Drawing.Size(101, 24)
             Me.tstNuevaCitas.Text = "&Nueva Cita"
             '
             'tstModificar
@@ -465,7 +478,7 @@
             Me.tstModificar.Image = Global.centro_medico.My.Resources.Resources._24_tag_pencil
             Me.tstModificar.ImageTransparentColor = System.Drawing.Color.Magenta
             Me.tstModificar.Name = "tstModificar"
-            Me.tstModificar.Size = New System.Drawing.Size(102, 22)
+            Me.tstModificar.Size = New System.Drawing.Size(123, 24)
             Me.tstModificar.Text = "&Modificar Cita"
             '
             'tstEliminar
@@ -474,13 +487,13 @@
             Me.tstEliminar.Image = Global.centro_medico.My.Resources.Resources._24_em_cross
             Me.tstEliminar.ImageTransparentColor = System.Drawing.Color.Magenta
             Me.tstEliminar.Name = "tstEliminar"
-            Me.tstEliminar.Size = New System.Drawing.Size(70, 22)
+            Me.tstEliminar.Size = New System.Drawing.Size(83, 24)
             Me.tstEliminar.Text = "&Eliminar"
             '
             'ToolStripSeparator1
             '
             Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-            Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+            Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
             '
             'tstDuplicarCita
             '
@@ -488,7 +501,7 @@
             Me.tstDuplicarCita.Image = Global.centro_medico.My.Resources.Resources._24_imageset
             Me.tstDuplicarCita.ImageTransparentColor = System.Drawing.Color.Magenta
             Me.tstDuplicarCita.Name = "tstDuplicarCita"
-            Me.tstDuplicarCita.Size = New System.Drawing.Size(95, 22)
+            Me.tstDuplicarCita.Size = New System.Drawing.Size(115, 24)
             Me.tstDuplicarCita.Text = "&Duplicar Cita"
             '
             'tstVer
@@ -497,7 +510,7 @@
             Me.tstVer.Image = Global.centro_medico.My.Resources.Resources._24_zoom
             Me.tstVer.ImageTransparentColor = System.Drawing.Color.Magenta
             Me.tstVer.Name = "tstVer"
-            Me.tstVer.Size = New System.Drawing.Size(44, 22)
+            Me.tstVer.Size = New System.Drawing.Size(51, 24)
             Me.tstVer.Text = "&Ver"
             '
             'tstImprimir
@@ -505,7 +518,7 @@
             Me.tstImprimir.Image = Global.centro_medico.My.Resources.Resources.Print
             Me.tstImprimir.ImageTransparentColor = System.Drawing.Color.Magenta
             Me.tstImprimir.Name = "tstImprimir"
-            Me.tstImprimir.Size = New System.Drawing.Size(73, 22)
+            Me.tstImprimir.Size = New System.Drawing.Size(86, 24)
             Me.tstImprimir.Text = "&Imprimir"
             '
             'tstImprimirDetallado
@@ -513,7 +526,7 @@
             Me.tstImprimirDetallado.Image = Global.centro_medico.My.Resources.Resources.Print
             Me.tstImprimirDetallado.ImageTransparentColor = System.Drawing.Color.Magenta
             Me.tstImprimirDetallado.Name = "tstImprimirDetallado"
-            Me.tstImprimirDetallado.Size = New System.Drawing.Size(126, 22)
+            Me.tstImprimirDetallado.Size = New System.Drawing.Size(156, 24)
             Me.tstImprimirDetallado.Text = "&Imprimir Detallado"
             '
             'tstImprimirJustificante
@@ -521,7 +534,7 @@
             Me.tstImprimirJustificante.Image = Global.centro_medico.My.Resources.Resources.Print
             Me.tstImprimirJustificante.ImageTransparentColor = System.Drawing.Color.Magenta
             Me.tstImprimirJustificante.Name = "tstImprimirJustificante"
-            Me.tstImprimirJustificante.Size = New System.Drawing.Size(78, 22)
+            Me.tstImprimirJustificante.Size = New System.Drawing.Size(91, 24)
             Me.tstImprimirJustificante.Text = "&Impr. Just"
             '
             'tlbPrev
@@ -619,9 +632,10 @@
             '
             Me.StatusStrip1.Font = New System.Drawing.Font("Tahoma", 7.5!)
             Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tlsAtendida, Me.tlsConfirmada, Me.tlsFalta, Me.ToolStripStatusLabel6, Me.tlsPagadaFalta, Me.ToolStripStatusLabel9, Me.ToolStripStatusLabel10, Me.tstSala, Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel2, Me.ToolStripStatusLabel3, Me.ToolStripStatusLabel4, Me.ToolStripStatusLabel5, Me.ToolStripStatusLabel7, Me.ToolStripStatusLabel8})
-            Me.StatusStrip1.Location = New System.Drawing.Point(0, 659)
+            Me.StatusStrip1.Location = New System.Drawing.Point(0, 817)
             Me.StatusStrip1.Name = "StatusStrip1"
-            Me.StatusStrip1.Size = New System.Drawing.Size(1008, 25)
+            Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(1, 0, 19, 0)
+            Me.StatusStrip1.Size = New System.Drawing.Size(1344, 25)
             Me.StatusStrip1.TabIndex = 13
             Me.StatusStrip1.Text = "StatusStrip1"
             '
@@ -629,28 +643,28 @@
             '
             Me.tlsAtendida.BackColor = System.Drawing.Color.FromArgb(CType(CType(70, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
             Me.tlsAtendida.Name = "tlsAtendida"
-            Me.tlsAtendida.Size = New System.Drawing.Size(45, 20)
+            Me.tlsAtendida.Size = New System.Drawing.Size(58, 20)
             Me.tlsAtendida.Text = "Atendida"
             '
             'tlsConfirmada
             '
             Me.tlsConfirmada.BackColor = System.Drawing.Color.Silver
             Me.tlsConfirmada.Name = "tlsConfirmada"
-            Me.tlsConfirmada.Size = New System.Drawing.Size(57, 20)
+            Me.tlsConfirmada.Size = New System.Drawing.Size(74, 20)
             Me.tlsConfirmada.Text = "Confirmada"
             '
             'tlsFalta
             '
             Me.tlsFalta.BackColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(100, Byte), Integer))
             Me.tlsFalta.Name = "tlsFalta"
-            Me.tlsFalta.Size = New System.Drawing.Size(67, 20)
+            Me.tlsFalta.Size = New System.Drawing.Size(87, 20)
             Me.tlsFalta.Text = "Anulada/Falta"
             '
             'ToolStripStatusLabel6
             '
             Me.ToolStripStatusLabel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(120, Byte), Integer))
             Me.ToolStripStatusLabel6.Name = "ToolStripStatusLabel6"
-            Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(44, 20)
+            Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(56, 20)
             Me.ToolStripStatusLabel6.Text = "Cobrada"
             '
             'tlsPagadaFalta
@@ -658,7 +672,7 @@
             Me.tlsPagadaFalta.BackColor = System.Drawing.Color.LightGreen
             Me.tlsPagadaFalta.ForeColor = System.Drawing.Color.Red
             Me.tlsPagadaFalta.Name = "tlsPagadaFalta"
-            Me.tlsPagadaFalta.Size = New System.Drawing.Size(63, 20)
+            Me.tlsPagadaFalta.Size = New System.Drawing.Size(83, 20)
             Me.tlsPagadaFalta.Text = "Pagada-Falta"
             '
             'ToolStripStatusLabel9
@@ -697,7 +711,7 @@
             Me.tstSala.Image = Global.centro_medico.My.Resources.Resources._24_image
             Me.tstSala.Margin = New System.Windows.Forms.Padding(2, 3, 2, 2)
             Me.tstSala.Name = "tstSala"
-            Me.tstSala.Size = New System.Drawing.Size(58, 20)
+            Me.tstSala.Size = New System.Drawing.Size(71, 20)
             Me.tstSala.Text = "En Sala"
             Me.tstSala.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
             '
@@ -705,44 +719,44 @@
             '
             Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
             Me.ToolStripStatusLabel1.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-            Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(102, 20)
+            Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(127, 20)
             Me.ToolStripStatusLabel1.Text = "Alt+N -> Nueva Cita"
             '
             'ToolStripStatusLabel2
             '
             Me.ToolStripStatusLabel2.Name = "ToolStripStatusLabel2"
-            Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(121, 20)
+            Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(152, 20)
             Me.ToolStripStatusLabel2.Text = "Alt+p-> Nueva Cita Multp"
             Me.ToolStripStatusLabel2.Visible = False
             '
             'ToolStripStatusLabel3
             '
             Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
-            Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(87, 20)
+            Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(111, 20)
             Me.ToolStripStatusLabel3.Text = "Alt+M-> Modificar"
             '
             'ToolStripStatusLabel4
             '
             Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
-            Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(73, 20)
+            Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(92, 20)
             Me.ToolStripStatusLabel4.Text = "Alt+B-> Borrar"
             '
             'ToolStripStatusLabel5
             '
             Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
-            Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(80, 20)
+            Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(102, 20)
             Me.ToolStripStatusLabel5.Text = "Alt+I-> Imprimir"
             '
             'ToolStripStatusLabel7
             '
             Me.ToolStripStatusLabel7.Name = "ToolStripStatusLabel7"
-            Me.ToolStripStatusLabel7.Size = New System.Drawing.Size(59, 20)
+            Me.ToolStripStatusLabel7.Size = New System.Drawing.Size(77, 20)
             Me.ToolStripStatusLabel7.Text = "Alt+V-> Ver"
             '
             'ToolStripStatusLabel8
             '
             Me.ToolStripStatusLabel8.Name = "ToolStripStatusLabel8"
-            Me.ToolStripStatusLabel8.Size = New System.Drawing.Size(78, 20)
+            Me.ToolStripStatusLabel8.Size = New System.Drawing.Size(100, 20)
             Me.ToolStripStatusLabel8.Text = "Alt+F4-> Cerrar"
             '
             'SchedulePrintDocument1
@@ -766,9 +780,10 @@
             Me.GridEXMedicos.DesignTimeLayout = GridEXMedicos_DesignTimeLayout
             Me.GridEXMedicos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
             Me.GridEXMedicos.GroupByBoxVisible = False
-            Me.GridEXMedicos.Location = New System.Drawing.Point(716, 232)
+            Me.GridEXMedicos.Location = New System.Drawing.Point(955, 286)
+            Me.GridEXMedicos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.GridEXMedicos.Name = "GridEXMedicos"
-            Me.GridEXMedicos.Size = New System.Drawing.Size(284, 148)
+            Me.GridEXMedicos.Size = New System.Drawing.Size(379, 182)
             Me.GridEXMedicos.TabIndex = 21
             '
             'GridEXMutuas
@@ -780,9 +795,10 @@
             GridEXMutuas_DesignTimeLayout.LayoutString = resources.GetString("GridEXMutuas_DesignTimeLayout.LayoutString")
             Me.GridEXMutuas.DesignTimeLayout = GridEXMutuas_DesignTimeLayout
             Me.GridEXMutuas.GroupByBoxVisible = False
-            Me.GridEXMutuas.Location = New System.Drawing.Point(717, 385)
+            Me.GridEXMutuas.Location = New System.Drawing.Point(956, 474)
+            Me.GridEXMutuas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.GridEXMutuas.Name = "GridEXMutuas"
-            Me.GridEXMutuas.Size = New System.Drawing.Size(283, 104)
+            Me.GridEXMutuas.Size = New System.Drawing.Size(377, 128)
             Me.GridEXMutuas.TabIndex = 21
             '
             'MUTUABindingSource
@@ -793,9 +809,10 @@
             '
             Me.Panel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.Panel1.Controls.Add(Me.Calendar2)
-            Me.Panel1.Location = New System.Drawing.Point(713, 86)
+            Me.Panel1.Location = New System.Drawing.Point(951, 106)
+            Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.Panel1.Name = "Panel1"
-            Me.Panel1.Size = New System.Drawing.Size(171, 146)
+            Me.Panel1.Size = New System.Drawing.Size(228, 180)
             Me.Panel1.TabIndex = 22
             '
             'PanelIntervalo
@@ -805,44 +822,49 @@
             Me.PanelIntervalo.Controls.Add(Me.Label1)
             Me.PanelIntervalo.Controls.Add(Me.dtpFechaFinal)
             Me.PanelIntervalo.Controls.Add(Me.dtpFechaInicio)
-            Me.PanelIntervalo.Location = New System.Drawing.Point(720, 100)
+            Me.PanelIntervalo.Location = New System.Drawing.Point(960, 123)
+            Me.PanelIntervalo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.PanelIntervalo.Name = "PanelIntervalo"
-            Me.PanelIntervalo.Size = New System.Drawing.Size(153, 61)
+            Me.PanelIntervalo.Size = New System.Drawing.Size(204, 75)
             Me.PanelIntervalo.TabIndex = 23
             Me.PanelIntervalo.Visible = False
             '
             'Label2
             '
             Me.Label2.AutoSize = True
-            Me.Label2.Location = New System.Drawing.Point(3, 29)
+            Me.Label2.Location = New System.Drawing.Point(4, 36)
+            Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(38, 13)
+            Me.Label2.Size = New System.Drawing.Size(49, 17)
             Me.Label2.TabIndex = 1
             Me.Label2.Text = "Hasta:"
             '
             'Label1
             '
             Me.Label1.AutoSize = True
-            Me.Label1.Location = New System.Drawing.Point(0, 4)
+            Me.Label1.Location = New System.Drawing.Point(0, 5)
+            Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(41, 13)
+            Me.Label1.Size = New System.Drawing.Size(53, 17)
             Me.Label1.TabIndex = 1
             Me.Label1.Text = "Desde:"
             '
             'dtpFechaFinal
             '
             Me.dtpFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaFinal.Location = New System.Drawing.Point(47, 29)
+            Me.dtpFechaFinal.Location = New System.Drawing.Point(63, 36)
+            Me.dtpFechaFinal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.dtpFechaFinal.Name = "dtpFechaFinal"
-            Me.dtpFechaFinal.Size = New System.Drawing.Size(95, 20)
+            Me.dtpFechaFinal.Size = New System.Drawing.Size(125, 22)
             Me.dtpFechaFinal.TabIndex = 0
             '
             'dtpFechaInicio
             '
             Me.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.dtpFechaInicio.Location = New System.Drawing.Point(47, 3)
+            Me.dtpFechaInicio.Location = New System.Drawing.Point(63, 4)
+            Me.dtpFechaInicio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.dtpFechaInicio.Name = "dtpFechaInicio"
-            Me.dtpFechaInicio.Size = New System.Drawing.Size(95, 20)
+            Me.dtpFechaInicio.Size = New System.Drawing.Size(125, 22)
             Me.dtpFechaInicio.TabIndex = 0
             '
             'GridEXSalas
@@ -854,9 +876,10 @@
             GridEXSalas_DesignTimeLayout.LayoutString = resources.GetString("GridEXSalas_DesignTimeLayout.LayoutString")
             Me.GridEXSalas.DesignTimeLayout = GridEXSalas_DesignTimeLayout
             Me.GridEXSalas.GroupByBoxVisible = False
-            Me.GridEXSalas.Location = New System.Drawing.Point(717, 494)
+            Me.GridEXSalas.Location = New System.Drawing.Point(956, 608)
+            Me.GridEXSalas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.GridEXSalas.Name = "GridEXSalas"
-            Me.GridEXSalas.Size = New System.Drawing.Size(283, 77)
+            Me.GridEXSalas.Size = New System.Drawing.Size(377, 95)
             Me.GridEXSalas.TabIndex = 24
             '
             'SALABindingSource
@@ -869,9 +892,11 @@
             Me.GroupBox1.Controls.Add(Me.rbPorMedicos)
             Me.GroupBox1.Controls.Add(Me.rbPorSala)
             Me.GroupBox1.Controls.Add(Me.rbTodas)
-            Me.GroupBox1.Location = New System.Drawing.Point(718, 10)
+            Me.GroupBox1.Location = New System.Drawing.Point(957, 12)
+            Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.GroupBox1.Name = "GroupBox1"
-            Me.GroupBox1.Size = New System.Drawing.Size(285, 39)
+            Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.GroupBox1.Size = New System.Drawing.Size(380, 48)
             Me.GroupBox1.TabIndex = 25
             Me.GroupBox1.TabStop = False
             Me.GroupBox1.Text = "Filtrar citas"
@@ -888,9 +913,10 @@
             GridEXNotas_DesignTimeLayout.LayoutString = resources.GetString("GridEXNotas_DesignTimeLayout.LayoutString")
             Me.GridEXNotas.DesignTimeLayout = GridEXNotas_DesignTimeLayout
             Me.GridEXNotas.GroupByBoxVisible = False
-            Me.GridEXNotas.Location = New System.Drawing.Point(3, 18)
+            Me.GridEXNotas.Location = New System.Drawing.Point(4, 22)
+            Me.GridEXNotas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.GridEXNotas.Name = "GridEXNotas"
-            Me.GridEXNotas.Size = New System.Drawing.Size(279, 58)
+            Me.GridEXNotas.Size = New System.Drawing.Size(372, 71)
             Me.GridEXNotas.TabIndex = 26
             '
             'NOTABindingSource
@@ -904,10 +930,10 @@
             Me.btnNota_Agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
             Me.btnNota_Agregar.FlatAppearance.BorderSize = 0
             Me.btnNota_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.btnNota_Agregar.Location = New System.Drawing.Point(227, 1)
+            Me.btnNota_Agregar.Location = New System.Drawing.Point(303, 1)
             Me.btnNota_Agregar.Margin = New System.Windows.Forms.Padding(0)
             Me.btnNota_Agregar.Name = "btnNota_Agregar"
-            Me.btnNota_Agregar.Size = New System.Drawing.Size(14, 16)
+            Me.btnNota_Agregar.Size = New System.Drawing.Size(19, 20)
             Me.btnNota_Agregar.TabIndex = 27
             Me.btnNota_Agregar.UseVisualStyleBackColor = True
             '
@@ -919,9 +945,10 @@
             Me.PanelNotas.Controls.Add(Me.btnNota_Delete)
             Me.PanelNotas.Controls.Add(Me.btnNota_Editar)
             Me.PanelNotas.Controls.Add(Me.btnNota_Agregar)
-            Me.PanelNotas.Location = New System.Drawing.Point(714, 576)
+            Me.PanelNotas.Location = New System.Drawing.Point(952, 709)
+            Me.PanelNotas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.PanelNotas.Name = "PanelNotas"
-            Me.PanelNotas.Size = New System.Drawing.Size(286, 76)
+            Me.PanelNotas.Size = New System.Drawing.Size(381, 94)
             Me.PanelNotas.TabIndex = 3
             '
             'btnNota_Delete
@@ -931,10 +958,10 @@
             Me.btnNota_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
             Me.btnNota_Delete.FlatAppearance.BorderSize = 0
             Me.btnNota_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.btnNota_Delete.Location = New System.Drawing.Point(268, 1)
+            Me.btnNota_Delete.Location = New System.Drawing.Point(357, 1)
             Me.btnNota_Delete.Margin = New System.Windows.Forms.Padding(0)
             Me.btnNota_Delete.Name = "btnNota_Delete"
-            Me.btnNota_Delete.Size = New System.Drawing.Size(14, 16)
+            Me.btnNota_Delete.Size = New System.Drawing.Size(19, 20)
             Me.btnNota_Delete.TabIndex = 27
             Me.btnNota_Delete.UseVisualStyleBackColor = True
             '
@@ -945,10 +972,10 @@
             Me.btnNota_Editar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
             Me.btnNota_Editar.FlatAppearance.BorderSize = 0
             Me.btnNota_Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.btnNota_Editar.Location = New System.Drawing.Point(248, 1)
+            Me.btnNota_Editar.Location = New System.Drawing.Point(331, 1)
             Me.btnNota_Editar.Margin = New System.Windows.Forms.Padding(0)
             Me.btnNota_Editar.Name = "btnNota_Editar"
-            Me.btnNota_Editar.Size = New System.Drawing.Size(14, 16)
+            Me.btnNota_Editar.Size = New System.Drawing.Size(19, 20)
             Me.btnNota_Editar.TabIndex = 27
             Me.btnNota_Editar.UseVisualStyleBackColor = True
             '
@@ -956,9 +983,10 @@
             '
             Me.Label17.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.Label17.AutoSize = True
-            Me.Label17.Location = New System.Drawing.Point(728, 165)
+            Me.Label17.Location = New System.Drawing.Point(971, 203)
+            Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label17.Name = "Label17"
-            Me.Label17.Size = New System.Drawing.Size(64, 13)
+            Me.Label17.Size = New System.Drawing.Size(84, 17)
             Me.Label17.TabIndex = 216
             Me.Label17.Text = "Tipo de Cita"
             Me.Label17.Visible = False
@@ -969,9 +997,10 @@
             Me.CBcitas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.CBcitas.FormattingEnabled = True
             Me.CBcitas.Items.AddRange(New Object() {"", "1ra Cita", "2da Cita", "3ra Cita"})
-            Me.CBcitas.Location = New System.Drawing.Point(728, 182)
+            Me.CBcitas.Location = New System.Drawing.Point(971, 224)
+            Me.CBcitas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.CBcitas.Name = "CBcitas"
-            Me.CBcitas.Size = New System.Drawing.Size(121, 21)
+            Me.CBcitas.Size = New System.Drawing.Size(160, 24)
             Me.CBcitas.TabIndex = 215
             Me.CBcitas.Visible = False
             '
@@ -988,9 +1017,11 @@
             Me.GroupBox2.Controls.Add(Me.Label3)
             Me.GroupBox2.Controls.Add(Me.pbLoading)
             Me.GroupBox2.Controls.Add(Me.Rango)
-            Me.GroupBox2.Location = New System.Drawing.Point(890, 87)
+            Me.GroupBox2.Location = New System.Drawing.Point(1187, 107)
+            Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.GroupBox2.Name = "GroupBox2"
-            Me.GroupBox2.Size = New System.Drawing.Size(113, 141)
+            Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+            Me.GroupBox2.Size = New System.Drawing.Size(151, 174)
             Me.GroupBox2.TabIndex = 219
             Me.GroupBox2.TabStop = False
             Me.GroupBox2.Text = "Rango fecha"
@@ -998,52 +1029,58 @@
             'DateTimePicker2
             '
             Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.DateTimePicker2.Location = New System.Drawing.Point(6, 78)
+            Me.DateTimePicker2.Location = New System.Drawing.Point(8, 96)
+            Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.DateTimePicker2.Name = "DateTimePicker2"
-            Me.DateTimePicker2.Size = New System.Drawing.Size(101, 20)
+            Me.DateTimePicker2.Size = New System.Drawing.Size(133, 22)
             Me.DateTimePicker2.TabIndex = 219
             '
             'DateTimePicker1
             '
             Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.DateTimePicker1.Location = New System.Drawing.Point(6, 38)
+            Me.DateTimePicker1.Location = New System.Drawing.Point(8, 47)
+            Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.DateTimePicker1.Name = "DateTimePicker1"
-            Me.DateTimePicker1.Size = New System.Drawing.Size(101, 20)
+            Me.DateTimePicker1.Size = New System.Drawing.Size(133, 22)
             Me.DateTimePicker1.TabIndex = 221
             '
             'Label4
             '
             Me.Label4.AutoSize = True
-            Me.Label4.Location = New System.Drawing.Point(6, 64)
+            Me.Label4.Location = New System.Drawing.Point(8, 79)
+            Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(38, 13)
+            Me.Label4.Size = New System.Drawing.Size(49, 17)
             Me.Label4.TabIndex = 224
             Me.Label4.Text = "Hasta:"
             '
             'Label3
             '
             Me.Label3.AutoSize = True
-            Me.Label3.Location = New System.Drawing.Point(6, 24)
+            Me.Label3.Location = New System.Drawing.Point(8, 30)
+            Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
             Me.Label3.Name = "Label3"
-            Me.Label3.Size = New System.Drawing.Size(41, 13)
+            Me.Label3.Size = New System.Drawing.Size(53, 17)
             Me.Label3.TabIndex = 223
             Me.Label3.Text = "Desde:"
             '
             'pbLoading
             '
             Me.pbLoading.Image = Global.centro_medico.My.Resources.Resources.ajax_loader
-            Me.pbLoading.Location = New System.Drawing.Point(6, 102)
+            Me.pbLoading.Location = New System.Drawing.Point(8, 126)
+            Me.pbLoading.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.pbLoading.Name = "pbLoading"
-            Me.pbLoading.Size = New System.Drawing.Size(37, 37)
+            Me.pbLoading.Size = New System.Drawing.Size(49, 46)
             Me.pbLoading.TabIndex = 220
             Me.pbLoading.TabStop = False
             Me.pbLoading.Visible = False
             '
             'Rango
             '
-            Me.Rango.Location = New System.Drawing.Point(57, 112)
+            Me.Rango.Location = New System.Drawing.Point(76, 138)
+            Me.Rango.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.Rango.Name = "Rango"
-            Me.Rango.Size = New System.Drawing.Size(50, 23)
+            Me.Rango.Size = New System.Drawing.Size(67, 28)
             Me.Rango.TabIndex = 222
             Me.Rango.Text = "Rango"
             Me.Rango.UseVisualStyleBackColor = True
@@ -1055,9 +1092,9 @@
             '
             'frmCalendarioCitas
             '
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.ClientSize = New System.Drawing.Size(1008, 684)
+            Me.ClientSize = New System.Drawing.Size(1344, 842)
             Me.Controls.Add(Me.gb_pacientes)
             Me.Controls.Add(Me.GroupBox2)
             Me.Controls.Add(Me.Label17)
@@ -1073,6 +1110,7 @@
             Me.Controls.Add(Me.ToolStrip1)
             Me.Controls.Add(Me.TabControl1)
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+            Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.Name = "frmCalendarioCitas"
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
             Me.Text = "Calendario de Citas"

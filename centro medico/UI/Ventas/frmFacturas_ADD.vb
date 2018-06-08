@@ -49,6 +49,8 @@ Public Class frmFacturas_ADD
             Me.N_Factura_TiposComboBox.Enabled = False
 
             'Cargar Tab Totales
+            IRPFCantidadTextBox.Text = Factura.IRPFCantidad
+            IRPFPorcientoTextBox.Text = Factura.IRPFPorciento
             CargaTotales()
 
             'Documentos Relacionados
@@ -185,6 +187,7 @@ Public Class frmFacturas_ADD
 
 #Region "Private Sub CalculaTotales()"
     Private Sub CalculaTotales()
+        
         Dim total As Double = 0
         SubTotal = 0
         Dim count As Integer = 0
@@ -205,6 +208,7 @@ Public Class frmFacturas_ADD
         If IRPFCantidadTextBox.Text = "" Then
             IRPFCantidadTextBox.Text = "0"
         End If
+     
         total = total - IRPFCantidadTextBox.Text
         txt_Total.Text = total.ToString("N2")
         tst_SumaNeta.Text = "Suma Neta: " & SubTotal.ToString("N2")
@@ -397,7 +401,8 @@ Public Class frmFacturas_ADD
             Factura.Pagado = False
             Factura.FechaPagado = dtp_FechaPagado.Value
         End If
-
+        Factura.IRPFPorciento = IRPFPorcientoTextBox.Text
+        Factura.IRPFCantidad = IRPFCantidadTextBox.Text
         Factura.Total = txt_Total.Text
         Factura.ID_Cliente = CtrlPaciente1.ID_PACIENTE
         Try

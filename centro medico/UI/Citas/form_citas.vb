@@ -268,7 +268,7 @@ Public Class form_citas
             fhorafino = DateTime.Now
         End If
 
-        If CheckMutua And (faseguradorao > -1 Or cb_aseguradora.Items.Count > 0) Then
+        If faseguradorao > -1 Or cb_aseguradora.Items.Count > 0 Then
             chb_aseguradora.Checked = True
         Else
             chb_aseguradora.Checked = False
