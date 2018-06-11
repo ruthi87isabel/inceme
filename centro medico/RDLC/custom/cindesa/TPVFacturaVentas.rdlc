@@ -2368,7 +2368,7 @@ WHERE        (N_Factura.ID_Factura = @IdFactura)</CommandText>
             <Width>1.75cm</Width>
             <ZIndex>3</ZIndex>
             <Visibility>
-              <Hidden>=Parameters!IrpfPorc.Value&gt;0</Hidden>
+              <Hidden>=Parameters!IrpfPorc.Value&lt;=0</Hidden>
             </Visibility>
             <Style>
               <Border>
@@ -2403,7 +2403,7 @@ WHERE        (N_Factura.ID_Factura = @IdFactura)</CommandText>
             <Width>1.72752cm</Width>
             <ZIndex>4</ZIndex>
             <Visibility>
-              <Hidden>=Parameters!IrpfPorc.Value&gt;0</Hidden>
+              <Hidden>=Parameters!IrpfPorc.Value&lt;=0</Hidden>
             </Visibility>
             <Style>
               <Border>
@@ -2438,7 +2438,7 @@ WHERE        (N_Factura.ID_Factura = @IdFactura)</CommandText>
             <Width>1.98413cm</Width>
             <ZIndex>5</ZIndex>
             <Visibility>
-              <Hidden>=Parameters!IrpfPorc.Value&gt;0</Hidden>
+              <Hidden>=Parameters!IrpfPorc.Value&lt;=0</Hidden>
             </Visibility>
             <Style>
               <Border>
