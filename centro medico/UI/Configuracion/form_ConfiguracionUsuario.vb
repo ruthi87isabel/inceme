@@ -151,7 +151,7 @@ Public Class form_ConfiguracionUsuario
 
         Globales.Usuario.CONFIGURACIONXML = configXml
         Globales.Context.SubmitChanges()
-
+        Globales.Configuracion.GuardarConfBd()
         Globales.Configuracion.Save(Globales.Configuracion.login)
     End Sub
 
