@@ -477,13 +477,13 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Tratamiento</Value>
+                    <Value>   Anamnesis</Value>
                     <Style>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                   <TextRun>
-                    <Value>:</Value>
+                    <Value>:                                                               Tratamiento Médico</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -501,7 +501,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Fuma   </Value>
+                    <Value>    Fuma                                                                         ______________________________________ </Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -519,7 +519,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Hipertensión </Value>
+                    <Value>    Hipertensión                                                               ______________________________________</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -537,7 +537,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Diabetes</Value>
+                    <Value>    Diabetes                                                                    ______________________________________</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -555,7 +555,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Corazón </Value>
+                    <Value>    Corazón                                                                     ______________________________________</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -573,7 +573,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Hepatitis</Value>
+                    <Value>    Hepatitis                                                                    ______________________________________</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -591,7 +591,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Alergias</Value>
+                    <Value xml:space="preserve">      </Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -609,79 +609,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>________________________________________________________________________________________</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value />
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Observaciones</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value />
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value />
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Otras</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value />
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</Value>
+                    <Value xml:space="preserve">   </Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -689,10 +617,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox7</rd:DefaultName>
-            <Top>6.79914cm</Top>
-            <Left>0.89935cm</Left>
-            <Height>12.9825cm</Height>
-            <Width>16.99041cm</Width>
+            <Top>4.92942cm</Top>
+            <Left>0.26812cm</Left>
+            <Height>6.56194cm</Height>
+            <Width>18.23395cm</Width>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -704,11 +632,533 @@
             </Style>
           </Textbox>
           <Rectangle Name="Rectangle1">
+            <ReportItems>
+              <Textbox Name="Textbox17">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=FormatDateTime(First(Fields!FECHAN.Value, "centro_medico_PACIENTE"),DateFormat.ShortDate)</Value>
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox17</rd:DefaultName>
+                <Top>2.1599cm</Top>
+                <Left>2.65875cm</Left>
+                <Height>0.63492cm</Height>
+                <Width>3.76011cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="textbox17">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Fecha Nac:</Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>2.1599cm</Top>
+                <Left>0.21544cm</Left>
+                <Height>0.63492cm</Height>
+                <Width>2.44331cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="LOCALIDAD2">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!TLFNO.Value, "centro_medico_PACIENTE") &amp; " " &amp; First(Fields!MOVIL.Value, "centro_medico_PACIENTE")</Value>
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>LOCALIDAD</rd:DefaultName>
+                <Top>0.10583cm</Top>
+                <Left>10.94496cm</Left>
+                <Height>0.63492cm</Height>
+                <Width>3.74505cm</Width>
+                <ZIndex>2</ZIndex>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="LOCALIDAD">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!LOCALIDAD.Value, "centro_medico_PACIENTE")</Value>
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>LOCALIDAD</rd:DefaultName>
+                <Top>0.88186cm</Top>
+                <Left>10.94496cm</Left>
+                <Height>0.63492cm</Height>
+                <Width>3.74505cm</Width>
+                <ZIndex>3</ZIndex>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="DOMICILIO">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!DOMICILIO.Value, "centro_medico_PACIENTE")</Value>
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>DOMICILIO</rd:DefaultName>
+                <Top>1.57668cm</Top>
+                <Left>10.94496cm</Left>
+                <Height>0.63492cm</Height>
+                <Width>6.74367cm</Width>
+                <ZIndex>4</ZIndex>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="PROVINCIA">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!PROVINCIA.Value, "centro_medico_PACIENTE")</Value>
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>PROVINCIA</rd:DefaultName>
+                <Top>2.38799cm</Top>
+                <Left>10.94449cm</Left>
+                <Height>0.63492cm</Height>
+                <Width>3.72283cm</Width>
+                <ZIndex>5</ZIndex>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="textbox7">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Teléfono:</Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>textbox5</rd:DefaultName>
+                <Top>0.10583cm</Top>
+                <Left>8.90581cm</Left>
+                <Height>0.63492cm</Height>
+                <Width>2.0034cm</Width>
+                <ZIndex>6</ZIndex>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="textbox5">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Localidad:</Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>textbox5</rd:DefaultName>
+                <Top>0.91714cm</Top>
+                <Left>8.90581cm</Left>
+                <Height>0.63492cm</Height>
+                <Width>2.0034cm</Width>
+                <ZIndex>7</ZIndex>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="textbox4">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Dirección:</Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>textbox4</rd:DefaultName>
+                <Top>1.59868cm</Top>
+                <Left>8.90581cm</Left>
+                <Height>0.63492cm</Height>
+                <Width>2.0034cm</Width>
+                <ZIndex>8</ZIndex>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="textbox8">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Provincia:</Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>2.40999cm</Top>
+                <Left>8.90581cm</Left>
+                <Height>0.63492cm</Height>
+                <Width>2.0034cm</Width>
+                <ZIndex>9</ZIndex>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="PROVINCIA2">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!FECHAALTA.Value, "centro_medico_PACIENTE")</Value>
+                        <Style>
+                          <Format>dd-MMM-yy</Format>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>PROVINCIA</rd:DefaultName>
+                <Top>2.9712cm</Top>
+                <Left>4.28507cm</Left>
+                <Height>0.63492cm</Height>
+                <Width>3.72283cm</Width>
+                <ZIndex>10</ZIndex>
+                <Visibility>
+                  <Hidden>true</Hidden>
+                </Visibility>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="textbox9">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Fecha de Alta:</Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>2.9712cm</Top>
+                <Left>0.21544cm</Left>
+                <Height>0.63492cm</Height>
+                <Width>3.29104cm</Width>
+                <ZIndex>11</ZIndex>
+                <Visibility>
+                  <Hidden>true</Hidden>
+                </Visibility>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="CPACIENTE">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!CPACIENTE.Value, "centro_medico_PACIENTE")</Value>
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>CPACIENTE</rd:DefaultName>
+                <Top>0.05644cm</Top>
+                <Left>2.65875cm</Left>
+                <Height>0.63492cm</Height>
+                <Width>2.53968cm</Width>
+                <ZIndex>12</ZIndex>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="NOMBRE">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!NombreCompleto.Value, "centro_medico_PACIENTE")</Value>
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>NOMBRE</rd:DefaultName>
+                <Top>0.83419cm</Top>
+                <Left>2.65875cm</Left>
+                <Height>0.63492cm</Height>
+                <Width>6.17651cm</Width>
+                <ZIndex>13</ZIndex>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="DNI">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!DNI.Value, "centro_medico_PACIENTE") &amp; First(Fields!DNI_Letra.Value, "centro_medico_PACIENTE")</Value>
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>DNI</rd:DefaultName>
+                <Top>1.45442cm</Top>
+                <Left>2.65875cm</Left>
+                <Height>0.63492cm</Height>
+                <Width>3.75cm</Width>
+                <ZIndex>14</ZIndex>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="CP">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!CP.Value, "centro_medico_PACIENTE")</Value>
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>CP</rd:DefaultName>
+                <Top>3.12874cm</Top>
+                <Left>10.94449cm</Left>
+                <Height>0.63492cm</Height>
+                <Width>2.53968cm</Width>
+                <ZIndex>15</ZIndex>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="textbox6">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>CP :</Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>textbox6</rd:DefaultName>
+                <Top>3.16402cm</Top>
+                <Left>8.90581cm</Left>
+                <Height>0.63492cm</Height>
+                <Width>1.10583cm</Width>
+                <ZIndex>16</ZIndex>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+            </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>0.07056cm</Top>
-            <Left>0.84643cm</Left>
-            <Height>6.41426cm</Height>
-            <Width>17.04333cm</Width>
+            <Left>0.26812cm</Left>
+            <Height>4.29759cm</Height>
+            <Width>18.23395cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -736,9 +1186,9 @@
             </Paragraphs>
             <rd:DefaultName>textbox1</rd:DefaultName>
             <Top>0.127cm</Top>
-            <Left>0.84643cm</Left>
+            <Left>0.50624cm</Left>
             <Height>0.63492cm</Height>
-            <Width>3.29104cm</Width>
+            <Width>2.42062cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <PaddingLeft>2pt</PaddingLeft>
@@ -767,128 +1217,10 @@
             </Paragraphs>
             <rd:DefaultName>textbox2</rd:DefaultName>
             <Top>0.90475cm</Top>
-            <Left>0.84643cm</Left>
+            <Left>0.50624cm</Left>
             <Height>0.63492cm</Height>
-            <Width>4.02271cm</Width>
+            <Width>2.42062cm</Width>
             <ZIndex>3</ZIndex>
-            <Style>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="textbox5">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Localidad:</Value>
-                    <Style>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>textbox5</rd:DefaultName>
-            <Top>3.47217cm</Top>
-            <Left>0.84643cm</Left>
-            <Height>0.63492cm</Height>
-            <Width>3.29104cm</Width>
-            <ZIndex>4</ZIndex>
-            <Style>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="NOMBRE">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!NombreCompleto.Value, "centro_medico_PACIENTE")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>NOMBRE</rd:DefaultName>
-            <Top>0.90475cm</Top>
-            <Left>4.91606cm</Left>
-            <Height>0.63492cm</Height>
-            <Width>11.97111cm</Width>
-            <ZIndex>5</ZIndex>
-            <Style>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="CPACIENTE">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!CPACIENTE.Value, "centro_medico_PACIENTE")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>CPACIENTE</rd:DefaultName>
-            <Top>0.127cm</Top>
-            <Left>4.92617cm</Left>
-            <Height>0.63492cm</Height>
-            <Width>2.53968cm</Width>
-            <ZIndex>6</ZIndex>
-            <Style>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="DNI">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!DNI.Value, "centro_medico_PACIENTE") &amp; First(Fields!DNI_Letra.Value, "centro_medico_PACIENTE")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>DNI</rd:DefaultName>
-            <Top>1.52498cm</Top>
-            <Left>4.92617cm</Left>
-            <Height>0.63492cm</Height>
-            <Width>3.75cm</Width>
-            <ZIndex>7</ZIndex>
             <Style>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
@@ -916,414 +1248,11 @@
             </Paragraphs>
             <rd:DefaultName>textbox3</rd:DefaultName>
             <Top>1.52498cm</Top>
-            <Left>0.84643cm</Left>
+            <Left>0.50624cm</Left>
             <Height>0.63492cm</Height>
-            <Width>3.29104cm</Width>
-            <ZIndex>8</ZIndex>
+            <Width>2.42062cm</Width>
+            <ZIndex>4</ZIndex>
             <Style>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="LOCALIDAD">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!LOCALIDAD.Value, "centro_medico_PACIENTE")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>LOCALIDAD</rd:DefaultName>
-            <Top>3.45889cm</Top>
-            <Left>4.92664cm</Left>
-            <Height>0.63492cm</Height>
-            <Width>6.39416cm</Width>
-            <ZIndex>9</ZIndex>
-            <Style>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox17">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=FormatDateTime(First(Fields!FECHAN.Value, "centro_medico_PACIENTE"),DateFormat.ShortDate)</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox17</rd:DefaultName>
-            <Top>1.52498cm</Top>
-            <Left>11.00154cm</Left>
-            <Height>0.63492cm</Height>
-            <Width>5.88563cm</Width>
-            <ZIndex>10</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="textbox8">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Provincia:</Value>
-                    <Style>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <Top>4.85919cm</Top>
-            <Left>0.84643cm</Left>
-            <Height>0.63492cm</Height>
-            <Width>3.29104cm</Width>
-            <ZIndex>11</ZIndex>
-            <Style>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="PROVINCIA">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!PROVINCIA.Value, "centro_medico_PACIENTE")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>PROVINCIA</rd:DefaultName>
-            <Top>4.85919cm</Top>
-            <Left>4.92617cm</Left>
-            <Height>0.63492cm</Height>
-            <Width>5.77646cm</Width>
-            <ZIndex>12</ZIndex>
-            <Style>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="textbox17">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Fecha Nac:</Value>
-                    <Style>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <Top>1.52498cm</Top>
-            <Left>8.63384cm</Left>
-            <Height>0.63492cm</Height>
-            <Width>2.3677cm</Width>
-            <ZIndex>13</ZIndex>
-            <Style>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="textbox6">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>CP :</Value>
-                    <Style>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>textbox6</rd:DefaultName>
-            <Top>4.85566cm</Top>
-            <Left>10.81199cm</Left>
-            <Height>0.63492cm</Height>
-            <Width>1cm</Width>
-            <ZIndex>14</ZIndex>
-            <Style>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="CP">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!CP.Value, "centro_medico_PACIENTE")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>CP</rd:DefaultName>
-            <Top>4.85566cm</Top>
-            <Left>11.81199cm</Left>
-            <Height>0.63492cm</Height>
-            <Width>2.53968cm</Width>
-            <ZIndex>15</ZIndex>
-            <Style>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="DOMICILIO">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!DOMICILIO.Value, "centro_medico_PACIENTE")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>DOMICILIO</rd:DefaultName>
-            <Top>4.15371cm</Top>
-            <Left>4.92664cm</Left>
-            <Height>0.63492cm</Height>
-            <Width>9.5675cm</Width>
-            <ZIndex>16</ZIndex>
-            <Style>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="textbox4">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Dirección:</Value>
-                    <Style>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>textbox4</rd:DefaultName>
-            <Top>4.15371cm</Top>
-            <Left>0.84643cm</Left>
-            <Height>0.63492cm</Height>
-            <Width>3.29104cm</Width>
-            <ZIndex>17</ZIndex>
-            <Style>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="LOCALIDAD2">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!TLFNO.Value, "centro_medico_PACIENTE") &amp; " " &amp; First(Fields!MOVIL.Value, "centro_medico_PACIENTE")</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>LOCALIDAD</rd:DefaultName>
-            <Top>2.68286cm</Top>
-            <Left>4.92664cm</Left>
-            <Height>0.63492cm</Height>
-            <Width>6.39416cm</Width>
-            <ZIndex>18</ZIndex>
-            <Style>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="textbox7">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Teléfono:</Value>
-                    <Style>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>textbox5</rd:DefaultName>
-            <Top>2.66086cm</Top>
-            <Left>0.84643cm</Left>
-            <Height>0.63492cm</Height>
-            <Width>3.29104cm</Width>
-            <ZIndex>19</ZIndex>
-            <Style>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="textbox9">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Fecha de Alta:</Value>
-                    <Style>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <Top>5.6705cm</Top>
-            <Left>0.84643cm</Left>
-            <Height>0.63492cm</Height>
-            <Width>3.29104cm</Width>
-            <ZIndex>20</ZIndex>
-            <Visibility>
-              <Hidden>true</Hidden>
-            </Visibility>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="PROVINCIA2">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!FECHAALTA.Value, "centro_medico_PACIENTE")</Value>
-                    <Style>
-                      <Format>dd-MMM-yy</Format>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>PROVINCIA</rd:DefaultName>
-            <Top>5.6705cm</Top>
-            <Left>4.91606cm</Left>
-            <Height>0.63492cm</Height>
-            <Width>5.77646cm</Width>
-            <ZIndex>21</ZIndex>
-            <Visibility>
-              <Hidden>true</Hidden>
-            </Visibility>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1331,75 +1260,12 @@
             </Style>
           </Textbox>
           <Rectangle Name="Rectangle2">
-            <ReportItems>
-              <Rectangle Name="Rectangle3">
-                <KeepTogether>true</KeepTogether>
-                <Left>0cm</Left>
-                <Height>0.2775cm</Height>
-                <Width>0.28185cm</Width>
-                <Style>
-                  <Border>
-                    <Style>Solid</Style>
-                  </Border>
-                </Style>
-              </Rectangle>
-            </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>7.77558cm</Top>
-            <Left>5.08539cm</Left>
+            <Top>5.93585cm</Top>
+            <Left>3.45746cm</Left>
             <Height>0.2775cm</Height>
             <Width>0.28185cm</Width>
-            <ZIndex>22</ZIndex>
-            <Style>
-              <Border>
-                <Style>Solid</Style>
-              </Border>
-            </Style>
-          </Rectangle>
-          <Rectangle Name="Rectangle4">
-            <ReportItems>
-              <Rectangle Name="Rectangle5">
-                <KeepTogether>true</KeepTogether>
-                <Height>0.2775cm</Height>
-                <Width>0.28185cm</Width>
-                <Style>
-                  <Border>
-                    <Style>Solid</Style>
-                  </Border>
-                </Style>
-              </Rectangle>
-            </ReportItems>
-            <KeepTogether>true</KeepTogether>
-            <Top>8.56446cm</Top>
-            <Left>5.08539cm</Left>
-            <Height>0.2775cm</Height>
-            <Width>0.28185cm</Width>
-            <ZIndex>23</ZIndex>
-            <Style>
-              <Border>
-                <Style>Solid</Style>
-              </Border>
-            </Style>
-          </Rectangle>
-          <Rectangle Name="Rectangle6">
-            <ReportItems>
-              <Rectangle Name="Rectangle7">
-                <KeepTogether>true</KeepTogether>
-                <Height>0.2775cm</Height>
-                <Width>0.28185cm</Width>
-                <Style>
-                  <Border>
-                    <Style>Solid</Style>
-                  </Border>
-                </Style>
-              </Rectangle>
-            </ReportItems>
-            <KeepTogether>true</KeepTogether>
-            <Top>9.43758cm</Top>
-            <Left>5.08539cm</Left>
-            <Height>0.2775cm</Height>
-            <Width>0.28185cm</Width>
-            <ZIndex>24</ZIndex>
+            <ZIndex>5</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -1408,11 +1274,11 @@
           </Rectangle>
           <Rectangle Name="Rectangle8">
             <KeepTogether>true</KeepTogether>
-            <Top>10.26308cm</Top>
-            <Left>5.08539cm</Left>
+            <Top>8.44099cm</Top>
+            <Left>3.45746cm</Left>
             <Height>0.2775cm</Height>
             <Width>0.28185cm</Width>
-            <ZIndex>25</ZIndex>
+            <ZIndex>6</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -1421,17 +1287,145 @@
           </Rectangle>
           <Rectangle Name="Rectangle9">
             <KeepTogether>true</KeepTogether>
-            <Top>11.11737cm</Top>
-            <Left>5.08539cm</Left>
+            <Top>9.26cm</Top>
+            <Left>3.45746cm</Left>
             <Height>0.2775cm</Height>
             <Width>0.28185cm</Width>
-            <ZIndex>26</ZIndex>
+            <ZIndex>7</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
               </Border>
             </Style>
           </Rectangle>
+          <Rectangle Name="Rectangle5">
+            <KeepTogether>true</KeepTogether>
+            <Top>6.77765cm</Top>
+            <Left>3.45746cm</Left>
+            <Height>0.2775cm</Height>
+            <Width>0.28185cm</Width>
+            <ZIndex>8</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle7">
+            <KeepTogether>true</KeepTogether>
+            <Top>7.63313cm</Top>
+            <Left>3.45746cm</Left>
+            <Height>0.2775cm</Height>
+            <Width>0.28185cm</Width>
+            <ZIndex>9</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Textbox Name="Textbox10">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>      Alergias</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>      ___________________________________________________________________________________________</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>      ___________________________________________________________________________________________</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>      Observaciones</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>      ___________________________________________________________________________________________</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>      ___________________________________________________________________________________________</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>      ___________________________________________________________________________________________</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox10</rd:DefaultName>
+            <Top>11.87076cm</Top>
+            <Left>0.26812cm</Left>
+            <Height>6.42083cm</Height>
+            <Width>18.23395cm</Width>
+            <ZIndex>10</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
         <Height>20.63433cm</Height>
         <Style />
@@ -1439,7 +1433,7 @@
       <Width>18.94281cm</Width>
       <Page>
         <PageHeader>
-          <Height>3.14854cm</Height>
+          <Height>4cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -1447,11 +1441,11 @@
               <Source>External</Source>
               <Value>=First(Fields!LOGOTIPOURLPARAREPORTE.Value, "dsClinica")</Value>
               <MIMEType>image/jpeg</MIMEType>
-              <Sizing>Fit</Sizing>
-              <Top>0.00841in</Top>
-              <Left>4.29558in</Left>
-              <Height>3cm</Height>
-              <Width>7.04597cm</Width>
+              <Sizing>FitProportional</Sizing>
+              <Top>0.125in</Top>
+              <Left>4.83098in</Left>
+              <Height>3.22159cm</Height>
+              <Width>5.88415cm</Width>
               <ToolTip>Inceme</ToolTip>
               <Style>
                 <Border>
@@ -1477,7 +1471,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox12</rd:DefaultName>
-              <Top>1.18167cm</Top>
+              <Top>1.49917cm</Top>
               <Left>0.84643cm</Left>
               <Height>0.78521cm</Height>
               <Width>5.67246cm</Width>

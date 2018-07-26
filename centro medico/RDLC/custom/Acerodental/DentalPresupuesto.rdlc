@@ -886,7 +886,7 @@ FROM d_Presupuesto D
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>OdontTrat_LineasPresupuesto</DataSetName>
-            <Top>2.81918cm</Top>
+            <Top>4.40668cm</Top>
             <Left>0.5543cm</Left>
             <Height>1.72696cm</Height>
             <Width>18.57948cm</Width>
@@ -912,7 +912,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>textbox8</rd:DefaultName>
-            <Top>1.82205cm</Top>
+            <Top>3.40955cm</Top>
             <Left>0.55429cm</Left>
             <Height>0.68571cm</Height>
             <Width>2.12958cm</Width>
@@ -944,7 +944,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Paciente</rd:DefaultName>
-            <Top>1.82205cm</Top>
+            <Top>3.40955cm</Top>
             <Left>2.86026cm</Left>
             <Height>0.68571cm</Height>
             <Width>16.27352cm</Width>
@@ -975,10 +975,10 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox58</rd:DefaultName>
-            <Top>1.0554cm</Top>
+            <Top>2.6429cm</Top>
             <Left>4.7829cm</Left>
             <Height>0.6cm</Height>
-            <Width>8.24146cm</Width>
+            <Width>6.17771cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -1005,7 +1005,7 @@ FROM d_Presupuesto D
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox59</rd:DefaultName>
-            <Top>1.0554cm</Top>
+            <Top>2.6429cm</Top>
             <Left>0.55429cm</Left>
             <Height>0.6cm</Height>
             <Width>4.19333cm</Width>
@@ -1020,14 +1020,48 @@ FROM d_Presupuesto D
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Textbox Name="Textbox30">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Microsoft.VisualBasic.Strings.UCase(First(Fields!NOMBRE.Value, "dsClinica")) + Microsoft.VisualBasic.Constants.vbCrLF + Microsoft.VisualBasic.Constants.vbCrLF + First(Fields!DIRECCION.Value, "dsClinica") + Microsoft.VisualBasic.Constants.vbCrLF + First(Fields!CIUDAD.Value, "dsClinica") + Microsoft.VisualBasic.Constants.vbCrLF + "  (" + First(Fields!PROVINCIA.Value, "dsClinica") + ")  CP: " + First(Fields!CPClinica.Value, "dsClinica") + Microsoft.VisualBasic.Constants.vbCrLF + "Email: " + First(Fields!Email.Value, "dsClinica") + Microsoft.VisualBasic.Constants.vbCrLf + "Telef: " + First(Fields!Telefono1.Value, "dsClinica") + "   " + First(Fields!Telefono2.Value, "dsClinica") + Microsoft.VisualBasic.Constants.vbCrLF + First(Fields!Web.Value, "dsClinica")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox28</rd:DefaultName>
+            <Top>0.10583cm</Top>
+            <Left>11.65152cm</Left>
+            <Height>2.88431cm</Height>
+            <Width>7.41677cm</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>4.85365cm</Height>
+        <Height>6.4776cm</Height>
         <Style />
       </Body>
       <Width>19.67586cm</Width>
       <Page>
         <PageHeader>
-          <Height>1.52403in</Height>
+          <Height>1.29486in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -1035,11 +1069,11 @@ FROM d_Presupuesto D
               <Source>External</Source>
               <Value>=First(Fields!LOGOTIPOURLPARAREPORTE.Value, "dsClinica")</Value>
               <MIMEType>image/jpeg</MIMEType>
-              <Sizing>Fit</Sizing>
-              <Top>0.71299cm</Top>
-              <Left>5.36355in</Left>
-              <Height>2.69945cm</Height>
-              <Width>5.44488cm</Width>
+              <Sizing>FitProportional</Sizing>
+              <Top>0.3175cm</Top>
+              <Left>5.08721in</Left>
+              <Height>2.89549cm</Height>
+              <Width>6.05833cm</Width>
               <ToolTip>Inceme</ToolTip>
               <Style>
                 <Border>
@@ -1047,40 +1081,6 @@ FROM d_Presupuesto D
                 </Border>
               </Style>
             </Image>
-            <Textbox Name="Textbox30">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Microsoft.VisualBasic.Strings.UCase(First(Fields!NOMBRE.Value, "dsClinica")) + Microsoft.VisualBasic.Constants.vbCrLF + Microsoft.VisualBasic.Constants.vbCrLF + First(Fields!DIRECCION.Value, "dsClinica") + Microsoft.VisualBasic.Constants.vbCrLF + First(Fields!CIUDAD.Value, "dsClinica") + "  (" + First(Fields!PROVINCIA.Value, "dsClinica") + ")  CP: " + First(Fields!CPClinica.Value, "dsClinica") + Microsoft.VisualBasic.Constants.vbCrLF + "Email: " + First(Fields!Email.Value, "dsClinica") + Microsoft.VisualBasic.Constants.vbCrLf + "Telef: " + First(Fields!Telefono1.Value, "dsClinica") + "   " + First(Fields!Telefono2.Value, "dsClinica") + Microsoft.VisualBasic.Constants.vbCrLF + First(Fields!Web.Value, "dsClinica")</Value>
-                      <Style>
-                        <FontSize>9pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>0.49336cm</Top>
-              <Left>7.02468cm</Left>
-              <Height>2.88431cm</Height>
-              <Width>6.51719cm</Width>
-              <ZIndex>1</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
             <Textbox Name="Textbox57">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
@@ -1098,11 +1098,11 @@ FROM d_Presupuesto D
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox57</rd:DefaultName>
-              <Top>1.80729cm</Top>
+              <Top>1.17229cm</Top>
               <Left>0.55429cm</Left>
               <Height>0.91429cm</Height>
               <Width>6.32928cm</Width>
-              <ZIndex>2</ZIndex>
+              <ZIndex>1</ZIndex>
               <Style>
                 <Border />
                 <PaddingLeft>2pt</PaddingLeft>
